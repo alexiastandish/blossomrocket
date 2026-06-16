@@ -1,0 +1,158 @@
+import { CtaButton, OrbConfig, SectionTheme } from "@/lib/types/section";
+import { buildSchema } from "@/lib/utils/buildSchema";
+import { tokens } from "@/lib/utils/sectionTailwindTokens";
+import Script from "next/script";
+import React from "react";
+import CTAs from "../CTAs";
+import SectionLabel from "../SectionLabel";
+import { DEFAULT_ORBS, Orb } from "../ui/Orb";
+
+export type SectionLayoutProps = {
+  heading: React.ReactNode;
+  subtext?: string;
+  eyebrow?: string;
+  ctas?: CtaButton[];
+  children: React.ReactNode;
+  cols?: [number, number];
+  mobileOrder?: "left-first" | "right-first";
+  align?: "left" | "center";
+  theme?: SectionTheme;
+  orbs?: OrbConfig[];
+  pageUrl?: string;
+  schemaItems?: { topic: string }[];
+  id?: string;
+  className?: string;
+  stickyRight?: boolean;
+};
+
+export default function SectionLayout({
+  heading,
+  subtext,
+  eyebrow,
+  ctas,
+  children,
+  cols = [1, 1],
+  mobileOrder = "left-first",
+  align = "left",
+  theme = "light",
+  orbs,
+  pageUrl,
+  schemaItems,
+  id,
+  className = "",
+  stickyRight = true,
+}: SectionLayoutProps) {
+  const activeTheme = tokens[theme];
+  const schemaId = id ?? "section";
+  const schemaHeading = typeof heading === "string" ? heading : schemaId;
+  const schema =
+    schemaItems && schemaItems.length > 0
+      ? buildSchema(schemaItems, schemaHeading, pageUrl)
+      : null;
+
+  const leftColClass =
+    mobileOrder === "right-first" ? "order-2 lg:order-1" : "";
+  const rightColClass =
+    mobileOrder === "right-first" ? "order-1 lg:order-2" : "";
+  const alignClass =
+    align === "center" ? "text-center items-center" : "text-left items-start";
+  const ctasAlign = align === "center" ? "justify-center" : "justify-start";
+  const isDarkTheme =
+    theme === "dark" || theme === "brand" || theme === "brandSoft";
+
+  // orbs prop wins; undefined falls back to per-theme defaults; [] disables all
+  const resolvedOrbs: OrbConfig[] =
+    orbs !== undefined ? orbs : DEFAULT_ORBS[theme];
+
+  const themedChildren = React.Children.map(children, (child) => {
+    if (React.isValidElement(child)) {
+      return React.cloneElement(child, { activeTheme } as Record<
+        string,
+        unknown
+      >);
+    }
+    return child;
+  });
+
+  return (
+    <>
+      {schema && (
+        <Script
+          id={`schema-itemlist-${schemaId}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      )}
+
+      <section
+        id={id}
+        className={[
+          "relative overflow-hidden",
+          activeTheme.section,
+          className,
+        ].join(" ")}
+        style={{ padding: "clamp(80px,11vw,160px) clamp(20px,5vw,60px)" }}
+        aria-labelledby={`${schemaId}-heading`}
+        itemScope
+        itemType="https://schema.org/ItemList"
+      >
+        {/* ── Orbs ── */}
+        {resolvedOrbs.map((orb, i) => (
+          <Orb key={i} orb={orb} />
+        ))}
+
+        <div
+          className="section-col-grid grid items-start gap-[clamp(40px,7vw,100px)] relative z-10"
+          style={
+            {
+              "--section-cols": `${cols[0]}fr ${cols[1]}fr`,
+            } as React.CSSProperties
+          }
+        >
+          {/* ── Left ── */}
+          <div className={`rv flex flex-col ${alignClass} ${leftColClass}`}>
+            {eyebrow && <SectionLabel text={eyebrow} />}
+            <h2
+              id={`${schemaId}-heading`}
+              className={`font-semibold leading-[1.06] tracking-[-0.02em] mb-5 ${activeTheme.heading}`}
+              style={{
+                fontFamily: "'Parkinsans', sans-serif",
+                fontSize: "clamp(38px,5.5vw,76px)",
+              }}
+            >
+              {heading}
+            </h2>
+            {subtext && (
+              <p
+                className={`leading-[1.8] mb-8 ${activeTheme.subtext}`}
+                style={{
+                  fontSize: "clamp(15px,1.4vw,18px)",
+                  maxWidth: "560px",
+                }}
+              >
+                {subtext}
+              </p>
+            )}
+            {ctas && (
+              <div className={`flex flex-wrap gap-3 ${ctasAlign}`}>
+                <CTAs ctas={ctas} theme={theme} />
+              </div>
+            )}
+          </div>
+
+          {/* ── Right ── */}
+          <div
+            className={[
+              "rv d3 flex flex-col gap-4",
+              stickyRight ? "lg:sticky" : "h-full",
+              rightColClass,
+            ].join(" ")}
+            style={stickyRight ? { top: "calc(68px + 20px)" } : undefined}
+          >
+            {themedChildren}
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}

@@ -1,12 +1,11 @@
 "use client";
+import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { pageThemes } from "@/lib/utils/pageThemes";
 
-type ServiceLink = {
-  href: string;
-  label: string;
-};
+type NavTheme = "light" | "dark";
 
 type NavLink = {
   href: string;
@@ -14,8 +13,13 @@ type NavLink = {
   dropdown?: boolean;
 };
 
-const services: ServiceLink[] = [
-  { href: "/services/brand-identity", label: "Brand Identity" },
+type DropdownMenus = Record<string, boolean>;
+
+const services: NavLink[] = [
+  {
+    href: "/services/brand-identity",
+    label: "Brand Identity",
+  },
   { href: "/services/brand-systems", label: "Brand Systems" },
   { href: "/services/digital-design", label: "Digital Design" },
   {
@@ -29,42 +33,96 @@ const services: ServiceLink[] = [
   },
   { href: "/services/company-stores", label: "Company Stores" },
   {
-    href: "/services/search-everything-optimization",
-    label: "Search Everything Optimization",
+    href: "/services/search-everything-optimization-consulting",
+    label: "Search Everything Optimization Consulting",
   },
 ];
 
-const links: NavLink[] = [
-  { href: "#whatis", label: "Brand Systems" },
-  { href: "#services", label: "Services", dropdown: true },
-  { href: "#deployment", label: "Deployment" },
-  { href: "#stores", label: "Company Stores" },
-  { href: "#contact", label: "Contact" },
+const resources: NavLink[] = [
+  { href: "/resources/blog", label: "Blog" },
+  { href: "/resources/store-systems", label: "Live Store Systems" },
 ];
+
+const dropdownLinks: Record<string, NavLink[]> = {
+  Services: services,
+  Resources: resources,
+};
+
+const links: NavLink[] = [
+  { href: "/services", label: "Services", dropdown: true },
+
+  { href: "/about", label: "Who We Are" },
+  { href: "/resources", label: "Resources", dropdown: true },
+  { href: "/pricing", label: "Pricing" },
+  { href: "/contact", label: "Contact Us" },
+];
+
+// ─── Theme token maps ─────────────────────────────────────────────────────────
+
+const unscrolledTokens: Record<
+  NavTheme,
+  {
+    linkIdle: string;
+    linkActive: string;
+    ctaBg: string;
+    ctaText: string;
+    ctaHover: string;
+    logoInvert: boolean;
+  }
+> = {
+  light: {
+    linkIdle: "text-ink-60",
+    linkActive: "text-ink",
+    ctaBg: "bg-[#18181b]",
+    ctaText: "text-white",
+    ctaHover: "hover:opacity-85",
+    logoInvert: false,
+  },
+  dark: {
+    linkIdle: "text-[rgba(255,255,255,0.60)]",
+    linkActive: "text-white",
+    ctaBg: "bg-white",
+    ctaText: "text-[#18181b]",
+    ctaHover: "hover:opacity-90",
+    logoInvert: true,
+  },
+};
+
+const scrolledTokens = {
+  navBg:
+    "bg-[rgba(250,250,248,0.92)] backdrop-blur-[18px] border-[rgba(24,24,27,0.10)]",
+  linkIdle: "text-ink-60",
+  linkActive: "text-ink",
+  ctaBg: "bg-[#18181b]",
+  ctaText: "text-white",
+  ctaHover: "hover:opacity-85",
+  logoInvert: false,
+};
+const dropdowns: DropdownMenus = {
+  services: false,
+  resources: false,
+};
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState<boolean>(false);
-  const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
+  const [dropdownOpen, setDropdownOpen] = useState<DropdownMenus>(dropdowns);
+
   const dropdownRef = useRef<HTMLLIElement>(null);
+
+  const pathname = usePathname();
+
+  // Look up the current page's hero theme from the central map
+  const navTheme: NavTheme = pageThemes[pathname] ?? "light";
+
+  // Active token set — scrolled always wins with the light treatment
+  const activeTokens = scrolled ? scrolledTokens : unscrolledTokens[navTheme];
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 60);
+    handler();
     window.addEventListener("scroll", handler, { passive: true });
     return () => window.removeEventListener("scroll", handler);
-  }, []);
-
-  useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(e.target as Node)
-      ) {
-        setDropdownOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+  }, [pathname]);
 
   const handleAnchor = (
     e: React.MouseEvent<HTMLAnchorElement>,
@@ -90,26 +148,46 @@ export default function Nav() {
     >
       <Link href="/" className="flex items-center gap-2.5">
         <Image
-          src="/logo.svg"
+          src={`${activeTokens.logoInvert ? "/logo-inverted.svg" : "/logo.svg"}`}
           alt="Blossom Rocket"
           width={142}
           height={80}
-          style={{ height: "80px", width: "auto" }}
+          style={{
+            height: "80px",
+            width: "auto",
+          }}
           priority
         />
       </Link>
 
       <ul className="hidden md:flex gap-9 list-none items-center">
-        {links.map(({ href, label, dropdown }) =>
-          dropdown ? (
-            <li key={href} ref={dropdownRef} className="relative">
-              <button
-                className={`flex items-center gap-1.5 text-[13.5px] font-medium tracking-[0.01em] transition-colors duration-200 hover:text-[#18181b] bg-transparent border-none cursor-pointer p-0 ${
-                  dropdownOpen ? "text-[#18181b]" : "text-[rgba(24,24,27,0.58)]"
+        {links.map(({ href, label, dropdown = false }: NavLink) => {
+          const isFirst = href === "/services" || href === "/resources";
+
+          const menuIsOpen = dropdownOpen[label.toLowerCase()];
+          return dropdown ? (
+            <li
+              key={href}
+              ref={dropdownRef}
+              className="relative"
+              onMouseEnter={() =>
+                setDropdownOpen((prev) => ({
+                  ...prev,
+                  [label.toLowerCase()]: true,
+                }))
+              }
+              onMouseLeave={() =>
+                setDropdownOpen((prev) => ({
+                  ...prev,
+                  [label.toLowerCase()]: false,
+                }))
+              }
+            >
+              <Link
+                href={href}
+                className={`flex items-center gap-1.5 text-[13.5px] font-medium tracking-[0.01em] transition-colors duration-200 hover:text-ink ${
+                  menuIsOpen ? activeTokens.linkActive : activeTokens.linkIdle
                 }`}
-                onClick={() => setDropdownOpen((v) => !v)}
-                aria-expanded={dropdownOpen}
-                aria-haspopup="true"
               >
                 {label}
                 <svg
@@ -120,7 +198,7 @@ export default function Nav() {
                   aria-hidden="true"
                   className="transition-transform duration-200"
                   style={{
-                    transform: dropdownOpen ? "rotate(180deg)" : "rotate(0deg)",
+                    transform: menuIsOpen ? "rotate(180deg)" : "rotate(0deg)",
                   }}
                 >
                   <path
@@ -131,21 +209,27 @@ export default function Nav() {
                     strokeLinejoin="round"
                   />
                 </svg>
-              </button>
+              </Link>
 
               <div
-                className="absolute top-[calc(100%+16px)] left-1/2 transition-all duration-200"
+                className="absolute top-full transition-all duration-200 pt-4"
                 style={{
-                  opacity: dropdownOpen ? 1 : 0,
-                  pointerEvents: dropdownOpen ? "auto" : "none",
-                  transform: `translateX(-50%) translateY(${dropdownOpen ? "0px" : "-6px"})`,
+                  opacity: menuIsOpen ? 1 : 0,
+                  pointerEvents: menuIsOpen ? "auto" : "none",
+                  left: isFirst ? "0" : "50%",
+                  transform: isFirst
+                    ? `translateY(${menuIsOpen ? "0px" : "-6px"})`
+                    : `translateX(-50%) translateY(${menuIsOpen ? "0px" : "-6px"})`,
                   width: "260px",
                 }}
               >
-                <div
-                  className="absolute -top-[6px] left-1/2 -translate-x-1/2 w-3 h-3 rotate-45 bg-white border-l border-t border-[rgba(24,24,27,0.08)]"
-                  aria-hidden="true"
-                />
+                {/* 👇 hide caret on left-aligned dropdown */}
+                {!isFirst && (
+                  <div
+                    className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 rotate-45 bg-white border-l border-t border-[rgba(24,24,27,0.08)]"
+                    aria-hidden="true"
+                  />
+                )}
 
                 <ul
                   className="relative bg-white rounded-2xl border border-[rgba(24,24,27,0.08)] overflow-hidden list-none p-1.5"
@@ -154,17 +238,24 @@ export default function Nav() {
                       "0 4px 24px rgba(24,24,27,0.08), 0 1px 4px rgba(24,24,27,0.04)",
                   }}
                 >
-                  {services.map(({ href: svcHref, label: svcLabel }) => (
-                    <li key={svcLabel}>
-                      <Link
-                        href={svcHref}
-                        className="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-[13px] font-medium text-[rgba(24,24,27,0.65)] hover:text-[#18181b] hover:bg-[#fafaf8] transition-colors duration-150"
-                        onClick={() => setDropdownOpen(false)}
-                      >
-                        {svcLabel}
-                      </Link>
-                    </li>
-                  ))}
+                  {dropdownLinks[label]?.map(
+                    ({ href: svcHref, label: svcLabel }) => (
+                      <li key={svcHref}>
+                        <Link
+                          href={svcHref}
+                          className="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-[13px] font-medium text-[rgba(24,24,27,0.65)] hover:text-ink hover:bg-off transition-colors duration-150"
+                          onClick={() =>
+                            setDropdownOpen((prev) => ({
+                              ...prev,
+                              [label.toLowerCase()]: false,
+                            }))
+                          }
+                        >
+                          {svcLabel}
+                        </Link>
+                      </li>
+                    ),
+                  )}
                 </ul>
               </div>
             </li>
@@ -172,7 +263,7 @@ export default function Nav() {
             <li key={href}>
               <a
                 href={href}
-                className="nav-link relative text-[13.5px] font-medium text-[rgba(24,24,27,0.58)] tracking-[0.01em] transition-colors duration-200 hover:text-[#18181b]"
+                className={`nav-link relative text-[13.5px] font-medium tracking-[0.01em] transition-colors duration-200 hover:text-ink ${activeTokens.linkIdle}`}
                 onClick={(e: React.MouseEvent<HTMLAnchorElement>) =>
                   handleAnchor(e, href)
                 }
@@ -180,15 +271,15 @@ export default function Nav() {
                 {label}
               </a>
             </li>
-          ),
-        )}
+          );
+        })}
       </ul>
 
       <a
-        href="#contact"
-        className="text-[13px] font-semibold tracking-[0.02em] px-[22px] py-[9px] rounded-full bg-[#18181b] text-white transition-all duration-200 hover:opacity-85 hover:-translate-y-px"
+        href="/contact"
+        className={`text-[13px] font-semibold tracking-[0.02em] px-[22px] py-[9px] rounded-full transition-all duration-200 hover:-translate-y-px ${activeTokens.ctaBg} ${activeTokens.ctaText} ${activeTokens.ctaHover}`}
         onClick={(e: React.MouseEvent<HTMLAnchorElement>) =>
-          handleAnchor(e, "#contact")
+          handleAnchor(e, "/contact")
         }
       >
         Schedule a Consultation

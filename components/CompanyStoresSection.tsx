@@ -83,7 +83,7 @@ export default function CompanyStoresSection() {
                 grows.
               </p>
               <a
-                href="#contact"
+                href="/contact"
                 className="btn-grad-overlay relative inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-[#18181b] text-white text-[14px] font-semibold border border-[rgba(255,255,255,0.15)] transition-all duration-200 hover:-translate-y-0.5 overflow-hidden"
               >
                 <span className="relative z-10">Build Your Company Store</span>

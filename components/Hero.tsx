@@ -1,92 +1,192 @@
 import Link from "next/link";
+import defaultCtas from "@/lib/constants/default_ctas.json";
+import { CtaButton, OrbConfig } from "@/lib/types/section";
+import { HeroProps, PillTheme } from "@/lib/types/hero";
+import { OutlineButton } from "./ui/OutlineButton";
+import { PrimaryButton } from "./ui/PrimaryButton";
 
-export default function Hero() {
+const DEFAULT_CTAS: CtaButton[] = defaultCtas as CtaButton[];
+
+// Hero owns its own orb defaults — separate from section system's default_orbs.json
+const HERO_DEFAULT_ORBS: OrbConfig[] = [
+  { color: "#9b5cf6", size: 600, top: "-100px", left: "-100px" },
+  { color: "#06b6d4", size: 500, bottom: "-80px", right: "-80px" },
+  { color: "#10b981", size: 300, top: "40%", left: "55%" },
+];
+
+// ─── Sub-components ───────────────────────────────────────────────────────────
+
+function Dot() {
+  return <span className="text-divider-dot-gradient" />;
+}
+
+function Orb({ orb }: { orb: OrbConfig }) {
+  const {
+    color,
+    size = 500,
+    top,
+    left,
+    right,
+    bottom,
+    opacity = 0.18,
+    blur = 80,
+  } = orb;
+
+  return (
+    <div
+      className="absolute rounded-full pointer-events-none"
+      style={{
+        width: size,
+        height: size,
+        top,
+        left,
+        right,
+        bottom,
+        opacity,
+        background: `radial-gradient(circle,${color},transparent 70%)`,
+        filter: `blur(${blur}px)`,
+      }}
+    />
+  );
+}
+
+// ─── Pill theme maps ──────────────────────────────────────────────────────────
+
+const PILL_STYLES: Record<PillTheme, string> = {
+  light:
+    "border border-[rgba(24,24,27,0.10)] text-[rgba(24,24,27,0.58)] bg-transparent",
+  dark: "border border-[rgba(255,255,255,0.12)] text-[rgba(255,255,255,0.55)] bg-transparent",
+  violet:
+    "border border-[rgba(155,92,246,0.30)] text-[rgba(155,92,246,0.85)] bg-[rgba(155,92,246,0.06)]",
+};
+
+// ─── Root component ───────────────────────────────────────────────────────────
+
+export default function Hero({
+  heading = (
+    <>
+      Brand Systems That
+      <br />
+      <em className="grad-text not-italic">Work Everywhere.</em>
+    </>
+  ),
+  body = (
+    <>
+      Blossom Rocket expands brand awareness through brand identity, digital
+      design, marketing, print, promotional products &amp; company stores —
+      connected through scalable brand systems. Because great brands aren&apos;t
+      built through disconnected projects. They&apos;re built through systems.
+    </>
+  ),
+  pillItems = [
+    "Brand Identity",
+    "Brand Systems",
+    "Digital",
+    "Marketing",
+    "Print",
+    "Promo Products",
+    "Company Stores",
+    "SEO Consulting",
+  ],
+  ctas = DEFAULT_CTAS,
+  orbs = HERO_DEFAULT_ORBS,
+  theme = "light",
+  pillTheme,
+  showScrollHint = true,
+  className = "",
+  id = "hero",
+}: HeroProps) {
+  const resolvedPillTheme: PillTheme =
+    pillTheme ?? (theme === "dark" ? "dark" : "light");
+
+  const bodyTextColor =
+    theme === "dark"
+      ? "text-[rgba(255,255,255,0.55)]"
+      : "text-[rgba(24,24,27,0.58)]";
+
+  const bgClass = theme === "dark" ? "bg-[#0d0d10]" : "bg-white";
+
   return (
     <header
-      id="hero"
-      className="relative min-h-[100svh] flex flex-col items-center justify-center text-center overflow-hidden"
+      id={id}
+      className={[
+        "relative min-h-[100svh] flex flex-col items-center justify-center text-center overflow-hidden",
+        bgClass,
+        className,
+      ].join(" ")}
       style={{ padding: "calc(68px + 60px) clamp(20px,8vw,80px) 80px" }}
       role="banner"
     >
-      <div
-        className="absolute w-[600px] h-[600px] -top-[100px] -left-[100px] rounded-full pointer-events-none opacity-[0.18]"
-        style={{
-          background: "radial-gradient(circle,#9b5cf6,transparent 70%)",
-          filter: "blur(80px)",
-        }}
-      />
-      <div
-        className="absolute w-[500px] h-[500px] -bottom-[80px] -right-[80px] rounded-full pointer-events-none opacity-[0.18]"
-        style={{
-          background: "radial-gradient(circle,#06b6d4,transparent 70%)",
-          filter: "blur(80px)",
-        }}
-      />
-      <div
-        className="absolute w-[300px] h-[300px] top-[40%] left-[55%] rounded-full pointer-events-none opacity-[0.18]"
-        style={{
-          background: "radial-gradient(circle,#10b981,transparent 70%)",
-          filter: "blur(80px)",
-        }}
-      />
+      {/* ── Ambient orbs ── */}
+      {orbs.map((orb, i) => (
+        <Orb key={i} orb={orb} />
+      ))}
 
-      <div className="anim-fade-up anim-delay-1 inline-flex items-center gap-2 text-[12px] font-semibold tracking-[0.1em] uppercase px-4 py-1.5 rounded-full border border-[rgba(24,24,27,0.10)] text-[rgba(24,24,27,0.58)] mb-8">
-        <span className="text-divider-dot-gradient" />
-        Brand Identity <span className="text-divider-dot-gradient" /> Digital
-        Design <span className="text-divider-dot-gradient" /> Marketing Assets{" "}
-        <span className="text-divider-dot-gradient" /> Promotional Products{" "}
-        <span className="text-divider-dot-gradient" />
-        Print
-        <span className="text-divider-dot-gradient" />
-        Company Stores
-        <span className="text-divider-dot-gradient" />
-      </div>
+      {/* ── Eyebrow pill ── */}
+      {pillItems.length > 0 && (
+        <div
+          className={[
+            "anim-fade-up anim-delay-1 inline-flex items-center gap-2 text-[12px] font-semibold tracking-[0.1em] uppercase px-4 py-1.5 rounded-full mb-8",
+            PILL_STYLES[resolvedPillTheme],
+          ].join(" ")}
+        >
+          <Dot />
+          {pillItems.map((item, i) => (
+            <span key={i} className="inline-flex items-center gap-2">
+              {item}
+              <Dot />
+            </span>
+          ))}
+        </div>
+      )}
 
+      {/* ── Heading ── */}
       <h1
-        className="anim-fade-up anim-delay-2 relative z-10 font-semibold leading-[1.0] tracking-[-0.03em] mb-7"
+        className={[
+          "anim-fade-up anim-delay-2 relative z-10 font-semibold leading-[1.0] tracking-[-0.03em] mb-7",
+          theme === "dark" ? "text-white" : "text-[#18181b]",
+        ].join(" ")}
         style={{
           fontFamily: "'Parkinsans', sans-serif",
           fontSize: "clamp(52px,9vw,110px)",
         }}
       >
-        Brand Systems That
-        <br />
-        <em className="grad-text not-italic">Work Everywhere.</em>
+        {heading}
       </h1>
 
+      {/* ── Body ── */}
       <p
-        className="anim-fade-up anim-delay-3 relative z-10 text-[rgba(24,24,27,0.58)] leading-[1.72] mx-auto mb-12"
+        className={[
+          "anim-fade-up anim-delay-3 relative z-10 leading-[1.72] mx-auto mb-12",
+          bodyTextColor,
+        ].join(" ")}
         style={{ fontSize: "clamp(15px,1.8vw,19px)", maxWidth: "620px" }}
       >
-        Blossom Rocket expands brand awareness through brand identity, digital
-        design, marketing, print, promotional products &amp; company stores —
-        connected through scalable brand systems. Because great brands
-        aren&apos;t built through disconnected projects. They&apos;re built
-        through systems.
+        {body}
       </p>
 
-      <div className="anim-fade-up anim-delay-4 flex gap-4 justify-center flex-wrap">
-        <a
-          href="#contact"
-          className="btn-grad-overlay relative inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-[#18181b] text-white text-[14px] font-semibold tracking-[0.01em] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_12px_36px_rgba(99,102,241,0.25)] overflow-hidden"
-        >
-          <span className="relative z-10">Launch Your Brand</span>
-          <span className="relative z-10">→</span>
-        </a>
-        <a
-          href="#services"
-          className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full border border-[rgba(24,24,27,0.12)] text-[#18181b] text-[14px] font-semibold transition-all duration-200 hover:border-[#9b5cf6] hover:bg-[rgba(155,92,246,0.06)] hover:-translate-y-0.5"
-        >
-          Explore Services ↗
-        </a>
-      </div>
+      {/* ── CTAs ── */}
+      {ctas.length > 0 && (
+        <div className="anim-fade-up anim-delay-4 flex gap-4 justify-center flex-wrap">
+          {ctas.map((cta) =>
+            cta.variant === "outline" ? (
+              <OutlineButton key={cta.href} {...cta} theme={theme} />
+            ) : (
+              <PrimaryButton key={cta.href} {...cta} theme={theme} />
+            ),
+          )}
+        </div>
+      )}
 
-      <div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-40"
-        aria-hidden="true"
-      >
-        <div className="scroll-line" />
-      </div>
+      {/* ── Scroll hint ── */}
+      {showScrollHint && (
+        <div
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-40"
+          aria-hidden="true"
+        >
+          <div className="scroll-line" />
+        </div>
+      )}
     </header>
   );
 }
