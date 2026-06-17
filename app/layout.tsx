@@ -4,7 +4,6 @@ import Cursor from "@/components/Cursor";
 import ScrollReveal from "@/components/ScrollReveal";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
-import ScrollToTop from "@/components/ScrollToTop";
 
 export const metadata: Metadata = {
   title: "Blossom Rocket — Brand Systems That Scale",

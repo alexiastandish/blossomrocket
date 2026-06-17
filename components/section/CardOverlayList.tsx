@@ -73,9 +73,7 @@ export default function SectionCardOverlayList({
         >
           {/* ── Left ── */}
           <div className={`rv flex flex-col ${alignClass} ${leftColClass}`}>
-            {eyebrow && (
-              <SectionLabel text={eyebrow} light={theme === "dark"} />
-            )}
+            {eyebrow && <SectionLabel text={eyebrow} />}
             <h2
               id={`${schemaId}-heading`}
               className={`font-semibold leading-[1.06] tracking-[-0.02em] mb-5 ${activeTheme.heading}`}
