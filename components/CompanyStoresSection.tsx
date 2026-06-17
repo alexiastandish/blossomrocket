@@ -39,7 +39,7 @@ export default function CompanyStoresSection() {
       style={{ padding: "clamp(80px,11vw,160px) clamp(20px,5vw,60px)" }}
       aria-labelledby="stores-h"
     >
-      <SectionLabel text="Company Stores" light />
+      <SectionLabel text="Company Stores" />
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-[clamp(40px,7vw,100px)] items-start">
         <div className="">
           <h2

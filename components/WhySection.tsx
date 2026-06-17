@@ -19,7 +19,7 @@ export default function WhySection() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-[clamp(40px,7vw,100px)] items-start">
         {/* Left */}
         <div className="rv">
-          <SectionLabel text="Why Brands Become Inconsistent" light />
+          <SectionLabel text="Why Brands Become Inconsistent" />
           <h2
             id="why-h"
             className="font-semibold leading-[1.06] tracking-[-0.02em] mb-5"
