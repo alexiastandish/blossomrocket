@@ -1,9 +1,9 @@
-import { tokens } from "@/lib/utils/sectionTailwindTokens";
+import { tokens, SectionTokens } from "@/lib/utils/sectionTailwindTokens";
 
 export type CardLinksProps = {
   links: { label: string; href: string }[];
   label?: string;
-  activeTheme?: (typeof tokens)[keyof typeof tokens];
+  activeTheme?: SectionTokens;
 };
 
 export default function CardLinks({

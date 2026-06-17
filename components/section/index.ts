@@ -7,7 +7,6 @@ export { default as CardLinks } from "./CardLinks";
 
 export type { SectionLayoutProps } from "./SectionLayout";
 export type { CardListProps } from "./CardList";
-export type { CardPillsProps } from "./CardPills";
 export type { CardGridProps, GridCardItem } from "./CardGrid";
 export type { CardCalloutProps } from "./CardCallout";
 export type { CardLinksProps } from "./CardLinks";
