@@ -15,6 +15,7 @@ export type SectionLayoutProps = {
   children: React.ReactNode;
   cols?: [number, number];
   mobileOrder?: "left-first" | "right-first";
+  desktopOrder?: "maintain" | "reverse";
   align?: "left" | "center";
   theme?: SectionTheme;
   orbs?: OrbConfig[];
@@ -33,6 +34,7 @@ export default function SectionLayout({
   children,
   cols = [1, 1],
   mobileOrder = "left-first",
+  desktopOrder = "maintain",
   align = "left",
   theme = "light",
   orbs,
@@ -50,15 +52,23 @@ export default function SectionLayout({
       ? buildSchema(schemaItems, schemaHeading, pageUrl)
       : null;
 
-  const leftColClass =
-    mobileOrder === "right-first" ? "order-2 lg:order-1" : "";
-  const rightColClass =
-    mobileOrder === "right-first" ? "order-1 lg:order-2" : "";
+  // Mobile order: which column shows first below lg
+  const leftMobileOrder = mobileOrder === "right-first" ? "order-2" : "order-1";
+  const rightMobileOrder =
+    mobileOrder === "right-first" ? "order-1" : "order-2";
+
+  // Desktop order: maintain keeps left=1/right=2, reverse flips them at lg+
+  const leftDesktopOrder =
+    desktopOrder === "reverse" ? "lg:order-2" : "lg:order-1";
+  const rightDesktopOrder =
+    desktopOrder === "reverse" ? "lg:order-1" : "lg:order-2";
+
+  const leftColClass = `${leftMobileOrder} ${leftDesktopOrder}`;
+  const rightColClass = `${rightMobileOrder} ${rightDesktopOrder}`;
+
   const alignClass =
     align === "center" ? "text-center items-center" : "text-left items-start";
   const ctasAlign = align === "center" ? "justify-center" : "justify-start";
-  const isDarkTheme =
-    theme === "dark" || theme === "brand" || theme === "brandSoft";
 
   // orbs prop wins; undefined falls back to per-theme defaults; [] disables all
   const resolvedOrbs: OrbConfig[] =
@@ -102,7 +112,7 @@ export default function SectionLayout({
         ))}
 
         <div
-          className="section-col-grid grid items-start gap-[clamp(40px,7vw,100px)] relative z-10"
+          className={`section-col-grid grid items-start gap-[clamp(40px,7vw,100px)] relative z-10`}
           style={
             {
               "--section-cols": `${cols[0]}fr ${cols[1]}fr`,

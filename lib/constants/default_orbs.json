@@ -1,5 +1,9 @@
 {
-  "light": [],
+  "light": [
+    { "color": "#9b5cf6", "size": 600, "top": "-100px", "left": "-100px" },
+    { "color": "#06b6d4", "size": 500, "bottom": "-80px", "right": "-80px" },
+    { "color": "#10b981", "size": 300, "top": "40%", "left": "55%" }
+  ],
   "dark": [
     {
       "color": "#9b5cf6",

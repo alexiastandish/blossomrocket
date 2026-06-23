@@ -45,13 +45,20 @@ export default function SectionItemList({
     ? buildSchema(
         items,
         typeof heading === "string" ? heading : undefined,
-        subtext,
+        typeof subtext === "string" ? subtext : undefined,
         pageUrl,
       )
     : { itemListSchema: null, faqSchema: null };
 
   const mainContent = (
-    <div className={`${tokens.layout[layout].grid} `}>
+    <div
+      className="section-col-grid grid items-start gap-[clamp(40px,7vw,100px)] relative z-10"
+      style={
+        {
+          "--section-cols": `${5}fr ${3}fr`,
+        } as React.CSSProperties
+      }
+    >
       <div className="">
         {eyebrow && <SectionLabel text={eyebrow} />}
         {heading && (

@@ -1,4 +1,3 @@
-// components/illustrations/WebAppDesign.tsx
 export default function WebAppDesign() {
   return (
     <svg
@@ -9,12 +8,12 @@ export default function WebAppDesign() {
     >
       <title>Web and App Design</title>
       <style>{`
-        .desktop { animation: risein 0.5s 0s ease-out both; }
-        .tablet  { animation: risein 0.5s 0.15s ease-out both; }
-        .mobile  { animation: risein 0.5s 0.3s ease-out both; }
-        @keyframes risein {
-          from { opacity: 0; transform: translateY(8px); }
-          to   { opacity: 1; transform: translateY(0); }
+        .desktop { animation: float 3s 0s ease-in-out infinite; }
+        .tablet  { animation: float 3s 0.4s ease-in-out infinite; }
+        .mobile  { animation: float 3s 0.8s ease-in-out infinite; }
+        @keyframes float {
+          0%, 100% { transform: translateY(0); }
+          50%       { transform: translateY(-3px); }
         }
       `}</style>
       <g className="desktop">

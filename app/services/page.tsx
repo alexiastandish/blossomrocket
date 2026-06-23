@@ -8,10 +8,17 @@ import {
 } from "@/components/section";
 import SectionItemList from "@/components/section/ItemList";
 import Marquee from "@/components/section/Marquee";
+import Brochures from "@/components/svgs/Brochures";
+import BusinessCards from "@/components/svgs/BusinessCards";
+import Catalogs from "@/components/svgs/Catalogs";
 import ComponentLibraries from "@/components/svgs/ComponentLibraries";
 import DigitalMarketing from "@/components/svgs/DigitalMarketing";
+import EnvironmentalGraphics from "@/components/svgs/EnvironmentalGraphics";
 import FrontendDevelopment from "@/components/svgs/FrontEndDev";
+import Packaging from "@/components/svgs/Packaging";
+import Signage from "@/components/svgs/Signage";
 import UiUxDesign from "@/components/svgs/UiUxDesign";
+import VehicleGraphics from "@/components/svgs/VehicleGraphics";
 import WebAppDesign from "@/components/svgs/WebAppDesign";
 import serviceItems from "@/data/marquees/services.json";
 
@@ -40,8 +47,10 @@ export default function Services() {
       <Marquee items={serviceItems} theme="dark" />
 
       <SectionItemList
+        pageUrl="https://blossomrocket.studio/services#services"
         layout="inline"
-        id="services-list"
+        id="services"
+        theme="light"
         eyebrow="Beyond Traditional Creative Services"
         heading={
           <>
@@ -57,30 +66,35 @@ export default function Services() {
         items={[
           {
             topic: "Brand Identity",
-            description: "description description description description",
+            description:
+              "TODO: description description description description",
           },
           {
             topic: "Brand Systems",
-            description: "description description description description",
+            description:
+              "TODO: description description description description",
           },
           {
             topic: "Brand Marketing",
-            description: "description description description description",
+            description:
+              "TODO: description description description description",
           },
           {
             topic: "Brand Print",
-            description: "description description description description",
+            description:
+              "TODO: description description description description",
           },
           {
             topic: "Promotional Identity",
-            description: "description description description description",
+            description:
+              "TODO: description description description description",
           },
           {
             topic: "Brand Optimization",
-            description: "description description description description",
+            description:
+              "TODO: description description description description",
           },
         ]}
-        pageUrl="https://blossomrocket.studio/services"
       />
 
       {/* ── Brand Identity ── */}
@@ -93,7 +107,7 @@ export default function Services() {
         heading={
           <>
             Brand Identity for Building{" "}
-            <em className="grad-text not-italic">Recognition and Trust</em>
+            <em className="grad-text not-italic">Recognition and Trust</em>.
           </>
         }
         subtext="Brand Identity is the visual foundation of a business. Blossom Rocket helps businesses create Brand Identity systems that support recognition, trust, and consistency across digital design, marketing assets, print materials, merchandise, promotional products, and company stores."
@@ -111,7 +125,7 @@ export default function Services() {
           { topic: "Color Palette" },
           { topic: "Iconography" },
         ]}
-        pageUrl="https://blossomrocket.studio/services/brand-identity"
+        pageUrl="https://blossomrocket.studio/services#brand-identity"
       >
         <CardList
           heading="Brand Identity services include:"
@@ -160,7 +174,7 @@ export default function Services() {
           { topic: "Usage Guidelines" },
           { topic: "Graphics & Pattern Systems" },
         ]}
-        pageUrl="https://blossomrocket.studio/services/brand-systems"
+        pageUrl="https://blossomrocket.studio/services#brand-systems"
       >
         <CardPills
           heading="Brand Systems include:"
@@ -187,6 +201,7 @@ export default function Services() {
         cols={[1, 1]}
         stickyRight={false}
         mobileOrder="left-first"
+        desktopOrder="reverse"
         eyebrow="Digital Design"
         heading={
           <>
@@ -239,6 +254,202 @@ export default function Services() {
           }
         />
       </SectionLayout>
+      {/* ── Campaign & Marketing Assets ── */}
+      <SectionLayout
+        id="campaign-and-marketing-assets"
+        theme="brand"
+        cols={[5, 3]}
+        mobileOrder="left-first"
+        eyebrow="Campaign & Marketing Assets"
+        heading={
+          <>
+            Campaign & Marketing Assets That Create{" "}
+            <em className="grad-text not-italic">
+              Consistency Across Every Channel
+            </em>
+            .
+          </>
+        }
+        subtext="Campaign & Marketing Assets help businesses communicate across social media, events, sales initiatives, email marketing, advertising, and customer communications. Blossom Rocket develops creative assets that align with Brand Identity and Brand System standards."
+        ctas={[
+          {
+            label: "Explore Campaign & Marketing Assets with Blossom Rocket",
+            href: "/services/campaign-and-marketing-assets",
+            variant: "primary",
+          },
+        ]}
+        schemaItems={[
+          { topic: "Campaign Creative" },
+          { topic: "Social Media Templates" },
+          { topic: "Social Media Content" },
+          { topic: "Event Materials" },
+          { topic: "Trade Show Graphics" },
+          { topic: "Presentation Templates" },
+          { topic: "Email Graphics" },
+          { topic: "Digital Advertising Assets" },
+        ]}
+        pageUrl="https://blossomrocket.studio/services#campaign-and-marketing-assets"
+      >
+        <CardList
+          heading="Campaign & Marketing Asset services include:"
+          items={[
+            { topic: "Campaign Creative" },
+            { topic: "Social Media Templates" },
+            { topic: "Social Media Content" },
+            { topic: "Event Materials" },
+            { topic: "Trade Show Graphics" },
+            { topic: "Presentation Templates" },
+            { topic: "Email Graphics" },
+            { topic: "Digital Advertising Assets" },
+          ]}
+        />
+        <CardCallout
+          heading="Consistent marketing assets "
+          body="help businesses build stronger recognition across every stage of the customer journey."
+        />
+      </SectionLayout>
+
+      <div>TODO:: BREAK UP SECTIONS HERE WITH SOMETHING </div>
+      {/* ── Print & Environmental Design── */}
+      <SectionLayout
+        id="print-and-environmental-design"
+        theme="dark"
+        cols={[1, 1]}
+        stickyRight={false}
+        mobileOrder="left-first"
+        desktopOrder="maintain"
+        eyebrow="Print & Environmental Design"
+        heading={
+          <>
+            Print & Environmental Design That{" "}
+            <em className="grad-text not-italic">
+              Brings Your Brand Into the Real World
+            </em>
+            .
+          </>
+        }
+        subtext="Print & Environmental Design extends a brand into physical spaces, printed materials, packaging, signage, vehicles, events, and customer-facing environments. Blossom Rocket helps businesses create physical brand assets that align with their broader brand system."
+        ctas={[
+          {
+            label: "Explore Print & Environmental Design with Blossom Rocket",
+            href: "/services/print-and-environmental-design",
+            variant: "primary",
+          },
+        ]}
+        schemaItems={[
+          { topic: "Business Cards" },
+          { topic: "Brochures" },
+          { topic: "Catalogs" },
+          { topic: "Signage" },
+          { topic: "Environmental Graphics" },
+          { topic: "Vehicle Graphics" },
+          { topic: "Packaging" },
+        ]}
+        pageUrl="https://blossomrocket.studio/services#print-and-environmental-design"
+      >
+        <CardGrid
+          items={[
+            {
+              topic: "Business Cards",
+              image: <BusinessCards />,
+            },
+            { topic: "Brochures", image: <Brochures /> },
+            { topic: "Catalogs", image: <Catalogs /> },
+            {
+              topic: "Signage",
+              image: <Signage />,
+            },
+            {
+              topic: "Environmental Graphics",
+              image: <EnvironmentalGraphics />,
+            },
+            { topic: "Vehicle Graphics", image: <VehicleGraphics /> },
+            { topic: "Packaging", image: <Packaging /> },
+          ]}
+        />
+        <CardCallout
+          heading=""
+          body={
+            <>
+              Physical brand touchpoints should feel as{" "}
+              <b>consistent and intentional</b> as digital ones.
+            </>
+          }
+        />
+      </SectionLayout>
+
+      {/* ── Merchandise & Promotional Products */}
+      <SectionItemList
+        layout="inline"
+        id="merchandise-and-promotional-products"
+        theme="light"
+        pageUrl="https://blossomrocket.studio/services#merchandise-and-promotional-products"
+        eyebrow="Merchandise & Promotional Products"
+        heading={
+          <>
+            Merchandise & Promotional Products That{" "}
+            <em className="grad-text not-italic">Expand Brand Recognition</em>.
+          </>
+        }
+        ctas={[
+          {
+            label: "Expand Your Brand with Merch and Promotional Products",
+            href: "/services/merchandise-and-promotional-products",
+            variant: "primary",
+          },
+        ]}
+        subtext={
+          <>
+            Blossom Rocket helps businesses create branded merchandise programs
+            that support marketing campaigns, employee programs, customer
+            engagement, events, gifting, onboarding, and long-term brand
+            visibility.
+            <br />
+            <br />
+            Strategic merchandise helps businesses create lasting connections
+            with customers, employees, partners, and event attendees.
+          </>
+        }
+        listHeading="Merchandise & Promotional Product services include:"
+        items={[
+          {
+            topic: "Branded Apparel",
+            description:
+              "TODO: description description description description",
+          },
+          {
+            topic: "Promotional Products",
+            description:
+              "TODO: description description description description",
+          },
+          {
+            topic: "Event Merchandising",
+            description:
+              "TODO: description description description description",
+          },
+          {
+            topic: "Corporate Gifting",
+            description:
+              "TODO: description description description description",
+          },
+          {
+            topic: "Customer Appreciation Programs",
+            description:
+              "TODO: description description description description",
+          },
+          {
+            topic: "Onboarding Kits",
+            description:
+              "TODO: description description description description",
+          },
+          {
+            topic: "Merchandise Custom Designs",
+            description:
+              "TODO: description description description description",
+          },
+        ]}
+      />
+      {/* ── Company Stores */}
     </div>
   );
 }

@@ -49,7 +49,7 @@ export function PrimaryButton({
   return (
     <Link href={href} className={className}>
       <span className="relative z-10">{label}</span>
-      <span className="relative z-10">→</span>
+      <span className="relative z-10">↗</span>
     </Link>
   );
 }

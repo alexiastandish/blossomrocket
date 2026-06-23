@@ -38,7 +38,7 @@ export type SectionItemListProps = {
   theme?: SectionTheme;
   ctas?: CtaButton[];
   heading: React.ReactNode | string;
-  subtext?: string;
+  subtext?: React.ReactNode | string;
   listHeading: string;
   eyebrow?: string;
   orbs?: OrbConfig[];

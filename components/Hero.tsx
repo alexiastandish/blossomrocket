@@ -4,6 +4,7 @@ import { CtaButton, OrbConfig } from "@/lib/types/section";
 import { HeroProps, PillTheme } from "@/lib/types/hero";
 import { OutlineButton } from "./ui/OutlineButton";
 import { PrimaryButton } from "./ui/PrimaryButton";
+import CTAs from "./CTAs";
 
 const DEFAULT_CTAS: CtaButton[] = defaultCtas as CtaButton[];
 
@@ -81,7 +82,7 @@ export default function Hero({
   pillItems = [
     "Brand Identity",
     "Brand Systems",
-    "Digital",
+    "Digital Design",
     "Marketing",
     "Print",
     "Promo Products",
@@ -168,13 +169,14 @@ export default function Hero({
       {/* ── CTAs ── */}
       {ctas.length > 0 && (
         <div className="anim-fade-up anim-delay-4 flex gap-4 justify-center flex-wrap">
-          {ctas.map((cta) =>
+          {/* {ctas.map((cta) =>
             cta.variant === "outline" ? (
               <OutlineButton key={cta.href} {...cta} theme={theme} />
             ) : (
               <PrimaryButton key={cta.href} {...cta} theme={theme} />
             ),
-          )}
+          )} */}
+          <CTAs ctas={ctas} />
         </div>
       )}
 

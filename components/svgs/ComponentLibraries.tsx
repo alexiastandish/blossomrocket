@@ -8,17 +8,18 @@ export default function ComponentLibraries() {
     >
       <title>Component Libraries</title>
       <style>{`
-        .outer { animation: fadein 2s ease-out forwards; }
-        .card1 { animation: slidedown 0.5s 0.1s ease-out both; }
-        .card2 { animation: slidedown 0.5s 0.25s ease-out both; }
-        .card3 { animation: slidedown 0.5s 0.35s ease-out both; }
-        .card4 { animation: slidedown 0.5s 0.45s ease-out both; }
-        @keyframes fadein {
-          from { opacity: 0; } to { opacity: 1; }
+        .outer { animation: pulse-border 3s ease-in-out infinite; }
+        .card1 { animation: float 3s 0s ease-in-out infinite; }
+        .card2 { animation: float 3s 0.3s ease-in-out infinite; }
+        .card3 { animation: float 3s 0.6s ease-in-out infinite; }
+        .card4 { animation: float 3s 0.9s ease-in-out infinite; }
+        @keyframes pulse-border {
+          0%, 100% { stroke-opacity: 0.6; }
+          50%       { stroke-opacity: 1; }
         }
-        @keyframes slidedown {
-          from { opacity: 0; transform: translateY(-6px); }
-          to   { opacity: 1; transform: translateY(0); }
+        @keyframes float {
+          0%, 100% { transform: translateY(0); }
+          50%       { transform: translateY(-3px); }
         }
       `}</style>
       <rect

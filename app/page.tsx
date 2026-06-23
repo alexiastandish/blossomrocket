@@ -14,7 +14,20 @@ import marqueeItems from "@/data/marquees/homepage.json";
 export default function Home() {
   return (
     <>
-      <Hero />
+      <Hero
+        ctas={[
+          {
+            label: "Launch Your Brand with Blossom Rocket 🚀",
+            href: "/contact",
+            variant: "primary",
+          },
+          {
+            label: "Explore Blossom Rocket Services",
+            href: "/services",
+            variant: "outline",
+          },
+        ]}
+      />
       <Marquee items={marqueeItems} />
       <WhatIsSection />
       <WhySection />
