@@ -5,17 +5,26 @@ import {
   CardPills,
   CardCallout,
   CardGrid,
+  CardStatBento,
 } from "@/components/section";
 import SectionItemList from "@/components/section/ItemList";
 import Marquee from "@/components/section/Marquee";
+import BrandedApparel from "@/components/svgs/BrandedApparel";
 import Brochures from "@/components/svgs/Brochures";
 import BusinessCards from "@/components/svgs/BusinessCards";
 import Catalogs from "@/components/svgs/Catalogs";
 import ComponentLibraries from "@/components/svgs/ComponentLibraries";
+import CorporateGiftingPrograms from "@/components/svgs/CorporateGiftingPrograms";
+import CustomerPrograms from "@/components/svgs/CustomerPrograms";
 import DigitalMarketing from "@/components/svgs/DigitalMarketing";
+import EmployeePrograms from "@/components/svgs/EmployeePrograms";
 import EnvironmentalGraphics from "@/components/svgs/EnvironmentalGraphics";
+import EventMerchandise from "@/components/svgs/EventMerchandise";
 import FrontendDevelopment from "@/components/svgs/FrontEndDev";
+import MarketingMaterials from "@/components/svgs/MarketingMaterials";
 import Packaging from "@/components/svgs/Packaging";
+import PromotionalProducts from "@/components/svgs/PromotionalProducts";
+import RecognitionRewardPrograms from "@/components/svgs/RecognitionRewardsPrograms";
 import Signage from "@/components/svgs/Signage";
 import UiUxDesign from "@/components/svgs/UiUxDesign";
 import VehicleGraphics from "@/components/svgs/VehicleGraphics";
@@ -450,6 +459,65 @@ export default function Services() {
         ]}
       />
       {/* ── Company Stores */}
+      <SectionLayout
+        theme="brand"
+        id="company-stores"
+        cols={[5, 3]}
+        stickyRight={false}
+        mobileOrder="right-first"
+        desktopOrder="reverse"
+        eyebrow="Company Stores"
+        heading={
+          <>
+            Company Store Solutions{" "}
+            <em className="grad-text not-italic">Through SplashBrands</em>.
+          </>
+        }
+        subtext="Blossom Rocket helps businesses implement Company Store solutions through SplashBrands that centralize branded merchandise, simplify ordering, maintain brand consistency, and support scalable employee, customer, and event programs."
+        ctas={[
+          {
+            label: "Explore Company Stores through Splash Brands",
+            href: "/services/company-stores",
+            variant: "primary",
+          },
+        ]}
+      >
+        <CardStatBento
+          items={[
+            {
+              label: "Branded Apparel",
+              graphic: <BrandedApparel />,
+              size: "lg",
+            },
+            { label: "Promotional Products", graphic: <PromotionalProducts /> }, // defaults to "md"
+            {
+              label: "Corporate Gifting Programs",
+              graphic: <CorporateGiftingPrograms />,
+            },
+            {
+              label: "Employee Programs",
+              graphic: <EmployeePrograms />,
+              size: "sm",
+            },
+            {
+              label: "Customer Programs",
+              graphic: <CustomerPrograms />,
+              size: "sm",
+            },
+            { label: "Event Merchandise", graphic: <EventMerchandise /> },
+            {
+              label: "Recognition & Rewards Programs",
+              graphic: <RecognitionRewardPrograms />,
+              size: "lg",
+            },
+            {
+              label: "Marketing Materials",
+              graphic: <MarketingMaterials />,
+              size: "sm",
+            },
+          ]}
+        />
+      </SectionLayout>
     </div>
   );
 }

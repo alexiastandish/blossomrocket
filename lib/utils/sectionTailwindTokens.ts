@@ -32,6 +32,7 @@ export type SectionTokens = {
   gridIconBg: string;
   gridTopic: string;
   gridTag: string;
+  statBentoGlow: string;
 };
 
 export const tokens: {
@@ -91,6 +92,8 @@ export const tokens: {
     gridIconBg: "bg-[rgba(99,102,241,0.08)]",
     gridTopic: "text-[#18181b]",
     gridTag: "border-[rgba(24,24,27,0.10)] text-[rgba(24,24,27,0.48)]",
+    statBentoGlow:
+      "bg-[radial-gradient(circle_at_50%_35%,rgba(124,92,232,0.15),transparent_65%)]",
   },
 
   dark: {
@@ -128,6 +131,8 @@ export const tokens: {
     gridIconBg: "bg-[rgba(155,92,246,0.14)]",
     gridTopic: "text-white",
     gridTag: "border-[rgba(255,255,255,0.10)] text-[rgba(255,255,255,0.42)]",
+    statBentoGlow:
+      "bg-[radial-gradient(circle_at_50%_35%,rgba(155,92,246,0.35),transparent_65%)]",
   },
 
   // ── Brand: deep navy #1a1a2e bg, purple #7c5ce8 accent ──────────────────────
@@ -165,6 +170,8 @@ export const tokens: {
     gridIconBg: "bg-[rgba(124,92,232,0.20)]",
     gridTopic: "text-[#e8e4ff]",
     gridTag: "border-[rgba(124,92,232,0.25)] text-[#a78bfa]",
+    statBentoGlow:
+      "bg-[radial-gradient(circle_at_50%_35%,rgba(124,92,232,0.45),transparent_65%)]",
   },
 
   // ── Brand Soft: lighter lavender #2d2d4a surface, same purple accent ─────────
@@ -203,6 +210,8 @@ export const tokens: {
     gridIconBg: "bg-[rgba(124,92,232,0.08)]",
     gridTopic: "text-[#1a1a2e]",
     gridTag: "border-[rgba(124,92,232,0.15)] text-[#4a4a6a]",
+    statBentoGlow:
+      "bg-[radial-gradient(circle_at_50%_35%,rgba(124,92,232,0.20),transparent_65%)]",
   },
 };
 
