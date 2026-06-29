@@ -1,1 +1,110 @@
-[]
+[
+  {
+    "id": "about-blossom-rocket",
+    "title": "About Blossom Rocket",
+    "items": [
+      {
+        "id": "what-does-blossom-rocket-do",
+        "question": "What does Blossom Rocket do?",
+        "answer": "Blossom Rocket helps businesses create, manage, and scale consistent brand experiences across digital platforms, marketing assets, print materials, merchandise programs, promotional products, and company stores."
+      },
+      {
+        "id": "what-services-does-blossom-rocket-offer",
+        "question": "What services does Blossom Rocket offer?",
+        "answer": "Blossom Rocket provides Brand Identity, Brand Systems, Digital Design, Campaign & Marketing Assets, Print & Environmental Design, Merchandise & Promotional Products, Company Stores through SplashBrands, and Search Everything Optimization Consulting."
+      },
+      {
+        "id": "what-types-of-businesses-does-blossom-rocket-work-with",
+        "question": "What types of businesses does Blossom Rocket work with?",
+        "answer": "Blossom Rocket works with businesses that need to create consistent brand experiences across multiple channels, teams, locations, products, and customer touchpoints. This includes growing companies, established organizations, and businesses launching new brands or initiatives."
+      }
+    ],
+    "cta": {
+      "label": "Explore Blossom Rocket Services",
+      "href": "/services"
+    }
+  },
+  {
+    "id": "brand-identity-and-brand-systems",
+    "title": "Brand Identity & Brand Systems",
+    "items": [
+      {
+        "id": "what-is-a-brand-system",
+        "question": "What is a Brand System?",
+        "answer": "A Brand System is a centralized framework that includes Brand Standards, Asset Libraries, Templates, Usage Guidelines, and Design Systems. It creates a single source of truth that helps teams create consistent brand experiences across digital and physical touchpoints."
+      },
+      {
+        "id": "why-are-brand-systems-important",
+        "question": "Why are Brand Systems important?",
+        "answer": "As businesses grow, different teams, departments, vendors, and partners create brand assets independently. Brand Systems help maintain consistency, simplify asset management, improve collaboration, and support long-term growth."
+      },
+      {
+        "id": "brand-identity-vs-brand-systems",
+        "question": "What is the difference between Brand Identity and Brand Systems?",
+        "answer": "Brand Identity defines the visual elements of a brand, including logos, typography, colors, graphic elements, and iconography. Brand Systems define how those assets are documented, managed, and applied consistently across an organization."
+      }
+    ],
+    "cta": {
+      "label": "Explore Blossom Rocket Brand System Services",
+      "href": "/services/brand-systems"
+    }
+  },
+  {
+    "id": "digital-design-and-marketing",
+    "title": "Digital Design & Marketing",
+    "items": [
+      {
+        "id": "what-digital-design-services-does-blossom-rocket-offer",
+        "question": "What Digital Design services does Blossom Rocket offer?",
+        "answer": "Blossom Rocket provides UI/UX Design, Component Libraries, Web & App Design, Digital Marketing & Social Media Design, and Front-End Development services that help businesses create cohesive digital experiences."
+      },
+      {
+        "id": "what-are-campaign-and-marketing-assets",
+        "question": "What are Campaign & Marketing Assets?",
+        "answer": "Campaign & Marketing Assets are the creative materials businesses use to support marketing campaigns, social media, customer communications, events, sales initiatives, and promotional programs. Examples include social media graphics, presentation templates, email graphics, event materials, and digital advertising assets."
+      },
+      {
+        "id": "why-is-consistency-important-across-websites-and-marketing-materials",
+        "question": "Why is consistency important across websites and marketing materials?",
+        "answer": "Consistent digital experiences help businesses build recognition, strengthen trust, improve customer experiences, and create stronger connections between websites, campaigns, social media, and marketing initiatives."
+      }
+    ],
+    "cta": {
+      "label": "Explore Digital Design Services",
+      "href": "/services/digital-design"
+    },
+    "secondaryCta": {
+      "label": "Explore Campaign & Marketing Assets",
+      "href": "/services/campaign-and-marketing-assets"
+    }
+  },
+  {
+    "id": "print-merchandise-and-promotional-products",
+    "title": "Print, Merchandise & Promotional Products",
+    "items": [
+      {
+        "id": "what-is-print-and-environmental-design",
+        "question": "What is Print & Environmental Design?",
+        "answer": "Print & Environmental Design applies branding to physical materials and environments, including business cards, brochures, catalogs, signage, packaging, environmental graphics, and vehicle graphics."
+      },
+      {
+        "id": "why-do-businesses-invest-in-merchandise-and-promotional-products",
+        "question": "Why do businesses invest in Merchandise & Promotional Products?",
+        "answer": "Branded merchandise helps businesses increase visibility, support employee engagement, strengthen customer relationships, promote events, and create memorable brand experiences beyond traditional marketing channels."
+      },
+      {
+        "id": "what-makes-blossom-rocket-different-from-a-traditional-branding-agency",
+        "question": "What makes Blossom Rocket different from a traditional branding agency?",
+        "answer": "Many agencies stop at logos and brand guidelines. Blossom Rocket helps businesses connect branding to real-world execution through print materials, packaging, signage, merchandise programs, promotional products, apparel standards, and company store solutions."
+      }
+    ],
+    "cta": {
+      "label": "Explore Print & Environmental Design Services with Blossom Rocket",
+      "href": "/services/print-and-environmental-design"
+    },
+    "secondaryCta": {
+      "label": "Explore Merchandise & Promotional Products with Blossom Rocket",
+      "href": "/services/merchandise-and-promotional-products"
+    }
+  }
+]

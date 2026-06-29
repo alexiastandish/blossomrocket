@@ -1,3 +1,4 @@
+import FAQSection from "@/components/faqs/FAQSection";
 import Hero from "@/components/Hero";
 import {
   SectionLayout,
@@ -30,6 +31,7 @@ import UiUxDesign from "@/components/svgs/UiUxDesign";
 import VehicleGraphics from "@/components/svgs/VehicleGraphics";
 import WebAppDesign from "@/components/svgs/WebAppDesign";
 import serviceItems from "@/data/marquees/services.json";
+import faqs from "@/data/faqs/home.json";
 
 export default function Services() {
   return (
@@ -518,6 +520,14 @@ export default function Services() {
           ]}
         />
       </SectionLayout>
+      <FAQSection
+        eyebrow="FAQ"
+        title="Services, Answered"
+        subtitle="Everything you need to know about how Blossom Rocket builds and supports your brand."
+        groups={faqs}
+        theme="light"
+        pageUrl="https://blossomrocket.vercel.app/services"
+      />
     </div>
   );
 }

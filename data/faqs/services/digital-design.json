@@ -1,0 +1,137 @@
+[
+  {
+    "id": "digital-design-services",
+    "title": "Digital Design Services",
+    "items": [
+      {
+        "id": "what-digital-design-services-does-blossom-rocket-offer",
+        "question": "What Digital Design services does Blossom Rocket offer?",
+        "answer": "Blossom Rocket provides Digital Design services that help businesses create cohesive digital experiences across websites, applications, and marketing channels. Services include UI/UX Design, Component Libraries, Web & App Design, Digital Marketing & Social Media Design, and Front-End Development."
+      }
+    ],
+    "cta": {
+      "label": "Explore Digital Design Services",
+      "href": "/platform/TODO__"
+    }
+  },
+  {
+    "id": "ui-ux-design",
+    "title": "UI/UX Design",
+    "items": [
+      {
+        "id": "what-does-ui-ux-design-include",
+        "question": "What does Blossom Rocket include in UI/UX Design services?",
+        "answer": "Blossom Rocket creates user-centered digital experiences that balance usability, functionality, and visual consistency. UI/UX Design services may include user flows, page structure, navigation systems, interface design, interaction design, and experience optimization for websites, applications, and digital platforms."
+      },
+      {
+        "id": "how-ui-ux-design-improves-digital-experience",
+        "question": "How can UI/UX Design improve a digital experience?",
+        "answer": "Effective UI/UX Design helps users navigate information more easily, understand content more quickly, and complete actions more efficiently. Blossom Rocket designs digital experiences that reduce friction, improve engagement, and create more intuitive interactions across customer touchpoints."
+      },
+      {
+        "id": "when-to-invest-in-ui-ux-design",
+        "question": "When should a business invest in UI/UX Design services?",
+        "answer": "Businesses often invest in UI/UX Design when launching a new website, redesigning an existing platform, improving user engagement, introducing new functionality, or addressing usability challenges that affect customer experience."
+      },
+      {
+        "id": "how-blossom-rocket-approaches-ui-ux-design",
+        "question": "How does Blossom Rocket approach UI/UX Design?",
+        "answer": "Blossom Rocket approaches UI/UX Design as part of a larger brand ecosystem. Rather than designing isolated pages or screens, digital experiences are created to align with Brand Identity standards, support business goals, and maintain consistency across websites, applications, and marketing channels."
+      }
+    ],
+    "cta": {
+      "label": "Explore UI/UX Design Services",
+      "href": "/platform/TODO__"
+    }
+  },
+  {
+    "id": "component-libraries",
+    "title": "Component Libraries",
+    "items": [
+      {
+        "id": "what-is-a-component-library",
+        "question": "What is a Component Library?",
+        "answer": "A Component Library is a collection of reusable interface elements that creates consistency across digital experiences. Component Libraries often include buttons, forms, navigation systems, layouts, icons, and other UI components that can be used across websites and applications."
+      },
+      {
+        "id": "why-does-blossom-rocket-create-component-libraries",
+        "question": "Why does Blossom Rocket create Component Libraries?",
+        "answer": "Blossom Rocket creates Component Libraries to help businesses build more efficiently while maintaining consistency across digital platforms. By standardizing interface elements and design patterns, organizations can reduce duplication, streamline development, and create more scalable digital systems."
+      },
+      {
+        "id": "benefits-of-a-component-library",
+        "question": "What are the benefits of a Component Library?",
+        "answer": "Component Libraries help improve consistency, accelerate design and development workflows, simplify maintenance, and make it easier to expand digital experiences over time. They provide a shared foundation for future websites, applications, and digital products."
+      },
+      {
+        "id": "who-benefits-from-a-component-library",
+        "question": "Who benefits most from a Component Library?",
+        "answer": "Component Libraries are especially valuable for organizations managing multiple websites, applications, landing pages, campaigns, or digital products that require a consistent user experience and scalable design framework."
+      }
+    ],
+    "cta": {
+      "label": "Explore Component Library Services",
+      "href": "/platform/TODO__"
+    }
+  },
+  {
+    "id": "web-and-app-design",
+    "title": "Web & App Design",
+    "items": [
+      {
+        "id": "what-types-of-websites-and-applications-does-blossom-rocket-design",
+        "question": "What types of websites and applications does Blossom Rocket design?",
+        "answer": "Blossom Rocket designs marketing websites, landing pages, web applications, mobile application interfaces, and other digital experiences that support business goals while maintaining a cohesive brand experience."
+      },
+      {
+        "id": "what-is-included-in-web-and-app-design",
+        "question": "What is included in Web & App Design services?",
+        "answer": "Web & App Design services may include website design, landing page design, application interfaces, responsive layouts, user flows, wireframes, prototypes, and digital experience design. Every project is developed with usability, accessibility, and long-term scalability in mind."
+      },
+      {
+        "id": "how-web-and-app-design-supports-business-growth",
+        "question": "How does Web & App Design support business growth?",
+        "answer": "Well-designed websites and applications help businesses improve customer engagement, strengthen brand perception, communicate information more effectively, and create better digital experiences for customers and stakeholders."
+      },
+      {
+        "id": "why-consistency-matters-across-websites-and-applications",
+        "question": "Why is consistency important across websites and applications?",
+        "answer": "Consistent digital experiences help users navigate more confidently, recognize brand elements more easily, and interact with a business more effectively. Blossom Rocket helps organizations create digital experiences that feel connected across platforms and touchpoints."
+      }
+    ],
+    "cta": {
+      "label": "Explore Web & App Design Services",
+      "href": "/platform/TODO__"
+    }
+  },
+  {
+    "id": "front-end-development",
+    "title": "Front-End Development",
+    "items": [
+      {
+        "id": "what-is-front-end-development",
+        "question": "What is Front-End Development?",
+        "answer": "Front-End Development is the process of transforming approved designs into functional digital experiences. It focuses on building the user-facing portions of websites and applications while ensuring usability, accessibility, and performance."
+      },
+      {
+        "id": "does-blossom-rocket-provide-front-end-development",
+        "question": "Does Blossom Rocket provide Front-End Development services?",
+        "answer": "Yes. Blossom Rocket develops responsive front-end experiences that bring approved designs to life across websites, landing pages, and digital interfaces while maintaining consistency across devices and screen sizes."
+      },
+      {
+        "id": "why-is-front-end-development-important",
+        "question": "Why is Front-End Development important?",
+        "answer": "Strong Front-End Development ensures digital experiences function as intended. It helps support accessibility, responsive behavior, usability, performance, and long-term maintainability."
+      },
+      {
+        "id": "how-front-end-development-supports-digital-design",
+        "question": "How does Front-End Development support Digital Design services?",
+        "answer": "Front-End Development serves as the bridge between design and implementation. Blossom Rocket helps ensure that digital experiences not only look consistent with approved designs, but also function effectively across modern browsers, devices, and user environments."
+      }
+    ],
+    "cta": {
+      "label": "Explore Front-End Development Services",
+      "href": "/platform/TODO__"
+    }
+  }
+]

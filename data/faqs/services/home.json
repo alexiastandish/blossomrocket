@@ -1,0 +1,118 @@
+[
+  {
+    "id": "blossom-rocket-services",
+    "title": "Blossom Rocket Services",
+    "items": [
+      {
+        "id": "what-services-does-blossom-rocket-offer",
+        "question": "What services does Blossom Rocket offer?",
+        "answer": "Blossom Rocket provides creative brand services across Brand Identity, Brand Systems, Digital Design, Campaign & Marketing Assets, Print & Environmental Design, Merchandise & Promotional Products, Company Stores through SplashBrands, and Search Everything Optimization Consulting."
+      },
+      {
+        "id": "who-are-blossom-rocket-services-for",
+        "question": "Who are Blossom Rocket services for?",
+        "answer": "Blossom Rocket services are for businesses that need more consistent brand experiences across digital platforms, marketing materials, printed assets, merchandise, promotional products, and company stores."
+      },
+      {
+        "id": "digital-and-physical-brand-needs",
+        "question": "Can Blossom Rocket support both digital and physical brand needs?",
+        "answer": "Yes. Blossom Rocket helps businesses connect digital brand experiences with physical brand touchpoints, including websites, marketing assets, signage, packaging, apparel, promotional products, and company stores."
+      }
+    ],
+    "cta": {
+      "label": "Explore Blossom Rocket's Brand Identity Services",
+      "href": "/services/brand-identity"
+    }
+  },
+  {
+    "id": "brand-foundation-services",
+    "title": "Brand Foundation Services",
+    "items": [
+      {
+        "id": "brand-identity-vs-brand-systems",
+        "question": "What is the difference between Brand Identity and Brand Systems?",
+        "answer": "Brand Identity defines the visual elements of a brand, such as logos, typography, colors, graphics, and iconography. Brand Systems define how those elements are documented, managed, and applied consistently across digital and physical experiences."
+      },
+      {
+        "id": "why-are-brand-systems-important",
+        "question": "Why are Brand Systems important?",
+        "answer": "Brand Systems help businesses maintain consistency, reduce duplicate work, improve collaboration, simplify vendor management, and protect brand standards as the business grows."
+      }
+    ],
+    "cta": {
+      "label": "Explore Blossom Rocket's Brand System Service",
+      "href": "/services/brand-systems"
+    }
+  },
+  {
+    "id": "digital-marketing-print-services",
+    "title": "Digital, Marketing, and Print Services",
+    "items": [
+      {
+        "id": "what-digital-design-services",
+        "question": "What Digital Design services does Blossom Rocket offer?",
+        "answer": "Blossom Rocket offers UI/UX Design, Component Libraries, Web & App Design, Digital Marketing & Social Media Design, and Front-End Development."
+      },
+      {
+        "id": "what-campaign-marketing-assets",
+        "question": "What Campaign & Marketing Assets can Blossom Rocket create?",
+        "answer": "Blossom Rocket creates campaign creative, social media templates, social media content, event materials, trade show graphics, presentation templates, email graphics, and digital advertising assets."
+      },
+      {
+        "id": "what-print-environmental-design",
+        "question": "What Print & Environmental Design services does Blossom Rocket provide?",
+        "answer": "Blossom Rocket provides design services for business cards, brochures, catalogs, signage, environmental graphics, vehicle graphics, packaging, and other physical brand assets."
+      }
+    ],
+
+    "cta": {
+      "label": "Explore Digital Design with Blossom Rocket",
+      "href": "/services/digital-design"
+    }
+  },
+  {
+    "id": "merchandise-and-company-stores",
+    "title": "Merchandise and Company Stores",
+    "items": [
+      {
+        "id": "merchandise-promotional-product-services",
+        "question": "What Merchandise & Promotional Product services does Blossom Rocket offer?",
+        "answer": "Blossom Rocket helps businesses create branded apparel, promotional products, event merchandise, corporate gifting programs, customer appreciation programs, onboarding kits, and merchandise designs."
+      },
+      {
+        "id": "what-is-a-company-store",
+        "question": "What is a Company Store?",
+        "answer": "A Company Store is a centralized online storefront that provides access to approved branded merchandise, apparel, promotional products, gifts, event materials, and marketing assets."
+      },
+      {
+        "id": "blossom-rocket-and-splashbrands",
+        "question": "How does Blossom Rocket work with SplashBrands?",
+        "answer": "Blossom Rocket helps businesses create the brand systems, merchandise programs, and creative assets that support Company Store initiatives. SplashBrands provides the company store technology, production capabilities, fulfillment, and operational infrastructure."
+      }
+    ],
+    "cta": {
+      "label": "Explore Merchandise and Promotional Products with Blossom Rocket",
+      "href": "/services/company-store"
+    }
+  },
+  {
+    "id": "search-everything-optimization-consulting",
+    "title": "Search Everything Optimization Consulting",
+    "items": [
+      {
+        "id": "what-is-search-everything-optimization",
+        "question": "What is Search Everything Optimization?",
+        "answer": "Search Everything Optimization helps businesses improve discoverability across traditional search engines, AI search experiences, AI assistants, business directories, knowledge graphs, and emerging discovery platforms."
+      },
+      {
+        "id": "why-does-search-everything-optimization-matter",
+        "question": "Why does Search Everything Optimization matter?",
+        "answer": "Modern discovery happens across more than search engines. Businesses need structured, consistent, trustworthy information that can be understood by search platforms, AI systems, and customers."
+      }
+    ],
+    "cta": {
+      "label": "Explore Blossom Rocket's Search Everything Optimization Consulting Service",
+      "href": "/services/search-everything-optimization-consulting"
+    }
+  }
+]

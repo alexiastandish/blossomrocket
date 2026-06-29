@@ -1,0 +1,72 @@
+[
+  {
+    "id": "print-and-environmental-design",
+    "title": "Print & Environmental Design",
+    "items": [
+      {
+        "id": "what-is-print-and-environmental-design",
+        "question": "What is Print & Environmental Design?",
+        "answer": "Print & Environmental Design is the process of applying branding to physical materials and environments. Blossom Rocket provides Print & Environmental Design services that include Business Cards, Brochures, Catalogs, Signage, Environmental Graphics, Vehicle Graphics, and Packaging to help businesses create more consistent physical brand experiences."
+      },
+      {
+        "id": "why-is-print-and-environmental-design-important",
+        "question": "Why is Print & Environmental Design important?",
+        "answer": "Print & Environmental Design helps businesses create consistent customer experiences across physical touchpoints. Blossom Rocket helps organizations align printed materials, packaging, signage, branded environments, and customer-facing assets to improve brand recognition, strengthen trust, and create more cohesive brand experiences."
+      },
+      {
+        "id": "who-benefits-from-print-and-environmental-design-services",
+        "question": "Who benefits from Print & Environmental Design services?",
+        "answer": "Businesses that use printed marketing materials, packaging, signage, vehicle graphics, retail displays, event materials, or branded environments often benefit from Print & Environmental Design services. Blossom Rocket helps these businesses create more consistent physical brand experiences across locations, events, and customer interactions."
+      }
+    ],
+    "cta": {
+      "label": "Explore Blossom Rocket Print & Environmental Design Services",
+      "href": "/contact-us_TODO"
+    }
+  },
+  {
+    "id": "print-and-environmental-design-services",
+    "title": "Blossom Rocket Print & Environmental Design Services",
+    "items": [
+      {
+        "id": "what-print-and-environmental-design-services-does-blossom-rocket-offer",
+        "question": "What Print & Environmental Design services does Blossom Rocket offer?",
+        "answer": "Blossom Rocket provides Business Card Design, Brochure Design, Catalog Design, Signage Design, Environmental Graphics, Vehicle Graphics, and Packaging Design services. These Print & Environmental Design services help businesses create branded materials and physical environments that support recognition, communication, and customer engagement."
+      },
+      {
+        "id": "what-types-of-physical-brand-assets-can-blossom-rocket-create",
+        "question": "What types of physical brand assets can Blossom Rocket create?",
+        "answer": "Blossom Rocket creates business cards, brochures, catalogs, packaging systems, signage, environmental graphics, vehicle graphics, and other printed marketing materials. These assets help businesses extend their brand beyond digital channels and create more consistent physical experiences."
+      },
+      {
+        "id": "does-blossom-rocket-create-design-assets-for-offices-retail-spaces-and-events",
+        "question": "Does Blossom Rocket create design assets for offices, retail spaces, and events?",
+        "answer": "Yes. Blossom Rocket creates Print & Environmental Design assets for offices, retail environments, trade shows, events, facilities, customer-facing locations, and branded spaces. These assets help businesses create environments that reinforce their brand identity and improve customer experiences."
+      }
+    ],
+    "cta": {
+      "label": "Create Signage, Packaging, Printed Materials, and Branded Environments with Blossom Rocket",
+      "href": "/contact-us_TODO"
+    }
+  },
+  {
+    "id": "physical-brand-experiences",
+    "title": "Physical Brand Experiences",
+    "items": [
+      {
+        "id": "how-print-and-environmental-design-supports-brand-recognition",
+        "question": "How does Print & Environmental Design support brand recognition?",
+        "answer": "Print & Environmental Design helps businesses create consistent visual experiences across packaging, signage, printed materials, branded environments, and customer-facing assets. Blossom Rocket develops physical brand assets that reinforce recognition and help customers identify and remember a brand more easily."
+      },
+      {
+        "id": "how-blossom-rocket-creates-consistent-physical-brand-experiences",
+        "question": "How does Blossom Rocket help businesses create consistent physical brand experiences?",
+        "answer": "Blossom Rocket helps businesses connect printed materials, packaging, signage, environmental graphics, vehicle graphics, and branded environments through a cohesive Print & Environmental Design strategy. This approach helps create stronger customer experiences across both physical and digital touchpoints."
+      }
+    ],
+    "cta": {
+      "label": "Build Physical Brand Experiences That Reflect Your Brand",
+      "href": "/contact-us_TODO"
+    }
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "id": "company-stores",
+    "title": "Company Stores",
+    "items": [
+      {
+        "id": "what-is-a-company-store",
+        "question": "What is a Company Store?",
+        "answer": "A Company Store is a centralized online storefront that provides access to approved branded merchandise, apparel, promotional products, and marketing materials. Blossom Rocket helps businesses implement Company Stores through SplashBrands to simplify ordering and maintain brand consistency."
+      },
+      {
+        "id": "why-do-businesses-use-company-stores",
+        "question": "Why do businesses use Company Stores?",
+        "answer": "Businesses use Company Stores to centralize merchandise management, improve brand consistency, simplify purchasing, and support employee, customer, and event programs. Company Stores help organizations manage branded products more efficiently across teams and locations."
+      },
+      {
+        "id": "who-benefits-from-a-company-store",
+        "question": "Who benefits from a Company Store?",
+        "answer": "Organizations with multiple employees, departments, locations, recurring merchandise needs, event programs, or promotional product initiatives often benefit from a centralized Company Store solution."
+      }
+    ],
+    "cta": {
+      "label": "Learn More About Company Store Benefits",
+      "href": "/contact-us_TODO"
+    }
+  },
+  {
+    "id": "splashbrands",
+    "title": "SplashBrands",
+    "items": [
+      {
+        "id": "what-makes-splashbrands-different-from-other-company-store-providers",
+        "question": "What makes SplashBrands different from other Company Store providers?",
+        "answer": "SplashBrands combines Company Store technology, in-house manufacturing, on-demand production, no inventory requirements, no minimum orders, and integrated merchandising tools within a single platform."
+      },
+      {
+        "id": "how-does-blossom-rocket-work-with-splashbrands",
+        "question": "How does Blossom Rocket work with SplashBrands?",
+        "answer": "Blossom Rocket helps businesses develop the brand systems, merchandise programs, and creative assets that support successful Company Store implementations. SplashBrands provides the platform, production capabilities, and operational infrastructure."
+      }
+    ],
+    "cta": {
+      "label": "Explore Company Stores Through SplashBrands",
+      "href": "/contact-us_TODO"
+    }
+  }
+]

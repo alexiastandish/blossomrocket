@@ -1,0 +1,52 @@
+[
+  {
+    "id": "merchandise-and-promotional-products",
+    "title": "Merchandise & Promotional Products",
+    "items": [
+      {
+        "id": "what-are-merchandise-and-promotional-products",
+        "question": "What are Merchandise & Promotional Products?",
+        "answer": "Merchandise & Promotional Products are branded physical products used to support marketing campaigns, employee engagement, customer relationships, events, and brand visibility. Blossom Rocket helps businesses create merchandise programs that connect branded products to broader marketing, culture, and engagement initiatives."
+      },
+      {
+        "id": "why-do-businesses-invest-in-merchandise-and-promotional-products",
+        "question": "Why do businesses invest in Merchandise & Promotional Products?",
+        "answer": "Businesses invest in Merchandise & Promotional Products to increase brand visibility, strengthen customer engagement, support employee programs, and create memorable interactions. Blossom Rocket develops merchandise strategies that help organizations extend their brand beyond websites, advertising, and traditional marketing materials."
+      },
+      {
+        "id": "who-benefits-from-merchandise-and-promotional-product-services",
+        "question": "Who benefits from Merchandise & Promotional Product services?",
+        "answer": "Businesses that manage events, employee programs, customer engagement initiatives, recruiting efforts, promotional campaigns, or branded merchandise programs often benefit from Merchandise & Promotional Product services. Blossom Rocket helps organizations create branded products that support a wide range of business goals."
+      }
+    ],
+    "cta": {
+      "label": "Learn How Merchandise & Promotional Products Support Business Growth",
+      "href": "/contact-us_TODO"
+    }
+  },
+  {
+    "id": "blossom-rocket-merchandise-services",
+    "title": "Blossom Rocket Merchandise Services",
+    "items": [
+      {
+        "id": "what-merchandise-and-promotional-product-services-does-blossom-rocket-offer",
+        "question": "What Merchandise & Promotional Product services does Blossom Rocket offer?",
+        "answer": "Blossom Rocket provides Branded Apparel, Promotional Products, Event Merchandise, Corporate Gifting, Employee Recognition Programs, Onboarding Kits, Merchandise Design, and Product Sourcing services. These services help businesses create branded merchandise programs that support marketing, culture, and engagement initiatives."
+      },
+      {
+        "id": "can-blossom-rocket-create-custom-merchandise-programs",
+        "question": "Can Blossom Rocket create custom merchandise programs?",
+        "answer": "Yes. Blossom Rocket develops custom merchandise programs based on business goals, audiences, events, employee initiatives, customer programs, and promotional campaigns. Each program is designed to support specific objectives while maintaining consistency across branded products."
+      },
+      {
+        "id": "does-blossom-rocket-help-with-product-sourcing",
+        "question": "Does Blossom Rocket help with product sourcing?",
+        "answer": "Yes. Blossom Rocket helps businesses identify, source, and develop products that align with brand standards, program goals, audience needs, and budget requirements."
+      }
+    ],
+    "cta": {
+      "label": "Explore Custom Merchandise Programs and Product Sourcing Services",
+      "href": "/contact-us_TODO"
+    }
+  }
+]
