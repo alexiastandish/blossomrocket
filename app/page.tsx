@@ -6,10 +6,11 @@ import DiffBand from "@/components/DiffBand";
 import DeploymentSection from "@/components/DeploymentSection";
 import CompanyStoresSection from "@/components/CompanyStoresSection";
 import FrameworkSection from "@/components/FrameworkSection";
-import FAQSection from "@/components/FAQSection";
 import ContactSection from "@/components/ContactSection";
 import OurServices from "@/components/OurServices";
 import marqueeItems from "@/data/marquees/homepage.json";
+import FAQSection from "@/components/faqs/FAQSection";
+import homePageFAQs from "@/data/faqs/home.json";
 
 export default function Home() {
   return (
@@ -36,7 +37,11 @@ export default function Home() {
       <DeploymentSection />
       <CompanyStoresSection />
       <FrameworkSection />
-      <FAQSection />
+      <FAQSection
+        groups={homePageFAQs}
+        theme="dark"
+        pageUrl="https://blossomrocket.studio"
+      />
       <ContactSection />
     </>
   );
