@@ -1,5 +1,25 @@
 export type SectionTheme = "light" | "dark" | "brand" | "brandSoft";
 
+export type SectionLayoutProps = {
+  heading: React.ReactNode;
+  subtext?: string;
+  eyebrow?: string;
+  ctas?: CtaButton[];
+  children: React.ReactNode;
+  cols?: [number, number];
+  mobileOrder?: "left-first" | "right-first";
+  desktopOrder?: "maintain" | "reverse";
+  align?: "left" | "center";
+  theme?: SectionTheme;
+  orbs?: OrbConfig[];
+  pageUrl?: string;
+  schemaItems?: { topic: string }[];
+  id?: string;
+  className?: string;
+  stickyRight?: boolean;
+  layout?: "split" | "stacked";
+};
+
 // ─── Orb / ambient glow config ───────────────────────────────────────────────
 
 export type OrbConfig = {

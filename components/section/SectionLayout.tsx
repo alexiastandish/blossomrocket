@@ -24,6 +24,7 @@ export type SectionLayoutProps = {
   id?: string;
   className?: string;
   stickyRight?: boolean;
+  layout?: "split" | "stacked";
 };
 
 export default function SectionLayout({
@@ -43,6 +44,7 @@ export default function SectionLayout({
   id,
   className = "",
   stickyRight = true,
+  layout = "split",
 }: SectionLayoutProps) {
   const activeTheme = tokens[theme];
   const schemaId = id ?? "section";
@@ -51,6 +53,10 @@ export default function SectionLayout({
     schemaItems && schemaItems.length > 0
       ? buildSchema(schemaItems, schemaHeading, pageUrl)
       : null;
+
+  const isStacked = layout === "stacked";
+  const isDarkTheme =
+    theme === "dark" || theme === "brand" || theme === "brandSoft";
 
   // Mobile order: which column shows first below lg
   const leftMobileOrder = mobileOrder === "right-first" ? "order-2" : "order-1";
@@ -111,57 +117,91 @@ export default function SectionLayout({
           <Orb key={i} orb={orb} />
         ))}
 
-        <div
-          className={`section-col-grid grid items-start gap-[clamp(40px,7vw,100px)] relative z-10`}
-          style={
-            {
-              "--section-cols": `${cols[0]}fr ${cols[1]}fr`,
-            } as React.CSSProperties
-          }
-        >
-          {/* ── Left ── */}
-          <div className={`rv flex flex-col ${alignClass} ${leftColClass}`}>
-            {eyebrow && <SectionLabel text={eyebrow} />}
-            <h2
-              id={`${schemaId}-heading`}
-              className={`font-semibold leading-[1.06] tracking-[-0.02em] mb-5 ${activeTheme.heading}`}
-              style={{
-                fontFamily: "'Parkinsans', sans-serif",
-                fontSize: "clamp(38px,5.5vw,76px)",
-              }}
-            >
-              {heading}
-            </h2>
-            {subtext && (
-              <p
-                className={`leading-[1.8] mb-8 ${activeTheme.subtext}`}
+        {isStacked ? (
+          <div className="relative z-10 max-w-3xl mx-auto flex flex-col items-center text-center gap-10">
+            <div className="rv flex flex-col items-center">
+              {eyebrow && <SectionLabel text={eyebrow} />}
+              <h2
+                id={`${schemaId}-heading`}
+                className={`font-semibold leading-[1.06] tracking-[-0.02em] mb-5 ${activeTheme.heading}`}
                 style={{
-                  fontSize: "clamp(15px,1.4vw,18px)",
-                  maxWidth: "560px",
+                  fontFamily: "'Parkinsans', sans-serif",
+                  fontSize: "clamp(32px,4.5vw,56px)",
                 }}
               >
-                {subtext}
-              </p>
-            )}
-            {ctas && (
-              <div className={`flex flex-wrap gap-3 ${ctasAlign}`}>
-                <CTAs ctas={ctas} theme={theme} />
-              </div>
-            )}
+                {heading}
+              </h2>
+              {subtext && (
+                <p
+                  className={`leading-[1.8] mb-2 ${activeTheme.subtext}`}
+                  style={{
+                    fontSize: "clamp(15px,1.4vw,18px)",
+                    maxWidth: "560px",
+                  }}
+                >
+                  {subtext}
+                </p>
+              )}
+              {ctas && (
+                <div className="flex flex-wrap gap-3 justify-center mt-6">
+                  <CTAs ctas={ctas} theme={theme} />
+                </div>
+              )}
+            </div>
+            <div className="rv d3 w-full">{themedChildren}</div>
           </div>
-
-          {/* ── Right ── */}
+        ) : (
+          /* ── Split layout: copy left, children right ── */
           <div
-            className={[
-              "rv d3 flex flex-col gap-4",
-              stickyRight ? "lg:sticky" : "h-full",
-              rightColClass,
-            ].join(" ")}
-            style={stickyRight ? { top: "calc(68px + 20px)" } : undefined}
+            className="section-col-grid grid items-start gap-[clamp(40px,7vw,100px)] relative z-10"
+            style={
+              {
+                "--section-cols": `${cols[0]}fr ${cols[1]}fr`,
+              } as React.CSSProperties
+            }
           >
-            {themedChildren}
+            <div className={`rv flex flex-col ${alignClass} ${leftColClass}`}>
+              {eyebrow && <SectionLabel text={eyebrow} />}
+              <h2
+                id={`${schemaId}-heading`}
+                className={`font-semibold leading-[1.06] tracking-[-0.02em] mb-5 ${activeTheme.heading}`}
+                style={{
+                  fontFamily: "'Parkinsans', sans-serif",
+                  fontSize: "clamp(38px,5.5vw,76px)",
+                }}
+              >
+                {heading}
+              </h2>
+              {subtext && (
+                <p
+                  className={`leading-[1.8] mb-8 ${activeTheme.subtext}`}
+                  style={{
+                    fontSize: "clamp(15px,1.4vw,18px)",
+                    maxWidth: "560px",
+                  }}
+                >
+                  {subtext}
+                </p>
+              )}
+              {ctas && (
+                <div className={`flex flex-wrap gap-3 ${ctasAlign}`}>
+                  <CTAs ctas={ctas} theme={theme} />
+                </div>
+              )}
+            </div>
+
+            <div
+              className={[
+                "rv d3 flex flex-col gap-4",
+                stickyRight ? "lg:sticky" : "h-full",
+                rightColClass,
+              ].join(" ")}
+              style={stickyRight ? { top: "calc(68px + 20px)" } : undefined}
+            >
+              {themedChildren}
+            </div>
           </div>
-        </div>
+        )}
       </section>
     </>
   );

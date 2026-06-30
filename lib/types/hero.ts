@@ -37,4 +37,6 @@ export interface HeroProps {
 
   /** Override the section id (default "hero") */
   id?: string;
+
+  showPills?: boolean;
 }

@@ -1,9 +1,6 @@
-import Link from "next/link";
 import defaultCtas from "@/lib/constants/default_ctas.json";
 import { CtaButton, OrbConfig } from "@/lib/types/section";
 import { HeroProps, PillTheme } from "@/lib/types/hero";
-import { OutlineButton } from "./ui/OutlineButton";
-import { PrimaryButton } from "./ui/PrimaryButton";
 import CTAs from "./CTAs";
 
 const DEFAULT_CTAS: CtaButton[] = defaultCtas as CtaButton[];
@@ -96,6 +93,7 @@ export default function Hero({
   showScrollHint = true,
   className = "",
   id = "hero",
+  showPills = true,
 }: HeroProps) {
   const resolvedPillTheme: PillTheme =
     pillTheme ?? (theme === "dark" ? "dark" : "light");
@@ -124,7 +122,7 @@ export default function Hero({
       ))}
 
       {/* ── Eyebrow pill ── */}
-      {pillItems.length > 0 && (
+      {pillItems.length > 0 && showPills && (
         <div
           className={[
             "anim-fade-up anim-delay-1 inline-flex items-center gap-2 text-[12px] font-semibold tracking-[0.1em] uppercase px-4 py-1.5 rounded-full mb-8",
