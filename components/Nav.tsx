@@ -53,7 +53,6 @@ const links: NavLink[] = [
 
   { href: "/about", label: "Who We Are" },
   { href: "/resources", label: "Resources", dropdown: true },
-  { href: "/pricing", label: "Pricing" },
   { href: "/contact", label: "Contact Us" },
 ];
 
