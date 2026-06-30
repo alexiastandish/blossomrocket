@@ -58,9 +58,9 @@ export default function Services() {
       <Marquee items={serviceItems} theme="dark" />
 
       <SectionItemList
-        pageUrl="https://blossomrocket.studio/services#services"
+        pageUrl="https://blossomrocket.studio/services"
         layout="inline"
-        id="services"
+        id="beyond-traditional-creative-services"
         theme="light"
         eyebrow="Beyond Traditional Creative Services"
         heading={
@@ -265,27 +265,27 @@ export default function Services() {
           }
         />
       </SectionLayout>
-      {/* ── Campaign & Marketing Assets ── */}
+      {/* ── Marketing Assets ── */}
       <SectionLayout
-        id="campaign-and-marketing-assets"
+        id="marketing-assets"
         theme="brand"
         cols={[5, 3]}
         mobileOrder="left-first"
-        eyebrow="Campaign & Marketing Assets"
+        eyebrow="Marketing Assets"
         heading={
           <>
-            Campaign & Marketing Assets That Create{" "}
+            Marketing Assets That Create{" "}
             <em className="grad-text not-italic">
               Consistency Across Every Channel
             </em>
             .
           </>
         }
-        subtext="Campaign & Marketing Assets help businesses communicate across social media, events, sales initiatives, email marketing, advertising, and customer communications. Blossom Rocket develops creative assets that align with Brand Identity and Brand System standards."
+        subtext="Marketing Assets help businesses communicate across social media, events, sales initiatives, email marketing, advertising, and customer communications. Blossom Rocket develops creative assets that align with Brand Identity and Brand System standards."
         ctas={[
           {
-            label: "Explore Campaign & Marketing Assets with Blossom Rocket",
-            href: "/services/campaign-and-marketing-assets",
+            label: "Explore Marketing Assets with Blossom Rocket",
+            href: "/services/marketing-assets",
             variant: "primary",
           },
         ]}
@@ -299,10 +299,10 @@ export default function Services() {
           { topic: "Email Graphics" },
           { topic: "Digital Advertising Assets" },
         ]}
-        pageUrl="https://blossomrocket.studio/services#campaign-and-marketing-assets"
+        pageUrl="https://blossomrocket.studio/services#marketing-assets"
       >
         <CardList
-          heading="Campaign & Marketing Asset services include:"
+          heading="Marketing Asset services include:"
           items={[
             { topic: "Campaign Creative" },
             { topic: "Social Media Templates" },

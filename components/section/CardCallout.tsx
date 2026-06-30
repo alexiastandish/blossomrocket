@@ -2,7 +2,7 @@ import { tokens, SectionTokens } from "@/lib/utils/sectionTailwindTokens";
 
 export type CardCalloutProps = {
   heading?: string;
-  body: string | React.ReactNode;
+  body?: string | React.ReactNode;
   activeTheme?: SectionTokens;
 };
 export default function CardCallout({
@@ -21,7 +21,7 @@ export default function CardCallout({
         {heading && (
           <strong className={activeTokens.calloutStrong}>{heading} </strong>
         )}
-        {body}
+        {body && <>{body} </>}
       </p>
     </div>
   );

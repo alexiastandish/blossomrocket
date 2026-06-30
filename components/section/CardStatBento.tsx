@@ -28,8 +28,12 @@ export default function CardStatBento({
 }: CardStatBentoProps) {
   const activeTokens = activeTheme ?? tokens["light"];
 
+  const shortList = items.length <= 4;
+
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 grid-flow-dense ">
+    <div
+      className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 grid-flow-dense`}
+    >
       {items.map((item) => {
         const config = sizeConfig[item.size ?? "md"];
         const isLargeSize = item.size === "tall" || item.size === "lg";

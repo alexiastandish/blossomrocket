@@ -31,7 +31,7 @@ export default function CardList({
         {items.map((item, i) => (
           <div
             key={item.topic}
-            className={`flex items-center gap-3 text-[14px] py-3 border-b last:border-b-0 ${activeTokens.itemText} ${activeTokens.itemBorder}`}
+            className={`flex items-start gap-3 text-[14px] py-3 border-b last:border-b-0 ${activeTokens.itemText} ${activeTokens.itemBorder}`}
             role="listitem"
             itemScope
             itemType="https://schema.org/ListItem"
@@ -40,9 +40,28 @@ export default function CardList({
             {item?.icon ? (
               <ItemIcon icon={item.icon} />
             ) : (
-              <span className="w-1.5 h-1.5 rounded-full flex-shrink-0 grad-bg" />
+              <span className="w-1.5 h-1.5 rounded-full flex-shrink-0 grad-bg mt-1.5" />
             )}
-            <span itemProp="name">{item.topic}</span>
+            <div className="flex-1 min-w-0">
+              <span
+                itemProp="name"
+                className={
+                  item.description
+                    ? `block font-semibold mb-1 ${activeTokens.cardHeading}`
+                    : ""
+                }
+              >
+                {item.topic}
+              </span>
+              {item.description && (
+                <p
+                  itemProp="description"
+                  className={`text-[13px] leading-[1.65] ${activeTokens.subtext}`}
+                >
+                  {item.description}
+                </p>
+              )}
+            </div>
           </div>
         ))}
       </div>

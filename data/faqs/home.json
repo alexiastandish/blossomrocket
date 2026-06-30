@@ -11,7 +11,7 @@
       {
         "id": "what-services-does-blossom-rocket-offer",
         "question": "What services does Blossom Rocket offer?",
-        "answer": "Blossom Rocket provides Brand Identity, Brand Systems, Digital Design, Campaign & Marketing Assets, Print & Environmental Design, Merchandise & Promotional Products, Company Stores through SplashBrands, and Search Everything Optimization Consulting."
+        "answer": "Blossom Rocket provides Brand Identity, Brand Systems, Digital Design, Marketing Assets, Print & Environmental Design, Merchandise & Promotional Products, Company Stores through SplashBrands, and Search Everything Optimization Consulting."
       },
       {
         "id": "what-types-of-businesses-does-blossom-rocket-work-with",
@@ -59,9 +59,9 @@
         "answer": "Blossom Rocket provides UI/UX Design, Component Libraries, Web & App Design, Digital Marketing & Social Media Design, and Front-End Development services that help businesses create cohesive digital experiences."
       },
       {
-        "id": "what-are-campaign-and-marketing-assets",
-        "question": "What are Campaign & Marketing Assets?",
-        "answer": "Campaign & Marketing Assets are the creative materials businesses use to support marketing campaigns, social media, customer communications, events, sales initiatives, and promotional programs. Examples include social media graphics, presentation templates, email graphics, event materials, and digital advertising assets."
+        "id": "what-are-marketing-assets",
+        "question": "What are Marketing Assets?",
+        "answer": "Marketing Assets are the creative materials businesses use to support marketing campaigns, social media, customer communications, events, sales initiatives, and promotional programs. Examples include social media graphics, presentation templates, email graphics, event materials, and digital advertising assets."
       },
       {
         "id": "why-is-consistency-important-across-websites-and-marketing-materials",
@@ -74,8 +74,8 @@
       "href": "/services/digital-design"
     },
     "secondaryCta": {
-      "label": "Explore Campaign & Marketing Assets",
-      "href": "/services/campaign-and-marketing-assets"
+      "label": "Explore Marketing Assets",
+      "href": "/services/marketing-assets"
     }
   },
   {

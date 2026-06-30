@@ -125,7 +125,7 @@ const services: Service[] = [
   },
   {
     num: "04",
-    title: "Campaign & Marketing Assets",
+    title: "Marketing Assets",
     desc: "Assets that support marketing, sales, and promotional initiatives — maintaining consistent communication across channels and campaigns.",
     tags: [
       "Social Media Content & Templates",

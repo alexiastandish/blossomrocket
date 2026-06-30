@@ -103,8 +103,8 @@ export default function WhatIsSection() {
                   "Digital Design",
                   "Website Design",
                   "Print & Environmental Design",
-                  "Campaign & Promotional Products",
-                  "Campaign & Marketing Material",
+                  "Merch & Promotional Products",
+                  "Marketing Assets",
                   "Company Stores",
                 ].map((t) => (
                   <span

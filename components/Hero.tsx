@@ -76,16 +76,7 @@ export default function Hero({
       built through disconnected projects. They&apos;re built through systems.
     </>
   ),
-  pillItems = [
-    "Brand Identity",
-    "Brand Systems",
-    "Digital Design",
-    "Marketing",
-    "Print",
-    "Promo Products",
-    "Company Stores",
-    "SEO Consulting",
-  ],
+  pillItems = [],
   ctas = DEFAULT_CTAS,
   orbs = HERO_DEFAULT_ORBS,
   theme = "light",
@@ -156,10 +147,10 @@ export default function Hero({
       {/* ── Body ── */}
       <p
         className={[
-          "anim-fade-up anim-delay-3 relative z-10 leading-[1.72] mx-auto mb-12",
+          "anim-fade-up anim-delay-3 relative z-10 leading-[1.72] mx-auto mb-12 max-w-6xl",
           bodyTextColor,
         ].join(" ")}
-        style={{ fontSize: "clamp(15px,1.8vw,19px)", maxWidth: "620px" }}
+        style={{ fontSize: "clamp(15px,1.8vw,19px)" }}
       >
         {body}
       </p>
@@ -167,13 +158,6 @@ export default function Hero({
       {/* ── CTAs ── */}
       {ctas.length > 0 && (
         <div className="anim-fade-up anim-delay-4 flex gap-4 justify-center flex-wrap">
-          {/* {ctas.map((cta) =>
-            cta.variant === "outline" ? (
-              <OutlineButton key={cta.href} {...cta} theme={theme} />
-            ) : (
-              <PrimaryButton key={cta.href} {...cta} theme={theme} />
-            ),
-          )} */}
           <CTAs ctas={ctas} />
         </div>
       )}

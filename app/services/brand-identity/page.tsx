@@ -39,7 +39,7 @@ export default function page() {
       <SectionLayout
         id="brand-identity--more-than-a-logo"
         theme="brand"
-        cols={[4, 4]}
+        cols={[1, 1]}
         mobileOrder="left-first"
         eyebrow="More Than a Logo"
         heading={
@@ -76,11 +76,11 @@ export default function page() {
       </SectionLayout>
       {/* ── Designed to Scale ── */}
       <SectionLayout
-        id="brand-systems"
+        id="brand-identity--designed-to-scale"
         theme="light"
         mobileOrder="left-first"
         desktopOrder="reverse"
-        eyebrow="Designed to Scale "
+        eyebrow="Designed to Scale"
         heading={
           <>
             Brand Identity Designed to{" "}
@@ -115,12 +115,29 @@ export default function page() {
         />
         <CardCallout body="Blossom Rocket helps businesses establish Brand Identity systems that support long-term growth and consistency." />
       </SectionLayout>
+      {/* ── Brand Fundamentals ── */}
       <SectionLayout
+        id="brand-identity--brand-fundamentals"
         layout="stacked"
         theme="dark"
         eyebrow="Brand Fundamentals"
         heading="What Is the Difference Between Brand Identity and a Brand System?"
         subtext="Brand Identity defines what a brand looks like. A Brand System defines how a brand is applied — together they create consistency and help it scale."
+        schemaItems={[
+          { topic: "Brand Identity defines what a brand looks like." },
+          { topic: "A Brand System defines how a brand is applied." },
+          {
+            topic:
+              "Brand Identity includes logos, typography, color systems, iconography, and graphic elements.",
+          },
+          {
+            topic:
+              "Brand Systems include guidelines, standards, templates, asset libraries, and usage rules.",
+          },
+          { topic: "Brand Identity creates consistency." },
+          { topic: "Brand Systems maintain consistency as a business grows." },
+        ]}
+        pageUrl="https://blossomrocket.studio/services#brand-identity-vs-brand-system"
       >
         <CardComparison
           heading="Brand Identity vs Brand System"

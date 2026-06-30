@@ -15,7 +15,7 @@ export interface HeroProps {
   body?: React.ReactNode;
 
   /** Array of pill/eyebrow items separated by dots */
-  pillItems?: string[];
+  pillItems?: string[] | [];
 
   /** Call-to-action buttons */
   ctas?: CtaButton[];

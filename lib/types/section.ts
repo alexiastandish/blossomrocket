@@ -83,6 +83,7 @@ export type IconVariant =
 export type CardOverlayItem = {
   topic: string;
   icon?: IconVariant;
+  description?: string;
 };
 
 type Callout = {

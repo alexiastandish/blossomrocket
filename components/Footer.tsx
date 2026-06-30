@@ -4,7 +4,7 @@ const services = [
   "Brand Identity",
   "Brand Systems",
   "Digital Design",
-  "Campaign & Marketing Assets",
+  "Marketing Assets",
   "Print & Environmental Design",
   "Merchandise & Promotional Products",
   "Company Stores",

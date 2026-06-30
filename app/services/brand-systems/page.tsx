@@ -1,11 +1,7 @@
 import Hero from "@/components/Hero";
-import {
-  CardCallout,
-  CardList,
-  CardPills,
-  SectionLayout,
-} from "@/components/section";
-import CardComparison from "@/components/section/CardComparison";
+import { CardCallout, CardList, SectionLayout } from "@/components/section";
+import CardLinkGrid from "@/components/section/CardLinkGrid";
+import SectionItemList from "@/components/section/ItemList";
 
 export default function page() {
   return (
@@ -14,28 +10,218 @@ export default function page() {
         theme="dark"
         heading={
           <>
-            Brand Identity that Builds{" "}
-            {/* <em className="grad-text not-italic">Recognition and Trust</em>. */}
+            Turn Brand Identity Into a{" "}
+            <em className="grad-text not-italic">Scalable System</em>.
           </>
         }
-        body={`Blossom Rocket helps businesses create Brand Identity systems that establish consistency across company stores, digital design, marketing assets, print and promo products.`}
+        body={
+          <>
+            A strong Brand System helps teams create consistent experiences
+            while reducing confusion, duplication, and brand fragmentation.
+            <span className="block h-4" />
+            Blossom Rocket helps businesses create Brand Systems that support
+            consistency across websites, marketing assets, print materials,
+            packaging, promotional products, signage, apparel, company stores,
+            and more.
+          </>
+        }
         ctas={[
           {
-            label: "Schedule a call today to launch your brand into orbit 🚀",
+            label: "Expand your brand and grow your store with Blossom Rocket",
             href: "/contact",
             variant: "primary",
           },
         ]}
         pillItems={[
-          "Visual Identity",
-          "Logo Design",
-          "Color Palette",
-          "Typography",
-          "Iconography",
-          "Graphic Elements",
+          "Brand Guidelines",
+          "Brand Standards",
+          "Asset Library",
+          "Graphics & Pattern Systems",
         ]}
       />
-      {/* ── More Than a Logo ── */}
+      <SectionLayout
+        id="single-source-of-truth"
+        eyebrow="Single Source of Truth"
+        theme="light"
+        cols={[1, 1]}
+        mobileOrder="left-first"
+        heading={
+          <>
+            Brand Systems Create A{" "}
+            <em className="grad-text not-italic">Single Source</em>of{" "}
+            <em className="grad-text not-italic">Truth</em>.
+          </>
+        }
+        subtext="Blossom Rocket helps businesses establish brand systems that operate as a single source of truth which define how brand assets should be created, managed, and applied. The result is a more consistent brand experience across both digital and physical channels."
+        schemaItems={[
+          { topic: "Marketing teams create campaign assets." },
+          { topic: "Sales teams create presentations." },
+          { topic: "Operations teams order signage and promotional products." },
+          { topic: "External vendors create branded materials." },
+        ]}
+        pageUrl="https://blossomrocket.studio/services/brand-systems#built-for-growth"
+      >
+        <CardList
+          heading="As businesses grow, brand assets are often created by different teams, departments, vendors, and partners..."
+          items={[
+            { topic: "Marketing teams create campaign assets." },
+            { topic: "Sales teams create presentations." },
+            {
+              topic: "Operations teams order signage and promotional products.",
+            },
+            { topic: "External vendors create branded materials." },
+          ]}
+        />
+        <CardCallout heading="Without clear standards, inconsistencies begin to appear across customer touchpoints." />
+      </SectionLayout>
+      <SectionLayout
+        id="built-for-growth"
+        eyebrow="Built for Growth"
+        theme="brand"
+        cols={[1, 1]}
+        layout="stacked"
+        mobileOrder="left-first"
+        heading={
+          <>
+            Scalable Systems{" "}
+            <em className="grad-text not-italic">Built for Growth</em>.
+          </>
+        }
+        subtext="Brand Systems help businesses scale without sacrificing consistency. Blossom Rocket Brand System services are designed to help organizations create repeatable processes that support future growth. The result is a more consistent brand experience across both digital and physical channels."
+        schemaItems={[
+          { topic: "Maintain visual consistency" },
+          { topic: "Reduce duplicate work" },
+          {
+            topic: "Improve collaboration",
+          },
+          { topic: "Streamline asset creation" },
+          { topic: "Support multiple departments" },
+          { topic: "Simplify vendor management" },
+          { topic: "Protect brand standards" },
+        ]}
+        pageUrl="https://blossomrocket.studio/services/brand-systems#single-source-of-truth"
+      >
+        <CardList
+          heading="A Brand System helps teams:"
+          items={[
+            { topic: "Maintain visual consistency" },
+            { topic: "Reduce duplicate work" },
+            {
+              topic: "Improve collaboration",
+            },
+            { topic: "Streamline asset creation" },
+            { topic: "Support multiple departments" },
+            { topic: "Simplify vendor management" },
+            { topic: "Protect brand standards" },
+          ]}
+        />
+        <CardCallout heading="As more people contribute to a brand, clear systems become increasingly important." />
+      </SectionLayout>
+      {/* -- What's Included -- */}
+      <SectionItemList
+        pageUrl="https://blossomrocket.studio/services/brand-systems"
+        layout="stacked"
+        id="what-is-included"
+        theme="brandSoft"
+        eyebrow="What Is Included?"
+        heading={
+          <>
+            What&apos;s Included In A{" "}
+            <em className="grad-text not-italic">Brand System</em>?
+          </>
+        }
+        listHeading="Blossom Rocket Brand System Includes:"
+        items={[
+          {
+            topic: "Brand Guidelines",
+            description:
+              "Brand Guidelines define the core visual standards that govern how a brand should be presented.",
+          },
+          {
+            topic: "Brand Standards",
+            description:
+              "Brand Standards establish approved rules for applying logos, typography, colors, graphics, and supporting assets.",
+          },
+          {
+            topic: "Asset Library",
+            description:
+              "Asset Libraries provide centralized access to approved brand resources and creative assets.",
+          },
+          {
+            topic: "Graphics & Pattern Systems",
+            description:
+              "Graphics & Pattern Systems establish supporting visual elements that reinforce brand recognition beyond logos and typography.",
+          },
+        ]}
+      />
+      {/* -- Touchpoints -- */}
+      <SectionLayout
+        id="brand-system-touchpoints"
+        heading={
+          <>
+            Designed For{" "}
+            <em className="grad-text not-italic">Digital And Physical </em>{" "}
+            Touchpoints .
+          </>
+        }
+        theme="dark"
+        eyebrow="Touchpoints"
+        ctas={[
+          {
+            label: "Todo",
+            href: "/contact",
+            variant: "primary",
+          },
+        ]}
+        desktopOrder="reverse"
+        subtext="Modern brands exist across dozens of channels and experiences. A Brand System helps ensure those experiences remain connected."
+        pageUrl="https://blossomrocket.studio/services/brand-systems"
+      >
+        <CardLinkGrid
+          heading="Blossom Rocket creates Brand Systems that support:"
+          items={[
+            { label: "Websites", href: "/services/digital-marketing#website" },
+            {
+              label: "Social Media",
+              href: "/services/digital-marketing#social-media",
+            },
+            {
+              label: "Marketing Campaigns",
+              href: "/services/campaign-and-marketing-assets",
+            },
+            {
+              label: "Presentations",
+              href: "/services/campaign-and-marketing-assets#presentations",
+            },
+            {
+              label: "Print Materials",
+              href: "/services/print-and-environmental-design",
+            },
+            {
+              label: "Packaging",
+              href: "/services/print-and-environmental-design#packaging",
+            },
+            {
+              label: "Signage",
+              href: "/services/print-and-environmental-design#signage",
+            },
+            {
+              label: "Promotional Products",
+              href: "/services/merchandise-and-promotional-products",
+            },
+            {
+              label: "Apparel",
+              href: "/services/merchandise-and-promotional-products#apparel",
+            },
+            {
+              label: "Trade Show Materials",
+              href: "/services/merchandise-and-promotional-products#tradeshow-materials",
+            },
+            { label: "Company Stores", href: "/services/company-stores" },
+          ]}
+          footerText="This creates a more unified experience for customers, employees, partners, and stakeholders alike."
+        />
+      </SectionLayout>
     </div>
   );
 }

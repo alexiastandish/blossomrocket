@@ -55,8 +55,6 @@ export default function SectionLayout({
       : null;
 
   const isStacked = layout === "stacked";
-  const isDarkTheme =
-    theme === "dark" || theme === "brand" || theme === "brandSoft";
 
   // Mobile order: which column shows first below lg
   const leftMobileOrder = mobileOrder === "right-first" ? "order-2" : "order-1";
