@@ -28,14 +28,14 @@ const services: NavLink[] = [
   },
   { href: "/services/print-and-environmental", label: "Print & Environmental" },
   {
-    href: "/services/merchandise-promotional-products",
+    href: "/services/merchandise-and-promotional-products",
     label: "Merchandise & Promotional Products",
   },
   { href: "/services/company-stores", label: "Company Stores" },
-  {
-    href: "/services/search-everything-optimization-consulting",
-    label: "Search Everything Optimization Consulting",
-  },
+  // {
+  //   href: "/services/search-everything-optimization-consulting",
+  //   label: "Search Everything Optimization Consulting",
+  // },
 ];
 
 const resources: NavLink[] = [

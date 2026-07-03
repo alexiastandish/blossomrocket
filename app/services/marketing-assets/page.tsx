@@ -9,7 +9,7 @@ import CardStatBento from "@/components/section/CardStatBento";
 import { SectionLayout } from "@/components/section";
 import SectionCardOverlayList from "@/components/section/CardOverlayList";
 
-const PAGE_URL = "https://blossomrocket.co/services/marketing-assets";
+const PAGE_URL = "https://blossomrocket.studio/services/marketing-assets";
 
 export default function MarketingAssets() {
   return (

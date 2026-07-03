@@ -32,7 +32,7 @@ export const metadata: Metadata = {
       {
         "@context": "https://schema.org",
         "@type": "ProfessionalService",
-        "@id": "https://blossomrocket.co/#organization",
+        "@id": "https://blossomrocket.studio/#organization",
         name: "Blossom Rocket",
         url: "https://blossomrocket.co",
         description:
@@ -101,7 +101,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "ProfessionalService",
-              "@id": "https://blossomrocket.co/#organization",
+              "@id": "https://blossomrocket.studio/#organization",
               name: "Blossom Rocket",
               url: "https://blossomrocket.co",
               description:

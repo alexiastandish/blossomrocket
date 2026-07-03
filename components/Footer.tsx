@@ -8,7 +8,7 @@ const services = [
   "Print & Environmental Design",
   "Merchandise & Promotional Products",
   "Company Stores",
-  "Search Everything Optimization Consulting",
+  // "Search Everything Optimization Consulting",
 ];
 const company = [
   { label: "What Is a Brand System?", href: "#whatis" },

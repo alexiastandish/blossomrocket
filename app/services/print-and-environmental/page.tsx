@@ -9,7 +9,8 @@ import SectionCardOverlayList from "@/components/section/CardOverlayList";
 import { Metadata } from "next";
 import Script from "next/script";
 
-const PAGE_URL = "https://blossomrocket.co/services/print-and-environmental";
+const PAGE_URL =
+  "https://blossomrocket.studio/services/print-and-environmental";
 
 export const metadata: Metadata = {
   title: "Print & Environmental Design — Blossom Rocket",
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
     title: "Print & Environmental Design — Blossom Rocket",
     description:
       "Create consistent customer-facing materials across every location, department, campaign, and vendor with Blossom Rocket's Print & Environmental Design services.",
-    url: "https://blossomrocket.co/services/print-environmental",
+    url: "https://blossomrocket.studio/services/print-and-environmental",
     siteName: "Blossom Rocket",
     type: "website",
   },
@@ -46,7 +47,7 @@ const serviceSchema = {
   provider: {
     "@type": "Organization",
     name: "Blossom Rocket",
-    url: "https://blossomrocket.co",
+    url: "https://blossomrocket.studio",
   },
   description:
     "Blossom Rocket provides Print & Environmental Design services that help businesses apply their Brand Identity across printed materials, signage, packaging, vehicle graphics, and branded environments.",
@@ -389,7 +390,7 @@ export default function page() {
         <FAQSection
           groups={faqs}
           theme="dark"
-          pageUrl="https://blossomrocket.studio/services/digital-design"
+          pageUrl="https://blossomrocket.studio/services/print-and-environmental-design"
         />
       </div>
     </>

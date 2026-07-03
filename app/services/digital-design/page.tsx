@@ -18,7 +18,7 @@ import DesignedToScale from "@/components/svgs/DesignedToScale";
 import SocialMediaReady from "@/components/svgs/SocialMediaReady";
 import BuiltForAccessibility from "@/components/svgs/BuiltForAccessibility";
 
-const PAGE_URL = "https://blossomrocket.co/services/digital-design";
+const PAGE_URL = "https://blossomrocket.studio/services/digital-design";
 
 export default function page() {
   return (

@@ -247,76 +247,76 @@ const services: Service[] = [
       </svg>
     ),
   },
-  {
-    num: "08",
-    title: "Search Everything Optimization Consulting",
-    desc: "Helping businesses improve discoverability across modern search platforms — making your brand easier to find, understand, and trust online.",
-    tags: [
-      "AI Search Experiences",
-      "Knowledge Graphs",
-      "Content Writing Prompts",
-      "Page Structure Strategy",
-      "Semantic Content Checklist",
-      "Ranking & Performance Analysis",
-    ],
-    featured: true,
-    icon: (
-      <svg
-        width="22"
-        height="22"
-        viewBox="0 0 22 22"
-        fill="none"
-        aria-hidden="true"
-      >
-        <circle cx="8.5" cy="10" r="5" stroke="#9b5cf6" strokeWidth="1.5" />
-        <line
-          x1="12.5"
-          y1="14"
-          x2="17"
-          y2="18.5"
-          stroke="#9b5cf6"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-        />
-        <line
-          x1="17"
-          y1="2.5"
-          x2="17"
-          y2="6.5"
-          stroke="#06b6d4"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-        />
-        <line
-          x1="15"
-          y1="4.5"
-          x2="19"
-          y2="4.5"
-          stroke="#06b6d4"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-        />
-        <line
-          x1="20"
-          y1="8"
-          x2="20"
-          y2="10.5"
-          stroke="#06b6d4"
-          strokeWidth="1.25"
-          strokeLinecap="round"
-        />
-        <line
-          x1="18.75"
-          y1="9.25"
-          x2="21.25"
-          y2="9.25"
-          stroke="#06b6d4"
-          strokeWidth="1.25"
-          strokeLinecap="round"
-        />
-      </svg>
-    ),
-  },
+  // {
+  //   num: "08",
+  //   title: "Search Everything Optimization Consulting",
+  //   desc: "Helping businesses improve discoverability across modern search platforms — making your brand easier to find, understand, and trust online.",
+  //   tags: [
+  //     "AI Search Experiences",
+  //     "Knowledge Graphs",
+  //     "Content Writing Prompts",
+  //     "Page Structure Strategy",
+  //     "Semantic Content Checklist",
+  //     "Ranking & Performance Analysis",
+  //   ],
+  //   featured: true,
+  //   icon: (
+  //     <svg
+  //       width="22"
+  //       height="22"
+  //       viewBox="0 0 22 22"
+  //       fill="none"
+  //       aria-hidden="true"
+  //     >
+  //       <circle cx="8.5" cy="10" r="5" stroke="#9b5cf6" strokeWidth="1.5" />
+  //       <line
+  //         x1="12.5"
+  //         y1="14"
+  //         x2="17"
+  //         y2="18.5"
+  //         stroke="#9b5cf6"
+  //         strokeWidth="1.5"
+  //         strokeLinecap="round"
+  //       />
+  //       <line
+  //         x1="17"
+  //         y1="2.5"
+  //         x2="17"
+  //         y2="6.5"
+  //         stroke="#06b6d4"
+  //         strokeWidth="1.5"
+  //         strokeLinecap="round"
+  //       />
+  //       <line
+  //         x1="15"
+  //         y1="4.5"
+  //         x2="19"
+  //         y2="4.5"
+  //         stroke="#06b6d4"
+  //         strokeWidth="1.5"
+  //         strokeLinecap="round"
+  //       />
+  //       <line
+  //         x1="20"
+  //         y1="8"
+  //         x2="20"
+  //         y2="10.5"
+  //         stroke="#06b6d4"
+  //         strokeWidth="1.25"
+  //         strokeLinecap="round"
+  //       />
+  //       <line
+  //         x1="18.75"
+  //         y1="9.25"
+  //         x2="21.25"
+  //         y2="9.25"
+  //         stroke="#06b6d4"
+  //         strokeWidth="1.25"
+  //         strokeLinecap="round"
+  //       />
+  //     </svg>
+  //   ),
+  // },
 ];
 
 export default function OurServices() {
