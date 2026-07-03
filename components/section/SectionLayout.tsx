@@ -79,8 +79,8 @@ export default function SectionLayout({
     orbs !== undefined ? orbs : DEFAULT_ORBS[theme];
 
   const themedChildren = React.Children.map(children, (child) => {
-    if (React.isValidElement(child)) {
-      return React.cloneElement(child, { activeTheme } as Record<
+    if (React.isValidElement(child) && typeof child.type !== "string") {
+      return React.cloneElement(child, { activeTheme, layout } as Record<
         string,
         unknown
       >);
@@ -105,7 +105,7 @@ export default function SectionLayout({
           activeTheme.section,
           className,
         ].join(" ")}
-        style={{ padding: "clamp(80px,11vw,160px) clamp(20px,5vw,60px)" }}
+        style={{ padding: "clamp(80px,11vw,160px) clamp(32px,7vw,100px)" }}
         aria-labelledby={`${schemaId}-heading`}
         itemScope
         itemType="https://schema.org/ItemList"
@@ -121,11 +121,7 @@ export default function SectionLayout({
               {eyebrow && <SectionLabel text={eyebrow} />}
               <h2
                 id={`${schemaId}-heading`}
-                className={`font-semibold leading-[1.06] tracking-[-0.02em] mb-5 ${activeTheme.heading}`}
-                style={{
-                  fontFamily: "'Parkinsans', sans-serif",
-                  fontSize: "clamp(32px,4.5vw,56px)",
-                }}
+                className={`font-semibold leading-[1.06] tracking-[-0.02em] mb-5 ${activeTheme.heading} h2`}
               >
                 {heading}
               </h2>
@@ -134,7 +130,6 @@ export default function SectionLayout({
                   className={`leading-[1.8] mb-2 ${activeTheme.subtext}`}
                   style={{
                     fontSize: "clamp(15px,1.4vw,18px)",
-                    maxWidth: "560px",
                   }}
                 >
                   {subtext}
@@ -162,11 +157,7 @@ export default function SectionLayout({
               {eyebrow && <SectionLabel text={eyebrow} />}
               <h2
                 id={`${schemaId}-heading`}
-                className={`font-semibold leading-[1.06] tracking-[-0.02em] mb-5 ${activeTheme.heading}`}
-                style={{
-                  fontFamily: "'Parkinsans', sans-serif",
-                  fontSize: "clamp(38px,5.5vw,76px)",
-                }}
+                className={`font-semibold leading-[1.06] tracking-[-0.02em] mb-5 ${activeTheme.heading} h2`}
               >
                 {heading}
               </h2>

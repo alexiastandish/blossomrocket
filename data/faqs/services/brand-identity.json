@@ -1,0 +1,102 @@
+[
+  {
+    "id": "brand-identity-basics",
+    "title": "Brand Identity Basics",
+    "items": [
+      {
+        "id": "what-is-brand-identity",
+        "question": "What is Brand Identity?",
+        "answer": "Brand Identity is the visual foundation of a business. It includes the logo, typography, color palette, graphic elements, iconography, and other visual assets that help customers recognize and remember a brand across digital and physical experiences."
+      },
+      {
+        "id": "why-is-brand-identity-important",
+        "question": "Why is Brand Identity important for businesses?",
+        "answer": "A strong Brand Identity helps businesses build recognition, trust, and consistency. When visual elements remain consistent across websites, marketing materials, packaging, signage, merchandise, and other customer touchpoints, brands become easier to recognize and more memorable."
+      },
+      {
+        "id": "what-is-included-in-brand-identity-services",
+        "question": "What does Blossom Rocket include in Brand Identity services?",
+        "answer": "Blossom Rocket Brand Identity services include Visual Identity, Logo Systems, Typography, Color Systems, Graphic Elements, and Iconography. Together, these elements create a cohesive visual foundation that supports long-term brand growth."
+      }
+    ],
+    "cta": {
+      "label": "Learn More About Brand Identity Services",
+      "href": "/contact-us"
+    }
+  },
+  {
+    "id": "beyond-the-logo",
+    "title": "Beyond the Logo",
+    "items": [
+      {
+        "id": "is-a-logo-the-same-as-brand-identity",
+        "question": "Is a logo the same as a Brand Identity?",
+        "answer": "No. A logo is one component of a Brand Identity. A complete Brand Identity also includes typography, color systems, graphic elements, iconography, and other visual standards that work together to create a consistent brand across every customer interaction."
+      },
+      {
+        "id": "where-is-brand-identity-applied",
+        "question": "Where is Brand Identity applied?",
+        "answer": "Brand Identity is applied anywhere customers experience a brand, including websites, social media, marketing assets, packaging, signage, promotional products, apparel, company stores, and other digital and physical touchpoints."
+      },
+      {
+        "id": "how-does-brand-identity-improve-consistency",
+        "question": "How does Brand Identity improve consistency?",
+        "answer": "Brand Identity provides a shared visual foundation that helps teams, agencies, and vendors create assets using the same design language. This reduces inconsistencies and creates a more recognizable brand experience."
+      }
+    ],
+    "cta": {
+      "label": "Discover How Brand Identity Supports Every Touchpoint",
+      "href": "/contact-us"
+    }
+  },
+  {
+    "id": "brand-identity-for-growing-businesses",
+    "title": "Brand Identity for Growing Businesses",
+    "items": [
+      {
+        "id": "why-do-growing-businesses-need-brand-identity",
+        "question": "Why do growing businesses need a Brand Identity system?",
+        "answer": "As businesses expand, more people contribute to creating branded materials. A well-defined Brand Identity helps maintain consistent typography, colors, logos, graphics, and layouts across departments, vendors, and marketing channels."
+      },
+      {
+        "id": "what-happens-without-brand-identity",
+        "question": "What happens without a clear Brand Identity?",
+        "answer": "Without defined Brand Identity standards, visual consistency often breaks down. Colors may vary, typography changes between materials, logos are used incorrectly, and marketing assets, merchandise, and signage begin to feel disconnected from one another."
+      },
+      {
+        "id": "can-brand-identity-scale-with-my-business",
+        "question": "Can Brand Identity scale with my business?",
+        "answer": "Yes. Blossom Rocket creates Brand Identity systems designed to support long-term growth, making it easier to maintain a consistent visual presence as new products, services, locations, teams, and marketing initiatives are introduced."
+      }
+    ],
+    "cta": {
+      "label": "See How Brand Identity Grows into a Brand System",
+      "href": "/services/brand-systems"
+    }
+  },
+  {
+    "id": "brand-identity-and-brand-systems",
+    "title": "Brand Identity & Brand Systems",
+    "items": [
+      {
+        "id": "brand-identity-vs-brand-systems",
+        "question": "What is the difference between Brand Identity and Brand Systems?",
+        "answer": "Brand Identity defines the visual elements of a brand, including logos, typography, colors, graphics, and iconography. Brand Systems document how those elements should be organized, managed, and applied consistently across digital and physical experiences."
+      },
+      {
+        "id": "does-brand-identity-come-before-brand-system",
+        "question": "Does Brand Identity come before a Brand System?",
+        "answer": "Yes. Brand Identity establishes the visual foundation that Brand Systems build upon. Once the identity is created, Brand Systems help ensure it is applied consistently across teams, vendors, websites, marketing assets, print materials, merchandise, and company stores."
+      },
+      {
+        "id": "what-services-are-supported-by-brand-identity",
+        "question": "What services are supported by a strong Brand Identity?",
+        "answer": "A strong Brand Identity serves as the foundation for Brand Systems, Digital Design, Marketing Assets, Print & Environmental Design, Merchandise & Promotional Products, and Company Stores through SplashBrands, helping every branded experience feel connected and recognizable."
+      }
+    ],
+    "cta": {
+      "label": "Explore Brand Systems",
+      "href": "/services/brand-systems"
+    }
+  }
+]

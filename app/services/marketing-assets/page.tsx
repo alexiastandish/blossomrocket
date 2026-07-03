@@ -19,11 +19,11 @@ export default function MarketingAssets() {
         theme="light"
         heading={
           <>
-            Blossom Rocket Creates Consistent
-            <br />
+            Creating Consistent{" "}
             <em className="grad-text not-italic">
-              Marketing Experiences Across Every Channel.
+              Marketing&nbsp;Experiences{" "}
             </em>
+            Across All Channels.
           </>
         }
         body="Marketing Assets help businesses create marketing materials across campaigns, social media, events, sales initiatives, and customer communications. Blossom Rocket develops campaign creative, social media assets, presentation templates, event materials, email graphics, and digital advertising assets that align with Brand Identity and Brand System standards while supporting engagement, lead generation, and business growth."
@@ -40,15 +40,14 @@ export default function MarketingAssets() {
           8 short capability items map cleanly onto the numbered grid cells */}
       <SectionLayout
         id="customer-journey"
-        theme="light"
+        theme="brandSoft"
         layout="stacked"
         eyebrow="Every Stage, Covered"
         heading={
           <>
             Blossom Rocket&apos;s Marketing Services Support{" "}
-            <em className="grad-text not-italic">
-              Every Stage Of The Customer Journey.
-            </em>
+            <em className="grad-text not-italic">Every Stage </em> Of The{" "}
+            <em className="grad-text not-italic">Customer Journey.</em>
           </>
         }
         subtext="Marketing assets play an important role throughout the customer experience. Every interaction contributes to how customers perceive a business. Consistent marketing materials help create stronger and more recognizable experiences across every stage of the customer journey."
@@ -96,7 +95,7 @@ export default function MarketingAssets() {
         eyebrow="Built To Scale"
         heading={
           <>
-            Creating consistent marketing assets
+            Marketing assets
             <br />
             <em className="grad-text not-italic">
               that scale with your business.
@@ -136,7 +135,12 @@ export default function MarketingAssets() {
         theme="light"
         layout="split"
         eyebrow="Marketing Asset Services"
-        heading="What's Included In Blossom Rocket's Marketing Asset Services?"
+        heading={
+          <>
+            <em className="grad-text not-italic">What&apos;s Included </em>
+            in Our Marketing Asset Services?
+          </>
+        }
         pageUrl={PAGE_URL}
         ctas={[
           {
@@ -197,11 +201,9 @@ export default function MarketingAssets() {
         eyebrow="Flexible By Design"
         heading={
           <>
-            Blossom Rocket Supports One-Off Projects
-            <br />
-            <em className="grad-text not-italic">
-              And Ongoing Marketing Efforts.
-            </em>
+            We Support <br />
+            <em className="grad-text not-italic">One-Off </em> Projects and{" "}
+            <em className="grad-text not-italic">Ongoing</em> Marketing Efforts.
           </>
         }
         subtext="Not every project requires a complete marketing system. Sometimes businesses need a trade show display for an upcoming event. Other times they need social media content for a campaign, presentation materials for a sales initiative, or advertising creative for a product launch. Blossom Rocket supports both one-off creative projects and ongoing marketing initiatives. Every asset is designed to support immediate goals while contributing to a more cohesive marketing presence over time."

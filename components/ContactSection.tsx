@@ -39,11 +39,7 @@ export default function ContactSection() {
 
       <h2
         id="contact-h"
-        className="relative z-10 font-semibold leading-[1.04] tracking-[-0.02em] mb-6"
-        style={{
-          fontFamily: "'Parkinsans', sans-serif",
-          fontSize: "clamp(44px,7vw,96px)",
-        }}
+        className="relative z-10 font-semibold leading-[1.04] tracking-[-0.02em] mb-6 h2"
       >
         Brand Expansion
         <br />

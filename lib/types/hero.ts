@@ -1,10 +1,10 @@
 import { CtaButton, OrbConfig } from "./section";
 
 // ─── Pill / eyebrow tag config ────────────────────────────────────────────────
-export type PillTheme = "light" | "dark" | "violet";
+export type PillTheme = "light" | "dark" | "violet" | "brand" | "brandSoft";
 
 // ─── Theme config ─────────────────────────────────────────────────────────────
-export type HeroTheme = "light" | "dark";
+export type HeroTheme = "light" | "dark" | "brand" | "brandSoft";
 
 // ─── Main props ───────────────────────────────────────────────────────────────
 export interface HeroProps {

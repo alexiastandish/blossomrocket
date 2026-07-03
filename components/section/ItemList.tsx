@@ -64,11 +64,7 @@ export default function SectionItemList({
         {heading && (
           <h2
             id={`${schemaId}-heading`}
-            className={`rv font-semibold leading-[1.06] tracking-[-0.02em] mb-5 ${activeTheme.heading}`}
-            style={{
-              fontFamily: "'Parkinsans', sans-serif",
-              fontSize: "clamp(38px,5.5vw,72px)",
-            }}
+            className={`rv font-semibold leading-[1.06] tracking-[-0.02em] mb-5 ${activeTheme.heading} h2`}
           >
             {heading}
           </h2>

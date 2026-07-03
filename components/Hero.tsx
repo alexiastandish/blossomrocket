@@ -6,11 +6,60 @@ import CTAs from "./CTAs";
 const DEFAULT_CTAS: CtaButton[] = defaultCtas as CtaButton[];
 
 // Hero owns its own orb defaults — separate from section system's default_orbs.json
-const HERO_DEFAULT_ORBS: OrbConfig[] = [
-  { color: "#9b5cf6", size: 600, top: "-100px", left: "-100px" },
-  { color: "#06b6d4", size: 500, bottom: "-80px", right: "-80px" },
-  { color: "#10b981", size: 300, top: "40%", left: "55%" },
-];
+// Keyed by theme, mirroring SectionLayout's DEFAULT_ORBS pattern.
+const HERO_DEFAULT_ORBS: Record<
+  PillTheme extends string ? string : never,
+  OrbConfig[]
+> = {
+  light: [
+    { color: "#9b5cf6", size: 600, top: "-100px", left: "-100px" },
+    { color: "#06b6d4", size: 500, bottom: "-80px", right: "-80px" },
+    { color: "#10b981", size: 300, top: "40%", left: "55%" },
+  ],
+  dark: [
+    { color: "#9b5cf6", size: 600, top: "-100px", left: "-100px" },
+    { color: "#06b6d4", size: 500, bottom: "-80px", right: "-80px" },
+    { color: "#10b981", size: 300, top: "40%", left: "55%" },
+  ],
+  // Brand: deep navy bg — larger, richer violet glow (matches SectionLayout brand orbs)
+  brand: [
+    {
+      color: "#7c5ce8",
+      size: 560,
+      top: "-100px",
+      left: "-80px",
+      opacity: 0.22,
+      blur: 90,
+    },
+    {
+      color: "#a78bfa",
+      size: 360,
+      bottom: "-60px",
+      right: "-40px",
+      opacity: 0.14,
+      blur: 80,
+    },
+  ],
+  // BrandSoft: light lavender bg — subtle, low-opacity glow so it doesn't muddy the light background
+  brandSoft: [
+    {
+      color: "#7c5ce8",
+      size: 480,
+      top: "-80px",
+      left: "-60px",
+      opacity: 0.18,
+      blur: 80,
+    },
+    {
+      color: "#9b5cf6",
+      size: 320,
+      bottom: "-40px",
+      right: "-40px",
+      opacity: 0.12,
+      blur: 70,
+    },
+  ],
+};
 
 // ─── Sub-components ───────────────────────────────────────────────────────────
 
@@ -56,6 +105,34 @@ const PILL_STYLES: Record<PillTheme, string> = {
   dark: "border border-[rgba(255,255,255,0.12)] text-[rgba(255,255,255,0.55)] bg-transparent",
   violet:
     "border border-[rgba(155,92,246,0.30)] text-[rgba(155,92,246,0.85)] bg-[rgba(155,92,246,0.06)]",
+  // Brand: violet accent on dark navy, matching SectionLayout's brand pill tokens
+  brand:
+    "border border-[rgba(124,92,232,0.35)] text-[#a78bfa] bg-[rgba(124,92,232,0.10)]",
+  // BrandSoft: same violet accent, lightened for the lavender-white background
+  brandSoft: "border border-[rgba(124,92,232,0.18)] text-[#4a4a6a] bg-white",
+};
+
+// ─── Theme → background / text maps ──────────────────────────────────────────
+
+const HERO_BG: Record<string, string> = {
+  light: "bg-white",
+  dark: "bg-[#0d0d10]",
+  brand: "bg-[#1a1a2e]",
+  brandSoft: "bg-[#f0eeff]",
+};
+
+const HERO_HEADING_COLOR: Record<string, string> = {
+  light: "text-[#18181b]",
+  dark: "text-white",
+  brand: "text-white",
+  brandSoft: "text-[#1a1a2e]",
+};
+
+const HERO_BODY_COLOR: Record<string, string> = {
+  light: "text-[rgba(24,24,27,0.58)]",
+  dark: "text-[rgba(255,255,255,0.55)]",
+  brand: "text-[#8480ae]",
+  brandSoft: "text-[#4a4a6a]",
 };
 
 // ─── Root component ───────────────────────────────────────────────────────────
@@ -78,7 +155,7 @@ export default function Hero({
   ),
   pillItems = [],
   ctas = DEFAULT_CTAS,
-  orbs = HERO_DEFAULT_ORBS,
+  orbs,
   theme = "light",
   pillTheme,
   showScrollHint = true,
@@ -86,15 +163,13 @@ export default function Hero({
   id = "hero",
   showPills = true,
 }: HeroProps) {
-  const resolvedPillTheme: PillTheme =
-    pillTheme ?? (theme === "dark" ? "dark" : "light");
+  const resolvedPillTheme: PillTheme = pillTheme ?? (theme as PillTheme);
+  const resolvedOrbs =
+    orbs ?? HERO_DEFAULT_ORBS[theme] ?? HERO_DEFAULT_ORBS.light;
 
-  const bodyTextColor =
-    theme === "dark"
-      ? "text-[rgba(255,255,255,0.55)]"
-      : "text-[rgba(24,24,27,0.58)]";
-
-  const bgClass = theme === "dark" ? "bg-[#0d0d10]" : "bg-white";
+  const bodyTextColor = HERO_BODY_COLOR[theme] ?? HERO_BODY_COLOR.light;
+  const headingColor = HERO_HEADING_COLOR[theme] ?? HERO_HEADING_COLOR.light;
+  const bgClass = HERO_BG[theme] ?? HERO_BG.light;
 
   return (
     <header
@@ -104,14 +179,13 @@ export default function Hero({
         bgClass,
         className,
       ].join(" ")}
-      style={{ padding: "calc(68px + 60px) clamp(20px,8vw,80px) 80px" }}
+      style={{ padding: "calc(68px + 60px) clamp(20px,5vw,60px) 80px" }}
       role="banner"
     >
       {/* ── Ambient orbs ── */}
-      {orbs.map((orb, i) => (
+      {resolvedOrbs.map((orb, i) => (
         <Orb key={i} orb={orb} />
       ))}
-
       {/* ── Eyebrow pill ── */}
       {pillItems.length > 0 && showPills && (
         <div
@@ -129,48 +203,45 @@ export default function Hero({
           ))}
         </div>
       )}
-
-      {/* ── Heading ── */}
-      <h1
-        className={[
-          "anim-fade-up anim-delay-2 relative z-10 font-semibold leading-[1.0] tracking-[-0.03em] mb-7",
-          theme === "dark" ? "text-white" : "text-[#18181b]",
-        ].join(" ")}
-        style={{
-          fontFamily: "'Parkinsans', sans-serif",
-          fontSize: "clamp(52px,9vw,110px)",
-        }}
-      >
-        {heading}
-      </h1>
-
-      {/* ── Body ── */}
-      <p
-        className={[
-          "anim-fade-up anim-delay-3 relative z-10 leading-[1.72] mx-auto mb-12 max-w-6xl",
-          bodyTextColor,
-        ].join(" ")}
-        style={{ fontSize: "clamp(15px,1.8vw,19px)" }}
-      >
-        {body}
-      </p>
-
-      {/* ── CTAs ── */}
-      {ctas.length > 0 && (
-        <div className="anim-fade-up anim-delay-4 flex gap-4 justify-center flex-wrap">
-          <CTAs ctas={ctas} />
-        </div>
-      )}
-
-      {/* ── Scroll hint ── */}
-      {showScrollHint && (
-        <div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-40"
-          aria-hidden="true"
+      <div className="max-w-3xl">
+        {/* ── Heading ── */}
+        <h1
+          className={[
+            "anim-fade-up anim-delay-2 relative z-10 font-semibold leading-[1.0] mb-7 h1",
+            headingColor,
+          ].join(" ")}
         >
-          <div className="scroll-line" />
-        </div>
-      )}
+          {heading}
+        </h1>
+
+        {/* ── Body ── */}
+        <p
+          className={[
+            "anim-fade-up anim-delay-3 relative z-10 leading-[1.72] mx-auto mb-12 max-w-6xl",
+            bodyTextColor,
+          ].join(" ")}
+          style={{ fontSize: "clamp(15px,1.8vw,19px)" }}
+        >
+          {body}
+        </p>
+
+        {/* ── CTAs ── */}
+        {ctas.length > 0 && (
+          <div className="anim-fade-up anim-delay-4 flex gap-4 justify-center flex-wrap">
+            <CTAs ctas={ctas} />
+          </div>
+        )}
+
+        {/* ── Scroll hint ── */}
+        {showScrollHint && (
+          <div
+            className="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-40"
+            aria-hidden="true"
+          >
+            <div className="scroll-line" />
+          </div>
+        )}
+      </div>
     </header>
   );
 }

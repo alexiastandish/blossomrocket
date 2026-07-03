@@ -27,11 +27,7 @@ export default function WhatIsSection() {
           <SectionLabel text="What Is a Brand System?" />
           <h2
             id="whatis-h"
-            className="rv font-semibold leading-[1.06] tracking-[-0.02em] mb-5"
-            style={{
-              fontFamily: "'Parkinsans', sans-serif",
-              fontSize: "clamp(38px,5.5vw,76px)",
-            }}
+            className="rv font-semibold leading-[1.06] tracking-[-0.02em] mb-5 h2"
           >
             The Foundation Behind Every{" "}
             <em className="grad-text not-italic">Consistent Brand.</em>

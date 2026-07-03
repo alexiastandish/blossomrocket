@@ -22,11 +22,7 @@ export default function WhySection() {
           <SectionLabel text="Why Brands Become Inconsistent" />
           <h2
             id="why-h"
-            className="font-semibold leading-[1.06] tracking-[-0.02em] mb-5"
-            style={{
-              fontFamily: "'Parkinsans', sans-serif",
-              fontSize: "clamp(38px,5.5vw,76px)",
-            }}
+            className="font-semibold leading-[1.06] tracking-[-0.02em] mb-5 h2"
           >
             As companies grow, teams begin creating assets{" "}
             <em className="grad-text not-italic">independently.</em>

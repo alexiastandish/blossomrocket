@@ -44,11 +44,7 @@ export default function CompanyStoresSection() {
         <div className="">
           <h2
             id="stores-h"
-            className="rv font-semibold leading-[1.06] tracking-[-0.02em] mb-5"
-            style={{
-              fontFamily: "'Parkinsans', sans-serif",
-              fontSize: "clamp(38px,5.5vw,76px)",
-            }}
+            className="rv font-semibold leading-[1.06] tracking-[-0.02em] mb-5 h2"
           >
             What is a<br />
             <em className="grad-text not-italic">Company Store?</em>

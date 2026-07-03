@@ -1,7 +1,9 @@
+import FAQSection from "@/components/faqs/FAQSection";
 import Hero from "@/components/Hero";
 import { CardCallout, CardList, SectionLayout } from "@/components/section";
 import CardLinkGrid from "@/components/section/CardLinkGrid";
 import SectionItemList from "@/components/section/ItemList";
+import faqs from "@/data/faqs/services/brand-systems.json";
 
 export default function page() {
   return (
@@ -11,7 +13,7 @@ export default function page() {
         heading={
           <>
             Turn Brand Identity Into a{" "}
-            <em className="grad-text not-italic">Scalable System</em>.
+            <em className="grad-text not-italic">Scalable System.</em>
           </>
         }
         body={
@@ -48,11 +50,10 @@ export default function page() {
         heading={
           <>
             Brand Systems Create A{" "}
-            <em className="grad-text not-italic">Single Source</em>of{" "}
-            <em className="grad-text not-italic">Truth</em>.
+            <em className="grad-text not-italic">Single Source of Truth.</em>
           </>
         }
-        subtext="Blossom Rocket helps businesses establish brand systems that operate as a single source of truth which define how brand assets should be created, managed, and applied. The result is a more consistent brand experience across both digital and physical channels."
+        subtext="Blossom Rocket helps businesses establish brand systems that operate as a rce of truth which define how brand assets should be created, managed, and applied. The result is a more consistent brand experience across both digital and physical channels."
         schemaItems={[
           { topic: "Marketing teams create campaign assets." },
           { topic: "Sales teams create presentations." },
@@ -83,8 +84,9 @@ export default function page() {
         mobileOrder="left-first"
         heading={
           <>
-            Scalable Systems{" "}
-            <em className="grad-text not-italic">Built for Growth</em>.
+            Scalable Systems
+            <br />
+            <em className="grad-text not-italic">Built for Growth.</em>
           </>
         }
         subtext="Brand Systems help businesses scale without sacrificing consistency. Blossom Rocket Brand System services are designed to help organizations create repeatable processes that support future growth. The result is a more consistent brand experience across both digital and physical channels."
@@ -102,6 +104,7 @@ export default function page() {
         pageUrl="https://blossomrocket.studio/services/brand-systems#single-source-of-truth"
       >
         <CardList
+          layout="stacked"
           heading="A Brand System helps teams:"
           items={[
             { topic: "Maintain visual consistency" },
@@ -115,6 +118,7 @@ export default function page() {
             { topic: "Protect brand standards" },
           ]}
         />
+        <div className="mb-4" />
         <CardCallout heading="As more people contribute to a brand, clear systems become increasingly important." />
       </SectionLayout>
       {/* -- What's Included -- */}
@@ -124,10 +128,11 @@ export default function page() {
         id="what-is-included"
         theme="brandSoft"
         eyebrow="What Is Included?"
+        subtext="Blossom Rocket Brand Systems include the documentation, standards, and creative resources businesses need to build consistent brand experiences. From Brand Guidelines and Asset Libraries to Design Systems, Templates, and Usage Guidelines, every component works together to create a scalable foundation for growth."
         heading={
           <>
-            What&apos;s Included In A{" "}
-            <em className="grad-text not-italic">Brand System</em>?
+            <em className="grad-text not-italic"> What&apos;s Included </em> in
+            a Brand&nbsp;System?
           </>
         }
         listHeading="Blossom Rocket Brand System Includes:"
@@ -161,7 +166,7 @@ export default function page() {
           <>
             Designed For{" "}
             <em className="grad-text not-italic">Digital And Physical </em>{" "}
-            Touchpoints .
+            Touchpoints.
           </>
         }
         theme="dark"
@@ -222,6 +227,12 @@ export default function page() {
           footerText="This creates a more unified experience for customers, employees, partners, and stakeholders alike."
         />
       </SectionLayout>
+      {/* ── Section 5: FAQs ── */}
+      <FAQSection
+        groups={faqs}
+        theme="dark"
+        pageUrl="https://blossomrocket.studio/services/brand-identity"
+      />
     </div>
   );
 }

@@ -332,11 +332,7 @@ export default function OurServices() {
           <SectionLabel text="Our Services" />
           <h2
             id="svc-h"
-            className="rv font-semibold leading-[1.06] tracking-[-0.02em]"
-            style={{
-              fontFamily: "'Parkinsans', sans-serif",
-              fontSize: "clamp(38px,5.5vw,76px)",
-            }}
+            className="rv font-semibold leading-[1.06] tracking-[-0.02em] h2"
           >
             Everything You Need to
             <br />

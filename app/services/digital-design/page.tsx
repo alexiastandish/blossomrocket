@@ -30,8 +30,7 @@ export default function page() {
         theme="light"
         heading={
           <>
-            Let Blossom Rocket Bring Your
-            <br />
+            Let Blossom Rocket Bring Your{" "}
             <em className="grad-text not-italic">Brand To Life Online.</em>
           </>
         }
@@ -113,8 +112,8 @@ export default function page() {
         eyebrow="Digital Design Services"
         heading={
           <>
-            What&apos;s included in{" "}
-            <em className="grad-text not-italic">Digital Design</em> services?
+            <em className="grad-text not-italic">What&apos;s included</em> in
+            Digital Design services?
           </>
         }
         subtext="What's included in Blossom Rocket's design services:"
@@ -155,9 +154,8 @@ export default function page() {
         eyebrow="Built For The Long Run"
         heading={
           <>
-            Digital Design that&apos;s built
-            <br />
-            <em className="grad-text not-italic">for growth & scalability.</em>
+            Digital Design that&apos;s built for{" "}
+            <em className="grad-text not-italic">growth & scalability.</em>
           </>
         }
         subtext="Digital experiences evolve over time. New pages are created. New campaigns are launched. New products and services are introduced. Without clear design and development standards, digital experiences can quickly become difficult to maintain."

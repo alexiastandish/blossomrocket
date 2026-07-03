@@ -3,5 +3,5 @@ export const pageThemes: Record<string, "light" | "dark"> = {
   "/services": "dark",
   "/services/brand-identity": "light",
   "/services/brand-systems": "dark",
-  "/services/digital-design": "dark",
+  "/services/digital-design": "light",
 };

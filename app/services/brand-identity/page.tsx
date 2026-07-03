@@ -1,3 +1,4 @@
+import FAQSection from "@/components/faqs/FAQSection";
 import Hero from "@/components/Hero";
 import {
   CardCallout,
@@ -6,6 +7,7 @@ import {
   SectionLayout,
 } from "@/components/section";
 import CardComparison from "@/components/section/CardComparison";
+import faqs from "@/data/faqs/services/brand-identity.json";
 
 export default function page() {
   return (
@@ -15,7 +17,7 @@ export default function page() {
         heading={
           <>
             Brand Identity that Builds{" "}
-            <em className="grad-text not-italic">Recognition and Trust</em>.
+            <em className="grad-text not-italic">Recognition and Trust.</em>
           </>
         }
         body={`Blossom Rocket helps businesses create Brand Identity systems that establish consistency across company stores, digital design, marketing assets, print and promo products.`}
@@ -85,7 +87,7 @@ export default function page() {
           <>
             Brand Identity Designed to{" "}
             <em className="grad-text not-italic">Scale</em> for{" "}
-            <em className="grad-text not-italic">Expansion</em>.
+            <em className="grad-text not-italic">Expansion.</em>
           </>
         }
         subtext="As businesses grow, new assets are created by different teams, departments, vendors, and partners. Without clear Brand Identity standards, inconsistency becomes inevitable."
@@ -115,13 +117,19 @@ export default function page() {
         />
         <CardCallout body="Blossom Rocket helps businesses establish Brand Identity systems that support long-term growth and consistency." />
       </SectionLayout>
-      {/* ── Brand Fundamentals ── */}
+      {/* ── Brand Identity vs Brand Systems ── */}
       <SectionLayout
         id="brand-identity--brand-fundamentals"
         layout="stacked"
         theme="dark"
-        eyebrow="Brand Fundamentals"
-        heading="What Is the Difference Between Brand Identity and a Brand System?"
+        eyebrow="Brand Identity vs. Brand Systems"
+        heading={
+          <>
+            What&apos;s the Difference Between{" "}
+            <em className="grad-text not-italic">Brand Identity </em> and a{" "}
+            <em className="grad-text not-italic">Brand System.</em>
+          </>
+        }
         subtext="Brand Identity defines what a brand looks like. A Brand System defines how a brand is applied — together they create consistency and help it scale."
         schemaItems={[
           { topic: "Brand Identity defines what a brand looks like." },
@@ -160,6 +168,12 @@ export default function page() {
           ]}
         />
       </SectionLayout>
+      {/* ── Section 5: FAQs ── */}
+      <FAQSection
+        groups={faqs}
+        theme="dark"
+        pageUrl="https://blossomrocket.studio/services/brand-identity"
+      />
     </div>
   );
 }

@@ -85,11 +85,7 @@ export default function FAQSection({
       <div className="relative z-10 mx-auto max-w-4xl">
         <div className="text-center mb-14 rv">
           <h2
-            className={`font-semibold leading-[1.06] tracking-[-0.02em] mb-5 ${activeTokens.heading}`}
-            style={{
-              fontFamily: "'Parkinsans', sans-serif",
-              fontSize: "clamp(38px,5.5vw,76px)",
-            }}
+            className={`font-semibold leading-[1.06] tracking-[-0.02em] mb-5 ${activeTokens.heading} h2`}
           >
             Frequently Asked Questions
           </h2>

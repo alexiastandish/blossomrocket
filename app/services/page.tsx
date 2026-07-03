@@ -40,9 +40,9 @@ export default function Services() {
         theme="dark"
         heading={
           <>
-            Creative Services That Help Businesses
-            <br />
-            <em className="grad-text not-italic">Build, Manage, and Scale.</em>
+            Creative Services That Help Businesses{" "}
+            <em className="grad-text not-italic">Build, Manage,</em> and{" "}
+            <em className="grad-text not-italic"> Scale.</em>
           </>
         }
         body={`Blossom Rocket helps businesses create cohesive brand experiences across digital platforms, physical materials, merchandise, marketing assets, and company stores through SplashBrands.`}
@@ -118,7 +118,7 @@ export default function Services() {
         heading={
           <>
             Brand Identity for Building{" "}
-            <em className="grad-text not-italic">Recognition and Trust</em>.
+            <em className="grad-text not-italic">Recognition and Trust.</em>
           </>
         }
         subtext="Brand Identity is the visual foundation of a business. Blossom Rocket helps businesses create Brand Identity systems that support recognition, trust, and consistency across digital design, marketing assets, print materials, merchandise, promotional products, and company stores."
@@ -165,7 +165,7 @@ export default function Services() {
           <>
             Brand Systems that turn{" "}
             <em className="grad-text not-italic">Identity</em> Into a{" "}
-            <em className="grad-text not-italic">Scalable Framework</em>.
+            <em className="grad-text not-italic">Scalable Framework.</em>
           </>
         }
         subtext="A Brand System defines how a business documents, manages, and applies its brand across digital and physical experiences. Blossom Rocket helps businesses create Brand Systems that reduce inconsistency, improve collaboration, and support long-term growth."
@@ -218,9 +218,8 @@ export default function Services() {
           <>
             Digital Design Services for{" "}
             <em className="grad-text not-italic">
-              Cohesive Online Brand Experiences
+              Cohesive Online Brand Experiences.
             </em>
-            .
           </>
         }
         subtext="Blossom Rocket creates branded digital experiences that help businesses communicate clearly, engage users, and scale online. Digital Design connects brand standards with websites, applications, landing pages, digital marketing, and front-end implementation."
@@ -276,9 +275,8 @@ export default function Services() {
           <>
             Marketing Assets That Create{" "}
             <em className="grad-text not-italic">
-              Consistency Across Every Channel
+              Consistency Across Every Channel.
             </em>
-            .
           </>
         }
         subtext="Marketing Assets help businesses communicate across social media, events, sales initiatives, email marketing, advertising, and customer communications. Blossom Rocket develops creative assets that align with Brand Identity and Brand System standards."
@@ -334,9 +332,8 @@ export default function Services() {
           <>
             Print & Environmental Design That{" "}
             <em className="grad-text not-italic">
-              Brings Your Brand Into the Real World
+              Brings Your Brand Into the Real World.
             </em>
-            .
           </>
         }
         subtext="Print & Environmental Design extends a brand into physical spaces, printed materials, packaging, signage, vehicles, events, and customer-facing environments. Blossom Rocket helps businesses create physical brand assets that align with their broader brand system."
@@ -399,7 +396,7 @@ export default function Services() {
         heading={
           <>
             Merchandise & Promotional Products That{" "}
-            <em className="grad-text not-italic">Expand Brand Recognition</em>.
+            <em className="grad-text not-italic">Expand Brand Recognition.</em>
           </>
         }
         ctas={[
@@ -472,7 +469,7 @@ export default function Services() {
         heading={
           <>
             Company Store Solutions{" "}
-            <em className="grad-text not-italic">Through SplashBrands</em>.
+            <em className="grad-text not-italic">Through SplashBrands.</em>
           </>
         }
         subtext="Blossom Rocket helps businesses implement Company Store solutions through SplashBrands that centralize branded merchandise, simplify ordering, maintain brand consistency, and support scalable employee, customer, and event programs."

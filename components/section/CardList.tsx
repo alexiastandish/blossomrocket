@@ -8,14 +8,17 @@ export type CardListProps = {
   heading?: string;
   items: CardOverlayItem[];
   activeTheme?: SectionTokens;
+  layout?: "split" | "stacked";
 };
 
 export default function CardList({
   heading,
   items,
   activeTheme,
+  layout = "split",
 }: CardListProps) {
   const activeTokens = activeTheme ?? tokens["light"];
+  const isStacked = layout === "stacked";
 
   return (
     <div className={`rounded-3xl p-9 border ${activeTokens.card}`}>
@@ -27,7 +30,15 @@ export default function CardList({
           {heading}
         </h3>
       )}
-      <div className="flex flex-col" role="list" itemProp="itemListElement">
+      <div
+        className={
+          isStacked
+            ? "grid grid-cols-1 sm:grid-cols-2 gap-x-10"
+            : "flex flex-col"
+        }
+        role="list"
+        itemProp="itemListElement"
+      >
         {items.map((item, i) => (
           <div
             key={item.topic}
