@@ -16,26 +16,16 @@ type NavLink = {
 type DropdownMenus = Record<string, boolean>;
 
 const services: NavLink[] = [
-  {
-    href: "/services/brand-identity",
-    label: "Brand Identity",
-  },
+  { href: "/services/brand-identity", label: "Brand Identity" },
   { href: "/services/brand-systems", label: "Brand Systems" },
   { href: "/services/digital-design", label: "Digital Design" },
-  {
-    href: "/services/marketing-assets",
-    label: "Marketing Assets",
-  },
+  { href: "/services/marketing-assets", label: "Marketing Assets" },
   { href: "/services/print-and-environmental", label: "Print & Environmental" },
   {
     href: "/services/merchandise-and-promotional-products",
     label: "Merchandise & Promotional Products",
   },
   { href: "/services/company-stores", label: "Company Stores" },
-  // {
-  //   href: "/services/search-everything-optimization-consulting",
-  //   label: "Search Everything Optimization Consulting",
-  // },
 ];
 
 const resources: NavLink[] = [
@@ -50,19 +40,17 @@ const dropdownLinks: Record<string, NavLink[]> = {
 
 const links: NavLink[] = [
   { href: "/services", label: "Services", dropdown: true },
-
   { href: "/about", label: "Who We Are" },
   { href: "/resources", label: "Resources", dropdown: true },
   { href: "/contact", label: "Contact Us" },
 ];
-
-// ─── Theme token maps ─────────────────────────────────────────────────────────
 
 const unscrolledTokens: Record<
   NavTheme,
   {
     linkIdle: string;
     linkActive: string;
+    linkHover: string;
     ctaBg: string;
     ctaText: string;
     ctaHover: string;
@@ -72,6 +60,7 @@ const unscrolledTokens: Record<
   light: {
     linkIdle: "text-ink-60",
     linkActive: "text-ink",
+    linkHover: "text-ink",
     ctaBg: "bg-[#18181b]",
     ctaText: "text-white",
     ctaHover: "hover:opacity-85",
@@ -80,6 +69,7 @@ const unscrolledTokens: Record<
   dark: {
     linkIdle: "text-[rgba(255,255,255,0.60)]",
     linkActive: "text-white",
+    linkHover: "text-white",
     ctaBg: "bg-white",
     ctaText: "text-[#18181b]",
     ctaHover: "hover:opacity-90",
@@ -92,28 +82,21 @@ const scrolledTokens = {
     "bg-[rgba(250,250,248,0.92)] backdrop-blur-[18px] border-[rgba(24,24,27,0.10)]",
   linkIdle: "text-ink-60",
   linkActive: "text-ink",
+  linkHover: "text-ink",
   ctaBg: "bg-[#18181b]",
   ctaText: "text-white",
   ctaHover: "hover:opacity-85",
   logoInvert: false,
 };
-const dropdowns: DropdownMenus = {
-  services: false,
-  resources: false,
-};
+
+const dropdowns: DropdownMenus = { services: false, resources: false };
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState<boolean>(false);
   const [dropdownOpen, setDropdownOpen] = useState<DropdownMenus>(dropdowns);
 
-  const dropdownRef = useRef<HTMLLIElement>(null);
-
   const pathname = usePathname();
-
-  // Look up the current page's hero theme from the central map
   const navTheme: NavTheme = pageThemes[pathname] ?? "light";
-
-  // Active token set — scrolled always wins with the light treatment
   const activeTokens = scrolled ? scrolledTokens : unscrolledTokens[navTheme];
 
   useEffect(() => {
@@ -122,17 +105,6 @@ export default function Nav() {
     window.addEventListener("scroll", handler, { passive: true });
     return () => window.removeEventListener("scroll", handler);
   }, [pathname]);
-
-  const handleAnchor = (
-    e: React.MouseEvent<HTMLAnchorElement>,
-    href: string,
-  ): void => {
-    const target = document.querySelector(href);
-    if (target) {
-      e.preventDefault();
-      target.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
 
   return (
     <nav
@@ -147,27 +119,23 @@ export default function Nav() {
     >
       <Link href="/" className="flex items-center gap-2.5">
         <Image
-          src={`${activeTokens.logoInvert ? "/logo-inverted.svg" : "/logo.svg"}`}
+          src={activeTokens.logoInvert ? "/logo-inverted.svg" : "/logo.svg"}
           alt="Blossom Rocket"
           width={142}
           height={80}
-          style={{
-            height: "80px",
-            width: "auto",
-          }}
+          style={{ height: "80px", width: "auto" }}
           priority
         />
       </Link>
 
-      <ul className="hidden md:flex gap-9 list-none items-center">
+      <ul className="hidden md:flex gap-9 list-none items-center h-full">
         {links.map(({ href, label, dropdown = false }: NavLink) => {
           const isFirst = href === "/services" || href === "/resources";
-
           const menuIsOpen = dropdownOpen[label.toLowerCase()];
+
           return dropdown ? (
             <li
               key={href}
-              ref={dropdownRef}
               className="relative"
               onMouseEnter={() =>
                 setDropdownOpen((prev) => ({
@@ -184,7 +152,7 @@ export default function Nav() {
             >
               <Link
                 href={href}
-                className={`flex items-center gap-1.5 text-[13.5px] font-medium tracking-[0.01em] transition-colors duration-200 hover:text-ink ${
+                className={`flex items-center gap-1.5 text-[13.5px] font-medium tracking-[0.01em] transition-colors duration-200 hover:${activeTokens.linkHover} ${
                   menuIsOpen ? activeTokens.linkActive : activeTokens.linkIdle
                 }`}
               >
@@ -222,14 +190,12 @@ export default function Nav() {
                   width: "260px",
                 }}
               >
-                {/* 👇 hide caret on left-aligned dropdown */}
                 {!isFirst && (
                   <div
                     className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 rotate-45 bg-white border-l border-t border-[rgba(24,24,27,0.08)]"
                     aria-hidden="true"
                   />
                 )}
-
                 <ul
                   className="relative bg-white rounded-2xl border border-[rgba(24,24,27,0.08)] overflow-hidden list-none p-1.5"
                   style={{
@@ -259,16 +225,13 @@ export default function Nav() {
               </div>
             </li>
           ) : (
-            <li key={href}>
-              <a
+            <li key={href} className="flex items-center">
+              <Link
                 href={href}
-                className={`nav-link relative text-[13.5px] font-medium tracking-[0.01em] transition-colors duration-200 hover:text-ink ${activeTokens.linkIdle}`}
-                onClick={(e: React.MouseEvent<HTMLAnchorElement>) =>
-                  handleAnchor(e, href)
-                }
+                className={`text-[13.5px] font-medium tracking-[0.01em] transition-colors duration-200 hover:${activeTokens.linkHover}  ${activeTokens.linkIdle}`}
               >
                 {label}
-              </a>
+              </Link>
             </li>
           );
         })}
@@ -277,9 +240,6 @@ export default function Nav() {
       <a
         href="/contact"
         className={`text-[13px] font-semibold tracking-[0.02em] px-[22px] py-[9px] rounded-full transition-all duration-200 hover:-translate-y-px ${activeTokens.ctaBg} ${activeTokens.ctaText} ${activeTokens.ctaHover}`}
-        onClick={(e: React.MouseEvent<HTMLAnchorElement>) =>
-          handleAnchor(e, "/contact")
-        }
       >
         Schedule a Consultation
       </a>
