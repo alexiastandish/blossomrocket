@@ -40,9 +40,8 @@ const dropdownLinks: Record<string, NavLink[]> = {
 
 const links: NavLink[] = [
   { href: "/services", label: "Services", dropdown: true },
-  { href: "/about", label: "Who We Are" },
+  { href: "/work", label: "Work" },
   { href: "/resources", label: "Resources", dropdown: true },
-  { href: "/contact", label: "Contact Us" },
 ];
 
 const unscrolledTokens: Record<
@@ -241,7 +240,7 @@ export default function Nav() {
         href="/contact"
         className={`text-[13px] font-semibold tracking-[0.02em] px-[22px] py-[9px] rounded-full transition-all duration-200 hover:-translate-y-px ${activeTokens.ctaBg} ${activeTokens.ctaText} ${activeTokens.ctaHover}`}
       >
-        Schedule a Consultation
+        Get In Touch
       </a>
     </nav>
   );

@@ -24,12 +24,12 @@
   }
 
   .h1 {
-    @apply lg:text-7xl  lg:leading-[1.1] font-semibold md:text-5xl leading-tight tracking-[-0.03em] text-4xl;
+    @apply lg:text-7xl md:text-6xl lg:leading-[1.1] font-semibold leading-tight tracking-[-0.03em] text-5xl;
     font-family: "Parkinsans", sans-serif;
   }
 
   .h2 {
-    @apply lg:text-6xl  lg:leading-[1.15] font-semibold  md:leading-snug tracking-[-0.03em] leading-snug  md:text-4xl;
+    @apply lg:text-6xl md:text-5xl lg:leading-[1.15] font-semibold  md:leading-snug tracking-[-0.03em] leading-snug text-4xl;
     font-family: "Parkinsans", sans-serif;
   }
 }

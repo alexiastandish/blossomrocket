@@ -228,7 +228,7 @@ export default function Hero({
         {/* ── CTAs ── */}
         {ctas.length > 0 && (
           <div className="anim-fade-up anim-delay-4 flex gap-4 justify-center flex-wrap">
-            <CTAs ctas={ctas} />
+            <CTAs ctas={ctas} hero={true} />
           </div>
         )}
 
