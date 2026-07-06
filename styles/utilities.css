@@ -1,0 +1,68 @@
+@layer utilities {
+  .label-line {
+    width: 18px;
+    height: 1.5px;
+    background: linear-gradient(90deg, #9b5cf6, #06b6d4);
+    flex-shrink: 0;
+  }
+
+  .cdot {
+    position: fixed;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #9b5cf6;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: multiply;
+  }
+  .cring {
+    position: fixed;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(99, 102, 241, 0.4);
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    transition:
+      width 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+      height 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+      border-color 0.3s;
+  }
+  .cring.h {
+    width: 52px;
+    height: 52px;
+    border-color: #9b5cf6;
+  }
+
+  .bar-fill {
+    height: 100%;
+    border-radius: 9999px;
+    background: linear-gradient(
+      90deg,
+      #9b5cf6,
+      #6366f1,
+      #3b82f6,
+      #06b6d4,
+      #10b981,
+      #f59e0b
+    );
+    transition: width 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background: linear-gradient(90deg, #9b5cf6, #06b6d4);
+    transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .nav-link:hover::after {
+    width: 100%;
+  }
+}

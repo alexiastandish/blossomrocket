@@ -4,7 +4,11 @@
     height: 0.375rem;
     border-radius: 50%;
     flex-shrink: 0;
-    background: linear-gradient(90deg, #9b5cf6, #06b6d4);
+    background: linear-gradient(
+      90deg,
+      var(--color-violet-200),
+      var(--color-cyan-300)
+    );
   }
   .section-col-grid {
     grid-template-columns: 1fr;

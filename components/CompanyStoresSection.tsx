@@ -46,8 +46,7 @@ export default function CompanyStoresSection() {
             id="stores-h"
             className="rv font-semibold leading-[1.06] tracking-[-0.02em] mb-5 h2"
           >
-            What is a<br />
-            <em className="grad-text not-italic">Company Store?</em>
+            What is a <em className="grad-text not-italic">Company Store?</em>
           </h2>
           <p
             className="rv d1 text-[rgba(255,255,255,0.45)] leading-[1.8] mb-[52px]"

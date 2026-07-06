@@ -1,0 +1,188 @@
+@theme inline {
+  --font-display: "Parkinsans", sans-serif;
+  --font-body: "Plus Jakarta Sans", system-ui, sans-serif;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* ── Violet scale ────────────────────────────────────────────────────────── */
+  --color-violet-50: #f0eefe;
+  --color-violet-100: #ddd8fb;
+  --color-violet-200: #beb5f5;
+  --color-violet-300: #9e8eef;
+  --color-violet-400: #7c5ce8;
+  --color-violet-500: #6347cc;
+  --color-violet-600: #4c35a8;
+  --color-violet-700: #36267e;
+  --color-violet-800: #231858;
+  --color-violet-900: #130d33;
+
+  /* ── Pink scale ──────────────────────────────────────────────────────────── */
+  --color-pink-50: #fde8f8;
+  --color-pink-100: #f9c5ef;
+  --color-pink-200: #f29de3;
+  --color-pink-300: #e871d4;
+  --color-pink-400: #d946a8;
+  --color-pink-500: #b8368e;
+  --color-pink-600: #912976;
+  --color-pink-700: #6b1d58;
+  --color-pink-800: #48123c;
+  --color-pink-900: #280921;
+
+  /* ── Blue scale ──────────────────────────────────────────────────────────── */
+  --color-blue-50: #e3f2fd;
+  --color-blue-100: #bae0fa;
+  --color-blue-200: #88c9f5;
+  --color-blue-300: #57b0ef;
+  --color-blue-400: #2e8fe8;
+  --color-blue-500: #1f72c4;
+  --color-blue-600: #1558a0;
+  --color-blue-700: #0d3f78;
+  --color-blue-800: #082a52;
+  --color-blue-900: #03152c;
+
+  /* ── Cyan scale ──────────────────────────────────────────────────────────── */
+  --color-cyan-50: #ddfaf5;
+  --color-cyan-100: #aef2e8;
+  --color-cyan-200: #70e5d5;
+  --color-cyan-300: #35d3bc;
+  --color-cyan-400: #06c4a4;
+  --color-cyan-500: #04a18a;
+  --color-cyan-600: #037d6c;
+  --color-cyan-700: #025b50;
+  --color-cyan-800: #013c35;
+  --color-cyan-900: #011e1a;
+
+  /* ── Green scale ─────────────────────────────────────────────────────────── */
+  --color-green-50: #ddfaee;
+  --color-green-100: #a8f0d2;
+  --color-green-200: #6ee3b3;
+  --color-green-300: #47d89e;
+  --color-green-400: #2ecf8e;
+  --color-green-500: #20ab75;
+  --color-green-600: #15875b;
+  --color-green-700: #0d6243;
+  --color-green-800: #07402c;
+  --color-green-900: #032116;
+
+  /* ── Amber scale ─────────────────────────────────────────────────────────── */
+  --color-amber-50: #fef7e0;
+  --color-amber-100: #fdeab5;
+  --color-amber-200: #fbd77a;
+  --color-amber-300: #f8c046;
+  --color-amber-400: #f5a623;
+  --color-amber-500: #d08710;
+  --color-amber-600: #a8680b;
+  --color-amber-700: #7d4c07;
+  --color-amber-800: #543204;
+  --color-amber-900: #2c1902;
+
+  /* ── Neutral scale ───────────────────────────────────────────────────────── */
+  --color-neutral-50: #f4f3fc;
+  --color-neutral-100: #e4e2f4;
+  --color-neutral-200: #c9c6e4;
+  --color-neutral-300: #a8a4cc;
+  --color-neutral-400: #8480ae;
+  --color-neutral-500: #4a4a6a;
+  --color-neutral-600: #363650;
+  --color-neutral-700: #25253a;
+  --color-neutral-800: #1a1a2e;
+  --color-neutral-900: #0d0d18;
+
+  /* ── Brand aliases ───────────────────────────────────────────────────────── */
+  --color-violet: #7c5ce8;
+  --color-violet-light: #ede9fd;
+  --color-violet-dark: #4c35a8;
+  --color-pink: #d946a8;
+  --color-pink-light: #fce8f7;
+  --color-blue: #2e8fe8;
+  --color-blue-light: #e3f2fd;
+  --color-cyan: #06c4a4;
+  --color-cyan-light: #ddfaf5;
+  --color-green: #2ecf8e;
+  --color-green-light: #ddfaee;
+  --color-amber: #f5a623;
+  --color-amber-light: #fef7e0;
+
+  /* ── Neutral aliases ─────────────────────────────────────────────────────── */
+  --color-ink: #1a1a2e;
+  --color-ink-mid: #4a4a6a;
+  --color-ink-faint: #8480ae;
+  --color-cloud: #f4f3fc;
+  --color-white: #ffffff;
+
+  /* ── Semantic status ─────────────────────────────────────────────────────── */
+  --color-success-bg: #ddfaee;
+  --color-warning-bg: #fef7e0;
+  --color-error-bg: #fdecec;
+  --color-info-bg: #e3f2fd;
+  --color-active-bg: #f0eefe;
+  --color-disabled-bg: #e4e2f4;
+
+  /* ── Surfaces ────────────────────────────────────────────────────────────── */
+  --color-surface-base: #ffffff;
+  --color-surface-page: #f4f3fc;
+  --color-surface-subtle: #eceaf8;
+  --color-surface-muted: #e4e2f4;
+  --color-surface-dark: #1a1a2e;
+  --color-surface-dark-raised: #25253a;
+  --color-surface-dark-neutral: #18181b;
+
+  /* ── Text ────────────────────────────────────────────────────────────────── */
+  --color-fg-primary: #1a1a2e;
+  --color-fg-secondary: #4a4a6a;
+  --color-fg-tertiary: #8480ae;
+  --color-fg-brand: #7c5ce8;
+  --color-fg-accent: #d946a8;
+  --color-fg-on-dark: #f4f3fc;
+  --color-fg-on-brand: #ededf2;
+
+  /* ── Borders ─────────────────────────────────────────────────────────────── */
+  --color-border-subtle: rgba(124, 92, 232, 0.08);
+  --color-border-default: #e4e2f4;
+  --color-border-strong: #c9c6e4;
+  --color-border-brand: #7c5ce8;
+  --color-border-focus: #7c5ce8;
+  --color-border-nav: #7c5ce8;
+  --color-border-on-dark: rgba(255, 255, 255, 0.1);
+
+  /* ── Interactive states ──────────────────────────────────────────────────── */
+  --color-btn-primary-bg: #7c5ce8;
+  --color-btn-primary-hover: #4c35a8;
+  --color-btn-ghost-hover: #f4f3fc;
+  --color-link-default: #7c5ce8;
+  --color-link-hover: #d946a8;
+
+  /* ── Overlays ────────────────────────────────────────────────────────────── */
+  --color-overlay-light: rgba(255, 255, 255, 0.08);
+  --color-overlay-modal: rgba(26, 26, 46, 0.4);
+  --color-overlay-heavy: rgba(26, 26, 46, 0.72);
+  --color-overlay-brand: rgba(124, 92, 232, 0.08);
+  --color-overlay-focus-halo: rgba(124, 92, 232, 0.2);
+  --color-overlay-nav-bg: rgba(255, 255, 255, 0.85);
+
+  /* ── Gradients ───────────────────────────────────────────────────────────── */
+  --grad-brand: linear-gradient(135deg, #7c5ce8, #d946a8);
+  --grad-spectrum: linear-gradient(90deg, #7c5ce8, #2e8fe8, #06c4a4, #f5a623);
+  --grad-cool-arc: linear-gradient(135deg, #7c5ce8, #2e8fe8, #06c4a4);
+  --grad-full-spectrum: linear-gradient(
+    90deg,
+    #7c5ce8,
+    #d946a8,
+    #2e8fe8,
+    #06c4a4,
+    #2ecf8e,
+    #f5a623
+  );
+  --grad-warm-glow: linear-gradient(135deg, #d946a8, #f5a623);
+  --grad-growth: linear-gradient(135deg, #06c4a4, #3de9a4);
+  --grad-fin-flame: linear-gradient(135deg, #2ecf8e, #f5a623);
+  --grad-dark-depth: linear-gradient(180deg, #1a1a2e, #25253a);
+  --grad-dark-brand: linear-gradient(135deg, #1a1a2e, #2d1f5e);
+  --grad-surface-fade: linear-gradient(180deg, #f4f3fc, #ffffff);
+  --grad-brand-wash: linear-gradient(
+    135deg,
+    rgba(124, 92, 232, 0.08),
+    rgba(124, 92, 232, 0)
+  );
+  --grad-success-wash: linear-gradient(135deg, #ddfaee, #f4f3fc);
+}

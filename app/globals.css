@@ -1,9 +1,15 @@
 @import "tailwindcss";
-@import "./styles/components.css";
+@import "../styles/tokens.css";
+@import "../styles/animations.css";
+@import "../styles/base.css";
+@import "../styles/gradients.css";
+@import "../styles/typography.css";
+@import "../styles/utilities.css";
+@import "../styles/components.css";
 @source "../lib/**/*.{ts,tsx}";
 @source "../components/**/*.{ts,tsx}";
 
-@theme inline {
+/* @theme inline {
   --font-display: "Parkinsans", sans-serif;
   --font-body: "Plus Jakarta Sans", system-ui, sans-serif;
 
@@ -80,7 +86,7 @@
 
 @layer utilities {
   /* Gradient text */
-  .grad-text {
+/* .grad-text {
     background: linear-gradient(
       90deg,
       #9b5cf6,
@@ -93,10 +99,10 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-  }
+  } */
 
-  /* Gradient bar */
-  .grad-bg {
+/* Gradient bar */
+/* .grad-bg {
     background: linear-gradient(
       90deg,
       #9b5cf6,
@@ -106,18 +112,18 @@
       #10b981,
       #f59e0b
     );
-  }
+  } */
 
-  /* Section label line */
-  .label-line {
+/* Section label line */
+/* .label-line {
     width: 18px;
     height: 1.5px;
     background: linear-gradient(90deg, #9b5cf6, #06b6d4);
     flex-shrink: 0;
-  }
+  } */
 
-  /* Scroll reveal */
-  .rv {
+/* Scroll reveal */
+/* .rv {
     opacity: 0;
     transform: translateY(28px);
     transition:
@@ -139,10 +145,10 @@
   }
   .rv.d4 {
     transition-delay: 0.32s;
-  }
+  } */
 
-  /* Fade up animation classes */
-  .anim-fade-up {
+/* Fade up animation classes */
+/* .anim-fade-up {
     opacity: 0;
     animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
   }
@@ -157,10 +163,10 @@
   }
   .anim-delay-4 {
     animation-delay: 0.55s;
-  }
+  } */
 
-  /* Custom cursor */
-  .cdot {
+/* Custom cursor */
+/* .cdot {
     position: fixed;
     width: 7px;
     height: 7px;
@@ -189,27 +195,27 @@
     width: 52px;
     height: 52px;
     border-color: #9b5cf6;
-  }
+  } */
 
-  /* Scroll indicator */
-  .scroll-line {
+/* Scroll indicator */
+/* .scroll-line {
     width: 1px;
     height: 48px;
     background: linear-gradient(to bottom, transparent, #18181b);
     animation: scrollPulse 2s ease-in-out infinite;
     margin: 0 auto;
-  }
+  } */
 
-  /* Marquee */
-  .marquee-inner {
+/* Marquee */
+/* .marquee-inner {
     display: flex;
     gap: 48px;
     width: max-content;
     animation: marquee 28s linear infinite;
-  }
+  } */
 
-  /* Bar fill animation */
-  .bar-fill {
+/* Bar fill animation */
+/* .bar-fill {
     height: 100%;
     border-radius: 9999px;
     background: linear-gradient(
@@ -222,10 +228,10 @@
       #f59e0b
     );
     transition: width 1.4s cubic-bezier(0.16, 1, 0.3, 1);
-  }
+  } */
 
-  /* Service card gradient bar */
-  .svc-grad-bar::after {
+/* Service card gradient bar */
+/* .svc-grad-bar::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -247,10 +253,10 @@
   }
   .svc-grad-bar:hover::after {
     transform: scaleX(1);
-  }
+  } */
 
-  /* Top bar on cards */
-  .top-grad-bar::before {
+/* Top bar on cards */
+/* .top-grad-bar::before {
     content: "";
     position: absolute;
     top: 0;
@@ -272,10 +278,10 @@
   }
   .top-grad-bar:hover::before {
     transform: scaleX(1);
-  }
+  } */
 
-  /* Nav link underline */
-  .nav-link::after {
+/* Nav link underline */
+/* .nav-link::after {
     content: "";
     position: absolute;
     bottom: -2px;
@@ -287,10 +293,10 @@
   }
   .nav-link:hover::after {
     width: 100%;
-  }
+  } */
 
-  /* Btn primary gradient overlay */
-  .btn-grad-overlay::before {
+/* Btn primary gradient overlay */
+/* .btn-grad-overlay::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -310,9 +316,9 @@
   .btn-grad-overlay:hover::before {
     opacity: 1;
   }
-}
+} */
 
-@keyframes fadeUp {
+/* @keyframes fadeUp {
   from {
     opacity: 0;
     transform: translateY(20px);
@@ -335,4 +341,4 @@
   50% {
     opacity: 0.7;
   }
-}
+}  */

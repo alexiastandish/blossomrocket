@@ -32,6 +32,7 @@ import VehicleGraphics from "@/components/svgs/VehicleGraphics";
 import WebAppDesign from "@/components/svgs/WebAppDesign";
 import serviceItems from "@/data/marquees/services.json";
 import faqs from "@/data/faqs/services/home.json";
+import DiffBand from "@/components/DiffBand";
 
 export default function Services() {
   return (
@@ -157,7 +158,7 @@ export default function Services() {
       {/* ── Brand Systems ── */}
       <SectionLayout
         id="brand-systems"
-        theme="light"
+        theme="brandSoft"
         cols={[5, 3]}
         mobileOrder="left-first"
         eyebrow="Brand Systems"
@@ -208,7 +209,7 @@ export default function Services() {
       {/* ── Digital Design ── */}
       <SectionLayout
         id="digital-design"
-        theme="brandSoft"
+        theme="light"
         cols={[1, 1]}
         stickyRight={false}
         mobileOrder="left-first"
@@ -318,11 +319,11 @@ export default function Services() {
         />
       </SectionLayout>
 
-      <div>TODO:: BREAK UP SECTIONS HERE WITH SOMETHING </div>
+      <DiffBand />
       {/* ── Print & Environmental Design── */}
       <SectionLayout
         id="print-and-environmental-design"
-        theme="dark"
+        theme="brand"
         cols={[1, 1]}
         stickyRight={false}
         mobileOrder="left-first"
@@ -459,7 +460,7 @@ export default function Services() {
       />
       {/* ── Company Stores */}
       <SectionLayout
-        theme="brand"
+        theme="brandSoft"
         id="company-stores"
         cols={[5, 3]}
         stickyRight={false}

@@ -1,0 +1,82 @@
+@layer utilities {
+  .rv {
+    opacity: 0;
+    transform: translateY(28px);
+    transition:
+      opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .rv.on {
+    opacity: 1;
+    transform: none;
+  }
+  .rv.d1 {
+    transition-delay: 0.08s;
+  }
+  .rv.d2 {
+    transition-delay: 0.16s;
+  }
+  .rv.d3 {
+    transition-delay: 0.24s;
+  }
+  .rv.d4 {
+    transition-delay: 0.32s;
+  }
+
+  .anim-fade-up {
+    opacity: 0;
+    animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .anim-delay-1 {
+    animation-delay: 0.1s;
+  }
+  .anim-delay-2 {
+    animation-delay: 0.25s;
+  }
+  .anim-delay-3 {
+    animation-delay: 0.4s;
+  }
+  .anim-delay-4 {
+    animation-delay: 0.55s;
+  }
+
+  .marquee-inner {
+    display: flex;
+    gap: 48px;
+    width: max-content;
+    animation: marquee 28s linear infinite;
+  }
+
+  .scroll-line {
+    width: 1px;
+    height: 48px;
+    background: linear-gradient(to bottom, transparent, #18181b);
+    animation: scrollPulse 2s ease-in-out infinite;
+    margin: 0 auto;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes scrollPulse {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}

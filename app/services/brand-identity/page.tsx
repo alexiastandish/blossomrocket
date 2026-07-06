@@ -45,7 +45,11 @@ export default function page() {
         mobileOrder="left-first"
         eyebrow="More Than a Logo"
         heading={
-          <>Many businesses think Brand Identity begins and ends with a logo.</>
+          <>
+            Many businesses think Brand Identity{" "}
+            <em className="grad-text not-italic">begins and ends </em> with a
+            logo.
+          </>
         }
         subtext="A complete Brand Identity includes the visual systems that define how a business appears across digital and physical experience. The logo is just one component of a brand system."
         schemaItems={[

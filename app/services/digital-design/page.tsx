@@ -27,7 +27,7 @@ export default function page() {
       <Hero
         pillItems={[]}
         showPills={false}
-        theme="light"
+        theme="brandSoft"
         heading={
           <>
             Let Blossom Rocket Bring Your{" "}
@@ -150,7 +150,7 @@ export default function page() {
       {/* ── Section 4: Built For Scalability — CardComparison via SectionLayout ── */}
       <SectionLayout
         id="digital-design-scalability"
-        theme="dark"
+        theme="brandSoft"
         eyebrow="Built For The Long Run"
         heading={
           <>
