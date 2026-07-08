@@ -45,6 +45,7 @@ export const tokens: {
   dark: SectionTokens;
   brand: SectionTokens;
   brandSoft: SectionTokens;
+  neutral: SectionTokens;
 } = {
   layout: {
     stacked: {
@@ -90,7 +91,7 @@ export const tokens: {
     gridCellBorder: "border-border-default",
     gridNumber: "text-ink-faint",
     gridIconBg: "bg-active-bg",
-    gridTopic: "text-fg-on-brand",
+    gridTopic: "text-fg-secondary",
     gridTag: "border-border-default text-ink-faint",
     statBentoGlow:
       "bg-[radial-gradient(circle_at_50%_35%,var(--color-overlay-focus-halo),transparent_65%)]",
@@ -137,7 +138,7 @@ export const tokens: {
   },
   // ── Brand ──────────────────────────────────────────────────────────────────
   brand: {
-    section: "bg-neutral-700",
+    section: "bg-neutral-600",
     eyebrow: "text-ink-faint",
     heading: "text-fg-on-dark",
     subtext: "text-fg-tertiary",
@@ -167,7 +168,7 @@ export const tokens: {
     gridCellBorder: "border-border-on-dark",
     gridNumber: "text-ink-faint",
     gridIconBg: "bg-overlay-brand",
-    gridTopic: "text-fg-on-dark",
+    gridTopic: "text-fg-tertiary",
     gridTag: "border-border-on-dark text-ink-faint",
     statBentoGlow:
       "bg-[radial-gradient(circle_at_50%_35%,var(--color-overlay-focus-halo),transparent_65%)]",
@@ -210,6 +211,45 @@ export const tokens: {
     statBentoGlow:
       "bg-[radial-gradient(circle_at_50%_35%,var(--color-overlay-focus-halo),transparent_65%)]",
     linkPill: "bg-active-bg text-violet-300 hover:bg-violet-light",
+  },
+  neutral: {
+    section: "bg-off",
+    eyebrow: "text-zinc-40",
+    heading: "text-zinc-92",
+    subtext: "text-zinc-58",
+    listHeading: "text-zinc-58",
+    itemBorder: "border-zinc-10",
+    itemTopic: "text-zinc-92",
+    itemDesc: "text-zinc-58",
+    sideCard:
+      "bg-white border-zinc-10 shadow-[0_2px_32px_var(--color-zinc-10)]",
+    sideCardTitle: "text-zinc-92",
+    sideCardDesc: "text-zinc-58",
+    sideCardBody: "text-zinc-40",
+    sideCardDivider: "bg-zinc-10",
+    sideCardPill: "bg-white border-zinc-12 text-zinc-58",
+    sideCardLink: "text-link-default hover:text-link-hover",
+    ctaOutline:
+      "border-zinc-12 text-zinc-92 hover:border-border-brand hover:bg-active-bg",
+    card: "bg-white border-zinc-10",
+    cardHeading: "text-zinc-92",
+    itemText: "text-zinc-58",
+    callout: "border-zinc-12",
+    calloutBg: "var(--grad-brand-wash)",
+    calloutText: "text-zinc-58",
+    calloutStrong: "text-zinc-92",
+    pill: "border-zinc-12 text-zinc-58 hover:border-border-brand hover:text-violet hover:bg-active-bg",
+    cardDivider: "border-zinc-10",
+    cardLink: "text-link-default hover:text-link-hover",
+    gridCellBorder: "border-zinc-10",
+    gridNumber: "text-zinc-40",
+    gridIconBg:
+      "bg-[linear-gradient(135deg,rgba(155,92,246,0.10),rgba(6,182,212,0.10))]",
+    gridTopic: "text-zinc-92",
+    gridTag: "border-zinc-12 text-zinc-58",
+    statBentoGlow:
+      "bg-[radial-gradient(circle_at_50%_35%,var(--color-overlay-focus-halo),transparent_65%)]",
+    linkPill: "bg-active-bg text-violet hover:bg-violet-light",
   },
 };
 

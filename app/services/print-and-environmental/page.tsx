@@ -129,7 +129,7 @@ export default function page() {
       <div>
         {/* ── Section 1: Hero ── */}
         <Hero
-          theme="brandSoft"
+          theme="brand"
           heading={
             <>
               Bring Your Brand
@@ -181,7 +181,7 @@ export default function page() {
               variant: "primary",
             },
           ]}
-          cols={[1, 1]}
+          cols={[5, 3]}
           pageUrl={PAGE_URL}
           schemaItems={[
             { topic: "Business Cards" },
@@ -261,7 +261,12 @@ export default function page() {
           theme="light"
           layout="stacked"
           eyebrow="What's Included"
-          heading="What's Included in Blossom Rocket's Print & Environmental Design Services?"
+          heading={
+            <>
+              <em className="grad-text not-italic">What&apos;s included</em> in
+              Print & Environmental Design Services?
+            </>
+          }
           pageUrl={PAGE_URL}
           schemaItems={[
             { topic: "Business Cards" },

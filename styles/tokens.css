@@ -88,6 +88,15 @@
   --color-neutral-800: #1a1a2e;
   --color-neutral-900: #0d0d18;
 
+  /* ── Zinc (neutral warm) ─────────────────────────────────────────────────── */
+  --color-zinc: #18181b;
+  --color-off: #fafaf8;
+  --color-zinc-92: #1c1c1f; /* 18181b at 92% on white */
+  --color-zinc-58: #8a8a8e; /* 18181b at 58% on white */
+  --color-zinc-40: #a9a9ac; /* 18181b at 40% on white */
+  --color-zinc-12: #e2e2e3; /* 18181b at 12% on white */
+  --color-zinc-10: #e6e6e7; /* 18181b at 10% on white */
+
   /* ── Brand aliases ───────────────────────────────────────────────────────── */
   --color-violet: #7c5ce8;
   --color-violet-light: #ede9fd;

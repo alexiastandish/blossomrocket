@@ -6,14 +6,13 @@ const primaryStyles: Record<HeroTheme | SectionTheme, string> = {
   // light — brand violet, per --color-states/button primary
   light:
     "bg-[var(--color-fg-brand)] text-[var(--color-fg-on-dark)] hover:shadow-[0_12px_36px_rgba(124,92,232,0.28)]",
-  // dark — pink accent pops on near-black
   dark: "bg-[var(--color-pink-400)] text-[var(--color-fg-on-dark)] hover:bg-[#b8368e] hover:shadow-[0_12px_36px_rgba(217,70,168,0.35)]",
-  // brand — white on deep violet bg, high contrast inversion
   brand:
     "bg-[var(--color-fg-brand)] text-[var(--color-fg-on-dark)] hover:bg-[#f4f3fc] hover:shadow-[0_12px_36px_rgba(255,255,255,0.18)]",
-  // brandSoft — deep ink on light lavender bg
   brandSoft:
     "bg-[var(--color-pink-400)] text-[var(--color-fg-on-dark)] hover:bg-[#25253a] hover:shadow-[0_12px_36px_rgba(26,26,46,0.20)]",
+  neutral:
+    "bg-[var(--color-neutral-900)] text-[var(--color-fg-on-dark)] hover:bg-[#25253a] hover:shadow-[0_12px_36px_rgba(26,26,46,0.20)]",
 };
 
 export function PrimaryButton({

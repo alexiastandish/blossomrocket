@@ -32,18 +32,34 @@ function GridCell({
 }) {
   const num = String(index + 1).padStart(2, "0");
 
+  // Border logic — never apply conflicting utilities to the same element:
+  //
+  // Mobile (stacked): bottom border on every cell except the very last one.
+  // Desktop (md+):    right border on every cell except the rightmost in its row.
+  //                   bottom border on every cell except those in the last row.
+  //
+  // The ternary on the bottom-border rule ensures md:border-b and md:border-b-0
+  // are never both present on the same element (which caused Tailwind to resolve
+  // the conflict unpredictably based on stylesheet order).
+  const borderClasses = [
+    // Mobile bottom border — all non-last cells
+    !isLastItem ? `border-b ${activeTokens.gridCellBorder}` : "",
+    // Desktop right border — all non-rightmost cells
+    !isRightEdge ? `md:border-r ${activeTokens.gridCellBorder}` : "",
+    // Desktop bottom border — non-bottom-row: add it; bottom-row: explicitly clear
+    // the mobile border-b that may have been added above.
+    !isBottomRow
+      ? `md:border-b ${activeTokens.gridCellBorder}`
+      : "md:border-b-0",
+  ]
+    .filter(Boolean)
+    .join(" ");
+
   return (
     <div
       className={[
         "relative flex flex-col gap-2 p-4 pb-12 flex-1",
-        // Desktop borders (md+): right border unless last in row, bottom unless last row
-        !isRightEdge ? `md:border-r ${activeTokens.gridCellBorder}` : "",
-        !isBottomRow ? `md:border-b ${activeTokens.gridCellBorder}` : "",
-        // Mobile borders (below md): every item stacks, so bottom border unless it's the very last item
-        !isLastItem
-          ? `border-b ${activeTokens.gridCellBorder} md:border-b-0`
-          : "",
-        isBottomRow ? "md:border-b-0" : "",
+        borderClasses,
       ].join(" ")}
       itemScope
       itemType="https://schema.org/ListItem"
@@ -114,8 +130,6 @@ export default function CardGrid({
   const totalItems = items.length;
   const remainder = totalItems % columns;
 
-  // Split items into full rows (each with `columns` items) and a final
-  // partial row (if any) that should stretch to fill the full width.
   const fullRowsCount = remainder === 0 ? totalItems : totalItems - remainder;
   const fullRowItems = items.slice(0, fullRowsCount);
   const lastRowItems = remainder === 0 ? [] : items.slice(fullRowsCount);
@@ -152,7 +166,6 @@ export default function CardGrid({
         );
       })}
 
-      {/* ── Partial last row — stretches evenly across full width on desktop, stacks on mobile ── */}
       {lastRowItems.length > 0 && (
         <div className="flex flex-col md:flex-row">
           {lastRowItems.map((item, colIndex) => {

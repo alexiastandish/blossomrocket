@@ -1,6 +1,6 @@
 import FAQAccordionGrouped from "./FAQAccordionGrouped";
 import { FAQSectionProps } from "@/lib/types/faqs";
-import { sectionTokens } from "./faqSectionTokens";
+import { faqSectionTokens } from "./faqSectionTokens";
 import Script from "next/script";
 
 function buildFAQSchema(groups: FAQSectionProps["groups"], pageUrl: string) {
@@ -29,7 +29,8 @@ export default function FAQSection({
   id,
   showTopicNav = true,
 }: FAQSectionProps) {
-  const activeTokens = sectionTokens[theme];
+  const activeTokens = faqSectionTokens[theme];
+  console.log("activeTokens", activeTokens);
   const schema = buildFAQSchema(groups, pageUrl);
   const schemaId = id ?? "section";
 

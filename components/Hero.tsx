@@ -115,10 +115,10 @@ const PILL_STYLES: Record<PillTheme, string> = {
 // ─── Theme → background / text maps ──────────────────────────────────────────
 
 const HERO_BG: Record<string, string> = {
-  light: "bg-white",
-  dark: "bg-[#0d0d10]",
-  brand: "bg-[#1a1a2e]",
-  brandSoft: "bg-[#f0eeff]",
+  light: "bg-surface-page",
+  dark: "bg-surface-dark-neutral",
+  brand: "bg-neutral-600",
+  brandSoft: "bg-surface-subtle",
 };
 
 const HERO_HEADING_COLOR: Record<string, string> = {
@@ -153,7 +153,15 @@ export default function Hero({
       built through disconnected projects. They&apos;re built through systems.
     </>
   ),
-  pillItems = [],
+  pillItems = [
+    "Brand Identity",
+    "Brand Systems",
+    "Digital Design",
+    "Marketing Assets",
+    "Print",
+    "Merch",
+    "Company Stores",
+  ],
   ctas = DEFAULT_CTAS,
   orbs,
   theme = "light",

@@ -175,7 +175,7 @@ export default function page() {
       {/* ── Section 5: FAQs ── */}
       <FAQSection
         groups={faqs}
-        theme="dark"
+        theme="neutral"
         pageUrl="https://blossomrocket.studio/services/brand-identity"
       />
     </div>

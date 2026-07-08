@@ -1,16 +1,23 @@
 "use client";
 import { FAQGroup } from "@/lib/types/faqs";
-
 import { useRef, useState, useLayoutEffect, type ReactNode } from "react";
 
-interface AccordionTokens {
+export interface AccordionTokens {
+  bg: string;
+  heading: string;
   text: string;
   mutedText: string;
+  eyebrow: string;
   border: string;
   cardBg: string;
+  itemDesc: string;
   accent: string;
-  accentHex: string;
-  gradients: string[];
+  accentHex: string; // CSS var(), e.g. "var(--color-violet)" — for inline style={{}}
+  pill: string;
+  orb1: string; // CSS var(), e.g. "var(--color-violet)" — for inline style={{}}
+  orb2: string;
+  orb3: string;
+  gradients: string[]; // CSS var(), e.g. "var(--grad-brand)" — for inline style={{}}
 }
 
 interface FAQAccordionGroupedProps {
@@ -34,7 +41,6 @@ function AnimatedAnswer({
       setHeight(null);
       return;
     }
-
     setHeight(innerRef.current.scrollHeight);
   }, [open]);
 
@@ -58,8 +64,6 @@ export default function FAQAccordionGrouped({
   activeTokens,
   showTopicNav = true,
 }: FAQAccordionGroupedProps) {
-  // Track open item as `${groupId}:${itemId}` so only one answer per group
-  // is open at a time, but different groups don't interfere with each other.
   const [openKey, setOpenKey] = useState<string | null>(null);
   const [hoveredPill, setHoveredPill] = useState<string | null>(null);
 
@@ -91,17 +95,15 @@ export default function FAQAccordionGrouped({
                 onClick={() => scrollToGroup(group.id)}
                 onMouseEnter={() => setHoveredPill(group.id)}
                 onMouseLeave={() => setHoveredPill(null)}
-                className={`text-sm font-medium px-4 py-2 rounded-full border transition-all duration-250 ${
+                className={`text-sm font-medium px-4 py-2 rounded-full border transition-all duration-200 ${
                   isHovered
                     ? "text-white border-transparent -translate-y-0.5"
-                    : `${activeTokens.border} ${activeTokens.mutedText}`
+                    : activeTokens.pill
                 }`}
                 style={{
-                  background: isHovered
-                    ? "linear-gradient(135deg, #9B7FE0, #C98FB8)"
-                    : undefined,
+                  background: isHovered ? gradientFor(0) : undefined,
                   boxShadow: isHovered
-                    ? "0 8px 20px -6px rgba(123,79,224,0.25)"
+                    ? `0 8px 20px -6px color-mix(in srgb, ${activeTokens.accentHex} 30%, transparent)`
                     : undefined,
                 }}
               >
@@ -122,9 +124,7 @@ export default function FAQAccordionGrouped({
                 style={{ background: gradientFor(groupIndex) }}
               />
               <h3
-                style={{
-                  fontFamily: "'Parkinsans', sans-serif",
-                }}
+                style={{ fontFamily: "'Parkinsans', sans-serif" }}
                 className={`text-lg md:text-xl font-semibold ${activeTokens.text}`}
               >
                 {group.title}
@@ -151,7 +151,6 @@ export default function FAQAccordionGrouped({
                       itemType="https://schema.org/Question"
                       className="relative px-5 md:px-7"
                     >
-                      {/* Accent bar — animates in on the open question */}
                       <span
                         aria-hidden="true"
                         className="absolute left-0 top-0 bottom-0 w-[3px] origin-top transition-transform duration-300"
@@ -170,7 +169,7 @@ export default function FAQAccordionGrouped({
                       >
                         <span
                           itemProp="name"
-                          className={`font-medium pr-4 transition-colors duration-200 group-hover:${activeTokens.accent} ${activeTokens.text}`}
+                          className={`font-medium pr-4 transition-colors duration-200 ${activeTokens.text}`}
                         >
                           {item.question}
                         </span>
@@ -180,7 +179,7 @@ export default function FAQAccordionGrouped({
                           style={{
                             background: open
                               ? gradientFor(groupIndex)
-                              : "rgba(123,79,224,0.08)",
+                              : `color-mix(in srgb, ${activeTokens.accentHex} 10%, transparent)`,
                             color: open ? "white" : activeTokens.accentHex,
                             transform: open ? "rotate(135deg)" : "rotate(0deg)",
                           }}
@@ -206,7 +205,7 @@ export default function FAQAccordionGrouped({
                           itemScope
                           itemProp="acceptedAnswer"
                           itemType="https://schema.org/Answer"
-                          className={`pb-6 text-sm leading-relaxed max-w-2xl ${activeTokens.mutedText}`}
+                          className={`pb-6 text-sm leading-relaxed max-w-2xl ${activeTokens.itemDesc}`}
                         >
                           <p itemProp="text">{item.answer}</p>
                         </div>

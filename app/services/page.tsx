@@ -62,7 +62,7 @@ export default function Services() {
         pageUrl="https://blossomrocket.studio/services"
         layout="inline"
         id="beyond-traditional-creative-services"
-        theme="light"
+        theme="neutral"
         eyebrow="Beyond Traditional Creative Services"
         heading={
           <>
@@ -111,6 +111,7 @@ export default function Services() {
 
       {/* ── Brand Identity ── */}
       <SectionLayout
+        stickyRight={true}
         id="brand-identity"
         theme="brand"
         cols={[5, 3]}
@@ -149,17 +150,13 @@ export default function Services() {
             { topic: "Iconography" },
           ]}
         />
-        <CardCallout
-          heading="A strong Brand Identity"
-          body="helps every customer touchpoint feel connected, recognizable, and aligned."
-        />
       </SectionLayout>
 
       {/* ── Brand Systems ── */}
       <SectionLayout
         id="brand-systems"
         theme="brandSoft"
-        cols={[5, 3]}
+        cols={[1, 1]}
         mobileOrder="left-first"
         eyebrow="Brand Systems"
         heading={
@@ -269,7 +266,7 @@ export default function Services() {
       <SectionLayout
         id="marketing-assets"
         theme="brand"
-        cols={[5, 3]}
+        cols={[1, 1]}
         mobileOrder="left-first"
         eyebrow="Marketing Assets"
         heading={
@@ -280,7 +277,7 @@ export default function Services() {
             </em>
           </>
         }
-        subtext="Marketing Assets help businesses communicate across social media, events, sales initiatives, email marketing, advertising, and customer communications. Blossom Rocket develops creative assets that align with Brand Identity and Brand System standards."
+        subtext="Marketing Assets help businesses communicate across social media, events, sales initiatives, email marketing, advertising, and customer communications. Blossom Rocket creates consistent marketing assets that help businesses build stronger recognition across every stage of the customer journey."
         ctas={[
           {
             label: "Explore Marketing Assets with Blossom Rocket",
@@ -324,7 +321,7 @@ export default function Services() {
       <SectionLayout
         id="print-and-environmental-design"
         theme="brand"
-        cols={[1, 1]}
+        cols={[3, 5]}
         stickyRight={false}
         mobileOrder="left-first"
         desktopOrder="maintain"

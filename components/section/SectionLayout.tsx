@@ -100,11 +100,7 @@ export default function SectionLayout({
 
       <section
         id={id}
-        className={[
-          "relative overflow-hidden",
-          activeTheme.section,
-          className,
-        ].join(" ")}
+        className={["relative", activeTheme.section, className].join(" ")}
         style={{ padding: "clamp(80px,11vw,160px) clamp(32px,7vw,100px)" }}
         aria-labelledby={`${schemaId}-heading`}
         itemScope

@@ -1,4 +1,4 @@
-export type SectionTheme = "light" | "dark" | "brand" | "brandSoft";
+import { SectionTheme } from "./section";
 
 export interface FAQItem {
   /** Unique id, used for anchor links + schema @id (e.g. "services-what-services") */

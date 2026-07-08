@@ -1,4 +1,4 @@
-export type SectionTheme = "light" | "dark" | "brand" | "brandSoft";
+export type SectionTheme = "light" | "dark" | "brand" | "brandSoft" | "neutral";
 
 export type SectionLayoutProps = {
   heading: React.ReactNode;
