@@ -30,7 +30,6 @@ export default function FAQSection({
   showTopicNav = true,
 }: FAQSectionProps) {
   const activeTokens = faqSectionTokens[theme];
-  console.log("activeTokens", activeTokens);
   const schema = buildFAQSchema(groups, pageUrl);
   const schemaId = id ?? "section";
 

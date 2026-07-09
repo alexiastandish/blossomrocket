@@ -287,7 +287,7 @@ export default function WorkPage() {
             className="rv font-display font-semibold leading-[1.0] tracking-[-0.03em] mb-6 text-fg-primary"
             style={{ fontSize: "clamp(48px,7vw,88px)" }}
           >
-            Work That Speaks
+            Blossom Rocket Brings
             <br />
             <em
               className="not-italic"
@@ -298,7 +298,7 @@ export default function WorkPage() {
                 backgroundClip: "text",
               }}
             >
-              For Itself.
+              Your Brand to Life.
             </em>
           </h1>
           <p

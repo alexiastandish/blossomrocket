@@ -28,20 +28,21 @@ const services: NavLink[] = [
   { href: "/services/company-stores", label: "Company Stores" },
 ];
 
-const resources: NavLink[] = [
-  { href: "/resources/blog", label: "Blog" },
-  { href: "/resources/store-systems", label: "Live Store Systems" },
-];
+// const resources: NavLink[] = [
+//   { href: "/resources/blog", label: "Blog" },
+//   { href: "/resources/store-systems", label: "Live Store Systems" },
+// ];
 
 const dropdownLinks: Record<string, NavLink[]> = {
   Services: services,
-  Resources: resources,
+  // Resources: resources,
 };
 
 const links: NavLink[] = [
   { href: "/services", label: "Services", dropdown: true },
   { href: "/work", label: "Work" },
-  { href: "/resources", label: "Resources", dropdown: true },
+  { href: "/blog", label: "Blog" },
+  // { href: "/resources", label: "Resources", dropdown: true },
 ];
 
 const unscrolledTokens: Record<
@@ -57,9 +58,9 @@ const unscrolledTokens: Record<
   }
 > = {
   light: {
-    linkIdle: "text-ink-60",
-    linkActive: "text-ink",
-    linkHover: "text-ink",
+    linkIdle: "text-neutral-400",
+    linkActive: "text-neutral-600",
+    linkHover: "hover:text-neutral-900",
     ctaBg: "bg-[#18181b]",
     ctaText: "text-white",
     ctaHover: "hover:opacity-85",
@@ -68,7 +69,7 @@ const unscrolledTokens: Record<
   dark: {
     linkIdle: "text-[rgba(255,255,255,0.60)]",
     linkActive: "text-white",
-    linkHover: "text-white",
+    linkHover: "hover:text-white",
     ctaBg: "bg-white",
     ctaText: "text-[#18181b]",
     ctaHover: "hover:opacity-90",
@@ -79,9 +80,9 @@ const unscrolledTokens: Record<
 const scrolledTokens = {
   navBg:
     "bg-[rgba(250,250,248,0.92)] backdrop-blur-[18px] border-[rgba(24,24,27,0.10)]",
-  linkIdle: "text-ink-60",
-  linkActive: "text-ink",
-  linkHover: "text-ink",
+  linkIdle: "text-neutral-400",
+  linkActive: "text-neutral-600",
+  linkHover: "hover:text-neutral-900",
   ctaBg: "bg-[#18181b]",
   ctaText: "text-white",
   ctaHover: "hover:opacity-85",
@@ -131,7 +132,7 @@ export default function Nav() {
         {links.map(({ href, label, dropdown = false }: NavLink) => {
           const isFirst = href === "/services" || href === "/resources";
           const menuIsOpen = dropdownOpen[label.toLowerCase()];
-
+          const isActive = pathname === href || pathname.startsWith(`${href}/`);
           return dropdown ? (
             <li
               key={href}
@@ -151,7 +152,7 @@ export default function Nav() {
             >
               <Link
                 href={href}
-                className={`flex items-center gap-1.5 text-[13.5px] font-medium tracking-[0.01em] transition-colors duration-200 hover:${activeTokens.linkHover} ${
+                className={`flex items-center gap-1.5 text-[13.5px] font-medium tracking-[0.01em] transition-colors duration-200 ${isActive ? activeTokens.linkActive : activeTokens.linkIdle} hover:${activeTokens.linkHover} hover:cursor-pointer ${
                   menuIsOpen ? activeTokens.linkActive : activeTokens.linkIdle
                 }`}
               >
@@ -227,7 +228,7 @@ export default function Nav() {
             <li key={href} className="flex items-center">
               <Link
                 href={href}
-                className={`text-[13.5px] font-medium tracking-[0.01em] transition-colors duration-200 hover:${activeTokens.linkHover}  ${activeTokens.linkIdle}`}
+                className={`text-[13.5px] font-medium tracking-[0.01em] transition-colors duration-200  ${isActive ? activeTokens.linkActive : activeTokens.linkIdle}  ${activeTokens.linkHover}  hover:cursor-pointer `}
               >
                 {label}
               </Link>
