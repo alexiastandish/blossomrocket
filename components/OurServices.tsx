@@ -323,8 +323,7 @@ export default function OurServices() {
   return (
     <section
       id="services"
-      className="bg-[#fafaf8]"
-      style={{ padding: "clamp(80px,11vw,160px) clamp(20px,5vw,60px)" }}
+      className="section bg-(--color-off)"
       aria-labelledby="svc-h"
     >
       <div className="flex justify-between items-end flex-wrap gap-7 mb-[52px]">
@@ -342,8 +341,8 @@ export default function OurServices() {
           </h2>
         </div>
         <p
-          className="rv d1 text-[rgba(24,24,27,0.58)] leading-[1.8]"
-          style={{ fontSize: "clamp(15px,1.4vw,18px)", maxWidth: "340px" }}
+          className="rv d1 text-[rgba(24,24,27,0.58)] leading-[1.8] subtext"
+          style={{ maxWidth: "340px" }}
         >
           Blossom Rocket helps businesses create a complete brand ecosystem that
           scales across digital and physical experiences.
@@ -393,15 +392,14 @@ function ServiceCard({ svc, delay }: { svc: Service; delay: number }) {
       </div>
 
       <h3
-        className="font-semibold mb-3 leading-[1.2] text-[rgba(24,24,27,0.92)]"
-        style={{ fontFamily: "'Parkinsans', sans-serif", fontSize: "22px" }}
+        className="font-semibold mb-3 leading-[1.2] text-fg-primary h5 font-display"
         itemProp="name"
       >
         {svc.title}
       </h3>
 
       <p
-        className="text-[14px] leading-[1.75] mb-5 flex-1 text-[rgba(24,24,27,0.58)]"
+        className="text-[14px] leading-[1.75] mb-5 flex-1 text-zinc-500"
         itemProp="description"
       >
         {svc.desc}

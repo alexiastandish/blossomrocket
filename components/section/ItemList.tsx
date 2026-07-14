@@ -52,7 +52,7 @@ export default function SectionItemList({
 
   const mainContent = (
     <div
-      className="section-col-grid grid items-start gap-[clamp(40px,7vw,100px)] relative z-10"
+      className="section section-col-grid grid items-start gap-[clamp(40px,7vw,100px)] relative z-10"
       style={
         {
           "--section-cols": `${5}fr ${3}fr`,
@@ -156,7 +156,6 @@ export default function SectionItemList({
           activeTheme.section,
           className,
         ].join(" ")}
-        style={{ padding: "clamp(80px,11vw,160px) clamp(20px,5vw,60px)" }}
         aria-labelledby={heading ? `${schemaId}-heading` : undefined}
         itemScope
         itemType="https://schema.org/ItemList"

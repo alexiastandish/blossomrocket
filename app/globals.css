@@ -7,4 +7,3 @@
 @import "../styles/utilities.css";
 @import "../styles/components.css";
 @source "../lib/**/*.{ts,tsx}";
-@source "../components/**/*.{ts,tsx}";

@@ -1,11 +1,12 @@
 export type WorkItem = {
   src: string;
   alt: string;
-  tag: string;
+  tags: string[];
   title: string;
   description: string;
   client: string;
   href: string;
+  aspectRatio?: string;
 };
 
 export type RowLayout =

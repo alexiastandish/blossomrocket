@@ -47,8 +47,8 @@ export default function ContactSection() {
       </h2>
 
       <p
-        className="relative z-10 text-[rgba(255,255,255,0.45)] leading-[1.8] mx-auto mb-[52px]"
-        style={{ fontSize: "clamp(15px,1.5vw,18px)", maxWidth: "540px" }}
+        className="relative z-10 text-[rgba(255,255,255,0.45)] leading-[1.8] mx-auto mb-[52px] subtext"
+        style={{ maxWidth: "540px" }}
       >
         Create a brand that works consistently across websites, marketing
         materials, promotional products, apparel, signage, onboarding kits,

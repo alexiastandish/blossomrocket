@@ -54,6 +54,16 @@ const sideCardTheme: Record<
     sideCardBody: "text-[#8480ae]",
     sideCardLink: "text-[#7c5ce8] hover:text-[#d946a8]",
   },
+  neutral: {
+    sideCardTitle: "text-[#1a1a2e]",
+    sideCardDesc: "text-[#4a4a6a]",
+    sideCardBackground:
+      "bg-white border-[rgba(124,92,232,0.14)] shadow-[0_2px_32px_rgba(124,92,232,0.08)]",
+    sideCardPill: "border-[rgba(124,92,232,0.18)] text-[#4a4a6a] bg-[#f4f3fc]",
+    sideCardDivider: "bg-[rgba(124,92,232,0.10)]",
+    sideCardBody: "text-[#8480ae]",
+    sideCardLink: "text-[#7c5ce8] hover:text-[#d946a8]",
+  },
 };
 
 export const SideCard = ({

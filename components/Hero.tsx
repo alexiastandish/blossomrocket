@@ -183,11 +183,10 @@ export default function Hero({
     <header
       id={id}
       className={[
-        "relative min-h-[100svh] flex flex-col items-center justify-center text-center overflow-hidden",
+        "section relative min-h-[100svh] flex flex-col items-center justify-center text-center overflow-hidden",
         bgClass,
         className,
       ].join(" ")}
-      style={{ padding: "calc(68px + 60px) clamp(20px,5vw,60px) 80px" }}
       role="banner"
     >
       {/* ── Ambient orbs ── */}
@@ -225,10 +224,9 @@ export default function Hero({
         {/* ── Body ── */}
         <p
           className={[
-            "anim-fade-up anim-delay-3 relative z-10 leading-[1.72] mx-auto mb-12 max-w-6xl",
+            "subtext anim-fade-up anim-delay-3 relative z-10 leading-[1.72] mx-auto mb-12 max-w-6xl",
             bodyTextColor,
           ].join(" ")}
-          style={{ fontSize: "clamp(15px,1.8vw,19px)" }}
         >
           {body}
         </p>

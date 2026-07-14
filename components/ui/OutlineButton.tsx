@@ -14,6 +14,8 @@ const outlineStyles: Record<HeroTheme | SectionTheme, string> = {
   // brandSoft — violet border on light lavender
   brandSoft:
     "border-[rgba(124,92,232,0.30)] text-[#1a1a2e] hover:border-[#7c5ce8] hover:text-[#7c5ce8] hover:bg-[rgba(124,92,232,0.06)]",
+  neutral:
+    "border-[rgba(124,92,232,0.30)] text-[#1a1a2e] hover:border-[#7c5ce8] hover:text-[#7c5ce8] hover:bg-[rgba(124,92,232,0.06)]",
 };
 
 export function OutlineButton({

@@ -64,12 +64,10 @@ export default function FrameworkSection() {
   return (
     <section
       id="framework"
-      className="bg-[#fafaf8]"
-      style={{ padding: "clamp(80px,11vw,160px) clamp(20px,5vw,60px)" }}
+      className="section bg-[var(--color-off)]"
       aria-labelledby="fw-h"
     >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-[clamp(40px,7vw,80px)] items-start">
-        {/* Left — steps */}
         <div>
           <SectionLabel text="The Blossom Rocket Framework" />
           <h2
@@ -81,8 +79,8 @@ export default function FrameworkSection() {
             <em className="grad-text not-italic">Complete Consistency.</em>
           </h2>
           <p
-            className="rv d1 text-[rgba(24,24,27,0.58)] leading-[1.8] mb-[52px]"
-            style={{ fontSize: "clamp(15px,1.4vw,18px)", maxWidth: "560px" }}
+            className="rv d1 text-[rgba(24,24,27,0.58)] leading-[1.8] mb-[22px] subtext"
+            style={{ maxWidth: "560px" }}
           >
             A single source of truth for your brand that makes future growth
             easier to manage.
@@ -108,15 +106,11 @@ export default function FrameworkSection() {
                     {step.label}
                   </div>
                   <div
-                    className={`font-semibold mb-1.5 leading-[1.2] ${step.isResult ? "grad-text" : ""}`}
-                    style={{
-                      fontFamily: "'Parkinsans', sans-serif",
-                      fontSize: "22px",
-                    }}
+                    className={`font-semibold mb-1.5 h5 font-display leading-[1.2] ${step.isResult ? "grad-text" : ""}`}
                   >
                     {step.title}
                   </div>
-                  <div className="text-[14px] text-[rgba(24,24,27,0.58)] leading-[1.75]">
+                  <div className="body-sm text-zinc-500 leading-[1.75]">
                     {step.desc}
                   </div>
                 </div>
@@ -125,24 +119,18 @@ export default function FrameworkSection() {
           </div>
         </div>
 
-        {/* Right — who we work with + resources */}
-        <div className="rv d3 lg:sticky" style={{ top: "calc(68px + 20px)" }}>
+        {/* Right — sticky, no rv/transform on this element or its direct parent */}
+        <div className="lg:sticky" style={{ top: "calc(68px + 20px)" }}>
           <div className="bg-white border border-[rgba(24,24,27,0.10)] rounded-3xl p-9">
-            <h3
-              className="font-semibold mb-5 leading-[1.2]"
-              style={{
-                fontFamily: "'Parkinsans', sans-serif",
-                fontSize: "26px",
-              }}
-            >
+            <h3 className="rv d3 font-semibold mb-5 leading-[1.2] font-display h3">
               Who We Work With
             </h3>
-            <p className="text-[14px] text-[rgba(24,24,27,0.58)] leading-[1.75] mb-5">
+            <p className="rv d3 text-[14px] text-[rgba(24,24,27,0.58)] leading-[1.75] mb-5">
               Blossom Rocket partners with any organization looking to create a
               more consistent brand experience across digital and physical
               channels.
             </p>
-            <div className="flex flex-wrap gap-2.5 mb-7">
+            <div className="rv d3 flex flex-wrap gap-2.5 mb-7">
               {whoWeWorkWith.map((tag) => (
                 <span
                   key={tag}
@@ -152,7 +140,7 @@ export default function FrameworkSection() {
                 </span>
               ))}
             </div>
-            <div className="pt-6 border-t border-[rgba(24,24,27,0.10)]">
+            <div className="rv d3 pt-6 border-t border-[rgba(24,24,27,0.10)]">
               <p className="text-[13px] text-[rgba(24,24,27,0.58)] leading-[1.7] mb-4">
                 Explore resources covering brand identity, design systems,
                 website design, promotional products, company stores, and brand

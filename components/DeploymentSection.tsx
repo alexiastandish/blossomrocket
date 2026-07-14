@@ -150,8 +150,8 @@ function DeployCard({
         {item.icon}
       </div>
       <h3
-        className="font-semibold mb-2.5 leading-[1.2]"
-        style={{ fontFamily: "'Parkinsans', sans-serif", fontSize: "20px" }}
+        className="font-semibold mb-2.5 leading-[1.2] h5"
+        style={{ fontFamily: "'Parkinsans', sans-serif" }}
       >
         {item.title}
       </h3>
@@ -166,8 +166,7 @@ export default function DeploymentSection() {
   return (
     <section
       id="deployment"
-      className="bg-white"
-      style={{ padding: "clamp(80px,11vw,160px) clamp(20px,5vw,60px)" }}
+      className="section bg-white"
       aria-labelledby="deploy-h"
     >
       <SectionLabel text="Brand Deployment" />
@@ -180,8 +179,8 @@ export default function DeploymentSection() {
         Stop at Your <em className="grad-text not-italic">Website.</em>
       </h2>
       <p
-        className="rv d1 text-[rgba(24,24,27,0.58)] leading-[1.8] mb-[52px]"
-        style={{ fontSize: "clamp(15px,1.4vw,18px)", maxWidth: "560px" }}
+        className="rv d1 text-[rgba(24,24,27,0.58)] leading-[1.8] mb-[52px] subtext"
+        style={{ maxWidth: "560px" }}
       >
         A strong brand should feel recognizable whether someone encounters it
         online, in person, at an event, or inside your organization.

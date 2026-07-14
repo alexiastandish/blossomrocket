@@ -10,13 +10,13 @@
   html {
     font-size: 16px;
     scroll-behavior: smooth;
+    overflow-x: clip;
   }
 
   body {
     font-family: var(--font-body);
     background: var(--color-off);
     color: var(--color-ink);
-    overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
   }
 

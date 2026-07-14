@@ -12,6 +12,7 @@ import marqueeItems from "@/data/marquees/homepage.json";
 import FAQSection from "@/components/faqs/FAQSection";
 import homePageFAQs from "@/data/faqs/home.json";
 import { SectionLayout } from "@/components/section";
+import HomeHeroVideo from "@/components/HomeHeroVideo";
 
 export default function Home() {
   return (
@@ -58,7 +59,9 @@ export default function Home() {
         ]}
         pageUrl="https://blossomrocket.studio/services#brand-systems"
       >
-        <div></div>
+        <div>
+          <HomeHeroVideo />
+        </div>
       </SectionLayout>
 
       <FrameworkSection />

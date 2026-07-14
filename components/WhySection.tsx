@@ -12,8 +12,7 @@ export default function WhySection() {
   return (
     <section
       id="why"
-      className="bg-[#18181b] text-white"
-      style={{ padding: "clamp(80px,11vw,160px) clamp(20px,5vw,60px)" }}
+      className="section bg-(--color-surface-dark-neutral) text-white"
       aria-labelledby="why-h"
     >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-[clamp(40px,7vw,100px)] items-start">
@@ -28,8 +27,8 @@ export default function WhySection() {
             <em className="grad-text not-italic">independently.</em>
           </h2>
           <p
-            className="text-[rgba(255,255,255,0.45)] leading-[1.8] mb-8"
-            style={{ fontSize: "clamp(15px,1.4vw,18px)", maxWidth: "560px" }}
+            className="text-[rgba(255,255,255,0.45)] leading-[1.8] mb-8 subtext"
+            style={{ maxWidth: "560px" }}
           >
             Over time, the brand begins to fragment. Logos become inconsistent.
             Colors change. Merchandise looks disconnected. Marketing materials
@@ -40,13 +39,7 @@ export default function WhySection() {
         {/* Right */}
         <div className="rv d2 flex flex-col gap-4">
           <div className="bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.08)] rounded-2xl p-8">
-            <h3
-              className="font-semibold mb-5 leading-[1.2]"
-              style={{
-                fontFamily: "'Parkinsans', sans-serif",
-                fontSize: "28px",
-              }}
-            >
+            <h3 className="font-semibold mb-5 leading-[1.2] h3 font-display">
               The result is a brand that no longer feels like one company.
             </h3>
             <div className="flex flex-col">

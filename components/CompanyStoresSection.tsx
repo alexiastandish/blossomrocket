@@ -35,8 +35,7 @@ export default function CompanyStoresSection() {
   return (
     <section
       id="stores"
-      className="bg-[#18181b] text-white"
-      style={{ padding: "clamp(80px,11vw,160px) clamp(20px,5vw,60px)" }}
+      className="section bg-(--color-surface-dark-neutral) text-white"
       aria-labelledby="stores-h"
     >
       <SectionLabel text="Company Stores" />
@@ -49,30 +48,24 @@ export default function CompanyStoresSection() {
             What is a <em className="grad-text not-italic">Company Store?</em>
           </h2>
           <p
-            className="rv d1 text-[rgba(255,255,255,0.45)] leading-[1.8] mb-[52px]"
-            style={{ fontSize: "clamp(15px,1.4vw,18px)", maxWidth: "560px" }}
+            className="rv d1 text-[rgba(255,255,255,0.45)] leading-[1.8] mb-[52px] subtext"
+            style={{ maxWidth: "560px" }}
           >
             A Company Store is a centralized platform that provides access to
             approved branded products and materials.
           </p>
           <div className="rv d2">
             <div className="bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.08)] rounded-2xl p-9">
-              <h3
-                className="font-semibold mb-4 leading-[1.2]"
-                style={{
-                  fontFamily: "'Parkinsans', sans-serif",
-                  fontSize: "26px",
-                }}
-              >
+              <h3 className="h3 font-display font-semibold text-fg-on-dark leading-[1.2] tracking-[-0.02em] mb-2">
                 The result is a brand experience that remains consistent no
                 matter who places the order.
               </h3>
-              <p className="text-[14px] text-[rgba(255,255,255,0.5)] leading-[1.75] mb-4">
+              <p className="body text-[rgba(255,255,255,0.5)] leading-[1.75] mb-4">
                 Company Stores remove the friction between brand standards and
                 execution. Teams get access to what they need. Brand managers
                 get peace of mind. Customers get consistency.
               </p>
-              <p className="text-[14px] text-[rgba(255,255,255,0.5)] leading-[1.75] mb-6">
+              <p className="body text-[rgba(255,255,255,0.5)] leading-[1.75] mb-6">
                 Blossom Rocket launches Store Systems that are easy to use,
                 brand-compliant by design, and scalable as your organization
                 grows.

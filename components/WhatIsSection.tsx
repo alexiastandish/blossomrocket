@@ -1,28 +1,13 @@
 import SectionLabel from "./SectionLabel";
 
-// const touchpoints = [
-//   "Websites",
-//   "Social Media",
-//   "Marketing Campaigns",
-//   "Sales Materials",
-//   "Print Collateral",
-//   "Promotional Products",
-//   "Apparel & Signage",
-//   "Tradeshow Experiences",
-//   "Packaging",
-//   "Company Stores",
-// ];
-
 export default function WhatIsSection() {
   return (
     <section
       id="whatis"
-      className="bg-white"
-      style={{ padding: "clamp(80px,11vw,160px) clamp(20px,5vw,60px)" }}
+      className="section bg-white"
       aria-labelledby="whatis-h"
     >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-[clamp(40px,7vw,100px)] items-start">
-        {/* Left */}
         <div className="rv">
           <SectionLabel text="What Is a Brand System?" />
           <h2
@@ -33,61 +18,39 @@ export default function WhatIsSection() {
             <em className="grad-text not-italic">Consistent Brand.</em>
           </h2>
           <p
-            className="rv d1 text-[rgba(24,24,27,0.58)] leading-[1.8] mb-7"
-            style={{ fontSize: "clamp(15px,1.4vw,18px)", maxWidth: "560px" }}
+            className="rv d1 text-[rgba(24,24,27,0.58)] leading-[1.8] mb-7 subtext"
+            style={{ maxWidth: "560px" }}
           >
             A Brand System is a centralized framework that defines how a company
             presents itself across every customer, employee, and marketing
             touchpoint. It creates consistency across all channels — digital and
             physical.
           </p>
-          {/* <div className="rv d2 grid grid-cols-2 gap-2.5">
-            {touchpoints.map((tp) => (
-              <div
-                key={tp}
-                className="flex items-center gap-2.5 px-4 py-3 rounded-xl border border-[rgba(24,24,27,0.10)] text-[13px] font-medium transition-all duration-300 hover:border-[rgba(99,102,241,0.3)] hover:bg-[rgba(99,102,241,0.04)]"
-              >
-                <span
-                  className="w-1.5 h-1.5 rounded-full flex-shrink-0"
-                  style={{
-                    background: "linear-gradient(90deg,#9b5cf6,#06b6d4)",
-                  }}
-                />
-                {tp}
-              </div>
-            ))}
-          </div> */}
         </div>
 
         {/* Right — insight card */}
         <div className="rv d2">
-          <div className="relative bg-[#fafaf8] border border-[rgba(24,24,27,0.10)] rounded-3xl p-9 overflow-hidden">
+          <div className="relative bg-(--color-off) border border-[rgba(24,24,27,0.10)] rounded-3xl p-9 overflow-hidden">
             <div className="absolute top-0 left-0 right-0 h-[3px] grad-bg" />
             <p className="text-[17px] font-semibold leading-[1.5] mb-1">
               Most companies have logos. Few companies have —
             </p>
 
             <span
-              className="grad-text font-semibold block mb-4"
+              className="grad-text font-semibold block mb-4 h2"
               style={{
-                fontFamily: "'Parkinsans', sans-serif",
-                fontSize: "clamp(36px,4.5vw,58px)",
                 lineHeight: "1.2",
               }}
             >
               scalable systems.
             </span>
 
-            <p className="text-[13px] text-[rgba(24,24,27,0.58)] leading-[1.7] mb-3">
+            <p className="body-sm text-zinc-500 leading-[1.7] mb-3">
               Many organizations invest in logos, websites, marketing campaigns,
-              promotional products, and print materials independently.
-            </p>
-            <p className="text-[13px] text-[rgba(24,24,27,0.58)] leading-[1.7] mb-3">
-              As a result, brand experiences often become fragmented.
-            </p>
-            <p className="text-[13px] text-[rgba(24,24,27,0.58)] leading-[1.7]">
-              Blossom Rocket solves this problem by helping businesses build and
-              deploy their brand across every touchpoint.
+              promotional products, and print materials independently. As a
+              result, brand experiences often become fragmented. Blossom Rocket
+              solves this problem by helping businesses build and deploy their
+              brand across every touchpoint.
             </p>
 
             <div className="mt-6 pt-6 border-t border-[rgba(24,24,27,0.10)]">

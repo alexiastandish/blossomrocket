@@ -37,11 +37,10 @@ export default function FAQSection({
     <section
       id={id}
       className={[
-        "relative overflow-hidden",
+        "section relative overflow-hidden",
         activeTokens.bg,
         activeTokens.text,
       ].join(" ")}
-      style={{ padding: "clamp(80px,11vw,160px) clamp(20px,5vw,60px)" }}
       aria-labelledby={`${schemaId}-heading`}
       itemScope
       itemType="https://schema.org/FAQPage"

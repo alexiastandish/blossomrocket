@@ -100,8 +100,9 @@ export default function SectionLayout({
 
       <section
         id={id}
-        className={["relative", activeTheme.section, className].join(" ")}
-        style={{ padding: "clamp(80px,11vw,160px) clamp(32px,7vw,100px)" }}
+        className={["section relative", activeTheme.section, className].join(
+          " ",
+        )}
         aria-labelledby={`${schemaId}-heading`}
         itemScope
         itemType="https://schema.org/ItemList"
@@ -122,12 +123,7 @@ export default function SectionLayout({
                 {heading}
               </h2>
               {subtext && (
-                <p
-                  className={`leading-[1.8] mb-2 ${activeTheme.subtext}`}
-                  style={{
-                    fontSize: "clamp(15px,1.4vw,18px)",
-                  }}
-                >
+                <p className={`body leading-[1.8] mb-2 ${activeTheme.subtext}`}>
                   {subtext}
                 </p>
               )}
@@ -159,9 +155,8 @@ export default function SectionLayout({
               </h2>
               {subtext && (
                 <p
-                  className={`leading-[1.8] mb-8 ${activeTheme.subtext}`}
+                  className={`body leading-[1.8] mb-8 ${activeTheme.subtext}`}
                   style={{
-                    fontSize: "clamp(15px,1.4vw,18px)",
                     maxWidth: "560px",
                   }}
                 >

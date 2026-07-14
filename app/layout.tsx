@@ -120,7 +120,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="bg-[#fafaf8] text-[#18181b] overflow-x-hidden antialiased flex flex-col min-h-screen">
+      <body className="bg-[#fafaf8] text-[#18181b]  antialiased flex flex-col min-h-screen">
         <Cursor />
         <ScrollReveal />
         <Nav />
