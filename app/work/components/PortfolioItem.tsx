@@ -11,8 +11,6 @@ export function PortfolioItem({
   full: boolean;
 }) {
   const video = isVideoSrc(item.src);
-  console.log({ item });
-  console.log(item?.aspectRatio);
 
   return (
     <Link
