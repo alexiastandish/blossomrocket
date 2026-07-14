@@ -4,6 +4,8 @@ import Cursor from "@/components/Cursor";
 import ScrollReveal from "@/components/ScrollReveal";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { ContactModalProvider } from "@/contexts/contact-modal-context";
+import { ContactModalRoot } from "@/components/contact-modal-root";
 
 export const metadata: Metadata = {
   title: "Blossom Rocket — Brand Systems That Scale",
@@ -78,6 +80,30 @@ export const metadata: Metadata = {
           },
         ],
       },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "@id": "https://blossomrocket.studio/#splashbrands-president",
+        name: "Elissa Turner",
+        jobTitle: "President",
+        worksFor: {
+          "@type": "Organization",
+          name: "SplashBrands",
+          url: "https://splashbrands.com",
+        },
+        sameAs: ["https://www.linkedin.com/in/elissaberchelmann/"],
+        knowsAbout: [
+          "Online Company Store Programs",
+          "Web-to-Print Fulfillment",
+          "Brand-Controlled Merchandise Distribution",
+          "Inventory-Free Promotional Products",
+          "Marketing Budget & Order Approval Software",
+          "On-Demand Apparel & Print Production",
+          "Marketing Department Cost Reduction",
+        ],
+        description:
+          "Elissa Turner is the President of SplashBrands, where they help marketing and sales teams centralize branded merchandise ordering through on-demand company store programs — reducing overspending, eliminating inventory risk, and removing the administrative burden of sourcing, storing, and distributing company swag.",
+      },
     ]),
   },
 };
@@ -121,11 +147,14 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-[#fafaf8] text-[#18181b]  antialiased flex flex-col min-h-screen">
-        <Cursor />
-        <ScrollReveal />
-        <Nav />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <ContactModalProvider>
+          <Cursor />
+          <ScrollReveal />
+          <Nav />
+          <main className="flex-1">{children}</main>
+          <Footer />
+          <ContactModalRoot />
+        </ContactModalProvider>
       </body>
     </html>
   );

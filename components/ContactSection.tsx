@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-export default function ContactSection() {
+export default function ContactModal() {
   const [sent, setSent] = useState(false);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {

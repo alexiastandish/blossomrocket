@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { pageThemes } from "@/lib/utils/pageThemes";
+import { useContactModal } from "@/contexts/contact-modal-context";
 
 type NavTheme = "light" | "dark";
 
@@ -95,6 +96,8 @@ export default function Nav() {
   const [scrolled, setScrolled] = useState<boolean>(false);
   const [dropdownOpen, setDropdownOpen] = useState<DropdownMenus>(dropdowns);
 
+  const { open } = useContactModal();
+
   const pathname = usePathname();
   const navTheme: NavTheme = pageThemes[pathname] ?? "light";
   const activeTokens = scrolled ? scrolledTokens : unscrolledTokens[navTheme];
@@ -152,7 +155,7 @@ export default function Nav() {
             >
               <Link
                 href={href}
-                className={`flex items-center gap-1.5 text-[13.5px] font-medium tracking-[0.01em] transition-colors duration-200 ${isActive ? activeTokens.linkActive : activeTokens.linkIdle} hover:${activeTokens.linkHover} hover:cursor-pointer ${
+                className={`flex items-center gap-1.5 body-sm font-medium tracking-[0.01em] transition-colors duration-200 ${isActive ? activeTokens.linkActive : activeTokens.linkIdle} hover:${activeTokens.linkHover} hover:cursor-pointer ${
                   menuIsOpen ? activeTokens.linkActive : activeTokens.linkIdle
                 }`}
               >
@@ -208,7 +211,7 @@ export default function Nav() {
                       <li key={svcHref}>
                         <Link
                           href={svcHref}
-                          className="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl text-[13px] font-medium text-[rgba(24,24,27,0.65)] hover:text-ink hover:bg-off transition-colors duration-150"
+                          className="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl body-sm font-medium text-[rgba(24,24,27,0.65)] hover:text-ink hover:bg-off transition-colors duration-150"
                           onClick={() =>
                             setDropdownOpen((prev) => ({
                               ...prev,
@@ -228,7 +231,7 @@ export default function Nav() {
             <li key={href} className="flex items-center">
               <Link
                 href={href}
-                className={`text-[13.5px] font-medium tracking-[0.01em] transition-colors duration-200  ${isActive ? activeTokens.linkActive : activeTokens.linkIdle}  ${activeTokens.linkHover}  hover:cursor-pointer `}
+                className={`body-sm font-medium tracking-[0.01em] transition-colors duration-200  ${isActive ? activeTokens.linkActive : activeTokens.linkIdle}  ${activeTokens.linkHover}  hover:cursor-pointer `}
               >
                 {label}
               </Link>
@@ -237,12 +240,13 @@ export default function Nav() {
         })}
       </ul>
 
-      <a
-        href="/contact"
-        className={`text-[13px] font-semibold tracking-[0.02em] px-[22px] py-[9px] rounded-full transition-all duration-200 hover:-translate-y-px ${activeTokens.ctaBg} ${activeTokens.ctaText} ${activeTokens.ctaHover}`}
+      <button
+        type="button"
+        onClick={open}
+        className={`body-sm font-semibold tracking-[0.02em] px-[22px] py-[9px] rounded-full transition-all duration-200 hover:-translate-y-px ${activeTokens.ctaBg} ${activeTokens.ctaText} ${activeTokens.ctaHover}`}
       >
         Get In Touch
-      </a>
+      </button>
     </nav>
   );
 }
