@@ -7,6 +7,11 @@ export type WorkItem = {
   client: string;
   href: string;
   aspectRatio?: string;
+  additionalImages?: {
+    src: string;
+    alt: string;
+    aspectRatio?: string;
+  }[];
 };
 
 export type RowLayout =

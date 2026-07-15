@@ -12,7 +12,46 @@
     "title": "Atomic Blossom",
     "description": "Product feature spreads for the Powerbeats² and Tour² collections, featuring LeBron James and Lady Gaga.",
     "client": "Atomic Blossom",
-    "href": "/services/print-environmental"
+    "href": "/services/print-environmental",
+    "additionalImages": [
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/715158a7-ea71-48fd-7e77-bc13f6032c00/public",
+        "alt": "Modern Meditations"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/c56832c7-6997-4718-718d-7f55b7677300/public",
+        "alt": "swap"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/07b13f1b-5f73-4b68-b5e0-e03d0a805800/public",
+        "alt": "swap"
+      }
+    ],
+    "aspectRatio": "16/10"
+  },
+  {
+    "src": "https://res.cloudinary.com/djsnadzwm/video/upload/v1784069980/puller_bcedvd.mp4",
+    "alt": "Puller AI",
+    "tags": ["Brand System", "Web Design", "Web Development", "Digital Design"],
+    "title": "Puller AI",
+    "description": "Product feature spreads for the Powerbeats² and Tour² collections, featuring LeBron James and Lady Gaga.",
+    "client": "Puller AI",
+    "href": "/services/print-environmental",
+    "additionalImages": [
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/715158a7-ea71-48fd-7e77-bc13f6032c00/public",
+        "alt": "Modern Meditations"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/c56832c7-6997-4718-718d-7f55b7677300/public",
+        "alt": "swap"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/07b13f1b-5f73-4b68-b5e0-e03d0a805800/public",
+        "alt": "swap"
+      }
+    ],
+    "aspectRatio": "16/5.8"
   },
   {
     "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/73fa0d08-b6d7-4608-f7a5-75fec6de7600/public",
@@ -21,7 +60,91 @@
     "title": "Beats By Dre — Identity Lookbook",
     "description": "Product feature spreads for the Powerbeats² and Tour² collections, featuring LeBron James and Lady Gaga.",
     "client": "Beats By Dre 2",
-    "href": "/services/print-environmental"
+    "href": "/services/print-environmental",
+    "additionalImages": [
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/715158a7-ea71-48fd-7e77-bc13f6032c00/public",
+        "alt": "Modern Meditations"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/c56832c7-6997-4718-718d-7f55b7677300/public",
+        "alt": "swap"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/07b13f1b-5f73-4b68-b5e0-e03d0a805800/public",
+        "alt": "swap"
+      }
+    ]
+  },
+  {
+    "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/9297d175-0f7d-4592-1ae1-8d6de95f3000/public",
+    "alt": "Beats by Dre Identity Lookbook — Powerbeats and Tour collections featuring LeBron James and Lady Gaga",
+    "tags": ["Print Design"],
+    "title": "Beats By Dre — Identity Lookbook",
+    "description": "Product feature spreads for the Powerbeats² and Tour² collections, featuring LeBron James and Lady Gaga.",
+    "client": "Beats By Dre 2",
+    "href": "/services/print-environmental",
+    "additionalImages": [
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/715158a7-ea71-48fd-7e77-bc13f6032c00/public",
+        "alt": "Modern Meditations"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/c56832c7-6997-4718-718d-7f55b7677300/public",
+        "alt": "swap"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/07b13f1b-5f73-4b68-b5e0-e03d0a805800/public",
+        "alt": "swap"
+      }
+    ]
+  },
+
+  {
+    "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/7cb2e4bb-02bb-4b2c-b053-23b51d72a900/public",
+    "alt": "Beats by Dre Identity Lookbook — Powerbeats and Tour collections featuring LeBron James and Lady Gaga",
+    "tags": ["Print Design"],
+    "title": "Beats By Dre — Identity Lookbook",
+    "description": "Product feature spreads for the Powerbeats² and Tour² collections, featuring LeBron James and Lady Gaga.",
+    "client": "Beats By Dre 2",
+    "href": "/services/print-environmental",
+    "additionalImages": [
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/715158a7-ea71-48fd-7e77-bc13f6032c00/public",
+        "alt": "Modern Meditations"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/c56832c7-6997-4718-718d-7f55b7677300/public",
+        "alt": "swap"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/07b13f1b-5f73-4b68-b5e0-e03d0a805800/public",
+        "alt": "swap"
+      }
+    ]
+  },
+  {
+    "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/7a7719fb-d981-4925-b1ce-dea398917500/public",
+    "alt": "Beats by Dre Identity Lookbook — Powerbeats and Tour collections featuring LeBron James and Lady Gaga",
+    "tags": ["Print Design"],
+    "title": "Beats By Dre — Identity Lookbook",
+    "description": "Product feature spreads for the Powerbeats² and Tour² collections, featuring LeBron James and Lady Gaga.",
+    "client": "Beats By Dre 2",
+    "href": "/services/print-environmental",
+    "additionalImages": [
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/715158a7-ea71-48fd-7e77-bc13f6032c00/public",
+        "alt": "Modern Meditations"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/c56832c7-6997-4718-718d-7f55b7677300/public",
+        "alt": "swap"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/07b13f1b-5f73-4b68-b5e0-e03d0a805800/public",
+        "alt": "swap"
+      }
+    ]
   },
   {
     "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/020f0d01-0b58-4d1a-9d7e-f2d7bc8f3b00/public",
@@ -30,28 +153,23 @@
     "title": "Le Fronk - DJ",
     "description": "Product feature spreads for the Powerbeats² and Tour² collections, featuring LeBron James and Lady Gaga.",
     "client": "Le Fronk - DJ",
-    "href": "/services/print-environmental"
+    "href": "/services/print-environmental",
+    "additionalImages": [
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/715158a7-ea71-48fd-7e77-bc13f6032c00/public",
+        "alt": "Modern Meditations"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/c56832c7-6997-4718-718d-7f55b7677300/public",
+        "alt": "swap"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/07b13f1b-5f73-4b68-b5e0-e03d0a805800/public",
+        "alt": "swap"
+      }
+    ]
   },
 
-  {
-    "src": "https://res.cloudinary.com/djsnadzwm/video/upload/v1783997699/ojuwbgnfgbcbtz9fxfdl.mp4",
-    "alt": "Puller AI",
-    "tags": ["Brand System", "Web Design", "Web Development", "Digital Design"],
-    "title": "Puller AI",
-    "description": "Product feature spreads for the Powerbeats² and Tour² collections, featuring LeBron James and Lady Gaga.",
-    "client": "Puller AI",
-    "href": "/services/print-environmental",
-    "aspectRatio": "16/6"
-  },
-  {
-    "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/e45a4914-32e1-4837-ae00-b14743c16800/public",
-    "alt": "Almeta Magazine",
-    "tags": ["Print Design"],
-    "title": "Beats By Dre — Identity Lookbook",
-    "description": "Product feature spreads for the Powerbeats² and Tour² collections, featuring LeBron James and Lady Gaga.",
-    "client": "Almeta Magazine",
-    "href": "/services/print-environmental"
-  },
   {
     "src": "https://res.cloudinary.com/djsnadzwm/image/upload/v1783972853/cqhiqja7lkqfzpu9gctl.jpg",
     "alt": "Compassion For Kids",
@@ -59,16 +177,183 @@
     "title": "Compassion For Kids",
     "description": "Product feature spreads for the Powerbeats² and Tour² collections, featuring LeBron James and Lady Gaga.",
     "client": "Beats By Dre 4",
-    "href": "/services/merchandise-and-promotional-products"
+    "href": "/services/merchandise-and-promotional-products",
+    "additionalImages": [
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/715158a7-ea71-48fd-7e77-bc13f6032c00/public",
+        "alt": "Modern Meditations"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/c56832c7-6997-4718-718d-7f55b7677300/public",
+        "alt": "swap"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/07b13f1b-5f73-4b68-b5e0-e03d0a805800/public",
+        "alt": "swap"
+      }
+    ]
   },
+
   {
-    "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/e45a4914-32e1-4837-ae00-b14743c16800/public",
-    "alt": "Almeta Magazine",
+    "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/76d2a375-6257-423a-fe5a-a91b22781600/public",
+    "alt": "Cosmic Spot",
     "tags": ["Print Design"],
     "title": "Beats By Dre — Identity Lookbook",
     "description": "Product feature spreads for the Powerbeats² and Tour² collections, featuring LeBron James and Lady Gaga.",
     "client": "Almeta Magazine",
-    "href": "/services/print-environmental"
+    "href": "/services/print-environmental",
+    "additionalImages": [
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/715158a7-ea71-48fd-7e77-bc13f6032c00/public",
+        "alt": "Modern Meditations"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/c56832c7-6997-4718-718d-7f55b7677300/public",
+        "alt": "swap"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/07b13f1b-5f73-4b68-b5e0-e03d0a805800/public",
+        "alt": "swap"
+      }
+    ]
+  },
+  {
+    "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/33e38d00-42e9-4077-ecfa-e1f806b3a000/public",
+    "alt": "Cosmic Spot",
+    "tags": ["Print Design"],
+    "title": "Beats By Dre — Identity Lookbook",
+    "description": "Product feature spreads for the Powerbeats² and Tour² collections, featuring LeBron James and Lady Gaga.",
+    "client": "Almeta Magazine",
+    "href": "/services/print-environmental",
+    "additionalImages": [
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/715158a7-ea71-48fd-7e77-bc13f6032c00/public",
+        "alt": "Modern Meditations"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/c56832c7-6997-4718-718d-7f55b7677300/public",
+        "alt": "swap"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/07b13f1b-5f73-4b68-b5e0-e03d0a805800/public",
+        "alt": "swap"
+      }
+    ]
+  },
+  {
+    "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/00d3dd7d-4aec-4c62-3789-3e3573a1f500/public",
+    "alt": "Cosmic Spot",
+    "tags": ["Print Design"],
+    "title": "Beats By Dre — Identity Lookbook",
+    "description": "Product feature spreads for the Powerbeats² and Tour² collections, featuring LeBron James and Lady Gaga.",
+    "client": "Almeta Magazine",
+    "href": "/services/print-environmental",
+    "additionalImages": [
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/715158a7-ea71-48fd-7e77-bc13f6032c00/public",
+        "alt": "Modern Meditations"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/c56832c7-6997-4718-718d-7f55b7677300/public",
+        "alt": "swap"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/07b13f1b-5f73-4b68-b5e0-e03d0a805800/public",
+        "alt": "swap"
+      }
+    ]
+  },
+  {
+    "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/8bbb3574-ba72-4386-dc7e-0f0daab31200/public",
+    "alt": "Cosmic Spot",
+    "tags": ["Print Design"],
+    "title": "Beats By Dre — Identity Lookbook",
+    "description": "Product feature spreads for the Powerbeats² and Tour² collections, featuring LeBron James and Lady Gaga.",
+    "client": "Almeta Magazine",
+    "href": "/services/print-environmental",
+    "additionalImages": [
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/715158a7-ea71-48fd-7e77-bc13f6032c00/public",
+        "alt": "Modern Meditations"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/c56832c7-6997-4718-718d-7f55b7677300/public",
+        "alt": "swap"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/07b13f1b-5f73-4b68-b5e0-e03d0a805800/public",
+        "alt": "swap"
+      }
+    ]
+  },
+  {
+    "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/74cf3343-d6fe-4fee-c0f0-0c3fcd670b00/public",
+    "alt": "Melissa Renfro Reality",
+    "tags": ["Brand Identity", "Print Design", "Digital Design"],
+    "title": "Beats By Dre — Identity Lookbook",
+    "description": "Product feature spreads for the Powerbeats² and Tour² collections, featuring LeBron James and Lady Gaga.",
+    "client": "Swap",
+    "href": "/services/print-environmental",
+    "additionalImages": [
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/715158a7-ea71-48fd-7e77-bc13f6032c00/public",
+        "alt": "Modern Meditations"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/c56832c7-6997-4718-718d-7f55b7677300/public",
+        "alt": "swap"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/07b13f1b-5f73-4b68-b5e0-e03d0a805800/public",
+        "alt": "swap"
+      }
+    ]
+  },
+  {
+    "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/715158a7-ea71-48fd-7e77-bc13f6032c00/public",
+    "alt": "Modern Meditations",
+    "tags": ["Brand Identity", "Print Design", "Digital Design"],
+    "title": "Beats By Dre — Identity Lookbook",
+    "description": "Product feature spreads for the Powerbeats² and Tour² collections, featuring LeBron James and Lady Gaga.",
+    "client": "Swap",
+    "href": "/services/print-environmental",
+    "additionalImages": [
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/715158a7-ea71-48fd-7e77-bc13f6032c00/public",
+        "alt": "Modern Meditations"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/c56832c7-6997-4718-718d-7f55b7677300/public",
+        "alt": "swap"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/07b13f1b-5f73-4b68-b5e0-e03d0a805800/public",
+        "alt": "swap"
+      }
+    ]
+  },
+  {
+    "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/c56832c7-6997-4718-718d-7f55b7677300/public",
+    "alt": "swap",
+    "tags": ["Brand Identity", "Print Design", "Digital Design"],
+    "title": "Beats By Dre — Identity Lookbook",
+    "description": "Product feature spreads for the Powerbeats² and Tour² collections, featuring LeBron James and Lady Gaga.",
+    "client": "Swap",
+    "href": "/services/print-environmental",
+    "additionalImages": [
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/715158a7-ea71-48fd-7e77-bc13f6032c00/public",
+        "alt": "Modern Meditations"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/c56832c7-6997-4718-718d-7f55b7677300/public",
+        "alt": "swap"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/07b13f1b-5f73-4b68-b5e0-e03d0a805800/public",
+        "alt": "swap"
+      }
+    ]
   },
   {
     "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/07b13f1b-5f73-4b68-b5e0-e03d0a805800/public",
@@ -77,7 +362,45 @@
     "title": "Beats By Dre — Identity Lookbook",
     "description": "Product feature spreads for the Powerbeats² and Tour² collections, featuring LeBron James and Lady Gaga.",
     "client": "Swap",
-    "href": "/services/print-environmental"
+    "href": "/services/print-environmental",
+    "additionalImages": [
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/715158a7-ea71-48fd-7e77-bc13f6032c00/public",
+        "alt": "Modern Meditations"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/c56832c7-6997-4718-718d-7f55b7677300/public",
+        "alt": "swap"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/07b13f1b-5f73-4b68-b5e0-e03d0a805800/public",
+        "alt": "swap"
+      }
+    ]
+  },
+
+  {
+    "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/97e94e2c-5f46-4deb-13c4-117b03b74f00/public",
+    "alt": "Beats by Dre Identity Lookbook — Powerbeats and Tour collections featuring LeBron James and Lady Gaga",
+    "tags": ["Brand Identity", "Digital Design", "Web Design"],
+    "title": "NextUp",
+    "description": "Product feature spreads for the Powerbeats² and Tour² collections, featuring LeBron James and Lady Gaga.",
+    "client": "NextUp",
+    "href": "/services/print-environmental",
+    "additionalImages": [
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/715158a7-ea71-48fd-7e77-bc13f6032c00/public",
+        "alt": "Modern Meditations"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/c56832c7-6997-4718-718d-7f55b7677300/public",
+        "alt": "swap"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/07b13f1b-5f73-4b68-b5e0-e03d0a805800/public",
+        "alt": "swap"
+      }
+    ]
   },
   {
     "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/ccd8422c-2278-4de3-bf7f-64c3a80a8000/public",
@@ -86,87 +409,20 @@
     "title": "NextUp",
     "description": "Product feature spreads for the Powerbeats² and Tour² collections, featuring LeBron James and Lady Gaga.",
     "client": "NextUp",
-    "href": "/services/print-environmental"
-  },
-  {
-    "src": "/work/beats-by-dre-features3.jpg",
-    "alt": "Beats by Dre Identity Lookbook — Powerbeats and Tour collections featuring LeBron James and Lady Gaga",
-    "tags": ["Print Design"],
-    "title": "Beats By Dre — Identity Lookbook",
-    "description": "Product feature spreads for the Powerbeats² and Tour² collections, featuring LeBron James and Lady Gaga.",
-    "client": "Beats By Dre 4",
-    "href": "/services/print-environmental"
-  },
-  {
-    "src": "/work/beats-by-dre-features3.jpg",
-    "alt": "Beats by Dre Identity Lookbook — Powerbeats and Tour collections featuring LeBron James and Lady Gaga",
-    "tags": ["Print Design"],
-    "title": "Beats By Dre — Identity Lookbook",
-    "description": "Product feature spreads for the Powerbeats² and Tour² collections, featuring LeBron James and Lady Gaga.",
-    "client": "Beats By Dre 4",
-    "href": "/services/print-environmental"
-  },
-  {
-    "src": "/work/beats-by-dre-features3.jpg",
-    "alt": "Beats by Dre Identity Lookbook — Powerbeats and Tour collections featuring LeBron James and Lady Gaga",
-    "tags": ["Print Design"],
-    "title": "Beats By Dre — Identity Lookbook",
-    "description": "Product feature spreads for the Powerbeats² and Tour² collections, featuring LeBron James and Lady Gaga.",
-    "client": "Beats By Dre 4",
-    "href": "/services/print-environmental"
-  },
-  {
-    "src": "/work/beats-by-dre-features3.jpg",
-    "alt": "Beats by Dre Identity Lookbook — Powerbeats and Tour collections featuring LeBron James and Lady Gaga",
-    "tags": ["Print Design"],
-    "title": "Beats By Dre — Identity Lookbook",
-    "description": "Product feature spreads for the Powerbeats² and Tour² collections, featuring LeBron James and Lady Gaga.",
-    "client": "Beats By Dre 4",
-    "href": "/services/print-environmental"
-  },
-  {
-    "src": "/work/beats-by-dre-features3.jpg",
-    "alt": "Beats by Dre Identity Lookbook — Powerbeats and Tour collections featuring LeBron James and Lady Gaga",
-    "tags": ["Print Design"],
-    "title": "Beats By Dre — Identity Lookbook",
-    "description": "Product feature spreads for the Powerbeats² and Tour² collections, featuring LeBron James and Lady Gaga.",
-    "client": "Beats By Dre 4",
-    "href": "/services/print-environmental"
-  },
-  {
-    "src": "/work/beats-by-dre-features3.jpg",
-    "alt": "Beats by Dre Identity Lookbook — Powerbeats and Tour collections featuring LeBron James and Lady Gaga",
-    "tags": ["Print Design"],
-    "title": "Beats By Dre — Identity Lookbook",
-    "description": "Product feature spreads for the Powerbeats² and Tour² collections, featuring LeBron James and Lady Gaga.",
-    "client": "Beats By Dre 4",
-    "href": "/services/print-environmental"
-  },
-  {
-    "src": "/work/beats-by-dre-features3.jpg",
-    "alt": "Beats by Dre Identity Lookbook — Powerbeats and Tour collections featuring LeBron James and Lady Gaga",
-    "tags": ["Print Design"],
-    "title": "Beats By Dre — Identity Lookbook",
-    "description": "Product feature spreads for the Powerbeats² and Tour² collections, featuring LeBron James and Lady Gaga.",
-    "client": "Beats By Dre 4",
-    "href": "/services/print-environmental"
-  },
-  {
-    "src": "/work/beats-by-dre-features3.jpg",
-    "alt": "Beats by Dre Identity Lookbook — Powerbeats and Tour collections featuring LeBron James and Lady Gaga",
-    "tags": ["Print Design"],
-    "title": "Beats By Dre — Identity Lookbook",
-    "description": "Product feature spreads for the Powerbeats² and Tour² collections, featuring LeBron James and Lady Gaga.",
-    "client": "Beats By Dre 4",
-    "href": "/services/print-environmental"
-  },
-  {
-    "src": "/work/beats-by-dre-features3.jpg",
-    "alt": "Beats by Dre Identity Lookbook — Powerbeats and Tour collections featuring LeBron James and Lady Gaga",
-    "tags": ["Print Design"],
-    "title": "Beats By Dre — Identity Lookbook",
-    "description": "Product feature spreads for the Powerbeats² and Tour² collections, featuring LeBron James and Lady Gaga.",
-    "client": "Beats By Dre 4",
-    "href": "/services/print-environmental"
+    "href": "/services/print-environmental",
+    "additionalImages": [
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/715158a7-ea71-48fd-7e77-bc13f6032c00/public",
+        "alt": "Modern Meditations"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/c56832c7-6997-4718-718d-7f55b7677300/public",
+        "alt": "swap"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/07b13f1b-5f73-4b68-b5e0-e03d0a805800/public",
+        "alt": "swap"
+      }
+    ]
   }
 ]

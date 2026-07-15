@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import Image from "next/image";
-import Link from "next/link";
 import { WorkItem } from "@/lib/types/work";
 import workItemsData from "@/data/work.json";
-import { PortfolioItem } from "./components/PortfolioItem";
+import { PortfolioGrid } from "./components/PortfolioItem";
 
 // ─── Metadata ────────────────────────────────────────────────────────────────
 
@@ -118,7 +116,7 @@ export default function WorkPage() {
       />
 
       <div>
-        <div className="section">
+        <div className="section ">
           <header className="mb-8">
             <div className="rv flex items-center gap-3 mb-5">
               <div
@@ -156,18 +154,11 @@ export default function WorkPage() {
 
           {/* ── Portfolio grid ── */}
           <div
-            className="grid grid-cols-1 md:grid-cols-2 gap-[3px]"
+            className="grid grid-cols-1 md:grid-cols-1 gap-3"
             itemScope
             itemType="https://schema.org/ItemList"
           >
-            {/* TODO: update key */}
-            {workItems.map((item, i) => (
-              <PortfolioItem
-                key={`${item.src}-${i}`}
-                item={item}
-                full={i % 3 === 0}
-              />
-            ))}
+            <PortfolioGrid items={workItems} />
           </div>
         </div>
       </div>
