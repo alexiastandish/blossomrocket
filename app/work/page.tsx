@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { WorkItem } from "@/lib/types/work";
+import { ProjectItem } from "@/lib/types/projects";
 import workItemsData from "@/data/work.json";
-import { PortfolioGrid } from "./components/PortfolioItem";
-
+import { PortfolioGrid } from "./components/PortfolioGrid";
+import Marquee from "@/components/section/Marquee";
+import logos from "@/data/marquees/logos.json";
 // ─── Metadata ────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
@@ -31,7 +33,7 @@ export const metadata: Metadata = {
 
 // ─── Work data ────────────────────────────────────────────────────────────────
 
-const workItems: WorkItem[] = workItemsData;
+const workItems: ProjectItem[] = workItemsData;
 
 // ─── Video helper ─────────────────────────────────────────────────────────────
 // Any item whose src points to a video file renders via <video> instead of
@@ -151,6 +153,13 @@ export default function WorkPage() {
               brand system designed to work across every touchpoint.
             </p>
           </header>
+
+          {/* Logo Marquee */}
+          <div className="h-20 mb-12">
+            <div className="w-[100vw] absolute left-0 right-0">
+              <Marquee items={logos} theme="light" />
+            </div>
+          </div>
 
           {/* ── Portfolio grid ── */}
           <div
