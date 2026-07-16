@@ -1,0 +1,96 @@
+[
+  {
+    "slug": "naming-the-differentiator",
+    "title": "Finding the One Sentence That Sells the Whole Studio",
+    "excerpt": "Most positioning work fails because it tries to say five things at once. Here's how we narrowed Blossom Rocket down to a single differentiator — and why end-to-end delivery turned out to be the real story.",
+    "category": "Brand Strategy",
+    "coverImage": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/47ea1502-5757-4e2c-84a2-12e5e332d400/public",
+    "coverAlt": "Moodboard and sticky notes laid out during a positioning workshop",
+    "publishedAt": "2026-06-02",
+    "readTime": "7 min read",
+    "href": "/blog/naming-the-differentiator",
+    "featured": true
+  },
+  {
+    "slug": "four-named-themes",
+    "title": "Why Our Section Components Only Ship in Four Themes",
+    "excerpt": "Light, dark, brand, and brandSoft. Not five, not a per-client palette. A look at the tradeoffs behind keeping a component system's surface area small on purpose.",
+    "category": "Design Systems",
+    "coverImage": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/47ea1502-5757-4e2c-84a2-12e5e332d400/public",
+
+    "coverAlt": "Grid of UI component swatches in four color themes",
+    "publishedAt": "2026-05-21",
+    "readTime": "5 min read",
+    "href": "/blog/four-named-themes"
+  },
+  {
+    "slug": "print-run-postmortem",
+    "title": "What a Blown Print Run Taught Us About Bleed and Trim",
+    "excerpt": "A lookbook came back from the printer with the cover art shifted three millimeters. Here's exactly what went wrong in the file setup, and the checklist we built so it never happens again.",
+    "category": "Print & Production",
+    "coverImage": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/47ea1502-5757-4e2c-84a2-12e5e332d400/public",
+
+    "coverAlt": "Stack of freshly printed lookbooks on a light table",
+    "publishedAt": "2026-05-08",
+    "readTime": "6 min read",
+    "href": "/blog/print-run-postmortem"
+  },
+  {
+    "slug": "tokens-not-hex-codes",
+    "title": "No Hardcoded Hex Codes: A Rule We Actually Enforce",
+    "excerpt": "Every color in every client build comes from a CSS variable, no exceptions except complex gradients. It slows down the first week of a project and saves every week after.",
+    "category": "Design Systems",
+    "coverImage": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/47ea1502-5757-4e2c-84a2-12e5e332d400/public",
+
+    "coverAlt": "Color swatch strips pinned to a studio wall",
+    "publishedAt": "2026-04-30",
+    "readTime": "4 min read",
+    "href": "/blog/tokens-not-hex-codes"
+  },
+  {
+    "slug": "atomic-blossom-launch-week",
+    "title": "Launch Week Notes: What Broke When Atomic Blossom Went Live",
+    "excerpt": "Prisma driver adapters, Stripe webhooks, and one very stressful DNS propagation window. A behind-the-scenes look at shipping our own jewelry storefront.",
+    "category": "Studio Notes",
+    "coverImage": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/47ea1502-5757-4e2c-84a2-12e5e332d400/public",
+
+    "coverAlt": "Jewelry prodct photography laid out for an e-commerce shoot",
+    "publishedAt": "2026-04-14",
+    "readTime": "8 min read",
+    "href": "/blog/atomic-blossom-launch-week"
+  },
+  {
+    "slug": "briefing-a-type-pairing",
+    "title": "How We Brief a Type Pairing Before Touching a Single Font",
+    "excerpt": "Voice comes before typeface. A walkthrough of the questions we ask a founder before ever opening a font-pairing tool.",
+    "category": "Brand Strategy",
+    "coverImage": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/47ea1502-5757-4e2c-84a2-12e5e332d400/public",
+
+    "coverAlt": "Specimen sheets showing several typeface pairings",
+    "publishedAt": "2026-03-27",
+    "readTime": "5 min read",
+    "href": "/blog/briefing-a-type-pairing"
+  },
+  {
+    "slug": "company-store-fulfillment",
+    "title": "The Unglamorous Logistics of a Company Store That Actually Works",
+    "excerpt": "Merchandise programs die in fulfillment, not design. What we changed after a client's first company store order took six weeks to ship.",
+    "category": "Print & Production",
+    "coverImage": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/47ea1502-5757-4e2c-84a2-12e5e332d400/public",
+    "coverAlt": "Branded apparel and tote bags folded and ready for shipment",
+    "publishedAt": "2026-03-11",
+    "readTime": "6 min read",
+    "href": "/blog/company-store-fulfillment"
+  },
+  {
+    "slug": "designing-in-code-and-figma-at-once",
+    "title": "Working in Figma and Next.js at the Same Time Without Losing Your Mind",
+    "excerpt": "Two sources of truth, one brand. Notes on keeping a component library and a design file honest with each other during a fast build.",
+    "category": "Web & Product",
+    "coverImage": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/47ea1502-5757-4e2c-84a2-12e5e332d400/public",
+    "coverAlt": "Two monitors side by side showing Figma and a code editor",
+    "publishedAt": "2026-02-19",
+    "readTime": "7 min read",
+    "href": "/blog/designing-in-code-and-figma-at-once"
+  }
+]

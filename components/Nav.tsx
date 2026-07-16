@@ -1,6 +1,7 @@
 "use client";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import Image from "next/image";
 import Link from "next/link";
 import { pageThemes } from "@/lib/utils/pageThemes";
@@ -29,21 +30,14 @@ const services: NavLink[] = [
   { href: "/services/company-stores", label: "Company Stores" },
 ];
 
-// const resources: NavLink[] = [
-//   { href: "/resources/blog", label: "Blog" },
-//   { href: "/resources/store-systems", label: "Live Store Systems" },
-// ];
-
 const dropdownLinks: Record<string, NavLink[]> = {
   Services: services,
-  // Resources: resources,
 };
 
 const links: NavLink[] = [
   { href: "/services", label: "Services", dropdown: true },
   { href: "/work", label: "Work" },
   { href: "/blog", label: "Blog" },
-  // { href: "/resources", label: "Resources", dropdown: true },
 ];
 
 const unscrolledTokens: Record<
@@ -56,6 +50,7 @@ const unscrolledTokens: Record<
     ctaText: string;
     ctaHover: string;
     logoInvert: boolean;
+    iconColor: string;
   }
 > = {
   light: {
@@ -66,6 +61,7 @@ const unscrolledTokens: Record<
     ctaText: "text-white",
     ctaHover: "hover:opacity-85",
     logoInvert: false,
+    iconColor: "text-[#18181b]",
   },
   dark: {
     linkIdle: "text-[rgba(255,255,255,0.60)]",
@@ -75,6 +71,7 @@ const unscrolledTokens: Record<
     ctaText: "text-[#18181b]",
     ctaHover: "hover:opacity-90",
     logoInvert: true,
+    iconColor: "text-white",
   },
 };
 
@@ -88,6 +85,7 @@ const scrolledTokens = {
   ctaText: "text-white",
   ctaHover: "hover:opacity-85",
   logoInvert: false,
+  iconColor: "text-[#18181b]",
 };
 
 const dropdowns: DropdownMenus = { services: false, resources: false };
@@ -95,12 +93,23 @@ const dropdowns: DropdownMenus = { services: false, resources: false };
 export default function Nav() {
   const [scrolled, setScrolled] = useState<boolean>(false);
   const [dropdownOpen, setDropdownOpen] = useState<DropdownMenus>(dropdowns);
+  const [mobileOpen, setMobileOpen] = useState<boolean>(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState<boolean>(false);
+  const [mounted, setMounted] = useState(false);
 
   const { open } = useContactModal();
 
   const pathname = usePathname();
   const navTheme: NavTheme = pageThemes[pathname] ?? "light";
-  const activeTokens = scrolled ? scrolledTokens : unscrolledTokens[navTheme];
+  const activeTokens =
+    scrolled || mobileOpen ? scrolledTokens : unscrolledTokens[navTheme];
+
+  useEffect(() => {
+    // Avoid synchronous setState in effect to prevent cascading renders;
+    // schedule update on next animation frame instead.
+    const raf = requestAnimationFrame(() => setMounted(true));
+    return () => cancelAnimationFrame(raf);
+  }, []);
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 60);
@@ -109,144 +118,332 @@ export default function Nav() {
     return () => window.removeEventListener("scroll", handler);
   }, [pathname]);
 
-  return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-[100] flex items-center justify-between px-[clamp(20px,5vw,60px)] transition-all duration-400 border-b ${
-        scrolled
-          ? "bg-[rgba(250,250,248,0.92)] backdrop-blur-[18px] border-[rgba(24,24,27,0.10)]"
-          : "bg-transparent border-transparent"
+  // Reset mobile menu state on route change (render-time adjustment,
+  // not an Effect — avoids the cascading-render warning).
+  const [prevPathname, setPrevPathname] = useState(pathname);
+  if (pathname !== prevPathname) {
+    setPrevPathname(pathname);
+    setMobileOpen(false);
+    setMobileServicesOpen(false);
+  }
+
+  // Lock body scroll + close on Escape while the mobile panel is open.
+  useEffect(() => {
+    if (!mobileOpen) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setMobileOpen(false);
+    };
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [mobileOpen]);
+
+  const mobilePanel = (
+    <div
+      id="mobile-nav-panel"
+      className={`md:hidden fixed inset-x-0 transition-all duration-300 ${
+        mobileOpen ? "pointer-events-auto" : "pointer-events-none"
       }`}
-      style={{ height: "68px" }}
-      role="navigation"
-      aria-label="Main navigation"
+      style={{
+        top: "68px",
+        bottom: 0,
+        zIndex: 105,
+        backgroundColor: "#fafaf8",
+        opacity: mobileOpen ? 1 : 0,
+        transform: mobileOpen ? "translateY(0)" : "translateY(-8px)",
+      }}
     >
-      <Link href="/" className="flex items-center gap-2.5">
-        <Image
-          src={activeTokens.logoInvert ? "/logo-inverted.svg" : "/logo.svg"}
-          alt="Blossom Rocket"
-          width={142}
-          height={80}
-          style={{ height: "80px", width: "auto" }}
-          priority
-        />
-      </Link>
+      <div className="flex h-full flex-col overflow-y-auto px-[clamp(20px,5vw,60px)] py-8">
+        <ul className="flex flex-col list-none">
+          {links.map(({ href, label, dropdown = false }) => {
+            const isActive =
+              pathname === href || pathname.startsWith(`${href}/`);
 
-      <ul className="hidden md:flex gap-9 list-none items-center h-full">
-        {links.map(({ href, label, dropdown = false }: NavLink) => {
-          const isFirst = href === "/services" || href === "/resources";
-          const menuIsOpen = dropdownOpen[label.toLowerCase()];
-          const isActive = pathname === href || pathname.startsWith(`${href}/`);
-          return dropdown ? (
-            <li
-              key={href}
-              className="relative"
-              onMouseEnter={() =>
-                setDropdownOpen((prev) => ({
-                  ...prev,
-                  [label.toLowerCase()]: true,
-                }))
-              }
-              onMouseLeave={() =>
-                setDropdownOpen((prev) => ({
-                  ...prev,
-                  [label.toLowerCase()]: false,
-                }))
-              }
-            >
-              <Link
-                href={href}
-                className={`flex items-center gap-1.5 body-sm font-medium tracking-[0.01em] transition-colors duration-200 ${isActive ? activeTokens.linkActive : activeTokens.linkIdle} hover:${activeTokens.linkHover} hover:cursor-pointer ${
-                  menuIsOpen ? activeTokens.linkActive : activeTokens.linkIdle
-                }`}
-              >
-                {label}
-                <svg
-                  width="12"
-                  height="12"
-                  viewBox="0 0 12 12"
-                  fill="none"
-                  aria-hidden="true"
-                  className="transition-transform duration-200"
-                  style={{
-                    transform: menuIsOpen ? "rotate(180deg)" : "rotate(0deg)",
-                  }}
+            if (!dropdown) {
+              return (
+                <li
+                  key={href}
+                  className="border-b border-[rgba(24,24,27,0.08)]"
                 >
-                  <path
-                    d="M2 4l4 4 4-4"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </Link>
+                  <Link
+                    href={href}
+                    onClick={() => setMobileOpen(false)}
+                    className={`block py-4 text-[22px] font-medium tracking-[-0.01em] ${
+                      isActive ? "text-neutral-900" : "text-neutral-600"
+                    }`}
+                  >
+                    {label}
+                  </Link>
+                </li>
+              );
+            }
 
-              <div
-                className="absolute top-full transition-all duration-200 pt-4"
-                style={{
-                  opacity: menuIsOpen ? 1 : 0,
-                  pointerEvents: menuIsOpen ? "auto" : "none",
-                  left: isFirst ? "0" : "50%",
-                  transform: isFirst
-                    ? `translateY(${menuIsOpen ? "0px" : "-6px"})`
-                    : `translateX(-50%) translateY(${menuIsOpen ? "0px" : "-6px"})`,
-                  width: "260px",
-                }}
-              >
-                {!isFirst && (
-                  <div
-                    className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 rotate-45 bg-white border-l border-t border-[rgba(24,24,27,0.08)]"
+            return (
+              <li key={href} className="border-b border-[rgba(24,24,27,0.08)]">
+                <button
+                  type="button"
+                  onClick={() => setMobileServicesOpen((prev) => !prev)}
+                  aria-expanded={mobileServicesOpen}
+                  className="flex w-full items-center justify-between py-4 text-[22px] font-medium tracking-[-0.01em] text-neutral-600"
+                >
+                  {label}
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 12 12"
+                    fill="none"
                     aria-hidden="true"
-                  />
-                )}
-                <ul
-                  className="relative bg-white rounded-2xl border border-[rgba(24,24,27,0.08)] overflow-hidden list-none p-1.5"
+                    className="transition-transform duration-200"
+                    style={{
+                      transform: mobileServicesOpen
+                        ? "rotate(180deg)"
+                        : "rotate(0deg)",
+                    }}
+                  >
+                    <path
+                      d="M2 4l4 4 4-4"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </button>
+                <div
+                  className="grid overflow-hidden transition-all duration-300"
                   style={{
-                    boxShadow:
-                      "0 4px 24px rgba(24,24,27,0.08), 0 1px 4px rgba(24,24,27,0.04)",
+                    gridTemplateRows: mobileServicesOpen ? "1fr" : "0fr",
                   }}
                 >
-                  {dropdownLinks[label]?.map(
-                    ({ href: svcHref, label: svcLabel }) => (
-                      <li key={svcHref}>
-                        <Link
-                          href={svcHref}
-                          className="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl body-sm font-medium text-[rgba(24,24,27,0.65)] hover:text-ink hover:bg-off transition-colors duration-150"
-                          onClick={() =>
-                            setDropdownOpen((prev) => ({
-                              ...prev,
-                              [label.toLowerCase()]: false,
-                            }))
-                          }
-                        >
-                          {svcLabel}
-                        </Link>
-                      </li>
-                    ),
-                  )}
-                </ul>
-              </div>
-            </li>
-          ) : (
-            <li key={href} className="flex items-center">
-              <Link
-                href={href}
-                className={`body-sm font-medium tracking-[0.01em] transition-colors duration-200  ${isActive ? activeTokens.linkActive : activeTokens.linkIdle}  ${activeTokens.linkHover}  hover:cursor-pointer `}
-              >
-                {label}
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
+                  <div className="min-h-0">
+                    <ul className="flex flex-col list-none pb-3">
+                      {dropdownLinks[label]?.map(
+                        ({ href: svcHref, label: svcLabel }) => (
+                          <li key={svcHref}>
+                            <Link
+                              href={svcHref}
+                              onClick={() => setMobileOpen(false)}
+                              className="block py-2.5 text-[16px] font-medium text-[rgba(24,24,27,0.65)]"
+                            >
+                              {svcLabel}
+                            </Link>
+                          </li>
+                        ),
+                      )}
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            );
+          })}
+        </ul>
 
-      <button
-        type="button"
-        onClick={open}
-        className={`body-sm font-semibold tracking-[0.02em] px-[22px] py-[9px] rounded-full transition-all duration-200 hover:-translate-y-px ${activeTokens.ctaBg} ${activeTokens.ctaText} ${activeTokens.ctaHover}`}
+        <button
+          type="button"
+          onClick={() => {
+            setMobileOpen(false);
+            open();
+          }}
+          className="mt-8 w-full rounded-full bg-[#18181b] px-6 py-4 text-center text-[16px] font-semibold text-white transition-opacity hover:opacity-85"
+        >
+          Get In Touch
+        </button>
+      </div>
+    </div>
+  );
+
+  return (
+    <>
+      <nav
+        className={`fixed top-0 left-0 right-0 z-[100] flex items-center justify-between px-[clamp(20px,5vw,60px)] transition-all duration-400 border-b ${
+          scrolled || mobileOpen
+            ? "bg-[rgba(250,250,248,0.92)] backdrop-blur-[18px] border-[rgba(24,24,27,0.10)]"
+            : "bg-transparent border-transparent"
+        }`}
+        style={{ height: "68px" }}
+        role="navigation"
+        aria-label="Main navigation"
       >
-        Get In Touch
-      </button>
-    </nav>
+        <Link
+          href="/"
+          className="flex items-center gap-2.5"
+          onClick={() => setMobileOpen(false)}
+        >
+          <Image
+            src={activeTokens.logoInvert ? "/logo-inverted.svg" : "/logo.svg"}
+            alt="Blossom Rocket"
+            width={142}
+            height={80}
+            style={{ height: "80px", width: "auto" }}
+            priority
+          />
+        </Link>
+
+        {/* Desktop links */}
+        <ul className="hidden md:flex gap-9 list-none items-center h-full">
+          {links.map(({ href, label, dropdown = false }: NavLink) => {
+            const isFirst = href === "/services" || href === "/resources";
+            const menuIsOpen = dropdownOpen[label.toLowerCase()];
+            const isActive =
+              pathname === href || pathname.startsWith(`${href}/`);
+            return dropdown ? (
+              <li
+                key={href}
+                className="relative"
+                onMouseEnter={() =>
+                  setDropdownOpen((prev) => ({
+                    ...prev,
+                    [label.toLowerCase()]: true,
+                  }))
+                }
+                onMouseLeave={() =>
+                  setDropdownOpen((prev) => ({
+                    ...prev,
+                    [label.toLowerCase()]: false,
+                  }))
+                }
+              >
+                <Link
+                  href={href}
+                  className={`flex items-center gap-1.5 body-sm font-medium tracking-[0.01em] transition-colors duration-200 ${isActive ? activeTokens.linkActive : activeTokens.linkIdle} hover:${activeTokens.linkHover} hover:cursor-pointer ${
+                    menuIsOpen ? activeTokens.linkActive : activeTokens.linkIdle
+                  }`}
+                >
+                  {label}
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 12 12"
+                    fill="none"
+                    aria-hidden="true"
+                    className="transition-transform duration-200"
+                    style={{
+                      transform: menuIsOpen ? "rotate(180deg)" : "rotate(0deg)",
+                    }}
+                  >
+                    <path
+                      d="M2 4l4 4 4-4"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </Link>
+
+                <div
+                  className="absolute top-full transition-all duration-200 pt-4"
+                  style={{
+                    opacity: menuIsOpen ? 1 : 0,
+                    pointerEvents: menuIsOpen ? "auto" : "none",
+                    left: isFirst ? "0" : "50%",
+                    transform: isFirst
+                      ? `translateY(${menuIsOpen ? "0px" : "-6px"})`
+                      : `translateX(-50%) translateY(${menuIsOpen ? "0px" : "-6px"})`,
+                    width: "260px",
+                  }}
+                >
+                  {!isFirst && (
+                    <div
+                      className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 rotate-45 bg-white border-l border-t border-[rgba(24,24,27,0.08)]"
+                      aria-hidden="true"
+                    />
+                  )}
+                  <ul
+                    className="relative bg-white rounded-2xl border border-[rgba(24,24,27,0.08)] overflow-hidden list-none p-1.5"
+                    style={{
+                      boxShadow:
+                        "0 4px 24px rgba(24,24,27,0.08), 0 1px 4px rgba(24,24,27,0.04)",
+                    }}
+                  >
+                    {dropdownLinks[label]?.map(
+                      ({ href: svcHref, label: svcLabel }) => (
+                        <li key={svcHref}>
+                          <Link
+                            href={svcHref}
+                            className="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl body-sm font-medium text-[rgba(24,24,27,0.65)] hover:text-ink hover:bg-off transition-colors duration-150"
+                            onClick={() =>
+                              setDropdownOpen((prev) => ({
+                                ...prev,
+                                [label.toLowerCase()]: false,
+                              }))
+                            }
+                          >
+                            {svcLabel}
+                          </Link>
+                        </li>
+                      ),
+                    )}
+                  </ul>
+                </div>
+              </li>
+            ) : (
+              <li key={href} className="flex items-center">
+                <Link
+                  href={href}
+                  className={`body-sm font-medium tracking-[0.01em] transition-colors duration-200  ${isActive ? activeTokens.linkActive : activeTokens.linkIdle}  ${activeTokens.linkHover}  hover:cursor-pointer `}
+                >
+                  {label}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+
+        {/* Desktop CTA */}
+        <button
+          type="button"
+          onClick={open}
+          className={`hidden md:inline-flex body-sm font-semibold tracking-[0.02em] px-[22px] py-[9px] rounded-full transition-all duration-200 hover:-translate-y-px ${activeTokens.ctaBg} ${activeTokens.ctaText} ${activeTokens.ctaHover}`}
+        >
+          Get In Touch
+        </button>
+
+        {/* Mobile hamburger toggle */}
+        <button
+          type="button"
+          onClick={() => setMobileOpen((prev) => !prev)}
+          aria-label={mobileOpen ? "Close menu" : "Open menu"}
+          aria-expanded={mobileOpen}
+          aria-controls="mobile-nav-panel"
+          className={`md:hidden relative flex h-10 w-10 items-center justify-center ${activeTokens.iconColor}`}
+          style={{ zIndex: 110 }}
+        >
+          <span className="relative block h-4 w-5">
+            <span
+              className="absolute left-0 top-0 h-[1.5px] w-full rounded-full bg-current transition-all duration-300"
+              style={{
+                transform: mobileOpen
+                  ? "translateY(7px) rotate(45deg)"
+                  : "translateY(0) rotate(0)",
+              }}
+            />
+            <span
+              className="absolute left-0 top-[7px] h-[1.5px] w-full rounded-full bg-current transition-all duration-200"
+              style={{
+                opacity: mobileOpen ? 0 : 1,
+              }}
+            />
+            <span
+              className="absolute left-0 top-[14px] h-[1.5px] w-full rounded-full bg-current transition-all duration-300"
+              style={{
+                transform: mobileOpen
+                  ? "translateY(-7px) rotate(-45deg)"
+                  : "translateY(0) rotate(0)",
+              }}
+            />
+          </span>
+        </button>
+      </nav>
+
+      {mounted && createPortal(mobilePanel, document.body)}
+    </>
   );
 }
