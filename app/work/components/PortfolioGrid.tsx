@@ -19,6 +19,10 @@ interface PortfolioGridProps {
 // Used whenever a project doesn't set its own `rowHeight`.
 const DEFAULT_ROW_HEIGHT = "clamp(160px, 32vw, 420px)";
 
+// Small tolerance so floating-point scroll positions don't leave a fade
+// stuck faintly visible/invisible right at the very edge.
+const EDGE_TOLERANCE = 2;
+
 /**
  * Splits a project's flat `images` array into lines, breaking immediately
  * before any image with `wrapBefore: true`. This is deliberate/author-defined
@@ -40,11 +44,11 @@ export function PortfolioGrid({ items }: PortfolioGridProps) {
   const [activeIndex, setActiveIndex] = useState(-1);
   const [displayedIndex, setDisplayedIndex] = useState(0);
   const [transitioning, setTransitioning] = useState(false);
-  const [highlightedKey, setHighlightedKey] = useState<string | null>(null);
   const transitionTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const highlightTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const rowRefs = useRef<(HTMLAnchorElement | null)[]>([]);
+  const rowRefs = useRef<(HTMLDivElement | null)[]>([]);
   const imageRefs = useRef<Record<string, HTMLElement | null>>({});
+  const lineRefs = useRef<Record<string, HTMLDivElement | null>>({});
+  const pageBgRef = useRef<Record<string, string>>({});
 
   // Computed once per `items` change, then reused by the main rows and the
   // active project's sidebar thumbnails — this guarantees they use identical
@@ -100,19 +104,17 @@ export function PortfolioGrid({ items }: PortfolioGridProps) {
         behavior: "smooth",
       });
     }
-
-    setHighlightedKey(key);
-    if (highlightTimer.current) clearTimeout(highlightTimer.current);
-    highlightTimer.current = setTimeout(() => setHighlightedKey(null), 1200);
   }
 
   useEffect(() => {
-    const els = rowRefs.current.filter(Boolean) as HTMLAnchorElement[];
+    const els = rowRefs.current.filter(
+      (el): el is HTMLDivElement => el !== null,
+    );
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const index = els.indexOf(entry.target as HTMLAnchorElement);
+            const index = els.indexOf(entry.target as HTMLDivElement);
             setTimeout(() => {
               (entry.target as HTMLElement).style.opacity = "1";
               (entry.target as HTMLElement).style.transform = "translateY(0)";
@@ -132,11 +134,108 @@ export function PortfolioGrid({ items }: PortfolioGridProps) {
     return () => observer.disconnect();
   }, []);
 
+  // Scroll-fade indicators: for each line's horizontal scroll container,
+  // show/hide the left/right edge fades based on actual scroll position —
+  // not a one-time "does this overflow" check, since that would go stale
+  // the moment the user scrolls.
+  useEffect(() => {
+    const cleanups: Array<() => void> = [];
+
+    Object.entries(lineRefs.current).forEach(([lineKey, line]) => {
+      if (!line) return;
+      const wrapper = line.parentElement;
+      if (!wrapper) return;
+      const leftFade = wrapper.querySelector<HTMLElement>("[data-fade='left']");
+      const rightFade = wrapper.querySelector<HTMLElement>(
+        "[data-fade='right']",
+      );
+      if (!leftFade || !rightFade) return;
+
+      // Walk up from the row to find the nearest ancestor with an actual
+      // (non-transparent) background color, and fade to that exact color.
+      // This avoids hardcoding a guess between near-identical tokens like
+      // --color-surface-base (#fff) and --color-surface-page (#f4f3fc) —
+      // whichever one is really behind this row, the fade will match it.
+      // Cached per line so the hover effect below can instantly restore it
+      // without re-reading computed styles mid-transition.
+      let bg = "rgb(255, 255, 255)";
+      let node: HTMLElement | null = wrapper;
+      while (node) {
+        const computed = getComputedStyle(node).backgroundColor;
+        if (
+          computed &&
+          computed !== "rgba(0, 0, 0, 0)" &&
+          computed !== "transparent"
+        ) {
+          bg = computed;
+          break;
+        }
+        node = node.parentElement;
+      }
+      pageBgRef.current[lineKey] = bg;
+      wrapper.style.setProperty("--fade-bg", bg);
+
+      const update = () => {
+        const canScrollLeft = line.scrollLeft > EDGE_TOLERANCE;
+        const canScrollRight =
+          line.scrollLeft <
+          line.scrollWidth - line.clientWidth - EDGE_TOLERANCE;
+        leftFade.classList.toggle("opacity-100", canScrollLeft);
+        rightFade.classList.toggle("opacity-100", canScrollRight);
+      };
+
+      update();
+      line.addEventListener("scroll", update, { passive: true });
+      window.addEventListener("resize", update);
+
+      // Image/video dimensions load asynchronously and change scrollWidth,
+      // so recheck once each one finishes loading.
+      const media = line.querySelectorAll<HTMLImageElement | HTMLVideoElement>(
+        "img, video",
+      );
+      media.forEach((el) => {
+        const loadEvent = el.tagName === "VIDEO" ? "loadedmetadata" : "load";
+        el.addEventListener(loadEvent, update);
+        cleanups.push(() => el.removeEventListener(loadEvent, update));
+      });
+
+      cleanups.push(() => {
+        line.removeEventListener("scroll", update);
+        window.removeEventListener("resize", update);
+      });
+    });
+
+    return () => cleanups.forEach((fn) => fn());
+  }, [projectsWithLines]);
+
+  // When a row becomes active/hovered, its fade should match the new hover
+  // background instead of the page background behind it — swapped directly
+  // via the CSS variable rather than re-reading computed styles, since doing
+  // that mid-transition would just capture whatever color the transition
+  // happened to be at that exact frame, not the final target color.
+  useEffect(() => {
+    projectsWithLines.forEach(({ project, lines }, i) => {
+      const isActive = i === activeIndex;
+      lines.forEach((_, lineIndex) => {
+        const lineKey = `${project.slug}-line-${lineIndex}`;
+        const line = lineRefs.current[lineKey];
+        const wrapper = line?.parentElement as HTMLElement | null;
+        if (!wrapper) return;
+        wrapper.style.setProperty(
+          "--fade-bg",
+          isActive
+            ? "var(--color-active-bg)"
+            : (pageBgRef.current[lineKey] ?? "#ffffff"),
+        );
+      });
+    });
+  }, [activeIndex, projectsWithLines]);
+
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] xl:grid-cols-[1fr_320px] gap-12 items-start">
+    <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] xl:grid-cols-[1fr_400px] gap-8 lg:gap-12 items-start">
       {/* ── Rows: one per project, image count varies ── */}
       <div
-        className="flex flex-col gap-8 sm:gap-11 min-w-0"
+        className="flex flex-col gap-10 sm:gap-11 min-w-0"
         itemScope
         itemType="https://schema.org/ItemList"
       >
@@ -145,24 +244,26 @@ export function PortfolioGrid({ items }: PortfolioGridProps) {
 
           const rowStyle: CSSProperties & Record<`--${string}`, string> = {
             "--row-height": project.rowHeight ?? DEFAULT_ROW_HEIGHT,
+            marginBottom: "2em",
             opacity: 0,
             transform: "translateY(20px)",
             transition:
-              "opacity 0.6s cubic-bezier(0.16,1,0.3,1), transform 0.6s cubic-bezier(0.16,1,0.3,1), outline-color 0.2s",
+              "opacity 0.6s cubic-bezier(0.16,1,0.3,1), transform 0.6s cubic-bezier(0.16,1,0.3,1), outline-color 0.2s, background-color 0.2s",
           };
 
           return (
-            <Link
+            <div
               key={project.slug}
               ref={(el) => {
                 rowRefs.current[i] = el;
               }}
-              href={project.href}
               onMouseEnter={() => handleHover(i)}
               className={[
-                "group flex flex-col gap-1.5 max-w-full rounded-sm",
+                "group flex flex-col gap-1.5 max-w-full rounded-sm p-1.5",
                 "outline outline-2 outline-offset-[6px] transition-[outline-color] duration-200",
-                isActive ? "outline-violet" : "outline-transparent",
+                isActive
+                  ? "outline-violet bg-active-bg"
+                  : "outline-transparent bg-transparent",
               ].join(" ")}
               style={rowStyle}
               itemScope
@@ -171,119 +272,163 @@ export function PortfolioGrid({ items }: PortfolioGridProps) {
               <meta itemProp="name" content={project.title} />
               <meta itemProp="description" content={project.description} />
 
-              {lines.map((line, lineIndex) => (
-                <div
-                  key={`${project.slug}-line-${lineIndex}`}
-                  data-scroll-line="true"
-                  className={[
-                    "flex gap-1.5 max-w-full",
-                    "overflow-x-auto overflow-y-hidden [scrollbar-width:none] [-ms-overflow-style:none]",
-                    "[&::-webkit-scrollbar]:hidden",
-                  ].join(" ")}
-                >
-                  {line.map((img, imgIndex) => {
-                    const video = isVideoSrc(img.src);
-                    const hasRatio = Boolean(img.aspectRatio);
-                    const key = `${project.slug}-${lineIndex}-${imgIndex}`;
-                    const isHighlighted = highlightedKey === key;
+              {lines.map((line, lineIndex) => {
+                const lineKey = `${project.slug}-line-${lineIndex}`;
 
-                    // Two rendering paths:
-                    // 1. aspectRatio is set → sized container + next/image `fill`
-                    // 2. no aspectRatio → no container sizing at all; the media
-                    //    itself is height: var(--row-height), width: auto, so its
-                    //    own natural intrinsic ratio decides how wide it renders.
-                    //    next/image's `fill` mode requires a container with a
-                    //    definite size, so it can't express "auto width" — that's
-                    //    why this path drops to a plain <img>/<video>.
-                    if (hasRatio) {
-                      return (
-                        <div
-                          key={key}
-                          ref={(el) => {
-                            imageRefs.current[key] = el;
-                          }}
-                          className={[
-                            "relative flex-none overflow-hidden rounded-sm bg-surface-subtle h-[var(--row-height)]",
-                            "outline outline-2 outline-offset-2 transition-[outline-color] duration-300",
-                            isHighlighted
-                              ? "outline-violet"
-                              : "outline-transparent",
-                          ].join(" ")}
-                          style={{ aspectRatio: img.aspectRatio }}
-                        >
-                          {video ? (
-                            <video
-                              src={img.src}
-                              autoPlay
-                              muted
-                              loop
-                              playsInline
-                              preload="metadata"
-                              aria-label={img.alt}
-                              className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out-expo group-hover:scale-[1.035]"
-                            />
-                          ) : (
-                            <Image
-                              src={img.src}
-                              alt={img.alt}
-                              fill
-                              sizes="(max-width: 768px) 60vw, 40vw"
-                              className="object-cover transition-transform duration-500 ease-out-expo group-hover:scale-[1.035]"
-                            />
-                          )}
-                        </div>
-                      );
-                    }
+                return (
+                  <div key={lineKey} className="relative">
+                    {/* Edge fades — visibility toggled in the scroll-fade effect above based on real scroll position. Narrower on small screens so they don't eat too much of a smaller row. */}
+                    <div
+                      data-fade="left"
+                      aria-hidden="true"
+                      className="pointer-events-none absolute inset-y-0 left-0 z-10 w-10 sm:w-16 opacity-0 transition-opacity duration-300"
+                      style={{
+                        background:
+                          "linear-gradient(to right, var(--fade-bg, #ffffff), transparent)",
+                      }}
+                    />
+                    <div
+                      data-fade="right"
+                      aria-hidden="true"
+                      className="pointer-events-none absolute inset-y-0 right-0 z-10 w-10 sm:w-16 opacity-0 transition-opacity duration-300"
+                      style={{
+                        background:
+                          "linear-gradient(to left, var(--fade-bg, #ffffff), transparent)",
+                      }}
+                    />
 
-                    return video ? (
-                      // eslint-disable-next-line jsx-a11y/media-has-caption
-                      <video
-                        key={key}
-                        ref={(el) => {
-                          imageRefs.current[key] = el;
-                        }}
-                        src={img.src}
-                        autoPlay
-                        muted
-                        loop
-                        playsInline
-                        preload="metadata"
-                        aria-label={img.alt}
-                        className={[
-                          "flex-none h-[var(--row-height)] w-auto rounded-sm transition-transform duration-500 ease-out-expo group-hover:scale-[1.035]",
-                          "outline outline-2 outline-offset-2 transition-[outline-color] duration-300",
-                          isHighlighted
-                            ? "outline-violet"
-                            : "outline-transparent",
-                        ].join(" ")}
-                      />
-                    ) : (
-                      // eslint-disable-next-line @next/next/no-img-element
-                      <img
-                        key={key}
-                        ref={(el) => {
-                          imageRefs.current[key] = el;
-                        }}
-                        src={img.src}
-                        alt={img.alt}
-                        className={[
-                          "flex-none h-[var(--row-height)] w-auto rounded-sm transition-transform duration-500 ease-out-expo group-hover:scale-[1.035]",
-                          "outline outline-2 outline-offset-2 transition-[outline-color] duration-300",
-                          isHighlighted
-                            ? "outline-violet"
-                            : "outline-transparent",
-                        ].join(" ")}
-                      />
-                    );
-                  })}
+                    <div
+                      ref={(el) => {
+                        lineRefs.current[lineKey] = el;
+                      }}
+                      data-scroll-line="true"
+                      className={[
+                        "flex gap-1.5 max-w-full",
+                        "overflow-x-auto overflow-y-hidden [scrollbar-width:none] [-ms-overflow-style:none]",
+                        "[&::-webkit-scrollbar]:hidden [-webkit-overflow-scrolling:touch]",
+                      ].join(" ")}
+                    >
+                      {line.map((img, imgIndex) => {
+                        const video = isVideoSrc(img.src);
+                        const hasRatio = Boolean(img.aspectRatio);
+                        const key = `${project.slug}-${lineIndex}-${imgIndex}`;
+
+                        // Two rendering paths:
+                        // 1. aspectRatio is set → sized container + next/image `fill`
+                        // 2. no aspectRatio → no container sizing at all; the media
+                        //    itself is height: var(--row-height), width: auto, so its
+                        //    own natural intrinsic ratio decides how wide it renders.
+                        //    next/image's `fill` mode requires a container with a
+                        //    definite size, so it can't express "auto width" — that's
+                        //    why this path drops to a plain <img>/<video>.
+                        if (hasRatio) {
+                          return (
+                            <div
+                              key={key}
+                              ref={(el) => {
+                                imageRefs.current[key] = el;
+                              }}
+                              className="relative flex-none overflow-hidden rounded-sm bg-surface-subtle h-[var(--row-height)]"
+                              style={{ aspectRatio: img.aspectRatio }}
+                            >
+                              {video ? (
+                                <video
+                                  src={img.src}
+                                  autoPlay
+                                  muted
+                                  loop
+                                  playsInline
+                                  preload="metadata"
+                                  aria-label={img.alt}
+                                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out-expo"
+                                />
+                              ) : (
+                                <Image
+                                  src={img.src}
+                                  alt={img.alt}
+                                  fill
+                                  sizes="(max-width: 640px) 80vw, (max-width: 1024px) 60vw, 40vw"
+                                  className="object-cover transition-transform duration-500 ease-out-expo"
+                                />
+                              )}
+                            </div>
+                          );
+                        }
+
+                        return video ? (
+                          // eslint-disable-next-line jsx-a11y/media-has-caption
+                          <video
+                            key={key}
+                            ref={(el) => {
+                              imageRefs.current[key] = el;
+                            }}
+                            src={img.src}
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                            preload="metadata"
+                            aria-label={img.alt}
+                            className="flex-none h-[var(--row-height)] w-auto rounded-sm transition-transform duration-500 ease-out-expo"
+                          />
+                        ) : (
+                          // eslint-disable-next-line @next/next/no-img-element
+                          <img
+                            key={key}
+                            ref={(el) => {
+                              imageRefs.current[key] = el;
+                            }}
+                            src={img.src}
+                            alt={img.alt}
+                            className="flex-none h-[var(--row-height)] w-auto rounded-sm transition-transform duration-500 ease-out-expo"
+                          />
+                        );
+                      })}
+                    </div>
+                  </div>
+                );
+              })}
+
+              {/* ── Mobile/tablet project info ──
+                  The sidebar below is desktop-only (hidden until `lg`), so
+                  without this, anyone on a phone or tablet would see rows of
+                  images and nothing else — no title, no description, no way
+                  to get to the project page. This mirrors the sidebar's
+                  content but inline per-project, since there's no hover
+                  affordance on touch devices to justify a single shared panel. */}
+              <div className="lg:hidden mt-3">
+                <div className="flex flex-wrap gap-1.5 mb-3">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="text-[10px] font-semibold tracking-[0.10em] uppercase text-violet bg-active-bg rounded-full px-2.5 py-1"
+                    >
+                      {tag}
+                    </span>
+                  ))}
                 </div>
-              ))}
-            </Link>
+                <h3
+                  className="text-[19px] sm:text-[21px] font-semibold leading-[1.2] tracking-[-0.01em] text-ink mb-1.5"
+                  style={{ fontFamily: "'Parkinsans', sans-serif" }}
+                >
+                  {project.title}
+                </h3>
+                <p className="text-[13px] leading-[1.65] text-ink-mid mb-3 max-w-prose">
+                  {project.description}
+                </p>
+                <Link
+                  href={project.href}
+                  className="inline-flex items-center gap-1.5 text-[12px] font-semibold text-violet transition-[gap] duration-200 hover:gap-3 active:gap-3"
+                >
+                  View Project →
+                </Link>
+              </div>
+            </div>
           );
         })}
       </div>
 
-      {/* ── Sidebar ── */}
+      {/* ── Sidebar (desktop only — see the inline mobile/tablet block above for < lg) ── */}
       <aside className="hidden lg:block sticky top-[88px]">
         <div
           className="transition-[opacity,transform] duration-[220ms] ease-out"
@@ -300,7 +445,7 @@ export function PortfolioGrid({ items }: PortfolioGridProps) {
 
           {/* Tags */}
           <div className="flex flex-wrap gap-1.5 mb-4">
-            {active.tags.map((tag) => (
+            {active.tags.map((tag: string) => (
               <span
                 key={tag}
                 className="text-[10px] font-semibold tracking-[0.10em] uppercase text-violet bg-active-bg rounded-full px-2.5 py-1"

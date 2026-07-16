@@ -39,12 +39,14 @@ export default function Marquee({ items, theme }: MarqueeProps) {
                 style={{ height: "40px", width: "auto", objectFit: "contain" }}
               />
             ) : (
-              item.label
+              <>
+                {item.label}
+                <span
+                  className="w-[5px] h-[5px] rounded-full flex-shrink-0"
+                  style={{ background: item.color }}
+                />
+              </>
             )}
-            <span
-              className="w-[5px] h-[5px] rounded-full flex-shrink-0"
-              style={{ background: item.color }}
-            />
           </div>
         ))}
       </div>

@@ -97,7 +97,7 @@ function Orb({ orb }: { orb: OrbConfig }) {
   );
 }
 
-// ─── Pill theme maps ──────────────────────────────────────────────────────────
+// ─── Pill theme maps (desktop/tablet — unchanged, dot-separated single pill) ──
 
 const PILL_STYLES: Record<PillTheme, string> = {
   light:
@@ -109,6 +109,19 @@ const PILL_STYLES: Record<PillTheme, string> = {
   brand:
     "border border-[rgba(124,92,232,0.35)] text-[#a78bfa] bg-[rgba(124,92,232,0.10)]",
   // BrandSoft: same violet accent, lightened for the lavender-white background
+  brandSoft: "border border-[rgba(124,92,232,0.18)] text-[#4a4a6a] bg-white",
+};
+
+// ─── Chip theme maps (mobile only — individual wrapping chips) ───────────────
+
+const CHIP_STYLES: Record<PillTheme, string> = {
+  light:
+    "border border-[rgba(24,24,27,0.10)] text-[rgba(24,24,27,0.58)] bg-transparent",
+  dark: "border border-[rgba(255,255,255,0.12)] text-[rgba(255,255,255,0.55)] bg-transparent",
+  violet:
+    "border border-[rgba(155,92,246,0.30)] text-[rgba(155,92,246,0.85)] bg-[rgba(155,92,246,0.06)]",
+  brand:
+    "border border-[rgba(124,92,232,0.35)] text-[#a78bfa] bg-[rgba(124,92,232,0.10)]",
   brandSoft: "border border-[rgba(124,92,232,0.18)] text-[#4a4a6a] bg-white",
 };
 
@@ -193,11 +206,12 @@ export default function Hero({
       {resolvedOrbs.map((orb, i) => (
         <Orb key={i} orb={orb} />
       ))}
-      {/* ── Eyebrow pill ── */}
+
+      {/* ── Eyebrow: original single dot-separated pill, tablet (md) and up ── */}
       {pillItems.length > 0 && showPills && (
         <div
           className={[
-            "anim-fade-up anim-delay-1 inline-flex items-center gap-2 text-[12px] font-semibold tracking-[0.1em] uppercase px-4 py-1.5 rounded-full mb-8",
+            "anim-fade-up anim-delay-1 hidden md:inline-flex items-center gap-2 text-[12px] font-semibold tracking-[0.1em] uppercase px-4 py-1.5 rounded-full mb-8",
             PILL_STYLES[resolvedPillTheme],
           ].join(" ")}
         >
@@ -210,6 +224,24 @@ export default function Hero({
           ))}
         </div>
       )}
+
+      {/* ── Eyebrow: wrapping chips, mobile only (below md) ── */}
+      {pillItems.length > 0 && showPills && (
+        <div className="anim-fade-up anim-delay-1 flex md:hidden flex-wrap items-center justify-center gap-2 mb-6 max-w-sm">
+          {pillItems.map((item, i) => (
+            <span
+              key={i}
+              className={[
+                "inline-flex items-center text-[10px] font-semibold tracking-[0.06em] uppercase px-3 py-1 rounded-full whitespace-nowrap",
+                CHIP_STYLES[resolvedPillTheme],
+              ].join(" ")}
+            >
+              {item}
+            </span>
+          ))}
+        </div>
+      )}
+
       <div className="max-w-3xl">
         {/* ── Heading ── */}
         <h1
