@@ -1,13 +1,13 @@
 {
   "light": [
-    { "color": "#9b5cf6", "size": 600, "top": "-100px", "left": "-100px" },
-    { "color": "#06b6d4", "size": 500, "bottom": "-80px", "right": "-80px" },
+    { "color": "#9b5cf6", "size": 500, "top": "-100px", "left": "-100px" },
+    { "color": "#06b6d4", "size": 400, "bottom": "-60px", "right": "0px" },
     { "color": "#10b981", "size": 300, "top": "40%", "left": "55%" }
   ],
   "dark": [
     {
       "color": "#4c35a8",
-      "size": 600,
+      "size": 500,
       "top": "-100px",
       "left": "-100px",
       "opacity": 0.14,
@@ -15,9 +15,9 @@
     },
     {
       "color": "#1558a0",
-      "size": 500,
-      "bottom": "-80px",
-      "right": "-80px",
+      "size": 400,
+      "bottom": "-60px",
+      "right": "0px",
       "opacity": 0.12,
       "blur": 80
     },
@@ -33,7 +33,7 @@
   "brand": [
     {
       "color": "#7c5ce8",
-      "size": 700,
+      "size": 600,
       "top": "-120px",
       "left": "-80px",
       "opacity": 0.35,
@@ -41,9 +41,9 @@
     },
     {
       "color": "#a78bfa",
-      "size": 500,
-      "bottom": "-80px",
-      "right": "-60px",
+      "size": 400,
+      "bottom": "-60px",
+      "right": "0px",
       "opacity": 0.25,
       "blur": 90
     },
@@ -67,9 +67,9 @@
     },
     {
       "color": "#f9c5ef",
-      "size": 600,
-      "bottom": "-100px",
-      "right": "-80px",
+      "size": 500,
+      "bottom": "-80px",
+      "right": "0px",
       "opacity": 0.2,
       "blur": 70
     }
@@ -77,7 +77,7 @@
   "neutral": [
     {
       "color": "#ffffff",
-      "size": 700,
+      "size": 600,
       "top": "-120px",
       "left": "-80px",
       "opacity": 0.15,
@@ -85,9 +85,9 @@
     },
     {
       "color": "#a9a9ac",
-      "size": 500,
-      "bottom": "-80px",
-      "right": "-60px",
+      "size": 400,
+      "bottom": "-60px",
+      "right": "0px",
       "opacity": 0.5,
       "blur": 90
     },

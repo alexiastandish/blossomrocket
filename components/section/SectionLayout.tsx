@@ -107,10 +107,14 @@ export default function SectionLayout({
         itemScope
         itemType="https://schema.org/ItemList"
       >
-        {/* ── Orbs ── */}
-        {resolvedOrbs.map((orb, i) => (
-          <Orb key={i} orb={orb} />
-        ))}
+        <div
+          className="overflow-hidden absolute inset-0 pointer-events-none"
+          aria-hidden="true"
+        >
+          {resolvedOrbs.map((orb, i) => (
+            <Orb key={i} orb={orb} />
+          ))}
+        </div>
 
         {isStacked ? (
           <div className="relative z-10 max-w-3xl mx-auto flex flex-col items-center text-center gap-10">

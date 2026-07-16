@@ -45,6 +45,7 @@
     gap: 48px;
     width: max-content;
     animation: marquee 28s linear infinite;
+    will-change: transform;
   }
 
   .scroll-line {
