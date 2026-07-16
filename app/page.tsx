@@ -6,7 +6,6 @@ import DiffBand from "@/components/DiffBand";
 import DeploymentSection from "@/components/DeploymentSection";
 import CompanyStoresSection from "@/components/CompanyStoresSection";
 import FrameworkSection from "@/components/FrameworkSection";
-import ContactSection from "@/components/ContactSection";
 import OurServices from "@/components/OurServices";
 import marqueeItems from "@/data/marquees/homepage.json";
 import FAQSection from "@/components/faqs/FAQSection";
@@ -76,7 +75,6 @@ export default function Home() {
         theme="dark"
         pageUrl="https://blossomrocket.studio"
       />
-      <ContactSection />
     </>
   );
 }
