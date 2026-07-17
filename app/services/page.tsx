@@ -33,6 +33,8 @@ import WebAppDesign from "@/components/svgs/WebAppDesign";
 import serviceItems from "@/data/marquees/services.json";
 import faqs from "@/data/faqs/services/home.json";
 import DiffBand from "@/components/DiffBand";
+import { CTASlots } from "@/components/CTASlot";
+import { CalendlyButton } from "@/components/CalendlyButton";
 
 export default function Services() {
   return (
@@ -47,13 +49,22 @@ export default function Services() {
           </>
         }
         body={`Blossom Rocket helps businesses create cohesive brand experiences across digital platforms, physical materials, merchandise, marketing assets, and company stores through SplashBrands.`}
-        ctas={[
-          {
-            label: "Schedule a call today to launch your brand into orbit 🚀",
-            href: "/contact",
-            variant: "primary",
-          },
-        ]}
+        ctaSlot={
+          <CTASlots
+            theme="dark"
+            ctas={[
+              {
+                label: "Launch Your Brand Into Orbit with Blossom Rocket 🚀",
+                variant: "primary",
+              },
+              {
+                label: "Explore Blossom Rocket's Work",
+                href: "/work",
+                variant: "outline",
+              },
+            ]}
+          />
+        }
       />
 
       <Marquee items={serviceItems} theme="dark" />
@@ -64,6 +75,13 @@ export default function Services() {
         id="beyond-traditional-creative-services"
         theme="neutral"
         eyebrow="Beyond Traditional Creative Services"
+        ctas={[
+          {
+            label: "Explore Brand Experiences Created by Blossom Rocket",
+            href: "/work",
+            variant: "primary",
+          },
+        ]}
         heading={
           <>
             Blossom Rocket Services:
@@ -123,14 +141,14 @@ export default function Services() {
             <em className="grad-text not-italic">Recognition and Trust.</em>
           </>
         }
-        subtext="Brand Identity is the visual foundation of a business. Blossom Rocket helps businesses create Brand Identity systems that support recognition, trust, and consistency across digital design, marketing assets, print materials, merchandise, promotional products, and company stores."
         ctas={[
           {
-            label: "Explore Blossom Rocket's Brand Identity Services",
+            label: "Explore Blossom Rocket's Brand Identity Service",
             href: "/services/brand-identity",
             variant: "primary",
           },
         ]}
+        subtext="Brand Identity is the visual foundation of a business. Blossom Rocket helps businesses create Brand Identity systems that support recognition, trust, and consistency across digital design, marketing assets, print materials, merchandise, promotional products, and company stores."
         schemaItems={[
           { topic: "Visual Identity" },
           { topic: "Logo Suite & System" },
@@ -169,7 +187,7 @@ export default function Services() {
         subtext="A Brand System defines how a business documents, manages, and applies its brand across digital and physical experiences. Blossom Rocket helps businesses create Brand Systems that reduce inconsistency, improve collaboration, and support long-term growth."
         ctas={[
           {
-            label: "Explore Blossom Rocket Brand Systems",
+            label: "Explore Blossom Rocket's Brand Systems Services",
             href: "/services/brand-systems",
             variant: "primary",
           },
@@ -223,7 +241,7 @@ export default function Services() {
         subtext="Blossom Rocket creates branded digital experiences that help businesses communicate clearly, engage users, and scale online. Digital Design connects brand standards with websites, applications, landing pages, digital marketing, and front-end implementation."
         ctas={[
           {
-            label: "Explore Blossom Rocket Digital Design Services",
+            label: "Explore Blossom Rocket's Digital Design Services",
             href: "/services/digital-design ",
             variant: "primary",
           },
@@ -280,7 +298,7 @@ export default function Services() {
         subtext="Marketing Assets help businesses communicate across social media, events, sales initiatives, email marketing, advertising, and customer communications. Blossom Rocket creates consistent marketing assets that help businesses build stronger recognition across every stage of the customer journey."
         ctas={[
           {
-            label: "Explore Marketing Assets with Blossom Rocket",
+            label: "Explore Blossom Rocket's Marketing Assets Services",
             href: "/services/marketing-assets",
             variant: "primary",
           },
@@ -321,7 +339,7 @@ export default function Services() {
       <SectionLayout
         id="print-and-environmental-design"
         theme="brand"
-        cols={[3, 5]}
+        // cols={[3, 5]}
         stickyRight={false}
         mobileOrder="left-first"
         desktopOrder="maintain"
@@ -337,7 +355,8 @@ export default function Services() {
         subtext="Print & Environmental Design extends a brand into physical spaces, printed materials, packaging, signage, vehicles, events, and customer-facing environments. Blossom Rocket helps businesses create physical brand assets that align with their broader brand system."
         ctas={[
           {
-            label: "Explore Print & Environmental Design with Blossom Rocket",
+            label:
+              "Explore Blossom Rocket's Print & Environmental Design Services",
             href: "/services/print-and-environmental-design",
             variant: "primary",
           },
@@ -399,7 +418,8 @@ export default function Services() {
         }
         ctas={[
           {
-            label: "Expand Your Brand with Merch and Promotional Products",
+            label:
+              "Explore Blossom Rocket's Merchandise & Promotional Product Services",
             href: "/services/merchandise-and-promotional-products",
             variant: "primary",
           },
@@ -464,6 +484,7 @@ export default function Services() {
         mobileOrder="right-first"
         desktopOrder="reverse"
         eyebrow="Company Stores"
+        stackedBtns={true}
         heading={
           <>
             Company Store Solutions{" "}
@@ -471,13 +492,21 @@ export default function Services() {
           </>
         }
         subtext="Blossom Rocket helps businesses implement Company Store solutions through SplashBrands that centralize branded merchandise, simplify ordering, maintain brand consistency, and support scalable employee, customer, and event programs."
-        ctas={[
-          {
-            label: "Explore Company Stores through Splash Brands",
-            href: "/services/company-stores",
-            variant: "primary",
-          },
-        ]}
+        ctaSlot={
+          <CTASlots
+            theme="light"
+            ctas={[
+              {
+                label:
+                  "Explore Company Stores by Blossom Rocket, Powered by SplashBrands",
+                href: "/services/company-stores",
+                variant: "primary",
+              },
+            ]}
+          >
+            <CalendlyButton className="relative inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-[#18181b] text-white text-[14px] font-semibold border border-[rgba(255,255,255,0.15)] transition-all duration-200 hover:-translate-y-0.5 overflow-hidden" />
+          </CTASlots>
+        }
       >
         <CardStatBento
           items={[

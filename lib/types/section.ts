@@ -37,8 +37,9 @@ export type OrbConfig = {
 
 export type CtaButton = {
   label: string;
-  href: string;
-  variant?: "primary" | "outline";
+  href?: string;
+  variant: "primary" | "outline";
+  onClick?: () => void;
 };
 
 // ─── Section: ItemList config ────────────────────────────────────────────────────────

@@ -1,3 +1,4 @@
+import { CTASlots } from "./CTASlot";
 import SectionLabel from "./SectionLabel";
 
 export default function WhatIsSection() {
@@ -26,6 +27,16 @@ export default function WhatIsSection() {
             touchpoint. It creates consistency across all channels — digital and
             physical.
           </p>
+
+          <CTASlots
+            ctas={[
+              {
+                label: "Explore Projects by Blossom Rocket",
+                href: "/work",
+                variant: "primary",
+              },
+            ]}
+          />
         </div>
 
         {/* Right — insight card */}

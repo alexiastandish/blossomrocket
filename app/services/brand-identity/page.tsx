@@ -1,3 +1,4 @@
+import { CTASlots } from "@/components/CTASlot";
 import FAQSection from "@/components/faqs/FAQSection";
 import Hero from "@/components/Hero";
 import {
@@ -14,6 +15,17 @@ export default function page() {
     <div>
       <Hero
         theme="light"
+        ctaSlot={
+          <CTASlots
+            ctas={[
+              {
+                label:
+                  "Schedule a call today to launch your brand into orbit 🚀",
+                variant: "primary",
+              },
+            ]}
+          />
+        }
         heading={
           <>
             Brand Identity that Builds{" "}
@@ -21,13 +33,6 @@ export default function page() {
           </>
         }
         body={`Blossom Rocket helps businesses create Brand Identity systems that establish consistency across company stores, digital design, marketing assets, print and promo products.`}
-        ctas={[
-          {
-            label: "Schedule a call today to launch your brand into orbit 🚀",
-            href: "/contact",
-            variant: "primary",
-          },
-        ]}
         pillItems={[
           "Visual Identity",
           "Logo Design",
@@ -43,6 +48,18 @@ export default function page() {
         theme="brand"
         cols={[1, 1]}
         mobileOrder="left-first"
+        ctaSlot={
+          <CTASlots
+            ctas={[
+              {
+                label: "Explore Branding Projects by Blossom Rocket",
+                variant: "primary",
+                // TODO: update to work page with brand-identity filter on
+                href: "/work",
+              },
+            ]}
+          />
+        }
         eyebrow="More Than a Logo"
         heading={
           <>

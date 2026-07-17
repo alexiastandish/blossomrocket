@@ -39,4 +39,5 @@ export interface HeroProps {
   id?: string;
 
   showPills?: boolean;
+  ctaSlot?: React.ReactNode;
 }

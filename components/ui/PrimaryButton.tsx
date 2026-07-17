@@ -3,7 +3,6 @@ import { SectionTheme } from "@/lib/types/section";
 import Link from "next/link";
 
 const primaryStyles: Record<HeroTheme | SectionTheme, string> = {
-  // light — brand violet, per --color-states/button primary
   light:
     "bg-[var(--color-fg-brand)] text-[var(--color-fg-on-dark)] hover:shadow-[0_12px_36px_rgba(124,92,232,0.28)]",
   dark: "bg-[var(--color-pink-400)] text-[var(--color-fg-on-dark)] hover:bg-[#b8368e] hover:shadow-[0_12px_36px_rgba(217,70,168,0.35)]",
@@ -18,20 +17,29 @@ const primaryStyles: Record<HeroTheme | SectionTheme, string> = {
 export function PrimaryButton({
   label,
   href,
+  onClick,
   theme = "light",
 }: {
   label: string;
-  href: string;
+  href?: string;
+  onClick?: () => void;
   theme?: HeroTheme | SectionTheme;
 }) {
-  const isExternal = href.startsWith("http");
-
   const className = [
-    "btn-grad-overlay relative inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-[14px] font-semibold tracking-[0.01em] transition-all duration-200 hover:-translate-y-0.5 overflow-hidden",
+    "w-fit btn-grad-overlay relative mb-2 inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-[14px] font-semibold tracking-[0.01em] transition-all duration-200 hover:-translate-y-0.5 overflow-hidden cursor-pointer",
     primaryStyles[theme] ?? primaryStyles.light,
   ].join(" ");
 
-  if (isExternal) {
+  if (onClick) {
+    return (
+      <button onClick={onClick} className={className}>
+        <span className="relative z-10">{label}</span>
+        <span className="relative z-10">→</span>
+      </button>
+    );
+  }
+
+  if (href?.startsWith("http")) {
     return (
       <a
         href={href}
@@ -46,7 +54,7 @@ export function PrimaryButton({
   }
 
   return (
-    <Link href={href} className={className}>
+    <Link href={href!} className={className}>
       <span className="relative z-10">{label}</span>
       <span className="relative z-10">↗</span>
     </Link>

@@ -6,20 +6,26 @@ type CTAsProps = {
   ctas: CtaButton[];
   theme?: SectionTheme;
   hero?: boolean;
+  stackedBtns?: boolean;
 };
 
-function CTAs({ ctas, theme = "light", hero = false }: CTAsProps) {
+function CTAs({
+  ctas,
+  theme = "light",
+  hero = false,
+  stackedBtns = false,
+}: CTAsProps) {
   return (
     <>
       {ctas.length > 0 && (
         <div
-          className={`anim-fade-up anim-delay-4 flex gap-4 ${hero ? "justify-center" : ""} flex-wrap`}
+          className={`anim-fade-up anim-delay-4 flex gap-4 ${hero ? "justify-center" : ""} flex-wrap ${stackedBtns ? "flex-col" : ""} `}
         >
           {ctas.map((cta) =>
             cta.variant === "outline" ? (
-              <OutlineButton key={cta.href} {...cta} theme={theme} />
+              <OutlineButton key={cta.label} {...cta} theme={theme} />
             ) : (
-              <PrimaryButton key={cta.href} {...cta} theme={theme} />
+              <PrimaryButton key={cta.label} {...cta} theme={theme} />
             ),
           )}
         </div>

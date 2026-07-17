@@ -12,23 +12,27 @@ import FAQSection from "@/components/faqs/FAQSection";
 import homePageFAQs from "@/data/faqs/home.json";
 import { SectionLayout } from "@/components/section";
 import HomeHeroVideo from "@/components/HomeHeroVideo";
+import { CTASlots } from "@/components/CTASlot";
 
 export default function Home() {
   return (
     <>
       <Hero
-        ctas={[
-          {
-            label: "Launch Your Brand with Blossom Rocket 🚀",
-            href: "/contact",
-            variant: "primary",
-          },
-          {
-            label: "Explore Blossom Rocket Services",
-            href: "/services",
-            variant: "outline",
-          },
-        ]}
+        ctaSlot={
+          <CTASlots
+            ctas={[
+              {
+                label: "Launch Your Brand with Blossom Rocket 🚀",
+                variant: "primary",
+              },
+              {
+                label: "Explore Projects by Blossom Rocket",
+                href: "/work",
+                variant: "outline",
+              },
+            ]}
+          />
+        }
       />
       <Marquee items={marqueeItems} />
       <SectionLayout
@@ -45,8 +49,8 @@ export default function Home() {
         subtext="Create a brand that works consistently across websites, marketing materials, promotional products, apparel, signage, onboarding kits, tradeshow materials, and company stores."
         ctas={[
           {
-            label: "Explore Blossom Rocket Brand Systems",
-            href: "/services/brand-systems",
+            label: "Explore Blossom Rocket Services",
+            href: "/services",
             variant: "primary",
           },
         ]}

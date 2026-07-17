@@ -12,6 +12,7 @@ export type SectionLayoutProps = {
   subtext?: string;
   eyebrow?: string;
   ctas?: CtaButton[];
+  ctaSlot?: React.ReactNode;
   children: React.ReactNode;
   cols?: [number, number];
   mobileOrder?: "left-first" | "right-first";
@@ -25,6 +26,7 @@ export type SectionLayoutProps = {
   className?: string;
   stickyRight?: boolean;
   layout?: "split" | "stacked";
+  stackedBtns?: boolean;
 };
 
 export default function SectionLayout({
@@ -32,6 +34,7 @@ export default function SectionLayout({
   subtext,
   eyebrow,
   ctas,
+  ctaSlot,
   children,
   cols = [1, 1],
   mobileOrder = "left-first",
@@ -45,6 +48,7 @@ export default function SectionLayout({
   className = "",
   stickyRight = true,
   layout = "split",
+  stackedBtns,
 }: SectionLayoutProps) {
   const activeTheme = tokens[theme];
   const schemaId = id ?? "section";
@@ -56,12 +60,9 @@ export default function SectionLayout({
 
   const isStacked = layout === "stacked";
 
-  // Mobile order: which column shows first below lg
   const leftMobileOrder = mobileOrder === "right-first" ? "order-2" : "order-1";
   const rightMobileOrder =
     mobileOrder === "right-first" ? "order-1" : "order-2";
-
-  // Desktop order: maintain keeps left=1/right=2, reverse flips them at lg+
   const leftDesktopOrder =
     desktopOrder === "reverse" ? "lg:order-2" : "lg:order-1";
   const rightDesktopOrder =
@@ -73,8 +74,8 @@ export default function SectionLayout({
   const alignClass =
     align === "center" ? "text-center items-center" : "text-left items-start";
   const ctasAlign = align === "center" ? "justify-center" : "justify-start";
+  const ctasStacked = stackedBtns ? "flex-col" : "";
 
-  // orbs prop wins; undefined falls back to per-theme defaults; [] disables all
   const resolvedOrbs: OrbConfig[] =
     orbs !== undefined ? orbs : DEFAULT_ORBS[theme];
 
@@ -88,6 +89,13 @@ export default function SectionLayout({
     return child;
   });
 
+  // Renders either the ctaSlot (client component) or the static CTAs
+  const ctaContent =
+    ctaSlot ??
+    (ctas && ctas.length > 0 ? (
+      <CTAs ctas={ctas} theme={theme} stackedBtns={stackedBtns} />
+    ) : null);
+
   return (
     <>
       {schema && (
@@ -100,15 +108,15 @@ export default function SectionLayout({
 
       <section
         id={id}
-        className={["section relative", activeTheme.section, className].join(
-          " ",
-        )}
+        className={["relative", activeTheme.section, className].join(" ")}
+        style={{ padding: "clamp(80px,11vw,160px) clamp(32px,7vw,100px)" }}
         aria-labelledby={`${schemaId}-heading`}
         itemScope
         itemType="https://schema.org/ItemList"
       >
+        {/* ── Orbs — clipped independently so overflow-hidden doesn't break sticky ── */}
         <div
-          className="overflow-hidden absolute inset-0 pointer-events-none"
+          className="absolute inset-0 overflow-hidden pointer-events-none"
           aria-hidden="true"
         >
           {resolvedOrbs.map((orb, i) => (
@@ -127,20 +135,24 @@ export default function SectionLayout({
                 {heading}
               </h2>
               {subtext && (
-                <p className={`body leading-[1.8] mb-2 ${activeTheme.subtext}`}>
+                <p
+                  className={`leading-[1.8] mb-2 ${activeTheme.subtext}`}
+                  style={{ fontSize: "clamp(15px,1.4vw,18px)" }}
+                >
                   {subtext}
                 </p>
               )}
-              {ctas && (
-                <div className="flex flex-wrap gap-3 justify-center mt-6">
-                  <CTAs ctas={ctas} theme={theme} />
+              {ctaContent && (
+                <div
+                  className={`flex justify-center mt-6 ${stackedBtns && "flex-col"}`}
+                >
+                  {ctaContent}
                 </div>
               )}
             </div>
             <div className="rv d3 w-full">{themedChildren}</div>
           </div>
         ) : (
-          /* ── Split layout: copy left, children right ── */
           <div
             className="section-col-grid grid items-start gap-[clamp(40px,7vw,100px)] relative z-10"
             style={
@@ -159,17 +171,18 @@ export default function SectionLayout({
               </h2>
               {subtext && (
                 <p
-                  className={`body leading-[1.8] mb-8 ${activeTheme.subtext}`}
+                  className={`leading-[1.8] mb-8 ${activeTheme.subtext}`}
                   style={{
+                    fontSize: "clamp(15px,1.4vw,18px)",
                     maxWidth: "560px",
                   }}
                 >
                   {subtext}
                 </p>
               )}
-              {ctas && (
-                <div className={`flex flex-wrap gap-3 ${ctasAlign}`}>
-                  <CTAs ctas={ctas} theme={theme} />
+              {ctaContent && (
+                <div className={`flex ${ctasAlign} ${ctasStacked}`}>
+                  {ctaContent}
                 </div>
               )}
             </div>

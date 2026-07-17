@@ -5,8 +5,6 @@ import CTAs from "./CTAs";
 
 const DEFAULT_CTAS: CtaButton[] = defaultCtas as CtaButton[];
 
-// Hero owns its own orb defaults — separate from section system's default_orbs.json
-// Keyed by theme, mirroring SectionLayout's DEFAULT_ORBS pattern.
 const HERO_DEFAULT_ORBS: Record<
   PillTheme extends string ? string : never,
   OrbConfig[]
@@ -21,7 +19,6 @@ const HERO_DEFAULT_ORBS: Record<
     { color: "#06b6d4", size: 500, bottom: "-80px", right: "-80px" },
     { color: "#10b981", size: 300, top: "40%", left: "55%" },
   ],
-  // Brand: deep navy bg — larger, richer violet glow (matches SectionLayout brand orbs)
   brand: [
     {
       color: "#7c5ce8",
@@ -40,7 +37,6 @@ const HERO_DEFAULT_ORBS: Record<
       blur: 80,
     },
   ],
-  // BrandSoft: light lavender bg — subtle, low-opacity glow so it doesn't muddy the light background
   brandSoft: [
     {
       color: "#7c5ce8",
@@ -78,7 +74,6 @@ function Orb({ orb }: { orb: OrbConfig }) {
     opacity = 0.18,
     blur = 80,
   } = orb;
-
   return (
     <div
       className="absolute rounded-full pointer-events-none"
@@ -97,7 +92,7 @@ function Orb({ orb }: { orb: OrbConfig }) {
   );
 }
 
-// ─── Pill theme maps (desktop/tablet — unchanged, dot-separated single pill) ──
+// ─── Theme maps ───────────────────────────────────────────────────────────────
 
 const PILL_STYLES: Record<PillTheme, string> = {
   light:
@@ -105,14 +100,10 @@ const PILL_STYLES: Record<PillTheme, string> = {
   dark: "border border-[rgba(255,255,255,0.12)] text-[rgba(255,255,255,0.55)] bg-transparent",
   violet:
     "border border-[rgba(155,92,246,0.30)] text-[rgba(155,92,246,0.85)] bg-[rgba(155,92,246,0.06)]",
-  // Brand: violet accent on dark navy, matching SectionLayout's brand pill tokens
   brand:
     "border border-[rgba(124,92,232,0.35)] text-[#a78bfa] bg-[rgba(124,92,232,0.10)]",
-  // BrandSoft: same violet accent, lightened for the lavender-white background
   brandSoft: "border border-[rgba(124,92,232,0.18)] text-[#4a4a6a] bg-white",
 };
-
-// ─── Chip theme maps (mobile only — individual wrapping chips) ───────────────
 
 const CHIP_STYLES: Record<PillTheme, string> = {
   light:
@@ -124,8 +115,6 @@ const CHIP_STYLES: Record<PillTheme, string> = {
     "border border-[rgba(124,92,232,0.35)] text-[#a78bfa] bg-[rgba(124,92,232,0.10)]",
   brandSoft: "border border-[rgba(124,92,232,0.18)] text-[#4a4a6a] bg-white",
 };
-
-// ─── Theme → background / text maps ──────────────────────────────────────────
 
 const HERO_BG: Record<string, string> = {
   light: "bg-surface-page",
@@ -176,6 +165,7 @@ export default function Hero({
     "Company Stores",
   ],
   ctas = DEFAULT_CTAS,
+  ctaSlot,
   orbs,
   theme = "light",
   pillTheme,
@@ -192,22 +182,31 @@ export default function Hero({
   const headingColor = HERO_HEADING_COLOR[theme] ?? HERO_HEADING_COLOR.light;
   const bgClass = HERO_BG[theme] ?? HERO_BG.light;
 
+  // ctaSlot wins over ctas — same pattern as SectionLayout
+  const ctaContent =
+    ctaSlot ?? (ctas.length > 0 ? <CTAs ctas={ctas} hero={true} /> : null);
+
   return (
     <header
       id={id}
       className={[
-        "section relative min-h-[100svh] flex flex-col items-center justify-center text-center overflow-hidden",
+        "section relative min-h-[100svh] flex flex-col items-center justify-center text-center",
         bgClass,
         className,
       ].join(" ")}
       role="banner"
     >
-      {/* ── Ambient orbs ── */}
-      {resolvedOrbs.map((orb, i) => (
-        <Orb key={i} orb={orb} />
-      ))}
+      {/* ── Orbs — in their own overflow-hidden layer so they don't cause horizontal scroll ── */}
+      <div
+        className="absolute inset-0 overflow-hidden pointer-events-none"
+        aria-hidden="true"
+      >
+        {resolvedOrbs.map((orb, i) => (
+          <Orb key={i} orb={orb} />
+        ))}
+      </div>
 
-      {/* ── Eyebrow: original single dot-separated pill, tablet (md) and up ── */}
+      {/* ── Eyebrow pill — tablet and up ── */}
       {pillItems.length > 0 && showPills && (
         <div
           className={[
@@ -225,7 +224,7 @@ export default function Hero({
         </div>
       )}
 
-      {/* ── Eyebrow: wrapping chips, mobile only (below md) ── */}
+      {/* ── Eyebrow chips — mobile only ── */}
       {pillItems.length > 0 && showPills && (
         <div className="anim-fade-up anim-delay-1 flex md:hidden flex-wrap items-center justify-center gap-2 mb-6 max-w-sm">
           {pillItems.map((item, i) => (
@@ -242,11 +241,11 @@ export default function Hero({
         </div>
       )}
 
-      <div className="max-w-3xl">
+      <div className="relative z-10 max-w-3xl">
         {/* ── Heading ── */}
         <h1
           className={[
-            "anim-fade-up anim-delay-2 relative z-10 font-semibold leading-[1.0] mb-7 h1",
+            "anim-fade-up anim-delay-2 font-semibold leading-[1.0] mb-7 h1",
             headingColor,
           ].join(" ")}
         >
@@ -256,7 +255,7 @@ export default function Hero({
         {/* ── Body ── */}
         <p
           className={[
-            "subtext anim-fade-up anim-delay-3 relative z-10 leading-[1.72] mx-auto mb-12 max-w-6xl",
+            "subtext anim-fade-up anim-delay-3 leading-[1.72] mx-auto mb-12 max-w-6xl",
             bodyTextColor,
           ].join(" ")}
         >
@@ -264,22 +263,22 @@ export default function Hero({
         </p>
 
         {/* ── CTAs ── */}
-        {ctas.length > 0 && (
-          <div className="anim-fade-up anim-delay-4 flex gap-4 justify-center flex-wrap">
-            <CTAs ctas={ctas} hero={true} />
-          </div>
-        )}
-
-        {/* ── Scroll hint ── */}
-        {showScrollHint && (
-          <div
-            className="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-40"
-            aria-hidden="true"
-          >
-            <div className="scroll-line" />
+        {ctaContent && (
+          <div className="anim-fade-up anim-delay-4 flex flex-col sm:flex-row flex-wrap gap-4 items-center justify-center mt-8">
+            {ctaContent}
           </div>
         )}
       </div>
+
+      {/* ── Scroll hint ── */}
+      {showScrollHint && (
+        <div
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-40"
+          aria-hidden="true"
+        >
+          <div className="scroll-line" />
+        </div>
+      )}
     </header>
   );
 }

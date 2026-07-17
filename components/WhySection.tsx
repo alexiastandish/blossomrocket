@@ -1,3 +1,4 @@
+import { CTASlots } from "./CTASlot";
 import SectionLabel from "./SectionLabel";
 
 const outcomes = [
@@ -34,6 +35,15 @@ export default function WhySection() {
             Colors change. Merchandise looks disconnected. Marketing materials
             feel unrelated.
           </p>
+          <CTASlots
+            ctas={[
+              {
+                label: "Explore Brand Systems by Blossom Rocket",
+                href: "/services/brand-systems",
+                variant: "primary",
+              },
+            ]}
+          />
         </div>
 
         {/* Right */}
