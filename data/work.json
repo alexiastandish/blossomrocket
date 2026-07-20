@@ -264,19 +264,5 @@
         "aspectRatio": "16/8"
       }
     ]
-  },
-  {
-    "slug": "kratos-strategy",
-    "title": "Kratos Strategy",
-    "description": "Product feature spreads for the Powerbeats² and Tour² collections, featuring LeBron James and Lady Gaga.",
-    "client": "Le Fronk",
-    "tags": ["Brand Identity", "Marketing Assets", "Print Design"],
-    "href": "/services/print-environmental",
-    "images": [
-      {
-        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/97e94e2c-5f46-4deb-13c4-117b03b74f00/public",
-        "alt": "Convergence Capital Business Cards"
-      }
-    ]
   }
 ]

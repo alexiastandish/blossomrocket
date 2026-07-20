@@ -150,8 +150,7 @@ export default function WorkPage() {
             >
               A selection of brand identity, brand systems, digital design,
               marketing assets, print, and promotional products across
-              industries. Every project is built on a brand system designed to
-              work across every touchpoint.
+              industries.
             </p>
           </header>
 
