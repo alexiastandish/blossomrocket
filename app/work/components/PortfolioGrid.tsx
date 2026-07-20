@@ -244,7 +244,7 @@ export function PortfolioGrid({ items }: PortfolioGridProps) {
 
           const rowStyle: CSSProperties & Record<`--${string}`, string> = {
             "--row-height": project.rowHeight ?? DEFAULT_ROW_HEIGHT,
-            marginBottom: "2em",
+            marginBottom: "4em",
             opacity: 0,
             transform: "translateY(20px)",
             transition:

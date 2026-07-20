@@ -97,32 +97,37 @@ export default function Services() {
           {
             topic: "Brand Identity",
             description:
-              "TODO: description description description description",
+              "Brand Identity defines your logo, typography, color palette, imagery, graphics, and tagline to create a recognizable and memorable brand.",
           },
           {
             topic: "Brand Systems",
             description:
-              "TODO: description description description description",
+              "Brand Systems establish brand guidelines, usage standards, visual rules, and governance that keep every brand touchpoint consistent across teams and channels.",
           },
           {
-            topic: "Brand Marketing",
+            topic: "Digital Design",
             description:
-              "TODO: description description description description",
+              "Digital Design creates websites, landing pages, UI design, email graphics, social media content, and digital experiences that keep your brand consistent across every screen.",
           },
           {
-            topic: "Brand Print",
+            topic: "Marketing Assets",
             description:
-              "TODO: description description description description",
+              "Marketing Assets produce sales collateral, presentations, advertising creative, campaign graphics, and branded content that support launches, campaigns, and business growth.",
           },
           {
-            topic: "Promotional Identity",
+            topic: "Print & Environmental",
             description:
-              "TODO: description description description description",
+              "Print & Environmental designs packaging, signage, trade show displays, printed collateral, and environmental graphics that bring your brand into physical spaces.",
           },
           {
-            topic: "Brand Optimization",
+            topic: "Merchandise & Promotional Products",
             description:
-              "TODO: description description description description",
+              "Merchandise & Promotional Products create branded apparel, promotional products, employee kits, event giveaways, and custom merchandise that extend your brand beyond digital touchpoints.",
+          },
+          {
+            topic: "Company Stores",
+            description:
+              "Company Stores build branded online storefronts that simplify merchandise ordering, employee programs, client gifting, onboarding kits, and promotional product fulfillment.",
           },
         ]}
       />
@@ -441,37 +446,37 @@ export default function Services() {
           {
             topic: "Branded Apparel",
             description:
-              "TODO: description description description description",
+              "Branded Apparel creates custom shirts, hoodies, hats, uniforms, and wearable merchandise that increase brand recognition and team visibility.",
           },
           {
             topic: "Promotional Products",
             description:
-              "TODO: description description description description",
+              "Promotional Products include branded drinkware, office supplies, technology accessories, and giveaways that keep your brand visible long after an event.",
           },
           {
             topic: "Event Merchandising",
             description:
-              "TODO: description description description description",
+              "Event Merchandising develops branded products, apparel, and promotional materials that create memorable experiences at conferences, trade shows, and events.",
           },
           {
             topic: "Corporate Gifting",
             description:
-              "TODO: description description description description",
+              "Corporate Gifting delivers thoughtfully curated branded gifts that strengthen relationships with clients, employees, partners, and prospects.",
           },
           {
             topic: "Customer Appreciation Programs",
             description:
-              "TODO: description description description description",
+              "Customer Appreciation Programs create branded merchandise campaigns that reward loyal customers, increase engagement, and build lasting brand connections.",
           },
           {
             topic: "Onboarding Kits",
             description:
-              "TODO: description description description description",
+              "Onboarding Kits combine branded merchandise, welcome materials, and company essentials to create a consistent employee and client onboarding experience.",
           },
           {
             topic: "Merchandise Custom Designs",
             description:
-              "TODO: description description description description",
+              "Merchandise Custom Designs create original artwork, product graphics, and custom merchandise concepts that transform branded products into unique brand experiences.",
           },
         ]}
       />
@@ -495,6 +500,8 @@ export default function Services() {
         ctaSlot={
           <CTASlots
             theme="light"
+            stacked
+            alignLeft
             ctas={[
               {
                 label:
@@ -504,7 +511,7 @@ export default function Services() {
               },
             ]}
           >
-            <CalendlyButton className="relative inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-[#18181b] text-white text-[14px] font-semibold border border-[rgba(255,255,255,0.15)] transition-all duration-200 hover:-translate-y-0.5 overflow-hidden" />
+            <CalendlyButton />
           </CTASlots>
         }
       >

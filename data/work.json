@@ -207,7 +207,7 @@
     "href": "/services/print-environmental",
     "images": [
       {
-        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/b0f2144d-0944-4254-926a-1eb4049f4a00/public",
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/50be148f-5d88-4e4e-b338-b54239ff4e00/public",
         "alt": "Almeta Web Design 1"
       },
       {
@@ -248,11 +248,31 @@
         "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/898f4d03-dafb-4cfe-85d0-140341352400/public",
         "alt": "Compassion For Kids Brand System"
       },
-
       {
-        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/854b0df5-9d00-41a7-a9c2-7e891cf9af00/public",
-        "alt": "Compassion For Kids Booklet"
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/6ece6b1b-e4fe-4d5d-1b83-0950af334900/public",
+        "alt": "Compassion For Kids - Brochure Cover"
       },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/1ffb257e-e107-4962-8c24-db0acffd8600/public",
+        "alt": "Compassion For Kids - Brochure Spread 1"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/a198a216-15d1-41d6-c628-18b3f4977400/public",
+        "alt": "Compassion For Kids - Brochure Spread 2"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/ec8e9519-4c46-4a28-5f2e-5b1f81ccdd00/public",
+        "alt": "Compassion For Kids - Brochure Spread 3"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/dba76fab-94f9-4aab-c524-6948bad18900/public",
+        "alt": "Compassion For Kids - Brochure Spread 4"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/c03c3d08-0862-4f64-8255-8afc371a5000/public",
+        "alt": "Compassion For Kids - Brochure Back"
+      },
+
       {
         "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/5367be01-5fd8-4e6c-bdca-67895232ef00/public",
         "alt": "Compassion For Kids Web Slider 1",
@@ -262,6 +282,41 @@
         "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/cbbb88dc-4d25-47de-7d77-8f6d6dc10700/public",
         "alt": "Compassion For Kids Web Slider 2",
         "aspectRatio": "16/8"
+      }
+    ]
+  },
+  {
+    "slug": "scholarshot",
+    "title": "Scholarshot",
+    "description": "Product feature spreads for the Powerbeats² and Tour² collections, featuring LeBron James and Lady Gaga.",
+    "client": "Scholarshot",
+    "tags": ["Print Design"],
+    "href": "/services/print-environmental",
+    "images": [
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/93478b56-02cd-4e2c-68aa-e6df7c9ff100/public",
+        "alt": "Scholarshot Booklet 1"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/eec1be3d-f8bb-48c7-dbc0-f6e415b6e200/public",
+        "alt": "Scholarshot Booklet 2"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/60079e4f-1642-4298-e141-503a53c7fb00/public",
+        "alt": "Scholarshot Booklet 3"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/a079388a-4bb9-469e-2809-2079cda83400/public",
+        "alt": "Scholarshot Brochure 1"
+      },
+
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/58dbb2be-f630-433a-ac35-0fe701b8de00/public",
+        "alt": "Scholarshot Brochure 2"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/51e93857-9659-4e8d-f1f1-6081d206e200/public",
+        "alt": "Scholarshot Brochure 3"
       }
     ]
   }

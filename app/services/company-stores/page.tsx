@@ -9,6 +9,8 @@ import { SectionLayout } from "@/components/section";
 import SectionCardOverlayList from "@/components/section/CardOverlayList";
 import FAQSection from "@/components/faqs/FAQSection";
 import faqs from "@/data/faqs/services/company-stores.json";
+import { CTASlots } from "@/components/CTASlot";
+import { CalendlyButton } from "@/components/CalendlyButton";
 
 // ─── Page metadata ────────────────────────────────────────────────────────────
 
@@ -154,13 +156,20 @@ export default function CompanyStores() {
             </>
           }
           body="A Company Store is a centralized online storefront that provides employees, customers, teams, departments, and event organizers with access to approved branded merchandise, apparel, promotional products, and marketing materials. Blossom Rocket helps businesses implement Company Store solutions through SplashBrands that simplify ordering, improve brand consistency, and support scalable merchandise programs."
-          ctas={[
-            {
-              label: "Explore Company Store Solutions Through SplashBrands",
-              href: "https://splashbrands.com/",
-              variant: "primary",
-            },
-          ]}
+          ctaSlot={
+            <CTASlots
+              theme="light"
+              ctas={[
+                {
+                  label: "Explore Company Store Solutions Through SplashBrands",
+                  href: "https://splashbrands.com/",
+                  variant: "primary",
+                },
+              ]}
+            >
+              <CalendlyButton theme="dark" />
+            </CTASlots>
+          }
         />
 
         {/* ── Section 2: Why Company Stores
@@ -177,13 +186,6 @@ export default function CompanyStores() {
             </>
           }
           subtext="As organizations grow, branded merchandise often becomes fragmented across departments, locations, vendors, and events. Different teams order different products, branding becomes inconsistent, and approval processes become difficult to manage. Blossom Rocket helps businesses implement Company Stores that centralize merchandise management while providing employees, customers, and teams with access to approved branded products."
-          ctas={[
-            {
-              label: "Create A More Consistent Merchandise Program",
-              href: "/contact-us",
-              variant: "primary",
-            },
-          ]}
           pageUrl={PAGE_URL}
           schemaItems={[
             { topic: "Centralize Branded Merchandise" },
@@ -224,13 +226,6 @@ export default function CompanyStores() {
             </>
           }
           subtext="Blossom Rocket helps businesses create the brand systems, merchandise programs, and creative assets that support successful Company Store initiatives. SplashBrands provides the technology, manufacturing, fulfillment, and operational infrastructure that powers those programs. Together, Blossom Rocket and SplashBrands help businesses create scalable merchandise solutions that support employees, customers, departments, events, and locations through a centralized Company Store platform."
-          ctas={[
-            {
-              label: "Learn How Blossom Rocket And SplashBrands Work Together",
-              href: "/contact-us",
-              variant: "primary",
-            },
-          ]}
           cardHeading="Together, Blossom Rocket and SplashBrands cover:"
           cardVariant="list"
           items={[
@@ -326,13 +321,20 @@ export default function CompanyStores() {
             </>
           }
           subtext="Businesses use SplashBrands Company Stores to manage employee apparel programs, promotional products, event merchandise, customer gifting initiatives, and branded product distribution across multiple teams and locations."
-          ctas={[
-            {
-              label: "Explore SplashBrands Company Store Examples",
-              href: "https://splashbrands.com/",
-              variant: "primary",
-            },
-          ]}
+          ctaSlot={
+            <CTASlots
+              theme="light"
+              ctas={[
+                {
+                  label: "Explore Company Store Customers",
+                  href: "https://splashbrands.com/customers/",
+                  variant: "primary",
+                },
+              ]}
+            >
+              <CalendlyButton theme="dark">Talk With an Expert</CalendlyButton>
+            </CTASlots>
+          }
           pageUrl={PAGE_URL}
         >
           <CardLinkGrid

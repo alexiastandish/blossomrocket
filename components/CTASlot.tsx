@@ -10,17 +10,23 @@ type CTASlotProps = {
   ctas?: CtaButton[];
   theme?: SectionTheme | HeroTheme;
   children?: React.ReactNode;
+  stacked?: boolean;
+  alignLeft?: boolean;
 };
 
 export function CTASlots({
   ctas = [],
   theme = "light",
   children,
+  stacked = false,
+  alignLeft = false,
 }: CTASlotProps) {
   const { open } = useContactModal();
 
   return (
-    <>
+    <div
+      className={`flex flex-col ${stacked ? `sm:flex-col` : `sm:flex-row`} ${alignLeft ? `items-start` : `items-center`} gap-3 sm:gap-4`}
+    >
       {ctas.map((cta) => {
         const onClick = !cta.href ? open : undefined;
         return cta.variant === "outline" ? (
@@ -42,6 +48,6 @@ export function CTASlots({
         );
       })}
       {children}
-    </>
+    </div>
   );
 }

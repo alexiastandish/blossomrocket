@@ -26,7 +26,7 @@ export function OutlineButton({
   theme: HeroTheme | SectionTheme;
 }) {
   const className = [
-    "w-fit inline-flex items-center gap-2 mb-4 px-8 py-3.5 rounded-full border text-[14px] font-semibold transition-all duration-200 hover:-translate-y-0.5 cursor-pointer",
+    "w-fit inline-flex items-center gap-2 mb-2 px-8 py-3.5 rounded-full border text-[14px] font-semibold transition-all duration-200 hover:-translate-y-0.5 cursor-pointer",
     outlineStyles[theme] ?? outlineStyles.light,
   ].join(" ");
 
