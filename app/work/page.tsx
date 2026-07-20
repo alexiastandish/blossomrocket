@@ -148,9 +148,10 @@ export default function WorkPage() {
               className="rv text-fg-secondary leading-[1.72]"
               style={{ maxWidth: "560px" }}
             >
-              A selection of brand identity, digital design, print, and
-              marketing work across industries. Every project is built on a
-              brand system designed to work across every touchpoint.
+              A selection of brand identity, brand systems, digital design,
+              marketing assets, print, and promotional products across
+              industries. Every project is built on a brand system designed to
+              work across every touchpoint.
             </p>
           </header>
 

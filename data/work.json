@@ -166,7 +166,7 @@
     "slug": "melissa-renfro-reality",
     "title": "Melissa Renfro Reality",
     "description": "Product feature spreads for the Powerbeats² and Tour² collections, featuring LeBron James and Lady Gaga.",
-    "client": "Le Fronk",
+    "client": "Melissa Renfro",
     "tags": ["Brand Identity", "Print Design"],
     "href": "/services/print-environmental",
     "images": [
@@ -184,17 +184,87 @@
     "slug": "convergence-capital",
     "title": "Convergence Capital",
     "description": "Product feature spreads for the Powerbeats² and Tour² collections, featuring LeBron James and Lady Gaga.",
-    "client": "Le Fronk",
+    "client": "Convergence Capital",
     "tags": ["Brand Identity", "Marketing Assets", "Print Design"],
     "href": "/services/print-environmental",
     "images": [
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/997fc2ba-afe9-495b-ee0b-58b09ca84600/public",
+        "alt": "Convergence Capital Presentation Slides"
+      },
       {
         "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/97e94e2c-5f46-4deb-13c4-117b03b74f00/public",
         "alt": "Convergence Capital Business Cards"
       }
     ]
   },
+  {
+    "slug": "almeta-magazine",
+    "title": "Almeta Magazine",
+    "description": "Product feature spreads for the Powerbeats² and Tour² collections, featuring LeBron James and Lady Gaga.",
+    "client": "Almeta",
+    "tags": ["Digital Design", "Print Design"],
+    "href": "/services/print-environmental",
+    "images": [
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/b0f2144d-0944-4254-926a-1eb4049f4a00/public",
+        "alt": "Almeta Web Design 1"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/01ba01c7-257f-4d93-c439-3ab9dd4dcb00/public",
+        "alt": "Almeta Web Design 2"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/f1f4f855-2949-4741-6d44-251eaba25100/public",
+        "alt": "Almeta Publication Design 1"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/03f6819e-9195-47ce-8c14-c2cbc485f100/public",
+        "alt": "Almeta Publication Design 2"
+      }
+    ]
+  },
 
+  {
+    "slug": "compassion-for-kids",
+    "title": "Compassion For Kids",
+    "description": "Product feature spreads for the Powerbeats² and Tour² collections, featuring LeBron James and Lady Gaga.",
+    "client": "Compassion For Kids",
+    "tags": [
+      "Brand Identity",
+      "Brand Systems",
+      "Digital Design",
+      "Print Design",
+      "Marketing Assets",
+      "Promo Products"
+    ],
+    "href": "/services/print-environmental",
+    "images": [
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/d57af26b-1df4-4f66-8eea-261deb5b1c00/public",
+        "alt": "Compassion For Kids Promo Product"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/898f4d03-dafb-4cfe-85d0-140341352400/public",
+        "alt": "Compassion For Kids Brand System"
+      },
+
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/854b0df5-9d00-41a7-a9c2-7e891cf9af00/public",
+        "alt": "Compassion For Kids Booklet"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/5367be01-5fd8-4e6c-bdca-67895232ef00/public",
+        "alt": "Compassion For Kids Web Slider 1",
+        "aspectRatio": "16/8"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/cbbb88dc-4d25-47de-7d77-8f6d6dc10700/public",
+        "alt": "Compassion For Kids Web Slider 2",
+        "aspectRatio": "16/8"
+      }
+    ]
+  },
   {
     "slug": "kratos-strategy",
     "title": "Kratos Strategy",
