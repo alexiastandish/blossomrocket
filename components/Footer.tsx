@@ -18,10 +18,13 @@ const company = [
   { label: "FAQ", href: "#faq" },
 ];
 const connect = [
-  { label: "LinkedIn", href: "#" },
-  { label: "Twitter / X", href: "#" },
-  { label: "Instagram", href: "#" },
-  { label: "hello@blossomrocket.co", href: "mailto:hello@blossomrocket.co" },
+  // { label: "LinkedIn", href: "#" },
+  // { label: "Twitter / X", href: "#" },
+  // { label: "Instagram", href: "#" },
+  {
+    label: "alexia@blossomrocket.studio",
+    href: "mailto:alexia@blossomrocket.studio",
+  },
 ];
 
 export default function Footer() {
