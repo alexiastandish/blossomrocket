@@ -1,3 +1,4 @@
+import { CTASlots } from "@/components/CTASlot";
 import FAQSection from "@/components/faqs/FAQSection";
 import Hero from "@/components/Hero";
 import { CardCallout, CardList, SectionLayout } from "@/components/section";
@@ -20,20 +21,23 @@ export default function page() {
           <>
             A strong Brand System helps teams create consistent experiences
             while reducing confusion, duplication, and brand fragmentation.
-            <span className="block h-4" />
             Blossom Rocket helps businesses create Brand Systems that support
             consistency across websites, marketing assets, print materials,
             packaging, promotional products, signage, apparel, company stores,
             and more.
           </>
         }
-        ctas={[
-          {
-            label: "Expand your brand and grow your store with Blossom Rocket",
-            href: "/contact",
-            variant: "primary",
-          },
-        ]}
+        ctaSlot={
+          <CTASlots
+            ctas={[
+              {
+                label:
+                  "Expand your brand and grow your store with Blossom Rocket",
+                variant: "primary",
+              },
+            ]}
+          />
+        }
         pillItems={[
           "Brand Guidelines",
           "Brand Standards",
@@ -52,6 +56,18 @@ export default function page() {
             Brand Systems Create A{" "}
             <em className="grad-text not-italic">Single Source of Truth.</em>
           </>
+        }
+        ctaSlot={
+          <CTASlots
+            ctas={[
+              {
+                label: "Explore Brand Systems Created by Blossom Rocket",
+                variant: "primary",
+                // TODO: update to work page with brand-systems filter on
+                href: "/work",
+              },
+            ]}
+          />
         }
         subtext="Blossom Rocket helps businesses establish brand systems that operate as a rce of truth which define how brand assets should be created, managed, and applied. The result is a more consistent brand experience across both digital and physical channels."
         schemaItems={[
@@ -158,6 +174,17 @@ export default function page() {
               "Graphics & Pattern Systems establish supporting visual elements that reinforce brand recognition beyond logos and typography.",
           },
         ]}
+        ctaSlot={
+          <CTASlots
+            theme="light"
+            ctas={[
+              {
+                label: "Build Your Brand System with Blossom Rocket",
+                variant: "primary",
+              },
+            ]}
+          />
+        }
       />
       {/* -- Touchpoints -- */}
       <SectionLayout
@@ -171,13 +198,6 @@ export default function page() {
         }
         theme="dark"
         eyebrow="Touchpoints"
-        ctas={[
-          {
-            label: "Todo",
-            href: "/contact",
-            variant: "primary",
-          },
-        ]}
         desktopOrder="reverse"
         subtext="Modern brands exist across dozens of channels and experiences. A Brand System helps ensure those experiences remain connected."
         pageUrl="https://blossomrocket.studio/services/brand-systems"

@@ -13,6 +13,7 @@ import CTAs from "../CTAs";
 import { Orb } from "../ui/Orb";
 import SectionLabel from "../SectionLabel";
 import { SectionTheme } from "@/lib/types/section";
+import React from "react";
 
 const DEFAULT_CTAS: CtaButton[] = defaultCtas as CtaButton[];
 const ORBS_BY_THEME = defaultOrbs as Record<SectionTheme, OrbConfig[]>;
@@ -22,6 +23,7 @@ export default function SectionItemList({
   items,
   theme = "light",
   ctas = DEFAULT_CTAS,
+  ctaSlot,
   heading,
   subtext,
   eyebrow,
@@ -32,12 +34,11 @@ export default function SectionItemList({
   pageUrl,
   children,
   layout = "stacked",
-}: SectionItemListProps) {
+}: SectionItemListProps & { ctaSlot?: React.ReactNode }) {
   const activeTheme = tokens[theme];
   const hasItems = items.length > 0;
   const schemaId = id ?? "section";
 
-  // orbs prop wins; undefined falls back to per-theme defaults; [] disables all
   const resolvedOrbs: OrbConfig[] =
     orbs !== undefined ? orbs : (ORBS_BY_THEME[theme] ?? []);
 
@@ -50,14 +51,13 @@ export default function SectionItemList({
       )
     : { itemListSchema: null, faqSchema: null };
 
+  const ctaContent =
+    ctaSlot ?? (ctas.length > 0 ? <CTAs ctas={ctas} theme={theme} /> : null);
+
   const mainContent = (
     <div
       className="section section-col-grid grid items-start gap-[clamp(40px,7vw,100px)] relative z-10"
-      style={
-        {
-          "--section-cols": `${5}fr ${3}fr`,
-        } as React.CSSProperties
-      }
+      style={{ "--section-cols": `${5}fr ${3}fr` } as React.CSSProperties}
     >
       <div className="">
         {eyebrow && <SectionLabel text={eyebrow} />}
@@ -77,9 +77,9 @@ export default function SectionItemList({
             {subtext}
           </p>
         )}
-        {ctas.length > 0 && (
-          <div className="rv flex gap-4 flex-wrap mt-12">
-            <CTAs ctas={ctas} theme={theme} />
+        {ctaContent && (
+          <div className="rv flex flex-col sm:flex-row gap-4 flex-wrap mt-12">
+            {ctaContent}
           </div>
         )}
       </div>
@@ -151,18 +151,20 @@ export default function SectionItemList({
       )}
       <section
         id={id}
-        className={[
-          "relative overflow-hidden",
-          activeTheme.section,
-          className,
-        ].join(" ")}
+        className={["relative", activeTheme.section, className].join(" ")}
         aria-labelledby={heading ? `${schemaId}-heading` : undefined}
         itemScope
         itemType="https://schema.org/ItemList"
       >
-        {resolvedOrbs.map((orb, i) => (
-          <Orb key={i} orb={orb} />
-        ))}
+        {/* ── Orbs in overflow-hidden wrapper — won't break sticky or cause mobile overflow ── */}
+        <div
+          className="absolute inset-0 overflow-hidden pointer-events-none"
+          aria-hidden="true"
+        >
+          {resolvedOrbs.map((orb, i) => (
+            <Orb key={i} orb={orb} />
+          ))}
+        </div>
 
         <div className="relative z-10">
           {sideCard ? (
