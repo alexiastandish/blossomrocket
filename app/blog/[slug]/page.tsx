@@ -1,4 +1,3 @@
-// app/blog/[slug]/page.tsx
 import type { Metadata } from "next";
 import { getArticleBySlug } from "@/lib/utils/blog";
 import { BlogArticle } from "@/components/blog/BlogArticle";
@@ -6,9 +5,10 @@ import { BlogArticle } from "@/components/blog/BlogArticle";
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const article = await getArticleBySlug(params.slug);
+  const { slug } = await params;
+  const article = await getArticleBySlug(slug);
   if (!article) return {};
 
   return {
@@ -33,8 +33,13 @@ export async function generateMetadata({
   };
 }
 
-export default async function Page({ params }: { params: { slug: string } }) {
-  const article = await getArticleBySlug(params.slug);
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const article = await getArticleBySlug(slug);
   if (!article) return null;
   return <BlogArticle article={article} />;
 }

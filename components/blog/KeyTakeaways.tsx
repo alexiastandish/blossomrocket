@@ -1,4 +1,3 @@
-// components/blog/KeyTakeaways.tsx
 export function KeyTakeaways({ items }: { items: string[] }) {
   if (!items.length) return null;
 

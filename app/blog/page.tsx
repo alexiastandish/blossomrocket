@@ -1,4 +1,3 @@
-// app/blog/page.tsx
 import type { Metadata } from "next";
 import { getAllArticles } from "@/lib/utils/blog";
 import { BlogIndexClient } from "@/components/blog/BlogIndexClient";

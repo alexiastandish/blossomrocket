@@ -344,7 +344,6 @@ export default function Services() {
       <SectionLayout
         id="print-and-environmental-design"
         theme="brand"
-        // cols={[3, 5]}
         stickyRight={false}
         mobileOrder="left-first"
         desktopOrder="maintain"
@@ -522,7 +521,7 @@ export default function Services() {
               graphic: <BrandedApparel />,
               size: "lg",
             },
-            { label: "Promotional Products", graphic: <PromotionalProducts /> }, // defaults to "md"
+            { label: "Promotional Products", graphic: <PromotionalProducts /> },
             {
               label: "Corporate Gifting Programs",
               graphic: <CorporateGiftingPrograms />,

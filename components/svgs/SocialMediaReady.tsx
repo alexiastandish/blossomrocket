@@ -1,4 +1,3 @@
-// SocialMediaReady.tsx
 export default function SocialMediaReady() {
   return (
     <svg

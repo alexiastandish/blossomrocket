@@ -1,4 +1,3 @@
-// BuiltForAccessibility.tsx
 export default function BuiltForAccessibility() {
   return (
     <svg

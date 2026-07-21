@@ -1,12 +1,9 @@
 import { CtaButton, OrbConfig } from "./section";
 
-// ─── Pill / eyebrow tag config ────────────────────────────────────────────────
 export type PillTheme = "light" | "dark" | "violet" | "brand" | "brandSoft";
 
-// ─── Theme config ─────────────────────────────────────────────────────────────
 export type HeroTheme = "light" | "dark" | "brand" | "brandSoft";
 
-// ─── Main props ───────────────────────────────────────────────────────────────
 export interface HeroProps {
   /** Large heading — supports JSX for <em> gradient spans */
   heading?: React.ReactNode;

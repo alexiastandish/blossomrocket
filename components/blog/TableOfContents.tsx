@@ -1,4 +1,3 @@
-// components/blog/TableOfContents.tsx
 import type { TocItem } from "@/lib/types/blog";
 
 export function TableOfContents({ items }: { items: TocItem[] }) {

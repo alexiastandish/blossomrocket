@@ -1,4 +1,3 @@
-// components/blog/ArticleJsonLd.tsx
 import type { BlogArticleData } from "@/lib/types/blog";
 
 export function ArticleJsonLd({ article }: { article: BlogArticleData }) {

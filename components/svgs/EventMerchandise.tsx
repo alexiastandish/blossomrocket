@@ -1,4 +1,3 @@
-// EventMerchandise.tsx
 export default function EventMerchandise() {
   return (
     <svg

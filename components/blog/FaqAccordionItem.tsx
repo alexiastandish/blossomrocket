@@ -1,4 +1,3 @@
-// components/blog/FaqAccordionItem.tsx  (client component)
 "use client";
 
 import { useState } from "react";

@@ -16,19 +16,10 @@ interface PortfolioGridProps {
   items: ProjectItem[];
 }
 
-// Used whenever a project doesn't set its own `rowHeight`.
 const DEFAULT_ROW_HEIGHT = "clamp(160px, 32vw, 420px)";
 
-// Small tolerance so floating-point scroll positions don't leave a fade
-// stuck faintly visible/invisible right at the very edge.
 const EDGE_TOLERANCE = 2;
 
-/**
- * Splits a project's flat `images` array into lines, breaking immediately
- * before any image with `wrapBefore: true`. This is deliberate/author-defined
- * wrapping — the same break points apply at every viewport width, unlike
- * flex-wrap's automatic reflow.
- */
 function groupImagesIntoLines(images: ProjectImage[]): ProjectImage[][] {
   const lines: ProjectImage[][] = [[]];
   images.forEach((img, i) => {

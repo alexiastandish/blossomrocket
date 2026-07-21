@@ -1,4 +1,3 @@
-// CardList.tsx
 import { CardOverlayItem } from "@/lib/types/section";
 import { tokens, SectionTokens } from "@/lib/utils/sectionTailwindTokens";
 import { ItemIcon } from "../ui/ItemIcon";

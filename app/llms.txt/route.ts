@@ -1,4 +1,3 @@
-// app/llms.txt/route.ts
 import { getAllArticles } from "@/lib/utils/blog";
 
 export async function GET() {
