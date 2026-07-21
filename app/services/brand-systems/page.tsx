@@ -201,7 +201,6 @@ export default function page() {
         subtext="Modern brands exist across dozens of channels and experiences. A Brand System helps ensure those experiences remain connected."
         pageUrl="https://blossomrocket.studio/services/brand-systems"
       >
-        {/* // TODO_ */}
         <CardLinkGrid
           heading="Blossom Rocket creates Brand Systems that support:"
           items={[

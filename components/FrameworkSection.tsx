@@ -157,7 +157,6 @@ export default function FrameworkSection() {
                 </span>
               ))}
             </div>
-            {/* TODO_ */}
 
             <div className="rv d3 pt-6 border-t border-[rgba(24,24,27,0.10)]">
               <p className="text-[13px] text-[rgba(24,24,27,0.58)] leading-[1.7] mb-4">
