@@ -8,6 +8,7 @@ import CardLinkGrid from "@/components/section/CardLinkGrid";
 import CardStatBento from "@/components/section/CardStatBento";
 import { SectionLayout } from "@/components/section";
 import SectionCardOverlayList from "@/components/section/CardOverlayList";
+import { CTASlots } from "@/components/CTASlot";
 
 const PAGE_URL = "https://blossomrocket.studio/services/marketing-assets";
 
@@ -27,13 +28,17 @@ export default function MarketingAssets() {
           </>
         }
         body="Marketing Assets help businesses create marketing materials across campaigns, social media, events, sales initiatives, and customer communications. Blossom Rocket develops campaign creative, social media assets, presentation templates, event materials, email graphics, and digital advertising assets that align with Brand Identity and Brand System standards while supporting engagement, lead generation, and business growth."
-        ctas={[
-          {
-            label: "Create Marketing Assets That Support Business Growth",
-            href: "/contact-us",
-            variant: "primary",
-          },
-        ]}
+        ctaSlot={
+          <CTASlots
+            ctas={[
+              {
+                label:
+                  "Create Marketing Assets That Support Business Growth 🚀",
+                variant: "primary",
+              },
+            ]}
+          />
+        }
       />
 
       {/* ── Section 2: Customer Journey — SectionLayout (stacked) + CardGrid ──
@@ -51,14 +56,17 @@ export default function MarketingAssets() {
           </>
         }
         subtext="Marketing assets play an important role throughout the customer experience. Every interaction contributes to how customers perceive a business. Consistent marketing materials help create stronger and more recognizable experiences across every stage of the customer journey."
-        ctas={[
-          {
-            label:
-              "Create marketing assets that support every stage of your journey",
-            href: "/contact-us",
-            variant: "primary",
-          },
-        ]}
+        ctaSlot={
+          <CTASlots
+            ctas={[
+              {
+                label:
+                  "Create marketing assets that support every stage of your journey",
+                variant: "primary",
+              },
+            ]}
+          />
+        }
         pageUrl={PAGE_URL}
         schemaItems={[
           { topic: "Brand Awareness" },
@@ -103,13 +111,6 @@ export default function MarketingAssets() {
           </>
         }
         subtext="Many businesses create marketing assets one project at a time. A social media graphic is designed for one campaign. A presentation is created for a sales meeting. An event banner is developed for a trade show. Over time, marketing materials become inconsistent, design styles evolve independently, and assets no longer feel connected to the same brand."
-        ctas={[
-          {
-            label: "Build A More Consistent Marketing Asset System",
-            href: "/contact-us",
-            variant: "primary",
-          },
-        ]}
         cardHeading="Blossom Rocket helps businesses build asset systems that support:"
         cardVariant="pills"
         items={[
@@ -142,13 +143,17 @@ export default function MarketingAssets() {
           </>
         }
         pageUrl={PAGE_URL}
-        ctas={[
-          {
-            label: "Schedule a consultation to discuss your marketing goals",
-            href: "/contact-us",
-            variant: "primary",
-          },
-        ]}
+        ctaSlot={
+          <CTASlots
+            ctas={[
+              {
+                label:
+                  "Schedule a Consultation to Discuss Your Marketing Goals",
+                variant: "primary",
+              },
+            ]}
+          />
+        }
       >
         <CardList
           heading="Marketing Asset Services Include:"
@@ -207,13 +212,17 @@ export default function MarketingAssets() {
           </>
         }
         subtext="Not every project requires a complete marketing system. Sometimes businesses need a trade show display for an upcoming event. Other times they need social media content for a campaign, presentation materials for a sales initiative, or advertising creative for a product launch. Blossom Rocket supports both one-off creative projects and ongoing marketing initiatives. Every asset is designed to support immediate goals while contributing to a more cohesive marketing presence over time."
-        ctas={[
-          {
-            label: "Launch Your Next Campaign, Event, Or Marketing Initiative",
-            href: "/contact-us",
-            variant: "primary",
-          },
-        ]}
+        ctaSlot={
+          <CTASlots
+            ctas={[
+              {
+                label:
+                  "Launch Your Next Campaign, Event, Or Marketing Initiative",
+                variant: "primary",
+              },
+            ]}
+          />
+        }
         stickyRight={false}
       >
         <CardStatBento
@@ -248,14 +257,17 @@ export default function MarketingAssets() {
         eyebrow="Every Channel, Every Environment"
         heading="Designed For Digital And Physical Marketing Channels"
         subtext="Modern marketing happens across multiple platforms and environments. Creating consistent marketing materials across channels helps businesses communicate more effectively and build stronger connections with their audiences."
-        ctas={[
-          {
-            label:
-              "Launch with marketing assets that work across every channel and customer touchpoint",
-            href: "/contact-us",
-            variant: "primary",
-          },
-        ]}
+        ctaSlot={
+          <CTASlots
+            ctas={[
+              {
+                label:
+                  "Launch with marketing assets that work across every channel and customer touchpoint",
+                variant: "primary",
+              },
+            ]}
+          />
+        }
         pageUrl={PAGE_URL}
       >
         <CardLinkGrid

@@ -92,27 +92,7 @@
     ],
     "cta": {
       "label": "Explore Merchandise and Promotional Products with Blossom Rocket",
-      "href": "/services/company-store"
-    }
-  },
-  {
-    "id": "search-everything-optimization-consulting",
-    "title": "Search Everything Optimization Consulting",
-    "items": [
-      {
-        "id": "what-is-search-everything-optimization",
-        "question": "What is Search Everything Optimization?",
-        "answer": "Search Everything Optimization helps businesses improve discoverability across traditional search engines, AI search experiences, AI assistants, business directories, knowledge graphs, and emerging discovery platforms."
-      },
-      {
-        "id": "why-does-search-everything-optimization-matter",
-        "question": "Why does Search Everything Optimization matter?",
-        "answer": "Modern discovery happens across more than search engines. Businesses need structured, consistent, trustworthy information that can be understood by search platforms, AI systems, and customers."
-      }
-    ],
-    "cta": {
-      "label": "Explore Blossom Rocket's Search Everything Optimization Consulting Service",
-      "href": "/services/search-everything-optimization-consulting"
+      "href": "/services/merchandise-and-promotional-products"
     }
   }
 ]

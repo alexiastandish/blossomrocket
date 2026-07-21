@@ -10,8 +10,8 @@
       }
     ],
     "cta": {
-      "label": "Explore Digital Design Services",
-      "href": "/platform/__"
+      "label": "Contact Us For Digital Design Services",
+      "action": "contact-modal"
     }
   },
   {
@@ -40,8 +40,8 @@
       }
     ],
     "cta": {
-      "label": "Explore UI/UX Design Services",
-      "href": "/platform/TODO__"
+      "label": "Explore Blossom Rocket's Digital Design Work",
+      "href": "/work?tag=digital-design"
     }
   },
   {
@@ -70,8 +70,8 @@
       }
     ],
     "cta": {
-      "label": "Explore Component Library Services",
-      "href": "/platform/TODO__"
+      "label": "Learn More About the Benefits of Component Libraries",
+      "href": "/blog/what-is-a-component-library"
     }
   },
   {
@@ -100,8 +100,8 @@
       }
     ],
     "cta": {
-      "label": "Explore Web & App Design Services",
-      "href": "/platform/TODO__"
+      "label": "Get in Touch for Web & App Design Services",
+      "action": "contact-modal"
     }
   },
   {
@@ -130,8 +130,8 @@
       }
     ],
     "cta": {
-      "label": "Explore Front-End Development Services",
-      "href": "/platform/TODO__"
+      "label": "Learn About Scalable Digital Design with Blossom Rocket",
+      "href": "/blog/why-growing-websites-become-inconsistent"
     }
   }
 ]

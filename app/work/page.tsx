@@ -7,6 +7,7 @@ import { PortfolioGrid } from "./components/PortfolioGrid";
 import Marquee from "@/components/section/Marquee";
 import logos from "@/data/marquees/logos.json";
 import SectionLabel from "@/components/SectionLabel";
+import { Suspense } from "react";
 // ─── Metadata ────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
@@ -161,7 +162,9 @@ export default function WorkPage() {
             itemScope
             itemType="https://schema.org/ItemList"
           >
-            <PortfolioGrid items={workItems} />
+            <Suspense>
+              <PortfolioGrid items={workItems} />
+            </Suspense>
           </div>
         </div>
       </div>

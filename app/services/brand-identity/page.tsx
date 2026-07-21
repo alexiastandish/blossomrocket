@@ -20,7 +20,7 @@ export default function page() {
             ctas={[
               {
                 label:
-                  "Schedule a call today to launch your brand into orbit 🚀",
+                  "Get in touch with Blossom Rocket to launch your brand into orbit 🚀",
                 variant: "primary",
               },
             ]}
@@ -54,8 +54,7 @@ export default function page() {
               {
                 label: "Explore Branding Projects by Blossom Rocket",
                 variant: "primary",
-                // TODO: update to work page with brand-identity filter on
-                href: "/work",
+                href: "/work?tag=brand-identity",
               },
             ]}
           />
@@ -114,7 +113,7 @@ export default function page() {
         subtext="As businesses grow, new assets are created by different teams, departments, vendors, and partners. Without clear Brand Identity standards, inconsistency becomes inevitable."
         ctas={[
           {
-            label: "Explore Blossom Rocket Brand Systems",
+            label: "Explore Blossom Rocket Brand Systems Service",
             href: "/services/brand-systems",
             variant: "primary",
           },

@@ -1,7 +1,7 @@
 "use client";
 import { FAQGroup } from "@/lib/types/faqs";
 import { useRef, useState, useLayoutEffect, type ReactNode } from "react";
-
+import { useContactModal } from "@/contexts/contact-modal-context";
 export interface AccordionTokens {
   bg: string;
   heading: string;
@@ -66,6 +66,7 @@ export default function FAQAccordionGrouped({
 }: FAQAccordionGroupedProps) {
   const [openKey, setOpenKey] = useState<string | null>(null);
   const [hoveredPill, setHoveredPill] = useState<string | null>(null);
+  const { open: openContactModal } = useContactModal();
 
   const toggle = (key: string) =>
     setOpenKey((prev) => (prev === key ? null : key));
@@ -216,25 +217,45 @@ export default function FAQAccordionGrouped({
               })}
             </div>
 
-            {group.cta && (
-              <a
-                href={group.cta.href}
-                className={`relative inline-flex items-center gap-1.5 mt-5 ml-1 text-sm font-semibold ${activeTokens.accent} group`}
-              >
-                {group.cta.label}
-                <span
-                  aria-hidden="true"
-                  className="inline-block transition-transform duration-200 group-hover:translate-x-0.5"
+            {group.cta &&
+              (group.cta.action === "contact-modal" ? (
+                <button
+                  type="button"
+                  onClick={openContactModal}
+                  className={`relative inline-flex items-center gap-1.5 mt-5 ml-1 text-sm font-semibold ${activeTokens.accent} group`}
                 >
-                  →
-                </span>
-                <span
-                  aria-hidden="true"
-                  className="absolute left-0 -bottom-0.5 h-[2px] w-0 transition-all duration-300 group-hover:w-full"
-                  style={{ background: gradientFor(groupIndex) }}
-                />
-              </a>
-            )}
+                  {group.cta.label}
+                  <span
+                    aria-hidden="true"
+                    className="inline-block transition-transform duration-200 group-hover:translate-x-0.5"
+                  >
+                    →
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    className="absolute left-0 -bottom-0.5 h-[2px] w-0 transition-all duration-300 group-hover:w-full"
+                    style={{ background: gradientFor(groupIndex) }}
+                  />
+                </button>
+              ) : (
+                <a
+                  href={group.cta.href}
+                  className={`relative inline-flex items-center gap-1.5 mt-5 ml-1 text-sm font-semibold ${activeTokens.accent} group`}
+                >
+                  {group.cta.label}
+                  <span
+                    aria-hidden="true"
+                    className="inline-block transition-transform duration-200 group-hover:translate-x-0.5"
+                  >
+                    →
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    className="absolute left-0 -bottom-0.5 h-[2px] w-0 transition-all duration-300 group-hover:w-full"
+                    style={{ background: gradientFor(groupIndex) }}
+                  />
+                </a>
+              ))}
           </div>
         ))}
       </div>

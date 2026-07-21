@@ -21,7 +21,7 @@
     ],
     "cta": {
       "label": "Learn More About Brand Identity Services",
-      "href": "/contact-us"
+      "action": "contact-modal"
     }
   },
   {
@@ -45,8 +45,8 @@
       }
     ],
     "cta": {
-      "label": "Discover How Brand Identity Supports Every Touchpoint",
-      "href": "/contact-us"
+      "label": "Learn More About Brand Identity",
+      "href": "/blog/?tags=brand-identity"
     }
   },
   {
@@ -95,8 +95,8 @@
       }
     ],
     "cta": {
-      "label": "Explore Brand Systems",
-      "href": "/services/brand-systems"
+      "label": "Why AI Search Rewards Consistent Brands",
+      "href": "/blog/why-ai-search-rewards-consistent-brands"
     }
   }
 ]

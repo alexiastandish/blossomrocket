@@ -63,8 +63,7 @@ export default function page() {
               {
                 label: "Explore Brand Systems Created by Blossom Rocket",
                 variant: "primary",
-                // TODO: update to work page with brand-systems filter on
-                href: "/work",
+                href: "/work?tag=brand-systems",
               },
             ]}
           />
@@ -202,6 +201,7 @@ export default function page() {
         subtext="Modern brands exist across dozens of channels and experiences. A Brand System helps ensure those experiences remain connected."
         pageUrl="https://blossomrocket.studio/services/brand-systems"
       >
+        {/* // TODO_ */}
         <CardLinkGrid
           heading="Blossom Rocket creates Brand Systems that support:"
           items={[

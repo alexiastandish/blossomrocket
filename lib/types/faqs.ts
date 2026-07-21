@@ -16,7 +16,8 @@ export interface FAQGroup {
   items: FAQItem[];
   cta?: {
     label: string;
-    href: string;
+    href?: string;
+    action?: string;
   };
 }
 

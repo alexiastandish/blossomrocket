@@ -22,7 +22,10 @@ const services: NavLink[] = [
   { href: "/services/brand-systems", label: "Brand Systems" },
   { href: "/services/digital-design", label: "Digital Design" },
   { href: "/services/marketing-assets", label: "Marketing Assets" },
-  { href: "/services/print-and-environmental", label: "Print & Environmental" },
+  {
+    href: "/services/print-and-environmental-design",
+    label: "Print & Environmental",
+  },
   {
     href: "/services/merchandise-and-promotional-products",
     label: "Merchandise & Promotional Products",

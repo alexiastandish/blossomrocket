@@ -68,12 +68,14 @@ export default function CardComparison({
             >
               <div className="px-6 py-5">
                 <p
-                  className={`text-[14px] leading-[1.6] ${activeTokens.itemText}`}
+                  className={`text-[14px] text-left leading-[1.6] ${activeTokens.itemText}`}
                 >
                   {pair.left}
                 </p>
               </div>
-              <div className={`px-6 py-5 border-l ${activeTokens.itemBorder}`}>
+              <div
+                className={`px-6 py-5  text-left border-l ${activeTokens.itemBorder}`}
+              >
                 <p
                   className={`text-[14px] leading-[1.6] ${activeTokens.itemText}`}
                 >

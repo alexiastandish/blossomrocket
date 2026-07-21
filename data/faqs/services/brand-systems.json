@@ -21,7 +21,7 @@
     ],
     "cta": {
       "label": "Build a Brand System with Blossom Rocket",
-      "href": "/contact-us"
+      "action": "contact-modal"
     }
   },
   {
@@ -46,7 +46,7 @@
     ],
     "cta": {
       "label": "Create a Single Source of Truth for Your Brand",
-      "href": "/contact-us"
+      "action": "contact-modal"
     }
   },
   {
@@ -71,7 +71,7 @@
     ],
     "cta": {
       "label": "See How Brand Systems Support Business Growth",
-      "href": "/contact-us"
+      "href": "/blog/why-every-growing-company-eventually-needs-a-brand-system"
     }
   },
   {
@@ -95,8 +95,8 @@
       }
     ],
     "cta": {
-      "label": "Explore Everything Included in a Blossom Rocket Brand System",
-      "href": "/contact-us"
+      "label": "Why AI Search Rewards Consistent Brands",
+      "href": "/blog/why-ai-search-rewards-consistent-brands"
     }
   },
   {

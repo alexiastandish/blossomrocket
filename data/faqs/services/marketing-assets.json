@@ -21,7 +21,7 @@
     ],
     "cta": {
       "label": "Create Marketing Assets That Support Marketing Campaigns, Events, and Customer Engagement",
-      "href": "/platform/TODO__"
+      "action": "contact-modal"
     }
   },
   {
@@ -46,7 +46,7 @@
     ],
     "cta": {
       "label": "Explore Blossom Rocket Campaign Creative, Social Media Assets, and Marketing Materials",
-      "href": "/platform/TODO__"
+      "href": "/work"
     }
   },
   {
@@ -71,7 +71,7 @@
     ],
     "cta": {
       "label": "Discuss Your Next Marketing Project, Campaign, or Creative Initiative",
-      "href": "/platform/TODO__"
+      "action": "contact-modal"
     }
   }
 ]

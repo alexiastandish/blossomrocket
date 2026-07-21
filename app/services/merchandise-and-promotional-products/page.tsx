@@ -8,6 +8,7 @@ import { SectionLayout } from "@/components/section";
 import SectionCardOverlayList from "@/components/section/CardOverlayList";
 import FAQSection from "@/components/faqs/FAQSection";
 import faqs from "@/data/faqs/services/merchandise-and-promotional-products.json";
+import { CTASlots } from "@/components/CTASlot";
 
 // ─── Page metadata ────────────────────────────────────────────────────────────
 
@@ -158,14 +159,17 @@ export default function MerchandiseAndPromotionalProducts() {
             </>
           }
           body="Merchandise & Promotional Products include apparel, event merchandise, corporate gifts, promotional products, and branded items used to support marketing campaigns, events, employee programs, customer engagement, and brand awareness. Blossom Rocket provides Merchandise & Promotional Product services that help businesses create branded merchandise programs that increase visibility, strengthen recognition, and create lasting connections with customers, employees, and audiences."
-          ctas={[
-            {
-              label:
-                "Explore Blossom Rocket Merchandise & Promotional Product Services",
-              href: "/contact-us",
-              variant: "primary",
-            },
-          ]}
+          ctaSlot={
+            <CTASlots
+              ctas={[
+                {
+                  label:
+                    "Explore Blossom Rocket Merchandise & Promotional Product Services 🚀",
+                  variant: "primary",
+                },
+              ]}
+            />
+          }
         />
 
         {/* ── Section 2: Ongoing Brand Visibility
@@ -186,9 +190,8 @@ export default function MerchandiseAndPromotionalProducts() {
           subtext="Merchandise & Promotional Products help businesses create brand visibility beyond traditional marketing campaigns. Branded apparel, promotional products, corporate gifts, and event merchandise can continue generating exposure long after a campaign, event, customer interaction, or employee initiative has ended."
           ctas={[
             {
-              label:
-                "Create Merchandise & Promotional Products For Customers, Employees, And Events",
-              href: "/contact-us",
+              label: "Promotional Products That People Actually Find Useful",
+              href: "/blog/promotional-products-that-people-actually-find-useful",
               variant: "primary",
             },
           ]}
@@ -229,14 +232,17 @@ export default function MerchandiseAndPromotionalProducts() {
             { topic: "Onboarding Kits" },
             { topic: "Merchandise Design" },
           ]}
-          ctas={[
-            {
-              label:
-                "Explore Branded Apparel, Promotional Products, Corporate Gifts, And Merchandise Programs",
-              href: "/contact-us",
-              variant: "primary",
-            },
-          ]}
+          ctaSlot={
+            <CTASlots
+              ctas={[
+                {
+                  label:
+                    "Explore Branded Apparel, Promotional Products, Corporate Gifts, And Merchandise Programs",
+                  variant: "primary",
+                },
+              ]}
+            />
+          }
         >
           <CardList
             heading="Merchandise & Promotional Product Services Include:"

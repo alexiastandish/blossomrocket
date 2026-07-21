@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import SectionLabel from "../SectionLabel";
 
 export interface BlogIndexPost {
@@ -31,27 +32,82 @@ function formatDate(iso: string): string {
   });
 }
 
+// URL-safe slug for a tag, e.g. "Brand Strategy" -> "brand-strategy".
+// Used both as the query param value and to look the original label back up.
+function slugifyTag(tag: string): string {
+  return tag
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+}
+
 export function BlogIndexClient({ posts }: BlogIndexClientProps) {
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+
   const [query, setQuery] = useState("");
-  const [activeTags, setActiveTags] = useState<string[]>([]);
 
   const featured = useMemo(
     () => posts.find((post) => post.featured) ?? posts[0],
     [posts],
   );
 
-  const tags = useMemo(
-    () => Array.from(new Set(posts.flatMap((post) => post.tags))).sort(),
-    [posts],
+  // All tags across posts, deduped, with a slug<->label map so the URL can
+  // store slugs while the UI still shows the original label casing.
+  const { tags, slugToLabel } = useMemo(() => {
+    const map = new Map<string, string>();
+    posts.forEach((post) => {
+      post.tags.forEach((tag) => {
+        const slug = slugifyTag(tag);
+        if (!map.has(slug)) map.set(slug, tag);
+      });
+    });
+    return {
+      tags: Array.from(map.values()).sort(),
+      slugToLabel: map,
+    };
+  }, [posts]);
+
+  // Active tags come straight from the URL — no separate local state to
+  // keep in sync. `tags` param is a comma-separated list of slugs.
+  const activeTagSlugs = useMemo(() => {
+    const raw = searchParams.get("tags");
+    if (!raw) return [];
+    return raw.split(",").filter((slug) => slugToLabel.has(slug));
+  }, [searchParams, slugToLabel]);
+
+  const activeTags = useMemo(
+    () => activeTagSlugs.map((slug) => slugToLabel.get(slug)!),
+    [activeTagSlugs, slugToLabel],
   );
 
-  const toggleTag = (tag: string) => {
-    setActiveTags((current) =>
-      current.includes(tag)
-        ? current.filter((t) => t !== tag)
-        : [...current, tag],
+  // Toggling is a frequent, low-stakes interaction (unlike a single filter
+  // pill), so this uses replace rather than push — otherwise every toggle
+  // would push a new history entry and the back button would just replay
+  // the user's own clicks instead of leaving the page.
+  function setTagSlugs(slugs: string[]) {
+    const params = new URLSearchParams(searchParams.toString());
+    if (slugs.length === 0) {
+      params.delete("tags");
+    } else {
+      params.set("tags", slugs.join(","));
+    }
+    const search = params.toString();
+    router.replace(search ? `${pathname}?${search}` : pathname, {
+      scroll: false,
+    });
+  }
+
+  function toggleTag(tag: string) {
+    const slug = slugifyTag(tag);
+    setTagSlugs(
+      activeTagSlugs.includes(slug)
+        ? activeTagSlugs.filter((s) => s !== slug)
+        : [...activeTagSlugs, slug],
     );
-  };
+  }
 
   const filteredPosts = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();
@@ -146,7 +202,7 @@ export function BlogIndexClient({ posts }: BlogIndexClientProps) {
         <div className="flex flex-wrap gap-2">
           <button
             type="button"
-            onClick={() => setActiveTags([])}
+            onClick={() => setTagSlugs([])}
             className={[
               "text-[11px] font-semibold tracking-[0.06em] uppercase rounded-full px-3 py-1.5 transition-colors duration-150",
               activeTags.length === 0
@@ -229,7 +285,7 @@ export function BlogIndexClient({ posts }: BlogIndexClientProps) {
             type="button"
             onClick={() => {
               setQuery("");
-              setActiveTags([]);
+              setTagSlugs([]);
             }}
             className="text-[12px] font-semibold text-violet transition-[gap] duration-200 hover:gap-3"
           >

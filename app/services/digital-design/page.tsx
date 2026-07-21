@@ -17,6 +17,7 @@ import BuiltOnBrandStandards from "@/components/svgs/BuiltOnBrandStandards";
 import DesignedToScale from "@/components/svgs/DesignedToScale";
 import SocialMediaReady from "@/components/svgs/SocialMediaReady";
 import BuiltForAccessibility from "@/components/svgs/BuiltForAccessibility";
+import { CTASlots } from "@/components/CTASlot";
 
 const PAGE_URL = "https://blossomrocket.studio/services/digital-design";
 
@@ -34,14 +35,18 @@ export default function page() {
             <em className="grad-text not-italic">Brand To Life Online.</em>
           </>
         }
+        ctaSlot={
+          <CTASlots
+            ctas={[
+              {
+                label:
+                  "Create Consistent Digital Experiences Across Every Platform 🚀",
+                variant: "primary",
+              },
+            ]}
+          />
+        }
         body="Digital Design focuses on creating branded digital experiences that help businesses communicate, engage, and grow. Blossom Rocket helps businesses create websites and digital experiences that align with brand standards while supporting usability, scalability, and long-term growth."
-        ctas={[
-          {
-            label: "Create Consistent Experiences Across Every Platform",
-            href: "/contact-us",
-            variant: "primary",
-          },
-        ]}
       />
 
       {/* ── Section 2: Cohesive Digital Experiences — SectionLayout + CardStatBento ── */}
@@ -60,7 +65,7 @@ export default function page() {
         subtext="As businesses grow, websites, landing pages, and digital experiences often become inconsistent and difficult to maintain. Blossom Rocket helps organizations create cohesive digital experiences through website design, user interface design, and scalable design systems that support long-term growth, usability, and brand consistency."
         ctas={[
           {
-            label: "Improve Your Digital Experience",
+            label: "Get in Touch to Improve Your Digital Experience",
             href: "/contact-us",
             variant: "primary",
           },

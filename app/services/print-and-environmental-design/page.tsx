@@ -8,6 +8,7 @@ import { SectionLayout } from "@/components/section";
 import SectionCardOverlayList from "@/components/section/CardOverlayList";
 import { Metadata } from "next";
 import Script from "next/script";
+import { CTASlots } from "@/components/CTASlot";
 
 const PAGE_URL =
   "https://blossomrocket.studio/services/print-and-environmental";
@@ -150,14 +151,17 @@ export default function page() {
               standards across physical touchpoints. `
             </>
           }
-          ctas={[
-            {
-              label:
-                "Launch Your Brand into the Real World with Blossom Rocket",
-              href: "/contact-us",
-              variant: "primary",
-            },
-          ]}
+          ctaSlot={
+            <CTASlots
+              ctas={[
+                {
+                  label:
+                    "Launch Your Brand into the Real World with Blossom Rocket 🚀",
+                  variant: "primary",
+                },
+              ]}
+            />
+          }
         />
         {/* ── Section 2: Print & Environmental Design Services
             SectionLayout (split) + CardLinkGrid ── */}
@@ -173,14 +177,17 @@ export default function page() {
             </>
           }
           subtext="Blossom Rocket provides Print & Environmental Design services that help businesses apply their Brand Identity across printed materials, signage, packaging, vehicle graphics, and branded environments. Every Print & Environmental Design project is developed using your Brand Identity and Brand System, allowing your business to create consistent customer-facing materials across every location, department, campaign, and vendor."
-          ctas={[
-            {
-              label:
-                "Start Your Print & Environmental Design Project With Blossom Rocket",
-              href: "/contact-us",
-              variant: "primary",
-            },
-          ]}
+          ctaSlot={
+            <CTASlots
+              ctas={[
+                {
+                  label:
+                    "Start Your Print & Environmental Design Project With Blossom Rocket",
+                  variant: "primary",
+                },
+              ]}
+            />
+          }
           cols={[5, 3]}
           pageUrl={PAGE_URL}
           schemaItems={[
@@ -230,13 +237,6 @@ export default function page() {
             </>
           }
           subtext="Print & Environmental Design is more than creating printed materials. Blossom Rocket uses Print & Environmental Design to help businesses build recognizable brands across every physical touchpoint where customers, employees, vendors, and partners interact with the organization. Businesses rarely communicate through one printed asset — when these assets are designed independently, Brand Identity becomes inconsistent."
-          ctas={[
-            {
-              label: "Build a Consistent Brand with Blossom Rocket",
-              href: "/contact-us",
-              variant: "primary",
-            },
-          ]}
           cardHeading="Blossom Rocket develops Print & Environmental Design systems that connect:"
           cardVariant="list"
           items={[
@@ -277,14 +277,17 @@ export default function page() {
             { topic: "Packaging" },
             { topic: "Vehicle Graphics" },
           ]}
-          ctas={[
-            {
-              label:
-                "Create Production-Ready Print & Environmental Design Assets",
-              href: "/contact-us",
-              variant: "primary",
-            },
-          ]}
+          ctaSlot={
+            <CTASlots
+              ctas={[
+                {
+                  label:
+                    "Create Production-Ready Print & Environmental Design Assets",
+                  variant: "primary",
+                },
+              ]}
+            />
+          }
         >
           <CardList
             heading="Print & Environmental Design Services Include:"
@@ -346,9 +349,8 @@ export default function page() {
           subtext="Blossom Rocket develops Print & Environmental Design systems that connect Brand Identity, Brand Systems, Marketing Assets, Merchandise, and Digital Design into one consistent visual ecosystem. Every project is designed to support long-term brand consistency rather than one-time creative execution."
           ctas={[
             {
-              label:
-                "Partner with Blossom Rocket for Print & Environmental Design",
-              href: "/contact-us",
+              label: "Why Print Still Matters for Premium Brands",
+              href: "/blog/why-print-still-matters-for-premium-brands",
               variant: "primary",
             },
           ]}
