@@ -1,12 +1,27 @@
+// components/blog/BlogIndexClient.tsx
 "use client";
 
 import { useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { BlogPost } from "@/lib/types/blog";
+import SectionLabel from "../SectionLabel";
 
-interface BlogPageProps {
-  posts: BlogPost[];
+export interface BlogIndexPost {
+  slug: string;
+  href: string;
+  title: string;
+  excerpt: string;
+  category: string;
+  tags: string[];
+  coverImage: string;
+  coverAlt: string;
+  publishedAt: string;
+  readTime: string;
+  featured: boolean;
+}
+
+interface BlogIndexClientProps {
+  posts: BlogIndexPost[];
 }
 
 function formatDate(iso: string): string {
@@ -17,48 +32,57 @@ function formatDate(iso: string): string {
   });
 }
 
-export function BlogPage({ posts }: BlogPageProps) {
+export function BlogIndexClient({ posts }: BlogIndexClientProps) {
   const [query, setQuery] = useState("");
-  const [activeCategory, setActiveCategory] = useState<string | null>(null);
+  const [activeTags, setActiveTags] = useState<string[]>([]);
 
   const featured = useMemo(
     () => posts.find((post) => post.featured) ?? posts[0],
     [posts],
   );
 
-  const categories = useMemo(
-    () => Array.from(new Set(posts.map((post) => post.category))),
+  const tags = useMemo(
+    () => Array.from(new Set(posts.flatMap((post) => post.tags))).sort(),
     [posts],
   );
 
+  const toggleTag = (tag: string) => {
+    setActiveTags((current) =>
+      current.includes(tag)
+        ? current.filter((t) => t !== tag)
+        : [...current, tag],
+    );
+  };
+
   const filteredPosts = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();
-
     return posts.filter((post) => {
       if (post.slug === featured.slug) return false;
-      if (activeCategory && post.category !== activeCategory) return false;
+      if (
+        activeTags.length > 0 &&
+        !activeTags.some((tag) => post.tags.includes(tag))
+      ) {
+        return false;
+      }
       if (!normalizedQuery) return true;
       return (
         post.title.toLowerCase().includes(normalizedQuery) ||
         post.excerpt.toLowerCase().includes(normalizedQuery)
       );
     });
-  }, [posts, featured, activeCategory, query]);
+  }, [posts, featured, activeTags, query]);
 
-  const hasActiveFilters = Boolean(query || activeCategory);
+  const hasActiveFilters = Boolean(query || activeTags.length > 0);
 
   return (
     <div className="max-w-[1200px] mx-auto px-6 sm:px-8 py-14 sm:py-20">
-      {/* ── Header ── */}
       <header className="max-w-[640px] mb-14 sm:mb-20">
-        <p className="text-[11px] font-semibold tracking-[0.08em] uppercase text-violet mb-3">
-          Insights
-        </p>
+        <SectionLabel text="Insights" />
         <h1
           className="text-[36px] sm:text-[44px] font-semibold leading-[1.1] tracking-[-0.02em] text-ink mb-4"
           style={{ fontFamily: "'Parkinsans', sans-serif" }}
         >
-          The Blossom <em className="grad-text not-italic"> Blog</em>
+          The Blossom <em className="grad-text not-italic">Blog</em>
         </h1>
         <p className="text-[15px] leading-[1.7] text-ink-mid">
           Practical insights on branding, design, and growth—from identity
@@ -66,7 +90,6 @@ export function BlogPage({ posts }: BlogPageProps) {
         </p>
       </header>
 
-      {/* ── Featured post ── */}
       <Link
         href={featured.href}
         className="group grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-6 lg:gap-10 items-stretch rounded-sm outline outline-2 outline-offset-[6px] outline-transparent hover:outline-violet transition-[outline-color] duration-200 mb-16 sm:mb-24"
@@ -109,7 +132,6 @@ export function BlogPage({ posts }: BlogPageProps) {
         </div>
       </Link>
 
-      {/* ── Search + category filters ── */}
       <div className="flex flex-col gap-5 mb-10">
         <div className="relative w-full sm:max-w-[360px]">
           <input
@@ -125,39 +147,35 @@ export function BlogPage({ posts }: BlogPageProps) {
         <div className="flex flex-wrap gap-2">
           <button
             type="button"
-            onClick={() => setActiveCategory(null)}
+            onClick={() => setActiveTags([])}
             className={[
               "text-[11px] font-semibold tracking-[0.06em] uppercase rounded-full px-3 py-1.5 transition-colors duration-150",
-              activeCategory === null
+              activeTags.length === 0
                 ? "bg-violet text-white"
                 : "bg-active-bg text-violet hover:bg-violet-100",
             ].join(" ")}
           >
             All
           </button>
-          {categories.map((category) => (
+          {tags.map((tag) => (
             <button
-              key={category}
+              key={tag}
               type="button"
-              onClick={() =>
-                setActiveCategory((current) =>
-                  current === category ? null : category,
-                )
-              }
+              onClick={() => toggleTag(tag)}
+              aria-pressed={activeTags.includes(tag)}
               className={[
                 "text-[11px] font-semibold tracking-[0.06em] uppercase rounded-full px-3 py-1.5 transition-colors duration-150",
-                activeCategory === category
+                activeTags.includes(tag)
                   ? "bg-violet text-white"
                   : "bg-active-bg text-violet hover:bg-violet-100",
               ].join(" ")}
             >
-              {category}
+              {tag}
             </button>
           ))}
         </div>
       </div>
 
-      {/* ── Grid ── */}
       {filteredPosts.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-10">
           {filteredPosts.map((post) => (
@@ -196,7 +214,7 @@ export function BlogPage({ posts }: BlogPageProps) {
             </Link>
           ))}
         </div>
-      ) : (
+      ) : hasActiveFilters ? (
         <div className="flex flex-col items-center text-center py-20 rounded-sm bg-surface-subtle">
           <p
             className="text-[18px] font-semibold text-ink mb-2"
@@ -205,21 +223,24 @@ export function BlogPage({ posts }: BlogPageProps) {
             No articles match that search
           </p>
           <p className="text-[13px] text-ink-mid mb-5 max-w-[40ch]">
-            Try a different term, or clear the category filter to see everything
+            Try a different term, or clear the tag filters to see everything
             again.
           </p>
           <button
             type="button"
             onClick={() => {
               setQuery("");
-              setActiveCategory(null);
+              setActiveTags([]);
             }}
-            disabled={!hasActiveFilters}
-            className="text-[12px] font-semibold text-violet transition-[gap] duration-200 hover:gap-3 disabled:opacity-40"
+            className="text-[12px] font-semibold text-violet transition-[gap] duration-200 hover:gap-3"
           >
             Clear search and filters
           </button>
         </div>
+      ) : (
+        <p className="text-center text-[13px] text-ink-mid py-20">
+          More articles coming soon.
+        </p>
       )}
     </div>
   );

@@ -6,6 +6,7 @@ import workItemsData from "@/data/work.json";
 import { PortfolioGrid } from "./components/PortfolioGrid";
 import Marquee from "@/components/section/Marquee";
 import logos from "@/data/marquees/logos.json";
+import SectionLabel from "@/components/SectionLabel";
 // ─── Metadata ────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
@@ -120,15 +121,8 @@ export default function WorkPage() {
       <div>
         <div className="section ">
           <header className="mb-8">
-            <div className="rv flex items-center gap-3 mb-5">
-              <div
-                className="h-px w-6 flex-shrink-0"
-                style={{ background: "var(--grad-cool-arc)" }}
-              />
-              <span className="text-[11px] font-semibold tracking-[0.12em] uppercase text-fg-tertiary">
-                Selected Work
-              </span>
-            </div>
+            <SectionLabel text="Selected Work" />
+
             <h1 className="rv font-display  tracking-[-0.03em] mb-6 text-fg-primary h1">
               Blossom Rocket Brings
               <br />
