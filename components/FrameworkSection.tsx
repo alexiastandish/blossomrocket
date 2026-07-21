@@ -140,14 +140,16 @@ export default function FrameworkSection() {
                 </span>
               ))}
             </div>
+            {/* TODO_ */}
+
             <div className="rv d3 pt-6 border-t border-[rgba(24,24,27,0.10)]">
-              <p className="text-[13px] text-[rgba(24,24,27,0.58)] leading-[1.7] mb-4">
+              {/* <p className="text-[13px] text-[rgba(24,24,27,0.58)] leading-[1.7] mb-4">
                 Explore resources covering brand identity, design systems,
                 website design, promotional products, company stores, and brand
                 consistency strategy.
-              </p>
+              </p> */}
               <div className="flex flex-col gap-2">
-                {resources.map((r) => (
+                {/* {resources.map((r) => (
                   <a
                     key={r}
                     href="#"
@@ -155,7 +157,7 @@ export default function FrameworkSection() {
                   >
                     {r} →
                   </a>
-                ))}
+                ))} */}
               </div>
             </div>
           </div>
