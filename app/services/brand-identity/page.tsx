@@ -3,11 +3,18 @@ import FAQSection from "@/components/faqs/FAQSection";
 import Hero from "@/components/Hero";
 import {
   CardCallout,
+  CardGrid,
   CardList,
   CardPills,
   SectionLayout,
 } from "@/components/section";
 import CardComparison from "@/components/section/CardComparison";
+import ColorPalette from "@/components/svgs/ColorPalette";
+import GraphicElements from "@/components/svgs/GraphicElements";
+import Iconography from "@/components/svgs/Iconography";
+import LogoDesign from "@/components/svgs/LogoDesign";
+import Typography from "@/components/svgs/Typography";
+import VisualIdentity from "@/components/svgs/VisualIdentity";
 import faqs from "@/data/faqs/services/brand-identity.json";
 
 export default function page() {
@@ -137,6 +144,42 @@ export default function page() {
         />
         <CardCallout body="Blossom Rocket helps businesses establish Brand Identity systems that support long-term growth and consistency." />
       </SectionLayout>
+      {/* ──What's Included ── */}
+      <SectionLayout
+        id="brand-identity-included"
+        theme="dark"
+        layout="stacked"
+        eyebrow="Brand Identity Services"
+        heading={
+          <>
+            <em className="grad-text not-italic">What&apos;s included</em> in
+            Brand Identity services?
+          </>
+        }
+        subtext="What's included in Blossom Rocket's brand identity services:"
+        pageUrl="https://blossomrocket.studio/services/brand-identity"
+        schemaItems={[
+          { topic: "Visual Identity" },
+          { topic: "Logo Design" },
+          { topic: "Color Palette" },
+          { topic: "Typography" },
+          { topic: "Iconography" },
+          { topic: "Graphic Elements" },
+        ]}
+      >
+        <CardGrid
+          columns={3}
+          items={[
+            { topic: "Visual Identity", image: <VisualIdentity /> },
+            { topic: "Logo Design", image: <LogoDesign /> },
+            { topic: "Color Palette", image: <ColorPalette /> },
+            { topic: "Typography", image: <Typography /> },
+            { topic: "Iconography", image: <Iconography /> },
+            { topic: "Graphic Elements", image: <GraphicElements /> },
+          ]}
+        />
+      </SectionLayout>
+
       {/* ── Brand Identity vs Brand Systems ── */}
       <SectionLayout
         id="brand-identity--brand-fundamentals"
@@ -165,7 +208,7 @@ export default function page() {
           { topic: "Brand Identity creates consistency." },
           { topic: "Brand Systems maintain consistency as a business grows." },
         ]}
-        pageUrl="https://blossomrocket.studio/services#brand-identity-vs-brand-system"
+        pageUrl="https://blossomrocket.studio/services/brand-identity"
       >
         <CardComparison
           heading="Brand Identity vs Brand System"

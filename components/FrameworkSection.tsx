@@ -54,10 +54,27 @@ const whoWeWorkWith = [
 ];
 
 const resources = [
-  "What Is A Brand System?",
-  "Brand Style Guide vs Design System",
-  "How Company Stores Improve Brand Consistency",
-  "Promotional Products That Strengthen Brand Recognition",
+  {
+    label:
+      "How Merch Strengthens Brand Identity and Creates Public Brand Awareness",
+    href: "/blog/how-merch-strengthens-brand-identity-and-creates-public-brand-awareness",
+  },
+  {
+    label: "Print vs. Digital Marketing: When Each Works Best",
+    href: "/blog/print-vs-digital-marketing",
+  },
+  {
+    label: "The ROI of Branded Merchandise",
+    href: "/blog/the-roi-of-branded-merchandise",
+  },
+  {
+    label: "Why Every Growing Company Eventually Needs a Brand System",
+    href: "/blog/why-every-growing-company-eventually-needs-a-brand-system",
+  },
+  {
+    label: "Why Print Still Matters for Premium Brands",
+    href: "/blog/why-print-still-matters-for-premium-brands",
+  },
 ];
 
 export default function FrameworkSection() {
@@ -143,21 +160,20 @@ export default function FrameworkSection() {
             {/* TODO_ */}
 
             <div className="rv d3 pt-6 border-t border-[rgba(24,24,27,0.10)]">
-              {/* <p className="text-[13px] text-[rgba(24,24,27,0.58)] leading-[1.7] mb-4">
+              <p className="text-[13px] text-[rgba(24,24,27,0.58)] leading-[1.7] mb-4">
                 Explore resources covering brand identity, design systems,
-                website design, promotional products, company stores, and brand
-                consistency strategy.
-              </p> */}
+                website design, promotional products, company stores, and more.
+              </p>
               <div className="flex flex-col gap-2">
-                {/* {resources.map((r) => (
+                {resources.map((r: { label: string; href: string }) => (
                   <a
-                    key={r}
-                    href="#"
+                    key={r.label}
+                    href={r.href}
                     className="text-[13px] font-medium text-[#6366f1] flex items-center gap-1.5 transition-all duration-200 hover:gap-3"
                   >
-                    {r} →
+                    {r.label} →
                   </a>
-                ))} */}
+                ))}
               </div>
             </div>
           </div>

@@ -9,6 +9,16 @@ import SectionCardOverlayList from "@/components/section/CardOverlayList";
 import FAQSection from "@/components/faqs/FAQSection";
 import faqs from "@/data/faqs/services/merchandise-and-promotional-products.json";
 import { CTASlots } from "@/components/CTASlot";
+import BrandAwareness from "@/components/svgs/BrandAwareness";
+import CustomerEngagement from "@/components/svgs/CustomerEngagement";
+import EmployeePrograms from "@/components/svgs/EmployeePrograms";
+import EmployeeEngagement from "@/components/svgs/EmployeeEngagement";
+import CompanyCulture from "@/components/svgs/CompanyCulture";
+import RecruitingInitiatives from "@/components/svgs/RecruitingInitiatives";
+import EventMarketing from "@/components/svgs/EventMarketing";
+import CustomerRetention from "@/components/svgs/CustomerRetention";
+import PartnerRelationships from "@/components/svgs/PartnerRelationships";
+import SalesAndMarketingPrograms from "@/components/svgs/SalesAndMarketingPrograms";
 
 // ─── Page metadata ────────────────────────────────────────────────────────────
 
@@ -221,7 +231,12 @@ export default function MerchandiseAndPromotionalProducts() {
           theme="light"
           layout="stacked"
           eyebrow="What's Included"
-          heading="What's Included In Blossom Rocket's Merchandise & Promotional Product Services?"
+          heading={
+            <>
+              <em className="grad-text not-italic"> What&apos;s Included </em>{" "}
+              in Merchandise & Promotional Product Services?
+            </>
+          }
           pageUrl={PAGE_URL}
           schemaItems={[
             { topic: "Branded Apparel" },
@@ -329,15 +344,24 @@ export default function MerchandiseAndPromotionalProducts() {
           <CardGrid
             columns={3}
             items={[
-              { topic: "Brand Awareness" },
-              { topic: "Customer Engagement" },
-              { topic: "Employee Engagement" },
-              { topic: "Company Culture" },
-              { topic: "Recruiting Initiatives" },
-              { topic: "Event Marketing" },
-              { topic: "Customer Retention" },
-              { topic: "Partner Relationships" },
-              { topic: "Sales & Marketing Programs" },
+              { topic: "Brand Awareness", image: <BrandAwareness /> },
+              { topic: "Customer Engagement", image: <CustomerEngagement /> },
+              { topic: "Employee Engagement", image: <EmployeeEngagement /> },
+              { topic: "Company Culture", image: <CompanyCulture /> },
+              {
+                topic: "Recruiting Initiatives",
+                image: <RecruitingInitiatives />,
+              },
+              { topic: "Event Marketing", image: <EventMarketing /> },
+              { topic: "Customer Retention", image: <CustomerRetention /> },
+              {
+                topic: "Partner Relationships",
+                image: <PartnerRelationships />,
+              },
+              {
+                topic: "Sales & Marketing Programs",
+                image: <SalesAndMarketingPrograms />,
+              },
             ]}
           />
         </SectionLayout>
@@ -390,31 +414,24 @@ export default function MerchandiseAndPromotionalProducts() {
             items={[
               {
                 label: "Centralize Branded Merchandise",
-                href: "/services/company-stores#centralize",
               },
               {
                 label: "Simplify Ordering & Fulfillment",
-                href: "/services/company-stores#ordering",
               },
               {
                 label: "Maintain Brand Consistency",
-                href: "/services/company-stores#consistency",
               },
               {
                 label: "Support Employee Programs",
-                href: "/services/company-stores#employee",
               },
               {
                 label: "Manage Event Merchandise",
-                href: "/services/company-stores#events",
               },
               {
                 label: "Improve Access To Approved Products",
-                href: "/services/company-stores#access",
               },
               {
                 label: "Scale Across Teams & Locations",
-                href: "/services/company-stores#scale",
               },
             ]}
           />

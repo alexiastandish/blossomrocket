@@ -3,7 +3,7 @@ import { tokens, SectionTokens } from "@/lib/utils/sectionTailwindTokens";
 
 export type LinkGridItem = {
   label: string;
-  href: string;
+  href?: string;
 };
 
 export type CardLinkGridProps = {
@@ -33,25 +33,47 @@ export default function CardLinkGrid({
       )}
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2" role="list">
-        {items.map((item) => (
-          <Link
-            key={item.href}
-            href={item.href}
-            role="listitem"
-            className={`group flex items-center justify-between gap-3 rounded-[10px] px-3.5 py-[11px] text-[14px] font-semibold transition-all duration-200 hover:translate-x-0.5 hover:underline ${activeTokens.linkPill}`}
-          >
-            <span className="flex items-center gap-2.5">
-              <span className="w-1.5 h-1.5 rounded-full grad-bg flex-shrink-0" />
-              {item.label}
-            </span>
-            <span
-              className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 font-bold"
-              aria-hidden="true"
+        {items.map((item) => {
+          const content = (
+            <>
+              <span className="flex items-center gap-2.5">
+                <span className="w-1.5 h-1.5 rounded-full grad-bg flex-shrink-0" />
+                {item.label}
+              </span>
+              {item.href && (
+                <span
+                  className="opacity-0 group-hover:opacity-100 transition-opacity duration-200 font-bold"
+                  aria-hidden="true"
+                >
+                  →
+                </span>
+              )}
+            </>
+          );
+
+          if (item.href) {
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                role="listitem"
+                className={`group flex items-center justify-between gap-3 rounded-[10px] px-3.5 py-[11px] text-[14px] font-semibold transition-all duration-200 hover:translate-x-0.5 hover:underline ${activeTokens.linkPill}`}
+              >
+                {content}
+              </Link>
+            );
+          }
+
+          return (
+            <div
+              key={item.label}
+              role="listitem"
+              className={`flex items-center justify-between gap-3 rounded-[10px] px-3.5 py-[11px] text-[14px] font-semibold ${activeTokens.linkPill}`}
             >
-              →
-            </span>
-          </Link>
-        ))}
+              {content}
+            </div>
+          );
+        })}
       </div>
 
       {footerText && (

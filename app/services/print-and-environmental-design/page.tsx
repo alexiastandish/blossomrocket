@@ -204,18 +204,16 @@ export default function page() {
             heading="Print & Environmental Design services include:"
             footerText="Blossom Rocket designs Print & Environmental Design assets that support every stage of a business."
             items={[
-              { label: "Business Cards", href: "/contact-us#business-cards" },
-              { label: "Brochures", href: "/contact-us#brochures" },
-              { label: "Catalogs", href: "/contact-us#catalogs" },
-              { label: "Signage", href: "/contact-us#signage" },
+              { label: "Business Cards" },
+              { label: "Brochures" },
+              { label: "Catalogs" },
+              { label: "Signage" },
               {
                 label: "Environmental Graphics",
-                href: "/contact-us#environmental-graphics",
               },
-              { label: "Packaging", href: "/contact-us#packaging" },
+              { label: "Packaging" },
               {
                 label: "Vehicle Graphics",
-                href: "/contact-us#vehicle-graphics",
               },
             ]}
           />

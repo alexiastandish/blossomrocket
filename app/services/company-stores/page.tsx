@@ -12,6 +12,19 @@ import rawFaqs from "@/data/faqs/services/company-stores.json";
 import type { FAQGroup } from "@/lib/types/faqs";
 import { CTASlots } from "@/components/CTASlot";
 import { CalendlyButton } from "@/components/CalendlyButton";
+import OnDemandManufacturing from "@/components/svgs/OnDemandManufacturing";
+import NoInventoryMinimums from "@/components/svgs/NoInventoryMinimums";
+import StoreDesignMarketing from "@/components/svgs/StoreDesignMarketing";
+import OrderApprovalsBudget from "@/components/svgs/OrderApprovalsBudget";
+import AnalyticsReporting from "@/components/svgs/AnalyticsReporting";
+import CentralizeBrandedMerchandise from "@/components/svgs/CentralizedBrandedMerchandise";
+import MaintainBrandConsistency from "@/components/svgs/MaintainBrandConsistency";
+import SimplifyOrdering from "@/components/svgs/SimplifyOrdering";
+import ManageApprovedProducts from "@/components/svgs/ManageApprovedProducts";
+import SupportMultipleLocations from "@/components/svgs/SupportMultipleLocations";
+import SupportMultipleDepartments from "@/components/svgs/SupportMultipleDepartments";
+import ReduceAdministrativeWork from "@/components/svgs/ReduceAdminWork";
+import ImproveProductAccess from "@/components/svgs/ImproveProductAccess";
 
 const faqs = rawFaqs as FAQGroup[];
 
@@ -145,12 +158,12 @@ export default function CompanyStores() {
           theme="dark"
           pillItems={[
             "Branded Apparel",
-            "Promotional Products",
+            "Promo Products",
             "Corporate Gifting",
             "Employee Programs",
             "Customer Programs",
             "Event Merchandise",
-            "Recognition & Rewards",
+            "Rewards",
           ]}
           heading={
             <>
@@ -161,10 +174,10 @@ export default function CompanyStores() {
           body="A Company Store is a centralized online storefront that provides employees, customers, teams, departments, and event organizers with access to approved branded merchandise, apparel, promotional products, and marketing materials. Blossom Rocket helps businesses implement Company Store solutions through SplashBrands that simplify ordering, improve brand consistency, and support scalable merchandise programs."
           ctaSlot={
             <CTASlots
-              theme="light"
+              theme="dark"
               ctas={[
                 {
-                  label: "Explore Company Store Solutions Through SplashBrands",
+                  label: "SplashBrands - Company Store Solutions",
                   href: "https://splashbrands.com/",
                   variant: "primary",
                 },
@@ -204,14 +217,35 @@ export default function CompanyStores() {
           <CardGrid
             columns={4}
             items={[
-              { topic: "Centralize Branded Merchandise" },
-              { topic: "Maintain Brand Consistency" },
-              { topic: "Simplify Ordering" },
-              { topic: "Manage Approved Products" },
-              { topic: "Support Multiple Locations" },
-              { topic: "Support Multiple Departments" },
-              { topic: "Reduce Administrative Work" },
-              { topic: "Improve Product Access" },
+              {
+                topic: "Centralize Branded Merchandise",
+                image: <CentralizeBrandedMerchandise />,
+              },
+              {
+                topic: "Maintain Brand Consistency",
+                image: <MaintainBrandConsistency />,
+              },
+              { topic: "Simplify Ordering", image: <SimplifyOrdering /> },
+              {
+                topic: "Manage Approved Products",
+                image: <ManageApprovedProducts />,
+              },
+              {
+                topic: "Support Multiple Locations",
+                image: <SupportMultipleLocations />,
+              },
+              {
+                topic: "Support Multiple Departments",
+                image: <SupportMultipleDepartments />,
+              },
+              {
+                topic: "Reduce Administrative Work",
+                image: <ReduceAdministrativeWork />,
+              },
+              {
+                topic: "Improve Product Access",
+                image: <ImproveProductAccess />,
+              },
             ]}
           />
         </SectionLayout>
@@ -245,6 +279,54 @@ export default function CompanyStores() {
           }}
           pageUrl={PAGE_URL}
         />
+
+        <SectionLayout
+          id="company-stores-included"
+          theme="dark"
+          layout="stacked"
+          eyebrow="Company Stores"
+          heading={
+            <>
+              <em className="grad-text not-italic">What&apos;s included</em> in
+              Company Store services?
+            </>
+          }
+          subtext="What's included in Blossom Rocket's Company Store services, powered by SplashBrands:"
+          pageUrl={PAGE_URL}
+          schemaItems={[
+            { topic: "On-Demand Manufacturing & Fulfillment" },
+            { topic: "No Inventory or Minimum Orders" },
+            { topic: "Store Design & Marketing Tools" },
+            { topic: "Order Approvals & Budget Controls" },
+            { topic: "Analytics & Reporting" },
+          ]}
+        >
+          <CardGrid
+            columns={3}
+            items={[
+              {
+                topic: "On-Demand Manufacturing & Fulfillment",
+                image: <OnDemandManufacturing />,
+              },
+              {
+                topic: "No Inventory or Minimum Orders",
+                image: <NoInventoryMinimums />,
+              },
+              {
+                topic: "Store Design & Marketing Tools",
+                image: <StoreDesignMarketing />,
+              },
+              {
+                topic: "Order Approvals & Budget Controls",
+                image: <OrderApprovalsBudget />,
+              },
+              {
+                topic: "Analytics & Reporting",
+                image: <AnalyticsReporting />,
+              },
+            ]}
+          />
+        </SectionLayout>
 
         {/* ── Section 4: SplashBrands Platform
             SectionLayout (split) + CardList with descriptions ── */}
@@ -341,40 +423,32 @@ export default function CompanyStores() {
           pageUrl={PAGE_URL}
         >
           <CardLinkGrid
-            heading="Example Company Store Programs:"
+            heading=""
             footerText="Every Company Store is built on SplashBrands technology and powered by Blossom Rocket brand systems."
             items={[
               {
                 label: "Employee Apparel Programs",
-                href: "https://splashbrands.com/#employee-apparel",
               },
               {
                 label: "Promotional Product Programs",
-                href: "https://splashbrands.com/#promotional",
               },
               {
                 label: "Event Merchandise Programs",
-                href: "https://splashbrands.com/#events",
               },
               {
                 label: "Customer Gifting Initiatives",
-                href: "https://splashbrands.com/#gifting",
               },
               {
                 label: "Recognition & Reward Programs",
-                href: "https://splashbrands.com/#recognition",
               },
               {
                 label: "Onboarding Kit Programs",
-                href: "https://splashbrands.com/#onboarding",
               },
               {
                 label: "Multi-Location Brand Programs",
-                href: "https://splashbrands.com/#locations",
               },
               {
                 label: "Department Merchandise Programs",
-                href: "https://splashbrands.com/#departments",
               },
             ]}
           />

@@ -9,6 +9,17 @@ import CardStatBento from "@/components/section/CardStatBento";
 import { SectionLayout } from "@/components/section";
 import SectionCardOverlayList from "@/components/section/CardOverlayList";
 import { CTASlots } from "@/components/CTASlot";
+import BrandAwareness from "@/components/svgs/BrandAwareness";
+import LeadGeneration from "@/components/svgs/LeadGeneration";
+import CustomerEngagement from "@/components/svgs/CustomerEngagement";
+import ProductLaunches from "@/components/svgs/ProductLaunches";
+import EventMarketing from "@/components/svgs/EventMarketing";
+import SalesEnablement from "@/components/svgs/SalesEnablement";
+import CustomerRetention from "@/components/svgs/CustomerRetention";
+import PromotionalCampaigns from "@/components/svgs/PromotionalCampaigns";
+import OneOffProjects from "@/components/svgs/OneOffProjects";
+import OngoingSupport from "@/components/svgs/OngoingSupport";
+import BuiltToConnect from "@/components/svgs/BuiltToConnect";
 
 const PAGE_URL = "https://blossomrocket.studio/services/marketing-assets";
 
@@ -82,14 +93,14 @@ export default function MarketingAssets() {
         <CardGrid
           columns={4}
           items={[
-            { topic: "Brand Awareness" },
-            { topic: "Lead Generation" },
-            { topic: "Customer Engagement" },
-            { topic: "Product Launches" },
-            { topic: "Event Marketing" },
-            { topic: "Sales Enablement" },
-            { topic: "Customer Retention" },
-            { topic: "Promotional Campaigns" },
+            { topic: "Brand Awareness", image: <BrandAwareness /> },
+            { topic: "Lead Generation", image: <LeadGeneration /> },
+            { topic: "Customer Engagement", image: <CustomerEngagement /> },
+            { topic: "Product Launches", image: <ProductLaunches /> },
+            { topic: "Event Marketing", image: <EventMarketing /> },
+            { topic: "Sales Enablement", image: <SalesEnablement /> },
+            { topic: "Customer Retention", image: <CustomerRetention /> },
+            { topic: "Promotional Campaigns", image: <PromotionalCampaigns /> },
           ]}
         />
       </SectionLayout>
@@ -231,17 +242,20 @@ export default function MarketingAssets() {
               label: "One-Off Projects",
               description:
                 "Trade show displays, single campaigns, individual events.",
-              size: "tall",
+              size: "sm",
+              graphic: <OneOffProjects />,
             },
             {
               label: "Ongoing Support",
               description: "Recurring social, email, and advertising creative.",
               size: "wide",
+              graphic: <OngoingSupport />,
             },
             {
               label: "Built To Connect",
               description: "Every asset reinforces the same brand system.",
               size: "md",
+              graphic: <BuiltToConnect />,
             },
           ]}
         />
@@ -274,25 +288,21 @@ export default function MarketingAssets() {
           heading="Marketing Assets That Work Across Channels"
           footerText="..."
           items={[
-            { label: "Social Media", href: "/contact-us#social-media" },
-            { label: "Email Marketing", href: "/contact-us#email-marketing" },
+            { label: "Social Media" },
+            { label: "Email Marketing" },
             {
               label: "Digital Advertising",
-              href: "/contact-us#digital-advertising",
             },
             {
               label: "Sales Presentations",
-              href: "/contact-us#sales-presentations",
             },
-            { label: "Events", href: "/contact-us#events" },
-            { label: "Trade Shows", href: "/contact-us#trade-shows" },
+            { label: "Events" },
+            { label: "Trade Shows" },
             {
               label: "Promotional Campaigns",
-              href: "/contact-us#promotional-campaigns",
             },
             {
               label: "Customer Communications",
-              href: "/contact-us#customer-communications",
             },
           ]}
         />

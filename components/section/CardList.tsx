@@ -41,7 +41,7 @@ export default function CardList({
         {items.map((item, i) => (
           <div
             key={item.topic}
-            className={`flex items-start gap-3 text-[14px] py-3 border-b last:border-b-0 ${activeTokens.itemText} ${activeTokens.itemBorder}`}
+            className={`flex items-start text-left gap-3 text-[14px] py-3 border-b last:border-b-0 ${activeTokens.itemText} ${activeTokens.itemBorder}`}
             role="listitem"
             itemScope
             itemType="https://schema.org/ListItem"
