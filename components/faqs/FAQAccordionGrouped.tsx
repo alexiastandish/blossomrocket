@@ -240,6 +240,12 @@ export default function FAQAccordionGrouped({
               ) : (
                 <a
                   href={group.cta.href}
+                  target={group.cta?.target}
+                  rel={
+                    group.cta.target === "_blank"
+                      ? "noopener noreferrer"
+                      : undefined
+                  }
                   className={`relative inline-flex items-center gap-1.5 mt-5 ml-1 text-sm font-semibold ${activeTokens.accent} group`}
                 >
                   {group.cta.label}

@@ -18,6 +18,7 @@ export interface FAQGroup {
     label: string;
     href?: string;
     action?: string;
+    target?: "_blank" | "_self";
   };
 }
 

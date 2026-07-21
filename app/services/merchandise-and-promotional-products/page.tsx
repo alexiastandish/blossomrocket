@@ -301,14 +301,18 @@ export default function MerchandiseAndPromotionalProducts() {
             </>
           }
           subtext="Blossom Rocket helps businesses create merchandise programs that increase brand visibility, strengthen relationships, support marketing and engagement initiatives, and deliver consistent brand experiences across events, recruiting, onboarding, customer retention, and company culture efforts. By aligning merchandise with broader business goals, organizations can create more valuable and effective branded experiences."
-          ctas={[
-            {
-              label:
-                "Support Marketing, Employee Engagement, And Customer Programs With Branded Merchandise",
-              href: "/contact-us",
-              variant: "primary",
-            },
-          ]}
+          ctaSlot={
+            <CTASlots
+              theme="dark"
+              ctas={[
+                {
+                  label:
+                    "Support Marketing, Employee Engagement, And Customer Programs With Branded Merchandise",
+                  variant: "primary",
+                },
+              ]}
+            />
+          }
           pageUrl={PAGE_URL}
           schemaItems={[
             { topic: "Brand Awareness" },
@@ -357,7 +361,7 @@ export default function MerchandiseAndPromotionalProducts() {
           ctas={[
             {
               label: "Explore SplashBrands Company Store Examples",
-              href: "/services/company-stores#examples",
+              href: "https://splashbrands.com/customers/",
               variant: "primary",
             },
             {

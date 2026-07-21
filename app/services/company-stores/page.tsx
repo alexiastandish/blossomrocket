@@ -8,9 +8,12 @@ import CardLinkGrid from "@/components/section/CardLinkGrid";
 import { SectionLayout } from "@/components/section";
 import SectionCardOverlayList from "@/components/section/CardOverlayList";
 import FAQSection from "@/components/faqs/FAQSection";
-import faqs from "@/data/faqs/services/company-stores.json";
+import rawFaqs from "@/data/faqs/services/company-stores.json";
+import type { FAQGroup } from "@/lib/types/faqs";
 import { CTASlots } from "@/components/CTASlot";
 import { CalendlyButton } from "@/components/CalendlyButton";
+
+const faqs = rawFaqs as FAQGroup[];
 
 // ─── Page metadata ────────────────────────────────────────────────────────────
 

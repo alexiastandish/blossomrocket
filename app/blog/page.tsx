@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getAllArticles } from "@/lib/utils/blog";
 import { BlogIndexClient } from "@/components/blog/BlogIndexClient";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "The Blossom Blog | Blossom Rocket",
@@ -47,7 +48,9 @@ export default async function BlogIndexPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
       />
-      <BlogIndexClient posts={posts} />
+      <Suspense>
+        <BlogIndexClient posts={posts} />
+      </Suspense>
     </>
   );
 }

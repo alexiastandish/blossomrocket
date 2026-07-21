@@ -21,7 +21,8 @@
     ],
     "cta": {
       "label": "Learn More About Company Store Benefits",
-      "href": "/contact-us_TODO"
+      "href": "https://splashbrands.com/company-stores/",
+      "target": "_blank"
     }
   },
   {
@@ -40,8 +41,9 @@
       }
     ],
     "cta": {
-      "label": "Explore Company Stores Through SplashBrands",
-      "href": "/contact-us_TODO"
+      "label": "Learn More About SplashBrands",
+      "href": "https://splashbrands.com",
+      "target": "_blank"
     }
   }
 ]

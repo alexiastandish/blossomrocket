@@ -6,6 +6,7 @@ import remarkGfm from "remark-gfm";
 import remarkRehype from "remark-rehype";
 import rehypeSlug from "rehype-slug";
 import rehypeStringify from "rehype-stringify";
+import GithubSlugger from "github-slugger";
 import type { BlogArticleData, TocItem } from "@/lib/types/blog";
 
 const BLOG_DIR = path.join(process.cwd(), "content/blog");
@@ -109,15 +110,20 @@ async function renderMarkdownToHtml(content: string): Promise<string> {
   return result.toString();
 }
 
-// Pulls H2/H3 headings straight out of the raw markdown to build the TOC,
-// using the same slug rule rehype-slug applies to the rendered headings
-// so the anchors line up.
+// Pulls H2/H3 headings straight out of the raw markdown to build the TOC.
+// Uses `github-slugger` directly — the same library rehype-slug uses
+// internally to id the rendered headings in `renderMarkdownToHtml` — so
+// repeated headings (e.g. "Why it matters" under every numbered section)
+// get the identical `-1`, `-2`, ... suffixes on both sides and the TOC
+// links actually resolve to the right heading instead of all colliding
+// on the first occurrence.
 function extractToc(content: string): TocItem[] {
   const headingLines = content.match(/^#{2,3}\s+.+$/gm) ?? [];
+  const slugger = new GithubSlugger();
 
   return headingLines.map((line) => {
     const label = line.replace(/^#{2,3}\s+/, "").trim();
-    const id = slugify(label);
+    const id = slugger.slug(label);
     return { id, label };
   });
 }
@@ -126,12 +132,4 @@ function extractToc(content: string): TocItem[] {
 function estimateReadingTime(rawMarkdown: string): number {
   const words = rawMarkdown.trim().split(/\s+/).length;
   return Math.max(1, Math.ceil(words / 200));
-}
-
-function slugify(text: string): string {
-  return text
-    .toLowerCase()
-    .trim()
-    .replace(/[^\w\s-]/g, "")
-    .replace(/\s+/g, "-");
 }

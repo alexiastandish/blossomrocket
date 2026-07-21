@@ -21,7 +21,7 @@
     ],
     "cta": {
       "label": "Learn How Merchandise & Promotional Products Support Business Growth",
-      "href": "/contact-us_TODO"
+      "href": "/blog/the-roi-of-branded-merchandise"
     }
   },
   {
@@ -46,7 +46,7 @@
     ],
     "cta": {
       "label": "Explore Custom Merchandise Programs and Product Sourcing Services",
-      "href": "/contact-us_TODO"
+      "action": "contact-modal"
     }
   }
 ]
