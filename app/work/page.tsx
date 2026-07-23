@@ -125,8 +125,7 @@ export default function WorkPage() {
             <SectionLabel text="Selected Work" />
 
             <h1 className="rv font-display  tracking-[-0.03em] mb-6 text-fg-primary h1">
-              Blossom Rocket Brings
-              <br />
+              Blossom Rocket Brings{" "}
               <em
                 className="not-italic"
                 style={{

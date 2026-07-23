@@ -142,8 +142,7 @@ const HERO_BODY_COLOR: Record<string, string> = {
 export default function Hero({
   heading = (
     <>
-      Brand Systems That
-      <br />
+      Brand Systems That{" "}
       <em className="grad-text not-italic">Work Everywhere.</em>
     </>
   ),

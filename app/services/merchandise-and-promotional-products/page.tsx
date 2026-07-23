@@ -161,8 +161,7 @@ export default function MerchandiseAndPromotionalProducts() {
           ]}
           heading={
             <>
-              Create Branded Merchandise That
-              <br />
+              Create Branded Merchandise That{" "}
               <em className="grad-text not-italic">
                 Expands Your Brand Recognition.
               </em>
@@ -190,8 +189,7 @@ export default function MerchandiseAndPromotionalProducts() {
           eyebrow="Beyond The Campaign"
           heading={
             <>
-              Branded Merchandise Creates
-              <br />
+              Branded Merchandise Creates{" "}
               <em className="grad-text not-italic">
                 Ongoing Brand Visibility.
               </em>
@@ -310,8 +308,7 @@ export default function MerchandiseAndPromotionalProducts() {
           eyebrow="More Than Marketing"
           heading={
             <>
-              Merchandise Supports
-              <br />
+              Merchandise Supports{" "}
               <em className="grad-text not-italic">More Than Marketing.</em>
             </>
           }
@@ -374,8 +371,7 @@ export default function MerchandiseAndPromotionalProducts() {
           eyebrow="Scale Your Merchandise Program"
           heading={
             <>
-              Merchandise Programs Can
-              <br />
+              Merchandise Programs Can{" "}
               <em className="grad-text not-italic">
                 Grow Into Company Stores.
               </em>

@@ -114,8 +114,7 @@ export default function MarketingAssets() {
         eyebrow="Built To Scale"
         heading={
           <>
-            Marketing assets
-            <br />
+            Marketing assets{" "}
             <em className="grad-text not-italic">
               that scale with your business.
             </em>
@@ -217,9 +216,9 @@ export default function MarketingAssets() {
         eyebrow="Flexible By Design"
         heading={
           <>
-            We Support <br />
-            <em className="grad-text not-italic">One-Off </em> Projects and{" "}
-            <em className="grad-text not-italic">Ongoing</em> Marketing Efforts.
+            We Support <em className="grad-text not-italic">One-Off </em>{" "}
+            Projects and <em className="grad-text not-italic">Ongoing</em>{" "}
+            Marketing Efforts.
           </>
         }
         subtext="Not every project requires a complete marketing system. Sometimes businesses need a trade show display for an upcoming event. Other times they need social media content for a campaign, presentation materials for a sales initiative, or advertising creative for a product launch. Blossom Rocket supports both one-off creative projects and ongoing marketing initiatives. Every asset is designed to support immediate goals while contributing to a more cohesive marketing presence over time."

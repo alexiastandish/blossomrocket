@@ -190,35 +190,44 @@ export default function Nav() {
 
             return (
               <li key={href} className="border-b border-[rgba(24,24,27,0.08)]">
-                <button
-                  type="button"
-                  onClick={() => setMobileServicesOpen((prev) => !prev)}
-                  aria-expanded={mobileServicesOpen}
-                  className="flex w-full items-center justify-between py-4 text-[22px] font-medium tracking-[-0.01em] text-neutral-600"
-                >
-                  {label}
-                  <svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                    aria-hidden="true"
-                    className="transition-transform duration-200"
-                    style={{
-                      transform: mobileServicesOpen
-                        ? "rotate(180deg)"
-                        : "rotate(0deg)",
-                    }}
+                <div className="flex items-center justify-between py-4">
+                  <Link
+                    href={href}
+                    onClick={() => setMobileOpen(false)}
+                    className="text-[22px] font-medium tracking-[-0.01em] text-neutral-600"
                   >
-                    <path
-                      d="M2 4l4 4 4-4"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </button>
+                    {label}
+                  </Link>
+                  <button
+                    type="button"
+                    onClick={() => setMobileServicesOpen((prev) => !prev)}
+                    aria-expanded={mobileServicesOpen}
+                    aria-label={`Toggle ${label} submenu`}
+                    className="flex h-8 w-8 items-center justify-center text-neutral-600"
+                  >
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 12 12"
+                      fill="none"
+                      aria-hidden="true"
+                      className="transition-transform duration-200"
+                      style={{
+                        transform: mobileServicesOpen
+                          ? "rotate(180deg)"
+                          : "rotate(0deg)",
+                      }}
+                    >
+                      <path
+                        d="M2 4l4 4 4-4"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
                 <div
                   className="grid overflow-hidden transition-all duration-300"
                   style={{

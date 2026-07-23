@@ -42,8 +42,8 @@ export default function Home() {
         eyebrow="Let's build the system behind your brand"
         heading={
           <>
-            Brand Expansion
-            <br /> That <em className="grad-text not-italic">Scales.</em>
+            Brand Expansion That{" "}
+            <em className="grad-text not-italic">Scales.</em>
           </>
         }
         subtext="Create a brand that works consistently across websites, marketing materials, promotional products, apparel, signage, onboarding kits, tradeshow materials, and company stores."

@@ -333,11 +333,9 @@ export default function OurServices() {
             id="svc-h"
             className="rv font-semibold leading-[1.06] tracking-[-0.02em] h2"
           >
-            Everything You Need to
-            <br />
-            <em className="grad-text not-italic">Build, Launch & Scale</em>
-            <br />
-            Your Brand.
+            Everything You Need to{" "}
+            <em className="grad-text not-italic">Build, Launch & Scale</em> Your
+            Brand.
           </h2>
         </div>
         <p

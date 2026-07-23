@@ -524,12 +524,6 @@ export function PortfolioGrid({ items }: PortfolioGridProps) {
                   <p className="text-[13px] leading-[1.65] text-ink-mid mb-3 max-w-prose">
                     {project.description}
                   </p>
-                  <Link
-                    href={project.href}
-                    className="inline-flex items-center gap-1.5 text-[12px] font-semibold text-violet transition-[gap] duration-200 hover:gap-3 active:gap-3"
-                  >
-                    View Project →
-                  </Link>
                 </div>
               </div>
             );

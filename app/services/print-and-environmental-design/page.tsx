@@ -133,8 +133,7 @@ export default function page() {
           theme="brand"
           heading={
             <>
-              Bring Your Brand
-              <br /> Into The{" "}
+              Bring Your Brand Into The{" "}
               <em className="grad-text not-italic">Real World. </em>
             </>
           }
@@ -171,8 +170,7 @@ export default function page() {
           eyebrow="Print & Environmental Design"
           heading={
             <>
-              Print & Environmental Design Services
-              <br />
+              Print & Environmental Design Services{" "}
               <em className="grad-text not-italic">from Blossom Rocket.</em>
             </>
           }
@@ -227,8 +225,7 @@ export default function page() {
           eyebrow="One Brand System, Every Touchpoint"
           heading={
             <>
-              How Blossom Rocket Uses Print & Environmental Design
-              <br />
+              How Blossom Rocket Uses Print & Environmental Design{" "}
               <em className="grad-text not-italic">
                 to Build Stronger Brands.
               </em>
@@ -337,8 +334,7 @@ export default function page() {
           eyebrow="Why Choose Blossom Rocket"
           heading={
             <>
-              Why Choose Blossom Rocket for
-              <br />
+              Why Choose Blossom Rocket for{" "}
               <em className="grad-text not-italic">
                 Print & Environmental Design?
               </em>

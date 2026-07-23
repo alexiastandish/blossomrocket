@@ -1,6 +1,6 @@
 @layer components {
   .h1 {
-    @apply lg:text-7xl md:text-6xl lg:leading-[1.1] font-semibold leading-tight tracking-[-0.03em] text-5xl;
+    @apply lg:text-7xl md:text-6xl lg:leading-[1.1] font-semibold leading-tight tracking-[-0.03em] text-4xl;
     font-family: "Parkinsans", sans-serif;
   }
 

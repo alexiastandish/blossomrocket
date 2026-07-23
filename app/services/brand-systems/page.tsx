@@ -99,8 +99,7 @@ export default function page() {
         mobileOrder="left-first"
         heading={
           <>
-            Scalable Systems
-            <br />
+            Scalable Systems{" "}
             <em className="grad-text not-italic">Built for Growth.</em>
           </>
         }
