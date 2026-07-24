@@ -209,7 +209,7 @@ export default function Hero({
       {pillItems.length > 0 && showPills && (
         <div
           className={[
-            "anim-fade-up anim-delay-1 hidden md:inline-flex items-center gap-2 text-[12px] font-semibold tracking-[0.1em] uppercase px-4 py-1.5 rounded-full mb-8",
+            "anim-fade-up anim-delay-1 pills",
             PILL_STYLES[resolvedPillTheme],
           ].join(" ")}
         >
@@ -254,7 +254,7 @@ export default function Hero({
         {/* ── Body ── */}
         <p
           className={[
-            "subtext anim-fade-up anim-delay-3 leading-[1.72] mx-auto mb-12 max-w-6xl",
+            "subtext anim-fade-up anim-delay-3 leading-[1.72] mx-auto mb-12 max-w-6xl body",
             bodyTextColor,
           ].join(" ")}
         >

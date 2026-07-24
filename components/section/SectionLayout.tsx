@@ -136,8 +136,7 @@ export default function SectionLayout({
               </h2>
               {subtext && (
                 <p
-                  className={`leading-[1.8] mb-2 ${activeTheme.subtext}`}
-                  style={{ fontSize: "clamp(15px,1.4vw,18px)" }}
+                  className={`leading-[1.8] mb-2 ${activeTheme.subtext} subtext`}
                 >
                   {subtext}
                 </p>
@@ -171,9 +170,8 @@ export default function SectionLayout({
               </h2>
               {subtext && (
                 <p
-                  className={`leading-[1.8] mb-8 ${activeTheme.subtext}`}
+                  className={`leading-[1.8] mb-8 ${activeTheme.subtext} subtext`}
                   style={{
-                    fontSize: "clamp(15px,1.4vw,18px)",
                     maxWidth: "560px",
                   }}
                 >

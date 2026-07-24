@@ -125,7 +125,8 @@ export default function WorkPage() {
             <SectionLabel text="Selected Work" />
 
             <h1 className="rv font-display  tracking-[-0.03em] mb-6 text-fg-primary h1">
-              Blossom Rocket Brings{" "}
+              Blossom Rocket Brings
+              <br />
               <em
                 className="not-italic"
                 style={{
@@ -135,7 +136,7 @@ export default function WorkPage() {
                   backgroundClip: "text",
                 }}
               >
-                Your Brand to Life.
+                Your Brand to&nbsp;Life.
               </em>
             </h1>
             <p

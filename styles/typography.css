@@ -15,18 +15,18 @@
   }
 
   .subtext {
-    font-size: 18px;
+    @apply md:text-lg text-base;
   }
 
   .body-sm {
-    font-size: 14px;
+    @apply md:text-sm text-xs;
   }
 
   .body {
-    font-size: 16px;
+    @apply md:text-base text-sm;
   }
   .body-lg {
-    font-size: 18px;
+    @apply md:text-lg text-base;
   }
 
   .h4 {
@@ -34,5 +34,9 @@
   }
   .h5 {
     font-size: 24px;
+  }
+
+  .pills {
+    @apply hidden md:inline-flex items-center gap-2 md:text-xs text-[10px] font-semibold tracking-[0.1em] uppercase px-4 py-1.5 rounded-full mb-8;
   }
 }

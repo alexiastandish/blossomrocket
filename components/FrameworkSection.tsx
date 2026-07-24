@@ -142,7 +142,7 @@ export default function FrameworkSection() {
             <h3 className="rv d3 font-semibold mb-5 leading-[1.2] font-display h3">
               Who We Work With
             </h3>
-            <p className="rv d3 text-[14px] text-[rgba(24,24,27,0.58)] leading-[1.75] mb-5">
+            <p className="rv d3 body text-[rgba(24,24,27,0.58)] leading-[1.75] mb-5">
               Blossom Rocket partners with any organization looking to create a
               more consistent brand experience across digital and physical
               channels.
