@@ -9,7 +9,7 @@ import { ContactModalProvider } from "@/contexts/contact-modal-context";
 import { ContactModalRoot } from "@/components/contact-modal-root";
 
 export const metadata: Metadata = {
-  title: "Blossom Rocket — Brand Systems That Scale",
+  title: "Blossom Rocket — Creative Branding, Design & Company Store Solutions",
   description:
     "Blossom Rocket helps growing businesses create scalable brand systems that connect digital experiences, marketing assets, promotional products, apparel, signage, onboarding kits, tradeshow materials, and company stores.",
   keywords: [
