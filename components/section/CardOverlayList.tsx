@@ -109,7 +109,7 @@ export default function SectionCardOverlayList({
                 <h3
                   className={`font-semibold mb-5 leading-[1.2] ${activeTheme.cardHeading}`}
                   style={{
-                    fontFamily: "'Parkinsans', sans-serif",
+                    fontFamily: "var(--font-display)",
                     fontSize: "26px",
                   }}
                 >

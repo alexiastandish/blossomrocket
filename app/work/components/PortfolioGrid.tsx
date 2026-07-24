@@ -488,6 +488,8 @@ export function PortfolioGrid({ items }: PortfolioGridProps) {
                               }}
                               src={img.src}
                               alt={img.alt}
+                              loading="lazy"
+                              decoding="async"
                               className="flex-none h-[var(--row-height)] w-auto rounded-sm transition-transform duration-500 ease-out-expo"
                             />
                           );
@@ -517,7 +519,7 @@ export function PortfolioGrid({ items }: PortfolioGridProps) {
                   </div>
                   <h3
                     className="text-[19px] sm:text-[21px] font-semibold leading-[1.2] tracking-[-0.01em] text-ink mb-1.5"
-                    style={{ fontFamily: "'Parkinsans', sans-serif" }}
+                    style={{ fontFamily: "var(--font-display)" }}
                   >
                     {project.title}
                   </h3>
@@ -561,7 +563,7 @@ export function PortfolioGrid({ items }: PortfolioGridProps) {
               {/* Title */}
               <h2
                 className="text-[26px] font-semibold leading-[1.15] tracking-[-0.02em] text-ink mb-3"
-                style={{ fontFamily: "'Parkinsans', sans-serif" }}
+                style={{ fontFamily: "var(--font-display)" }}
               >
                 {active.title}
               </h2>

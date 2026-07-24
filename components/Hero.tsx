@@ -189,7 +189,7 @@ export default function Hero({
     <header
       id={id}
       className={[
-        "section relative min-h-[100svh] flex flex-col items-center justify-center text-center",
+        "section hero relative min-h-[100svh] flex flex-col items-center justify-center text-center",
         bgClass,
         className,
       ].join(" ")}
@@ -223,23 +223,6 @@ export default function Hero({
         </div>
       )}
 
-      {/* ── Eyebrow chips — mobile only ── */}
-      {pillItems.length > 0 && showPills && (
-        <div className="anim-fade-up anim-delay-1 flex md:hidden flex-wrap items-center justify-center gap-2 mb-6 max-w-sm">
-          {pillItems.map((item, i) => (
-            <span
-              key={i}
-              className={[
-                "inline-flex items-center text-[10px] font-semibold tracking-[0.06em] uppercase px-3 py-1 rounded-full whitespace-nowrap",
-                CHIP_STYLES[resolvedPillTheme],
-              ].join(" ")}
-            >
-              {item}
-            </span>
-          ))}
-        </div>
-      )}
-
       <div className="relative z-10 max-w-3xl">
         {/* ── Heading ── */}
         <h1
@@ -260,6 +243,23 @@ export default function Hero({
         >
           {body}
         </p>
+
+        {/* ── Eyebrow chips — mobile only ── */}
+        {pillItems.length > 0 && showPills && (
+          <div className="anim-fade-up anim-delay-4 flex md:hidden flex-wrap items-center justify-center gap-2 mb-6 max-w-sm mx-auto">
+            {pillItems.map((item, i) => (
+              <span
+                key={i}
+                className={[
+                  "inline-flex items-center text-[10px] font-semibold tracking-[0.06em] uppercase px-3 py-1 rounded-full whitespace-nowrap",
+                  CHIP_STYLES[resolvedPillTheme],
+                ].join(" ")}
+              >
+                {item}
+              </span>
+            ))}
+          </div>
+        )}
 
         {/* ── CTAs ── */}
         {ctaContent && (

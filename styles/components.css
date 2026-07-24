@@ -95,4 +95,15 @@
   .section {
     padding: clamp(80px, 11vw, 160px) clamp(32px, 7vw, 100px);
   }
+
+  /* Extra top clearance below the fixed nav on mobile, where .section's
+     padding-top formula bottoms out at 80px — too tight under the 68px nav. */
+  .hero {
+    padding-top: 112px;
+  }
+  @media (min-width: 768px) {
+    .hero {
+      padding-top: clamp(80px, 11vw, 160px);
+    }
+  }
 }

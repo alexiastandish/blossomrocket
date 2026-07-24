@@ -1,17 +1,17 @@
 @layer components {
   .h1 {
     @apply lg:text-7xl md:text-6xl lg:leading-[1.1] font-semibold leading-tight tracking-[-0.03em] text-4xl;
-    font-family: "Parkinsans", sans-serif;
+    font-family: var(--font-display);
   }
 
   .h2 {
     @apply lg:text-6xl md:text-5xl lg:leading-[1.15] font-semibold md:leading-snug tracking-[-0.03em] leading-snug text-4xl;
-    font-family: "Parkinsans", sans-serif;
+    font-family: var(--font-display);
   }
 
   .h3 {
     @apply lg:text-3xl md:text-2xl lg:leading-[1.15] font-semibold md:leading-snug tracking-[-0.03em] leading-snug text-3xl;
-    font-family: "Parkinsans", sans-serif;
+    font-family: var(--font-display);
   }
 
   .subtext {

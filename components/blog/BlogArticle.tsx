@@ -9,7 +9,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 export function BlogArticle({ article }: { article: BlogArticleData }) {
   return (
-    <div className="max-w-[1200px] mx-auto px-6 sm:px-8 py-14 sm:py-20">
+    <div className="section max-w-[1200px] mx-auto">
       <ArticleJsonLd article={article} />
 
       <Breadcrumbs
@@ -27,7 +27,7 @@ export function BlogArticle({ article }: { article: BlogArticleData }) {
 
           <h1
             className="text-[36px] sm:text-[44px] font-semibold leading-[1.1] tracking-[-0.02em] text-ink mb-4"
-            style={{ fontFamily: "'Parkinsans', sans-serif" }}
+            style={{ fontFamily: "var(--font-display)" }}
           >
             {article.title}
           </h1>

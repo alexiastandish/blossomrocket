@@ -125,7 +125,7 @@ export default function FAQAccordionGrouped({
                 style={{ background: gradientFor(groupIndex) }}
               />
               <h3
-                style={{ fontFamily: "'Parkinsans', sans-serif" }}
+                style={{ fontFamily: "var(--font-display)" }}
                 className={`text-lg md:text-xl font-semibold ${activeTokens.text}`}
               >
                 {group.title}

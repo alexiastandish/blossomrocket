@@ -120,7 +120,7 @@ export default function WorkPage() {
       />
 
       <div>
-        <div className="section ">
+        <div className="section">
           <header className="mb-8">
             <SectionLabel text="Selected Work" />
 

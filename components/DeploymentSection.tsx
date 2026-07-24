@@ -151,7 +151,7 @@ function DeployCard({
       </div>
       <h3
         className="font-semibold mb-2.5 leading-[1.2] h5"
-        style={{ fontFamily: "'Parkinsans', sans-serif" }}
+        style={{ fontFamily: "var(--font-display)" }}
       >
         {item.title}
       </h3>

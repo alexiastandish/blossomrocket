@@ -130,12 +130,12 @@ export function BlogIndexClient({ posts }: BlogIndexClientProps) {
   const hasActiveFilters = Boolean(query || activeTags.length > 0);
 
   return (
-    <div className="max-w-[1200px] mx-auto px-6 sm:px-8 py-14 sm:py-20">
+    <div className="section max-w-[1200px] mx-auto">
       <header className="max-w-[640px] mb-14 sm:mb-20">
         <SectionLabel text="Insights" />
         <h1
           className="text-[36px] sm:text-[44px] font-semibold leading-[1.1] tracking-[-0.02em] text-ink mb-4"
-          style={{ fontFamily: "'Parkinsans', sans-serif" }}
+          style={{ fontFamily: "var(--font-display)" }}
         >
           The Blossom <em className="grad-text not-italic">Blog</em>
         </h1>
@@ -169,7 +169,7 @@ export function BlogIndexClient({ posts }: BlogIndexClientProps) {
           </span>
           <h2
             className="text-[26px] sm:text-[32px] font-semibold leading-[1.15] tracking-[-0.02em] text-ink mb-3"
-            style={{ fontFamily: "'Parkinsans', sans-serif" }}
+            style={{ fontFamily: "var(--font-display)" }}
           >
             {featured.title}
           </h2>
@@ -254,7 +254,7 @@ export function BlogIndexClient({ posts }: BlogIndexClientProps) {
 
               <h3
                 className="text-[17px] font-semibold leading-[1.3] tracking-[-0.01em] text-ink mb-2"
-                style={{ fontFamily: "'Parkinsans', sans-serif" }}
+                style={{ fontFamily: "var(--font-display)" }}
               >
                 {post.title}
               </h3>
@@ -273,7 +273,7 @@ export function BlogIndexClient({ posts }: BlogIndexClientProps) {
         <div className="flex flex-col items-center text-center py-20 rounded-sm bg-surface-subtle">
           <p
             className="text-[18px] font-semibold text-ink mb-2"
-            style={{ fontFamily: "'Parkinsans', sans-serif" }}
+            style={{ fontFamily: "var(--font-display)" }}
           >
             No articles match that search
           </p>

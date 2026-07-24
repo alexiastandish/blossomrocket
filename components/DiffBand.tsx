@@ -24,7 +24,7 @@ export default function DiffBand() {
         <div
           className="grad-text font-semibold leading-none"
           style={{
-            fontFamily: "'Parkinsans', sans-serif",
+            fontFamily: "var(--font-display)",
             fontSize: "clamp(48px,6vw,80px)",
           }}
         >

@@ -113,7 +113,7 @@ export default function FrameworkSection() {
                 <div className="flex flex-col items-center pt-1">
                   <div
                     className="w-9 h-9 rounded-full border border-[rgba(24,24,27,0.12)] flex items-center justify-center text-[15px] font-semibold text-[rgba(24,24,27,0.58)] transition-all duration-300 hover:bg-[#9b5cf6] hover:border-[#9b5cf6] hover:text-white"
-                    style={{ fontFamily: "'Parkinsans', sans-serif" }}
+                    style={{ fontFamily: "var(--font-display)" }}
                   >
                     {step.num}
                   </div>

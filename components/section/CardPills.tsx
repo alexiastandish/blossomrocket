@@ -20,7 +20,7 @@ export default function CardList({
       {heading && (
         <h3
           className={`font-semibold mb-5 leading-[1.2] ${activeTokens.cardHeading}`}
-          style={{ fontFamily: "'Parkinsans', sans-serif", fontSize: "26px" }}
+          style={{ fontFamily: "var(--font-display)", fontSize: "26px" }}
         >
           {heading}
         </h3>

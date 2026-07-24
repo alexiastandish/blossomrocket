@@ -26,7 +26,7 @@ export default function CardLinkGrid({
       {heading && (
         <h3
           className={`font-semibold mb-5 leading-[1.3] ${activeTokens.cardHeading}`}
-          style={{ fontFamily: "'Parkinsans', sans-serif", fontSize: "20px" }}
+          style={{ fontFamily: "var(--font-display)", fontSize: "20px" }}
         >
           {heading}
         </h3>

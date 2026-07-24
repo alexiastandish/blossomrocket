@@ -14,7 +14,7 @@
     "href": "/services/print-environmental",
     "images": [
       {
-        "src": "https://res.cloudinary.com/djsnadzwm/video/upload/v1783966880/jkiblfi56uiixg8wmjmt.mp4",
+        "src": "https://res.cloudinary.com/djsnadzwm/video/upload/q_auto,w_1200/v1783966880/jkiblfi56uiixg8wmjmt.mp4",
         "alt": "Atomic Blossom",
         "aspectRatio": "16/10"
       }
@@ -31,7 +31,7 @@
     "rowHeight": "40vh",
     "images": [
       {
-        "src": "https://res.cloudinary.com/djsnadzwm/video/upload/v1784139712/puller-v2_r5welk.mp4",
+        "src": "https://res.cloudinary.com/djsnadzwm/video/upload/q_auto,w_1200/v1784139712/puller-v2_r5welk.mp4",
         "alt": "Puller AI",
         "aspectRatio": "16/8"
       },

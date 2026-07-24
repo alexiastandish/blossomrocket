@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Parkinsans } from "next/font/google";
 import "./globals.css";
 import Cursor from "@/components/Cursor";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -108,19 +109,25 @@ export const metadata: Metadata = {
   },
 };
 
+const parkinsans = Parkinsans({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-parkinsans",
+  adjustFontFallback: false,
+});
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" data-scroll-behavior="smooth">
+    <html
+      lang="en"
+      data-scroll-behavior="smooth"
+      className={parkinsans.variable}
+    >
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300;400;500;600;700;800&display=swap"
-          rel="stylesheet"
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

@@ -7,6 +7,7 @@
   }
 
   .cdot {
+    display: none;
     position: fixed;
     width: 7px;
     height: 7px;
@@ -18,6 +19,7 @@
     mix-blend-mode: multiply;
   }
   .cring {
+    display: none;
     position: fixed;
     width: 34px;
     height: 34px;
@@ -35,6 +37,15 @@
     width: 52px;
     height: 52px;
     border-color: #9b5cf6;
+  }
+
+  /* Custom cursor only makes sense with a real mouse — hidden on touch/mobile
+     devices, which have no hover state and no fine pointer to track. */
+  @media (hover: hover) and (pointer: fine) {
+    .cdot,
+    .cring {
+      display: block;
+    }
   }
 
   .bar-fill {
