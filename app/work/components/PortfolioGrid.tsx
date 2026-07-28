@@ -385,11 +385,14 @@ export function PortfolioGrid({ items }: PortfolioGridProps) {
 
                   return (
                     <div key={lineKey} className="relative">
-                      {/* Edge fades — visibility toggled in the scroll-fade effect above based on real scroll position. Narrower on small screens so they don't eat too much of a smaller row. */}
+                      {/* Edge fades — hidden on mobile only, since that's the only
+                          breakpoint that stacks images vertically (no horizontal scroll
+                          to fade there). Visibility toggled in the scroll-fade effect
+                          above based on real scroll position. */}
                       <div
                         data-fade="left"
                         aria-hidden="true"
-                        className="pointer-events-none absolute inset-y-0 left-0 z-10 w-10 sm:w-16 opacity-0 transition-opacity duration-300"
+                        className="hidden md:block pointer-events-none absolute inset-y-0 left-0 z-10 w-10 sm:w-16 opacity-0 transition-opacity duration-300"
                         style={{
                           background:
                             "linear-gradient(to right, var(--fade-bg, #ffffff), transparent)",
@@ -398,7 +401,7 @@ export function PortfolioGrid({ items }: PortfolioGridProps) {
                       <div
                         data-fade="right"
                         aria-hidden="true"
-                        className="pointer-events-none absolute inset-y-0 right-0 z-10 w-10 sm:w-16 opacity-0 transition-opacity duration-300"
+                        className="hidden md:block pointer-events-none absolute inset-y-0 right-0 z-10 w-10 sm:w-16 opacity-0 transition-opacity duration-300"
                         style={{
                           background:
                             "linear-gradient(to left, var(--fade-bg, #ffffff), transparent)",
@@ -411,8 +414,8 @@ export function PortfolioGrid({ items }: PortfolioGridProps) {
                         }}
                         data-scroll-line="true"
                         className={[
-                          "flex gap-1.5 max-w-full",
-                          "overflow-x-auto overflow-y-hidden [scrollbar-width:none] [-ms-overflow-style:none]",
+                          "flex flex-col md:flex-row gap-1.5 max-w-full",
+                          "overflow-visible md:overflow-x-auto md:overflow-y-hidden [scrollbar-width:none] [-ms-overflow-style:none]",
                           "[&::-webkit-scrollbar]:hidden [-webkit-overflow-scrolling:touch]",
                         ].join(" ")}
                       >
@@ -421,7 +424,8 @@ export function PortfolioGrid({ items }: PortfolioGridProps) {
                           const hasRatio = Boolean(img.aspectRatio);
                           const key = `${project.slug}-${lineIndex}-${imgIndex}`;
 
-                          // Two rendering paths:
+                          // Two rendering paths (tablet/desktop/md+ sizing described below —
+                          // on mobile every item is just w-full h-auto, stacked vertically):
                           // 1. aspectRatio is set → sized container + next/image `fill`
                           // 2. no aspectRatio → no container sizing at all; the media
                           //    itself is height: var(--row-height), width: auto, so its
@@ -436,7 +440,7 @@ export function PortfolioGrid({ items }: PortfolioGridProps) {
                                 ref={(el) => {
                                   imageRefs.current[key] = el;
                                 }}
-                                className="relative flex-none overflow-hidden rounded-sm bg-surface-subtle h-[var(--row-height)]"
+                                className="relative flex-none w-full h-auto md:w-auto md:h-[var(--row-height)] overflow-hidden rounded-sm bg-surface-subtle"
                                 style={{ aspectRatio: img.aspectRatio }}
                               >
                                 {video ? (
@@ -455,7 +459,7 @@ export function PortfolioGrid({ items }: PortfolioGridProps) {
                                     src={img.src}
                                     alt={img.alt}
                                     fill
-                                    sizes="(max-width: 640px) 80vw, (max-width: 1024px) 60vw, 40vw"
+                                    sizes="(max-width: 767px) 100vw, 40vw"
                                     className="object-cover transition-transform duration-500 ease-out-expo"
                                   />
                                 )}
@@ -477,7 +481,7 @@ export function PortfolioGrid({ items }: PortfolioGridProps) {
                               playsInline
                               preload="metadata"
                               aria-label={img.alt}
-                              className="flex-none h-[var(--row-height)] w-auto rounded-sm transition-transform duration-500 ease-out-expo"
+                              className="flex-none w-full h-auto md:w-auto md:h-[var(--row-height)] rounded-sm transition-transform duration-500 ease-out-expo"
                             />
                           ) : (
                             // eslint-disable-next-line @next/next/no-img-element
@@ -490,7 +494,7 @@ export function PortfolioGrid({ items }: PortfolioGridProps) {
                               alt={img.alt}
                               loading="lazy"
                               decoding="async"
-                              className="flex-none h-[var(--row-height)] w-auto rounded-sm transition-transform duration-500 ease-out-expo"
+                              className="flex-none w-full h-auto md:w-auto md:h-[var(--row-height)] rounded-sm transition-transform duration-500 ease-out-expo"
                             />
                           );
                         })}

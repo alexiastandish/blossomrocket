@@ -50,6 +50,28 @@
     ]
   },
   {
+    "slug": "modern-meditations",
+    "title": "Modern Meditations",
+    "description": "Modern Meditations adapts ancient contemplative traditions into practical, secular, and science-backed tools for busy lives",
+    "client": "Modern Meditations",
+    "tags": ["Brand Identity", "Print Design"],
+    "href": "/services/print-environmental",
+    "images": [
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/f06b545c-6fd5-418b-b9a4-57f37079c400/public",
+        "alt": "Modern Meditations Business Card"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/6a91f29e-b227-4fb6-1789-1cccb8370b00/public",
+        "alt": "Modern Meditations Mug - Promotional Product"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/1e2de879-c925-486c-c740-8cf46e0f6e00/public",
+        "alt": "Modern Meditations Style Guide"
+      }
+    ]
+  },
+  {
     "slug": "beats-by-dre",
     "title": "Beats By Dre — Identity Lookbook",
     "description": "A print identity lookbook for Beats by Dre's 2016 collections, featuring product spreads for Powerbeats², Tour², Solo², UrBeats, and Mixr, plus limited luxury collaborations with Fendi and campaign pages featuring LeBron James and Lady Gaga.",
@@ -189,24 +211,7 @@
     "href": "/services/print-environmental",
     "images": []
   },
-  {
-    "slug": "modern-meditations",
-    "title": "Modern Meditations",
-    "description": "Modern Meditations adapts ancient contemplative traditions into practical, secular, and science-backed tools for busy lives",
-    "client": "Modern Meditations",
-    "tags": ["Brand Identity", "Print Design"],
-    "href": "/services/print-environmental",
-    "images": [
-      {
-        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/f06b545c-6fd5-418b-b9a4-57f37079c400/public",
-        "alt": "Modern Meditations Business Card"
-      },
-      {
-        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/1e2de879-c925-486c-c740-8cf46e0f6e00/public",
-        "alt": "Modern Meditations Style Guide"
-      }
-    ]
-  },
+
   {
     "slug": "convergence-capital",
     "title": "Convergence Capital",
