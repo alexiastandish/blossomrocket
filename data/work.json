@@ -181,6 +181,33 @@
     ]
   },
   {
+    "slug": "cosmic-spot",
+    "title": "Cosmic Spot",
+    "description": "A wellness space focused on creating a space to encourage healthy living, community, and nutrient dense consumption.",
+    "client": "Cosmic Spot",
+    "tags": ["Brand Identity", "Print Design", "Brand Systems"],
+    "href": "/services/print-environmental",
+    "images": []
+  },
+  {
+    "slug": "modern-meditations",
+    "title": "Modern Meditations",
+    "description": "Modern Meditations adapts ancient contemplative traditions into practical, secular, and science-backed tools for busy lives",
+    "client": "Modern Meditations",
+    "tags": ["Brand Identity", "Print Design"],
+    "href": "/services/print-environmental",
+    "images": [
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/f06b545c-6fd5-418b-b9a4-57f37079c400/public",
+        "alt": "Modern Meditations Business Card"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/1e2de879-c925-486c-c740-8cf46e0f6e00/public",
+        "alt": "Modern Meditations Style Guide"
+      }
+    ]
+  },
+  {
     "slug": "convergence-capital",
     "title": "Convergence Capital",
     "description": "Brand identity and marketing collateral for Convergence Capital — including a branded investor presentation deck and business card design.",
@@ -282,6 +309,25 @@
         "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/cbbb88dc-4d25-47de-7d77-8f6d6dc10700/public",
         "alt": "Compassion For Kids Web Slider 2",
         "aspectRatio": "16/8"
+      }
+    ]
+  },
+
+  {
+    "slug": "sirius-media",
+    "title": "Sirius Media",
+    "description": "A digital media solutions company focused on the brightest path to digital growth.",
+    "client": "Sirius Media",
+    "tags": ["Brand Identity", "Print Design"],
+    "href": "/services/print-environmental",
+    "images": [
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/8369bb66-ecb8-4a34-8365-2dbf88757800/public",
+        "alt": "Sirius Media Business Card"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/3ee46256-ad8e-4415-c457-b03dea53e200/public",
+        "alt": "Sirius Media Style Guide"
       }
     ]
   },

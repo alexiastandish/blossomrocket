@@ -237,7 +237,7 @@ export default function Hero({
         {/* ── Body ── */}
         <p
           className={[
-            "subtext anim-fade-up anim-delay-3 leading-[1.72] mx-auto mb-12 max-w-6xl body",
+            "anim-fade-up anim-delay-3 mx-auto mb-2 max-w-6xl subtext",
             bodyTextColor,
           ].join(" ")}
         >
