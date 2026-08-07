@@ -8,5 +8,6 @@ export const pageThemes: Record<string, "light" | "dark"> = {
   "/services/print-and-environmental-design": "dark",
   "/services/merchandise-and-promotional-products": "light",
   "/services/company-stores": "dark",
+  "/services/company-storefronts": "light",
   "/blog": "light",
 };

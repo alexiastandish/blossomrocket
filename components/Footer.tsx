@@ -31,7 +31,10 @@ const insights = [
   },
 ];
 const connect = [
-  // { label: "LinkedIn", href: "#" },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/company/blossom-rocket",
+  },
   // { label: "Twitter / X", href: "#" },
   // { label: "Instagram", href: "#" },
   {

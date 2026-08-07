@@ -288,7 +288,7 @@ export default function CompanyStores() {
           heading={
             <>
               <em className="grad-text not-italic">What&apos;s included</em> in
-              Company Store services?
+              Company Store Services?
             </>
           }
           subtext="What's included in Blossom Rocket's Company Store services, powered by SplashBrands:"

@@ -206,41 +206,32 @@ export default function page() {
             { label: "Websites", href: "/services/digital-marketing#website" },
             {
               label: "Social Media",
-              href: "/services/digital-marketing#social-media",
             },
             {
               label: "Marketing Campaigns",
-              href: "/services/campaign-and-marketing-assets",
             },
             {
               label: "Presentations",
-              href: "/services/campaign-and-marketing-assets#presentations",
             },
             {
               label: "Print Materials",
-              href: "/services/print-and-environmental-design",
             },
             {
               label: "Packaging",
-              href: "/services/print-and-environmental-design#packaging",
             },
             {
               label: "Signage",
-              href: "/services/print-and-environmental-design#signage",
             },
             {
               label: "Promotional Products",
-              href: "/services/merchandise-and-promotional-products",
             },
             {
               label: "Apparel",
-              href: "/services/merchandise-and-promotional-products#apparel",
             },
             {
               label: "Trade Show Materials",
-              href: "/services/merchandise-and-promotional-products#tradeshow-materials",
             },
-            { label: "Company Stores", href: "/services/company-stores" },
+            { label: "Company Stores" },
           ]}
           footerText="This creates a more unified experience for customers, employees, partners, and stakeholders alike."
         />

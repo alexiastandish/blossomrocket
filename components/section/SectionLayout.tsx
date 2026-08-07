@@ -135,9 +135,7 @@ export default function SectionLayout({
                 {heading}
               </h2>
               {subtext && (
-                <p
-                  className={`leading-[1.8] mb-2 ${activeTheme.subtext} subtext`}
-                >
+                <p className={`mb-2 ${activeTheme.subtext} subtext`}>
                   {subtext}
                 </p>
               )}

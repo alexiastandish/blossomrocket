@@ -1,30 +1,8 @@
 [
   {
-    "slug": "atomic-blossom",
-    "title": "Atomic Blossom",
-    "description": "Brand identity, brand system, and full-stack website build for Atomic Blossom, a handmade jewelry brand — including visual identity foundations and a custom-developed e-commerce storefront.",
-    "client": "Atomic Blossom",
-    "tags": [
-      "Brand Identity",
-      "Brand Systems",
-      "Web Design",
-      "Digital Design",
-      "Web Development"
-    ],
-    "href": "/services/print-environmental",
-    "images": [
-      {
-        "src": "https://res.cloudinary.com/djsnadzwm/video/upload/q_auto,w_1200/v1783966880/jkiblfi56uiixg8wmjmt.mp4",
-        "alt": "Atomic Blossom",
-        "aspectRatio": "16/10"
-      }
-    ],
-    "rowHeight": "50vh"
-  },
-  {
     "slug": "puller-ai",
     "title": "Puller AI",
-    "description": "Brand system and website design and development for Puller AI, a technology company — establishing visual identity foundations alongside a custom-built web experience.",
+    "description": "Puller AI enables anyone on your team to quickly access, retrieve, prepare, and push business-critical data as fluently as your best data engineer.",
     "client": "Puller AI",
     "tags": ["Brand System", "Web Design", "Web Development", "Digital Design"],
     "href": "/services/print-environmental",
@@ -50,9 +28,31 @@
     ]
   },
   {
+    "slug": "atomic-blossom",
+    "title": "Atomic Blossom",
+    "description": "Elemental Jewelry for the Otherworldly.",
+    "client": "Atomic Blossom",
+    "tags": [
+      "Brand Identity",
+      "Brand Systems",
+      "Web Design",
+      "Digital Design",
+      "Web Development"
+    ],
+    "href": "/services/print-environmental",
+    "images": [
+      {
+        "src": "https://res.cloudinary.com/djsnadzwm/video/upload/q_auto,w_1200/v1783966880/jkiblfi56uiixg8wmjmt.mp4",
+        "alt": "Atomic Blossom",
+        "aspectRatio": "16/10"
+      }
+    ],
+    "rowHeight": "50vh"
+  },
+  {
     "slug": "modern-meditations",
     "title": "Modern Meditations",
-    "description": "Modern Meditations adapts ancient contemplative traditions into practical, secular, and science-backed tools for busy lives",
+    "description": "Modern Meditations adapts ancient contemplative traditions into practical, secular, and science-backed tools for busy lives.",
     "client": "Modern Meditations",
     "tags": ["Brand Identity", "Print Design"],
     "href": "/services/print-environmental",
@@ -68,8 +68,21 @@
       {
         "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/1e2de879-c925-486c-c740-8cf46e0f6e00/public",
         "alt": "Modern Meditations Style Guide"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/ed726f44-a33e-492a-ffe7-53106f03a600/public",
+        "alt": "Modern Meditations Podcast"
       }
     ]
+  },
+  {
+    "slug": "nextup.ai",
+    "title": "Nextup.ai",
+    "description": "Top organizations worldwide use solutions from Nextup.ai to increase productivity in Slack.",
+    "client": "Nextup.ai",
+    "tags": ["Brand Identity", "Web Design", "Brand Systems"],
+    "href": "/services/print-environmental",
+    "images": []
   },
   {
     "slug": "beats-by-dre",

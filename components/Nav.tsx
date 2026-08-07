@@ -31,6 +31,7 @@ const services: NavLink[] = [
     label: "Merchandise & Promotional Products",
   },
   { href: "/services/company-stores", label: "Company Stores" },
+  { href: "/services/company-storefronts", label: "Company Storefronts" },
 ];
 
 const dropdownLinks: Record<string, NavLink[]> = {

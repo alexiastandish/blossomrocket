@@ -1,0 +1,141 @@
+[
+  {
+    "id": "company-storefronts",
+    "title": "Company Storefronts",
+    "items": [
+      {
+        "id": "what-is-a-company-storefront",
+        "question": "What is a Company Storefront?",
+        "answer": "A Blossom Rocket Company Storefront is a branded merchandise storefront powered by SplashBrands. It gives businesses ongoing access to apparel and promotional products configured around approved logos, logo variations, and brand colors."
+      },
+      {
+        "id": "how-much-does-a-company-storefront-cost",
+        "question": "How much does a Company Storefront cost?",
+        "answer": "Blossom Rocket Company Storefronts cost $200 per month, providing a lower-commitment option for businesses that want ongoing access to branded merchandise without a full Company Store program."
+      },
+      {
+        "id": "who-are-company-storefronts-for",
+        "question": "Who are Company Storefronts designed for?",
+        "answer": "Company Storefronts are designed for smaller and growing businesses that regularly need branded apparel and promotional products but do not need the complexity or commitment of a full Company Store program."
+      },
+      {
+        "id": "how-is-a-company-storefront-different-from-a-full-company-store",
+        "question": "How is a Company Storefront different from a full Company Store?",
+        "answer": "A Company Storefront provides a simpler way to access and purchase brand-controlled merchandise. Full SplashBrands Company Stores are designed for larger or more complex merchandise programs that require additional store management and administrative capabilities."
+      }
+    ],
+    "cta": {
+      "label": "Learn More About Company Stores",
+      "href": "https://splashbrands.com/company-stores/",
+      "target": "_blank"
+    }
+  },
+  {
+    "id": "storefront-setup-and-branding",
+    "title": "Storefront Setup & Branding",
+    "items": [
+      {
+        "id": "how-does-company-storefront-setup-work",
+        "question": "How does Company Storefront setup work?",
+        "answer": "Businesses upload approved logos and logo variations, select brand-aligned product colors, review logo-to-color pairings, and provide brand information and application preferences. SplashBrands uses these selections to configure the branded storefront experience."
+      },
+      {
+        "id": "can-a-company-storefront-support-multiple-logo-versions",
+        "question": "Can a Company Storefront support multiple logo versions?",
+        "answer": "Yes. Businesses can upload multiple approved logo variations, including horizontal logos, stacked logos, logo marks, and brand icons. Each logo variation can be configured independently."
+      },
+      {
+        "id": "does-splashbrands-create-black-and-white-logo-versions",
+        "question": "Does SplashBrands create black and white versions of uploaded logos?",
+        "answer": "Yes. The SplashBrands setup workflow creates black and white treatments of uploaded logos to provide appropriate logo options across light and dark product colors."
+      },
+      {
+        "id": "how-are-logos-matched-to-product-colors",
+        "question": "How are logos matched to product colors?",
+        "answer": "SplashBrands previews logo treatments against selected product colors and recommends appropriate logo-to-color pairings. Businesses can review and change which approved logo treatment is used with each product color."
+      },
+      {
+        "id": "can-different-logo-variations-use-different-product-colors",
+        "question": "Can different logo variations use different product colors?",
+        "answer": "Yes. Product colors can be configured separately for each approved logo variation. A horizontal logo, stacked logo, or logo mark can each have its own product color selections."
+      },
+      {
+        "id": "can-i-upload-brand-guidelines",
+        "question": "Can I upload existing Brand Guidelines?",
+        "answer": "Yes. Brand Guidelines can be uploaded during Company Storefront setup to give the SplashBrands logo team additional context about approved logos, colors, and brand application standards."
+      },
+      {
+        "id": "can-i-provide-logo-application-instructions",
+        "question": "Can I provide specific instructions for how my logos should be used?",
+        "answer": "Yes. Businesses can provide application notes during setup, such as specifying when a horizontal, stacked, or other approved logo variation should be used on particular merchandise."
+      },
+      {
+        "id": "why-does-splashbrands-ask-for-company-url",
+        "question": "Why does SplashBrands ask for my company website or social media URL?",
+        "answer": "The company URL gives the SplashBrands logo team additional brand context when reviewing submitted assets. If questions arise about a logo file or its intended use, the team can reference the existing brand and contact the customer for clarification."
+      }
+    ]
+  },
+  {
+    "id": "products-and-ordering",
+    "title": "Products & Ordering",
+    "items": [
+      {
+        "id": "what-products-are-available",
+        "question": "What products are available through a Company Storefront?",
+        "answer": "Company Storefronts give users access to branded apparel and promotional products available through SplashBrands, creating an ongoing destination for recurring company merchandise needs."
+      },
+      {
+        "id": "can-businesses-control-product-colors",
+        "question": "Can businesses control which product colors are available?",
+        "answer": "Yes. Businesses select product colors that align with their Brand Identity during setup, helping keep the storefront focused on merchandise colors that fit the brand."
+      },
+      {
+        "id": "can-users-buy-products-directly",
+        "question": "Can users purchase products directly from a Company Storefront?",
+        "answer": "Yes. Once the Company Storefront is available, users can browse and purchase branded apparel and promotional products directly through the storefront."
+      },
+      {
+        "id": "do-i-have-to-configure-branding-for-every-order",
+        "question": "Do I have to configure the branding again for every order?",
+        "answer": "No. Approved logos, logo variations, product colors, and logo-to-color preferences are established during storefront setup, so users can return to shop branded products without repeating the full brand configuration process."
+      },
+      {
+        "id": "how-do-company-storefronts-maintain-brand-consistency",
+        "question": "How does a Company Storefront help maintain brand consistency?",
+        "answer": "Company Storefronts connect approved logo variations with brand-aligned product colors and logo treatments, creating a repeatable framework for applying a company's Brand Identity across apparel and promotional products."
+      },
+      {
+        "id": "why-use-a-storefront-instead-of-individual-merchandise-orders",
+        "question": "Why use a Company Storefront instead of placing individual merchandise orders?",
+        "answer": "A Company Storefront establishes core branding decisions once and makes them available for future purchases. This reduces the need to repeatedly select logo files, product colors, and logo treatments for recurring merchandise orders."
+      }
+    ]
+  },
+  {
+    "id": "splashbrands",
+    "title": "SplashBrands",
+    "items": [
+      {
+        "id": "what-makes-splashbrands-different",
+        "question": "What makes SplashBrands different from other Company Store providers?",
+        "answer": "SplashBrands combines proprietary storefront technology with in-house production capabilities to connect brand configuration, product access, decoration, and fulfillment within the same merchandise ecosystem."
+      },
+      {
+        "id": "how-does-splashbrands-power-company-storefronts",
+        "question": "How does SplashBrands power Company Storefronts?",
+        "answer": "SplashBrands provides the storefront technology and merchandise infrastructure behind Blossom Rocket Company Storefronts. The platform uses approved logo variations, product colors, and brand preferences to create a brand-controlled shopping experience."
+      },
+      {
+        "id": "how-does-blossom-rocket-work-with-splashbrands",
+        "question": "How does Blossom Rocket work with SplashBrands?",
+        "answer": "Blossom Rocket offers Company Storefronts as part of its branded merchandise services, while SplashBrands provides the storefront technology, product infrastructure, logo setup support, production, and fulfillment that power the shopping experience."
+      }
+    ],
+    "cta": {
+      "label": "Learn More About SplashBrands",
+      "href": "https://splashbrands.com/",
+      "target": "_blank"
+    }
+  }
+]

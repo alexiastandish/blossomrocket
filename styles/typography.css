@@ -15,7 +15,7 @@
   }
 
   .subtext {
-    @apply md:text-lg text-base leading-[1.8];
+    @apply whitespace-pre-line md:text-lg text-base leading-[1.8];
   }
 
   .body-sm {
