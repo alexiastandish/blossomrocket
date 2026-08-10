@@ -22,7 +22,7 @@ import faqs from "@/data/faqs/solutions/home.json";
 import DiffBand from "@/components/DiffBand";
 import { CTASlots } from "@/components/CTASlot";
 import { CalendlyButton } from "@/components/CalendlyButton";
-import CompanyStoreComparisonSection from "@/components/ComparisonTable/CompanyStoreComparisonSection";
+import { CompanyStoreComparisonSection } from "@/components/ComparisonTable/CompanyStoreComparisonSection";
 
 // TODO
 export default function Solutions() {

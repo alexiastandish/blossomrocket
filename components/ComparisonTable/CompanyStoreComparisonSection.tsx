@@ -1,4 +1,3 @@
-import SectionLayout from "@/components/section/SectionLayout";
 import ComparisonTable, { ComparisonGroup } from "./ComparisonTable";
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
@@ -120,14 +119,15 @@ const groups: ComparisonGroup[] = [
   },
 ];
 
-// ─── Section ──────────────────────────────────────────────────────────────────
+// ─── Usage in page.tsx ────────────────────────────────────────────────────────
+// Drop this wherever you want the section in the company stores page.
+// Adjust maxWidth to taste — defaults to max-w-6xl if omitted.
 
-export default function CompanyStoreComparisonSection() {
+export function CompanyStoreComparisonSection() {
   return (
-    <SectionLayout
+    <ComparisonTable
       id="company-store-comparison"
       theme="light"
-      layout="stacked"
       eyebrow="Company Stores"
       heading={
         <>
@@ -135,12 +135,10 @@ export default function CompanyStoreComparisonSection() {
         </>
       }
       subtext="See exactly how our company store solution stacks up — from setup speed to in-house production, we built this to be different."
-    >
-      <ComparisonTable
-        usLabel="Blossom Rocket"
-        themLabel="The Competition"
-        groups={groups}
-      />
-    </SectionLayout>
+      maxWidth="max-w-6xl"
+      usLabel="Blossom Rocket"
+      themLabel="The Competition"
+      groups={groups}
+    />
   );
 }
