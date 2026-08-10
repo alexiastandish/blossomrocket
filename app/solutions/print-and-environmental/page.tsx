@@ -11,7 +11,7 @@ import Script from "next/script";
 import { CTASlots } from "@/components/CTASlot";
 
 const PAGE_URL =
-  "https://blossomrocket.studio/services/print-and-environmental-design";
+  "https://blossomrocket.studio/solutions/print-and-environmental";
 
 export const metadata: Metadata = {
   title: "Print & Environmental Design — Blossom Rocket",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: "Print & Environmental Design — Blossom Rocket",
     description:
       "Create consistent customer-facing materials across every location, department, campaign, and vendor with Blossom Rocket's Print & Environmental Design services.",
-    url: "https://blossomrocket.studio/services/print-and-environmental-design",
+    url: "https://blossomrocket.studio/solutions/print-and-environmental",
     siteName: "Blossom Rocket",
     type: "website",
   },
@@ -103,7 +103,7 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 2,
       name: "Services",
-      item: "https://blossomrocket.studio/services",
+      item: "https://blossomrocket.studio/solutions",
     },
     {
       "@type": "ListItem",
@@ -391,7 +391,7 @@ export default function page() {
         <FAQSection
           groups={faqs}
           theme="dark"
-          pageUrl="https://blossomrocket.studio/services/print-and-environmental-design"
+          pageUrl="https://blossomrocket.studio/solutions/print-and-environmental"
         />
       </div>
     </>

@@ -277,11 +277,11 @@ Related Blossom Rocket services:
 - [Explore Brand Identity services](/services/brand-identity)
 - [Explore Brand Systems services](/services/brand-systems)
 - [Explore Digital Design services](/services/digital-design)
-- [Explore Print and Environmental Design services](/services/print-environmental)
+- [Explore Print and Environmental Design services](/services/print-and-environmental-design)
 
 Related articles:
 
 - [What Marketing Assets Does a Growing Business Need?](/blog/what-marketing-assets-does-a-growing-business-need)
 - [Why Every Growing Company Eventually Needs a Brand System](/blog/why-every-growing-company-eventually-needs-a-brand-system)
-- [Print vs. Digital Marketing: When Each Works Best](/blog/print-vs-digital-marketing-when-each-works-best)
+- [Print vs. Digital Marketing: When Each Works Best](/blog/print-vs-digital-marketing)
 - [Why Print Still Matters for Premium Brands](/blog/why-print-still-matters-for-premium-brands)

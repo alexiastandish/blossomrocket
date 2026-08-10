@@ -8,7 +8,7 @@ import CardLinkGrid from "@/components/section/CardLinkGrid";
 import { SectionLayout } from "@/components/section";
 import SectionCardOverlayList from "@/components/section/CardOverlayList";
 import FAQSection from "@/components/faqs/FAQSection";
-import rawFaqs from "@/data/faqs/services/company-stores.json";
+import rawFaqs from "@/data/faqs/solutions/company-stores.json";
 import type { FAQGroup } from "@/lib/types/faqs";
 import { CTASlots } from "@/components/CTASlot";
 import { CalendlyButton } from "@/components/CalendlyButton";
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     title: "Company Stores — Blossom Rocket",
     description:
       "A Company Store transforms branded merchandise from individual purchasing decisions into a scalable brand management system.",
-    url: "https://blossomrocke.studio/services/company-stores",
+    url: "https://blossomrocke.studio/solutions/company-stores",
     siteName: "Blossom Rocket",
     type: "website",
   },
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
 
 // ─── Schema ───────────────────────────────────────────────────────────────────
 
-const PAGE_URL = "https://blossomrocke.studio/services/company-stores";
+const PAGE_URL = "https://blossomrocke.studio/solutions/company-stores";
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -456,7 +456,7 @@ export default function CompanyStores() {
         <FAQSection
           groups={faqs}
           theme="dark"
-          pageUrl="https://blossomrocket.studio/services/company-stores"
+          pageUrl="https://blossomrocket.studio/solutions/company-stores"
         />
       </div>
     </>

@@ -220,7 +220,7 @@ Print should not be used simply because a brand wants to appear premium. It shou
 
 Blossom Rocket creates print and environmental design that translates brand identity into thoughtful physical experiences. From packaging, collateral, publications, and direct mail to signage, events, environmental graphics, and connected campaigns, each application is designed to feel consistent with the larger brand system.
 
-Explore [Blossom Rocket's Print and Environmental Design services](/services/print-environmental) to create physical brand touchpoints that feel intentional, memorable, and built to last.
+Explore [Blossom Rocket's Print and Environmental Design services](/services/print-and-environmental-design) to create physical brand touchpoints that feel intentional, memorable, and built to last.
 
 Related resources:
 
