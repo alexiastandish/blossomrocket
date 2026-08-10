@@ -221,6 +221,6 @@ Related resources:
 
 - [Explore Blossom Rocket's Brand Identity services](/services/brand-identity)
 - [Learn how Blossom Rocket approaches Digital Design](/services/digital-design)
-- [Explore Print and Environmental Design](/services/print-environmental)
-- [See how brands extend into Merchandise and Promotional Products](/services/merchandise-promotional-products)
-- [Learn how Company Stores support consistent branded merchandise](/services/company-stores)
+- [Explore Print and Environmental Design](/services/print-and-environmental-design)
+- [See how brands extend into Merchandise and Promotional Products](/solutions/merchandise-and-promotional-products)
+- [Learn how Company Stores support consistent branded merchandise](/solutions/company-stores)

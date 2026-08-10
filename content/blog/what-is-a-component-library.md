@@ -228,4 +228,4 @@ Related articles:
 
 - [Why Every Growing Company Eventually Needs a Brand System](/blog/why-every-growing-company-eventually-needs-a-brand-system)
 - [Why AI Search Rewards Consistent Brands](/blog/why-ai-search-rewards-consistent-brands)
-- [Print vs. Digital Marketing: When Each Works Best](/blog/print-vs-digital-marketing-when-each-works-best)
+- [Print vs. Digital Marketing: When Each Works Best](/blog/print-vs-digital-marketing)

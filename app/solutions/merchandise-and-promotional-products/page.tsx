@@ -7,7 +7,7 @@ import CardLinkGrid from "@/components/section/CardLinkGrid";
 import { SectionLayout } from "@/components/section";
 import SectionCardOverlayList from "@/components/section/CardOverlayList";
 import FAQSection from "@/components/faqs/FAQSection";
-import faqs from "@/data/faqs/services/merchandise-and-promotional-products.json";
+import faqs from "@/data/faqs/solutions/merchandise-and-promotional-products.json";
 import { CTASlots } from "@/components/CTASlot";
 import BrandAwareness from "@/components/svgs/BrandAwareness";
 import CustomerEngagement from "@/components/svgs/CustomerEngagement";
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title: "Merchandise & Promotional Products — Blossom Rocket",
     description:
       "Create branded merchandise programs that increase visibility, strengthen recognition, and create lasting connections with customers, employees, and audiences.",
-    url: "https://blossomrocket.co/services/merchandise-and-promotional-products",
+    url: "https://blossomrocket.co/solutions/merchandise-and-promotional-products",
     siteName: "Blossom Rocket",
     type: "website",
   },
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
 // ─── Schema constants ─────────────────────────────────────────────────────────
 
 const PAGE_URL =
-  "https://blossomrocket.co/services/merchandise-and-promotional-products";
+  "https://blossomrocket.co/solutions/merchandise-and-promotional-products";
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -436,7 +436,7 @@ export default function MerchandiseAndPromotionalProducts() {
         <FAQSection
           groups={faqs}
           theme="dark"
-          pageUrl="https://blossomrocket.studio/services/merchandise-and-promotional-products"
+          pageUrl="https://blossomrocket.studio/solutions/merchandise-and-promotional-products"
         />
       </div>
     </>

@@ -9,7 +9,7 @@ import { tokens } from "@/lib/utils/sectionTailwindTokens";
 import { buildSchema } from "@/lib/utils/buildSchema";
 import Script from "next/script";
 import { SideCard } from "../SideCard";
-import CTAs from "../CTAs";
+import { CTASlots } from "../CTASlot";
 import { Orb } from "../ui/Orb";
 import SectionLabel from "../SectionLabel";
 import { SectionTheme } from "@/lib/types/section";
@@ -52,7 +52,8 @@ export default function SectionItemList({
     : { itemListSchema: null, faqSchema: null };
 
   const ctaContent =
-    ctaSlot ?? (ctas.length > 0 ? <CTAs ctas={ctas} theme={theme} /> : null);
+    ctaSlot ??
+    (ctas.length > 0 ? <CTASlots ctas={ctas} theme={theme} /> : null);
 
   const mainContent = (
     <div

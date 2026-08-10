@@ -271,11 +271,11 @@ Blossom Rocket helps brands develop merchandise and promotional product programs
 
 From product selection and creative direction to production, packaging, and company store deployment, each decision should support both the recipient and the brand.
 
-Explore [Blossom Rocket's Merchandise and Promotional Products services](/services/merchandise-promotional-products) to learn how useful branded products can extend your identity into everyday life.
+Explore [Blossom Rocket's Merchandise and Promotional Products services](/solutions/merchandise-and-promotional-products) to learn how useful branded products can extend your identity into everyday life.
 
 Related resources:
 
 - [Explore Blossom Rocket's Brand Identity services](/services/brand-identity)
 - [Learn how Brand Systems create consistency across every touchpoint](/services/brand-systems)
-- [Explore Print and Environmental Design](/services/print-environmental)
-- [Learn how Company Stores simplify branded merchandise programs](/services/company-stores)
+- [Explore Print and Environmental Design](/services/print-and-environmental-design)
+- [Learn how Company Stores simplify branded merchandise programs](/solutions/company-stores)

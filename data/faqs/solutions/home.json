@@ -1,0 +1,117 @@
+[
+  {
+    "id": "company-stores",
+    "title": "Company Stores",
+    "items": [
+      {
+        "id": "what-is-a-company-store",
+        "question": "What is a Company Store?",
+        "answer": "A Company Store is a centralized online storefront that gives employees, customers, partners, or other approved users access to branded merchandise, apparel, promotional products, gifts, and other company-approved items."
+      },
+      {
+        "id": "what-can-a-company-store-be-used-for",
+        "question": "What can a Company Store be used for?",
+        "answer": "Businesses can use Company Stores to centralize ongoing merchandise programs, employee apparel, customer and partner gifting, promotional products, event merchandise, recognition programs, and other recurring branded product needs."
+      },
+      {
+        "id": "how-does-blossom-rocket-work-with-splashbrands-on-company-stores",
+        "question": "How does Blossom Rocket work with SplashBrands on Company Stores?",
+        "answer": "Blossom Rocket helps businesses develop the branded merchandise, creative assets, and brand applications used within Company Stores. SplashBrands provides the Company Store technology, product sourcing, production, fulfillment, and operational infrastructure."
+      }
+    ],
+    "cta": {
+      "label": "Explore Company Stores with Blossom Rocket",
+      "href": "/solutions/company-stores"
+    }
+  },
+  {
+    "id": "swag-storefronts",
+    "title": "Swag Storefronts",
+    "items": [
+      {
+        "id": "what-is-a-swag-storefront",
+        "question": "What is a Swag Storefront?",
+        "answer": "A Blossom Rocket Swag Storefront is a smaller-scale branded merchandise storefront powered by SplashBrands' multi-logo storefront technology. Swag Storefronts give businesses ongoing access to merchandise configured around approved logos, logo variations, brand colors, and product preferences without requiring a full Company Store program."
+      },
+      {
+        "id": "how-do-swag-storefronts-manage-logo-variations",
+        "question": "How do Swag Storefronts manage logo variations?",
+        "answer": "Swag Storefronts can support primary logos and additional logo variations, such as stacked logos, horizontal logos, icons, or logo marks. The storefront setup can also create black and white treatments of uploaded logos and control which approved logo treatment appears on individual product colors."
+      },
+      {
+        "id": "how-do-swag-storefronts-control-product-colors",
+        "question": "How do Swag Storefronts control product colors?",
+        "answer": "Swag Storefronts allow approved merchandise colors to be selected for different logo variations. Businesses can control how specific logo treatments are paired with individual product colorways before recurring merchandise orders are placed."
+      },
+      {
+        "id": "swag-storefront-vs-company-store",
+        "question": "What is the difference between a Swag Storefront and a Company Store?",
+        "answer": "A Swag Storefront is a smaller-scale option for businesses that want ongoing access to preconfigured branded merchandise without implementing a more complex full Company Store program. A full Company Store is designed for broader merchandise programs that require more extensive storefront and operational capabilities."
+      }
+    ],
+    "cta": {
+      "label": "Explore Swag Storefronts with Blossom Rocket",
+      "href": "/solutions/swag-storefronts"
+    }
+  },
+  {
+    "id": "merchandise-and-promotional-products",
+    "title": "Merchandise & Promotional Products",
+    "items": [
+      {
+        "id": "what-merchandise-and-promotional-products-can-blossom-rocket-create",
+        "question": "What Merchandise & Promotional Products can Blossom Rocket create?",
+        "answer": "Blossom Rocket helps businesses create branded apparel, promotional products, event merchandise, corporate gifts, customer appreciation products, onboarding merchandise, and custom merchandise designs."
+      },
+      {
+        "id": "how-can-businesses-use-branded-merchandise",
+        "question": "How can businesses use branded merchandise?",
+        "answer": "Businesses can use branded merchandise for employee programs, customer and partner gifting, marketing campaigns, events, onboarding, recognition programs, promotional campaigns, and other physical brand touchpoints."
+      },
+      {
+        "id": "can-blossom-rocket-help-select-and-design-branded-merchandise",
+        "question": "Can Blossom Rocket help select and design branded merchandise?",
+        "answer": "Yes. Blossom Rocket can help businesses select products, apply approved brand assets, develop custom merchandise graphics, and create branded merchandise that aligns with the business's visual identity and intended program."
+      }
+    ],
+    "cta": {
+      "label": "Explore Merchandise & Promotional Products",
+      "href": "/solutions/merchandise-and-promotional-products"
+    }
+  },
+  {
+    "id": "on-demand-kits",
+    "title": "On-Demand Kits",
+    "items": [
+      {
+        "id": "what-is-an-on-demand-kit",
+        "question": "What is an On-Demand Kit?",
+        "answer": "Blossom Rocket On-Demand Kits are scalable branded kit programs powered by SplashBrands that combine branded merchandise, personalized print, coordinated packaging, fulfillment, and distribution in one program."
+      },
+      {
+        "id": "what-types-of-on-demand-kit-programs-are-available",
+        "question": "What types of On-Demand Kit programs are available?",
+        "answer": "On-Demand Kit programs can include New Hire & Onboarding, Customer & Sales Programs, Supplier & Partner Kits, Events & Occasions, and Flexible Formats."
+      },
+      {
+        "id": "can-on-demand-kits-be-personalized",
+        "question": "Can On-Demand Kits be personalized for individual recipients?",
+        "answer": "Yes. On-Demand Kits can incorporate personalized business cards, custom welcome or appreciation letters, variable-data printing, recipient-specific messaging, QR codes, and other personalized print or product elements."
+      },
+      {
+        "id": "do-on-demand-kits-require-a-custom-box",
+        "question": "Do On-Demand Kits require a custom box?",
+        "answer": "No. On-Demand Kits can use custom boxes, branded tote or bag kits, curated merchandise bundles without a box, event-ready handout kits, or seasonal appreciation shipments. The format can be selected around the program's budget, scale, and distribution needs."
+      },
+      {
+        "id": "can-on-demand-kits-be-shipped-directly-to-recipients",
+        "question": "Can On-Demand Kits be shipped directly to recipients?",
+        "answer": "Yes. On-Demand Kit programs can support nationwide shipping and direct-to-recipient fulfillment. Programs can also use bulk distribution when kits need to be delivered to an office, event, branch, or another central destination."
+      }
+    ],
+    "cta": {
+      "label": "Explore On-Demand Kits with Blossom Rocket",
+      "href": "/solutions/on-demand-kits"
+    }
+  }
+]
