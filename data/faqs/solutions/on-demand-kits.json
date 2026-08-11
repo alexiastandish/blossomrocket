@@ -1,0 +1,95 @@
+[
+  {
+    "id": "on-demand-kits",
+    "title": "On-Demand Kits",
+    "items": [
+      {
+        "id": "what-are-on-demand-kits",
+        "question": "What are On-Demand Kits?",
+        "answer": "Blossom Rocket On-Demand Kits are scalable branded kit programs that combine branded products, personalized print, coordinated packaging, fulfillment, and distribution. Programs can support onboarding, customer and sales outreach, supplier and partner appreciation, events, milestones, and other branded gifting initiatives."
+      },
+      {
+        "id": "what-can-be-included-in-an-on-demand-kit",
+        "question": "What can be included in an On-Demand Kit?",
+        "answer": "On-Demand Kits can include branded apparel and merchandise, personalized business cards, custom letters, QR codes, variable-data print, gift cards or store credits, custom inserts, coordinated packaging, and other program-specific components."
+      },
+      {
+        "id": "do-on-demand-kits-require-a-custom-box",
+        "question": "Do On-Demand Kits require a custom box?",
+        "answer": "No. On-Demand Kits can use custom boxes, branded tote or bag kits, curated merchandise bundles without a box, event-ready handout kits, or seasonal appreciation shipments. Flexible formats allow the kit structure to match the program's budget, scale, and distribution needs."
+      },
+      {
+        "id": "can-on-demand-kits-be-personalized",
+        "question": "Can On-Demand Kits be personalized for individual recipients?",
+        "answer": "Yes. On-Demand Kits can incorporate personalized business cards, custom letters, variable-data printing, recipient-specific messaging, QR codes, and personalization across print and branded products."
+      }
+    ],
+    "cta": {
+      "label": "Learn More About On-Demand Kit Benefits",
+      "href": "https://splashbrands.com/on-demand-kits/",
+      "target": "_blank"
+    }
+  },
+  {
+    "id": "kit-programs-use-cases",
+    "title": "Kit Programs & Use Cases",
+    "items": [
+      {
+        "id": "what-types-of-on-demand-kit-programs-are-available",
+        "question": "What types of On-Demand Kit programs are available?",
+        "answer": "Blossom Rocket On-Demand Kits can support New Hire & Onboarding, Customer & Sales Programs, Supplier & Partner Kits, Events & Occasions, and Flexible Formats."
+      },
+      {
+        "id": "what-can-be-included-in-a-new-hire-onboarding-kit",
+        "question": "What can be included in a New Hire or Onboarding Kit?",
+        "answer": "New Hire and Onboarding Kits can include personalized welcome letters, variable-data business cards, branded apparel and desk essentials, custom inserts and packaging, and personalization across print and products."
+      },
+      {
+        "id": "what-can-be-included-in-a-supplier-partner-kit",
+        "question": "What can be included in a Supplier or Partner Kit?",
+        "answer": "Supplier and Partner Kits can include personalized appreciation letters, variable-data partner recognition cards, co-branded merchandise and seasonal gifts, custom box interiors and messaging, and direct-to-recipient shipping."
+      },
+      {
+        "id": "what-milestones-events-can-on-demand-kits-support",
+        "question": "What milestones and events can On-Demand Kits support?",
+        "answer": "On-Demand Kits can support baby and family celebrations, birthdays and anniversaries, employee recognition and awards, holiday and seasonal campaigns, and other employee or client milestone programs."
+      }
+    ],
+    "cta": {
+      "label": "Explore Branded Kit Programs",
+      "href": "https://splashbrands.com/on-demand-kits/",
+      "target": "_blank"
+    }
+  },
+  {
+    "id": "fulfillment-distribution",
+    "title": "Fulfillment & Distribution",
+    "items": [
+      {
+        "id": "can-on-demand-kits-be-shipped-directly-to-recipients",
+        "question": "Can On-Demand Kits be shipped directly to individual recipients?",
+        "answer": "Yes. On-Demand Kit programs can support nationwide shipping and direct-to-recipient fulfillment. Bulk program distribution can also support programs that require kits to be delivered to an office, event, branch, or other central location."
+      },
+      {
+        "id": "how-does-fulfillment-work-for-on-demand-kits",
+        "question": "How does fulfillment work for On-Demand Kits?",
+        "answer": "On-Demand Kit programs can centralize sourcing, decoration, print, inventory, and distribution. Managed fulfillment helps coordinate kit components and prepare them for direct-to-recipient or bulk distribution."
+      },
+      {
+        "id": "can-on-demand-kits-support-large-recurring-programs",
+        "question": "Can On-Demand Kits support large or recurring programs?",
+        "answer": "Yes. On-Demand Kit programs are designed to scale and can support inventory and asset control, managed fulfillment, nationwide shipping, direct-to-recipient fulfillment, bulk distribution, and flexible formats for high-volume rollouts."
+      },
+      {
+        "id": "how-do-we-get-started-with-an-on-demand-kit",
+        "question": "How do we get started with an On-Demand Kit?",
+        "answer": "Start by choosing the products for the program, selecting a box size or no-box option, and providing the approved artwork. The kits are then loaded and created so they can be ordered for the program."
+      }
+    ],
+    "cta": {
+      "label": "Learn More About Kit Fulfillment",
+      "href": "https://splashbrands.com/on-demand-kits/",
+      "target": "_blank"
+    }
+  }
+]

@@ -1,7 +1,6 @@
 [
   {
     "label": "Launch Your Brand with Blossom Rocket 🚀",
-    "href": "/contact",
     "variant": "primary"
   },
   { "label": "Explore Services", "href": "/services", "variant": "outline" }

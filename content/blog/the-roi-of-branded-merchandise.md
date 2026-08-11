@@ -65,7 +65,7 @@ Useful products tend to solve a recurring problem, fit an existing routine, perf
 
 Quality matters as well. A water bottle that leaks, a shirt that does not fit, or a charging cable that stops working creates a negative brand interaction. A product that performs well can reinforce the opposite qualities: care, reliability, and attention to detail. The product itself becomes part of the message.
 
-For a deeper look at useful product categories, read [Promotional Products That People Actually Find Useful](/blog/promotional-products-people-actually-find-useful).
+For a deeper look at useful product categories, read [Promotional Products That People Actually Find Useful](/blog/promotional-products-that-people-actually-find-useful).
 
 ## Merchandise Can Strengthen Customer Relationships
 
@@ -281,7 +281,7 @@ Blossom Rocket develops branded merchandise and promotional product programs tha
 
 Through SplashBrands, those programs can extend into on-demand company stores designed to centralize merchandise access, reduce inventory requirements, support approvals and budgets, and provide clearer reporting.
 
-Explore [Blossom Rocket's Merchandise and Promotional Products services](/services/merchandise-promotional-products) to create branded products people will actually use.
+Explore [Blossom Rocket's Merchandise and Promotional Products services](/solutions/merchandise-and-promotional-products) to create branded products people will actually use.
 
 For scalable ordering and distribution, learn more about:
 
@@ -294,6 +294,6 @@ For scalable ordering and distribution, learn more about:
 Related Blossom Rocket resources:
 
 - [Why Every Growing Company Eventually Needs a Brand System](/blog/why-every-growing-company-eventually-needs-a-brand-system)
-- [Promotional Products That People Actually Find Useful](/blog/promotional-products-people-actually-find-useful)
+- [Promotional Products That People Actually Find Useful](/blog/promotional-products-that-people-actually-find-useful)
 - [Explore Blossom Rocket's Brand Systems services](/services/brand-systems)
-- [Explore Blossom Rocket's Company Stores services](/services/company-stores)
+- [Explore Blossom Rocket's Company Stores services](/solutions/company-stores)

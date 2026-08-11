@@ -9,13 +9,22 @@ const services = [
     label: "Print & Environmental Design",
     href: "/services/print-and-environmental-design",
   },
-  {
-    label: "Merchandise & Promotional Products",
-    href: "/services/merchandise-and-promotional-products",
-  },
-  { label: "Company Stores", href: "/services/company-stores" },
   // "Search Everything Optimization Consulting",
 ];
+
+const solutions = [
+  { label: "Company Stores", href: "/solutions/company-stores" },
+  { label: "Swag Storefronts", href: "/solutions/swag-storefronts" },
+  {
+    label: "Merchandise & Promotional Products",
+    href: "/solutions/merchandise-and-promotional-products",
+  },
+  {
+    label: "Print & Environmental",
+    href: "/solutions/print-and-environmental",
+  },
+];
+
 const insights = [
   {
     label: "Why Brands Become Inconsistent",
@@ -36,7 +45,10 @@ const connect = [
     href: "https://www.linkedin.com/company/blossom-rocket",
   },
   // { label: "Twitter / X", href: "#" },
-  // { label: "Instagram", href: "#" },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/blossomrocketstudio/",
+  },
   {
     label: "alexia@blossomrocket.studio",
     href: "mailto:alexia@blossomrocket.studio",
@@ -84,6 +96,25 @@ export default function Footer() {
           </h4>
           <ul className="list-none space-y-2">
             {services.map(({ label, href }) => (
+              <li key={label}>
+                <a
+                  href={href}
+                  className="text-[13px] font-medium transition-colors duration-200 hover:text-[#9b5cf6]"
+                >
+                  {label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        {/* Solutions */}
+        <nav aria-label="Solutions">
+          <h4 className="text-[11px] font-semibold tracking-[0.14em] uppercase text-[rgba(24,24,27,0.58)] mb-3.5">
+            Solutions
+          </h4>
+          <ul className="list-none space-y-2">
+            {solutions.map(({ label, href }) => (
               <li key={label}>
                 <a
                   href={href}

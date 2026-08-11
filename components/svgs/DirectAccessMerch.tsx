@@ -1,4 +1,4 @@
-export default function DirectAccessMerch() {
+export default function DirectAccessMerchandise() {
   return (
     <svg
       width="100%"
@@ -10,35 +10,45 @@ export default function DirectAccessMerch() {
         Give users direct access to branded apparel and promotional products
       </title>
       <style>{`
-        .hand  { animation: reach 2.6s ease-in-out infinite; transform-origin: 20px 78px; }
-        .shirt { animation: hand-off 2.6s ease-in-out infinite; }
-        .spark { animation: twinkle 2.6s ease-in-out infinite; }
-        @keyframes reach {
-          0%, 100% { transform: translateX(0); }
-          50%      { transform: translateX(4px); }
-        }
-        @keyframes hand-off {
+        .shirt  { animation: float 3s ease-in-out infinite; }
+        .cursor { animation: click 2.4s ease-in-out infinite; transform-origin: 60px 82px; }
+        .ring   { animation: ripple 2.4s ease-out infinite; transform-origin: 60px 82px; }
+        @keyframes float {
           0%, 100% { transform: translateY(0); }
           50%      { transform: translateY(-3px); }
         }
-        @keyframes twinkle {
-          0%, 100% { opacity: 0.3; }
-          50%      { opacity: 1; }
+        @keyframes click {
+          0%, 60%, 100% { transform: scale(1); }
+          75%           { transform: scale(0.85); }
+        }
+        @keyframes ripple {
+          0%   { opacity: 0.6; transform: scale(0.6); }
+          70%  { opacity: 0; transform: scale(1.5); }
+          100% { opacity: 0; transform: scale(1.5); }
         }
       `}</style>
       <g className="shirt">
         <path
-          d="M28,32 L38,26 L48,32 L58,26 L64,36 L56,44 L52,42 L52,72 L28,72 L28,42 L24,44 L16,36 Z"
+          d="M22,36 L30,30 L38,36 L46,30 L54,36 L48,46 L44,44 L44,74 L28,74 L28,44 L24,46 Z"
           fill="#9e8eef"
         />
-        <circle cx="40" cy="52" r="7" fill="#7c5ce8" />
+        <circle cx="36" cy="56" r="6" fill="#7c5ce8" />
       </g>
-      <g className="hand">
-        <circle cx="16" cy="78" r="7" fill="#d946a8" />
-        <rect x="12" y="82" width="8" height="18" rx="4" fill="#d946a8" />
+      <circle
+        cx="60"
+        cy="82"
+        r="10"
+        fill="none"
+        stroke="#d946a8"
+        strokeWidth="2"
+        className="ring"
+      />
+      <g className="cursor">
+        <polygon
+          points="56,74 56,92 60,88 63,94 66,93 63,87 68,87"
+          fill="#d946a8"
+        />
       </g>
-      <circle cx="60" cy="20" r="2.5" fill="#ddd8fb" className="spark" />
-      <circle cx="66" cy="52" r="2" fill="#beb5f5" className="spark" />
     </svg>
   );
 }

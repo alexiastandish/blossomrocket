@@ -178,9 +178,9 @@ Explore:
 - [Brand Systems](/services/brand-systems)
 - [Digital Design](/services/digital-design)
 - [Marketing Assets](/services/marketing-assets)
-- [Print & Environmental Design](/services/print-environmental)
-- [Merchandise & Promotional Products](/services/merchandise-promotional-products)
-- [Company Stores](/services/company-stores)
+- [Print & Environmental Design](/services/print-and-environmental-design)
+- [Merchandise & Promotional Products](/solutions/merchandise-and-promotional-products)
+- [Company Stores](/solutions/company-stores)
 
 Related articles:
 

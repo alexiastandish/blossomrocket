@@ -6,7 +6,7 @@ import CardGrid from "@/components/section/CardGrid";
 import CardList from "@/components/section/CardList";
 import { SectionLayout } from "@/components/section";
 import FAQSection from "@/components/faqs/FAQSection";
-import rawFaqs from "@/data/faqs/services/company-storefronts.json";
+import rawFaqs from "@/data/faqs/solutions/swag-storefronts.json";
 import type { FAQGroup } from "@/lib/types/faqs";
 import { CTASlots } from "@/components/CTASlot";
 import { CalendlyButton } from "@/components/CalendlyButton";
@@ -24,13 +24,13 @@ const faqs = rawFaqs as FAQGroup[];
 // ─── Page metadata ────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: "Company Storefronts — Blossom Rocket",
+  title: "Swag Storefronts — Blossom Rocket",
   description: "",
   keywords: [], // TODO
   openGraph: {
-    title: "Company Storefronts — Blossom Rocket",
+    title: "Swag Storefronts — Blossom Rocket",
     description: "",
-    url: "https://blossomrocke.studio/services/company-storefronts",
+    url: "https://blossomrocke.studio/services/swag-storefronts",
     siteName: "Blossom Rocket",
     type: "website",
   },
@@ -38,13 +38,13 @@ export const metadata: Metadata = {
 
 // ─── Schema ───────────────────────────────────────────────────────────────────
 
-const PAGE_URL = "https://blossomrocke.studio/services/company-storefronts";
+const PAGE_URL = "https://blossomrocke.studio/services/swag-storefronts";
 
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": `${PAGE_URL}/#service`,
-  name: "Company Storefronts",
+  name: "Swag Storefronts",
   url: PAGE_URL,
   provider: {
     "@type": "Organization",
@@ -52,11 +52,11 @@ const serviceSchema = {
     url: "https://blossomrocke.studio",
   },
   description:
-    "Blossom Rocket helps businesses implement Company Store solutions through SplashBrands that simplify ordering, improve brand consistency, and support scalable merchandise programs.",
-  serviceType: "Company Storefronts & Branded Merchandise Management",
+    "Blossom Rocket helps businesses implement Swag Storefront solutions through SplashBrands that simplify ordering, improve brand consistency, and support scalable merchandise programs.",
+  serviceType: "Swag Storefronts & Branded Merchandise Management",
   hasOfferCatalog: {
     "@type": "OfferCatalog",
-    name: "Company Storefront Solutions",
+    name: "Swag Storefront Solutions",
     itemListElement: [
       {
         "@type": "Offer",
@@ -114,7 +114,7 @@ const breadcrumbSchema = {
     {
       "@type": "ListItem",
       position: 3,
-      name: "Company Storefronts",
+      name: "Swag Storefronts",
       item: PAGE_URL,
     },
   ],
@@ -122,7 +122,7 @@ const breadcrumbSchema = {
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
-export default function CompanyStores() {
+export default function SwagStorefronts() {
   return (
     <>
       <Script
@@ -149,7 +149,7 @@ export default function CompanyStores() {
           ]}
           heading={
             <>
-              Your Own Branded Storefront{" "}
+              Your Own On-Branded Storefront{" "}
               <em className="grad-text not-italic">
                 Without the Company Store Commitment.
               </em>
@@ -157,13 +157,13 @@ export default function CompanyStores() {
           }
           body={
             <>
-              Blossom Rocket Company Storefronts give growing businesses a
-              simpler way to access branded apparel and promotional products
-              through a dedicated storefront powered by SplashBrands. Businesses
-              can upload approved logo variations, select product colors that
-              align with their brand, define how each logo should appear across
-              those colors, and create a storefront where branded products are
-              ready to shop.
+              Blossom Rocket Swag Storefronts give growing businesses a simpler
+              way to access branded apparel and promotional products through a
+              dedicated storefront powered by SplashBrands. Businesses can
+              upload approved logo variations, select product colors that align
+              with their brand, define how each logo should appear across those
+              colors, and create a storefront where branded products are ready
+              to shop.
             </>
           }
           ctaSlot={
@@ -171,7 +171,7 @@ export default function CompanyStores() {
               theme="light"
               ctas={[
                 {
-                  label: "Explore Company Storefronts With SplashBrands",
+                  label: "Explore Swag Storefronts With SplashBrands",
                   href: "https://splashbrands.com/", // TODO
                   variant: "primary",
                 },
@@ -182,13 +182,13 @@ export default function CompanyStores() {
           }
         />
 
-        {/* ── Section 2: Why Company Storefronts
+        {/* ── Section 2: Why Swag Storefronts
             SectionLayout (stacked) + CardGrid (4 cols) ── */}
         <SectionLayout
-          id="why-company-stores"
+          id="why-dswag-storefronts"
           theme="brand"
           layout="stacked"
-          eyebrow="Why Company Storefronts"
+          eyebrow="Why Swag Storefronts"
           heading={
             <>
               Branded Merchandising Made{" "}
@@ -198,7 +198,7 @@ export default function CompanyStores() {
             </>
           }
           subtext={
-            "Blossom Rocket Company Storefronts give businesses a repeatable way to order branded apparel and promotional products using approved logos, brand colors, and product selections. Once the brand setup is complete, users can shop pre-configured branded products without reselecting logo files, product colors, and logo treatments for every\u00A0order.\n\nCompany Storefronts help businesses:"
+            "Blossom Rocket Swag Storefronts give businesses a repeatable way to order branded apparel and promotional products using approved logos, brand colors, and product selections. Once the brand setup is complete, users can shop pre-configured branded products without reselecting logo files, product colors, and logo treatments for every\u00A0order.\n\nSwag Storefronts help businesses:"
           }
           pageUrl={PAGE_URL}
           schemaItems={[
@@ -281,7 +281,7 @@ export default function CompanyStores() {
           ]}
         >
           <CardList
-            heading="Simple Steps to Setup Your Company Storefront:"
+            heading="Simple Steps to Setup Your Swag Storefront:"
             items={[
               {
                 topic: "Step 1 — Upload Your Logo",
@@ -320,14 +320,14 @@ export default function CompanyStores() {
         {/* ── Section 4: What's Included
             SectionLayout (stacked) + CardList with descriptions ── */}
         <SectionLayout
-          id="company-storefronts-included"
+          id="swag-storefronts-included"
           theme="dark"
           layout="stacked"
           eyebrow="What's Included"
           heading={
             <>
               <em className="grad-text not-italic">What&apos;s included</em> in
-              Company Storefront Setup?
+              Swag Storefront Setup?
             </>
           }
           pageUrl={PAGE_URL}
@@ -341,7 +341,7 @@ export default function CompanyStores() {
           ]}
         >
           <CardList
-            heading="Print & Environmental Design Services Include:"
+            heading="Swag Storefront Solutions Include:"
             items={[
               {
                 topic: "Logo Version Setup",
@@ -377,14 +377,14 @@ export default function CompanyStores() {
           />
         </SectionLayout>
 
-        {/* ── Section 5: Who Company Storefronts Are For
+        {/* ── Section 5: Who Swag Storefronts Are For
             SectionLayout (stacked) + CardLinkGrid ── */}
         <SectionItemList
-          pageUrl="https://blossomrocket.studio/services/company-storefronts"
-          id="company-storefronts-use-cases"
+          pageUrl="https://blossomrocket.studio/services/swag-storefronts"
+          id="swag-storefronts-use-cases"
           theme="brandSoft"
           layout="inline"
-          eyebrow="Who Company Storefronts Best Serve"
+          eyebrow="Who Swag Storefronts Best Serve"
           heading={
             <>
               Built for Businesses That Want{" "}
@@ -393,8 +393,8 @@ export default function CompanyStores() {
               </em>
             </>
           }
-          subtext="Company Storefronts are designed for organizations that have recurring merchandise needs but do not yet need the infrastructure of a full Company Store program."
-          listHeading="Company Storefronts Benefit:"
+          subtext="Swag Storefronts are designed for organizations that have recurring merchandise needs but do not yet need the infrastructure of a full Swag Store program."
+          listHeading="Swag Storefronts Benefit:"
           items={[
             {
               topic: "Growing Businesses",
@@ -438,27 +438,27 @@ export default function CompanyStores() {
             },
           ]}
         />
-        {/* ── Section 6: Company Storefront vs Company Store
+        {/* ── Section 6: Swag Storefront vs Company Store
             SectionLayout (stacked) + CardLinkGrid ── */}
 
         <SectionLayout
-          id="company-storefronts-vs-company-stores"
+          id="swag-storefronts-vs-company-stores"
           layout="stacked"
           theme="dark"
           eyebrow="Choosing the Right Store"
           heading={
             <>
               What&apos;s the Difference Between{" "}
-              <em className="grad-text not-italic">Company Storefronts </em>and{" "}
+              <em className="grad-text not-italic">Swag Storefronts </em>and{" "}
               <em className="grad-text not-italic">Company Stores.</em>
             </>
           }
           subtext="The right option depends on how complex your merchandise program needs to be."
-          pageUrl="https://blossomrocket.studio/services/company-storefronts"
+          pageUrl="https://blossomrocket.studio/services/swag-storefronts"
         >
           <CardComparison
-            heading="Company Storefronts vs Company Stores:"
-            leftLabel="Company Storefronts"
+            heading="Swag Storefronts vs Company Stores:"
+            leftLabel="Swag Storefronts"
             rightLabel="Company Store"
             pairs={[
               {
@@ -490,7 +490,7 @@ export default function CompanyStores() {
         <FAQSection
           groups={faqs}
           theme="dark"
-          pageUrl="https://blossomrocket.studio/services/company-stores"
+          pageUrl="https://blossomrocket.studio/services/swag-storefronts"
         />
       </div>
     </>

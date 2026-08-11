@@ -190,13 +190,13 @@ The strongest merchandise does not rely only on a logo. It uses product selectio
 
 Blossom Rocket helps companies translate brand identity into merchandise and promotional products that people want to wear, carry, use, and share. We connect brand strategy, creative direction, product curation, production considerations, and company-store deployment to create merchandise programs that feel cohesive across every touchpoint.
 
-Explore [Blossom Rocket's Merchandise and Promotional Products services](/services/merchandise-promotional-products) to develop physical products that strengthen recognition and bring your brand into everyday life.
+Explore [Blossom Rocket's Merchandise and Promotional Products services](/solutions/merchandise-and-promotional-products) to develop physical products that strengthen recognition and bring your brand into everyday life.
 
 Related resources:
 
 - [Explore Blossom Rocket's Brand Identity services](/services/brand-identity)
 - [Learn how Blossom Rocket builds scalable Brand Systems](/services/brand-systems)
-- [Explore Blossom Rocket's Company Stores services](/services/company-stores)
-- [Read Promotional Products That People Actually Find Useful](/blog/promotional-products-people-actually-find-useful)
+- [Explore Blossom Rocket's Company Stores services](/solutions/company-stores)
+- [Read Promotional Products That People Actually Find Useful](/blog/promotional-products-that-people-actually-find-useful)
 - [Read The ROI of Branded Merchandise](/blog/the-roi-of-branded-merchandise)
 - [Read Why Every Growing Company Eventually Needs a Brand System](/blog/why-every-growing-company-eventually-needs-a-brand-system)

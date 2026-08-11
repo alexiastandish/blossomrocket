@@ -6,43 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { pageThemes } from "@/lib/utils/pageThemes";
 import { useContactModal } from "@/contexts/contact-modal-context";
-
-type NavTheme = "light" | "dark";
-
-type NavLink = {
-  href: string;
-  label: string;
-  dropdown?: boolean;
-};
-
-type DropdownMenus = Record<string, boolean>;
-
-const services: NavLink[] = [
-  { href: "/services/brand-identity", label: "Brand Identity" },
-  { href: "/services/brand-systems", label: "Brand Systems" },
-  { href: "/services/digital-design", label: "Digital Design" },
-  { href: "/services/marketing-assets", label: "Marketing Assets" },
-  {
-    href: "/services/print-and-environmental-design",
-    label: "Print & Environmental",
-  },
-  {
-    href: "/services/merchandise-and-promotional-products",
-    label: "Merchandise & Promotional Products",
-  },
-  { href: "/services/company-stores", label: "Company Stores" },
-  { href: "/services/company-storefronts", label: "Company Storefronts" },
-];
-
-const dropdownLinks: Record<string, NavLink[]> = {
-  Services: services,
-};
-
-const links: NavLink[] = [
-  { href: "/services", label: "Services", dropdown: true },
-  { href: "/work", label: "Work" },
-  { href: "/blog", label: "Blog" },
-];
+import { DropdownMenus, NavLink, NavTheme } from "@/lib/types/navigation";
+import { dropdownLinks, links } from "@/lib/utils/navigation-schema";
 
 const unscrolledTokens: Record<
   NavTheme,
@@ -92,11 +57,21 @@ const scrolledTokens = {
   iconColor: "text-[#18181b]",
 };
 
-const dropdowns: DropdownMenus = { services: false, resources: false };
+const firstDropdownHref = links.find((link) => link.dropdown)?.href;
+
+const initialDropdownState: DropdownMenus = links.reduce<DropdownMenus>(
+  (acc, { label, dropdown }) => {
+    if (dropdown) acc[label.toLowerCase()] = false;
+    return acc;
+  },
+  {},
+);
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState<boolean>(false);
-  const [dropdownOpen, setDropdownOpen] = useState<DropdownMenus>(dropdowns);
+  const [dropdownOpen, setDropdownOpen] = useState<DropdownMenus>(
+    initialDropdownState,
+  );
   const [mobileOpen, setMobileOpen] = useState<boolean>(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState<boolean>(false);
   const [mounted, setMounted] = useState(false);
@@ -238,17 +213,22 @@ export default function Nav() {
                   <div className="min-h-0">
                     <ul className="flex flex-col list-none pb-3">
                       {dropdownLinks[label]?.map(
-                        ({ href: svcHref, label: svcLabel }) => (
-                          <li key={svcHref}>
-                            <Link
-                              href={svcHref}
-                              onClick={() => setMobileOpen(false)}
-                              className="block py-2.5 text-[16px] font-medium text-[rgba(24,24,27,0.65)]"
-                            >
-                              {svcLabel}
-                            </Link>
-                          </li>
-                        ),
+                        ({ href: svcHref, label: svcLabel }) => {
+                          const isChildActive =
+                            pathname === svcHref ||
+                            pathname.startsWith(`${svcHref}/`);
+                          return (
+                            <li key={svcHref}>
+                              <Link
+                                href={svcHref}
+                                onClick={() => setMobileOpen(false)}
+                                className={`block py-2.5 text-[16px] ${isChildActive ? "font-semibold text-violet" : "font-medium text-[rgba(24,24,27,0.65)]"}`}
+                              >
+                                {svcLabel}
+                              </Link>
+                            </li>
+                          );
+                        },
                       )}
                     </ul>
                   </div>
@@ -302,7 +282,7 @@ export default function Nav() {
         {/* Desktop links */}
         <ul className="hidden md:flex gap-9 list-none items-center h-full">
           {links.map(({ href, label, dropdown = false }: NavLink) => {
-            const isFirst = href === "/services" || href === "/resources";
+            const isFirst = href === firstDropdownHref;
             const menuIsOpen = dropdownOpen[label.toLowerCase()];
             const isActive =
               pathname === href || pathname.startsWith(`${href}/`);
@@ -377,22 +357,27 @@ export default function Nav() {
                     }}
                   >
                     {dropdownLinks[label]?.map(
-                      ({ href: svcHref, label: svcLabel }) => (
-                        <li key={svcHref}>
-                          <Link
-                            href={svcHref}
-                            className="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl body-sm font-medium text-[rgba(24,24,27,0.65)] hover:text-ink hover:bg-off transition-colors duration-150"
-                            onClick={() =>
-                              setDropdownOpen((prev) => ({
-                                ...prev,
-                                [label.toLowerCase()]: false,
-                              }))
-                            }
-                          >
-                            {svcLabel}
-                          </Link>
-                        </li>
-                      ),
+                      ({ href: svcHref, label: svcLabel }) => {
+                        const isChildActive =
+                          pathname === svcHref ||
+                          pathname.startsWith(`${svcHref}/`);
+                        return (
+                          <li key={svcHref}>
+                            <Link
+                              href={svcHref}
+                              className={`flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl body-sm hover:text-ink hover:bg-off transition-colors duration-150 ${isChildActive ? "font-semibold text-violet" : "font-medium text-[rgba(24,24,27,0.65)]"}`}
+                              onClick={() =>
+                                setDropdownOpen((prev) => ({
+                                  ...prev,
+                                  [label.toLowerCase()]: false,
+                                }))
+                              }
+                            >
+                              {svcLabel}
+                            </Link>
+                          </li>
+                        );
+                      },
                     )}
                   </ul>
                 </div>

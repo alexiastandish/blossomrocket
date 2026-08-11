@@ -14,6 +14,25 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/services/company-stores",
+        destination: "/solutions/company-stores",
+        permanent: true,
+      },
+      {
+        source: "/services/company-storefronts",
+        destination: "/solutions/company-stores",
+        permanent: true,
+      },
+      {
+        source: "/services/merchandise-and-promotional-products",
+        destination: "/solutions/merchandise-and-promotional-products",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
