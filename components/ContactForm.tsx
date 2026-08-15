@@ -22,6 +22,7 @@ const SERVICES = [
   "Print & Environmental",
   "Merchandise & Promotional Products",
   "Company Stores",
+  "Swag Storefront",
   "Not sure yet",
 ] as const;
 
@@ -57,6 +58,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
 
     const form = event.currentTarget;
     const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
+    console.log("Access Key:", accessKey); // Log the access key for debugging
 
     if (!accessKey) {
       console.error("NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY is not configured.");

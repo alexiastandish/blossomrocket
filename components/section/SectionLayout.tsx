@@ -1,11 +1,26 @@
 import { CtaButton, OrbConfig, SectionTheme } from "@/lib/types/section";
 import { buildSchema } from "@/lib/utils/buildSchema";
 import { tokens } from "@/lib/utils/sectionTailwindTokens";
+import Image from "next/image";
 import Script from "next/script";
 import React from "react";
 import CTAs from "../CTAs";
 import SectionLabel from "../SectionLabel";
 import { DEFAULT_ORBS, Orb } from "../ui/Orb";
+
+function aspectRatioMaxHeight(ratio?: string) {
+  if (!ratio) return undefined;
+  const [w, h] = ratio.split("/").map((n) => parseFloat(n.trim()));
+  if (!w || !h) return undefined;
+  return `calc(100cqw * ${h} / ${w})`;
+}
+
+export type SectionImage = {
+  src: string;
+  alt: string;
+  priority?: boolean;
+  aspectRatio?: string;
+};
 
 export type SectionLayoutProps = {
   heading: React.ReactNode;
@@ -27,6 +42,10 @@ export type SectionLayoutProps = {
   stickyRight?: boolean;
   layout?: "split" | "stacked";
   stackedBtns?: boolean;
+  /** When passed, renders the image variant: header stretches full width up
+   *  to a right-aligned eyebrow, and subtext/children sit in a left column
+   *  next to the image, sized by `cols`. */
+  image?: SectionImage;
 };
 
 export default function SectionLayout({
@@ -49,6 +68,7 @@ export default function SectionLayout({
   stickyRight = true,
   layout = "split",
   stackedBtns,
+  image,
 }: SectionLayoutProps) {
   const activeTheme = tokens[theme];
   const schemaId = id ?? "section";
@@ -124,7 +144,68 @@ export default function SectionLayout({
           ))}
         </div>
 
-        {isStacked ? (
+        {image ? (
+          <div className="relative z-10 flex flex-col gap-[clamp(20px,3vw,40px)]">
+            {/* header stretches full width up to the eyebrow */}
+            <div className="flex flex-col sm:flex-row sm:items-start gap-x-[clamp(20px,3vw,40px)] gap-y-3">
+              <div className="flex-1">
+                <h2
+                  id={`${schemaId}-heading`}
+                  className={`h2 ${activeTheme.heading}`}
+                >
+                  {heading}
+                </h2>
+              </div>
+
+              {eyebrow && (
+                <p className="flex-shrink-0 flex items-center gap-3 text-[11px] font-semibold tracking-[0.16em] uppercase whitespace-nowrap">
+                  <span className="grad-text">{eyebrow}</span>
+                  <span className="label-line" />
+                </p>
+              )}
+            </div>
+
+            {/* subtext + children (left) next to the image (right) */}
+            <div
+              className="section-col-grid grid items-stretch gap-[clamp(40px,7vw,100px)]"
+              style={
+                {
+                  "--section-cols": `minmax(0, ${cols[0]}fr) minmax(0, ${cols[1]}fr)`,
+                } as React.CSSProperties
+              }
+            >
+              <div className={`flex flex-col gap-6 ${alignClass}`}>
+                {subtext && (
+                  <p className={`subtext ${activeTheme.subtext}`}>{subtext}</p>
+                )}
+                {themedChildren}
+                {ctaContent && (
+                  <div className={`flex ${ctasAlign} ${ctasStacked}`}>
+                    {ctaContent}
+                  </div>
+                )}
+              </div>
+
+              <div
+                className="relative  h-auto overflow-hidden rounded-[20px] shadow-[0_4px_32px_rgba(0,0,0,0.15)]"
+                style={
+                  {
+                    containerType: "inline-size",
+                    // maxHeight: aspectRatioMaxHeight(image.aspectRatio),
+                  } as React.CSSProperties
+                }
+              >
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  priority={image.priority}
+                  className="object-cover object-left-top"
+                />
+              </div>
+            </div>
+          </div>
+        ) : isStacked ? (
           <div className="relative z-10 max-w-3xl mx-auto flex flex-col items-center text-center gap-10">
             <div className="rv flex flex-col items-center">
               {eyebrow && <SectionLabel text={eyebrow} />}
