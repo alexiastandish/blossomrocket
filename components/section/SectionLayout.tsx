@@ -20,6 +20,20 @@ export type SectionImage = {
   alt: string;
   priority?: boolean;
   aspectRatio?: string;
+  /** Drop shadow on the image container. Default: true */
+  shadow?: boolean;
+  /** Rounded-corner bounding box on the image container. Default: true */
+  bordered?: boolean;
+  /** Extra classes appended to the image's container div */
+  containerClassName?: string;
+  /** Extra inline styles merged onto the image's container div */
+  containerStyle?: React.CSSProperties;
+  /** Extra classes appended to the <Image> element itself */
+  imageClassName?: string;
+  /** Extra inline styles applied to the <Image> element itself */
+  imageStyle?: React.CSSProperties;
+
+  unboundImage?: boolean;
 };
 
 export type SectionLayoutProps = {
@@ -116,6 +130,28 @@ export default function SectionLayout({
       <CTAs ctas={ctas} theme={theme} stackedBtns={stackedBtns} />
     ) : null);
 
+  // Image container: shadow/bordered default to true unless explicitly false
+  const imageContainerClasses = image
+    ? [
+        "relative h-auto overflow-hidden",
+        image.bordered !== false ? "rounded-[20px]" : "",
+        image.shadow !== false ? "shadow-[0_4px_32px_rgba(0,0,0,0.15)]" : "",
+        image.containerClassName ?? "",
+      ]
+        .filter(Boolean)
+        .join(" ")
+    : "";
+
+  const imageClasses = image
+    ? [
+        image.imageClassName?.includes("object-") ? "" : "object-cover",
+        "object-left-top",
+        image.imageClassName ?? "",
+      ]
+        .filter(Boolean)
+        .join(" ")
+    : "";
+
   return (
     <>
       {schema && (
@@ -186,23 +222,47 @@ export default function SectionLayout({
                 )}
               </div>
 
-              <div
-                className="relative  h-auto overflow-hidden rounded-[20px] shadow-[0_4px_32px_rgba(0,0,0,0.15)]"
-                style={
-                  {
-                    containerType: "inline-size",
-                    // maxHeight: aspectRatioMaxHeight(image.aspectRatio),
-                  } as React.CSSProperties
-                }
-              >
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  fill
-                  priority={image.priority}
-                  className="object-cover object-left-top"
-                />
-              </div>
+              {!image?.unboundImage ? (
+                <div
+                  className={imageContainerClasses}
+                  style={
+                    {
+                      containerType: "inline-size",
+                      // maxHeight: aspectRatioMaxHeight(image.aspectRatio),
+                      ...image.containerStyle,
+                    } as React.CSSProperties
+                  }
+                >
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    priority={image.priority}
+                    className={imageClasses}
+                    style={image.imageStyle}
+                  />
+                </div>
+              ) : (
+                <div
+                  className={imageContainerClasses}
+                  style={
+                    {
+                      containerType: "inline-size",
+                      // maxHeight: aspectRatioMaxHeight(image.aspectRatio),
+                      ...image.containerStyle,
+                    } as React.CSSProperties
+                  }
+                >
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    priority={image.priority}
+                    className={imageClasses}
+                    style={image.imageStyle}
+                  />
+                </div>
+              )}
             </div>
           </div>
         ) : isStacked ? (

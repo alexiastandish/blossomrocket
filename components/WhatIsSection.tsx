@@ -14,14 +14,16 @@ export default function WhatIsSection() {
     <SectionLayout
       id="whatis"
       image={{
-        src: "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/ff293f1b-ee0f-4def-3503-e98ef52d1c00/public",
-        alt: "arrow products page",
-        // aspectRatio: "2/3",
-        // height: "%",
+        src: "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/74aaee51-0d5d-40ee-d7e3-229fd8125400/public",
+        alt: "promo products",
+        bordered: false,
+        shadow: false,
+        unboundImage: true,
+        imageClassName: "object-contain",
       }}
       theme="light"
       eyebrow="What Is a Brand System?"
-      cols={[5, 3]}
+      cols={[3, 5]}
       heading={
         <>
           The Foundation Behind Every{" "}
