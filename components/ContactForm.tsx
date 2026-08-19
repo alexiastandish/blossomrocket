@@ -22,6 +22,7 @@ const SERVICES = [
   "Print & Environmental",
   "Merchandise & Promotional Products",
   "Company Stores",
+  "Swag Storefront",
   "Not sure yet",
 ] as const;
 

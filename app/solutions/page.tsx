@@ -3,7 +3,6 @@ import Hero from "@/components/Hero";
 import {
   SectionLayout,
   CardList,
-  CardPills,
   CardCallout,
   CardStatBento,
 } from "@/components/section";
@@ -17,7 +16,7 @@ import EventMerchandise from "@/components/svgs/EventMerchandise";
 import MarketingMaterials from "@/components/svgs/MarketingMaterials";
 import PromotionalProducts from "@/components/svgs/PromotionalProducts";
 import RecognitionRewardPrograms from "@/components/svgs/RecognitionRewardsPrograms";
-import serviceItems from "@/data/marquees/services.json";
+import solutions from "@/data/marquees/solutions.json";
 import faqs from "@/data/faqs/solutions/home.json";
 import DiffBand from "@/components/DiffBand";
 import { CTASlots } from "@/components/CTASlot";
@@ -29,14 +28,24 @@ export default function Solutions() {
   return (
     <div>
       <Hero
+        pillItems={[
+          "Company Stores",
+          "Swag Storefronts",
+          "Branded Merchandise",
+          "On-Demand Kits",
+          "Print & Environmental",
+        ]}
         theme="dark"
         heading={
           <>
-            Merch, Print, and Store Solutions That{" "}
-            <em className="grad-text not-italic">Help Brands Grow.</em>
+            <em className="grad-text not-italic">
+              Company Stores, Swag Storefronts, & Branded Merch
+            </em>
           </>
         }
-        body={`Blossom Rocket helps businesses create cohesive brand experiences across digital platforms, physical materials, merchandise, marketing assets, and company stores through SplashBrands.`}
+        body={`Blossom Rocket is a branded merchandise and company store provider offering Company Stores, Swag Storefronts, on-demand branded merchandise, custom kits, promotional products, and print solutions powered by SplashBrands.
+
+  Our solutions give businesses a centralized way to source branded products, manage approved merchandise, simplify recurring orders, and distribute swag to employees, customers, partners, teams, and events.`}
         ctaSlot={
           <CTASlots
             theme="dark"
@@ -55,14 +64,14 @@ export default function Solutions() {
         }
       />
 
-      <Marquee items={serviceItems} theme="dark" />
+      <Marquee items={solutions} theme="dark" />
 
       <SectionItemList
         pageUrl="https://blossomrocket.studio/solutions"
         layout="inline"
-        id="beyond-traditional-creative-services"
+        id="beyond-traditional-creative-solutions"
         theme="neutral"
-        eyebrow="Beyond Traditional Creative Services"
+        eyebrow="Beyond Traditional Creative Solutions"
         ctas={[
           {
             label: "Explore Brand Experiences Created by Blossom Rocket",
@@ -79,13 +88,13 @@ export default function Solutions() {
             </em>
           </>
         }
-        subtext="Most agencies stop at design. Blossom Rocket helps businesses build, manage, and deploy their brands across digital experiences, printed materials, merchandise programs, and company stores through SplashBrands."
+        subtext="Blossom Rocket connects branded merchandise, online storefronts, production, personalization, and fulfillment through one integrated offering. Choose a complete Company Store program, a streamlined Swag Storefront, standalone branded merchandise, personalized On-Demand Kits, or custom print and environmental production."
         listHeading="Blossom Rocket solutions include:"
         items={[
           {
             topic: "Company Stores",
             description:
-              "Company Stores build branded online storefronts that simplify merchandise ordering, employee programs, client gifting, onboarding kits, and promotional product fulfillment.",
+              "A Company Store is a centralized online storefront for ordering approved branded merchandise, apparel, promotional products, gifts, and print materials. ",
           },
           {
             topic: "Swag Storefronts",
@@ -105,7 +114,7 @@ export default function Solutions() {
           {
             topic: "Print & Environmental",
             description:
-              "Print & Environmental designs packaging, signage, trade show displays, printed collateral, and environmental graphics that bring your brand into physical spaces.",
+              "Print & Environmental solutions include printed materials, signage, displays, graphics, and physical brand applications produced for business, event, and merchandise programs.",
           },
         ]}
       />
@@ -213,7 +222,7 @@ export default function Solutions() {
           { topic: "Logo & Product Pairings" },
           { topic: "Brand Application Guidelines" },
         ]}
-        pageUrl="https://blossomrocket.studio/solutions#swag-storefronts"
+        pageUrl="https://blossomrocket.studio/solutions"
       >
         <CardList
           heading="Swag Storefronts can include:"
@@ -229,17 +238,20 @@ export default function Solutions() {
 
       {/* ── Comparison Table── */}
       <CompanyStoreComparisonSection />
+
       {/* ── Merchandise & Promotional Products */}
       <SectionItemList
         layout="inline"
-        id="merchandise-and-promotional-products"
+        id="on-demand-merchandise"
         theme="brandSoft"
-        pageUrl="https://blossomrocket.studio/services#merchandise-and-promotional-products"
-        eyebrow="Merchandise & Promotional Products"
+        pageUrl="https://blossomrocket.studio/solutions"
+        eyebrow="On-Demand Merchandise & Promotional Products"
         heading={
           <>
-            Merchandise & Promotional Products That{" "}
-            <em className="grad-text not-italic">Expand Brand Recognition.</em>
+            Branded Merchandise{" "}
+            <em className="grad-text not-italic">
+              Without Traditional Inventory Requirements.
+            </em>
           </>
         }
         ctas={[
@@ -252,52 +264,51 @@ export default function Solutions() {
         ]}
         subtext={
           <>
-            Blossom Rocket helps businesses create branded merchandise programs
-            that support marketing campaigns, employee programs, customer
-            engagement, events, gifting, onboarding, and long-term brand
-            visibility.
+            On-demand branded merchandise is produced or decorated after an
+            order is placed rather than purchasing every finished branded item
+            in bulk in advance.
             <br />
             <br />
-            Strategic merchandise helps businesses create lasting connections
-            with customers, employees, partners, and event attendees.
+            Eligible products available through Blossom Rocket and SplashBrands
+            can be ordered as needed, including products available one piece at
+            a time without traditional order minimums. This model can reduce the
+            need to forecast demand, store finished merchandise, distribute
+            products internally, and manage unused branded inventory.
           </>
         }
-        listHeading="Merchandise & Promotional Product services include:"
+        listHeading="On-Demand Merchandise Is Well Suited For:"
         items={[
           {
-            topic: "Branded Apparel",
-            description:
-              "Branded Apparel creates custom shirts, hoodies, hats, uniforms, and wearable merchandise that increase brand recognition and team visibility.",
+            topic: "Employee apparel and company swag",
+            description: "",
           },
           {
-            topic: "Promotional Products",
-            description:
-              "Promotional Products include branded drinkware, office supplies, technology accessories, and giveaways that keep your brand visible long after an event.",
+            topic: "Distributed teams and locations",
+            description: "",
           },
           {
-            topic: "Event Merchandising",
-            description:
-              "Event Merchandising develops branded products, apparel, and promotional materials that create memorable experiences at conferences, trade shows, and events.",
+            topic: "Customer and partner programs",
+            description: "",
           },
           {
-            topic: "Corporate Gifting",
-            description:
-              "Corporate Gifting delivers thoughtfully curated branded gifts that strengthen relationships with clients, employees, partners, and prospects.",
+            topic: "Recognition and rewards",
+            description: "",
           },
           {
-            topic: "Customer Appreciation Programs",
-            description:
-              "Customer Appreciation Programs create branded merchandise campaigns that reward loyal customers, increase engagement, and build lasting brand connections.",
+            topic: "Corporate gifting",
+            description: "",
           },
           {
-            topic: "Onboarding Kits",
-            description:
-              "Onboarding Kits combine branded merchandise, welcome materials, and company essentials to create a consistent employee and client onboarding experience.",
+            topic: "Event merchandise",
+            description: "",
           },
           {
-            topic: "Merchandise Custom Designs",
-            description:
-              "Merchandise Custom Designs create original artwork, product graphics, and custom merchandise concepts that transform branded products into unique brand experiences.",
+            topic: "Ongoing promotional programs",
+            description: "",
+          },
+          {
+            topic: "Merchandise with unpredictable demand",
+            description: "",
           },
         ]}
       />
