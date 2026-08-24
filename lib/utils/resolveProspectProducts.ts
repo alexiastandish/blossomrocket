@@ -65,18 +65,17 @@ export function resolveProspectProducts(
   const resolved = {} as Record<PreviewTemplate, ResolvedPreviewProduct[]>;
 
   const prospectBaseFs = path.join(
-    process.cwd(),
+    /*turbopackIgnore: true*/ process.cwd(),
     "public",
     "previews",
     "prospects",
     slug,
     "products",
   );
-  console.log("slug", slug);
   const prospectBaseUrl = `/previews/prospects/${slug}/products`;
 
   const defaultBaseFs = path.join(
-    process.cwd(),
+    /*turbopackIgnore: true*/ process.cwd(),
     "public",
     "previews",
     DEFAULT_SLUG,

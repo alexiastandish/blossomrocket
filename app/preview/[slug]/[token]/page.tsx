@@ -14,7 +14,6 @@ export default async function PreviewPage({ params }: Props) {
   const data = getPreview(slug, token);
   const { primaryColor, company, logo, template } = data;
   const products = resolveProspectProducts(slug, PRODUCTS_BY_TEMPLATE);
-  console.log("products", products);
   return (
     <>
       <TrackView slug={slug} token={token} />
