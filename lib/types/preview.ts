@@ -3,9 +3,17 @@ export type PreviewTemplate = "men" | "women" | "lifestyle-work";
 export type PreviewProduct = {
   name: string;
   price: string;
-  image: string;
+  id: string;
+  category: string;
+  subcategory: string;
   url: string;
   colors?: string[];
+};
+
+// PreviewProduct with its image path resolved at runtime by
+// resolveProspectProducts — this is what actually gets rendered.
+export type ResolvedPreviewProduct = PreviewProduct & {
+  image: string;
 };
 
 export type PreviewData = {

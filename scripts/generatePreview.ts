@@ -10,7 +10,6 @@ export function generatePreview({
   company,
   contactName,
   contactTitle,
-  logo,
   primaryColor,
   secondaryColor,
   template,
@@ -19,12 +18,11 @@ export function generatePreview({
   company: string;
   contactName: string;
   contactTitle: string;
-  logo: string;
   primaryColor: string;
   secondaryColor: string;
   template: PreviewTemplate;
   daysValid?: number;
-}): { data: PreviewData; url: string } {
+}): { data: PreviewData; url: string; imagesDir: string } {
   const slug = company
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
@@ -35,6 +33,12 @@ export function generatePreview({
   const now = new Date();
   const expires = new Date(now);
   expires.setDate(expires.getDate() + daysValid);
+
+  // Derived, not passed in — the logo always lives at this exact
+  // path by convention, so there's no manual value to get stale or
+  // typo'd. Drop the actual file there yourself; this script doesn't
+  // create it.
+  const logo = `/previews/prospects/${slug}/logo.webp`;
 
   const data: PreviewData = {
     slug,
@@ -58,18 +62,28 @@ export function generatePreview({
   );
 
   const url = `https://blossomrocket.studio/preview/${slug}/${token}`;
+  const imagesDir = `public/previews/prospects/${slug}/products/`;
 
   console.log(`\n✓ Preview created for ${company}`);
   console.log(`  Default tab : ${template}`);
   console.log(`  Contact     : ${contactName} — ${contactTitle}`);
   console.log(`  Expires     : ${data.expiresAt}`);
   console.log(`  URL         : ${url}`);
+  console.log(`  Images dir  : ${imagesDir} (not created by this script)`);
+  console.log(`  Logo path   : ${logo} (also not created by this script)`);
+  console.log(
+    `\n  Drop product mockups into that folder yourself, matching each`,
+  );
+  console.log(`  product's id/category/subcategory from preview-products.ts —`);
+  console.log(
+    `  anything missing falls back to the Blossom Rocket default set.`,
+  );
   console.log(`\n  All 3 templates (Men / Women / Lifestyle & Work) are`);
   console.log(
     `  accessible via the nav — the recipient can explore all of them.\n`,
   );
 
-  return { data, url };
+  return { data, url, imagesDir };
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -78,7 +92,8 @@ export function generatePreview({
 //    2. Fill in the prospect's details
 //    3. Run: npx ts-node -P tsconfig.json scripts/generate-preview.ts
 //    4. Copy the URL from the console output
-//    5. Re-comment before committing
+//    5. Drop generated product images into the printed "Images dir" path
+//    6. Re-comment before committing
 //
 //    template = which tab opens first:
 //      "men"            → construction, distribution, trades, trucking
@@ -88,13 +103,12 @@ export function generatePreview({
 //    All 3 tabs are always visible in the nav regardless of default.
 // ─────────────────────────────────────────────────────────────────────────────
 
-// generatePreview({
-//   company: "Company Name",
-//   contactName: "First Last",
-//   contactTitle: "Marketing Manager",
-//   logo: "/previews/company-name/logo.svg",
-//   primaryColor: "#000000",
-//   secondaryColor: "#000000",
-//   template: "men",
-//   daysValid: 30,
-// });
+generatePreview({
+  company: "Sirius",
+  contactName: "Alexia Standish",
+  contactTitle: "Marketing Manager",
+  primaryColor: "#231f20",
+  secondaryColor: "#494647",
+  template: "men",
+  daysValid: 30,
+});

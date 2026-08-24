@@ -34,7 +34,7 @@ export function PreviewNav({
   return (
     <header className="bg-white border-b border-[#e5e5e5] sticky top-0 z-50">
       <div
-        className="max-w-[1100px] mx-auto px-6 flex items-stretch justify-between gap-8"
+        className="max-w-[1400px] mx-auto px-6 flex items-stretch justify-between gap-8"
         style={{ height: 64 }}
       >
         {/* Logo */}

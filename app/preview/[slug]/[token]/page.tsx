@@ -1,32 +1,41 @@
 import Image from "next/image";
 import Link from "next/link";
 import { getPreview } from "@/lib/utils/getPreview";
+import { resolveProspectProducts } from "@/lib/utils/resolveProspectProducts";
 import { PRODUCTS_BY_TEMPLATE } from "@/data/preview/preview-products";
 import { TrackView } from "@/components/preview/TrackView";
 import { PreviewNav } from "@/components/preview/PreviewNav";
 import { PreviewContent } from "@/components/preview/PreviewContent";
 
-type Props = { params: { slug: string; token: string } };
+type Props = { params: Promise<{ slug: string; token: string }> };
 
-export default function PreviewPage({ params }: Props) {
-  const { slug, token } = params;
+export default async function PreviewPage({ params }: Props) {
+  const { slug, token } = await params;
   const data = getPreview(slug, token);
   const { primaryColor, company, logo, template } = data;
-
+  const products = resolveProspectProducts(slug, PRODUCTS_BY_TEMPLATE);
+  console.log("products", products);
   return (
     <>
       <TrackView slug={slug} token={token} />
 
       <div
-        className="min-h-screen bg-[#f9f9f9]"
+        className="min-h-screen bg-white"
         style={{ fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif" }}
       >
         {/* ── Concept banner ── */}
         <div
-          className="w-full py-2 px-4 text-center text-[11px] font-semibold tracking-[0.08em] uppercase text-white"
+          className="w-full py-2 px-4 flex items-center justify-between gap-4 text-[11px] font-semibold tracking-[0.08em] uppercase text-white"
           style={{ background: primaryColor }}
         >
-          Store concept prepared for {company} — not a live store
+          <Link
+            href="https://blossomrocket.studio"
+            target="_blank"
+            className="underline underline-offset-2 hover:opacity-80 transition-opacity shrink-0"
+          >
+            ← Back to Blossom Rocket
+          </Link>
+          <span>Store concept prepared for {company} — not a live store</span>
         </div>
 
         {/* ── Nav — client component handles active state ── */}
@@ -40,7 +49,7 @@ export default function PreviewPage({ params }: Props) {
         />
 
         {/* ── Content — driven by PreviewNav via URL search param ── */}
-        <PreviewContent data={data} allProducts={PRODUCTS_BY_TEMPLATE} />
+        <PreviewContent data={data} allProducts={products} />
 
         {/* ── Blossom Rocket CTA ── */}
         <section className="border-t border-[#e5e5e5] bg-white mt-12">
@@ -100,7 +109,7 @@ export default function PreviewPage({ params }: Props) {
 
         {/* ── Footer ── */}
         <footer className="border-t border-[#e5e5e5] bg-[#fafafa]">
-          <div className="max-w-[1100px] mx-auto px-6 py-6 flex flex-wrap items-center justify-between gap-4">
+          <div className="max-w-[1400px] mx-auto px-6 py-6 flex flex-wrap items-center justify-between gap-4">
             <div className="flex items-center gap-2 text-[12px] text-[#999]">
               <span>Store powered by</span>
               <a

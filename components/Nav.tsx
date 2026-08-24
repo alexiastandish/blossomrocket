@@ -124,6 +124,8 @@ export default function Nav() {
     };
   }, [mobileOpen]);
 
+  if (pathname?.startsWith("/preview/")) return null;
+
   const mobilePanel = (
     <div
       id="mobile-nav-panel"
