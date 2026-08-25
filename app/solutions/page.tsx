@@ -94,17 +94,17 @@ export default function Solutions() {
           {
             topic: "Company Stores",
             description:
-              "A Company Store is a centralized online storefront for ordering approved branded merchandise, apparel, promotional products, gifts, and print materials. ",
+              "A centralized online storefront for ordering branded merchandise, apparel, promotional products, gifts, and print materials. ",
           },
           {
             topic: "Swag Storefronts",
             description:
-              "Swag Storefronts create a seamlessly set-up branded online marketplaces for print, promotional products and merchandise without the financial committment to a company store expereience.",
+              "Seamlessly set-up branded online marketplaces for print, promotional products and merchandise without the financial committment to a company store expereience.",
           },
           {
             topic: "Merchandise & Promotional Products",
             description:
-              "Merchandise & Promotional Products create branded apparel, promotional products, employee kits, event giveaways, and custom merchandise that extend your brand beyond digital touchpoints.",
+              "Branded apparel, promotional products, employee kits, event giveaways, and custom merchandise that extend your brand beyond digital touchpoints.",
           },
           {
             topic: "On-Demand Kits",
@@ -114,7 +114,7 @@ export default function Solutions() {
           {
             topic: "Print & Environmental",
             description:
-              "Print & Environmental solutions include printed materials, signage, displays, graphics, and physical brand applications produced for business, event, and merchandise programs.",
+              "Signage, displays, decals, business cards, trade show materials, and more produced for business, event, and merchandise programs.",
           },
         ]}
       />
