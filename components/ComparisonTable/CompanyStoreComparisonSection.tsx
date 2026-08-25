@@ -128,7 +128,7 @@ export function CompanyStoreComparisonSection() {
     <ComparisonTable
       id="company-store-comparison"
       theme="light"
-      eyebrow="Company Stores"
+      eyebrow="Our Company Stores vs. Others"
       heading={
         <>
           Blossom Rocket <em className="grad-text not-italic">vs</em> The Market

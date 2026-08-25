@@ -43,9 +43,7 @@ export default function Solutions() {
             </em>
           </>
         }
-        body={`Blossom Rocket is a branded merchandise and company store provider offering Company Stores, Swag Storefronts, on-demand branded merchandise, custom kits, promotional products, and print solutions powered by SplashBrands.
-
-  Our solutions give businesses a centralized way to source branded products, manage approved merchandise, simplify recurring orders, and distribute swag to employees, customers, partners, teams, and events.`}
+        body="Blossom Rocket provides branded merchandise, Company Stores, Swag Storefronts, custom kits, promotional products, and print solutions powered by SplashBrands. We help businesses centralize branded products, simplify ordering, and distribute swag to employees, customers, partners, teams, and events."
         ctaSlot={
           <CTASlots
             theme="dark"
@@ -203,7 +201,7 @@ export default function Solutions() {
           <>
             Swag Storefronts Give Businesses{" "}
             <em className="grad-text not-italic">
-              Ongoing Access to Approved Branded Merchandise.
+              Ongoing Access to Branded Merchandise.
             </em>
           </>
         }
@@ -264,16 +262,15 @@ export default function Solutions() {
         ]}
         subtext={
           <>
-            On-demand branded merchandise is produced or decorated after an
-            order is placed rather than purchasing every finished branded item
-            in bulk in advance.
+            On-demand branded merch is produced after an order is placed rather
+            than purchasing every finished branded item in bulk in advance.
             <br />
             <br />
-            Eligible products available through Blossom Rocket and SplashBrands
-            can be ordered as needed, including products available one piece at
-            a time without traditional order minimums. This model can reduce the
-            need to forecast demand, store finished merchandise, distribute
-            products internally, and manage unused branded inventory.
+            Merch and promo products can be ordered as needed, including
+            products available one piece at a time without traditional order
+            minimums. This model can reduce the need to forecast demand, store
+            finished merchandise, distribute products internally, and manage
+            unused branded inventory.
           </>
         }
         listHeading="On-Demand Merchandise Is Well Suited For:"
