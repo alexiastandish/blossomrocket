@@ -325,7 +325,7 @@ export default function Solutions() {
             </em>
           </>
         }
-        subtext="Blossom Rocket creates Print & Environmental solutions that translate brand systems into physical materials and environments. Through SplashBrands' in-house production capabilities, businesses can produce branded print, signage, graphics, decals, displays, and other physical brand applications with technologies including wide-format printing, screen printing, engraving, UV inkjet, and dye-sublimation."
+        subtext="Blossom Rocket provides Print & Environmental Design solutions that help businesses apply their Brand Identity across printed materials, signage, packaging, vehicle graphics, and branded environments — creating consistent customer-facing materials across every location, department, campaign, and vendor."
         ctas={[
           {
             label: "Explore Blossom Rocket's Print & Environmental Solutions",
@@ -334,33 +334,31 @@ export default function Solutions() {
           },
         ]}
         schemaItems={[
-          { topic: "Banners & Posters" },
-          { topic: "Decals & Floor Graphics" },
-          { topic: "Signs & Environmental Graphics" },
-          { topic: "Branded Displays" },
-          { topic: "Printed Fabrics" },
-          { topic: "Custom Engraving" },
-          { topic: "UV-Printed Materials" },
-          { topic: "Screen-Printed Graphics" },
+          { topic: "Business Cards" },
+          { topic: "Brochures" },
+          { topic: "Catalogs" },
+          { topic: "Signage" },
+          { topic: "Environmental Graphics" },
+          { topic: "Packaging" },
+          { topic: "Vehicle Graphics" },
         ]}
         pageUrl="https://blossomrocket.studio/solutions#print-and-environmental"
       >
         <CardList
           heading="Print & Environmental solutions can include:"
           items={[
-            { topic: "Banners & Posters" },
-            { topic: "Decals & Floor Graphics" },
-            { topic: "Signs & Environmental Graphics" },
-            { topic: "Branded Displays" },
-            { topic: "Printed Fabrics" },
-            { topic: "Custom Engraving" },
-            { topic: "UV-Printed Materials" },
-            { topic: "Screen-Printed Graphics" },
+            { topic: "Business Cards" },
+            { topic: "Brochures" },
+            { topic: "Catalogs" },
+            { topic: "Signage" },
+            { topic: "Environmental Graphics" },
+            { topic: "Packaging" },
+            { topic: "Vehicle Graphics" },
           ]}
         />
         <CardCallout
-          heading="SplashBrands' in-house manufacturing capabilities"
-          body="support wide-format printing, screen printing, engraving, UV inkjet, dye-sublimation, and other production methods for branded physical materials."
+          heading="Not standalone projects — a long-term brand system."
+          body="Rather than treating every project as a one-off design, Blossom Rocket develops Print & Environmental Design as part of a system that supports future growth."
         />
       </SectionLayout>
 

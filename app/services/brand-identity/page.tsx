@@ -89,51 +89,11 @@ export default function page() {
           />
         </div>
       </SectionLayout>
-      {/* ── Designed to Scale ── */}
-      <SectionLayout
-        id="brand-identity--designed-to-scale"
-        theme="light"
-        mobileOrder="left-first"
-        desktopOrder="reverse"
-        eyebrow="Designed to Scale"
-        heading={
-          <>
-            Brand Identity Designed to{" "}
-            <em className="grad-text not-italic">Scale</em> for{" "}
-            <em className="grad-text not-italic">Expansion.</em>
-          </>
-        }
-        subtext="As businesses grow, new assets are created by different teams, departments, vendors, and partners. Without clear Brand Identity standards, inconsistency becomes inevitable."
-        ctas={[
-          {
-            label: "Explore Blossom Rocket Brand Systems Service",
-            href: "/services/brand-systems",
-            variant: "primary",
-          },
-        ]}
-        schemaItems={[
-          { topic: "Typography changes" },
-          { topic: "Colors drift" },
-          { topic: "Marketing materials become disconnected" },
-          { topic: "Merchandise no longer feels aligned with the brand" },
-        ]}
-        pageUrl="https://blossomrocket.studio/services#brand-systems"
-      >
-        <CardPills
-          heading="Common inconsistencies:"
-          items={[
-            { topic: "Typography changes" },
-            { topic: "Colors drift" },
-            { topic: "Marketing materials become disconnected" },
-            { topic: "Merchandise no longer feels aligned with the brand" },
-          ]}
-        />
-        <CardCallout body="Blossom Rocket helps businesses establish Brand Identity systems that support long-term growth and consistency." />
-      </SectionLayout>
+
       {/* ──What's Included ── */}
       <SectionLayout
         id="brand-identity-included"
-        theme="dark"
+        theme="brandSoft"
         layout="stacked"
         eyebrow="Brand Identity Services"
         heading={

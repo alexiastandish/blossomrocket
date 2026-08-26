@@ -152,61 +152,10 @@ export default function page() {
         />
       </SectionLayout>
 
-      {/* ── Section 4: Built For Scalability — CardComparison via SectionLayout ── */}
-      <SectionLayout
-        id="digital-design-scalability"
-        theme="brandSoft"
-        eyebrow="Built For The Long Run"
-        heading={
-          <>
-            Digital Design that&apos;s built for{" "}
-            <em className="grad-text not-italic">growth & scalability.</em>
-          </>
-        }
-        subtext="Digital experiences evolve over time. New pages are created. New campaigns are launched. New products and services are introduced. Without clear design and development standards, digital experiences can quickly become difficult to maintain."
-        pageUrl={PAGE_URL}
-        schemaItems={[
-          { topic: "Growth" },
-          { topic: "Consistency" },
-          { topic: "Maintainability" },
-          { topic: "Accessibility" },
-          { topic: "Performance" },
-          { topic: "User Experience" },
-        ]}
-      >
-        <CardComparison
-          heading="Without A System vs. With Blossom Rocket"
-          leftLabel="Without A System"
-          rightLabel="With Blossom Rocket"
-          pairs={[
-            {
-              left: "Inconsistent UI across pages",
-              right: "Built on a shared component library",
-            },
-            {
-              left: "New pages break the design",
-              right: "Standards scale with every launch",
-            },
-            {
-              left: "Hard to maintain over time",
-              right: "Maintainability built in from day one",
-            },
-            {
-              left: "Accessibility is an afterthought",
-              right: "Accessibility supported by design",
-            },
-            {
-              left: "Performance degrades with growth",
-              right: "Performance considered at every stage",
-            },
-          ]}
-        />
-      </SectionLayout>
-
       {/* ── Section 5: FAQs ── */}
       <FAQSection
         groups={faqs}
-        theme="dark"
+        theme="light"
         pageUrl="https://blossomrocket.studio/services/digital-design"
       />
     </div>

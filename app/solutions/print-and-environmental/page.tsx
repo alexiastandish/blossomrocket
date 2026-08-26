@@ -222,7 +222,7 @@ export default function page() {
         <SectionCardOverlayList
           id="build-stronger-brands"
           theme="dark"
-          eyebrow="One Brand System, Every Touchpoint"
+          eyebrow="Building Brands Through Print"
           heading={
             <>
               How Blossom Rocket Uses Print & Environmental Design{" "}
