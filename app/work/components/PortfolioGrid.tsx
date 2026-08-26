@@ -272,14 +272,10 @@ export function PortfolioGrid({ items }: PortfolioGridProps) {
     return () => cleanups.forEach((fn) => fn());
   }, [projectsWithLines]);
 
-  // When a row becomes active/hovered, its fade should match the new hover
-  // background instead of the page background behind it — swapped directly
-  // via the CSS variable rather than re-reading computed styles, since doing
-  // that mid-transition would just capture whatever color the transition
-  // happened to be at that exact frame, not the final target color.
+  // Rows no longer change background color on hover/active, so the edge
+  // fade always blends into the page background behind it.
   useEffect(() => {
-    projectsWithLines.forEach(({ project, lines }, i) => {
-      const isActive = i === activeIndex;
+    projectsWithLines.forEach(({ project, lines }) => {
       lines.forEach((_, lineIndex) => {
         const lineKey = `${project.slug}-line-${lineIndex}`;
         const line = lineRefs.current[lineKey];
@@ -287,9 +283,7 @@ export function PortfolioGrid({ items }: PortfolioGridProps) {
         if (!wrapper) return;
         wrapper.style.setProperty(
           "--fade-bg",
-          isActive
-            ? "var(--color-active-bg)"
-            : (pageBgRef.current[lineKey] ?? "#ffffff"),
+          pageBgRef.current[lineKey] ?? "#ffffff",
         );
       });
     });
@@ -340,7 +334,7 @@ export function PortfolioGrid({ items }: PortfolioGridProps) {
         })}
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] xl:grid-cols-[1fr_400px] gap-8 lg:gap-12 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_30vw]  gap-8 lg:gap-12 items-start">
         {/* ── Rows: one per project, image count varies ── */}
         <div
           className="flex flex-col gap-10 sm:gap-11 min-w-0"
@@ -368,10 +362,8 @@ export function PortfolioGrid({ items }: PortfolioGridProps) {
                 onMouseEnter={() => handleHover(i)}
                 className={[
                   "group flex flex-col gap-1.5 max-w-full rounded-sm p-1.5",
-                  "outline outline-2 outline-offset-[6px] transition-[outline-color] duration-200",
-                  isActive
-                    ? "outline-violet bg-active-bg"
-                    : "outline-transparent bg-transparent",
+                  "outline-offset-[6px] transition-[outline-color] duration-200",
+                  isActive ? "outline-violet" : "outline-transparent",
                 ].join(" ")}
                 style={rowStyle}
                 itemScope
@@ -440,7 +432,7 @@ export function PortfolioGrid({ items }: PortfolioGridProps) {
                                 ref={(el) => {
                                   imageRefs.current[key] = el;
                                 }}
-                                className="relative flex-none w-full h-auto md:w-auto md:h-[var(--row-height)] overflow-hidden rounded-sm bg-surface-subtle"
+                                className="relative flex-none w-full h-auto md:w-auto md:h-[var(--row-height)] overflow-hidden rounded-sm bg-surface-subtle portfolio-img-cursor"
                                 style={{ aspectRatio: img.aspectRatio }}
                               >
                                 {video ? (
@@ -481,7 +473,7 @@ export function PortfolioGrid({ items }: PortfolioGridProps) {
                               playsInline
                               preload="metadata"
                               aria-label={img.alt}
-                              className="flex-none w-full h-auto md:w-auto md:h-[var(--row-height)] rounded-sm transition-transform duration-500 ease-out-expo"
+                              className="flex-none w-full h-auto md:w-auto md:h-[var(--row-height)] rounded-sm transition-transform duration-500 ease-out-expo portfolio-img-cursor"
                             />
                           ) : (
                             // eslint-disable-next-line @next/next/no-img-element
@@ -494,7 +486,7 @@ export function PortfolioGrid({ items }: PortfolioGridProps) {
                               alt={img.alt}
                               loading="lazy"
                               decoding="async"
-                              className="flex-none w-full h-auto md:w-auto md:h-[var(--row-height)] rounded-sm transition-transform duration-500 ease-out-expo"
+                              className="flex-none w-full h-auto md:w-auto md:h-[var(--row-height)] rounded-sm transition-transform duration-500 ease-out-expo portfolio-img-cursor"
                             />
                           );
                         })}
@@ -619,7 +611,7 @@ export function PortfolioGrid({ items }: PortfolioGridProps) {
               <div className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-violet flex-shrink-0 animate-pulse" />
                 <span className="text-[11px] text-ink-faint">
-                  Hover over any project to explore
+                  Click on a thumbnail to bring the image into view
                 </span>
               </div>
             </div>

@@ -6,6 +6,17 @@
     flex-shrink: 0;
   }
 
+  /* Hotspot centered on the icon (64x45 source) so it doesn't feel
+     anchored to the pointer's top-left corner. Scoped to md+ since
+     that's the breakpoint where PortfolioGrid switches from a
+     vertical, scroll-less stack to the horizontal scrolling rows
+     this cursor is meant to hint at. */
+  @media (min-width: 768px) {
+    .portfolio-img-cursor:hover {
+      cursor: url("/horizontal-scroll-mouse.webp") 32 22, pointer;
+    }
+  }
+
   .cdot {
     display: none;
     position: fixed;

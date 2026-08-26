@@ -1,7 +1,7 @@
 export default function DiffBand() {
   return (
     <div
-      className="section bg-(--color-surface-dark-neutral) text-white grid gap-10"
+      className="section bg-(--color-surface-dark-neutral) text-white flex flex-col items-center md:grid gap-10"
       style={{
         gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))",
       }}
@@ -22,7 +22,7 @@ export default function DiffBand() {
       </div>
       <div className="rv d1 text-center">
         <div
-          className="grad-text font-semibold leading-none"
+          className="grad-text font-semibold leading-none rotate-90 md:rotate-0"
           style={{
             fontFamily: "var(--font-display)",
             fontSize: "clamp(48px,6vw,80px)",

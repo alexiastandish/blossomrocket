@@ -16,6 +16,7 @@ import LogoDesign from "@/components/svgs/LogoDesign";
 import Typography from "@/components/svgs/Typography";
 import VisualIdentity from "@/components/svgs/VisualIdentity";
 import faqs from "@/data/faqs/services/brand-identity.json";
+import Image from "next/image";
 
 export default function page() {
   return (
@@ -53,7 +54,7 @@ export default function page() {
       <SectionLayout
         id="brand-identity--more-than-a-logo"
         theme="brand"
-        cols={[1, 1]}
+        cols={[5, 3]}
         mobileOrder="left-first"
         ctaSlot={
           <CTASlots
@@ -75,33 +76,18 @@ export default function page() {
           </>
         }
         subtext="A complete Brand Identity includes the visual systems that define how a business appears across digital and physical experience. The logo is just one component of a brand system."
-        schemaItems={[
-          { topic: "Websites" },
-          { topic: "Marketing Assets" },
-          { topic: "Social Media" },
-          { topic: "Packaging" },
-          { topic: "Signage" },
-          { topic: "Promo Products" },
-          { topic: "Apparel" },
-          { topic: "Company Stores" },
-        ]}
         pageUrl="https://blossomrocket.studio/services#brand-identity"
       >
-        <CardList
-          heading="Blossom Rocket develops Brand Identity systems that support:"
-          items={[
-            { topic: "Websites" },
-            { topic: "Marketing Assets" },
-            { topic: "Social Media" },
-            { topic: "Packaging" },
-            { topic: "Signage" },
-            { topic: "Promo Products" },
-            { topic: "Apparel" },
-            { topic: "Company Stores" },
-            { topic: "& Much More..." },
-          ]}
-        />
-        <CardCallout body="This creates a consistent experience wherever and whenever a brand is displayed to the public." />
+        <div className="self-stretch order-2 lg:order-1 flex items-stretch">
+          <Image
+            src="https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/1a2b038f-b24e-41e5-b906-a6f62d58c800/public"
+            alt="Blossom Rocket Ivory Promo Products"
+            width={1200}
+            height={900}
+            className="h-full w-auto object-contain rounded-2xl shadow-2xl"
+            priority
+          />
+        </div>
       </SectionLayout>
       {/* ── Designed to Scale ── */}
       <SectionLayout

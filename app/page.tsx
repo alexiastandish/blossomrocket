@@ -26,8 +26,9 @@ export default function Home() {
                 variant: "primary",
               },
               {
-                label: "Explore Projects by Blossom Rocket",
-                href: "/work",
+                label:
+                  "Explore Hundreds of Product Options for Growing Your Brand",
+                href: "https://www.shopblossomrocket.com/",
                 variant: "outline",
               },
             ]}

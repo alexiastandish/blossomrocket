@@ -140,7 +140,7 @@ export default function page() {
         pageUrl="https://blossomrocket.studio/solutions/on-demand-kits#centralized-kit-management"
       >
         <CardList
-          heading="Recipient-Level Personalization Can Include::"
+          heading="Recipient-Level Personalization Can Include:"
           items={[
             { topic: "Centralized Sourcing" },
             { topic: "Inventory & Asset Control" },

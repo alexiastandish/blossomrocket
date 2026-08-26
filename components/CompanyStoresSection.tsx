@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { CalendlyButton } from "./CalendlyButton";
 import SectionLabel from "./SectionLabel";
 
@@ -41,7 +42,7 @@ export default function CompanyStoresSection() {
     >
       <SectionLabel text="Company Stores" />
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-[clamp(40px,7vw,100px)] items-start">
-        <div className="">
+        <div className="flex-col items-start">
           <h2
             id="stores-h"
             className="rv font-semibold leading-[1.06] tracking-[-0.02em] mb-5 h2"
@@ -55,8 +56,8 @@ export default function CompanyStoresSection() {
             A Company Store is a centralized platform that provides access to
             approved branded products and materials.
           </p>
-          <div className="rv d2">
-            <div className="bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.08)] rounded-2xl p-9">
+          {/* <div className="rv d2"> */}
+          {/* <div className="bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.08)] rounded-2xl p-9">
               <h3 className="h3 font-display font-semibold text-fg-on-dark leading-[1.2] tracking-[-0.02em] mb-2">
                 The result is a brand experience that remains consistent no
                 matter who places the order.
@@ -72,7 +73,16 @@ export default function CompanyStoresSection() {
                 grows.
               </p>
               <CalendlyButton theme="dark" />
-            </div>
+            </div> */}
+          <div className="relative w-full aspect-square">
+            <Image
+              src="https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/2922328a-6303-4a36-5d2f-96f847d54200/public"
+              alt="Blossom Rocket Ivory Promo Products"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              className="object-contain"
+              priority
+              fill
+            />
           </div>
         </div>
 
