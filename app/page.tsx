@@ -215,9 +215,12 @@ export default function Home() {
       >
         <SelectedWork items={selectedWork} />
       </SectionLayout>
+
       <FrameworkSection />
-      <WhatIsSection />
-      <WhySection />
+
+      {/* TODO */}
+      {/* <WhatIsSection />
+      <WhySection /> */}
       <OurServices />
       <DiffBand />
       <DeploymentSection />
