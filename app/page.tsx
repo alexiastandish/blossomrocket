@@ -2,13 +2,10 @@ import type { Metadata } from "next";
 
 import Hero from "@/components/Hero";
 import Marquee from "@/components/section/Marquee";
-import WhatIsSection from "@/components/WhatIsSection";
-import WhySection from "@/components/WhySection";
+
 import DiffBand from "@/components/DiffBand";
-import DeploymentSection from "@/components/DeploymentSection";
 import CompanyStoresSection from "@/components/CompanyStoresSection";
 import FrameworkSection from "@/components/FrameworkSection";
-import OurServices from "@/components/OurServices";
 import marqueeItems from "@/data/marquees/homepage.json";
 import FAQSection from "@/components/faqs/FAQSection";
 import homePageFAQs from "@/data/faqs/home.json";
@@ -17,6 +14,9 @@ import HomeHeroVideo from "@/components/HomeHeroVideo";
 import { CTASlots } from "@/components/CTASlot";
 import SelectedWork from "@/components/SelectedWork/SelectedWork";
 import selectedWork from "@/data/selectedWork.json";
+import FeatureGrid from "@/components/FeatureGrid/FeatureGrid";
+import { featureServices } from "@/data/featureServices";
+import { featureSolutions } from "@/data/featureSolutions";
 
 export const metadata: Metadata = {
   title: "Blossom Rocket | Brand Systems, Branded Merchandise & Company Stores",
@@ -52,9 +52,7 @@ export default function Home() {
           />
         }
       />
-
       <Marquee items={marqueeItems} />
-
       <SectionLayout
         id="home--what-we-do"
         theme="light"
@@ -94,7 +92,6 @@ export default function Home() {
           <HomeHeroVideo />
         </div>
       </SectionLayout>
-
       <div className="bg-white px-[clamp(32px,7vw,100px)] pb-[clamp(80px,11vw,160px)]">
         <CardList
           items={[
@@ -184,7 +181,6 @@ export default function Home() {
           body="Clients can engage Blossom Rocket for an individual project or connect multiple services as their needs grow. For organizations that need a more centralized brand ecosystem, the same standards can extend across logos, templates, digital assets, print, merchandise, signage, onboarding materials, and Company Stores."
         />
       </SectionLayout>
-
       <SectionLayout
         id="home--selected-work"
         theme="light"
@@ -215,17 +211,41 @@ export default function Home() {
       >
         <SelectedWork items={selectedWork} />
       </SectionLayout>
-
       <FrameworkSection />
-
       {/* TODO */}
       {/* <WhatIsSection />
       <WhySection /> */}
-      <OurServices />
+      <FeatureGrid
+        theme="brand"
+        eyebrow="Brand & Design Services"
+        heading={
+          <>
+            Everything You Need to{" "}
+            <em className="grad-text not-italic">Build, Launch & Scale</em> Your
+            Brand.
+          </>
+        }
+        subtext="Blossom Rocket provides brand and design services that establish how your brand looks, communicates, and scales across digital and physical touchpoints."
+        items={featureServices}
+        id="home--feature-services"
+      />
       <DiffBand />
-      <DeploymentSection />
-      <CompanyStoresSection />
 
+      <FeatureGrid
+        theme="neutral"
+        eyebrow="Merchandise & Operational Solutions"
+        heading={
+          <>
+            <em className="grad-text not-italic">Expand Your Brand</em>{" "}
+            Awareness through Blossom Rocket Solutions.
+          </>
+        }
+        subtext="Blossom Rocket provides branded merchandise and operational solutions that turn approved brand standards into products, programs, and ordering environments businesses can use at scale."
+        items={featureSolutions}
+        id="home--feature-solutions"
+      />
+
+      <CompanyStoresSection />
       <FAQSection
         groups={homePageFAQs}
         theme="dark"
