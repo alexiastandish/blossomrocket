@@ -116,16 +116,22 @@ export function PreviewContent({ data, allProducts }: Props) {
           ))}
         </div>
 
-        {/* ── More products bar ── */}
-        <div className="mt-10 mb-12 bg-white border-[1.5px] border-dashed border-[#d0cce8] rounded-lg px-6 py-5 flex items-center justify-between flex-wrap gap-4">
-          <div className="flex items-center gap-4">
-            <span className="text-[26px] flex-shrink-0">📦</span>
+        {/* ── More products banner ── */}
+        <div
+          className="mt-12 mb-14 rounded-2xl px-7 py-7 sm:px-9 sm:py-8 flex items-center justify-between flex-wrap gap-6 shadow-lg"
+          style={{
+            background: `linear-gradient(135deg, ${primaryColor}, ${primaryColor}cc)`,
+            boxShadow: `0 16px 36px -10px ${primaryColor}80`,
+          }}
+        >
+          <div className="flex items-center gap-5">
+            <span className="text-[42px] leading-none shrink-0">📦</span>
             <div>
-              <p className="text-[13px] font-bold text-[#1a1a1a] mb-1">
+              <p className="text-[18px] sm:text-[20px] font-extrabold text-white leading-[1.3] mb-1.5">
                 Hundreds more products available — all branded with the{" "}
                 {company} logo
               </p>
-              <p className="text-[12px] text-[#888] leading-[1.5]">
+              <p className="text-[13px] text-white/80 leading-[1.5]">
                 Polos, hoodies, performance tees, bags, drinkware, tech
                 accessories, print materials, onboarding kits, and more.
               </p>
@@ -135,12 +141,8 @@ export function PreviewContent({ data, allProducts }: Props) {
             href={storeUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[12px] font-bold px-5 py-2.5 rounded-full border-[1.5px] transition-all duration-150 flex-shrink-0 hover:text-white"
-            style={{
-              color: primaryColor,
-              borderColor: primaryColor,
-              background: `${primaryColor}14`,
-            }}
+            className="text-[13px] font-bold px-7 py-3.5 rounded-full bg-white shrink-0 whitespace-nowrap hover:-translate-y-0.5 hover:shadow-xl transition-all duration-200"
+            style={{ color: primaryColor }}
           >
             Browse full catalog →
           </a>
