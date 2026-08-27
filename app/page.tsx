@@ -92,7 +92,7 @@ export default function Home() {
           <HomeHeroVideo />
         </div>
       </SectionLayout>
-      <div className="bg-white px-[clamp(32px,7vw,100px)] pb-[clamp(80px,11vw,160px)]">
+      {/* <div className="bg-white px-[clamp(32px,7vw,100px)] pb-[clamp(80px,11vw,160px)]">
         <CardList
           items={[
             {
@@ -127,12 +127,28 @@ export default function Home() {
             },
           ]}
         />
-      </div>
+      </div> */}
       <SectionLayout
         id="home--the-blossom-rocket-difference"
         theme="brandSoft"
         eyebrow="The Blossom Rocket Difference"
         cols={[3, 5]}
+        ctaSlot={
+          <CTASlots
+            theme="neutral"
+            ctas={[
+              {
+                label: "Explore Our Services",
+                href: "/services",
+                variant: "primary",
+              },
+              {
+                label: "Get In Touch",
+                variant: "outline",
+              },
+            ]}
+          />
+        }
         heading={
           <>
             Brand Strategy Meets{" "}
@@ -211,7 +227,7 @@ export default function Home() {
       >
         <SelectedWork items={selectedWork} />
       </SectionLayout>
-      <FrameworkSection />
+      {/* <FrameworkSection /> */}
       {/* TODO */}
       {/* <WhatIsSection />
       <WhySection /> */}
@@ -220,7 +236,7 @@ export default function Home() {
         eyebrow="Brand & Design Services"
         heading={
           <>
-            Everything You Need to{" "}
+            Every Creative Service You Need to{" "}
             <em className="grad-text not-italic">Build, Launch & Scale</em> Your
             Brand.
           </>
@@ -229,7 +245,7 @@ export default function Home() {
         items={featureServices}
         id="home--feature-services"
       />
-      <DiffBand />
+      {/* <DiffBand /> */}
 
       <FeatureGrid
         theme="neutral"
