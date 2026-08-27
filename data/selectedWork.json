@@ -1,0 +1,64 @@
+[
+  {
+    "slug": "modern-meditations",
+    "href": "/work#modern-meditations",
+    "title": "Modern Meditations",
+    "client": "Modern Meditations",
+    "description": "Modern Meditations adapts ancient contemplative traditions into practical, secular, and science-backed tools for busy lives.",
+    "tags": ["Brand Identity"],
+    "images": [
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/f06b545c-6fd5-418b-b9a4-57f37079c400/public",
+        "alt": "Modern Meditations Business Card"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/6a91f29e-b227-4fb6-1789-1cccb8370b00/public",
+        "alt": "Modern Meditations Mug - Promotional Product"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/1e2de879-c925-486c-c740-8cf46e0f6e00/public",
+        "alt": "Modern Meditations Style Guide"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/ed726f44-a33e-492a-ffe7-53106f03a600/public",
+        "alt": "Modern Meditations Podcast"
+      }
+    ]
+  },
+  {
+    "slug": "sirius-media",
+    "href": "/work#sirius-media",
+    "title": "Sirius Media",
+    "client": "Sirius Media",
+    "description": "A digital media solutions company focused on the brightest path to digital growth.",
+    "tags": ["Brand Identity"],
+    "images": [
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/8369bb66-ecb8-4a34-8365-2dbf88757800/public",
+        "alt": "Sirius Media Business Card"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/4718ae78-6908-46f1-677d-c7e0cd316000/public",
+        "alt": "Sirius Media Style Guide"
+      }
+    ]
+  },
+  {
+    "slug": "beats-by-dre",
+    "href": "/work#beats-by-dre",
+    "title": "Beats by Dre",
+    "client": "Beats by Dre",
+    "description": "A print identity lookbook for Beats by Dre's 2016 collections, featuring product spreads and campaign pages with LeBron James and Lady Gaga.",
+    "tags": ["Print Design"],
+    "images": [
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/0db02cf8-68a9-460c-dac8-732fe8a78600/public",
+        "alt": "Beats by Dre Identity Lookbook Cover"
+      },
+      {
+        "src": "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/47ea1502-5757-4e2c-84a2-12e5e332d400/public",
+        "alt": "2016 Lookbook Intro pages"
+      }
+    ]
+  }
+]

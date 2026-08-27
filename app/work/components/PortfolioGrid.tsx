@@ -355,6 +355,7 @@ export function PortfolioGrid({ items }: PortfolioGridProps) {
 
             return (
               <div
+                id={project.slug}
                 key={project.slug}
                 ref={(el) => {
                   rowRefs.current[i] = el;
