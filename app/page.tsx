@@ -17,6 +17,7 @@ import selectedWork from "@/data/selectedWork.json";
 import FeatureGrid from "@/components/FeatureGrid/FeatureGrid";
 import { featureServices } from "@/data/featureServices";
 import { featureSolutions } from "@/data/featureSolutions";
+import FeaturedArticles from "@/components/FeaturedArticles/FeaturedArticles";
 
 export const metadata: Metadata = {
   title: "Blossom Rocket | Brand Systems, Branded Merchandise & Company Stores",
@@ -262,6 +263,9 @@ export default function Home() {
       />
 
       <CompanyStoresSection />
+
+      <FeaturedArticles />
+
       <FAQSection
         groups={homePageFAQs}
         theme="dark"

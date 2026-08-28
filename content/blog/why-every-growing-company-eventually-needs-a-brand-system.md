@@ -10,7 +10,7 @@ heroImageAlt: "A coordinated brand system showing typography, color, imagery, di
 heroImageWidth: 1200
 heroImageHeight: 675
 category: "Brand Systems"
-featured: false
+featured: true
 tldr:
   - "A brand identity defines the foundational elements of a brand, while a brand system explains how those elements work together across real applications."
   - "As more employees, agencies, vendors, and partners create branded materials, informal knowledge stops being enough to maintain consistency."

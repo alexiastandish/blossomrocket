@@ -100,6 +100,21 @@ export async function getAllArticles(): Promise<BlogArticleData[]> {
     );
 }
 
+export async function getFeaturedArticles(): Promise<BlogArticleData[]> {
+  const slugs = await getAllSlugs();
+
+  const articles = await Promise.all(
+    slugs.map((slug) => getArticleBySlug(slug)),
+  );
+
+  return articles
+    .filter((a): a is BlogArticleData => a !== null && a.featured === true)
+    .sort(
+      (a, b) =>
+        new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
+    );
+}
+
 async function renderMarkdownToHtml(content: string): Promise<string> {
   const result = await remark()
     .use(remarkGfm)

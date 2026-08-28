@@ -10,7 +10,7 @@ heroImageAlt: "Consistent brand system elements—logo, color, and typography—
 heroImageWidth: 1200
 heroImageHeight: 675
 category: "Digital Design"
-featured: false
+featured: true
 tldr:
   - "AI search connects information across your entire online presence, not just a single webpage, so inconsistent messaging creates ambiguity AI systems struggle to resolve."
   - "AI increasingly recognizes companies as entities defined by consistent naming, services, and positioning — the clearer those signals, the easier you are to reference accurately."

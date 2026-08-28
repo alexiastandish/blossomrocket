@@ -5,6 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import SectionLabel from "../SectionLabel";
+import { formatDate } from "@/lib/utils/formatDate";
+import { slugifyTag } from "@/lib/utils/slugifyTag";
 
 export interface BlogIndexPost {
   slug: string;
@@ -22,24 +24,6 @@ export interface BlogIndexPost {
 
 interface BlogIndexClientProps {
   posts: BlogIndexPost[];
-}
-
-function formatDate(iso: string): string {
-  return new Date(iso).toLocaleDateString("en-US", {
-    month: "long",
-    day: "numeric",
-    year: "numeric",
-  });
-}
-
-// URL-safe slug for a tag, e.g. "Brand Strategy" -> "brand-strategy".
-// Used both as the query param value and to look the original label back up.
-function slugifyTag(tag: string): string {
-  return tag
-    .toLowerCase()
-    .trim()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/(^-|-$)/g, "");
 }
 
 export function BlogIndexClient({ posts }: BlogIndexClientProps) {

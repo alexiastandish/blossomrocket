@@ -10,7 +10,7 @@ heroImageAlt: "A cohesive branded merchandise collection featuring apparel, bags
 heroImageWidth: 1200
 heroImageHeight: 675
 category: "Merchandise & Promotional Products"
-featured: false
+featured: true
 tldr:
   - "Branded merchandise extends a company's visual identity into physical products people can wear, carry, use, and share in public."
   - "Repeated exposure to consistent colors, typography, graphics, and brand cues helps audiences recognize and remember a company over time."
