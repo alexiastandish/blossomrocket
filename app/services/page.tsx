@@ -84,14 +84,14 @@ export default function Services() {
         ]}
         heading={
           <>
-            Blossom Rocket Services:
-            <br />
+            Blossom Rocket Provides{" "}
+            <em className="grad-text not-italic">Creative Services</em> Across{" "}
             <em className="grad-text not-italic">
-              From Brand Strategy To Store Deployment
+              Digital and Physical Brand Experiences.
             </em>
           </>
         }
-        subtext="Most agencies stop at design. Blossom Rocket helps businesses build, manage, and deploy their brands across digital experiences, printed materials, merchandise programs, and company stores through SplashBrands."
+        subtext="Blossom Rocket helps businesses create, manage, and apply consistent brand experiences across identity, digital design, marketing, print, and physical applications. Businesses can use one service independently or combine multiple services as their brand needs expand."
         listHeading="Blossom Rocket services include:"
         items={[
           {
@@ -102,22 +102,22 @@ export default function Services() {
           {
             topic: "Brand Systems",
             description:
-              "Brand Systems establish brand guidelines, usage standards, visual rules, and governance that keep every brand touchpoint consistent across teams and channels.",
+              "A Brand System is a complete set of rules and visual assets that show how a company looks and sounds.",
           },
           {
             topic: "Digital Design",
             description:
-              "Digital Design creates websites, landing pages, UI design, email graphics, social media content, and digital experiences that keep your brand consistent across every screen.",
+              "Digital Design services include Websites, UI/UX, Component Libraries, Front-End Development, and Branded Digital Experiences.",
           },
           {
             topic: "Marketing Assets",
             description:
-              "Marketing Assets produce sales collateral, presentations, advertising creative, campaign graphics, and branded content that support launches, campaigns, and business growth.",
+              "Marketing Asset services include Campaign Creative, Social Media Templates, Presentation Templates, Digital Campaign Assets, Brochures, Email Signatures, and Reusable Marketing Templates.",
           },
           {
             topic: "Print & Environmental",
             description:
-              "Print & Environmental designs packaging, signage, trade show displays, printed collateral, and environmental graphics that bring your brand into physical spaces.",
+              "Print & Environmental services include Print Collateral, Packaging, Signage, Displays, Environmental Graphics, and Physical Brand Applications.",
           },
         ]}
       />
