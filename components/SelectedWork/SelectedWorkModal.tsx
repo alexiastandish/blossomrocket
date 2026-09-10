@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, type CSSProperties } from "react";
+import { useEffect, useRef, type CSSProperties } from "react";
+import { createPortal } from "react-dom";
 import Image from "next/image";
 import { ProjectItem, ProjectImage } from "@/lib/types/projects";
 import { isVideoSrc } from "@/lib/utils/isVideoSrc";
@@ -31,6 +32,8 @@ export default function SelectedWorkModal({
   item,
   onClose,
 }: SelectedWorkModalProps) {
+  const scrollableRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     if (!item) return;
 
@@ -38,12 +41,35 @@ export default function SelectedWorkModal({
       if (e.key === "Escape") onClose();
     }
 
+    // Belt-and-suspenders scroll lock: `overflow: hidden` on <html>/<body>
+    // doesn't reliably block wheel/touch scrolling in every browser, so we
+    // also intercept the events directly — except inside the modal's own
+    // scrollable gallery, which should keep scrolling normally.
+    function blockScroll(e: Event) {
+      if (
+        scrollableRef.current &&
+        e.target instanceof Node &&
+        scrollableRef.current.contains(e.target)
+      ) {
+        return;
+      }
+      e.preventDefault();
+    }
+
     document.addEventListener("keydown", handleKeyDown);
+    document.addEventListener("wheel", blockScroll, { passive: false });
+    document.addEventListener("touchmove", blockScroll, { passive: false });
+    const previousHtmlOverflow = document.documentElement.style.overflow;
+    const previousBodyOverflow = document.body.style.overflow;
+    document.documentElement.style.overflow = "hidden";
     document.body.style.overflow = "hidden";
 
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
-      document.body.style.overflow = "";
+      document.removeEventListener("wheel", blockScroll);
+      document.removeEventListener("touchmove", blockScroll);
+      document.documentElement.style.overflow = previousHtmlOverflow;
+      document.body.style.overflow = previousBodyOverflow;
     };
   }, [item, onClose]);
 
@@ -54,9 +80,9 @@ export default function SelectedWorkModal({
     "--row-height": item.rowHeight ?? DEFAULT_ROW_HEIGHT,
   };
 
-  return (
+  return createPortal(
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-8"
+      className="fixed inset-0 z-[120] flex items-center justify-center p-4 sm:p-8"
       role="dialog"
       aria-modal="true"
       aria-label={item.title}
@@ -69,7 +95,7 @@ export default function SelectedWorkModal({
       />
 
       {/* Panel */}
-      <div className="relative z-10 w-full max-w-5xl max-h-[90vh] flex flex-col bg-surface rounded-sm overflow-hidden">
+      <div className="relative z-10 w-full max-w-5xl max-h-[90vh] flex flex-col bg-surface-base rounded-sm overflow-hidden">
         {/* Close button */}
         <button
           type="button"
@@ -112,7 +138,11 @@ export default function SelectedWorkModal({
         </div>
 
         {/* Image rows — identical treatment to PortfolioGrid's rows */}
-        <div className="overflow-y-auto px-6 sm:px-8 pb-8" style={rowStyle}>
+        <div
+          ref={scrollableRef}
+          className="overflow-y-auto px-6 sm:px-8 pb-8"
+          style={rowStyle}
+        >
           <div className="flex flex-col gap-1.5">
             {lines.map((line, lineIndex) => (
               <div
@@ -184,6 +214,7 @@ export default function SelectedWorkModal({
           </div>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body,
   );
 }

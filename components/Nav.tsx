@@ -69,9 +69,8 @@ const initialDropdownState: DropdownMenus = links.reduce<DropdownMenus>(
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState<boolean>(false);
-  const [dropdownOpen, setDropdownOpen] = useState<DropdownMenus>(
-    initialDropdownState,
-  );
+  const [dropdownOpen, setDropdownOpen] =
+    useState<DropdownMenus>(initialDropdownState);
   const [mobileOpen, setMobileOpen] = useState<boolean>(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState<boolean>(false);
   const [mounted, setMounted] = useState(false);
@@ -84,8 +83,6 @@ export default function Nav() {
     scrolled || mobileOpen ? scrolledTokens : unscrolledTokens[navTheme];
 
   useEffect(() => {
-    // Avoid synchronous setState in effect to prevent cascading renders;
-    // schedule update on next animation frame instead.
     const raf = requestAnimationFrame(() => setMounted(true));
     return () => cancelAnimationFrame(raf);
   }, []);
@@ -97,8 +94,6 @@ export default function Nav() {
     return () => window.removeEventListener("scroll", handler);
   }, [pathname]);
 
-  // Reset mobile menu state on route change (render-time adjustment,
-  // not an Effect — avoids the cascading-render warning).
   const [prevPathname, setPrevPathname] = useState(pathname);
   if (pathname !== prevPathname) {
     setPrevPathname(pathname);
@@ -106,18 +101,14 @@ export default function Nav() {
     setMobileServicesOpen(false);
   }
 
-  // Lock body scroll + close on Escape while the mobile panel is open.
   useEffect(() => {
     if (!mobileOpen) return;
-
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
-
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") setMobileOpen(false);
     };
     window.addEventListener("keydown", handleKeyDown);
-
     return () => {
       document.body.style.overflow = previousOverflow;
       window.removeEventListener("keydown", handleKeyDown);
@@ -143,7 +134,7 @@ export default function Nav() {
     >
       <div className="flex h-full flex-col overflow-y-auto px-[clamp(20px,5vw,60px)] py-8">
         <ul className="flex flex-col list-none">
-          {links.map(({ href, label, dropdown = false }) => {
+          {links.map(({ href, label, dropdown = false, external }: NavLink) => {
             const isActive =
               pathname === href || pathname.startsWith(`${href}/`);
 
@@ -155,6 +146,8 @@ export default function Nav() {
                 >
                   <Link
                     href={href}
+                    target={external ? "_blank" : undefined}
+                    rel={external ? "noopener noreferrer" : undefined}
                     onClick={() => setMobileOpen(false)}
                     className={`block py-4 text-[22px] font-medium tracking-[-0.01em] ${
                       isActive ? "text-neutral-900" : "text-neutral-600"
@@ -283,7 +276,7 @@ export default function Nav() {
 
         {/* Desktop links */}
         <ul className="hidden md:flex gap-9 list-none items-center h-full">
-          {links.map(({ href, label, dropdown = false }: NavLink) => {
+          {links.map(({ href, label, dropdown = false, external }: NavLink) => {
             const isFirst = href === firstDropdownHref;
             const menuIsOpen = dropdownOpen[label.toLowerCase()];
             const isActive =
@@ -388,7 +381,9 @@ export default function Nav() {
               <li key={href} className="flex items-center">
                 <Link
                   href={href}
-                  className={`body-sm font-medium tracking-[0.01em] transition-colors duration-200  ${isActive ? activeTokens.linkActive : activeTokens.linkIdle}  ${activeTokens.linkHover}  hover:cursor-pointer `}
+                  target={external ? "_blank" : undefined}
+                  rel={external ? "noopener noreferrer" : undefined}
+                  className={`body-sm font-medium tracking-[0.01em] transition-colors duration-200 ${isActive ? activeTokens.linkActive : activeTokens.linkIdle} ${activeTokens.linkHover} hover:cursor-pointer`}
                 >
                   {label}
                 </Link>

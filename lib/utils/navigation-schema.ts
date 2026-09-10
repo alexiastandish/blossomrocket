@@ -38,4 +38,9 @@ export const links: NavLink[] = [
   { href: "/solutions", label: "Swag & Store Solutions", dropdown: true },
   { href: "/work", label: "Work" },
   { href: "/blog", label: "Blog" },
+  {
+    href: "https://www.shopblossomrocket.com/",
+    label: "Shop",
+    external: true,
+  },
 ];
