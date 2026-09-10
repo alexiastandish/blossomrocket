@@ -7,7 +7,12 @@ import Link from "next/link";
 import { pageThemes } from "@/lib/utils/pageThemes";
 import { useContactModal } from "@/contexts/contact-modal-context";
 import { DropdownMenus, NavLink, NavTheme } from "@/lib/types/navigation";
-import { dropdownLinks, links } from "@/lib/utils/navigation-schema";
+import {
+  dropdownLinks,
+  links,
+  shopMegaMenu,
+} from "@/lib/utils/navigation-schema";
+import ShopMegaMenu from "./ShopMegaMenu";
 
 const unscrolledTokens: Record<
   NavTheme,
@@ -164,6 +169,8 @@ export default function Nav() {
                 <div className="flex items-center justify-between py-4">
                   <Link
                     href={href}
+                    target={external ? "_blank" : undefined}
+                    rel={external ? "noopener noreferrer" : undefined}
                     onClick={() => setMobileOpen(false)}
                     className="text-[22px] font-medium tracking-[-0.01em] text-neutral-600"
                   >
@@ -206,26 +213,55 @@ export default function Nav() {
                   }}
                 >
                   <div className="min-h-0">
-                    <ul className="flex flex-col list-none pb-3">
-                      {dropdownLinks[label]?.map(
-                        ({ href: svcHref, label: svcLabel }) => {
-                          const isChildActive =
-                            pathname === svcHref ||
-                            pathname.startsWith(`${svcHref}/`);
-                          return (
-                            <li key={svcHref}>
-                              <Link
-                                href={svcHref}
-                                onClick={() => setMobileOpen(false)}
-                                className={`block py-2.5 text-[16px] ${isChildActive ? "font-semibold text-violet" : "font-medium text-[rgba(24,24,27,0.65)]"}`}
-                              >
-                                {svcLabel}
-                              </Link>
-                            </li>
-                          );
-                        },
-                      )}
-                    </ul>
+                    {label === "Shop" ? (
+                      <ul className="flex flex-col list-none pb-3 gap-4">
+                        {shopMegaMenu.map((category) => (
+                          <li key={category.label}>
+                            <p className="mb-1.5 text-[13px] font-semibold text-neutral-900">
+                              {category.label}
+                            </p>
+                            <ul className="flex flex-col list-none">
+                              {category.groups
+                                .flatMap((g) => g.items)
+                                .map((item) => (
+                                  <li key={item.href}>
+                                    <Link
+                                      href={item.href}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      onClick={() => setMobileOpen(false)}
+                                      className="block py-2 text-[16px] font-medium text-[rgba(24,24,27,0.65)]"
+                                    >
+                                      {item.label}
+                                    </Link>
+                                  </li>
+                                ))}
+                            </ul>
+                          </li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <ul className="flex flex-col list-none pb-3">
+                        {dropdownLinks[label]?.map(
+                          ({ href: svcHref, label: svcLabel }) => {
+                            const isChildActive =
+                              pathname === svcHref ||
+                              pathname.startsWith(`${svcHref}/`);
+                            return (
+                              <li key={svcHref}>
+                                <Link
+                                  href={svcHref}
+                                  onClick={() => setMobileOpen(false)}
+                                  className={`block py-2.5 text-[16px] ${isChildActive ? "font-semibold text-violet" : "font-medium text-[rgba(24,24,27,0.65)]"}`}
+                                >
+                                  {svcLabel}
+                                </Link>
+                              </li>
+                            );
+                          },
+                        )}
+                      </ul>
+                    )}
                   </div>
                 </div>
               </li>
@@ -276,120 +312,139 @@ export default function Nav() {
 
         {/* Desktop links */}
         <ul className="hidden md:flex gap-9 list-none items-center h-full">
-          {links.map(({ href, label, dropdown = false, external }: NavLink) => {
-            const isFirst = href === firstDropdownHref;
-            const menuIsOpen = dropdownOpen[label.toLowerCase()];
-            const isActive =
-              pathname === href || pathname.startsWith(`${href}/`);
-            return dropdown ? (
-              <li
-                key={href}
-                className="relative"
-                onMouseEnter={() =>
-                  setDropdownOpen((prev) => ({
-                    ...prev,
-                    [label.toLowerCase()]: true,
-                  }))
-                }
-                onMouseLeave={() =>
-                  setDropdownOpen((prev) => ({
-                    ...prev,
-                    [label.toLowerCase()]: false,
-                  }))
-                }
-              >
-                <Link
-                  href={href}
-                  className={`flex items-center gap-1.5 body-sm font-medium tracking-[0.01em] transition-colors duration-200 ${isActive ? activeTokens.linkActive : activeTokens.linkIdle} hover:${activeTokens.linkHover} hover:cursor-pointer ${
-                    menuIsOpen ? activeTokens.linkActive : activeTokens.linkIdle
-                  }`}
-                >
-                  {label}
-                  <svg
-                    width="12"
-                    height="12"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                    aria-hidden="true"
-                    className="transition-transform duration-200"
-                    style={{
-                      transform: menuIsOpen ? "rotate(180deg)" : "rotate(0deg)",
-                    }}
-                  >
-                    <path
-                      d="M2 4l4 4 4-4"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </Link>
+          {links.map(
+            ({
+              href,
+              label,
+              dropdown = false,
+              megaMenu = false,
+              external,
+            }: NavLink) => {
+              const isFirst = href === firstDropdownHref;
+              const menuIsOpen = dropdownOpen[label.toLowerCase()];
+              const isActive =
+                pathname === href || pathname.startsWith(`${href}/`);
 
-                <div
-                  className="absolute top-full transition-all duration-200 pt-4"
-                  style={{
-                    opacity: menuIsOpen ? 1 : 0,
-                    pointerEvents: menuIsOpen ? "auto" : "none",
-                    left: isFirst ? "0" : "50%",
-                    transform: isFirst
-                      ? `translateY(${menuIsOpen ? "0px" : "-6px"})`
-                      : `translateX(-50%) translateY(${menuIsOpen ? "0px" : "-6px"})`,
-                    width: "260px",
-                  }}
+              const closeMenu = () =>
+                setDropdownOpen((prev) => ({
+                  ...prev,
+                  [label.toLowerCase()]: false,
+                }));
+
+              return dropdown ? (
+                <li
+                  key={href}
+                  className="relative"
+                  onMouseEnter={() =>
+                    setDropdownOpen((prev) => ({
+                      ...prev,
+                      [label.toLowerCase()]: true,
+                    }))
+                  }
+                  onMouseLeave={closeMenu}
                 >
-                  {!isFirst && (
-                    <div
-                      className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 rotate-45 bg-white border-l border-t border-[rgba(24,24,27,0.08)]"
-                      aria-hidden="true"
-                    />
-                  )}
-                  <ul
-                    className="relative bg-white rounded-2xl border border-[rgba(24,24,27,0.08)] overflow-hidden list-none p-1.5"
-                    style={{
-                      boxShadow:
-                        "0 4px 24px rgba(24,24,27,0.08), 0 1px 4px rgba(24,24,27,0.04)",
-                    }}
+                  <Link
+                    href={href}
+                    target={external ? "_blank" : undefined}
+                    rel={external ? "noopener noreferrer" : undefined}
+                    className={`flex items-center gap-1.5 body-sm font-medium tracking-[0.01em] transition-colors duration-200 ${isActive ? activeTokens.linkActive : activeTokens.linkIdle} hover:${activeTokens.linkHover} hover:cursor-pointer ${
+                      menuIsOpen
+                        ? activeTokens.linkActive
+                        : activeTokens.linkIdle
+                    }`}
                   >
-                    {dropdownLinks[label]?.map(
-                      ({ href: svcHref, label: svcLabel }) => {
-                        const isChildActive =
-                          pathname === svcHref ||
-                          pathname.startsWith(`${svcHref}/`);
-                        return (
-                          <li key={svcHref}>
-                            <Link
-                              href={svcHref}
-                              className={`flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl body-sm hover:text-ink hover:bg-off transition-colors duration-150 ${isChildActive ? "font-semibold text-violet" : "font-medium text-[rgba(24,24,27,0.65)]"}`}
-                              onClick={() =>
-                                setDropdownOpen((prev) => ({
-                                  ...prev,
-                                  [label.toLowerCase()]: false,
-                                }))
-                              }
-                            >
-                              {svcLabel}
-                            </Link>
-                          </li>
-                        );
-                      },
-                    )}
-                  </ul>
-                </div>
-              </li>
-            ) : (
-              <li key={href} className="flex items-center">
-                <Link
-                  href={href}
-                  target={external ? "_blank" : undefined}
-                  rel={external ? "noopener noreferrer" : undefined}
-                  className={`body-sm font-medium tracking-[0.01em] transition-colors duration-200 ${isActive ? activeTokens.linkActive : activeTokens.linkIdle} ${activeTokens.linkHover} hover:cursor-pointer`}
-                >
-                  {label}
-                </Link>
-              </li>
-            );
-          })}
+                    {label}
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 12 12"
+                      fill="none"
+                      aria-hidden="true"
+                      className="transition-transform duration-200"
+                      style={{
+                        transform: menuIsOpen
+                          ? "rotate(180deg)"
+                          : "rotate(0deg)",
+                      }}
+                    >
+                      <path
+                        d="M2 4l4 4 4-4"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </Link>
+
+                  {megaMenu ? (
+                    <ShopMegaMenu
+                      categories={shopMegaMenu}
+                      open={menuIsOpen}
+                      onNavigate={closeMenu}
+                    />
+                  ) : (
+                    <div
+                      className="absolute top-full transition-all duration-200 pt-4"
+                      style={{
+                        opacity: menuIsOpen ? 1 : 0,
+                        pointerEvents: menuIsOpen ? "auto" : "none",
+                        left: isFirst ? "0" : "50%",
+                        transform: isFirst
+                          ? `translateY(${menuIsOpen ? "0px" : "-6px"})`
+                          : `translateX(-50%) translateY(${menuIsOpen ? "0px" : "-6px"})`,
+                        width: "260px",
+                      }}
+                    >
+                      {!isFirst && (
+                        <div
+                          className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 rotate-45 bg-white border-l border-t border-[rgba(24,24,27,0.08)]"
+                          aria-hidden="true"
+                        />
+                      )}
+                      <ul
+                        className="relative bg-white rounded-2xl border border-[rgba(24,24,27,0.08)] overflow-hidden list-none p-1.5"
+                        style={{
+                          boxShadow:
+                            "0 4px 24px rgba(24,24,27,0.08), 0 1px 4px rgba(24,24,27,0.04)",
+                        }}
+                      >
+                        {dropdownLinks[label]?.map(
+                          ({ href: svcHref, label: svcLabel }) => {
+                            const isChildActive =
+                              pathname === svcHref ||
+                              pathname.startsWith(`${svcHref}/`);
+                            return (
+                              <li key={svcHref}>
+                                <Link
+                                  href={svcHref}
+                                  className={`flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl body-sm hover:text-ink hover:bg-off transition-colors duration-150 ${isChildActive ? "font-semibold text-violet" : "font-medium text-[rgba(24,24,27,0.65)]"}`}
+                                  onClick={closeMenu}
+                                >
+                                  {svcLabel}
+                                </Link>
+                              </li>
+                            );
+                          },
+                        )}
+                      </ul>
+                    </div>
+                  )}
+                </li>
+              ) : (
+                <li key={href} className="flex items-center">
+                  <Link
+                    href={href}
+                    target={external ? "_blank" : undefined}
+                    rel={external ? "noopener noreferrer" : undefined}
+                    className={`body-sm font-medium tracking-[0.01em] transition-colors duration-200 ${isActive ? activeTokens.linkActive : activeTokens.linkIdle} ${activeTokens.linkHover} hover:cursor-pointer`}
+                  >
+                    {label}
+                  </Link>
+                </li>
+              );
+            },
+          )}
         </ul>
 
         {/* Desktop CTA */}
