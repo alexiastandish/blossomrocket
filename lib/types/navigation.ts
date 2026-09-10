@@ -4,6 +4,7 @@ export type NavLink = {
   href: string;
   label: string;
   dropdown?: boolean;
+  external?: boolean;
 };
 
 export type DropdownMenus = Record<string, boolean>;
