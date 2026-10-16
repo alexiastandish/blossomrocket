@@ -6,18 +6,11 @@ export const featurePrimarySolutions: FeatureItem[] = [
   {
     num: "01",
     title: "Company Stores",
-    desc: "Centralized, automated ordering environments that give teams, departments, and locations on-demand access to thousands of pre-approved branded products — no order minimums, no inventory, typically shipping in 2–5 days.",
+    desc: "Give every team, department, and location one place to order approved merchandise — no minimums, no inventory to buy, shipped in days.",
     href: "/solutions/company-stores",
     featured: true,
     partnerNote: "Powered through SplashBrands",
-    tags: [
-      "Centralized Ordering",
-      "Approved Merchandise",
-      "Brand-Controlled Applications",
-      "On-Demand Production",
-      "Fulfillment",
-      "Reduced Inventory",
-    ],
+    tags: ["No Order Minimums", "Nothing to Stock", "From $10K/Year"],
     icon: (
       <svg
         width="22"
@@ -42,17 +35,11 @@ export const featurePrimarySolutions: FeatureItem[] = [
   {
     num: "02",
     title: "Co-Branding",
-    desc: "Merchandise programs built around multiple approved logos and logo variations, so partnerships, divisions, and locations order co-branded products that stay within one set of brand rules.",
+    desc: "Keep every partner, division, and location on-brand — even when more than one logo ends up on the same product.",
     href: "/solutions/co-branding",
     featured: true,
     partnerNote: "Powered through SplashBrands",
-    tags: [
-      "Multiple Approved Logos",
-      "Logo Variations",
-      "Controlled Logo Usage",
-      "Approved Product Colors",
-      "On-Demand Ordering",
-    ],
+    tags: ["Multiple Approved Logos", "Always On-Brand", "$200/Month"],
     icon: (
       <svg
         width="22"
@@ -79,16 +66,11 @@ export const featurePrimarySolutions: FeatureItem[] = [
   {
     num: "03",
     title: "Swag Storefronts",
-    desc: "A self-serve storefront for a single brand's own approved logo and product colors — ongoing merchandise access without the commitment of a full Company Store.",
+    desc: "Give your brand its own always-on storefront — without the commitment of a full Company Store.",
     href: "/solutions/swag-storefronts",
     featured: true,
     partnerNote: "Powered through SplashBrands",
-    tags: [
-      "Self-Serve Setup",
-      "Approved Logo & Colors",
-      "On-Demand Ordering",
-      "Recurring Merchandise Access",
-    ],
+    tags: ["Self-Serve Setup", "Always-On Access", "$200/Month"],
     icon: (
       <svg
         width="22"
@@ -120,16 +102,10 @@ export const featureMerchandiseSolutions: FeatureItem[] = [
   {
     num: "01",
     title: "Merchandise & Promotional Products",
-    desc: "Branded apparel, promotional products, gifting, and custom merchandise designed to extend your brand into tangible experiences.",
+    desc: "Get your brand onto real products — apparel, gifts, and giveaways — for a single campaign, event, or occasion.",
     href: "/solutions/merchandise-and-promotional-products",
     featured: false,
-    tags: [
-      "Branded Apparel",
-      "Promotional Products",
-      "Corporate Gifting",
-      "Event Merchandise",
-      "Custom Merchandise",
-    ],
+    tags: ["Branded Apparel", "Corporate Gifting", "Custom Merchandise"],
     icon: (
       <svg
         width="22"
@@ -160,18 +136,10 @@ export const featureMerchandiseSolutions: FeatureItem[] = [
   {
     num: "02",
     title: "On-Demand Kits",
-    desc: "Personalized branded kits that combine merchandise, print, packaging, and fulfillment for onboarding, customers, sales programs, partners, and events.",
+    desc: "Send a polished, personalized box — merch, print, and packaging already put together — for onboarding, sales, or events.",
     href: "/solutions/on-demand-kits",
     featured: false,
-    tags: [
-      "Onboarding Kits",
-      "Customer Kits",
-      "Sales Programs",
-      "Partner Kits",
-      "Event Kits",
-      "Personalized Print",
-      "Coordinated Packaging",
-    ],
+    tags: ["Onboarding Kits", "Personalized Print", "Ready to Ship"],
     icon: (
       <svg
         width="22"

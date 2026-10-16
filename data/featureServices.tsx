@@ -4,16 +4,10 @@ export const featureServices: FeatureItem[] = [
   {
     num: "01",
     title: "Brand Identity",
-    desc: "The visual foundation of your brand — creating a recognizable identity that can be applied consistently across digital and physical touchpoints.",
+    desc: "Get a recognizable look your team can apply consistently everywhere — no more one-off logo files and guesswork.",
     href: "/services/brand-identity",
     featured: false,
-    tags: [
-      "Visual Identity",
-      "Logo Systems",
-      "Typography",
-      "Color",
-      "Graphic Elements",
-    ],
+    tags: ["Logo Systems", "Typography", "Color"],
     icon: (
       <svg
         width="22"
@@ -36,16 +30,10 @@ export const featureServices: FeatureItem[] = [
   {
     num: "02",
     title: "Brand Systems",
-    desc: "The standards, rules, templates, and approved assets that define how your brand should be applied consistently as it grows.",
+    desc: "Keep every team applying your brand the same way as you grow — one set of rules and assets, not five versions floating around.",
     href: "/services/brand-systems",
     featured: false,
-    tags: [
-      "Brand Guidelines",
-      "Application Standards",
-      "Templates",
-      "Asset Libraries",
-      "Design Systems",
-    ],
+    tags: ["Brand Guidelines", "Templates", "Asset Libraries"],
     icon: (
       <svg
         width="22"
@@ -97,16 +85,10 @@ export const featureServices: FeatureItem[] = [
   {
     num: "03",
     title: "Digital Design",
-    desc: "Branded digital experiences designed to extend your Brand System across websites, interfaces, reusable components, and front-end applications.",
+    desc: "Give customers a digital experience that actually feels like your brand — websites, interfaces, and the code behind them.",
     href: "/services/digital-design",
     featured: false,
-    tags: [
-      "Websites",
-      "UI/UX",
-      "Component Libraries",
-      "Front-End Development",
-      "Branded Digital Experiences",
-    ],
+    tags: ["Websites", "UI/UX", "Front-End Development"],
     icon: (
       <svg
         width="22"
@@ -137,18 +119,10 @@ export const featureServices: FeatureItem[] = [
   {
     num: "04",
     title: "Marketing Assets",
-    desc: "Reusable branded assets for campaigns, presentations, social media, sales materials, and other recurring marketing needs.",
+    desc: "Stop rebuilding the same deck or social post from scratch — reusable templates for everything marketing sends out.",
     href: "/services/marketing-assets",
     featured: false,
-    tags: [
-      "Campaign Creative",
-      "Social Media Templates",
-      "Presentation Templates",
-      "Digital Campaign Assets",
-      "Brochures",
-      "Email Signatures",
-      "Reusable Marketing Templates",
-    ],
+    tags: ["Campaign Creative", "Social Templates", "Presentations"],
     icon: (
       <svg
         width="22"
@@ -179,17 +153,10 @@ export const featureServices: FeatureItem[] = [
   {
     num: "05",
     title: "Print & Environmental Design",
-    desc: "Physical brand applications that extend established standards into print, packaging, signage, displays, and branded environments.",
+    desc: "Carry your brand into the physical world — signage, packaging, and print that looks like it belongs to you.",
     href: "/services/print-and-environmental-design",
     featured: false,
-    tags: [
-      "Print Collateral",
-      "Packaging",
-      "Signage",
-      "Displays",
-      "Environmental Graphics",
-      "Physical Brand Applications",
-    ],
+    tags: ["Print Collateral", "Packaging", "Signage"],
     icon: (
       <svg
         width="22"

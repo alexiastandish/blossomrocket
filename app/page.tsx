@@ -7,7 +7,7 @@ import CompanyStoresSection from "@/components/CompanyStoresSection";
 import marqueeItems from "@/data/marquees/homepage.json";
 import FAQSection from "@/components/faqs/FAQSection";
 import homePageFAQs from "@/data/faqs/home.json";
-import { CardCallout, CardList, SectionLayout } from "@/components/section";
+import { CardCallout, SectionLayout } from "@/components/section";
 import HomeHeroVideo from "@/components/HomeHeroVideo";
 import { CTASlots } from "@/components/CTASlot";
 import SelectedWork from "@/components/SelectedWork/SelectedWork";
@@ -66,21 +66,20 @@ export default function Home() {
         heading={
           <>
             Branded Merchandise,{" "}
-            <em className="grad-text not-italic">Centralized and On Demand.</em>
+            <em className="grad-text not-italic">Without the Busywork.</em>
           </>
         }
-        body="Blossom Rocket builds Company Stores, Co-Branding programs, and Swag Storefronts that give marketing, brand, communications, procurement, and operations teams a place to order approved branded merchandise. Thousands of pre-approved products, no order minimums, no inventory to buy or hold, and typical shipping in 2 to 5 days — powered through SplashBrands, with in-house creative services on hand when the brand itself needs building."
+        body="No more spreadsheets, vendor chasing, or guessing what's on-brand. Blossom Rocket gives your team one place to order approved merchandise — any amount, shipped in days — powered through SplashBrands."
         ctaSlot={
           <CTASlots
             ctas={[
               {
-                label: "Explore Company Stores  🚀",
+                label: "Get Started  🚀",
                 variant: "primary",
-                href: "/solutions/company-stores",
               },
               {
-                label: "Explore Co-Branding",
-                href: "/solutions/co-branding",
+                label: "See How It Works",
+                href: "/solutions",
                 variant: "outline",
               },
             ]}
@@ -100,7 +99,7 @@ export default function Home() {
             <em className="grad-text not-italic">On Autopilot.</em>
           </>
         }
-        subtext="Company Stores centralize merchandise ordering across an entire organization. Co-Branding keeps merchandise consistent when it has to carry more than one approved mark. Swag Storefronts give a single brand the same self-serve access without a full Company Store. All three run on demand through SplashBrands."
+        subtext="Company Stores centralize ordering for your whole organization. Co-Branding keeps multi-logo merchandise on-brand. Swag Storefronts give one brand the same self-serve simplicity. All three run on demand through SplashBrands."
         items={featurePrimarySolutions}
         id="home--primary-solutions"
       />
@@ -136,52 +135,29 @@ export default function Home() {
             <em className="grad-text not-italic">Not a Design Agency.</em>
           </>
         }
-        subtext="Traditional promotional product distributors sell merchandise order by order, with minimums, setup charges, and inventory you buy up front. Creative agencies stop at logos and guidelines. Blossom Rocket operates the ordering environment itself — approved products, approved artwork, and automated fulfillment — and brings the creative capability to define what 'approved' means in the first place."
+        subtext="Traditional promotional product distributors sell merchandise order by order, with minimums and upfront inventory. Creative agencies stop at logos and guidelines. Blossom Rocket runs the ordering environment itself, so what's “approved” actually ships."
         schemaItems={[
-          { topic: "Centralized Merchandise Ordering" },
-          { topic: "Brand-Controlled Logos, Colors & Decoration Methods" },
-          { topic: "On-Demand Production" },
-          { topic: "No Order Minimums" },
-          { topic: "No Inventory Investment" },
-          { topic: "Fulfillment in 2 to 5 Days" },
-          { topic: "Reduced Administrative Work" },
+          { topic: "Centralized Ordering" },
+          { topic: "Nothing to Stock" },
+          { topic: "Always On-Brand" },
         ]}
         pageUrl={PAGE_URL}
       >
-        <CardList
-          heading="Operational Control"
-          items={[
-            { topic: "Centralized Ordering" },
-            { topic: "Teams, Departments & Locations" },
-            { topic: "Reduced Vendor Coordination" },
-            { topic: "Less Manual Ordering & Admin Work" },
-          ]}
-        />{" "}
-        <CardList
-          heading="Production & Fulfillment"
-          items={[
-            { topic: "On-Demand Production" },
-            { topic: "No Order Minimums" },
-            { topic: "No Inventory Investment" },
-            { topic: "One Item or Thousands" },
-            { topic: "Typically Ships in 2 to 5 Days" },
-          ]}
-        />{" "}
-        <CardList
-          heading="Brand Control"
-          items={[
-            { topic: "Pre-Approved Product Catalog" },
-            { topic: "Approved Logos & Logo Variations" },
-            { topic: "Approved Colors & Decoration Methods" },
-          ]}
+        <CardCallout
+          heading="One Place to Order."
+          body="Every team, department, and location orders from the same approved catalog — so admin work and vendor back-and-forth disappear."
         />
         <CardCallout
-          heading="Powered Through SplashBrands"
-          body="Blossom Rocket is the customer-facing partner for these programs — scoping the program, configuring the brand, and supporting the people who order from it. SplashBrands provides the underlying company store platform, in-house decoration, and fulfillment operations that make on-demand production and 2-to-5-day shipping possible."
+          heading="Nothing to Stock."
+          body="Products are made after you order, one at a time or thousands — no minimums, no inventory to buy or store, shipped in 2 to 5 days."
         />
         <CardCallout
-          heading="Physical Merchandise Standards"
-          body="Blossom Rocket extends brand standards beyond digital assets to define how a brand should appear on physical products and materials. Standards can include approved apparel, logo placement, embroidery, print methods, signage, packaging, promotional products, and trade show displays."
+          heading="Always On-Brand."
+          body="Only approved logos, colors, and products make it into the catalog, so there's nothing for anyone to get wrong."
+        />
+        <CardCallout
+          heading="Powered Through SplashBrands."
+          body="Blossom Rocket configures the brand and supports your team; SplashBrands' platform and in-house production make the on-demand speed possible."
         />
       </SectionLayout>
 
@@ -229,7 +205,7 @@ export default function Home() {
             <em className="grad-text not-italic">Deploy It Everywhere.</em>
           </>
         }
-        subtext="Most organizations hire one firm to design the brand and a different vendor to produce the merchandise — which is exactly where consistency gets lost. Blossom Rocket does both: defining visual identity, standards, and assets, then carrying that identity into physical products, digital experiences, and the company stores people order from. Either half can be engaged on its own."
+        subtext="Most companies hire one firm to design the brand and another to produce the merchandise — which is exactly where consistency breaks down. Blossom Rocket does both, so the brand you design is the brand that ships. Either half works on its own, too."
         ctas={[
           {
             label: "Explore Merchandise Solutions",
