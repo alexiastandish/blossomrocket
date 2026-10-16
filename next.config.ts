@@ -31,6 +31,11 @@ const nextConfig: NextConfig = {
         destination: "/solutions/merchandise-and-promotional-products",
         permanent: true,
       },
+      {
+        source: "/services/swag-storefronts",
+        destination: "/solutions/swag-storefronts",
+        permanent: true,
+      },
     ];
   },
 };

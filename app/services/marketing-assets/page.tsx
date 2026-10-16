@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import FAQSection from "@/components/faqs/FAQSection";
 import faqs from "@/data/faqs/services/marketing-assets.json";
 
@@ -22,6 +23,31 @@ import OngoingSupport from "@/components/svgs/OngoingSupport";
 import BuiltToConnect from "@/components/svgs/BuiltToConnect";
 
 const PAGE_URL = "https://blossomrocket.studio/services/marketing-assets";
+
+const META_DESCRIPTION =
+  "Marketing Assets from Blossom Rocket — reusable campaign creative, social and presentation templates, brochures, and digital campaign assets that keep recurring marketing work on brand.";
+
+export const metadata: Metadata = {
+  title: "Marketing Assets & Reusable Brand Templates — Blossom Rocket",
+  description: META_DESCRIPTION,
+  keywords: [
+    "Marketing Assets",
+    "Campaign Creative",
+    "Social Media Templates",
+    "Presentation Templates",
+    "Digital Campaign Assets",
+    "Reusable Marketing Templates",
+    "Brochures",
+  ],
+  alternates: { canonical: PAGE_URL },
+  openGraph: {
+    title: "Marketing Assets & Reusable Brand Templates — Blossom Rocket",
+    description: META_DESCRIPTION,
+    url: PAGE_URL,
+    siteName: "Blossom Rocket",
+    type: "website",
+  },
+};
 
 export default function MarketingAssets() {
   return (

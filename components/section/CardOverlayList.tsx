@@ -1,7 +1,6 @@
 import { CardOverlayListProps } from "@/lib/types/section";
 import { buildSchema } from "@/lib/utils/buildSchema";
 import { tokens } from "@/lib/utils/sectionTailwindTokens";
-import Script from "next/script";
 import CTAs from "../CTAs";
 import SectionLabel from "../SectionLabel";
 import { ItemIcon } from "../ui/ItemIcon";
@@ -33,7 +32,9 @@ export default function SectionCardOverlayList({
   const schemaId = id ?? "creative-services-list";
   const schemaHeading = typeof heading === "string" ? heading : cardHeading;
   const schema =
-    items.length > 0 ? buildSchema(items, schemaHeading, pageUrl) : null;
+    items.length > 0
+      ? buildSchema(items, schemaHeading, undefined, pageUrl).itemListSchema
+      : null;
 
   const leftColClass =
     mobileOrder === "right-first" ? "order-2 lg:order-1" : "";
@@ -48,7 +49,7 @@ export default function SectionCardOverlayList({
   return (
     <>
       {schema && (
-        <Script
+        <script
           id={`schema-itemlist-${schemaId}`}
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}

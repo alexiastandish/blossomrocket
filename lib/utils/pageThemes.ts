@@ -9,6 +9,7 @@ export const pageThemes: Record<string, "light" | "dark"> = {
   "/solutions": "dark",
   "/solutions/merchandise-and-promotional-products": "light",
   "/solutions/company-stores": "dark",
+  "/solutions/co-branding": "light",
   "/solutions/swag-storefronts": "light",
   "/solutions/on-demand-kits": "dark",
   "/solutions/print-and-environmental": "dark",

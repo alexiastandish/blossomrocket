@@ -8,6 +8,13 @@ export type NavLink = {
   external?: boolean;
 };
 
+/** A titled section inside a dropdown menu. An omitted title renders an
+ *  untitled run of links, which keeps single-group menus visually unchanged. */
+export type NavGroup = {
+  title?: string;
+  items: NavLink[];
+};
+
 export type DropdownMenus = Record<string, boolean>;
 
 export type ShopMegaMenuItem = {

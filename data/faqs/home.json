@@ -1,58 +1,167 @@
 [
   {
+    "id": "company-stores",
+    "title": "Company Stores",
+    "items": [
+      {
+        "id": "what-is-a-company-store",
+        "question": "What is a Company Store?",
+        "answer": "A Company Store is a centralized online ordering environment that gives approved employees, teams, departments, locations, and customers access to pre-approved branded merchandise. Products, logos, colors, and decoration methods are configured in advance, so every order follows approved brand standards without a separate approval cycle."
+      },
+      {
+        "id": "how-is-a-company-store-different-from-buying-promotional-products",
+        "question": "How is a Company Store different from buying promotional products the traditional way?",
+        "answer": "Traditional promotional product purchasing is handled order by order, often with minimum quantities, setup charges, and bulk inventory purchased in advance. Blossom Rocket Company Stores are built around on-demand production: merchandise is produced after an order is placed, there are no traditional order minimums, and there is no inventory to buy or hold."
+      },
+      {
+        "id": "do-company-stores-have-order-minimums-or-inventory",
+        "question": "Do Company Stores require order minimums or inventory investment?",
+        "answer": "No. Blossom Rocket Company Stores are designed for on-demand ordering, so a business can order one item or thousands without traditional order minimums and without purchasing or storing finished merchandise in advance."
+      },
+      {
+        "id": "how-fast-do-company-store-orders-ship",
+        "question": "How quickly do Company Store orders ship?",
+        "answer": "Company Store orders typically ship in 2 to 5 days through on-demand production and fulfillment. The promotional merchandise industry standard is closer to 3 to 4 weeks."
+      },
+      {
+        "id": "what-can-a-company-store-be-used-for",
+        "question": "What can a Company Store be used for?",
+        "answer": "Company Stores support branded apparel, promotional products, corporate gifting, employee programs, customer programs, event merchandise, recognition and reward programs, and marketing materials across teams, departments, and locations."
+      },
+      {
+        "id": "how-does-blossom-rocket-work-with-splashbrands-on-company-stores",
+        "question": "How does Blossom Rocket work with SplashBrands on Company Stores?",
+        "answer": "Blossom Rocket is the customer-facing partner for these programs — scoping the store, configuring the brand, and supporting the people who order from it. SplashBrands provides the underlying company store platform, product infrastructure, in-house decoration, production, and fulfillment."
+      }
+    ],
+    "cta": {
+      "label": "Explore Company Stores",
+      "href": "/solutions/company-stores"
+    }
+  },
+  {
+    "id": "co-branding",
+    "title": "Co-Branding",
+    "items": [
+      {
+        "id": "what-is-co-branding",
+        "question": "What is Co-Branding?",
+        "answer": "Blossom Rocket Co-Branding is a branded merchandise program powered by SplashBrands' multi-logo storefront technology. It gives organizations ongoing access to apparel and promotional products configured around multiple approved logos, logo variations, and brand colors, so merchandise that carries more than one mark stays consistent with approved brand standards."
+      },
+      {
+        "id": "how-do-co-branding-programs-manage-logo-variations",
+        "question": "How does Co-Branding manage multiple logos and logo variations?",
+        "answer": "Co-Branding supports primary logos plus additional approved marks and variations — partner, divisional, location, and program logos, as well as stacked, horizontal, icon, and logo-mark formats. The setup also creates black and white treatments of uploaded logos and controls which approved treatment appears on each product color."
+      },
+      {
+        "id": "how-do-co-branding-programs-control-product-colors",
+        "question": "How does Co-Branding control product colors?",
+        "answer": "Approved merchandise colors are selected for each logo variation during setup. Businesses control how specific logo treatments are paired with individual product colorways before any recurring merchandise order is placed."
+      },
+      {
+        "id": "co-branding-vs-company-store",
+        "question": "What is the difference between Co-Branding and a Company Store?",
+        "answer": "Both are brand-controlled, on-demand merchandise programs powered by SplashBrands. Co-Branding focuses on configuring multiple approved logos, logo variations, and product-color pairings in a lightweight, always-on storefront. Company Stores are designed for broader merchandise programs that require more extensive storefront, reporting, and administrative capabilities."
+      },
+      {
+        "id": "co-branding-vs-swag-storefront",
+        "question": "What is the difference between Co-Branding and a Swag Storefront?",
+        "answer": "Both run on the same SplashBrands storefront technology. Co-Branding is for merchandise that needs to carry more than one approved mark — a partner's logo, a division's logo, a location's logo — alongside your own. A Swag Storefront carries a single organization's own approved logo and its variations, as a lighter-weight alternative to a full Company Store."
+      }
+    ],
+    "cta": {
+      "label": "Explore Co-Branding",
+      "href": "/solutions/co-branding"
+    }
+  },
+  {
+    "id": "merchandise-programs-and-fulfillment",
+    "title": "Merchandise Programs & Fulfillment",
+    "items": [
+      {
+        "id": "why-do-businesses-invest-in-merchandise-and-promotional-products",
+        "question": "Why do businesses invest in Merchandise & Promotional Products?",
+        "answer": "Branded merchandise helps businesses increase visibility, support employee engagement, strengthen customer relationships, promote events, and create memorable brand experiences beyond traditional marketing channels."
+      },
+      {
+        "id": "what-is-on-demand-merchandise",
+        "question": "What does on-demand merchandise mean?",
+        "answer": "On-demand merchandise is produced after an order is placed rather than purchased as finished goods in bulk in advance. This can reduce the need to forecast demand, store finished merchandise, distribute products internally, and manage unused branded inventory."
+      },
+      {
+        "id": "what-is-an-on-demand-kit",
+        "question": "What is an On-Demand Kit?",
+        "answer": "On-Demand Kits are branded kit programs that combine merchandise, personalized print, coordinated packaging, fulfillment, and distribution in one program. Businesses use them for employee onboarding, customer and sales outreach, partner appreciation, events, milestones, and seasonal programs."
+      },
+      {
+        "id": "does-a-merchandise-program-reduce-administrative-work",
+        "question": "Can a merchandise program reduce administrative work?",
+        "answer": "Centralizing merchandise in a store or Co-Branding program sets product, logo, color, and decoration decisions once and makes the approved result available to order. That reduces repeat vendor coordination, manual order handling, and the volume of one-off merchandise requests routed through marketing or operations."
+      }
+    ],
+    "cta": {
+      "label": "Explore Merchandise & Promotional Products",
+      "href": "/solutions/merchandise-and-promotional-products"
+    },
+    "secondaryCta": {
+      "label": "Explore On-Demand Kits",
+      "href": "/solutions/on-demand-kits"
+    }
+  },
+  {
     "id": "about-blossom-rocket",
     "title": "About Blossom Rocket",
     "items": [
       {
         "id": "what-does-blossom-rocket-do",
         "question": "What does Blossom Rocket do?",
-        "answer": "Blossom Rocket helps businesses create, manage, and scale consistent brand experiences across digital platforms, marketing assets, print materials, merchandise programs, promotional products, and company stores."
+        "answer": "Blossom Rocket helps organizations simplify, centralize, automate, and scale branded merchandise across teams, departments, locations, and partner organizations — primarily through Company Stores and Co-Branding programs, supported by in-house creative services."
       },
       {
         "id": "what-services-does-blossom-rocket-offer",
         "question": "What services does Blossom Rocket offer?",
-        "answer": "Blossom Rocket provides Brand Identity, Brand Systems, Digital Design, Marketing Assets, Print & Environmental Design, Merchandise & Promotional Products, Company Stores through SplashBrands, and Search Everything Optimization Consulting."
+        "answer": "Blossom Rocket provides Company Stores and Co-Branding as its primary solutions, along with Merchandise & Promotional Products, On-Demand Kits, and Print & Environmental production. Creative services include Brand Identity, Brand Systems, Digital Design, Marketing Assets, and Print & Environmental Design."
       },
       {
         "id": "what-types-of-businesses-does-blossom-rocket-work-with",
         "question": "What types of businesses does Blossom Rocket work with?",
-        "answer": "Blossom Rocket works with businesses that need to create consistent brand experiences across multiple channels, teams, locations, products, and customer touchpoints. This includes growing companies, established organizations, and businesses launching new brands or initiatives."
+        "answer": "Blossom Rocket works with medium and large organizations that need consistent branded merchandise across multiple teams, departments, locations, and partner relationships. Programs are typically led by marketing, brand, communications, procurement, or operations teams."
+      },
+      {
+        "id": "what-makes-blossom-rocket-different-from-a-traditional-branding-agency",
+        "question": "What makes Blossom Rocket different from a traditional branding agency or promotional product distributor?",
+        "answer": "Promotional product distributors sell merchandise order by order. Creative agencies stop at logos and brand guidelines. Blossom Rocket operates the ordering environment itself — approved products, approved artwork, on-demand production, and fulfillment — and has the creative capability to define those standards in the first place."
       }
     ],
     "cta": {
-      "label": "Explore Blossom Rocket Services",
-      "href": "/services"
+      "label": "Explore Blossom Rocket Solutions",
+      "href": "/solutions"
     }
   },
   {
-    "id": "brand-identity-and-brand-systems",
-    "title": "Brand Identity & Brand Systems",
+    "id": "creative-services",
+    "title": "Creative Services",
     "items": [
+      {
+        "id": "can-i-hire-blossom-rocket-for-creative-services-only",
+        "question": "Can I hire Blossom Rocket for creative services without a merchandise program?",
+        "answer": "Yes. Brand Identity, Brand Systems, Digital Design, Marketing Assets, and Print & Environmental Design are all available independently. A Company Store or Co-Branding program is not a prerequisite for design work."
+      },
       {
         "id": "what-is-a-brand-system",
         "question": "What is a Brand System?",
         "answer": "A Brand System is a centralized framework that includes Brand Standards, Asset Libraries, Templates, Usage Guidelines, and Design Systems. It creates a single source of truth that helps teams create consistent brand experiences across digital and physical touchpoints."
       },
       {
-        "id": "why-are-brand-systems-important",
-        "question": "Why are Brand Systems important?",
-        "answer": "As businesses grow, different teams, departments, vendors, and partners create brand assets independently. Brand Systems help maintain consistency, simplify asset management, improve collaboration, and support long-term growth."
-      },
-      {
         "id": "brand-identity-vs-brand-systems",
         "question": "What is the difference between Brand Identity and Brand Systems?",
         "answer": "Brand Identity defines the visual elements of a brand, including logos, typography, colors, graphic elements, and iconography. Brand Systems define how those assets are documented, managed, and applied consistently across an organization."
-      }
-    ],
-    "cta": {
-      "label": "Explore Blossom Rocket Brand System Services",
-      "href": "/services/brand-systems"
-    }
-  },
-  {
-    "id": "digital-design-and-marketing",
-    "title": "Digital Design & Marketing",
-    "items": [
+      },
+      {
+        "id": "how-do-creative-services-support-merchandise-programs",
+        "question": "How do creative services support a merchandise program?",
+        "answer": "Brand-controlled merchandise depends on knowing which logos, colors, and applications are approved. Creative services establish that foundation — identity, standards, and production-ready assets — which is then configured into a Company Store or Co-Branding program and applied consistently across products."
+      },
       {
         "id": "what-digital-design-services-does-blossom-rocket-offer",
         "question": "What Digital Design services does Blossom Rocket offer?",
@@ -64,47 +173,18 @@
         "answer": "Marketing Assets are the creative materials businesses use to support marketing campaigns, social media, customer communications, events, sales initiatives, and promotional programs. Examples include social media graphics, presentation templates, email graphics, event materials, and digital advertising assets."
       },
       {
-        "id": "why-is-consistency-important-across-websites-and-marketing-materials",
-        "question": "Why is consistency important across websites and marketing materials?",
-        "answer": "Consistent digital experiences help businesses build recognition, strengthen trust, improve customer experiences, and create stronger connections between websites, campaigns, social media, and marketing initiatives."
-      }
-    ],
-    "cta": {
-      "label": "Explore Digital Design Services",
-      "href": "/services/digital-design"
-    },
-    "secondaryCta": {
-      "label": "Explore Marketing Assets",
-      "href": "/services/marketing-assets"
-    }
-  },
-  {
-    "id": "print-merchandise-and-promotional-products",
-    "title": "Print, Merchandise & Promotional Products",
-    "items": [
-      {
         "id": "what-is-print-and-environmental-design",
         "question": "What is Print & Environmental Design?",
         "answer": "Print & Environmental Design applies branding to physical materials and environments, including business cards, brochures, catalogs, signage, packaging, environmental graphics, and vehicle graphics."
-      },
-      {
-        "id": "why-do-businesses-invest-in-merchandise-and-promotional-products",
-        "question": "Why do businesses invest in Merchandise & Promotional Products?",
-        "answer": "Branded merchandise helps businesses increase visibility, support employee engagement, strengthen customer relationships, promote events, and create memorable brand experiences beyond traditional marketing channels."
-      },
-      {
-        "id": "what-makes-blossom-rocket-different-from-a-traditional-branding-agency",
-        "question": "What makes Blossom Rocket different from a traditional branding agency?",
-        "answer": "Many agencies stop at logos and brand guidelines. Blossom Rocket helps businesses connect branding to real-world execution through print materials, packaging, signage, merchandise programs, promotional products, apparel standards, and company store solutions."
       }
     ],
     "cta": {
-      "label": "Explore Print & Environmental Design Services with Blossom Rocket",
-      "href": "/services/print-and-environmental-design"
+      "label": "Explore Creative Services",
+      "href": "/services"
     },
     "secondaryCta": {
-      "label": "Explore Merchandise & Promotional Products with Blossom Rocket",
-      "href": "/solutions/merchandise-and-promotional-products"
+      "label": "Explore Brand Systems",
+      "href": "/services/brand-systems"
     }
   }
 ]

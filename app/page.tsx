@@ -3,9 +3,7 @@ import type { Metadata } from "next";
 import Hero from "@/components/Hero";
 import Marquee from "@/components/section/Marquee";
 
-import DiffBand from "@/components/DiffBand";
 import CompanyStoresSection from "@/components/CompanyStoresSection";
-import FrameworkSection from "@/components/FrameworkSection";
 import marqueeItems from "@/data/marquees/homepage.json";
 import FAQSection from "@/components/faqs/FAQSection";
 import homePageFAQs from "@/data/faqs/home.json";
@@ -16,37 +14,73 @@ import SelectedWork from "@/components/SelectedWork/SelectedWork";
 import selectedWork from "@/data/selectedWork.json";
 import FeatureGrid from "@/components/FeatureGrid/FeatureGrid";
 import { featureServices } from "@/data/featureServices";
-import { featureSolutions } from "@/data/featureSolutions";
+import {
+  featureMerchandiseSolutions,
+  featurePrimarySolutions,
+} from "@/data/featureSolutions";
 import FeaturedArticles from "@/components/FeaturedArticles/FeaturedArticles";
 
-export const metadata: Metadata = {
-  title: "Blossom Rocket | Brand Systems, Branded Merchandise & Company Stores",
-  description:
-    "Blossom Rocket builds and deploys scalable brand systems across digital design, marketing, print, branded merchandise, on-demand kits, and SplashBrands-powered company stores.",
-};
+const PAGE_URL = "https://blossomrocket.studio";
 
-// TODO: sage store link
-// label:
-//             "Explore Hundreds of Product Options for Growing Your Brand",
-//           href: "https://www.shopblossomrocket.com/",
-//           variant: "outline",
+export const metadata: Metadata = {
+  title:
+    "Blossom Rocket | Company Stores, Co-Branding & Branded Merchandise Programs",
+  description:
+    "Blossom Rocket helps organizations centralize and scale branded merchandise through on-demand Company Stores and Co-Branding programs powered by SplashBrands — no order minimums, no inventory, supported by in-house creative services.",
+  keywords: [
+    "Company Stores",
+    "Branded Merchandise Company Stores",
+    "Corporate Merchandise Stores",
+    "Employee Merchandise Stores",
+    "On-Demand Company Stores",
+    "Co-Branding",
+    "Co-Branded Merchandise",
+    "Branded Merchandise Programs",
+    "Promotional Products",
+    "Corporate Merchandise Management",
+    "Centralized Merchandise Ordering",
+  ],
+  alternates: { canonical: PAGE_URL },
+  openGraph: {
+    title:
+      "Blossom Rocket | Company Stores, Co-Branding & Branded Merchandise Programs",
+    description:
+      "Centralized, automated branded merchandise for teams, departments, and locations — Company Stores and Co-Branding programs powered by SplashBrands, supported by in-house creative services.",
+    url: PAGE_URL,
+    siteName: "Blossom Rocket",
+    type: "website",
+  },
+};
 
 export default function Home() {
   return (
     <>
       <Hero
-        body="Blossom Rocket builds brands and the systems that keep them consistent across digital and physical experiences. Engagements can begin with the service a business needs now - such as branding, a website, a design system, visual identity, or marketing support - and can expand into print, apparel, signage, onboarding kits, promotional products, trade show materials, and company stores when those needs arise."
+        pillItems={[
+          "Company Stores",
+          "Co-Branding",
+          "Swag Storefronts",
+          "No Minimums",
+          "No Inventory",
+        ]}
+        heading={
+          <>
+            Branded Merchandise,{" "}
+            <em className="grad-text not-italic">Centralized and On Demand.</em>
+          </>
+        }
+        body="Blossom Rocket builds Company Stores, Co-Branding programs, and Swag Storefronts that give marketing, brand, communications, procurement, and operations teams a place to order approved branded merchandise. Thousands of pre-approved products, no order minimums, no inventory to buy or hold, and typical shipping in 2 to 5 days — powered through SplashBrands, with in-house creative services on hand when the brand itself needs building."
         ctaSlot={
           <CTASlots
             ctas={[
               {
-                label: "Explore Blossom Rocket Services  🚀",
+                label: "Explore Company Stores  🚀",
                 variant: "primary",
-                href: "/services",
+                href: "/solutions/company-stores",
               },
               {
-                label: "See Our Work",
-                href: "/work",
+                label: "Explore Co-Branding",
+                href: "/solutions/co-branding",
                 variant: "outline",
               },
             ]}
@@ -54,81 +88,27 @@ export default function Home() {
         }
       />
       <Marquee items={marqueeItems} />
-      <SectionLayout
-        id="home--what-we-do"
-        theme="light"
-        mobileOrder="left-first"
-        eyebrow="What We Do"
+
+      {/* ── Section 2: Primary Solutions ── */}
+      <FeatureGrid
+        theme="brand"
+        columns={3}
+        eyebrow="Primary Solutions"
         heading={
           <>
-            Brand Expansion That{" "}
-            <em className="grad-text not-italic">Scales.</em>
+            Three Ways to Put Branded Merchandise{" "}
+            <em className="grad-text not-italic">On Autopilot.</em>
           </>
         }
-        subtext="Blossom Rocket is a branding, digital design, physical brand deployment, branded merchandise, and company store partner. Unlike a traditional branding agency or promotional-products distributor, Blossom Rocket connects the creative brand system to the standards, assets, merchandise, and operational tools used to execute it in the real world."
-        ctas={[
-          {
-            label: "Explore Blossom Rocket Design Services",
-            href: "/services",
-            variant: "primary",
-          },
-          {
-            label:
-              "Explore Blossom Rocket Company Store and Branded Merchandise Solutions",
-            href: "/services",
-            variant: "outline",
-          },
-        ]}
-        schemaItems={[
-          { topic: "Brand Identity" },
-          { topic: "Brand Systems" },
-          { topic: "Digital Design" },
-          { topic: "Marketing Assets" },
-          { topic: "Print & Environmental" },
-          { topic: "Merchandise & Store Solutions" },
-        ]}
-        pageUrl="https://blossomrocket.studio"
-      >
-        <div>
-          <HomeHeroVideo />
-        </div>
-      </SectionLayout>
-      {/* <div className="bg-white px-[clamp(32px,7vw,100px)] pb-[clamp(80px,11vw,160px)]">
-        <CardList
-          items={[
-            {
-              topic: "Brand Identity",
-              description:
-                "Logos, typography, color, graphic elements, and visual foundations.",
-            },
-            {
-              topic: "Brand Systems",
-              description:
-                "Guidelines, standards, templates, asset libraries, and scalable rules for applying the brand.",
-            },
-            {
-              topic: "Digital Design",
-              description:
-                "Websites, UI/UX, component libraries, front-end implementation, and branded digital experiences.",
-            },
-            {
-              topic: "Marketing Assets",
-              description:
-                "Social media templates, presentation templates, recruiting materials, onboarding graphics, banner templates, brochure templates, email signatures, and digital campaign assets — plus campaign, event, and sales-support creative.",
-            },
-            {
-              topic: "Print & Environmental",
-              description:
-                "Print collateral, packaging, signage, displays, environmental graphics, and physical brand applications.",
-            },
-            {
-              topic: "Merchandise & Store Solutions",
-              description:
-                "Branded apparel, promotional products, kits, Swag Storefronts, and Company Stores powered through SplashBrands.",
-            },
-          ]}
-        />
-      </div> */}
+        subtext="Company Stores centralize merchandise ordering across an entire organization. Co-Branding keeps merchandise consistent when it has to carry more than one approved mark. Swag Storefronts give a single brand the same self-serve access without a full Company Store. All three run on demand through SplashBrands."
+        items={featurePrimarySolutions}
+        id="home--primary-solutions"
+      />
+
+      {/* ── Section 2b: What a Company Store actually is ── */}
+      <CompanyStoresSection />
+
+      {/* ── Section 3: The Blossom Rocket Difference ── */}
       <SectionLayout
         id="home--the-blossom-rocket-difference"
         theme="brandSoft"
@@ -139,8 +119,8 @@ export default function Home() {
             theme="neutral"
             ctas={[
               {
-                label: "Explore Our Services",
-                href: "/services",
+                label: "Explore Company Stores",
+                href: "/solutions/company-stores",
                 variant: "primary",
               },
               {
@@ -152,52 +132,135 @@ export default function Home() {
         }
         heading={
           <>
-            Brand Strategy Meets{" "}
-            <em className="grad-text not-italic">Real World Execution.</em>
+            Not a Promo Distributor.{" "}
+            <em className="grad-text not-italic">Not a Design Agency.</em>
           </>
         }
-        subtext="Blossom Rocket connects brand strategy and design with the physical and operational ways a brand is deployed. Most branding agencies focus on identity and design. Most promotional product distributors focus on merchandise and production. Blossom Rocket connects both."
-        // TODO: JSON SCHEMA STUFF FOR THIS
-        // schemaItems={[
-        // ]}
-        pageUrl="https://blossomrocket.studio"
+        subtext="Traditional promotional product distributors sell merchandise order by order, with minimums, setup charges, and inventory you buy up front. Creative agencies stop at logos and guidelines. Blossom Rocket operates the ordering environment itself — approved products, approved artwork, and automated fulfillment — and brings the creative capability to define what 'approved' means in the first place."
+        schemaItems={[
+          { topic: "Centralized Merchandise Ordering" },
+          { topic: "Brand-Controlled Logos, Colors & Decoration Methods" },
+          { topic: "On-Demand Production" },
+          { topic: "No Order Minimums" },
+          { topic: "No Inventory Investment" },
+          { topic: "Fulfillment in 2 to 5 Days" },
+          { topic: "Reduced Administrative Work" },
+        ]}
+        pageUrl={PAGE_URL}
       >
         <CardList
-          heading="Brand & Digital"
+          heading="Operational Control"
           items={[
-            { topic: "Brand Identity" },
-            { topic: "Websites" },
-            { topic: "Design Systems" },
-            { topic: "Marketing Assets" },
+            { topic: "Centralized Ordering" },
+            { topic: "Teams, Departments & Locations" },
+            { topic: "Reduced Vendor Coordination" },
+            { topic: "Less Manual Ordering & Admin Work" },
           ]}
         />{" "}
         <CardList
-          heading="Physical Brand Deployment"
+          heading="Production & Fulfillment"
           items={[
-            { topic: "Apparel" },
-            { topic: "Print & Signage" },
-            { topic: "Promotional Products" },
-            { topic: "Packaging" },
-            { topic: "Onboarding & Event Materials" },
+            { topic: "On-Demand Production" },
+            { topic: "No Order Minimums" },
+            { topic: "No Inventory Investment" },
+            { topic: "One Item or Thousands" },
+            { topic: "Typically Ships in 2 to 5 Days" },
           ]}
         />{" "}
         <CardList
-          heading="Operational Deployment"
+          heading="Brand Control"
           items={[
-            { topic: "Merchandise Standards" },
-            { topic: "Company Stores" },
-            { topic: "On-Demand Ordering & Fulfillment" },
+            { topic: "Pre-Approved Product Catalog" },
+            { topic: "Approved Logos & Logo Variations" },
+            { topic: "Approved Colors & Decoration Methods" },
           ]}
+        />
+        <CardCallout
+          heading="Powered Through SplashBrands"
+          body="Blossom Rocket is the customer-facing partner for these programs — scoping the program, configuring the brand, and supporting the people who order from it. SplashBrands provides the underlying company store platform, in-house decoration, and fulfillment operations that make on-demand production and 2-to-5-day shipping possible."
         />
         <CardCallout
           heading="Physical Merchandise Standards"
           body="Blossom Rocket extends brand standards beyond digital assets to define how a brand should appear on physical products and materials. Standards can include approved apparel, logo placement, embroidery, print methods, signage, packaging, promotional products, and trade show displays."
         />
-        <CardCallout
-          heading="One Brand System. More Places It Can Work."
-          body="Clients can engage Blossom Rocket for an individual project or connect multiple services as their needs grow. For organizations that need a more centralized brand ecosystem, the same standards can extend across logos, templates, digital assets, print, merchandise, signage, onboarding materials, and Company Stores."
-        />
       </SectionLayout>
+
+      {/* ── Section 4: Merchandise Solutions ── */}
+      <FeatureGrid
+        theme="neutral"
+        columns={2}
+        eyebrow="Merchandise Solutions"
+        heading={
+          <>
+            More Ways to Get Branded Product Into{" "}
+            <em className="grad-text not-italic">People&apos;s Hands.</em>
+          </>
+        }
+        subtext="Standalone merchandise and personalized kits cover one-off campaigns, events, onboarding, and gifting — produced on demand through the same supply chain as a storefront, without needing one."
+        items={featureMerchandiseSolutions}
+        id="home--merchandise-solutions"
+      />
+
+      {/* ── Section 5: Creative Services ── */}
+      <FeatureGrid
+        theme="light"
+        eyebrow="Creative Services"
+        heading={
+          <>
+            The In-House Creative That Makes{" "}
+            <em className="grad-text not-italic">&ldquo;On Brand&rdquo;</em>{" "}
+            Mean Something.
+          </>
+        }
+        subtext="Brand-controlled merchandise only works when the brand is defined. Blossom Rocket's creative team establishes identity, standards, and assets — available as part of a merchandise program or entirely on their own."
+        items={featureServices}
+        id="home--feature-services"
+      />
+
+      {/* ── Section 5b: Establish it, then deploy it ── */}
+      <SectionLayout
+        id="home--what-we-do"
+        theme="brand"
+        mobileOrder="left-first"
+        eyebrow="What We Do"
+        heading={
+          <>
+            Establish the Brand. Then{" "}
+            <em className="grad-text not-italic">Deploy It Everywhere.</em>
+          </>
+        }
+        subtext="Most organizations hire one firm to design the brand and a different vendor to produce the merchandise — which is exactly where consistency gets lost. Blossom Rocket does both: defining visual identity, standards, and assets, then carrying that identity into physical products, digital experiences, and the company stores people order from. Either half can be engaged on its own."
+        ctas={[
+          {
+            label: "Explore Merchandise Solutions",
+            href: "/solutions",
+            variant: "primary",
+          },
+          {
+            label: "Explore Creative Services",
+            href: "/services",
+            variant: "outline",
+          },
+        ]}
+        schemaItems={[
+          { topic: "Company Stores" },
+          { topic: "Co-Branding" },
+          { topic: "Merchandise & Promotional Products" },
+          { topic: "On-Demand Kits" },
+          { topic: "Brand Identity" },
+          { topic: "Brand Systems" },
+          { topic: "Digital Design" },
+          { topic: "Marketing Assets" },
+          { topic: "Print & Environmental Design" },
+        ]}
+        pageUrl={PAGE_URL}
+      >
+        <div>
+          <HomeHeroVideo />
+        </div>
+      </SectionLayout>
+
+      {/* ── Section 6: Selected Work ── */}
       <SectionLayout
         id="home--selected-work"
         theme="light"
@@ -224,53 +287,16 @@ export default function Home() {
           </>
         }
         subtext="Explore selected Blossom Rocket projects that connect brand identity, digital design, marketing assets, print, merchandise, and physical brand experiences."
-        pageUrl="https://blossomrocket.studio"
+        pageUrl={PAGE_URL}
       >
         <SelectedWork items={selectedWork} />
       </SectionLayout>
-      {/* <FrameworkSection /> */}
-      {/* TODO */}
-      {/* <WhatIsSection />
-      <WhySection /> */}
-      <FeatureGrid
-        theme="brand"
-        eyebrow="Brand & Design Services"
-        heading={
-          <>
-            Every Creative Service You Need to{" "}
-            <em className="grad-text not-italic">Build, Launch & Scale</em> Your
-            Brand.
-          </>
-        }
-        subtext="Blossom Rocket provides brand and design services that establish how your brand looks, communicates, and scales across digital and physical touchpoints."
-        items={featureServices}
-        id="home--feature-services"
-      />
-      {/* <DiffBand /> */}
 
-      <FeatureGrid
-        theme="neutral"
-        eyebrow="Merchandise & Operational Solutions"
-        heading={
-          <>
-            <em className="grad-text not-italic">Expand Your Brand</em>{" "}
-            Awareness through Blossom Rocket Solutions.
-          </>
-        }
-        subtext="Blossom Rocket provides branded merchandise and operational solutions that turn approved brand standards into products, programs, and ordering environments businesses can use at scale."
-        items={featureSolutions}
-        id="home--feature-solutions"
-      />
+      {/* ── Section 7: FAQs ── */}
+      <FAQSection groups={homePageFAQs} theme="dark" pageUrl={PAGE_URL} />
 
-      <CompanyStoresSection />
-
+      {/* ── Section 8: Insights & Resources ── */}
       <FeaturedArticles />
-
-      <FAQSection
-        groups={homePageFAQs}
-        theme="dark"
-        pageUrl="https://blossomrocket.studio"
-      />
     </>
   );
 }

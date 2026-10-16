@@ -77,7 +77,8 @@ export default function Nav() {
   const [dropdownOpen, setDropdownOpen] =
     useState<DropdownMenus>(initialDropdownState);
   const [mobileOpen, setMobileOpen] = useState<boolean>(false);
-  const [mobileServicesOpen, setMobileServicesOpen] = useState<boolean>(false);
+  const [mobileSubmenusOpen, setMobileSubmenusOpen] =
+    useState<DropdownMenus>(initialDropdownState);
   const [mounted, setMounted] = useState(false);
 
   const { open } = useContactModal();
@@ -103,7 +104,7 @@ export default function Nav() {
   if (pathname !== prevPathname) {
     setPrevPathname(pathname);
     setMobileOpen(false);
-    setMobileServicesOpen(false);
+    setMobileSubmenusOpen(initialDropdownState);
   }
 
   useEffect(() => {
@@ -164,6 +165,8 @@ export default function Nav() {
               );
             }
 
+            const isSubmenuOpen = mobileSubmenusOpen[label.toLowerCase()];
+
             return (
               <li key={href} className="border-b border-[rgba(24,24,27,0.08)]">
                 <div className="flex items-center justify-between py-4">
@@ -178,8 +181,13 @@ export default function Nav() {
                   </Link>
                   <button
                     type="button"
-                    onClick={() => setMobileServicesOpen((prev) => !prev)}
-                    aria-expanded={mobileServicesOpen}
+                    onClick={() =>
+                      setMobileSubmenusOpen((prev) => ({
+                        ...prev,
+                        [label.toLowerCase()]: !prev[label.toLowerCase()],
+                      }))
+                    }
+                    aria-expanded={isSubmenuOpen}
                     aria-label={`Toggle ${label} submenu`}
                     className="flex h-8 w-8 items-center justify-center text-neutral-600"
                   >
@@ -191,7 +199,7 @@ export default function Nav() {
                       aria-hidden="true"
                       className="transition-transform duration-200"
                       style={{
-                        transform: mobileServicesOpen
+                        transform: isSubmenuOpen
                           ? "rotate(180deg)"
                           : "rotate(0deg)",
                       }}
@@ -209,7 +217,7 @@ export default function Nav() {
                 <div
                   className="grid overflow-hidden transition-all duration-300"
                   style={{
-                    gridTemplateRows: mobileServicesOpen ? "1fr" : "0fr",
+                    gridTemplateRows: isSubmenuOpen ? "1fr" : "0fr",
                   }}
                 >
                   <div className="min-h-0">
@@ -242,24 +250,35 @@ export default function Nav() {
                       </ul>
                     ) : (
                       <ul className="flex flex-col list-none pb-3">
-                        {dropdownLinks[label]?.map(
-                          ({ href: svcHref, label: svcLabel }) => {
-                            const isChildActive =
-                              pathname === svcHref ||
-                              pathname.startsWith(`${svcHref}/`);
-                            return (
-                              <li key={svcHref}>
-                                <Link
-                                  href={svcHref}
-                                  onClick={() => setMobileOpen(false)}
-                                  className={`block py-2.5 text-[16px] ${isChildActive ? "font-semibold text-violet" : "font-medium text-[rgba(24,24,27,0.65)]"}`}
-                                >
-                                  {svcLabel}
-                                </Link>
-                              </li>
-                            );
-                          },
-                        )}
+                        {dropdownLinks[label]?.map((group, groupIndex) => (
+                          <li key={group.title ?? groupIndex}>
+                            {group.title && (
+                              <p className="mb-1 mt-2 text-[11px] font-semibold tracking-[0.14em] uppercase text-[rgba(24,24,27,0.42)]">
+                                {group.title}
+                              </p>
+                            )}
+                            <ul className="flex flex-col list-none">
+                              {group.items.map(
+                                ({ href: svcHref, label: svcLabel }) => {
+                                  const isChildActive =
+                                    pathname === svcHref ||
+                                    pathname.startsWith(`${svcHref}/`);
+                                  return (
+                                    <li key={svcHref}>
+                                      <Link
+                                        href={svcHref}
+                                        onClick={() => setMobileOpen(false)}
+                                        className={`block py-2.5 text-[16px] ${isChildActive ? "font-semibold text-violet" : "font-medium text-[rgba(24,24,27,0.65)]"}`}
+                                      >
+                                        {svcLabel}
+                                      </Link>
+                                    </li>
+                                  );
+                                },
+                              )}
+                            </ul>
+                          </li>
+                        ))}
                       </ul>
                     )}
                   </div>
@@ -409,24 +428,37 @@ export default function Nav() {
                             "0 4px 24px rgba(24,24,27,0.08), 0 1px 4px rgba(24,24,27,0.04)",
                         }}
                       >
-                        {dropdownLinks[label]?.map(
-                          ({ href: svcHref, label: svcLabel }) => {
-                            const isChildActive =
-                              pathname === svcHref ||
-                              pathname.startsWith(`${svcHref}/`);
-                            return (
-                              <li key={svcHref}>
-                                <Link
-                                  href={svcHref}
-                                  className={`flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl body-sm hover:text-ink hover:bg-off transition-colors duration-150 ${isChildActive ? "font-semibold text-violet" : "font-medium text-[rgba(24,24,27,0.65)]"}`}
-                                  onClick={closeMenu}
-                                >
-                                  {svcLabel}
-                                </Link>
-                              </li>
-                            );
-                          },
-                        )}
+                        {dropdownLinks[label]?.map((group, groupIndex) => (
+                          <li key={group.title ?? groupIndex}>
+                            {group.title && (
+                              <p
+                                className={`px-3.5 pb-1 text-[10px] font-semibold tracking-[0.14em] uppercase text-[rgba(24,24,27,0.42)] ${groupIndex === 0 ? "pt-2.5" : "pt-3.5"}`}
+                              >
+                                {group.title}
+                              </p>
+                            )}
+                            <ul className="list-none">
+                              {group.items.map(
+                                ({ href: svcHref, label: svcLabel }) => {
+                                  const isChildActive =
+                                    pathname === svcHref ||
+                                    pathname.startsWith(`${svcHref}/`);
+                                  return (
+                                    <li key={svcHref}>
+                                      <Link
+                                        href={svcHref}
+                                        className={`flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl body-sm hover:text-ink hover:bg-off transition-colors duration-150 ${isChildActive ? "font-semibold text-violet" : "font-medium text-[rgba(24,24,27,0.65)]"}`}
+                                        onClick={closeMenu}
+                                      >
+                                        {svcLabel}
+                                      </Link>
+                                    </li>
+                                  );
+                                },
+                              )}
+                            </ul>
+                          </li>
+                        ))}
                       </ul>
                     </div>
                   )}

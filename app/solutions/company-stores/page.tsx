@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Hero from "@/components/Hero";
 
 import CardGrid from "@/components/section/CardGrid";
@@ -31,24 +30,31 @@ const faqs = rawFaqs as FAQGroup[];
 // ─── Page metadata ────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title: "Company Stores — Blossom Rocket",
+  title:
+    "Company Stores — On-Demand Branded Merchandise Stores | Blossom Rocket",
   description:
-    "Blossom Rocket helps businesses implement Company Store solutions through SplashBrands that simplify ordering, improve brand consistency, and support scalable merchandise programs.",
+    "Blossom Rocket Company Stores centralize branded merchandise ordering across teams, departments, and locations. Thousands of pre-approved products, no order minimums, no inventory, typically shipping in 2–5 days — powered by SplashBrands.",
   keywords: [
     "Company Stores",
-    "SplashBrands",
-    "Branded Merchandise",
-    "Employee Programs",
-    "Corporate Gifting",
+    "Branded Merchandise Company Stores",
+    "Corporate Merchandise Stores",
+    "Employee Merchandise Stores",
+    "On-Demand Company Stores",
+    "Centralized Merchandise Ordering",
+    "Corporate Merchandise Management",
+    "Branded Merchandise Programs",
     "Promotional Products",
-    "Brand Consistency",
-    "Merchandise Management",
+    "SplashBrands",
   ],
+  alternates: {
+    canonical: "https://blossomrocket.studio/solutions/company-stores",
+  },
   openGraph: {
-    title: "Company Stores — Blossom Rocket",
+    title:
+      "Company Stores — On-Demand Branded Merchandise Stores | Blossom Rocket",
     description:
       "A Company Store transforms branded merchandise from individual purchasing decisions into a scalable brand management system.",
-    url: "https://blossomrocke.studio/solutions/company-stores",
+    url: "https://blossomrocket.studio/solutions/company-stores",
     siteName: "Blossom Rocket",
     type: "website",
   },
@@ -56,7 +62,7 @@ export const metadata: Metadata = {
 
 // ─── Schema ───────────────────────────────────────────────────────────────────
 
-const PAGE_URL = "https://blossomrocke.studio/solutions/company-stores";
+const PAGE_URL = "https://blossomrocket.studio/solutions/company-stores";
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -67,10 +73,15 @@ const serviceSchema = {
   provider: {
     "@type": "Organization",
     name: "Blossom Rocket",
-    url: "https://blossomrocke.studio",
+    url: "https://blossomrocket.studio",
   },
   description:
     "Blossom Rocket helps businesses implement Company Store solutions through SplashBrands that simplify ordering, improve brand consistency, and support scalable merchandise programs.",
+  alternateName: [
+    "Branded Merchandise Company Stores",
+    "Corporate Merchandise Stores",
+    "On-Demand Company Stores",
+  ],
   serviceType: "Company Store & Branded Merchandise Management",
   hasOfferCatalog: {
     "@type": "OfferCatalog",
@@ -119,13 +130,13 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://blossomrocke.studio",
+      item: "https://blossomrocket.studio",
     },
     {
       "@type": "ListItem",
       position: 2,
-      name: "Services",
-      item: "https://blossomrocke.studio/services",
+      name: "Solutions",
+      item: "https://blossomrocket.studio/solutions",
     },
     {
       "@type": "ListItem",
@@ -141,12 +152,12 @@ const breadcrumbSchema = {
 export default function CompanyStores() {
   return (
     <>
-      <Script
+      <script
         id="schema-service"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
-      <Script
+      <script
         id="schema-breadcrumb"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}

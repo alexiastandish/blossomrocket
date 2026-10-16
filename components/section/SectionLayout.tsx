@@ -2,7 +2,6 @@ import { CtaButton, OrbConfig, SectionTheme } from "@/lib/types/section";
 import { buildSchema } from "@/lib/utils/buildSchema";
 import { tokens } from "@/lib/utils/sectionTailwindTokens";
 import Image from "next/image";
-import Script from "next/script";
 import React from "react";
 import CTAs from "../CTAs";
 import SectionLabel from "../SectionLabel";
@@ -89,7 +88,8 @@ export default function SectionLayout({
   const schemaHeading = typeof heading === "string" ? heading : schemaId;
   const schema =
     schemaItems && schemaItems.length > 0
-      ? buildSchema(schemaItems, schemaHeading, pageUrl)
+      ? buildSchema(schemaItems, schemaHeading, undefined, pageUrl)
+          .itemListSchema
       : null;
 
   const isStacked = layout === "stacked";
@@ -155,7 +155,7 @@ export default function SectionLayout({
   return (
     <>
       {schema && (
-        <Script
+        <script
           id={`schema-itemlist-${schemaId}`}
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}

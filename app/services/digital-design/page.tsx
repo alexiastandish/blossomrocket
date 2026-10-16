@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Hero from "@/components/Hero";
 import faqs from "@/data/faqs/services/digital-design.json";
 
@@ -20,6 +21,32 @@ import BuiltForAccessibility from "@/components/svgs/BuiltForAccessibility";
 import { CTASlots } from "@/components/CTASlot";
 
 const PAGE_URL = "https://blossomrocket.studio/services/digital-design";
+
+const META_DESCRIPTION =
+  "Digital Design from Blossom Rocket — websites, UI/UX, reusable component libraries, and front-end development that carry an established brand system into digital experiences.";
+
+export const metadata: Metadata = {
+  title:
+    "Digital Design — Websites, UI/UX & Component Libraries | Blossom Rocket",
+  description: META_DESCRIPTION,
+  keywords: [
+    "Digital Design",
+    "Website Design",
+    "UI/UX Design",
+    "Component Libraries",
+    "Front-End Development",
+    "Branded Digital Experiences",
+  ],
+  alternates: { canonical: PAGE_URL },
+  openGraph: {
+    title:
+      "Digital Design — Websites, UI/UX & Component Libraries | Blossom Rocket",
+    description: META_DESCRIPTION,
+    url: PAGE_URL,
+    siteName: "Blossom Rocket",
+    type: "website",
+  },
+};
 
 export default function page() {
   return (
@@ -63,13 +90,16 @@ export default function page() {
           </>
         }
         subtext="As businesses grow, websites, landing pages, and digital experiences often become inconsistent and difficult to maintain. Blossom Rocket helps organizations create cohesive digital experiences through website design, user interface design, and scalable design systems that support long-term growth, usability, and brand consistency."
-        ctas={[
-          {
-            label: "Get in Touch to Improve Your Digital Experience",
-            href: "/contact-us",
-            variant: "primary",
-          },
-        ]}
+        ctaSlot={
+          <CTASlots
+            ctas={[
+              {
+                label: "Get in Touch to Improve Your Digital Experience",
+                variant: "primary",
+              },
+            ]}
+          />
+        }
         cols={[3, 5]}
         stickyRight={false}
       >

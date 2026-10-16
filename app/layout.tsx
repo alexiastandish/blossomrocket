@@ -8,106 +8,134 @@ import Footer from "@/components/Footer";
 import { ContactModalProvider } from "@/contexts/contact-modal-context";
 import { ContactModalRoot } from "@/components/contact-modal-root";
 
+const SITE_URL = "https://blossomrocket.studio";
+
+const SITE_DESCRIPTION =
+  "Blossom Rocket helps organizations centralize, automate, and scale branded merchandise through on-demand Company Stores and Co-Branding programs powered by SplashBrands, supported by in-house creative services.";
+
+const KNOWS_ABOUT = [
+  "Company Stores",
+  "Branded Merchandise Company Stores",
+  "Corporate Merchandise Stores",
+  "Employee Merchandise Stores",
+  "On-Demand Company Stores",
+  "Co-Branding",
+  "Co-Branded Merchandise",
+  "Swag Storefronts",
+  "Branded Merchandise Programs",
+  "Promotional Products",
+  "Corporate Merchandise Management",
+  "Centralized Merchandise Ordering",
+  "Brand Identity",
+  "Brand Systems",
+  "Website Design",
+  "Marketing Asset Libraries",
+];
+
 export const metadata: Metadata = {
-  title: "Blossom Rocket — Creative Branding, Design & Company Store Solutions",
-  description:
-    "Blossom Rocket helps growing businesses create scalable brand systems that connect digital experiences, marketing assets, promotional products, apparel, signage, onboarding kits, tradeshow materials, and company stores.",
-  keywords: [
-    "Brand Identity",
-    "Website Design",
-    "Design Systems",
-    "Marketing Asset Libraries",
-    "Promotional Products",
-    "Company Stores",
-    "Brand Consistency",
-    "Merchandise Standards",
-  ],
+  metadataBase: new URL(SITE_URL),
+  title:
+    "Blossom Rocket — Company Stores, Co-Branding & Branded Merchandise Solutions",
+  description: SITE_DESCRIPTION,
+  keywords: KNOWS_ABOUT,
   openGraph: {
-    title: "Blossom Rocket — Brand Systems That Scale",
-    description:
-      "Build a brand that works everywhere. Brand Identity, Websites, Marketing Assets, Merchandise & Company Stores — Connected Through One Brand System.",
-    url: "https://blossomrocket.co",
+    title:
+      "Blossom Rocket — Company Stores, Co-Branding & Branded Merchandise Solutions",
+    description: SITE_DESCRIPTION,
+    url: SITE_URL,
     siteName: "Blossom Rocket",
     type: "website",
   },
-  other: {
-    "application/ld+json": JSON.stringify([
-      {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "@id": "https://blossomrocket.studio/#organization",
-        name: "Blossom Rocket",
-        url: "https://blossomrocket.co",
-        description:
-          "Blossom Rocket helps growing businesses create scalable brand systems that connect digital experiences, marketing assets, promotional products, apparel, signage, onboarding kits, tradeshow materials, and company stores.",
-        knowsAbout: [
-          "Brand Identity",
-          "Website Design",
-          "Design Systems",
-          "Marketing Asset Libraries",
-          "Promotional Products",
-          "Company Stores",
-          "Brand Consistency",
-          "Merchandise Standards",
-        ],
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        mainEntity: [
-          {
-            "@type": "Question",
-            name: "What is a Brand System?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "A Brand System is a centralized framework that defines how a company presents itself across websites, marketing materials, social media, merchandise, print, signage, and internal communications.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "What is the difference between a Brand Style Guide and a Design System?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "A Brand Style Guide defines visual identity standards. A Design System extends those standards into reusable components, layouts, and digital experiences.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "What is a Company Store?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "A Company Store is a centralized storefront that provides employees, customers, and teams access to approved branded products while maintaining brand consistency.",
-            },
-          },
-        ],
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "@id": "https://blossomrocket.studio/#splashbrands-president",
-        name: "Elissa Turner",
-        jobTitle: "President",
-        worksFor: {
-          "@type": "Organization",
-          name: "SplashBrands",
-          url: "https://splashbrands.com",
-        },
-        sameAs: ["https://www.linkedin.com/in/elissaberchelmann/"],
-        knowsAbout: [
-          "Online Company Store Programs",
-          "Web-to-Print Fulfillment",
-          "Brand-Controlled Merchandise Distribution",
-          "Inventory-Free Promotional Products",
-          "Marketing Budget & Order Approval Software",
-          "On-Demand Apparel & Print Production",
-          "Marketing Department Cost Reduction",
-        ],
-        description:
-          "Elissa Turner is the President of SplashBrands, where they help marketing and sales teams centralize branded merchandise ordering through on-demand company store programs — reducing overspending, eliminating inventory risk, and removing the administrative burden of sourcing, storing, and distributing company swag.",
-      },
-    ]),
-  },
 };
+
+/** Site-wide JSON-LD. Rendered once, in <head>, as a real application/ld+json
+ *  script — a `metadata.other` entry would emit a <meta> tag instead, which
+ *  crawlers do not parse as structured data. */
+const siteSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "@id": `${SITE_URL}/#organization`,
+    name: "Blossom Rocket",
+    url: SITE_URL,
+    description: SITE_DESCRIPTION,
+    knowsAbout: KNOWS_ABOUT,
+    makesOffer: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Company Stores",
+          url: `${SITE_URL}/solutions/company-stores`,
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Co-Branding",
+          url: `${SITE_URL}/solutions/co-branding`,
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Swag Storefronts",
+          url: `${SITE_URL}/solutions/swag-storefronts`,
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Merchandise & Promotional Products",
+          url: `${SITE_URL}/solutions/merchandise-and-promotional-products`,
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "On-Demand Kits",
+          url: `${SITE_URL}/solutions/on-demand-kits`,
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Creative Services",
+          url: `${SITE_URL}/services`,
+        },
+      },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": `${SITE_URL}/#splashbrands-president`,
+    name: "Elissa Turner",
+    jobTitle: "President",
+    worksFor: {
+      "@type": "Organization",
+      name: "SplashBrands",
+      url: "https://splashbrands.com",
+    },
+    sameAs: ["https://www.linkedin.com/in/elissaberchelmann/"],
+    knowsAbout: [
+      "Online Company Store Programs",
+      "Web-to-Print Fulfillment",
+      "Brand-Controlled Merchandise Distribution",
+      "Inventory-Free Promotional Products",
+      "Marketing Budget & Order Approval Software",
+      "On-Demand Apparel & Print Production",
+      "Marketing Department Cost Reduction",
+    ],
+    description:
+      "Elissa Turner is the President of SplashBrands, where they help marketing and sales teams centralize branded merchandise ordering through on-demand company store programs — reducing overspending, eliminating inventory risk, and removing the administrative burden of sourcing, storing, and distributing company swag.",
+  },
+];
 
 const parkinsans = Parkinsans({
   subsets: ["latin"],
@@ -130,27 +158,7 @@ export default function RootLayout({
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "ProfessionalService",
-              "@id": "https://blossomrocket.studio/#organization",
-              name: "Blossom Rocket",
-              url: "https://blossomrocket.co",
-              description:
-                "Blossom Rocket helps growing businesses create scalable brand systems that connect digital experiences, marketing assets, promotional products, apparel, signage, onboarding kits, tradeshow materials, and company stores.",
-              knowsAbout: [
-                "Brand Identity",
-                "Website Design",
-                "Design Systems",
-                "Marketing Asset Libraries",
-                "Promotional Products",
-                "Company Stores",
-                "Brand Consistency",
-                "Merchandise Standards",
-              ],
-            }),
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema) }}
         />
       </head>
       <body className="bg-[#fafaf8] text-[#18181b]  antialiased flex flex-col min-h-screen">

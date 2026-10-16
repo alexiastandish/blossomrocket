@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import FAQSection from "@/components/faqs/FAQSection";
 import Hero from "@/components/Hero";
 import {
@@ -36,6 +37,36 @@ import DiffBand from "@/components/DiffBand";
 import { CTASlots } from "@/components/CTASlot";
 import { CalendlyButton } from "@/components/CalendlyButton";
 
+const PAGE_URL = "https://blossomrocket.studio/services";
+
+const META_DESCRIPTION =
+  "Blossom Rocket creative services: Brand Identity, Brand Systems, Digital Design, Marketing Assets, and Print & Environmental Design. Available on their own, or as the foundation for a branded merchandise or Company Store program.";
+
+export const metadata: Metadata = {
+  title:
+    "Creative Services — Brand Identity, Brand Systems & Design | Blossom Rocket",
+  description: META_DESCRIPTION,
+  keywords: [
+    "Brand Identity",
+    "Brand Systems",
+    "Digital Design",
+    "Marketing Assets",
+    "Print & Environmental Design",
+    "Design Systems",
+    "Brand Guidelines",
+    "Brand Consistency",
+  ],
+  alternates: { canonical: PAGE_URL },
+  openGraph: {
+    title:
+      "Creative Services — Brand Identity, Brand Systems & Design | Blossom Rocket",
+    description: META_DESCRIPTION,
+    url: PAGE_URL,
+    siteName: "Blossom Rocket",
+    type: "website",
+  },
+};
+
 export default function Services() {
   return (
     <div>
@@ -48,7 +79,7 @@ export default function Services() {
             <em className="grad-text not-italic"> Scale.</em>
           </>
         }
-        body={`Blossom Rocket helps businesses create cohesive brand experiences across digital platforms, physical materials, merchandise, marketing assets, and company stores through SplashBrands.`}
+        body={`Blossom Rocket's in-house creative team establishes how a brand looks and how it should be applied — identity, standards, templates, and production-ready assets. Engage these services on their own, or as the foundation that makes a Company Store or Co-Branding program genuinely brand-controlled.`}
         ctaSlot={
           <CTASlots
             theme="dark"
@@ -58,8 +89,8 @@ export default function Services() {
                 variant: "primary",
               },
               {
-                label: "Explore Blossom Rocket's Work",
-                href: "/work",
+                label: "Explore Merchandise Solutions",
+                href: "/solutions",
                 variant: "outline",
               },
             ]}
@@ -91,7 +122,7 @@ export default function Services() {
             </em>
           </>
         }
-        subtext="Blossom Rocket helps businesses create, manage, and apply consistent brand experiences across identity, digital design, marketing, print, and physical applications. Businesses can use one service independently or combine multiple services as their brand needs expand."
+        subtext="Blossom Rocket helps businesses create, manage, and apply consistent brand experiences across identity, digital design, marketing, print, and physical applications. Any service can be engaged on its own — a Company Store or Co-Branding program is never a prerequisite — and the same standards can later be configured into a merchandise program so approved products follow them automatically."
         listHeading="Blossom Rocket services include:"
         items={[
           {

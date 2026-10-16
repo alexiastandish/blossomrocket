@@ -1,5 +1,20 @@
 import Image from "next/image";
 
+const solutions = [
+  { label: "Company Stores", href: "/solutions/company-stores" },
+  { label: "Co-Branding", href: "/solutions/co-branding" },
+  { label: "Swag Storefronts", href: "/solutions/swag-storefronts" },
+  {
+    label: "Merchandise & Promotional Products",
+    href: "/solutions/merchandise-and-promotional-products",
+  },
+  { label: "On-Demand Kits", href: "/solutions/on-demand-kits" },
+  {
+    label: "Print & Environmental",
+    href: "/solutions/print-and-environmental",
+  },
+];
+
 const services = [
   { label: "Brand Identity", href: "/services/brand-identity" },
   { label: "Brand Systems", href: "/services/brand-systems" },
@@ -10,19 +25,6 @@ const services = [
     href: "/services/print-and-environmental-design",
   },
   // "Search Everything Optimization Consulting",
-];
-
-const solutions = [
-  { label: "Company Stores", href: "/solutions/company-stores" },
-  { label: "Swag Storefronts", href: "/solutions/swag-storefronts" },
-  {
-    label: "Merchandise & Promotional Products",
-    href: "/solutions/merchandise-and-promotional-products",
-  },
-  {
-    label: "Print & Environmental",
-    href: "/solutions/print-and-environmental",
-  },
 ];
 
 const insights = [
@@ -83,19 +85,19 @@ export default function Footer() {
             />
           </div>
           <p className="text-[13px] text-[rgba(24,24,27,0.58)] leading-[1.7] max-w-[260px]">
-            Blossom Rocket helps growing businesses create scalable brand
-            systems that connect digital experiences, marketing assets,
-            merchandise, company stores, and more.
+            Blossom Rocket helps organizations centralize and scale branded
+            merchandise through Company Stores, Co-Branding, and on-demand
+            merchandise programs — supported by in-house creative services.
           </p>
         </div>
 
-        {/* Services */}
-        <nav aria-label="Services">
+        {/* Solutions */}
+        <nav aria-label="Solutions">
           <h4 className="text-[11px] font-semibold tracking-[0.14em] uppercase text-[rgba(24,24,27,0.58)] mb-3.5">
-            Services
+            Solutions
           </h4>
           <ul className="list-none space-y-2">
-            {services.map(({ label, href }) => (
+            {solutions.map(({ label, href }) => (
               <li key={label}>
                 <a
                   href={href}
@@ -108,13 +110,13 @@ export default function Footer() {
           </ul>
         </nav>
 
-        {/* Solutions */}
-        <nav aria-label="Solutions">
+        {/* Services */}
+        <nav aria-label="Creative Services">
           <h4 className="text-[11px] font-semibold tracking-[0.14em] uppercase text-[rgba(24,24,27,0.58)] mb-3.5">
-            Solutions
+            Creative Services
           </h4>
           <ul className="list-none space-y-2">
-            {solutions.map(({ label, href }) => (
+            {services.map(({ label, href }) => (
               <li key={label}>
                 <a
                   href={href}

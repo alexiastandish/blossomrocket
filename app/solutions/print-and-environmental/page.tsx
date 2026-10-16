@@ -7,7 +7,6 @@ import CardLinkGrid from "@/components/section/CardLinkGrid";
 import { SectionLayout } from "@/components/section";
 import SectionCardOverlayList from "@/components/section/CardOverlayList";
 import { Metadata } from "next";
-import Script from "next/script";
 import { CTASlots } from "@/components/CTASlot";
 
 const PAGE_URL =
@@ -27,6 +26,13 @@ export const metadata: Metadata = {
     "Brochures",
     "Brand Identity",
   ],
+  // This page is byte-identical to /services/print-and-environmental-design.
+  // Both URLs are kept (neither is deleted, inbound links keep working), but
+  // the creative-services URL is the canonical one so the two do not compete.
+  alternates: {
+    canonical:
+      "https://blossomrocket.studio/services/print-and-environmental-design",
+  },
   openGraph: {
     title: "Print & Environmental Design — Blossom Rocket",
     description:
@@ -117,12 +123,12 @@ const breadcrumbSchema = {
 export default function page() {
   return (
     <>
-      <Script
+      <script
         id="schema-service"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
-      <Script
+      <script
         id="schema-breadcrumb"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}

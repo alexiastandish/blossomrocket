@@ -15,14 +15,16 @@ interface ContactModalProps {
 }
 
 const SERVICES = [
+  "Company Stores",
+  "Co-Branding",
+  "Swag Storefront",
+  "Merchandise & Promotional Products",
+  "On-Demand Kits",
   "Brand Identity",
   "Brand Systems",
   "Digital Design",
   "Marketing Assets",
   "Print & Environmental",
-  "Merchandise & Promotional Products",
-  "Company Stores",
-  "Swag Storefront",
   "Not sure yet",
 ] as const;
 
@@ -292,7 +294,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
               {status === "error" && (
                 <p role="alert" className="text-[color:var(--color-pink-600)]">
                   Something went wrong. Please try again, or email us directly
-                  at hello@blossomrocket.co.
+                  at hello@blossomrocket.studio.
                 </p>
               )}
             </div>

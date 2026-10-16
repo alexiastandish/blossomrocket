@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { CTASlots } from "@/components/CTASlot";
 import FAQSection from "@/components/faqs/FAQSection";
 import Hero from "@/components/Hero";
@@ -5,6 +6,33 @@ import { CardCallout, CardList, SectionLayout } from "@/components/section";
 import CardLinkGrid from "@/components/section/CardLinkGrid";
 import SectionItemList from "@/components/section/ItemList";
 import faqs from "@/data/faqs/services/brand-systems.json";
+
+const META_DESCRIPTION =
+  "Brand Systems from Blossom Rocket — the guidelines, application standards, templates, and asset libraries that keep a brand consistent as it scales across teams, vendors, digital channels, and physical products.";
+
+export const metadata: Metadata = {
+  title: "Brand Systems & Brand Guidelines — Blossom Rocket",
+  description: META_DESCRIPTION,
+  keywords: [
+    "Brand Systems",
+    "Brand Guidelines",
+    "Application Standards",
+    "Asset Libraries",
+    "Design Systems",
+    "Brand Templates",
+    "Brand Consistency",
+  ],
+  alternates: {
+    canonical: "https://blossomrocket.studio/services/brand-systems",
+  },
+  openGraph: {
+    title: "Brand Systems & Brand Guidelines — Blossom Rocket",
+    description: META_DESCRIPTION,
+    url: "https://blossomrocket.studio/services/brand-systems",
+    siteName: "Blossom Rocket",
+    type: "website",
+  },
+};
 
 export default function page() {
   return (
@@ -203,7 +231,7 @@ export default function page() {
         <CardLinkGrid
           heading="Blossom Rocket creates Brand Systems that support:"
           items={[
-            { label: "Websites", href: "/services/digital-marketing#website" },
+            { label: "Websites", href: "/services/digital-design" },
             {
               label: "Social Media",
             },

@@ -1,6 +1,24 @@
-import { NavLink, ShopMegaMenuCategory } from "../types/navigation";
+import { NavGroup, NavLink, ShopMegaMenuCategory } from "../types/navigation";
 
-const services: NavLink[] = [
+const primarySolutions: NavLink[] = [
+  { href: "/solutions/company-stores", label: "Company Stores" },
+  { href: "/solutions/co-branding", label: "Co-Branding" },
+  { href: "/solutions/swag-storefronts", label: "Swag Storefronts" },
+];
+
+const merchandiseSolutions: NavLink[] = [
+  {
+    href: "/solutions/merchandise-and-promotional-products",
+    label: "Merchandise & Promotional Products",
+  },
+  { href: "/solutions/on-demand-kits", label: "On-Demand Kits" },
+  {
+    href: "/solutions/print-and-environmental",
+    label: "Print & Environmental",
+  },
+];
+
+const creativeServices: NavLink[] = [
   { href: "/services/brand-identity", label: "Brand Identity" },
   { href: "/services/brand-systems", label: "Brand Systems" },
   { href: "/services/digital-design", label: "Digital Design" },
@@ -11,26 +29,12 @@ const services: NavLink[] = [
   },
 ];
 
-const solutions: NavLink[] = [
-  { href: "/solutions/company-stores", label: "Company Stores" },
-  { href: "/solutions/swag-storefronts", label: "Swag Storefronts" },
-  {
-    href: "/solutions/merchandise-and-promotional-products",
-    label: "Merchandise & Promotional Products",
-  },
-  {
-    href: "/solutions/print-and-environmental",
-    label: "Print & Environmental",
-  },
-  {
-    href: "/solutions/on-demand-kits",
-    label: "On-Demand Kits",
-  },
-];
-
-export const dropdownLinks: Record<string, NavLink[]> = {
-  "Design Services": services,
-  "Swag & Store Solutions": solutions,
+export const dropdownLinks: Record<string, NavGroup[]> = {
+  Solutions: [
+    { title: "Primary", items: primarySolutions },
+    { title: "Merchandise Solutions", items: merchandiseSolutions },
+  ],
+  "Creative Services": [{ items: creativeServices }],
 };
 
 /**
@@ -1585,8 +1589,8 @@ export const shopMegaMenu: ShopMegaMenuCategory[] = [
   },
 ];
 export const links: NavLink[] = [
-  { href: "/services", label: "Design Services", dropdown: true },
-  { href: "/solutions", label: "Swag & Store Solutions", dropdown: true },
+  { href: "/solutions", label: "Solutions", dropdown: true },
+  { href: "/services", label: "Creative Services", dropdown: true },
   { href: "/work", label: "Work" },
   { href: "/blog", label: "Blog" },
   {

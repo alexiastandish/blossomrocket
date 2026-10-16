@@ -5,18 +5,18 @@ const baseUrl = "https://blossomrocket.studio";
 
 const staticRoutes: { path: string; priority: number }[] = [
   { path: "/", priority: 1 },
-  { path: "/services", priority: 0.9 },
+  { path: "/services", priority: 0.8 },
   { path: "/services/brand-identity", priority: 0.8 },
   { path: "/services/brand-systems", priority: 0.8 },
   { path: "/services/digital-design", priority: 0.8 },
   { path: "/services/marketing-assets", priority: 0.8 },
   { path: "/services/print-and-environmental-design", priority: 0.8 },
   { path: "/solutions", priority: 0.9 },
-  { path: "/solutions/company-stores", priority: 0.8 },
+  { path: "/solutions/company-stores", priority: 0.9 },
+  { path: "/solutions/co-branding", priority: 0.9 },
+  { path: "/solutions/swag-storefronts", priority: 0.8 },
   { path: "/solutions/merchandise-and-promotional-products", priority: 0.8 },
   { path: "/solutions/on-demand-kits", priority: 0.8 },
-  { path: "/solutions/print-and-environmental", priority: 0.8 },
-  { path: "/solutions/swag-storefronts", priority: 0.8 },
   { path: "/work", priority: 0.9 },
   { path: "/blog", priority: 0.9 },
 ];

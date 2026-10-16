@@ -25,23 +25,5 @@ export function buildSchema(
     })),
   };
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: items?.map((item) => ({
-      "@type": "Question",
-      name: typeof item === "string" ? item : item.topic,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text:
-          typeof item === "string"
-            ? item
-            : "description" in item && item.description
-              ? item.description
-              : item.topic,
-      },
-    })),
-  };
-
-  return { itemListSchema, faqSchema };
+  return { itemListSchema };
 }

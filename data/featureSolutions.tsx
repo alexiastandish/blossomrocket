@@ -1,6 +1,122 @@
 import { FeatureItem } from "@/components/FeatureGrid/FeatureGrid";
 
-export const featureSolutions: FeatureItem[] = [
+/** Flagship offerings. Rendered as the homepage's most prominent service
+ *  section, above the secondary merchandise and creative sections. */
+export const featurePrimarySolutions: FeatureItem[] = [
+  {
+    num: "01",
+    title: "Company Stores",
+    desc: "Centralized, automated ordering environments that give teams, departments, and locations on-demand access to thousands of pre-approved branded products — no order minimums, no inventory, typically shipping in 2–5 days.",
+    href: "/solutions/company-stores",
+    featured: true,
+    partnerNote: "Powered through SplashBrands",
+    tags: [
+      "Centralized Ordering",
+      "Approved Merchandise",
+      "Brand-Controlled Applications",
+      "On-Demand Production",
+      "Fulfillment",
+      "Reduced Inventory",
+    ],
+    icon: (
+      <svg
+        width="22"
+        height="22"
+        viewBox="0 0 22 22"
+        fill="none"
+        aria-hidden="true"
+      >
+        <rect
+          x="3"
+          y="3"
+          width="16"
+          height="16"
+          rx="3"
+          stroke="#9b5cf6"
+          strokeWidth="1.5"
+        />
+        <path d="M7 11h8M11 7v8" stroke="#06b6d4" strokeWidth="1.5" />
+      </svg>
+    ),
+  },
+  {
+    num: "02",
+    title: "Co-Branding",
+    desc: "Merchandise programs built around multiple approved logos and logo variations, so partnerships, divisions, and locations order co-branded products that stay within one set of brand rules.",
+    href: "/solutions/co-branding",
+    featured: true,
+    partnerNote: "Powered through SplashBrands",
+    tags: [
+      "Multiple Approved Logos",
+      "Logo Variations",
+      "Controlled Logo Usage",
+      "Approved Product Colors",
+      "On-Demand Ordering",
+    ],
+    icon: (
+      <svg
+        width="22"
+        height="22"
+        viewBox="0 0 22 22"
+        fill="none"
+        aria-hidden="true"
+      >
+        <path
+          d="M4 8h14l-1-4H5L4 8z"
+          stroke="#9b5cf6"
+          strokeWidth="1.5"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M5 8v10h12V8M8 18v-5h6v5"
+          stroke="#06b6d4"
+          strokeWidth="1.5"
+          strokeLinejoin="round"
+        />
+      </svg>
+    ),
+  },
+  {
+    num: "03",
+    title: "Swag Storefronts",
+    desc: "A self-serve storefront for a single brand's own approved logo and product colors — ongoing merchandise access without the commitment of a full Company Store.",
+    href: "/solutions/swag-storefronts",
+    featured: true,
+    partnerNote: "Powered through SplashBrands",
+    tags: [
+      "Self-Serve Setup",
+      "Approved Logo & Colors",
+      "On-Demand Ordering",
+      "Recurring Merchandise Access",
+    ],
+    icon: (
+      <svg
+        width="22"
+        height="22"
+        viewBox="0 0 22 22"
+        fill="none"
+        aria-hidden="true"
+      >
+        <path
+          d="M4 8h14l-1-4H5L4 8z"
+          stroke="#9b5cf6"
+          strokeWidth="1.5"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M5 8v10h12V8M8 18v-5h6v5"
+          stroke="#06b6d4"
+          strokeWidth="1.5"
+          strokeLinejoin="round"
+        />
+      </svg>
+    ),
+  },
+];
+
+/** Supporting merchandise solutions — visible, but deliberately ranked
+ *  below Company Stores, Co-Branding, and Swag Storefronts. */
+export const featureMerchandiseSolutions: FeatureItem[] = [
   {
     num: "01",
     title: "Merchandise & Promotional Products",
@@ -41,7 +157,6 @@ export const featureSolutions: FeatureItem[] = [
       </svg>
     ),
   },
-
   {
     num: "02",
     title: "On-Demand Kits",
@@ -77,80 +192,6 @@ export const featureSolutions: FeatureItem[] = [
           strokeWidth="1.5"
           strokeLinejoin="round"
         />
-      </svg>
-    ),
-  },
-
-  {
-    num: "03",
-    title: "Swag Storefronts",
-    desc: "Streamlined online storefronts that give businesses recurring access to curated, pre-approved branded merchandise without rebuilding each order from scratch.",
-    href: "/solutions/swag-storefronts",
-    featured: false,
-    tags: [
-      "Curated Merchandise",
-      "Approved Products",
-      "Approved Artwork",
-      "On-Demand Ordering",
-      "Recurring Merchandise Access",
-    ],
-    icon: (
-      <svg
-        width="22"
-        height="22"
-        viewBox="0 0 22 22"
-        fill="none"
-        aria-hidden="true"
-      >
-        <path
-          d="M4 8h14l-1-4H5L4 8z"
-          stroke="#9b5cf6"
-          strokeWidth="1.5"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M5 8v10h12V8M8 18v-5h6v5"
-          stroke="#06b6d4"
-          strokeWidth="1.5"
-          strokeLinejoin="round"
-        />
-      </svg>
-    ),
-  },
-
-  {
-    num: "04",
-    title: "Company Stores",
-    desc: "Centralized online ordering environments that turn approved merchandise, artwork, and brand applications into scalable programs for teams, locations, and organizations.",
-    href: "/solutions/company-stores",
-    featured: true,
-    partnerNote: "Powered through SplashBrands",
-    tags: [
-      "Centralized Ordering",
-      "Approved Merchandise",
-      "Brand-Controlled Applications",
-      "On-Demand Production",
-      "Fulfillment",
-      "Reduced Inventory",
-    ],
-    icon: (
-      <svg
-        width="22"
-        height="22"
-        viewBox="0 0 22 22"
-        fill="none"
-        aria-hidden="true"
-      >
-        <rect
-          x="3"
-          y="3"
-          width="16"
-          height="16"
-          rx="3"
-          stroke="#9b5cf6"
-          strokeWidth="1.5"
-        />
-        <path d="M7 11h8M11 7v8" stroke="#06b6d4" strokeWidth="1.5" />
       </svg>
     ),
   },

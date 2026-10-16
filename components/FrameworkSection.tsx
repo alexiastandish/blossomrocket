@@ -25,7 +25,7 @@ const steps = [
     num: "4",
     label: "Operations",
     title: "Operational Deployment",
-    desc: "Extends approved brand standards into recurring programs, Swag Storefronts, and Company Stores that make approved products, artwork, and applications accessible for ordering.",
+    desc: "Extends approved brand standards into recurring programs, Co-Branding, and Company Stores that make approved products, artwork, and applications accessible for ordering.",
   },
   {
     num: "✓",

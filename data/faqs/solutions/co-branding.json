@@ -1,0 +1,145 @@
+[
+  {
+    "id": "co-branding",
+    "title": "Co-Branding",
+    "items": [
+      {
+        "id": "what-is-co-branding",
+        "question": "What is Co-Branding?",
+        "answer": "Blossom Rocket Co-Branding is a branded merchandise program powered by SplashBrands' multi-logo storefront technology. It gives organizations ongoing access to apparel and promotional products configured around multiple approved logos, logo variations, and brand colors, so merchandise that carries more than one mark stays consistent with approved brand standards."
+      },
+      {
+        "id": "what-is-co-branded-merchandise",
+        "question": "What is co-branded merchandise?",
+        "answer": "Co-branded merchandise is branded apparel or promotional product that carries more than one approved mark, such as a company logo alongside a partner, sponsor, division, or location logo. Co-Branding configures each of those approved marks in advance, including which logo treatment is used on which product color."
+      },
+      {
+        "id": "how-much-does-co-branding-cost",
+        "question": "How much does Co-Branding cost?",
+        "answer": "Blossom Rocket Co-Branding costs $200 per month for ongoing access to a brand-controlled merchandise storefront configured around your approved logos, logo variations, and product colors."
+      },
+      {
+        "id": "who-is-co-branding-for",
+        "question": "Who is Co-Branding designed for?",
+        "answer": "Co-Branding is designed for organizations whose merchandise needs to carry more than one approved mark, or more than one version of their own — including partnership and sponsorship programs, multi-brand organizations, divisions and sub-brands, and multi-location or franchise teams."
+      },
+      {
+        "id": "how-is-co-branding-different-from-a-company-store",
+        "question": "How is Co-Branding different from a Company Store?",
+        "answer": "Both are brand-controlled, on-demand merchandise programs powered by SplashBrands. Co-Branding focuses on configuring multiple approved logos, logo variations, and product-color pairings in a lightweight, always-on storefront. Company Stores are designed for larger or more complex merchandise programs that require additional store management, reporting, and administrative capabilities."
+      }
+    ],
+    "cta": {
+      "label": "Compare Co-Branding With Company Stores",
+      "href": "/solutions/company-stores"
+    }
+  },
+  {
+    "id": "logo-setup-and-brand-control",
+    "title": "Logo Setup & Brand Control",
+    "items": [
+      {
+        "id": "how-does-co-branding-setup-work",
+        "question": "How does Co-Branding setup work?",
+        "answer": "Businesses upload approved logos and logo variations, select brand-aligned product colors, review logo-to-color pairings, and provide brand information and application preferences. SplashBrands uses these selections to configure the branded storefront experience."
+      },
+      {
+        "id": "how-many-logos-can-co-branding-support",
+        "question": "Can Co-Branding support multiple logos and logo versions?",
+        "answer": "Yes. Businesses can upload multiple approved logos and logo variations, including horizontal logos, stacked logos, logo marks, and brand icons. Each logo is configured independently."
+      },
+      {
+        "id": "does-splashbrands-create-black-and-white-logo-versions",
+        "question": "Does SplashBrands create black and white versions of uploaded logos?",
+        "answer": "Yes. The SplashBrands setup workflow creates black and white treatments of uploaded logos to provide appropriate logo options across light and dark product colors."
+      },
+      {
+        "id": "how-are-logos-matched-to-product-colors",
+        "question": "How are logos matched to product colors?",
+        "answer": "SplashBrands previews logo treatments against selected product colors and recommends appropriate logo-to-color pairings. Businesses can review and change which approved logo treatment is used with each product color."
+      },
+      {
+        "id": "can-different-logo-variations-use-different-product-colors",
+        "question": "Can different logos use different product colors?",
+        "answer": "Yes. Product colors can be configured separately for each approved logo. A partner logo, horizontal logo, stacked logo, or logo mark can each have its own product color selections."
+      },
+      {
+        "id": "can-i-upload-brand-guidelines",
+        "question": "Can I upload existing Brand Guidelines?",
+        "answer": "Yes. Brand Guidelines can be uploaded during Co-Branding setup to give the SplashBrands logo team additional context about approved logos, colors, and brand application standards."
+      },
+      {
+        "id": "can-i-provide-logo-application-instructions",
+        "question": "Can I provide specific instructions for how my logos should be used?",
+        "answer": "Yes. Businesses can provide application notes during setup, such as specifying when a horizontal, stacked, or other approved logo variation should be used on particular merchandise."
+      },
+      {
+        "id": "why-does-splashbrands-ask-for-company-url",
+        "question": "Why does SplashBrands ask for my company website or social media URL?",
+        "answer": "The company URL gives the SplashBrands logo team additional brand context when reviewing submitted assets. If questions arise about a logo file or its intended use, the team can reference the existing brand and contact the customer for clarification."
+      }
+    ]
+  },
+  {
+    "id": "products-and-ordering",
+    "title": "Products & Ordering",
+    "items": [
+      {
+        "id": "what-products-are-available",
+        "question": "What products are available through Co-Branding?",
+        "answer": "Co-Branding gives users access to branded apparel and promotional products available through SplashBrands, creating an ongoing destination for recurring company merchandise needs."
+      },
+      {
+        "id": "can-businesses-control-product-colors",
+        "question": "Can businesses control which product colors are available?",
+        "answer": "Yes. Businesses select product colors that align with their Brand Identity during setup, helping keep the storefront focused on merchandise colors that fit the brand."
+      },
+      {
+        "id": "can-users-buy-products-directly",
+        "question": "Can users purchase co-branded products directly?",
+        "answer": "Yes. Once the storefront is available, users can browse and purchase approved co-branded apparel and promotional products directly through it."
+      },
+      {
+        "id": "do-i-have-to-configure-branding-for-every-order",
+        "question": "Do I have to configure the branding again for every order?",
+        "answer": "No. Approved logos, logo variations, product colors, and logo-to-color preferences are established during setup, so users can return to shop branded products without repeating the full brand configuration process."
+      },
+      {
+        "id": "how-does-co-branding-maintain-brand-consistency",
+        "question": "How does Co-Branding help maintain brand consistency?",
+        "answer": "Co-Branding connects each approved logo with brand-aligned product colors and logo treatments, creating a repeatable framework for applying a company's Brand Identity across apparel and promotional products — including merchandise shared with partners, divisions, and locations."
+      },
+      {
+        "id": "why-use-co-branding-instead-of-individual-merchandise-orders",
+        "question": "Why use Co-Branding instead of placing individual merchandise orders?",
+        "answer": "Co-Branding establishes core branding decisions once and makes them available for future purchases. This reduces the need to repeatedly select logo files, product colors, and logo treatments for recurring merchandise orders."
+      }
+    ]
+  },
+  {
+    "id": "splashbrands",
+    "title": "SplashBrands",
+    "items": [
+      {
+        "id": "what-makes-splashbrands-different",
+        "question": "What makes SplashBrands different from other Company Store providers?",
+        "answer": "SplashBrands combines proprietary storefront technology with in-house production capabilities to connect brand configuration, product access, decoration, and fulfillment within the same merchandise ecosystem."
+      },
+      {
+        "id": "how-does-splashbrands-power-co-branding",
+        "question": "How does SplashBrands power Co-Branding?",
+        "answer": "SplashBrands provides the multi-logo storefront technology and merchandise infrastructure behind Blossom Rocket Co-Branding. The platform uses approved logo variations, product colors, and brand preferences to create a brand-controlled shopping experience."
+      },
+      {
+        "id": "how-does-blossom-rocket-work-with-splashbrands",
+        "question": "How does Blossom Rocket work with SplashBrands?",
+        "answer": "Blossom Rocket offers Co-Branding as part of its branded merchandise services, while SplashBrands provides the storefront technology, product infrastructure, logo setup support, production, and fulfillment that power the shopping experience."
+      }
+    ],
+    "cta": {
+      "label": "Learn More About SplashBrands",
+      "href": "https://splashbrands.com/",
+      "target": "_blank"
+    }
+  }
+]

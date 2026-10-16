@@ -7,7 +7,6 @@ import defaultCtas from "@/lib/constants/default_ctas.json";
 import defaultOrbs from "@/lib/constants/default_orbs.json";
 import { tokens } from "@/lib/utils/sectionTailwindTokens";
 import { buildSchema } from "@/lib/utils/buildSchema";
-import Script from "next/script";
 import { SideCard } from "../SideCard";
 import { CTASlots } from "../CTASlot";
 import { Orb } from "../ui/Orb";
@@ -42,14 +41,14 @@ export default function SectionItemList({
   const resolvedOrbs: OrbConfig[] =
     orbs !== undefined ? orbs : (ORBS_BY_THEME[theme] ?? []);
 
-  const { itemListSchema, faqSchema } = hasItems
+  const { itemListSchema } = hasItems
     ? buildSchema(
         items,
         typeof heading === "string" ? heading : undefined,
         typeof subtext === "string" ? subtext : undefined,
         pageUrl,
       )
-    : { itemListSchema: null, faqSchema: null };
+    : { itemListSchema: null };
 
   const ctaContent =
     ctaSlot ??
@@ -137,17 +136,10 @@ export default function SectionItemList({
   return (
     <>
       {itemListSchema && (
-        <Script
+        <script
           id={`schema-itemlist-${schemaId}`}
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
-        />
-      )}
-      {faqSchema && (
-        <Script
-          id={`schema-faq-${schemaId}`}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
       )}
       <section

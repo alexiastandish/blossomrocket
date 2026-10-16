@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { CalendlyButton } from "@/components/CalendlyButton";
 import { CTASlots } from "@/components/CTASlot";
 import FAQSection from "@/components/faqs/FAQSection";
@@ -8,6 +9,34 @@ import rawFaqs from "@/data/faqs/solutions/on-demand-kits.json";
 import { FAQGroup } from "@/lib/types/faqs";
 
 const faqs = rawFaqs as FAQGroup[];
+
+const META_DESCRIPTION =
+  "On-Demand Kits from Blossom Rocket combine branded merchandise, personalized print, coordinated packaging, and fulfillment in one program — for employee onboarding, customer and sales outreach, partner appreciation, and events.";
+
+export const metadata: Metadata = {
+  title: "On-Demand Kits — Branded Kit Programs & Fulfillment | Blossom Rocket",
+  description: META_DESCRIPTION,
+  keywords: [
+    "On-Demand Kits",
+    "Onboarding Kits",
+    "Branded Kit Programs",
+    "Corporate Gifting",
+    "Branded Merchandise Programs",
+    "Personalized Print",
+    "Kit Fulfillment",
+  ],
+  alternates: {
+    canonical: "https://blossomrocket.studio/solutions/on-demand-kits",
+  },
+  openGraph: {
+    title:
+      "On-Demand Kits — Branded Kit Programs & Fulfillment | Blossom Rocket",
+    description: META_DESCRIPTION,
+    url: "https://blossomrocket.studio/solutions/on-demand-kits",
+    siteName: "Blossom Rocket",
+    type: "website",
+  },
+};
 
 export default function page() {
   return (

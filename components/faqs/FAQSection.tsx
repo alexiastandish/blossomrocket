@@ -1,7 +1,6 @@
 import FAQAccordionGrouped from "./FAQAccordionGrouped";
 import { FAQSectionProps } from "@/lib/types/faqs";
 import { faqSectionTokens } from "./faqSectionTokens";
-import Script from "next/script";
 
 function buildFAQSchema(groups: FAQSectionProps["groups"], pageUrl: string) {
   return {
@@ -46,7 +45,7 @@ export default function FAQSection({
       itemType="https://schema.org/FAQPage"
     >
       {/* Server-rendered JSON-LD — present in initial HTML for crawlers/AI search */}
-      <Script
+      <script
         id={`schema-itemlist-${schemaId}`}
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}

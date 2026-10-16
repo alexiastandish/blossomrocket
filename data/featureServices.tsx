@@ -178,9 +178,9 @@ export const featureServices: FeatureItem[] = [
 
   {
     num: "05",
-    title: "Print & Environmental",
+    title: "Print & Environmental Design",
     desc: "Physical brand applications that extend established standards into print, packaging, signage, displays, and branded environments.",
-    href: "/services/print-environmental",
+    href: "/services/print-and-environmental-design",
     featured: false,
     tags: [
       "Print Collateral",

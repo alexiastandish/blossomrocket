@@ -22,28 +22,58 @@ import DiffBand from "@/components/DiffBand";
 import { CTASlots } from "@/components/CTASlot";
 import { CalendlyButton } from "@/components/CalendlyButton";
 import { CompanyStoreComparisonSection } from "@/components/ComparisonTable/CompanyStoreComparisonSection";
+import type { Metadata } from "next";
 
-// TODO
+const PAGE_URL = "https://blossomrocket.studio/solutions";
+
+const META_DESCRIPTION =
+  "Branded merchandise solutions from Blossom Rocket: on-demand Company Stores and Co-Branding programs powered by SplashBrands, plus promotional products, On-Demand Kits, and print production — centralized ordering with no minimums and no inventory.";
+
+export const metadata: Metadata = {
+  title:
+    "Branded Merchandise Solutions — Company Stores & Co-Branding | Blossom Rocket",
+  description: META_DESCRIPTION,
+  keywords: [
+    "Company Stores",
+    "Corporate Merchandise Stores",
+    "Employee Merchandise Stores",
+    "Co-Branding",
+    "Co-Branded Merchandise",
+    "Branded Merchandise Programs",
+    "Promotional Products",
+    "Centralized Merchandise Ordering",
+    "Corporate Merchandise Management",
+  ],
+  alternates: { canonical: PAGE_URL },
+  openGraph: {
+    title:
+      "Branded Merchandise Solutions — Company Stores & Co-Branding | Blossom Rocket",
+    description: META_DESCRIPTION,
+    url: PAGE_URL,
+    siteName: "Blossom Rocket",
+    type: "website",
+  },
+};
+
 export default function Solutions() {
   return (
     <div>
       <Hero
         pillItems={[
           "Company Stores",
+          "Co-Branding",
           "Swag Storefronts",
           "Branded Merchandise",
           "On-Demand Kits",
-          "Print & Environmental",
         ]}
         theme="dark"
         heading={
           <>
-            <em className="grad-text not-italic">
-              Company Stores, Swag Storefronts, & Branded Merch
-            </em>
+            Company Stores, Co-Branding &{" "}
+            <em className="grad-text not-italic">Branded Merchandise.</em>
           </>
         }
-        body="Blossom Rocket provides branded merchandise, Company Stores, Swag Storefronts, custom kits, promotional products, and print solutions powered by SplashBrands. We help businesses centralize branded products, simplify ordering, and distribute swag to employees, customers, partners, teams, and events."
+        body="Blossom Rocket helps organizations centralize, automate, and scale branded merchandise. Company Stores and Co-Branding programs powered by SplashBrands give teams, departments, and locations on-demand access to pre-approved products — supported by promotional products, On-Demand Kits, and print production for everything a storefront does not cover."
         ctaSlot={
           <CTASlots
             theme="dark"
@@ -65,7 +95,7 @@ export default function Solutions() {
       <Marquee items={solutions} theme="dark" />
 
       <SectionItemList
-        pageUrl="https://blossomrocket.studio/solutions"
+        pageUrl={PAGE_URL}
         layout="inline"
         id="beyond-traditional-creative-solutions"
         theme="neutral"
@@ -86,18 +116,23 @@ export default function Solutions() {
             </em>
           </>
         }
-        subtext="Blossom Rocket connects branded merchandise, online storefronts, production, personalization, and fulfillment through one integrated offering. Choose a complete Company Store program, a streamlined Swag Storefront, standalone branded merchandise, personalized On-Demand Kits, or custom print and environmental production."
+        subtext="Blossom Rocket connects branded merchandise, online storefronts, production, personalization, and fulfillment through one integrated offering. Start with a full Company Store program, a Co-Branding program, or a self-serve Swag Storefront, and add standalone branded merchandise, personalized On-Demand Kits, or custom print and environmental production as needed."
         listHeading="Blossom Rocket solutions include:"
         items={[
           {
             topic: "Company Stores",
             description:
-              "A centralized online storefront for ordering branded merchandise, apparel, promotional products, gifts, and print materials. ",
+              "A centralized, automated storefront for ordering branded merchandise, apparel, promotional products, gifts, and print materials on demand — no minimums, no inventory.",
+          },
+          {
+            topic: "Co-Branding",
+            description:
+              "Brand-controlled merchandise programs built around multiple approved logos and logo variations, for partnerships, divisions, and multi-location teams.",
           },
           {
             topic: "Swag Storefronts",
             description:
-              "Seamlessly set-up branded online marketplaces for print, promotional products and merchandise without the financial committment to a company store expereience.",
+              "A self-serve storefront for a single brand's own approved logo and product colors — ongoing merchandise access without a full Company Store commitment.",
           },
           {
             topic: "Merchandise & Promotional Products",
@@ -189,6 +224,51 @@ export default function Solutions() {
         />
       </SectionLayout>
 
+      {/* ── Co-Branding ── */}
+      <SectionLayout
+        stickyRight={true}
+        id="co-branding"
+        theme="brand"
+        cols={[5, 3]}
+        mobileOrder="left-first"
+        eyebrow="Co-Branding"
+        heading={
+          <>
+            Co-Branding Keeps Every Approved Mark{" "}
+            <em className="grad-text not-italic">
+              On Brand, On Every Product.
+            </em>
+          </>
+        }
+        ctas={[
+          {
+            label: "Explore Blossom Rocket's Co-Branding Programs",
+            href: "/solutions/co-branding",
+            variant: "primary",
+          },
+        ]}
+        subtext="Blossom Rocket Co-Branding programs are powered by SplashBrands' multi-logo storefront technology. Each program gives an organization ongoing access to merchandise configured around multiple approved logos, logo variations, brand colors, and product preferences — so partnerships, divisions, and locations order co-branded product that follows one set of brand rules."
+        schemaItems={[
+          { topic: "Co-Branded Merchandise" },
+          { topic: "Multiple Approved Logos & Logo Variations" },
+          { topic: "Approved Product Colors" },
+          { topic: "Logo & Product Pairings" },
+          { topic: "Brand Application Guidelines" },
+        ]}
+        pageUrl={PAGE_URL}
+      >
+        <CardList
+          heading="Co-Branding programs can include:"
+          items={[
+            { topic: "Co-Branded Merchandise" },
+            { topic: "Multiple Approved Logos & Logo Variations" },
+            { topic: "Approved Product Colors" },
+            { topic: "Logo & Product Pairings" },
+            { topic: "Brand Application Guidelines" },
+          ]}
+        />
+      </SectionLayout>
+
       {/* ── Swag Storefronts ── */}
       <SectionLayout
         stickyRight={true}
@@ -199,10 +279,8 @@ export default function Solutions() {
         eyebrow="Swag Storefronts"
         heading={
           <>
-            Swag Storefronts Give Businesses{" "}
-            <em className="grad-text not-italic">
-              Ongoing Access to Branded Merchandise.
-            </em>
+            A Self-Serve Storefront for{" "}
+            <em className="grad-text not-italic">Your Own Brand.</em>
           </>
         }
         ctas={[
@@ -212,24 +290,24 @@ export default function Solutions() {
             variant: "primary",
           },
         ]}
-        subtext="Blossom Rocket Swag Storefronts are smaller-scale branded merchandise stores powered by SplashBrands' multi-logo storefront technology. Each storefront gives a business ongoing access to merchandise configured around its approved logos, logo variations, brand colors, and product preferences without requiring a full Company Store program."
+        subtext="Blossom Rocket Swag Storefronts run on the same SplashBrands storefront technology as Co-Branding, but carry a single organization's own approved logo and its variations. Each storefront gives a business ongoing, self-serve access to merchandise configured around its brand colors and product preferences — without the commitment of a full Company Store program."
         schemaItems={[
-          { topic: "Branded Merchandise" },
-          { topic: "Multiple Logo Variations" },
-          { topic: "Approved Product Colors" },
-          { topic: "Logo & Product Pairings" },
-          { topic: "Brand Application Guidelines" },
+          { topic: "Self-Serve Setup" },
+          { topic: "Approved Logo & Logo Variations" },
+          { topic: "Brand-Controlled Product Colors" },
+          { topic: "Instant Shopping Access" },
+          { topic: "$200/Month" },
         ]}
-        pageUrl="https://blossomrocket.studio/solutions"
+        pageUrl={PAGE_URL}
       >
         <CardList
           heading="Swag Storefronts can include:"
           items={[
-            { topic: "Branded Merchandise" },
-            { topic: "Multiple Logo Variations" },
-            { topic: "Approved Product Colors" },
-            { topic: "Logo & Product Pairings" },
-            { topic: "Brand Application Guidelines" },
+            { topic: "Self-Serve Setup" },
+            { topic: "Approved Logo & Logo Variations" },
+            { topic: "Brand-Controlled Product Colors" },
+            { topic: "Instant Shopping Access" },
+            { topic: "$200/Month" },
           ]}
         />
       </SectionLayout>
@@ -242,7 +320,7 @@ export default function Solutions() {
         layout="inline"
         id="on-demand-merchandise"
         theme="brandSoft"
-        pageUrl="https://blossomrocket.studio/solutions"
+        pageUrl={PAGE_URL}
         eyebrow="On-Demand Merchandise & Promotional Products"
         heading={
           <>
@@ -342,7 +420,7 @@ export default function Solutions() {
           { topic: "Packaging" },
           { topic: "Vehicle Graphics" },
         ]}
-        pageUrl="https://blossomrocket.studio/solutions#print-and-environmental"
+        pageUrl={PAGE_URL + "#print-and-environmental"}
       >
         <CardList
           heading="Print & Environmental solutions can include:"
@@ -369,7 +447,7 @@ export default function Solutions() {
         layout="inline"
         id="on-demand-kits"
         theme="light"
-        pageUrl="https://blossomrocket.studio/solutions#on-demand-kits"
+        pageUrl={PAGE_URL + "#on-demand-kits"}
         eyebrow="On-Demand Kits"
         heading={
           <>
@@ -430,11 +508,7 @@ export default function Solutions() {
         ]}
       />
 
-      <FAQSection
-        groups={faqs}
-        theme="light"
-        pageUrl="https://blossomrocket.studio/services"
-      />
+      <FAQSection groups={faqs} theme="light" pageUrl={PAGE_URL} />
     </div>
   );
 }

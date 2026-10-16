@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Hero from "@/components/Hero";
 import CardGrid from "@/components/section/CardGrid";
 import CardList from "@/components/section/CardList";
@@ -36,11 +35,15 @@ export const metadata: Metadata = {
     "Merchandise Design",
     "Company Stores",
   ],
+  alternates: {
+    canonical:
+      "https://blossomrocket.studio/solutions/merchandise-and-promotional-products",
+  },
   openGraph: {
     title: "Merchandise & Promotional Products — Blossom Rocket",
     description:
       "Create branded merchandise programs that increase visibility, strengthen recognition, and create lasting connections with customers, employees, and audiences.",
-    url: "https://blossomrocket.co/solutions/merchandise-and-promotional-products",
+    url: "https://blossomrocket.studio/solutions/merchandise-and-promotional-products",
     siteName: "Blossom Rocket",
     type: "website",
   },
@@ -49,7 +52,7 @@ export const metadata: Metadata = {
 // ─── Schema constants ─────────────────────────────────────────────────────────
 
 const PAGE_URL =
-  "https://blossomrocket.co/solutions/merchandise-and-promotional-products";
+  "https://blossomrocket.studio/solutions/merchandise-and-promotional-products";
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -60,7 +63,7 @@ const serviceSchema = {
   provider: {
     "@type": "Organization",
     name: "Blossom Rocket",
-    url: "https://blossomrocket.co",
+    url: "https://blossomrocket.studio",
   },
   description:
     "Blossom Rocket provides Merchandise & Promotional Product services including branded apparel, promotional products, event merchandise, corporate gifting, customer appreciation programs, onboarding kits, and merchandise design.",
@@ -112,13 +115,13 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://blossomrocket.co",
+      item: "https://blossomrocket.studio",
     },
     {
       "@type": "ListItem",
       position: 2,
-      name: "Services",
-      item: "https://blossomrocket.co/services",
+      name: "Solutions",
+      item: "https://blossomrocket.studio/solutions",
     },
     {
       "@type": "ListItem",
@@ -134,12 +137,12 @@ const breadcrumbSchema = {
 export default function MerchandiseAndPromotionalProducts() {
   return (
     <>
-      <Script
+      <script
         id="schema-service"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
-      <Script
+      <script
         id="schema-breadcrumb"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}

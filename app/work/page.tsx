@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import { WorkItem } from "@/lib/types/work";
 import { ProjectItem } from "@/lib/types/projects";
 import workItemsData from "@/data/work.json";
@@ -23,6 +22,7 @@ export const metadata: Metadata = {
     "Marketing Design",
     "Blossom Rocket Work",
   ],
+  alternates: { canonical: "https://blossomrocket.studio/work" },
   openGraph: {
     title: "Work — Blossom Rocket",
     description:
@@ -103,17 +103,17 @@ const creativeWorkSchema = {
 export default function WorkPage() {
   return (
     <>
-      <Script
+      <script
         id="schema-itemlist"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
       />
-      <Script
+      <script
         id="schema-breadcrumb"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <Script
+      <script
         id="schema-creative"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(creativeWorkSchema) }}
