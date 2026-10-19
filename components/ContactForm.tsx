@@ -95,7 +95,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center px-4 py-8">
+    <div className="fixed inset-0 z-50 flex items-center justify-center px-4 py-10 md:py-14">
       {/* Backdrop */}
       <div
         onClick={onClose}
@@ -116,7 +116,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
             : "translate-y-4 scale-[0.98] opacity-0"
         }`}
       >
-        <div className="max-h-[80vh] overflow-y-auto p-6 md:px-10 md:py-8">
+        <div className="max-h-[75vh] overflow-y-auto p-8 md:p-10">
           {/* Close button */}
           <button
             type="button"
