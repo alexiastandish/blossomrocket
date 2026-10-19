@@ -95,7 +95,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-50 flex items-center justify-center px-4 py-8">
       {/* Backdrop */}
       <div
         onClick={onClose}
@@ -110,13 +110,13 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
         role="dialog"
         aria-modal="true"
         aria-labelledby="contact-modal-title"
-        className={`relative w-full max-w-lg overflow-hidden rounded-3xl border border-border-subtle bg-surface-base shadow-2xl transition-all duration-500 [transition-timing-function:var(--ease-out-expo)] ${
+        className={`relative w-full max-w-2xl overflow-hidden rounded-3xl border border-border-subtle bg-surface-base shadow-2xl transition-all duration-500 [transition-timing-function:var(--ease-out-expo)] ${
           visible
             ? "translate-y-0 scale-100 opacity-100"
             : "translate-y-4 scale-[0.98] opacity-0"
         }`}
       >
-        <div className="max-h-[85vh] overflow-y-auto p-8 md:p-10">
+        <div className="max-h-[80vh] overflow-y-auto p-6 md:px-10 md:py-8">
           {/* Close button */}
           <button
             type="button"
