@@ -204,7 +204,10 @@ export default function RootLayout({
         <ContactModalProvider>
           <Cursor />
           <ScrollReveal />
-          <Nav />
+          {/* Site banner landmark: the fixed nav is the page header. */}
+          <header>
+            <Nav />
+          </header>
           <main className="flex-1">{children}</main>
           <Footer />
           <ContactModalRoot />

@@ -81,71 +81,73 @@ export default function AboutDisciplines() {
         </p>
       </div>
 
-      <ol className="relative flex flex-col gap-[clamp(56px,8vw,112px)] list-none">
+      <div className="relative">
         {/* Connecting spine — desktop only */}
         <span
           className="hidden lg:block absolute left-[calc(50%-1px)] top-4 bottom-4 w-[2px] grad-bg opacity-40 rounded-full"
           aria-hidden="true"
         />
-        {disciplines.map((d, i) => {
-          const reversed = i % 2 === 1;
-          return (
-            <li
-              key={d.name}
-              className="rv relative grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-[clamp(64px,8vw,120px)] items-center"
-            >
-              <figure
-                className={[
-                  "relative rounded-[20px] overflow-hidden border border-border-on-dark bg-surface-dark-raised",
-                  d.aspect,
-                  reversed ? "lg:order-2" : "lg:order-1",
-                ].join(" ")}
+        <ol className="relative flex flex-col gap-[clamp(56px,8vw,112px)] list-none">
+          {disciplines.map((d, i) => {
+            const reversed = i % 2 === 1;
+            return (
+              <li
+                key={d.name}
+                className="rv relative grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-[clamp(64px,8vw,120px)] items-center"
               >
-                <Image
-                  src={d.image.src}
-                  alt={d.image.alt}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 45vw"
-                  className="object-cover"
-                />
-              </figure>
+                <figure
+                  className={[
+                    "relative rounded-[20px] overflow-hidden border border-border-on-dark bg-surface-dark-raised",
+                    d.aspect,
+                    reversed ? "lg:order-2" : "lg:order-1",
+                  ].join(" ")}
+                >
+                  <Image
+                    src={d.image.src}
+                    alt={d.image.alt}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 45vw"
+                    className="object-cover"
+                  />
+                </figure>
 
-              <div
-                className={[
-                  "flex flex-col items-start",
-                  reversed ? "lg:order-1" : "lg:order-2",
-                ].join(" ")}
-              >
-                <p className="flex items-baseline gap-4 mb-4">
-                  <span className="grad-text font-semibold text-[15px] tracking-[0.12em]">
-                    {d.number}
-                  </span>
-                  <span className="h3 text-white">{d.name}</span>
-                </p>
-                <p className="body-lg text-fg-on-dark font-medium leading-[1.6] mb-4">
-                  {d.lead}
-                </p>
-                <p className="body text-ink-faint leading-[1.8] mb-6">
-                  {d.body}
-                </p>
-                <ul className="flex flex-wrap gap-2 list-none">
-                  {d.links.map((l) => (
-                    <li key={l.href}>
-                      <Link
-                        href={l.href}
-                        className="inline-flex items-center gap-1.5 text-[13px] font-medium px-3.5 py-1.5 rounded-full border border-border-on-dark text-ink-faint transition-colors duration-200 hover:border-border-brand hover:text-violet-300"
-                      >
-                        {l.label}
-                        <span aria-hidden="true">→</span>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </li>
-          );
-        })}
-      </ol>
+                <div
+                  className={[
+                    "flex flex-col items-start",
+                    reversed ? "lg:order-1" : "lg:order-2",
+                  ].join(" ")}
+                >
+                  <p className="flex items-baseline gap-4 mb-4">
+                    <span className="grad-text font-semibold text-[15px] tracking-[0.12em]">
+                      {d.number}
+                    </span>
+                    <span className="h3 text-white">{d.name}</span>
+                  </p>
+                  <p className="body-lg text-fg-on-dark font-medium leading-[1.6] mb-4">
+                    {d.lead}
+                  </p>
+                  <p className="body text-ink-faint leading-[1.8] mb-6">
+                    {d.body}
+                  </p>
+                  <ul className="flex flex-wrap gap-2 list-none">
+                    {d.links.map((l) => (
+                      <li key={l.href}>
+                        <Link
+                          href={l.href}
+                          className="inline-flex items-center gap-1.5 text-[13px] font-medium px-3.5 py-1.5 rounded-full border border-border-on-dark text-ink-faint transition-colors duration-200 hover:border-border-brand hover:text-violet-300"
+                        >
+                          {l.label}
+                          <span aria-hidden="true">→</span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </li>
+            );
+          })}
+        </ol>
+      </div>
     </section>
   );
 }

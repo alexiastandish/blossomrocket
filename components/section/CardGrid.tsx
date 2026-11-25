@@ -61,6 +61,7 @@ function GridCell({
         "relative flex flex-col gap-2 p-4 pb-12 flex-1",
         borderClasses,
       ].join(" ")}
+      itemProp="itemListElement"
       itemScope
       itemType="https://schema.org/ListItem"
     >
@@ -75,7 +76,10 @@ function GridCell({
 
       {item.image ? (
         <div className="w-full flex justify-center items-center py-1">
-          <div className="w-full max-w-[160px] aspect-square overflow-hidden rounded-md [&_svg]:w-full [&_svg]:h-full [&_svg]:object-cover">
+          <div
+            className="w-full max-w-[160px] aspect-square overflow-hidden rounded-md [&_svg]:w-full [&_svg]:h-full [&_svg]:object-cover"
+            aria-hidden="true"
+          >
             {item.image}
           </div>
         </div>

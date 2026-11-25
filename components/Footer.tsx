@@ -11,7 +11,7 @@ const solutions = [
   { label: "On-Demand Kits", href: "/solutions/on-demand-kits" },
   {
     label: "Print & Environmental",
-    href: "/solutions/print-and-environmental",
+    href: "/services/print-and-environmental-design",
   },
 ];
 
@@ -94,9 +94,9 @@ export default function Footer() {
 
         {/* Solutions */}
         <nav aria-label="Solutions">
-          <h4 className="text-[11px] font-semibold tracking-[0.14em] uppercase text-[rgba(24,24,27,0.58)] mb-3.5">
+          <h2 className="text-[11px] font-semibold tracking-[0.14em] uppercase text-[rgba(24,24,27,0.58)] mb-3.5">
             Solutions
-          </h4>
+          </h2>
           <ul className="list-none space-y-2">
             {solutions.map(({ label, href }) => (
               <li key={label}>
@@ -113,9 +113,9 @@ export default function Footer() {
 
         {/* Services */}
         <nav aria-label="Creative Services">
-          <h4 className="text-[11px] font-semibold tracking-[0.14em] uppercase text-[rgba(24,24,27,0.58)] mb-3.5">
+          <h2 className="text-[11px] font-semibold tracking-[0.14em] uppercase text-[rgba(24,24,27,0.58)] mb-3.5">
             Creative Services
-          </h4>
+          </h2>
           <ul className="list-none space-y-2">
             {services.map(({ label, href }) => (
               <li key={label}>
@@ -132,9 +132,9 @@ export default function Footer() {
 
         {/* Insights */}
         <nav aria-label="Insights">
-          <h4 className="text-[11px] font-semibold tracking-[0.14em] uppercase text-[rgba(24,24,27,0.58)] mb-3.5">
+          <h2 className="text-[11px] font-semibold tracking-[0.14em] uppercase text-[rgba(24,24,27,0.58)] mb-3.5">
             Insights
-          </h4>
+          </h2>
           <ul className="list-none space-y-2">
             {insights.map(({ label, href }) => (
               <li key={label}>
@@ -151,9 +151,9 @@ export default function Footer() {
 
         {/* Connect */}
         <nav aria-label="Connect">
-          <h4 className="text-[11px] font-semibold tracking-[0.14em] uppercase text-[rgba(24,24,27,0.58)] mb-3.5">
+          <h2 className="text-[11px] font-semibold tracking-[0.14em] uppercase text-[rgba(24,24,27,0.58)] mb-3.5">
             Connect
-          </h4>
+          </h2>
           <ul className="list-none space-y-2">
             {connect.map(({ label, href }) => (
               <li key={label}>

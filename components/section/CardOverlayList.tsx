@@ -1,5 +1,6 @@
 import { CardOverlayListProps } from "@/lib/types/section";
 import { buildSchema } from "@/lib/utils/buildSchema";
+import { headingText } from "@/lib/utils/nodeToText";
 import { tokens } from "@/lib/utils/sectionTailwindTokens";
 import CTAs from "../CTAs";
 import SectionLabel from "../SectionLabel";
@@ -30,7 +31,7 @@ export default function SectionCardOverlayList({
 }: CardOverlayListProps) {
   const activeTheme = tokens[theme];
   const schemaId = id ?? "creative-services-list";
-  const schemaHeading = typeof heading === "string" ? heading : cardHeading;
+  const schemaHeading = headingText(heading) ?? cardHeading;
   const schema =
     items.length > 0
       ? buildSchema(items, schemaHeading, undefined, pageUrl).itemListSchema
@@ -128,16 +129,13 @@ export default function SectionCardOverlayList({
 
               {/* ── List variant ── */}
               {variant === "list" && (
-                <div
-                  className="flex flex-col"
-                  role="list"
-                  itemProp="itemListElement"
-                >
+                <div className="flex flex-col" role="list">
                   {items?.map((item, i) => (
                     <div
                       key={item.topic}
                       className={`flex items-center gap-3 text-[14px] py-3 border-b last:border-b-0 ${activeTheme.itemText} ${activeTheme.itemBorder}`}
                       role="listitem"
+                      itemProp="itemListElement"
                       itemScope
                       itemType="https://schema.org/ListItem"
                     >
@@ -155,16 +153,13 @@ export default function SectionCardOverlayList({
 
               {/* ── Pills variant ── */}
               {variant === "pills" && (
-                <div
-                  className="flex flex-wrap gap-2.5"
-                  role="list"
-                  itemProp="itemListElement"
-                >
+                <div className="flex flex-wrap gap-2.5" role="list">
                   {items.map((item, i) => (
                     <span
                       key={item.topic}
                       className={`inline-flex items-center gap-1.5 text-[12px] font-semibold tracking-[0.06em] px-3.5 py-1.5 rounded-full border transition-all duration-300 cursor-default ${activeTheme.pill}`}
                       role="listitem"
+                      itemProp="itemListElement"
                       itemScope
                       itemType="https://schema.org/ListItem"
                     >

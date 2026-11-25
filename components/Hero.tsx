@@ -193,7 +193,6 @@ export default function Hero({
         bgClass,
         className,
       ].join(" ")}
-      role="banner"
     >
       {/* ── Orbs — in their own overflow-hidden layer so they don't cause horizontal scroll ── */}
       <div

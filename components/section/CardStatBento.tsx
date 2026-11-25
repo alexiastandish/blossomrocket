@@ -49,7 +49,10 @@ export default function CardStatBento({
             ].join(" ")}
           >
             {/* ── Graphic zone ── */}
-            <div className="graphic-zone relative flex-1 flex items-center justify-center min-h-0 p-4">
+            <div
+              className="graphic-zone relative flex-1 flex items-center justify-center min-h-0 p-4"
+              aria-hidden="true"
+            >
               <div className={`glow ${activeTokens.statBentoGlow}`} />
               {item.graphic && (
                 <div

@@ -9,7 +9,6 @@ export default function AboutHero() {
     <header
       id="hero"
       className="section hero relative overflow-hidden bg-surface-page"
-      role="banner"
     >
       <div
         className="absolute inset-0 overflow-hidden pointer-events-none"

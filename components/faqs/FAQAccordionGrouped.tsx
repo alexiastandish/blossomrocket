@@ -73,7 +73,7 @@ export default function FAQAccordionGrouped({
 
   const scrollToGroup = (groupId: string) => {
     document
-      .getElementById(groupId)
+      .getElementById(`faq-${groupId}`)
       ?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
@@ -117,7 +117,7 @@ export default function FAQAccordionGrouped({
 
       <div className="space-y-14">
         {groups.map((group, groupIndex) => (
-          <div key={group.id} id={group.id} className="rv">
+          <div key={group.id} id={`faq-${group.id}`} className="rv">
             <div className="flex items-center gap-2.5 mb-5">
               <span
                 aria-hidden="true"

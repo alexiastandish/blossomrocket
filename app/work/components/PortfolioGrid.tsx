@@ -380,6 +380,7 @@ export function PortfolioGrid({ items }: PortfolioGridProps) {
                   isActive ? "outline-violet" : "outline-transparent",
                 ].join(" ")}
                 style={rowStyle}
+                itemProp="itemListElement"
                 itemScope
                 itemType="https://schema.org/CreativeWork"
               >
@@ -419,6 +420,9 @@ export function PortfolioGrid({ items }: PortfolioGridProps) {
                           lineRefs.current[lineKey] = el;
                         }}
                         data-scroll-line="true"
+                        tabIndex={0}
+                        role="region"
+                        aria-label={`${project.title} images, row ${lineIndex + 1}`}
                         className={[
                           "flex flex-col md:flex-row gap-1.5 max-w-full",
                           "overflow-visible md:overflow-x-auto md:overflow-y-hidden [scrollbar-width:none] [-ms-overflow-style:none]",

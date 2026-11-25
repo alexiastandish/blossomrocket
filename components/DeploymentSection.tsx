@@ -5,7 +5,7 @@ const row1 = [
     title: "Apparel",
     desc: "Employee apparel, team merchandise, uniforms, recruiting apparel, and branded clothing that represents your brand consistently in the real world.",
     icon: (
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
         <path
           d="M3 10h14M10 3l7 7-7 7"
           stroke="#9b5cf6"
@@ -19,7 +19,7 @@ const row1 = [
     title: "Promotional Products",
     desc: "Strategic merchandise designed to support brand awareness, customer engagement, and internal culture — all aligned to your brand standards.",
     icon: (
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
         <rect
           x="3"
           y="5"
@@ -37,7 +37,7 @@ const row1 = [
     title: "Print Materials",
     desc: "Business cards, brochures, catalogs, sales collateral, direct mail, inserts, and printed marketing assets — brand-consistent across every format.",
     icon: (
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
         <rect
           x="3"
           y="3"
@@ -55,7 +55,7 @@ const row1 = [
     title: "Signage",
     desc: "Office signage, environmental graphics, event signage, retail signage, and branded environments that make your brand visible and consistent on-site.",
     icon: (
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
         <path
           d="M4 16h12M7 16V8l3-5 3 5v8"
           stroke="#9b5cf6"
@@ -69,7 +69,7 @@ const row1 = [
     title: "Tradeshow Materials",
     desc: "Booths, displays, banners, event collateral, branded apparel, and promotional giveaways that make your brand unforgettable at every event.",
     icon: (
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
         <path
           d="M2 17l4-8 4 5 3-4 3 7"
           stroke="#9b5cf6"
@@ -86,7 +86,7 @@ const row2 = [
     title: "Onboarding Kits",
     desc: "Welcome packages, employee gifts, recruiting materials, culture kits, and internal brand experiences that make your brand felt from day one.",
     icon: (
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
         <rect
           x="3"
           y="7"
@@ -104,7 +104,7 @@ const row2 = [
     title: "Packaging",
     desc: "Boxes, inserts, labels, shipping materials, and branded customer touchpoints that turn every delivery into a brand experience.",
     icon: (
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
         <rect
           x="4"
           y="2"
@@ -122,7 +122,7 @@ const row2 = [
     title: "Company Stores",
     desc: "Centralized storefronts that operationalize your brand standards and make approved products accessible to every team, department, and location.",
     icon: (
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
         <circle cx="10" cy="10" r="7" stroke="#9b5cf6" strokeWidth="1.5" />
         <path d="M7 10h6M10 7v6" stroke="#06b6d4" strokeWidth="1.2" />
       </svg>

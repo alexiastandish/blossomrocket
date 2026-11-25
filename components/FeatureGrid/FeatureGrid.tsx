@@ -71,7 +71,6 @@ export default function FeatureGrid({
 
       <div
         className={`grid grid-cols-1 sm:grid-cols-2 ${COLUMN_CLASS[columns]} border-l border-t ${t.gridCellBorder}`}
-        role="list"
       >
         {items.map((item, i) => (
           <FeatureGridCard

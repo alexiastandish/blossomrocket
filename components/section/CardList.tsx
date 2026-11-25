@@ -36,13 +36,13 @@ export default function CardList({
             : "flex flex-col"
         }
         role="list"
-        itemProp="itemListElement"
       >
         {items.map((item, i) => (
           <div
             key={item.topic}
             className={`flex items-start text-left gap-3 text-[14px] py-3 border-b last:border-b-0 ${activeTokens.itemText} ${activeTokens.itemBorder}`}
             role="listitem"
+            itemProp="itemListElement"
             itemScope
             itemType="https://schema.org/ListItem"
           >

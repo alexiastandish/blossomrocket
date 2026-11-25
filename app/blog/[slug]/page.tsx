@@ -28,6 +28,7 @@ export async function generateMetadata({
     },
     openGraph: {
       type: "article",
+      url: `https://blossomrocket.studio/blog/${article.slug}`,
       title,
       description,
       publishedTime: article.publishedAt,

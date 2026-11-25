@@ -7,6 +7,7 @@ import defaultCtas from "@/lib/constants/default_ctas.json";
 import defaultOrbs from "@/lib/constants/default_orbs.json";
 import { tokens } from "@/lib/utils/sectionTailwindTokens";
 import { buildSchema } from "@/lib/utils/buildSchema";
+import { headingText } from "@/lib/utils/nodeToText";
 import { SideCard } from "../SideCard";
 import { CTASlots } from "../CTASlot";
 import { Orb } from "../ui/Orb";
@@ -44,7 +45,7 @@ export default function SectionItemList({
   const { itemListSchema } = hasItems
     ? buildSchema(
         items,
-        typeof heading === "string" ? heading : undefined,
+        headingText(heading),
         typeof subtext === "string" ? subtext : undefined,
         pageUrl,
       )
@@ -92,7 +93,7 @@ export default function SectionItemList({
           </h3>
         )}
         {hasItems && (
-          <ul className="mt-8" role="list">
+          <ul className="mt-8">
             {items.map((item, i) => {
               const topic = typeof item === "string" ? item : item.topic;
               const description =
@@ -101,7 +102,7 @@ export default function SectionItemList({
                 <li
                   key={i}
                   className={`group flex items-start gap-6 py-[14px] border-t transition-all duration-300 hover:pl-2 last:border-b ${activeTheme.itemBorder}`}
-                  role="listitem"
+                  itemProp="itemListElement"
                   itemScope
                   itemType="https://schema.org/ListItem"
                 >

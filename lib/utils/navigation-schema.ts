@@ -14,7 +14,7 @@ const merchandiseSolutions: NavLink[] = [
   },
   { href: "/solutions/on-demand-kits", label: "On-Demand Kits" },
   {
-    href: "/solutions/print-and-environmental",
+    href: "/services/print-and-environmental-design",
     label: "Print & Environmental",
   },
 ];

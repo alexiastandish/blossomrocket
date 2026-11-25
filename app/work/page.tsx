@@ -185,8 +185,6 @@ export default function WorkPage() {
           {/* ── Portfolio grid ── */}
           <div
             className="grid grid-cols-1 md:grid-cols-1 gap-3"
-            itemScope
-            itemType="https://schema.org/ItemList"
           >
             <PortfolioGrid items={workItems} />
           </div>
