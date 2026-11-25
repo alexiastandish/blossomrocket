@@ -1,0 +1,38 @@
+[
+  {
+    "id": "about-blossom-rocket",
+    "title": "About Blossom Rocket",
+    "items": [
+      {
+        "id": "what-is-blossom-rocket",
+        "question": "What is Blossom Rocket?",
+        "answer": "Blossom Rocket is a creative and technology-enabled branded merchandise partner founded by Alexia Standish. It helps organizations create, manage, and scale their brands through Company Stores, Co-Branding, Swag Storefronts, On-Demand Kits, and branded merchandise, supported by creative services such as brand identity, brand systems, and digital design."
+      },
+      {
+        "id": "who-founded-blossom-rocket",
+        "question": "Who founded Blossom Rocket?",
+        "answer": "Blossom Rocket was founded by Alexia Standish, a designer and full-stack software engineer with a degree in Graphic Design. From 2019 to 2025 she worked at Tapcart, an e-commerce technology company focused on mobile commerce."
+      },
+      {
+        "id": "blossom-rocket-and-splashbrands",
+        "question": "How does Blossom Rocket work with SplashBrands?",
+        "answer": "SplashBrands is Blossom Rocket's technology and production partner. Blossom Rocket provides program strategy, creative direction, brand systems, store configuration, and customer support. SplashBrands provides the company store platform, product catalog, on-demand manufacturing, in-house decoration, and fulfillment."
+      },
+      {
+        "id": "order-minimums",
+        "question": "Are there order minimums?",
+        "answer": "No. Blossom Rocket merchandise programs support single-quantity ordering, so a team can order one item or one thousand. Products are made on demand, so there is no finished inventory to buy in advance, and eligible items typically ship in 2 to 5 days."
+      },
+      {
+        "id": "creative-services-only",
+        "question": "Can I work with Blossom Rocket for creative services only?",
+        "answer": "Yes. Brand identity, brand systems, digital design, marketing assets, and print and environmental design are available on their own or as the foundation for a merchandise program."
+      },
+      {
+        "id": "who-is-blossom-rocket-for",
+        "question": "Who is Blossom Rocket designed for?",
+        "answer": "Blossom Rocket is designed for growing, mid-market, and enterprise organizations with multiple locations, distributed teams, franchises, or recurring merchandise needs, usually working with marketing, procurement, HR, communications, and operations teams. Smaller organizations often start with a Swag Storefront or a standalone creative project."
+      }
+    ]
+  }
+]

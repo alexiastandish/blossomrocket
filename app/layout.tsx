@@ -7,8 +7,15 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { ContactModalProvider } from "@/contexts/contact-modal-context";
 import { ContactModalRoot } from "@/components/contact-modal-root";
-
-const SITE_URL = "https://blossomrocket.studio";
+import {
+  CONTACT_EMAIL,
+  FOUNDER_ID,
+  ORGANIZATION_ID,
+  SITE_URL,
+  SPLASHBRANDS_ID,
+  WEBSITE_ID,
+  founderSchema,
+} from "@/lib/constants/entities";
 
 const SITE_DESCRIPTION =
   "Blossom Rocket helps organizations centralize, automate, and scale branded merchandise through on-demand Company Stores and Co-Branding programs powered by SplashBrands, supported by in-house creative services.";
@@ -55,20 +62,22 @@ const siteSchema = [
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "@id": `${SITE_URL}/#website`,
+    "@id": WEBSITE_ID,
     name: "Blossom Rocket",
     url: SITE_URL,
     inLanguage: "en-US",
-    publisher: { "@id": `${SITE_URL}/#organization` },
+    publisher: { "@id": ORGANIZATION_ID },
   },
   {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "@id": `${SITE_URL}/#organization`,
+    "@id": ORGANIZATION_ID,
     name: "Blossom Rocket",
     url: SITE_URL,
     description: SITE_DESCRIPTION,
     logo: `${SITE_URL}/logo.jpg`,
+    email: CONTACT_EMAIL,
+    founder: { "@id": FOUNDER_ID },
     sameAs: [
       "https://www.linkedin.com/company/blossom-rocket",
       "https://www.instagram.com/blossomrocketstudio/",
@@ -138,7 +147,7 @@ const siteSchema = [
     "@id": `${SITE_URL}/#splashbrands-president`,
     name: "Elissa Turner",
     jobTitle: "President",
-    worksFor: { "@id": "https://splashbrands.com/#organization" },
+    worksFor: { "@id": SPLASHBRANDS_ID },
     sameAs: ["https://www.linkedin.com/in/elissaberchelmann/"],
     knowsAbout: [
       "Online Company Store Programs",
@@ -152,11 +161,12 @@ const siteSchema = [
     description:
       "Elissa Turner is the President of SplashBrands, where they help marketing and sales teams centralize branded merchandise ordering through on-demand company store programs — reducing overspending, eliminating inventory risk, and removing the administrative burden of sourcing, storing, and distributing company swag.",
   },
+  founderSchema,
   {
     // Separate entity so crawlers don't conflate the platform with the studio.
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": "https://splashbrands.com/#organization",
+    "@id": SPLASHBRANDS_ID,
     name: "SplashBrands",
     url: "https://splashbrands.com",
     description:

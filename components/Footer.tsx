@@ -42,6 +42,7 @@ const insights = [
   },
 ];
 const connect = [
+  { label: "About Blossom Rocket", href: "/about" },
   {
     label: "LinkedIn",
     href: "https://www.linkedin.com/company/blossom-rocket",

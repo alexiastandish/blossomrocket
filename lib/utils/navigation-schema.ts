@@ -1600,6 +1600,7 @@ export const links: NavLink[] = [
   { href: "/industries", label: "Industries", dropdown: true },
   { href: "/services", label: "Creative Services", dropdown: true },
   { href: "/work", label: "Work" },
+  { href: "/about", label: "About" },
   { href: "/blog", label: "Blog" },
   {
     href: "https://www.shopblossomrocket.com/",

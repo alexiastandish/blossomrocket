@@ -14,4 +14,5 @@ export const pageThemes: Record<string, "light" | "dark"> = {
   "/solutions/on-demand-kits": "dark",
   "/solutions/print-and-environmental": "dark",
   "/blog": "light",
+  "/about": "light",
 };
