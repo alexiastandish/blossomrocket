@@ -18,16 +18,39 @@ This guide is built from the live brand system in this repository (`styles/token
 
 ## 2. Logo
 
-### Primary lockup
-Horizontal lockup: the lowercase wordmark **blossom** + the bud/rocket mark + **rocket**. The mark sits between the words and drops below the baseline, so the flame/leaves hang under the line of type.
+### Primary logo: horizontal
+The default logo for every use. The lowercase wordmark **blossom** + the bud/rocket mark + **rocket**. The mark sits between the words and drops below the baseline, so the flame/leaves hang under the line of type.
+
+### Secondary logo: stacked
+The mark on the left, with **blossom** stacked over **rocket** to its right. Use it when the space is closer to square, or too narrow for the horizontal logo to reach its minimum size: social avatars with room for text, merchandise tags, sleeve or chest prints, app splash screens, email signatures.
+
+### Logo mark and symbol
+Two icon-only versions, for places where the name is already present or there's no room for it:
+
+- **Logo mark (line):** the gradient-stroke bud/rocket on its own, on white or light backgrounds. Use for favicons, stamps, merch details (sleeve, back neck, tags), pattern elements.
+- **Symbol (filled):** the white bud/rocket inside a full-spectrum gradient circle. Use for social avatars, app icons, profile pictures, stickers, and anywhere the mark sits on a busy or unknown background. Never place the line mark on top of a gradient; use the symbol instead.
+
+Minimum size: 24 px for the line mark, 16 px for the symbol.
+
+### Files
 
 | File | Use |
 |---|---|
-| `brand/logos/logo.svg` | Primary, dark wordmark (`#101211`) on light backgrounds |
-| `brand/logos/logo-inverted.svg` | White wordmark on dark or brand backgrounds |
-| `brand/logos/logo.jpg` | Raster preview, 1920×1080 on white |
+| `logos/primary-horizontal/blossom-rocket-horizontal-color.ai` | Master artwork (Illustrator) |
+| `…/blossom-rocket-horizontal-color.png` / `.jpg` / `.webp` | Full color on white |
+| `…/blossom-rocket-horizontal-color-transparent.png` | Full color, transparent background |
+| `…/blossom-rocket-horizontal-color.svg` | Website version, dark wordmark (`#101211`) |
+| `…/blossom-rocket-horizontal-white.svg` | Website version, white wordmark for dark backgrounds |
+| `logos/mark/blossom-rocket-mark-color.jpg` | Line mark, full color on white |
+| `logos/mark/blossom-rocket-mark-color-transparent.png` | Line mark, transparent background |
+| `logos/mark/blossom-rocket-symbol-fill.png` | Symbol: white mark in gradient circle, transparent corners |
+| `logos/secondary-stacked/blossom-rocket-stacked-color.ai` | Master artwork (Illustrator) |
+| `…/blossom-rocket-stacked-color.png` / `.jpg` / `.webp` | Full color on white |
+| `…/blossom-rocket-stacked-color-transparent.png` | Full color, transparent background |
+| `…/blossom-rocket-stacked-white.ai` | One-color white master, for dark backgrounds and single-color production |
+| `…/blossom-rocket-stacked-white-transparent.png` | One-color white, transparent background |
 
-Note: the gradient mark inside the SVGs is embedded as raster images. Ask for a fully vector master before large-format print (signage, embroidery, apparel).
+Note: the gradient on the mark is a raster inside both the SVGs and the .ai files. For large-format print, embroidery or screen print, use the one-color version or have a print vendor separate the gradient.
 
 ### The mark
 One continuous rounded stroke with round caps. Its gradient runs top to bottom through the spectrum:
@@ -44,22 +67,24 @@ One continuous rounded stroke with round caps. Its gradient runs top to bottom t
 
 ### Clear space and size
 - Clear space on all sides equals the x-height of the wordmark (the height of the "o"). Nothing enters that zone.
-- Minimum width: 120 px on screen, 1.25 in / 32 mm in print. Below that, use the mark alone.
+- Minimum width, horizontal: 120 px on screen, 1.25 in / 32 mm in print. Below that, switch to the stacked logo.
+- Minimum width, stacked: 80 px on screen, 0.75 in / 19 mm in print. Below that, use the mark alone.
 - The mark alone (bud/rocket) can be used as an avatar, favicon or stamp, minimum 24 px.
 
 ### Backgrounds
 - Light: off-white `#FAFAF8`, white, or Cloud `#F4F3FC` with the primary logo.
-- Dark: Ink `#1A1A2E` or Zinc `#18181B` with the inverted logo.
+- Dark: Ink `#1A1A2E` or Zinc `#18181B` with the white logo.
 - Photography: only over calm, low-detail areas; add an Ink overlay (`rgba(26,26,46,0.4)`) if contrast is weak.
 
 ### Don't
 - Recolor the wordmark in a gradient, or the mark in a single flat color (except one-color production, below).
 - Stretch, rotate, outline, add shadows or glows.
-- Reorder the lockup or set the words in another typeface.
+- Reorder the lockup, mix the horizontal and stacked arrangements, or set the words in another typeface.
+- Use the stacked logo where the horizontal fits; horizontal comes first.
 - Place the full-color mark on a busy gradient or saturated pink/violet.
 - Capitalize it in the logo. The logo is always lowercase; in running text write **Blossom Rocket**.
 
-One-color production (embroidery, screen print, engraving): solid Ink `#1A1A2E` or solid white for the whole lockup.
+One-color production (embroidery, screen print, engraving): use the white master (`blossom-rocket-stacked-white.ai`), or the same artwork filled solid Ink `#1A1A2E` on light garments.
 
 ---
 
@@ -189,12 +214,12 @@ Naming: **Blossom Rocket** (two words, both capitalized) in text; product names 
 
 ```
 brand/
-  BRAND_GUIDE.md          this guide
-  logos/logo.svg          primary lockup, dark wordmark
-  logos/logo-inverted.svg white wordmark for dark backgrounds
-  logos/logo.jpg          raster preview
-  tokens/tokens.css       Tailwind v4 @theme tokens (copy of styles/tokens.css)
-  tokens/colors.json      all color tokens as JSON
+  BRAND_GUIDE.md               this guide
+  logos/primary-horizontal/    PRIMARY logo: .ai master, png/jpg/webp, transparent png, web svgs
+  logos/secondary-stacked/     SECONDARY logo: .ai masters (color, white), png/jpg/webp, transparent pngs
+  logos/mark/                  line mark and filled symbol (icon only)
+  css/                         the site's style sheets (tokens, typography, gradients, components...)
+  tokens/colors.json           all color tokens as JSON
 ```
 
 The source of truth for the website remains `styles/tokens.css`.

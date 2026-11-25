@@ -1,0 +1,42 @@
+@layer components {
+  .h1 {
+    @apply lg:text-7xl md:text-6xl lg:leading-[1.1] font-semibold leading-tight tracking-[-0.03em] text-4xl;
+    font-family: var(--font-display);
+  }
+
+  .h2 {
+    @apply lg:text-6xl md:text-5xl lg:leading-[1.15] font-semibold md:leading-snug tracking-[-0.03em] leading-snug text-4xl;
+    font-family: var(--font-display);
+  }
+
+  .h3 {
+    @apply lg:text-3xl md:text-2xl lg:leading-[1.15] font-semibold md:leading-snug tracking-[-0.03em] leading-snug text-3xl;
+    font-family: var(--font-display);
+  }
+
+  .subtext {
+    @apply whitespace-pre-line md:text-lg text-base leading-[1.8];
+  }
+
+  .body-sm {
+    @apply md:text-sm text-xs;
+  }
+
+  .body {
+    @apply md:text-base text-sm;
+  }
+  .body-lg {
+    @apply md:text-lg text-base;
+  }
+
+  .h4 {
+    font-size: 26px;
+  }
+  .h5 {
+    font-size: 24px;
+  }
+
+  .pills {
+    @apply hidden md:inline-flex items-center gap-2 md:text-xs text-[10px] font-semibold tracking-[0.1em] uppercase px-4 py-1.5 rounded-full mb-8;
+  }
+}
