@@ -28,7 +28,7 @@ export default function AboutCTA() {
           Let&apos;s make your brand{" "}
           <em className="grad-text not-italic">easier to manage.</em>
         </h2>
-        <p className="subtext text-ink-faint mb-4">
+        <p className="subtext text-neutral-300 mb-4">
           Start with a 15-minute conversation about how your organization orders
           and manages branded merchandise today.
         </p>

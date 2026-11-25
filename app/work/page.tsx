@@ -153,21 +153,21 @@ export default function WorkPage() {
               Explore the{" "}
               <Link
                 href="/services"
-                className="text-link-default hover:text-link-hover underline underline-offset-4"
+                className="text-violet-dark hover:text-link-hover underline underline-offset-4"
               >
                 creative services
               </Link>{" "}
               and{" "}
               <Link
                 href="/solutions"
-                className="text-link-default hover:text-link-hover underline underline-offset-4"
+                className="text-violet-dark hover:text-link-hover underline underline-offset-4"
               >
                 merchandise solutions
               </Link>{" "}
               behind this work, or read{" "}
               <Link
                 href="/about"
-                className="text-link-default hover:text-link-hover underline underline-offset-4"
+                className="text-violet-dark hover:text-link-hover underline underline-offset-4"
               >
                 about Blossom Rocket
               </Link>
@@ -183,9 +183,7 @@ export default function WorkPage() {
           </div>
 
           {/* ── Portfolio grid ── */}
-          <div
-            className="grid grid-cols-1 md:grid-cols-1 gap-3"
-          >
+          <div className="grid grid-cols-1 md:grid-cols-1 gap-3">
             <PortfolioGrid items={workItems} />
           </div>
         </div>

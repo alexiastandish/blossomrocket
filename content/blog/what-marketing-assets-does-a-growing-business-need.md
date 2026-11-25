@@ -4,7 +4,7 @@ description: "Learn which marketing assets growing businesses need across brand 
 seoTitle: "What Marketing Assets Does a Growing Business Need?"
 seoDescription: "The marketing assets growing businesses need for awareness, lead generation, sales, launches, events, advertising, and customer retention."
 publishedAt: "2026-07-20"
-updatedAt: "2026-07-20"
+updatedAt: "2026-11-25"
 authorName: "Alexia Standish"
 authorRole: "Founder, Blossom Rocket"
 authorUrl: "https://blossomrocket.studio/about"
@@ -45,7 +45,7 @@ The challenge is knowing which marketing assets the business genuinely needs. Co
 
 Blossom Rocket helps businesses create [marketing assets](/services/marketing-assets) that support the complete customer journey while remaining aligned with established [Brand Identity](/services/brand-identity) and [Brand System](/services/brand-systems) standards.
 
-This guide explains the ten marketing asset categories growing businesses should consider, what each one accomplishes, and how to decide which assets deserve priority.
+This guide explains the ten marketing asset categories growing businesses should consider, what each one accomplishes, and how to decide which assets deserve priority. The categories follow the customer journey in order: first awareness, then consideration and sales, then in-person experiences, then retention.
 
 ## What Are Marketing Assets?
 
@@ -129,4 +129,60 @@ Useful templates should anticipate long and short headlines, data, quotes, photo
 
 ### 7. Event materials
 
-Event materials help brands create a coordinated experience before, during, and after an
+Event materials help brands create a coordinated experience before, during, and after an event — invitations, registration graphics, agendas, name badges, wayfinding signage, presentation backdrops, handouts, branded merchandise, and follow-up communications.
+
+An event is one of the few moments when an audience experiences a brand in person, in a physical space, for an extended period. Materials designed separately by different vendors often end up with mismatched colors, logo treatments, and messaging, and attendees notice the difference. A coordinated event system keeps the digital invitation, the on-site signage, and the follow-up email visibly connected.
+
+Event materials are especially useful for businesses that host conferences, customer events, recruiting events, workshops, open houses, or community gatherings. For attendee gifts and speaker kits, [On-Demand Kits](/solutions/on-demand-kits) and [branded merchandise](/solutions/merchandise-and-promotional-products) extend the same system into physical products.
+
+### 8. Trade-show graphics
+
+Trade-show graphics are the large-format and display materials used at exhibitions and industry events — booth backdrops, banner stands, table covers, counter graphics, hanging signs, kiosk screens, product displays, and booth handouts.
+
+A trade-show booth competes with dozens or hundreds of other booths for a few seconds of attention, so the hierarchy has to work from a distance. Effective booth graphics state who the company is, what it offers, and who it serves before a visitor reaches the table. Detailed information belongs in conversations, handouts, and follow-up materials, not on the backdrop.
+
+Trade-show assets are also expensive to reprint, because large-format production, shipping, and setup costs add up quickly. Designing them inside a [brand system](/services/brand-systems) with replaceable messaging panels lets the core display stay in use across several shows while headlines and offers change. Blossom Rocket designs these through its [Print & Environmental Design](/services/print-and-environmental-design) services.
+
+Trade-show graphics are especially useful for businesses that sell to other businesses, exhibit at industry conferences, or recruit at career fairs.
+
+### 9. Customer communications
+
+Customer communications are the materials a business sends after someone becomes a customer — welcome messages, onboarding guides, account notices, product updates, renewal reminders, service announcements, thank-you notes, and loyalty or referral offers.
+
+Many companies invest heavily in acquisition creative and then send customers plain, inconsistent, or outdated materials. Because retention usually costs less than acquisition, these touchpoints deserve the same care as advertising. Consistent customer communications reassure customers that they chose a professional, reliable company, and they make important information easier to find and act on.
+
+Customer communications often span email, printed inserts, packaging, invoices, help documentation, and direct mail. A shared set of templates keeps them recognizable while letting operations, support, and account teams send them without waiting on a designer.
+
+### 10. Reusable asset templates
+
+Reusable asset templates are editable, pre-approved frameworks for the materials a business produces repeatedly — one-pagers, case studies, proposals, flyers, social posts, email headers, event signage, internal announcements, and report covers.
+
+Templates turn individual design decisions into a repeatable system. Teams can produce new materials quickly because layout, typography, color, logo placement, and image treatment are already defined. That reduces repeated design requests, shortens approvals, and keeps work from different people and departments looking like it came from one company.
+
+Good templates are flexible in the right places and fixed in the right places. They should allow different headlines, images, and content lengths while protecting the elements that make the brand recognizable. For a step-by-step approach, see [How to Build a Scalable Marketing Asset System](/blog/how-to-build-a-scalable-marketing-asset-system).
+
+## How to Decide Which Marketing Assets to Prioritize
+
+Not every business needs all ten categories at once. The right starting point depends on how customers find, evaluate, and stay with the company.
+
+- **Start with the customer journey.** List the moments where prospects and customers encounter the brand, from first impression to renewal, and note which ones currently have no designed materials.
+- **Prioritize assets that are used repeatedly.** A presentation template used in every sales meeting or a social template used every week usually creates more value than a single campaign graphic.
+- **Follow the revenue.** If most revenue comes from sales conversations, invest in presentations and leave-behinds first. If it comes from events, prioritize event and trade-show materials. If it comes from repeat customers, prioritize customer communications.
+- **Build on a brand system.** Assets created from shared standards are faster to produce and easier to keep consistent. If the brand foundation is unclear, start with [Brand Identity](/services/brand-identity) and [Brand Systems](/services/brand-systems) before producing large volumes of marketing materials.
+- **Plan for digital and physical channels together.** A campaign that appears online and at an event should feel like one campaign. [Print vs. Digital Marketing](/blog/print-vs-digital-marketing) explains when each channel works best.
+
+## Common Marketing Asset Mistakes
+
+- **Creating one-off assets indefinitely.** Each project starts from scratch, so production stays slow and the brand drifts.
+- **Designing for one channel only.** A layout created for a presentation may fail in a social feed, an email client, or a booth backdrop.
+- **Locking key information inside images.** Text that exists only in a graphic is harder to read on small screens, invisible when images are blocked, and inaccessible to screen readers.
+- **Skipping post-purchase materials.** Customer communications are often the most neglected assets, even though they shape renewals and referrals.
+- **Producing more instead of producing better.** A focused set of reusable, well-designed assets usually outperforms a large library of disconnected files.
+
+## Summary
+
+Growing businesses need marketing assets that cover the full customer journey: campaign creative, social media templates and content, email graphics, digital advertising, sales presentations, event materials, trade-show graphics, customer communications, and reusable templates. The most valuable collections are focused, reusable, and built on the same brand system, so every asset looks like it came from one company, whichever team or channel produced it.
+
+## Build Marketing Assets That Work Together
+
+Blossom Rocket creates [marketing assets](/services/marketing-assets) for one-off projects and ongoing programs, from campaign creative and presentation systems to event and trade-show materials, all built on your [Brand System](/services/brand-systems). When those assets need to become physical products, [Company Stores](/solutions/company-stores) and [On-Demand Kits](/solutions/on-demand-kits) carry the same standards into branded merchandise.

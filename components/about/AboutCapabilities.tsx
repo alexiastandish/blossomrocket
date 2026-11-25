@@ -86,7 +86,7 @@ function CapabilityColumn({
       <h3 id={id} className="h3 text-white mb-3">
         {title}
       </h3>
-      <p className="body text-ink-faint leading-[1.7] mb-6">{intro}</p>
+      <p className="body text-neutral-300 leading-[1.7] mb-6">{intro}</p>
       <ul className="flex flex-col list-none mb-8" aria-labelledby={id}>
         {items.map((item) => (
           <li
@@ -101,12 +101,12 @@ function CapabilityColumn({
                 <span className="block text-[16px] font-semibold text-white transition-colors duration-200 group-hover:text-violet-300">
                   {item.label}
                 </span>
-                <span className="block text-[14px] leading-[1.6] text-ink-faint mt-1">
+                <span className="block text-[14px] leading-[1.6] text-neutral-300 mt-1">
                   {item.description}
                 </span>
               </span>
               <span
-                className="text-ink-faint transition-transform duration-200 group-hover:translate-x-1 group-hover:text-violet-300"
+                className="text-neutral-300 transition-transform duration-200 group-hover:translate-x-1 group-hover:text-violet-300"
                 aria-hidden="true"
               >
                 →
@@ -138,7 +138,7 @@ export default function AboutCapabilities() {
           Merchandise solutions and creative services,{" "}
           <em className="grad-text not-italic">designed to work together.</em>
         </h2>
-        <p className="subtext text-ink-faint">
+        <p className="subtext text-neutral-300">
           Merchandise programs are Blossom Rocket&apos;s primary focus. Creative
           services set the standards those programs apply — and are available on
           their own when a brand needs a new identity, a website, or a system

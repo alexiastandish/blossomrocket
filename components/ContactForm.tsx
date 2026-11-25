@@ -122,7 +122,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
             type="button"
             onClick={onClose}
             aria-label="Close contact form"
-            className="absolute right-5 top-6 flex h-9 w-9 items-center justify-center rounded-full text-fg-tertiary transition-colors hover:bg-btn-ghost-hover hover:text-fg-primary"
+            className="absolute right-5 top-6 flex h-9 w-9 items-center justify-center rounded-full text-ink-mid transition-colors hover:bg-btn-ghost-hover hover:text-fg-primary"
           >
             <svg
               width="16"
@@ -142,7 +142,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
 
           {/* Header */}
           <div className="mb-4 pr-8">
-            <span className="mb-3 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-fg-tertiary">
+            <span className="mb-3 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-ink-mid">
               <span className="text-divider-dot-gradient" />
               Get in touch
             </span>
@@ -171,7 +171,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                   required
                   disabled={status === "submitting"}
                   placeholder="Your name"
-                  className="w-full rounded-xl border border-border-default bg-surface-page px-4 py-3 text-fg-primary placeholder:text-fg-tertiary transition-colors focus:border-border-focus focus:outline-none focus:ring-2 focus:ring-[color:var(--color-overlay-focus-halo)] disabled:opacity-50"
+                  className="w-full rounded-xl border border-border-default bg-surface-page px-4 py-3 text-fg-primary placeholder:text-ink-mid transition-colors focus:border-border-focus focus:outline-none focus:ring-2 focus:ring-[color:var(--color-overlay-focus-halo)] disabled:opacity-50"
                 />
               </div>
 
@@ -190,7 +190,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                   required
                   disabled={status === "submitting"}
                   placeholder="Your company"
-                  className="w-full rounded-xl border border-border-default bg-surface-page px-4 py-3 text-fg-primary placeholder:text-fg-tertiary transition-colors focus:border-border-focus focus:outline-none focus:ring-2 focus:ring-[color:var(--color-overlay-focus-halo)] disabled:opacity-50"
+                  className="w-full rounded-xl border border-border-default bg-surface-page px-4 py-3 text-fg-primary placeholder:text-ink-mid transition-colors focus:border-border-focus focus:outline-none focus:ring-2 focus:ring-[color:var(--color-overlay-focus-halo)] disabled:opacity-50"
                 />
               </div>
             </div>
@@ -210,7 +210,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                 required
                 disabled={status === "submitting"}
                 placeholder="you@company.com"
-                className="w-full rounded-xl border border-border-default bg-surface-page px-4 py-3 text-fg-primary placeholder:text-fg-tertiary transition-colors focus:border-border-focus focus:outline-none focus:ring-2 focus:ring-[color:var(--color-overlay-focus-halo)] disabled:opacity-50"
+                className="w-full rounded-xl border border-border-default bg-surface-page px-4 py-3 text-fg-primary placeholder:text-ink-mid transition-colors focus:border-border-focus focus:outline-none focus:ring-2 focus:ring-[color:var(--color-overlay-focus-halo)] disabled:opacity-50"
               />
             </div>
 
@@ -256,7 +256,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                 rows={4}
                 disabled={status === "submitting"}
                 placeholder="What's fragmented, what's growing, and where you want your brand to feel consistent"
-                className="w-full resize-none rounded-xl border border-border-default bg-surface-page px-4 py-3 text-fg-primary placeholder:text-fg-tertiary transition-colors focus:border-border-focus focus:outline-none focus:ring-2 focus:ring-[color:var(--color-overlay-focus-halo)] disabled:opacity-50"
+                className="w-full resize-none rounded-xl border border-border-default bg-surface-page px-4 py-3 text-fg-primary placeholder:text-ink-mid transition-colors focus:border-border-focus focus:outline-none focus:ring-2 focus:ring-[color:var(--color-overlay-focus-halo)] disabled:opacity-50"
               />
             </div>
 

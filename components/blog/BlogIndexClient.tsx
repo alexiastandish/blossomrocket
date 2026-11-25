@@ -152,10 +152,10 @@ export function BlogIndexClient({ posts }: BlogIndexClientProps) {
         </div>
 
         <div className="flex flex-col justify-center order-2">
-          <p className="text-[11px] font-semibold tracking-[0.08em] uppercase text-ink-faint mb-4">
+          <p className="text-[11px] font-semibold tracking-[0.08em] uppercase text-ink-mid mb-4">
             Featured
           </p>
-          <span className="inline-block self-start text-[10px] font-semibold tracking-[0.10em] uppercase text-violet bg-active-bg rounded-full px-2.5 py-1 mb-4">
+          <span className="inline-block self-start text-[10px] font-semibold tracking-[0.10em] uppercase text-violet-dark bg-active-bg rounded-full px-2.5 py-1 mb-4">
             {featured.category}
           </span>
           <h2
@@ -167,12 +167,12 @@ export function BlogIndexClient({ posts }: BlogIndexClientProps) {
           <p className="text-[14px] leading-[1.75] text-ink-mid mb-5 max-w-[46ch]">
             {featured.excerpt}
           </p>
-          <div className="flex items-center gap-3 text-[12px] text-ink-faint mb-6">
+          <div className="flex items-center gap-3 text-[12px] text-ink-mid mb-6">
             <span>{formatDate(featured.publishedAt)}</span>
             <span aria-hidden="true">·</span>
             <span>{featured.readTime}</span>
           </div>
-          <span className="inline-flex items-center gap-1.5 text-[12px] font-semibold text-violet transition-[gap] duration-200 group-hover:gap-3">
+          <span className="inline-flex items-center gap-1.5 text-[12px] font-semibold text-violet-dark transition-[gap] duration-200 group-hover:gap-3">
             Read article →
           </span>
         </div>
@@ -186,7 +186,7 @@ export function BlogIndexClient({ posts }: BlogIndexClientProps) {
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search articles…"
             aria-label="Search articles"
-            className="w-full rounded-sm border border-border-default bg-transparent text-[13px] text-ink placeholder:text-ink-faint px-3.5 py-2.5 outline-none transition-colors duration-150 focus:border-violet"
+            className="w-full rounded-sm border border-border-default bg-transparent text-[13px] text-ink placeholder:text-ink-mid px-3.5 py-2.5 outline-none transition-colors duration-150 focus:border-violet"
           />
         </div>
 
@@ -198,7 +198,7 @@ export function BlogIndexClient({ posts }: BlogIndexClientProps) {
               "text-[11px] font-semibold tracking-[0.06em] uppercase rounded-full px-3 py-1.5 transition-colors duration-150",
               activeTags.length === 0
                 ? "bg-violet text-white"
-                : "bg-active-bg text-violet hover:bg-violet-100",
+                : "bg-active-bg text-violet-dark hover:bg-violet-100",
             ].join(" ")}
           >
             All
@@ -213,7 +213,7 @@ export function BlogIndexClient({ posts }: BlogIndexClientProps) {
                 "text-[11px] font-semibold tracking-[0.06em] uppercase rounded-full px-3 py-1.5 transition-colors duration-150",
                 activeTags.includes(tag)
                   ? "bg-violet text-white"
-                  : "bg-active-bg text-violet hover:bg-violet-100",
+                  : "bg-active-bg text-violet-dark hover:bg-violet-100",
               ].join(" ")}
             >
               {tag}
@@ -238,7 +238,7 @@ export function BlogIndexClient({ posts }: BlogIndexClientProps) {
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover"
                 />
-                <span className="absolute top-3 left-3 text-[10px] font-semibold tracking-[0.10em] uppercase text-violet bg-active-bg rounded-full px-2.5 py-1">
+                <span className="absolute top-3 left-3 text-[10px] font-semibold tracking-[0.10em] uppercase text-violet-dark bg-active-bg rounded-full px-2.5 py-1">
                   {post.category}
                 </span>
               </div>
@@ -252,7 +252,7 @@ export function BlogIndexClient({ posts }: BlogIndexClientProps) {
               <p className="text-[13px] leading-[1.65] text-ink-mid mb-3 line-clamp-2">
                 {post.excerpt}
               </p>
-              <div className="mt-auto flex items-center gap-2 text-[11px] text-ink-faint">
+              <div className="mt-auto flex items-center gap-2 text-[11px] text-ink-mid">
                 <span>{formatDate(post.publishedAt)}</span>
                 <span aria-hidden="true">·</span>
                 <span>{post.readTime}</span>
@@ -278,7 +278,7 @@ export function BlogIndexClient({ posts }: BlogIndexClientProps) {
               setQuery("");
               setTagSlugs([]);
             }}
-            className="text-[12px] font-semibold text-violet transition-[gap] duration-200 hover:gap-3"
+            className="text-[12px] font-semibold text-violet-dark transition-[gap] duration-200 hover:gap-3"
           >
             Clear search and filters
           </button>

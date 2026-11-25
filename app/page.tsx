@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import CardLinks from "@/components/section/CardLinks";
 import { DEFAULT_OG_IMAGE } from "@/lib/constants/entities";
 
 import Hero from "@/components/Hero";
@@ -158,6 +159,19 @@ export default function Home() {
         <CardCallout
           heading="Powered Through SplashBrands."
           body="Blossom Rocket configures the brand and supports your team; SplashBrands' platform and in-house production make the on-demand speed possible."
+        />
+        <CardLinks
+          label="See how it fits your organization:"
+          links={[
+            {
+              label: "Company stores for your industry",
+              href: "/industries",
+            },
+            {
+              label: "About Blossom Rocket and founder Alexia Standish",
+              href: "/about",
+            },
+          ]}
         />
       </SectionLayout>
 

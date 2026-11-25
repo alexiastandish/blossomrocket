@@ -73,7 +73,7 @@ export default function AboutDisciplines() {
           Where creativity meets{" "}
           <em className="grad-text not-italic">execution.</em>
         </h2>
-        <p className="subtext text-ink-faint">
+        <p className="subtext text-neutral-300">
           Blossom Rocket connects three disciplines that are usually handled by
           different vendors. Each one makes the next easier: the creative work
           defines the standards, the technology enforces them, and execution
@@ -126,7 +126,7 @@ export default function AboutDisciplines() {
                   <p className="body-lg text-fg-on-dark font-medium leading-[1.6] mb-4">
                     {d.lead}
                   </p>
-                  <p className="body text-ink-faint leading-[1.8] mb-6">
+                  <p className="body text-neutral-300 leading-[1.8] mb-6">
                     {d.body}
                   </p>
                   <ul className="flex flex-wrap gap-2 list-none">
@@ -134,7 +134,7 @@ export default function AboutDisciplines() {
                       <li key={l.href}>
                         <Link
                           href={l.href}
-                          className="inline-flex items-center gap-1.5 text-[13px] font-medium px-3.5 py-1.5 rounded-full border border-border-on-dark text-ink-faint transition-colors duration-200 hover:border-border-brand hover:text-violet-300"
+                          className="inline-flex items-center gap-1.5 text-[13px] font-medium px-3.5 py-1.5 rounded-full border border-border-on-dark text-neutral-300 transition-colors duration-200 hover:border-border-brand hover:text-violet-300"
                         >
                           {l.label}
                           <span aria-hidden="true">→</span>

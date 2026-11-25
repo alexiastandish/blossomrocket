@@ -42,7 +42,7 @@ export function AuthorBio({ author }: { author: Author }) {
           <div className="flex flex-wrap gap-x-6 gap-y-2 text-[14px] font-semibold">
             <Link
               href="/about"
-              className="text-link-default hover:text-link-hover transition-colors duration-200"
+              className="text-violet-dark hover:text-link-hover transition-colors duration-200"
             >
               About Blossom Rocket <span aria-hidden="true">→</span>
             </Link>
@@ -50,7 +50,7 @@ export function AuthorBio({ author }: { author: Author }) {
               href={FOUNDER.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-link-default hover:text-link-hover transition-colors duration-200"
+              className="text-violet-dark hover:text-link-hover transition-colors duration-200"
             >
               Connect on LinkedIn <span aria-hidden="true">→</span>
             </a>

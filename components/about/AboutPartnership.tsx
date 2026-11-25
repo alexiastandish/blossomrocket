@@ -112,7 +112,7 @@ export default function AboutPartnership() {
             href="https://splashbrands.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-link-default hover:text-link-hover underline underline-offset-4 decoration-border-strong"
+            className="text-violet-dark hover:text-link-hover underline underline-offset-4 decoration-border-strong"
           >
             SplashBrands
           </a>{" "}
@@ -152,7 +152,7 @@ export default function AboutPartnership() {
 
       <div className="rv grid grid-cols-1 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] gap-10 items-start">
         <div>
-          <h3 className="text-[11px] font-semibold tracking-[0.16em] uppercase text-ink-faint mb-4">
+          <h3 className="text-[11px] font-semibold tracking-[0.16em] uppercase text-ink-mid mb-4">
             What the platform supports
           </h3>
           <ul className="flex flex-wrap gap-2 list-none">
@@ -166,14 +166,14 @@ export default function AboutPartnership() {
             ))}
           </ul>
         </div>
-        <p className="text-[14px] leading-[1.7] text-fg-tertiary">
+        <p className="text-[14px] leading-[1.7] text-ink-mid">
           Organizations including Lincoln Financial, Samsung, Pfizer, Toyota,
           and QXO have used the SplashBrands platform. They are SplashBrands
           platform customers, not Blossom Rocket clients — Blossom Rocket&apos;s
           own work is shown below and on the{" "}
           <Link
             href="/work"
-            className="text-link-default hover:text-link-hover underline underline-offset-4"
+            className="text-violet-dark hover:text-link-hover underline underline-offset-4"
           >
             Work
           </Link>{" "}

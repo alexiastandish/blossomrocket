@@ -28,7 +28,7 @@ const unscrolledTokens: Record<
   }
 > = {
   light: {
-    linkIdle: "text-neutral-400",
+    linkIdle: "text-ink-mid",
     linkActive: "text-neutral-600",
     linkHover: "hover:text-neutral-900",
     ctaBg: "bg-[#18181b]",
@@ -52,7 +52,7 @@ const unscrolledTokens: Record<
 const scrolledTokens = {
   navBg:
     "bg-[rgba(250,250,248,0.92)] backdrop-blur-[18px] border-[rgba(24,24,27,0.10)]",
-  linkIdle: "text-neutral-400",
+  linkIdle: "text-ink-mid",
   linkActive: "text-neutral-600",
   linkHover: "hover:text-neutral-900",
   ctaBg: "bg-[#18181b]",
@@ -253,7 +253,7 @@ export default function Nav() {
                         {dropdownLinks[label]?.map((group, groupIndex) => (
                           <li key={group.title ?? groupIndex}>
                             {group.title && (
-                              <p className="mb-1 mt-2 text-[11px] font-semibold tracking-[0.14em] uppercase text-[rgba(24,24,27,0.42)]">
+                              <p className="mb-1 mt-2 text-[11px] font-semibold tracking-[0.14em] uppercase text-ink-mid">
                                 {group.title}
                               </p>
                             )}
@@ -426,7 +426,7 @@ export default function Nav() {
                           <li key={group.title ?? groupIndex}>
                             {group.title && (
                               <p
-                                className={`px-3.5 pb-1 text-[10px] font-semibold tracking-[0.14em] uppercase text-[rgba(24,24,27,0.42)] ${groupIndex === 0 ? "pt-2.5" : "pt-3.5"}`}
+                                className={`px-3.5 pb-1 text-[10px] font-semibold tracking-[0.14em] uppercase text-ink-mid ${groupIndex === 0 ? "pt-2.5" : "pt-3.5"}`}
                               >
                                 {group.title}
                               </p>

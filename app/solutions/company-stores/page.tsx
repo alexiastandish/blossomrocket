@@ -470,6 +470,10 @@ export default function CompanyStores() {
               {
                 label: "Department Merchandise Programs",
               },
+              {
+                label: "Company Store Programs by Industry",
+                href: "/industries",
+              },
             ]}
           />
         </SectionLayout>

@@ -22,7 +22,7 @@ export function BlogArticle({ article }: { article: BlogArticleData }) {
         {/* Single H1 — the exact question/topic the article answers */}
         <header className="mb-10 mt-10">
           {article.category && (
-            <span className="inline-block self-start text-[10px] font-semibold tracking-[0.10em] uppercase text-violet bg-active-bg rounded-full px-2.5 py-1 mb-4">
+            <span className="inline-block self-start text-[10px] font-semibold tracking-[0.10em] uppercase text-violet-dark bg-active-bg rounded-full px-2.5 py-1 mb-4">
               {article.category}
             </span>
           )}
@@ -104,7 +104,7 @@ export function BlogArticle({ article }: { article: BlogArticleData }) {
             {article.tags.map((tag) => (
               <span
                 key={tag}
-                className="rounded-full bg-active-bg text-violet text-[11px] font-semibold tracking-[0.06em] uppercase px-3 py-1.5"
+                className="rounded-full bg-active-bg text-violet-dark text-[11px] font-semibold tracking-[0.06em] uppercase px-3 py-1.5"
               >
                 {tag}
               </span>

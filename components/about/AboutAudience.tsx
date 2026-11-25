@@ -54,21 +54,21 @@ export default function AboutAudience() {
             Smaller teams are welcome too: a{" "}
             <Link
               href="/solutions/swag-storefronts"
-              className="text-link-default hover:text-link-hover underline underline-offset-4"
+              className="text-violet-dark hover:text-link-hover underline underline-offset-4"
             >
               Swag Storefront
             </Link>{" "}
             or a standalone{" "}
             <Link
               href="/services"
-              className="text-link-default hover:text-link-hover underline underline-offset-4"
+              className="text-violet-dark hover:text-link-hover underline underline-offset-4"
             >
               creative engagement
             </Link>{" "}
             is often the right starting point.
           </p>
           <nav aria-label="Industries" className="w-full">
-            <p className="text-[11px] font-semibold tracking-[0.16em] uppercase text-ink-faint mb-3">
+            <p className="text-[11px] font-semibold tracking-[0.16em] uppercase text-ink-mid mb-3">
               Programs by industry
             </p>
             <ul className="flex flex-wrap gap-2 list-none">

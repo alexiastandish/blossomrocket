@@ -22,7 +22,7 @@ export default function CompanyStoresSection() {
             What is a <em className="grad-text not-italic">Company Store?</em>
           </h2>
           <p
-            className="rv d1 text-[rgba(255,255,255,0.45)] leading-[1.8] mb-[52px] subtext"
+            className="rv d1 text-neutral-300 leading-[1.8] mb-[52px] subtext"
             style={{ maxWidth: "560px" }}
           >
             Blossom Rocket Company Stores are the operational execution layer

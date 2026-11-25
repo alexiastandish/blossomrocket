@@ -95,24 +95,22 @@ function Orb({ orb }: { orb: OrbConfig }) {
 // ─── Theme maps ───────────────────────────────────────────────────────────────
 
 const PILL_STYLES: Record<PillTheme, string> = {
-  light:
-    "border border-[rgba(24,24,27,0.10)] text-[rgba(24,24,27,0.58)] bg-transparent",
+  light: "border border-[rgba(24,24,27,0.10)] text-ink-mid bg-transparent",
   dark: "border border-[rgba(255,255,255,0.12)] text-[rgba(255,255,255,0.55)] bg-transparent",
   violet:
     "border border-[rgba(155,92,246,0.30)] text-[rgba(155,92,246,0.85)] bg-[rgba(155,92,246,0.06)]",
   brand:
-    "border border-[rgba(124,92,232,0.35)] text-[#a78bfa] bg-[rgba(124,92,232,0.10)]",
+    "border border-[rgba(124,92,232,0.35)] text-violet-200 bg-[rgba(124,92,232,0.10)]",
   brandSoft: "border border-[rgba(124,92,232,0.18)] text-[#4a4a6a] bg-white",
 };
 
 const CHIP_STYLES: Record<PillTheme, string> = {
-  light:
-    "border border-[rgba(24,24,27,0.10)] text-[rgba(24,24,27,0.58)] bg-transparent",
+  light: "border border-[rgba(24,24,27,0.10)] text-ink-mid bg-transparent",
   dark: "border border-[rgba(255,255,255,0.12)] text-[rgba(255,255,255,0.55)] bg-transparent",
   violet:
     "border border-[rgba(155,92,246,0.30)] text-[rgba(155,92,246,0.85)] bg-[rgba(155,92,246,0.06)]",
   brand:
-    "border border-[rgba(124,92,232,0.35)] text-[#a78bfa] bg-[rgba(124,92,232,0.10)]",
+    "border border-[rgba(124,92,232,0.35)] text-violet-200 bg-[rgba(124,92,232,0.10)]",
   brandSoft: "border border-[rgba(124,92,232,0.18)] text-[#4a4a6a] bg-white",
 };
 
@@ -131,9 +129,9 @@ const HERO_HEADING_COLOR: Record<string, string> = {
 };
 
 const HERO_BODY_COLOR: Record<string, string> = {
-  light: "text-[rgba(24,24,27,0.58)]",
+  light: "text-ink-mid",
   dark: "text-[rgba(255,255,255,0.55)]",
-  brand: "text-[#8480ae]",
+  brand: "text-neutral-300",
   brandSoft: "text-[#4a4a6a]",
 };
 

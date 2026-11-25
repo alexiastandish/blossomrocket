@@ -44,7 +44,7 @@ export default function Marquee({ items, theme }: MarqueeProps) {
           ) : (
             <span
               key={i}
-              className={`py-[18px] flex items-center gap-12 text-[12px] tracking-[0.14em] uppercase ${theme === "dark" ? "text-white" : "text-[rgba(24,24,27,0.58)]"} whitespace-nowrap font-medium flex-shrink-0`}
+              className={`py-[18px] flex items-center gap-12 text-[12px] tracking-[0.14em] uppercase ${theme === "dark" ? "text-white" : "text-ink-mid"} whitespace-nowrap font-medium flex-shrink-0`}
             >
               {item.label}
               <span

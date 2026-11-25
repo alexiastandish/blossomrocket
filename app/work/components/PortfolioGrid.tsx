@@ -525,7 +525,7 @@ export function PortfolioGrid({ items }: PortfolioGridProps) {
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="text-[10px] font-semibold tracking-[0.10em] uppercase text-violet bg-active-bg rounded-full px-2.5 py-1"
+                        className="text-[10px] font-semibold tracking-[0.10em] uppercase text-violet-dark bg-active-bg rounded-full px-2.5 py-1"
                       >
                         {tag}
                       </span>
@@ -557,7 +557,7 @@ export function PortfolioGrid({ items }: PortfolioGridProps) {
               }}
             >
               {/* Counter */}
-              <p className="text-[11px] font-semibold tracking-[0.08em] uppercase text-ink-faint mb-5">
+              <p className="text-[11px] font-semibold tracking-[0.08em] uppercase text-ink-mid mb-5">
                 {String(displayedIndex + 1).padStart(2, "0")} /{" "}
                 {String(filteredItems.length).padStart(2, "0")}
               </p>
@@ -567,7 +567,7 @@ export function PortfolioGrid({ items }: PortfolioGridProps) {
                 {active.tags.map((tag: string) => (
                   <span
                     key={tag}
-                    className="text-[10px] font-semibold tracking-[0.10em] uppercase text-violet bg-active-bg rounded-full px-2.5 py-1"
+                    className="text-[10px] font-semibold tracking-[0.10em] uppercase text-violet-dark bg-active-bg rounded-full px-2.5 py-1"
                   >
                     {tag}
                   </span>
@@ -628,7 +628,7 @@ export function PortfolioGrid({ items }: PortfolioGridProps) {
               {/* Hint */}
               <div className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-violet flex-shrink-0 animate-pulse" />
-                <span className="text-[11px] text-ink-faint">
+                <span className="text-[11px] text-ink-mid">
                   Click on a thumbnail to bring the image into view
                 </span>
               </div>

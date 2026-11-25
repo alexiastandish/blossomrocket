@@ -91,9 +91,7 @@ export default function AboutFounder({ portrait }: AboutFounderProps) {
               <p className="h4 font-semibold text-zinc leading-tight font-display">
                 {FOUNDER.name}
               </p>
-              <p className="body text-fg-tertiary mt-1">
-                Founder, Blossom Rocket
-              </p>
+              <p className="body text-ink-mid mt-1">Founder, Blossom Rocket</p>
             </div>
 
             <ul
@@ -115,13 +113,13 @@ export default function AboutFounder({ portrait }: AboutFounderProps) {
                 href={FOUNDER.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4 inline-flex w-fit items-center gap-2 px-6 py-3 rounded-full bg-fg-brand text-fg-on-dark text-[14px] font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:bg-btn-primary-hover"
+                className="mt-4 inline-flex w-fit items-center gap-2 px-6 py-3 rounded-full bg-violet-dark text-fg-on-dark text-[14px] font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:bg-violet-700"
               >
                 Connect on LinkedIn <span aria-hidden="true">→</span>
               </a>
               <a
                 href={`mailto:${CONTACT_EMAIL}`}
-                className="text-[14px] text-link-default hover:text-link-hover transition-colors duration-200"
+                className="text-[14px] text-violet-dark hover:text-link-hover transition-colors duration-200"
               >
                 {CONTACT_EMAIL}
               </a>

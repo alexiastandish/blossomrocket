@@ -47,7 +47,7 @@ export default function ShopMegaMenu({
               className={`flex-shrink-0 rounded-lg px-3.5 py-2 body-sm font-medium tracking-[0.01em] transition-colors duration-150 ${
                 index === activeIndex
                   ? "bg-violet-50 text-violet"
-                  : "text-neutral-400 hover:text-neutral-900"
+                  : "text-ink-mid hover:text-neutral-900"
               }`}
             >
               {category.label}
@@ -67,7 +67,7 @@ export default function ShopMegaMenu({
           >
             {active.groups.map((group) => (
               <div key={group.title}>
-                <p className="mb-3 pb-2.5 border-b border-[rgba(24,24,27,0.08)] text-[11px] font-semibold uppercase tracking-[0.06em] text-neutral-400">
+                <p className="mb-3 pb-2.5 border-b border-[rgba(24,24,27,0.08)] text-[11px] font-semibold uppercase tracking-[0.06em] text-ink-mid">
                   {group.title}
                 </p>
                 <ul className="list-none">

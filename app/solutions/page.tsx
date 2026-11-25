@@ -181,6 +181,11 @@ export default function Solutions() {
                 href: "/solutions/company-stores",
                 variant: "primary",
               },
+              {
+                label: "See Company Stores by Industry",
+                href: "/industries",
+                variant: "outline",
+              },
             ]}
           >
             <CalendlyButton />
