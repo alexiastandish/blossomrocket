@@ -1,4 +1,5 @@
 import FAQSection from "@/components/faqs/FAQSection";
+import CardLinks from "@/components/section/CardLinks";
 import { DEFAULT_OG_IMAGE } from "@/lib/constants/entities";
 import faqs from "@/data/faqs/services/print.json";
 
@@ -182,7 +183,7 @@ export default function page() {
               <em className="grad-text not-italic">from Blossom Rocket.</em>
             </>
           }
-          subtext="Print & Environmental Design from Blossom Rocket applies your brand to print, signage, packaging, vehicle graphics, and branded environments. Every Print & Environmental Design project is developed using your Brand Identity and Brand System, allowing your business to create consistent customer-facing materials across every location, department, campaign, and vendor."
+          subtext="Blossom Rocket provides Print & Environmental Design services that help businesses apply their Brand Identity across printed materials, signage, packaging, vehicle graphics, and branded environments. Every Print & Environmental Design project is developed using your Brand Identity and Brand System, allowing your business to create consistent customer-facing materials across every location, department, campaign, and vendor."
           ctaSlot={
             <CTASlots
               ctas={[
@@ -220,6 +221,23 @@ export default function page() {
               { label: "Packaging" },
               {
                 label: "Vehicle Graphics",
+              },
+            ]}
+          />
+          <CardLinks
+            label="Related reading:"
+            links={[
+              {
+                label: "Print vs. Digital Marketing: When Each Works Best",
+                href: "/blog/print-vs-digital-marketing",
+              },
+              {
+                label: "Brand Systems for consistent physical applications",
+                href: "/services/brand-systems",
+              },
+              {
+                label: "Merchandise & Promotional Products",
+                href: "/solutions/merchandise-and-promotional-products",
               },
             ]}
           />

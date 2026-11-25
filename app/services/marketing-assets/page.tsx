@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import CardLinks from "@/components/section/CardLinks";
 import { DEFAULT_OG_IMAGE } from "@/lib/constants/entities";
 import FAQSection from "@/components/faqs/FAQSection";
 import faqs from "@/data/faqs/services/marketing-assets.json";
@@ -230,6 +231,23 @@ export default function MarketingAssets() {
               topic: "Digital Advertising Assets",
               description:
                 "Digital Advertising Assets support campaigns across social media, search engines, display networks, and other digital advertising platforms. Consistent advertising creative helps improve recognition and campaign effectiveness.",
+            },
+          ]}
+        />
+        <CardLinks
+          label="Go deeper on marketing assets:"
+          links={[
+            {
+              label: "How to Build a Scalable Marketing Asset System",
+              href: "/blog/how-to-build-a-scalable-marketing-asset-system",
+            },
+            {
+              label: "What Marketing Assets Does a Growing Business Need?",
+              href: "/blog/what-marketing-assets-does-a-growing-business-need",
+            },
+            {
+              label: "Brand Systems that keep templates consistent",
+              href: "/services/brand-systems",
             },
           ]}
         />

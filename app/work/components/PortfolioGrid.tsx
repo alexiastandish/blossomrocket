@@ -9,7 +9,7 @@ import {
 } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter, usePathname, useSearchParams } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { ProjectItem, ProjectImage } from "@/lib/types/projects";
 import { isVideoSrc } from "@/lib/utils/isVideoSrc";
 
@@ -45,7 +45,6 @@ function slugifyTag(tag: string): string {
 export function PortfolioGrid({ items }: PortfolioGridProps) {
   const router = useRouter();
   const pathname = usePathname();
-  const searchParams = useSearchParams();
 
   const [activeIndex, setActiveIndex] = useState(-1);
   const [displayedIndex, setDisplayedIndex] = useState(0);
@@ -73,7 +72,19 @@ export function PortfolioGrid({ items }: PortfolioGridProps) {
     }));
   }, [items]);
 
-  const activeTagSlug = searchParams.get("tag");
+  // The active tag lives in the URL (?tag=) but is read after mount instead
+  // of through useSearchParams(), which forced /work to bail out of server
+  // rendering and ship an empty page to crawlers. popstate keeps the filter
+  // in sync with back/forward navigation between tag views.
+  const [activeTagSlug, setActiveTagSlug] = useState<string | null>(null);
+
+  useEffect(() => {
+    const readTag = () =>
+      setActiveTagSlug(new URLSearchParams(window.location.search).get("tag"));
+    readTag();
+    window.addEventListener("popstate", readTag);
+    return () => window.removeEventListener("popstate", readTag);
+  }, []);
 
   // Filtered project list — everything downstream (rows, refs, sidebar)
   // is built from this instead of the raw `items` prop.
@@ -85,12 +96,14 @@ export function PortfolioGrid({ items }: PortfolioGridProps) {
   }, [items, activeTagSlug]);
 
   function handleTagClick(slug: string | null) {
-    const params = new URLSearchParams(searchParams.toString());
-    if (slug === null || slug === activeTagSlug) {
+    const params = new URLSearchParams(window.location.search);
+    const next = slug === null || slug === activeTagSlug ? null : slug;
+    if (next === null) {
       params.delete("tag");
     } else {
-      params.set("tag", slug);
+      params.set("tag", next);
     }
+    setActiveTagSlug(next);
     const query = params.toString();
     router.push(query ? `${pathname}?${query}` : pathname, { scroll: false });
   }
@@ -514,12 +527,12 @@ export function PortfolioGrid({ items }: PortfolioGridProps) {
                       </span>
                     ))}
                   </div>
-                  <h3
+                  <h2
                     className="text-[19px] sm:text-[21px] font-semibold leading-[1.2] tracking-[-0.01em] text-ink mb-1.5"
                     style={{ fontFamily: "var(--font-display)" }}
                   >
                     {project.title}
-                  </h3>
+                  </h2>
                   <p className="text-[13px] leading-[1.65] text-ink-mid mb-3 max-w-prose">
                     {project.description}
                   </p>
@@ -558,12 +571,12 @@ export function PortfolioGrid({ items }: PortfolioGridProps) {
               </div>
 
               {/* Title */}
-              <h2
+              <p
                 className="text-[26px] font-semibold leading-[1.15] tracking-[-0.02em] text-ink mb-3"
                 style={{ fontFamily: "var(--font-display)" }}
               >
                 {active.title}
-              </h2>
+              </p>
 
               {/* Description */}
               <p className="text-[13px] leading-[1.75] text-ink-mid mb-5">

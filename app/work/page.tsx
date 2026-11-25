@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { DEFAULT_OG_IMAGE } from "@/lib/constants/entities";
 import { WorkItem } from "@/lib/types/work";
 import { ProjectItem } from "@/lib/types/projects";
@@ -7,7 +8,6 @@ import { PortfolioGrid } from "./components/PortfolioGrid";
 import Marquee from "@/components/section/Marquee";
 import logos from "@/data/marquees/logos.json";
 import SectionLabel from "@/components/SectionLabel";
-import { Suspense } from "react";
 // ─── Metadata ────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
@@ -149,6 +149,30 @@ export default function WorkPage() {
               marketing assets, print, and promotional products across
               industries.
             </p>
+            <p className="rv text-[14px] text-fg-secondary leading-[1.7] mt-4">
+              Explore the{" "}
+              <Link
+                href="/services"
+                className="text-link-default hover:text-link-hover underline underline-offset-4"
+              >
+                creative services
+              </Link>{" "}
+              and{" "}
+              <Link
+                href="/solutions"
+                className="text-link-default hover:text-link-hover underline underline-offset-4"
+              >
+                merchandise solutions
+              </Link>{" "}
+              behind this work, or read{" "}
+              <Link
+                href="/about"
+                className="text-link-default hover:text-link-hover underline underline-offset-4"
+              >
+                about Blossom Rocket
+              </Link>
+              .
+            </p>
           </header>
 
           {/* Logo Marquee */}
@@ -164,9 +188,7 @@ export default function WorkPage() {
             itemScope
             itemType="https://schema.org/ItemList"
           >
-            <Suspense>
-              <PortfolioGrid items={workItems} />
-            </Suspense>
+            <PortfolioGrid items={workItems} />
           </div>
         </div>
       </div>

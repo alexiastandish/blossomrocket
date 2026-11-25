@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import CardLinks from "@/components/section/CardLinks";
 import { DEFAULT_OG_IMAGE } from "@/lib/constants/entities";
 import Hero from "@/components/Hero";
 
@@ -330,6 +331,23 @@ export default function SwagStorefronts() {
                 topic: "Step 6 — Review and Submit",
                 description:
                   "Review your logos, colors, and pairings, then submit. The SplashBrands logo team follows up if anything needs clarifying.",
+              },
+            ]}
+          />
+          <CardLinks
+            label="Compare merchandise programs:"
+            links={[
+              {
+                label: "Company Stores for larger programs",
+                href: "/solutions/company-stores",
+              },
+              {
+                label: "Merchandise & Promotional Products",
+                href: "/solutions/merchandise-and-promotional-products",
+              },
+              {
+                label: "How to Choose a Company Store Platform",
+                href: "/blog/how-to-choose-a-company-store-platform",
               },
             ]}
           />

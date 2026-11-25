@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import CardLinks from "@/components/section/CardLinks";
 import { DEFAULT_OG_IMAGE } from "@/lib/constants/entities";
 import { CalendlyButton } from "@/components/CalendlyButton";
 import { CTASlots } from "@/components/CTASlot";
@@ -191,6 +192,23 @@ export default function page() {
           ]}
         />
         <CardCallout heading="First impressions, onboarding, and partnerships deserve more than a logo on a box." />
+        <CardLinks
+          label="Related programs and guides:"
+          links={[
+            {
+              label: "Company Stores for ongoing employee merchandise",
+              href: "/solutions/company-stores",
+            },
+            {
+              label: "Custom Apparel for Employees",
+              href: "/blog/custom-apparel-for-employees",
+            },
+            {
+              label: "Promotional Products People Actually Find Useful",
+              href: "/blog/promotional-products-that-people-actually-find-useful",
+            },
+          ]}
+        />
       </SectionLayout>
 
       {/* Section 3: centralized-kit-management */}
