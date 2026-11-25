@@ -415,12 +415,6 @@ export default function Nav() {
                         width: "260px",
                       }}
                     >
-                      {!isFirst && (
-                        <div
-                          className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 rotate-45 bg-white border-l border-t border-[rgba(24,24,27,0.08)]"
-                          aria-hidden="true"
-                        />
-                      )}
                       <ul
                         className="relative bg-white rounded-2xl border border-[rgba(24,24,27,0.08)] overflow-hidden list-none p-1.5"
                         style={{
