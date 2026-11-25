@@ -54,12 +54,33 @@ export const metadata: Metadata = {
 const siteSchema = [
   {
     "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${SITE_URL}/#website`,
+    name: "Blossom Rocket",
+    url: SITE_URL,
+    inLanguage: "en-US",
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "@id": `${SITE_URL}/#organization`,
     name: "Blossom Rocket",
     url: SITE_URL,
     description: SITE_DESCRIPTION,
-    knowsAbout: KNOWS_ABOUT,
+    logo: `${SITE_URL}/logo.jpg`,
+    sameAs: [
+      "https://www.linkedin.com/company/blossom-rocket",
+      "https://www.instagram.com/blossomrocketstudio/",
+    ],
+    knowsAbout: [
+      ...KNOWS_ABOUT,
+      "Custom Apparel",
+      "Employee Apparel Programs",
+      "Promotional Items",
+      "Corporate Gifts",
+      "Branded Merchandise Fulfillment",
+    ],
     makesOffer: [
       {
         "@type": "Offer",
@@ -117,11 +138,7 @@ const siteSchema = [
     "@id": `${SITE_URL}/#splashbrands-president`,
     name: "Elissa Turner",
     jobTitle: "President",
-    worksFor: {
-      "@type": "Organization",
-      name: "SplashBrands",
-      url: "https://splashbrands.com",
-    },
+    worksFor: { "@id": "https://splashbrands.com/#organization" },
     sameAs: ["https://www.linkedin.com/in/elissaberchelmann/"],
     knowsAbout: [
       "Online Company Store Programs",
@@ -134,6 +151,16 @@ const siteSchema = [
     ],
     description:
       "Elissa Turner is the President of SplashBrands, where they help marketing and sales teams centralize branded merchandise ordering through on-demand company store programs — reducing overspending, eliminating inventory risk, and removing the administrative burden of sourcing, storing, and distributing company swag.",
+  },
+  {
+    // Separate entity so crawlers don't conflate the platform with the studio.
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://splashbrands.com/#organization",
+    name: "SplashBrands",
+    url: "https://splashbrands.com",
+    description:
+      "SplashBrands provides the company store technology, in-house decoration, on-demand production, and fulfillment that power Blossom Rocket merchandise programs.",
   },
 ];
 

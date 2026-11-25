@@ -146,12 +146,7 @@ export default function FAQAccordionGrouped({
                         className={`border-t ${activeTokens.border} mx-5 md:mx-7`}
                       />
                     )}
-                    <div
-                      id={item.id}
-                      itemScope
-                      itemType="https://schema.org/Question"
-                      className="relative px-5 md:px-7"
-                    >
+                    <div id={item.id} className="relative px-5 md:px-7">
                       <span
                         aria-hidden="true"
                         className="absolute left-0 top-0 bottom-0 w-[3px] origin-top transition-transform duration-300"
@@ -169,7 +164,6 @@ export default function FAQAccordionGrouped({
                         className="w-full flex items-center justify-between gap-4 py-5 text-left group"
                       >
                         <span
-                          itemProp="name"
                           className={`font-medium pr-4 transition-colors duration-200 ${activeTokens.text}`}
                         >
                           {item.question}
@@ -203,12 +197,9 @@ export default function FAQAccordionGrouped({
                       <AnimatedAnswer open={open}>
                         <div
                           id={`${item.id}-answer`}
-                          itemScope
-                          itemProp="acceptedAnswer"
-                          itemType="https://schema.org/Answer"
                           className={`pb-6 text-sm leading-relaxed max-w-2xl ${activeTokens.itemDesc}`}
                         >
-                          <p itemProp="text">{item.answer}</p>
+                          <p>{item.answer}</p>
                         </div>
                       </AnimatedAnswer>
                     </div>

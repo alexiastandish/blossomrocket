@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { getPreview } from "@/lib/utils/getPreview";
@@ -8,6 +9,11 @@ import { PreviewNav } from "@/components/preview/PreviewNav";
 import { PreviewContent } from "@/components/preview/PreviewContent";
 
 type Props = { params: Promise<{ slug: string; token: string }> };
+
+// Prospect-specific store concepts — private links, never search results.
+export const metadata: Metadata = {
+  robots: { index: false, follow: false },
+};
 
 export default async function PreviewPage({ params }: Props) {
   const { slug, token } = await params;

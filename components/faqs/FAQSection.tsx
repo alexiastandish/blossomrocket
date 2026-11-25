@@ -41,8 +41,6 @@ export default function FAQSection({
         activeTokens.text,
       ].join(" ")}
       aria-labelledby={`${schemaId}-heading`}
-      itemScope
-      itemType="https://schema.org/FAQPage"
     >
       {/* Server-rendered JSON-LD — present in initial HTML for crawlers/AI search */}
       <script

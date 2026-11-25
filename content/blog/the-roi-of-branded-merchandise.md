@@ -101,7 +101,7 @@ These indicators do not prove that merchandise created employee engagement by it
 
 A candidate or employee forms an impression of a company through many small experiences. Branded merchandise can contribute to that impression during recruiting and onboarding by making the organization feel prepared, intentional, and welcoming.
 
-A new-hire kit might include a comfortable branded shirt or sweatshirt, a notebook and writing tool, a useful piece of drinkware, a laptop or desk accessory, a short welcome message, and instructions for accessing the company store.
+A new-hire kit might include a comfortable branded shirt or sweatshirt, a notebook and writing tool, a useful piece of drinkware, a laptop or desk accessory, a short welcome message, and instructions for accessing the company store. Blossom Rocket's [On-Demand Kits](/solutions/on-demand-kits) package this kind of introduction — merchandise, personalized print, and packaging — and can ship it directly to each new hire.
 
 The goal is not to overwhelm the recipient with products. It is to create a coordinated introduction to the company. Merchandise can also solve practical needs — uniforms, travel gear, work bags, protective products, or role-specific equipment may help an employee begin work more effectively.
 
@@ -297,3 +297,4 @@ Related Blossom Rocket resources:
 - [Promotional Products That People Actually Find Useful](/blog/promotional-products-that-people-actually-find-useful)
 - [Explore Blossom Rocket's Brand Systems services](/services/brand-systems)
 - [Explore Blossom Rocket's Company Stores services](/solutions/company-stores)
+- [Explore On-Demand Kits for onboarding and corporate gifting](/solutions/on-demand-kits)

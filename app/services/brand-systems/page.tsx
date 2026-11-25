@@ -268,7 +268,7 @@ export default function page() {
       <FAQSection
         groups={faqs}
         theme="dark"
-        pageUrl="https://blossomrocket.studio/services/brand-identity"
+        pageUrl="https://blossomrocket.studio/services/brand-systems"
       />
     </div>
   );

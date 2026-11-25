@@ -334,11 +334,7 @@ export default function MarketingAssets() {
       </SectionLayout>
 
       {/* ── Section 7: FAQs ── */}
-      <FAQSection
-        groups={faqs}
-        theme="dark"
-        pageUrl="https://blossomrocket.studio/services/digital-design"
-      />
+      <FAQSection groups={faqs} theme="dark" pageUrl={PAGE_URL} />
     </div>
   );
 }

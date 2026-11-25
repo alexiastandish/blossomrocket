@@ -9,6 +9,11 @@
                 "answer": "A Company Store is a centralized online storefront where approved employees, teams, departments, locations, and customers order branded merchandise, apparel, promotional products, and marketing materials from one pre-approved catalog. Blossom Rocket Company Stores are powered through SplashBrands, with no order minimums, no inventory to buy or hold, and orders typically shipping in 2 to 5 days."
             },
             {
+                "id": "how-does-a-company-store-work",
+                "question": "How does a Company Store work?",
+                "answer": "A Company Store works in five steps. First, Blossom Rocket and your team define the approved logos, product colors, and product catalog. Second, SplashBrands builds the online store around those approved options, along with any order approvals, budgets, or user groups the program needs. Third, employees, teams, departments, or locations order what they need — one item or many. Fourth, SplashBrands produces and decorates each order in-house after it is placed, so no finished inventory is held. Fifth, orders ship directly to the person or location, typically within 2–5 days for applicable orders."
+            },
+            {
                 "id": "why-do-businesses-use-company-stores",
                 "question": "Why do businesses use Company Stores?",
                 "answer": "Businesses use Company Stores to centralize merchandise management, improve brand consistency, simplify purchasing, and support employee, customer, and event programs. Company Stores help organizations manage branded products more efficiently across teams and locations."
@@ -17,6 +22,16 @@
                 "id": "who-benefits-from-a-company-store",
                 "question": "Who benefits from a Company Store?",
                 "answer": "Organizations with multiple employees, departments, locations, recurring merchandise needs, event programs, or promotional product initiatives often benefit from a centralized Company Store solution."
+            },
+            {
+                "id": "how-does-branded-merchandise-fulfillment-work-with-a-company-store",
+                "question": "How does branded merchandise fulfillment work with a Company Store?",
+                "answer": "When someone places an order in a Blossom Rocket Company Store, SplashBrands produces the item on demand using in-house decoration methods such as embroidery, direct-to-garment printing, screen printing, and engraving, then ships the order, typically within 2 to 5 days. Because products are made after they are ordered, there is no warehouse inventory to buy, store, or distribute internally."
+            },
+            {
+                "id": "can-employees-order-uniforms-through-a-company-store",
+                "question": "Can employees order uniforms and work apparel through a Company Store?",
+                "answer": "Yes. Company Stores are commonly used for branded employee apparel such as polos, shirts, jackets, and headwear, so employees can order approved items in their own sizes without a bulk uniform order. Specialized protective, regulated, or industrial uniform requirements should be confirmed with Blossom Rocket before they are added to a store."
             }
         ],
         "cta": {

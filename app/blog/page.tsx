@@ -3,11 +3,20 @@ import { getAllArticles } from "@/lib/utils/blog";
 import { BlogIndexClient } from "@/components/blog/BlogIndexClient";
 import { Suspense } from "react";
 
+const META_DESCRIPTION =
+  "Practical insights on branded merchandise, promotional products, company stores, branding, and design—from merchandise ROI and product selection to identity systems.";
+
 export const metadata: Metadata = {
   title: "The Blossom Blog | Blossom Rocket",
-  description:
-    "Practical insights on branding, design, and growth—from identity systems to the real-world execution that brings brands to life.",
+  description: META_DESCRIPTION,
   alternates: { canonical: "https://blossomrocket.studio/blog" },
+  openGraph: {
+    title: "The Blossom Blog | Blossom Rocket",
+    description: META_DESCRIPTION,
+    url: "https://blossomrocket.studio/blog",
+    siteName: "Blossom Rocket",
+    type: "website",
+  },
 };
 
 export default async function BlogIndexPage() {

@@ -116,7 +116,7 @@ export default function Solutions() {
             </em>
           </>
         }
-        subtext="Blossom Rocket connects branded merchandise, online storefronts, production, personalization, and fulfillment through one integrated offering. Start with a full Company Store program, a Co-Branding program, or a self-serve Swag Storefront, and add standalone branded merchandise, personalized On-Demand Kits, or custom print and environmental production as needed."
+        subtext="Start with a Company Store, a Co-Branding program, or a self-serve Swag Storefront, then add branded merchandise, On-Demand Kits, or print production as needed."
         listHeading="Blossom Rocket solutions include:"
         items={[
           {
@@ -142,7 +142,7 @@ export default function Solutions() {
           {
             topic: "On-Demand Kits",
             description:
-              "Mix and match products from your catalog in a custom-printed box. Kits deliver a premium gift-ready solution.",
+              "Branded kits for onboarding, corporate gifts, and appreciation, with or without a custom box.",
           },
           {
             topic: "Print & Environmental",
@@ -168,7 +168,7 @@ export default function Solutions() {
             <em className="grad-text not-italic">Through SplashBrands.</em>
           </>
         }
-        subtext="Blossom Rocket helps businesses implement Company Store solutions through SplashBrands that centralize branded merchandise, simplify ordering, maintain brand consistency, and support scalable employee, customer, and event programs."
+        subtext="Blossom Rocket implements Company Stores through SplashBrands to centralize branded merchandise and keep every order on brand."
         ctaSlot={
           <CTASlots
             theme="light"
@@ -247,7 +247,7 @@ export default function Solutions() {
             variant: "primary",
           },
         ]}
-        subtext="Blossom Rocket Co-Branding programs are powered by SplashBrands' multi-logo storefront technology. Each program gives an organization ongoing access to merchandise configured around multiple approved logos, logo variations, brand colors, and product preferences — so partnerships, divisions, and locations order co-branded product that follows one set of brand rules."
+        subtext="Co-Branding runs on SplashBrands' multi-logo storefront technology, so partnerships, divisions, and locations order co-branded product that follows one set of brand rules."
         schemaItems={[
           { topic: "Co-Branded Merchandise" },
           { topic: "Multiple Approved Logos & Logo Variations" },
@@ -290,7 +290,7 @@ export default function Solutions() {
             variant: "primary",
           },
         ]}
-        subtext="Blossom Rocket Swag Storefronts run on the same SplashBrands storefront technology as Co-Branding, but carry a single organization's own approved logo and its variations. Each storefront gives a business ongoing, self-serve access to merchandise configured around its brand colors and product preferences — without the commitment of a full Company Store program."
+        subtext="Swag Storefronts use the same SplashBrands technology as Co-Branding but carry only your own logo, giving self-serve merchandise access without a full Company Store commitment."
         schemaItems={[
           { topic: "Self-Serve Setup" },
           { topic: "Approved Logo & Logo Variations" },
@@ -403,7 +403,7 @@ export default function Solutions() {
             </em>
           </>
         }
-        subtext="Blossom Rocket provides Print & Environmental Design solutions that help businesses apply their Brand Identity across printed materials, signage, packaging, vehicle graphics, and branded environments — creating consistent customer-facing materials across every location, department, campaign, and vendor."
+        subtext="Print & Environmental Design applies your brand identity to printed materials, signage, packaging, vehicle graphics, and branded environments across every location."
         ctas={[
           {
             label: "Explore Blossom Rocket's Print & Environmental Solutions",
@@ -483,27 +483,27 @@ export default function Solutions() {
           {
             topic: "New Hire & Onboarding",
             description:
-              "New hire and onboarding kits can combine personalized welcome letters, variable-data business cards, branded apparel and desk essentials, custom inserts, packaging, and personalization across print and products.",
+              "Welcome letters, business cards, branded apparel, and desk essentials for new employees.",
           },
           {
             topic: "Customer & Sales Programs",
             description:
-              "Customer and sales programs use branded kits for outreach and relationship-building initiatives that combine merchandise, print, packaging, and fulfillment.",
+              "Branded kits for customer outreach and relationship building.",
           },
           {
             topic: "Supplier & Partner Kits",
             description:
-              "Supplier and partner kits can include personalized appreciation letters, variable-data recognition cards, co-branded merchandise, seasonal gifts, custom box interiors, and direct-to-recipient shipping.",
+              "Appreciation letters, co-branded merchandise, and seasonal gifts shipped directly to partners.",
           },
           {
             topic: "Events & Occasions",
             description:
-              "Event and milestone programs can support baby and family celebrations, birthdays and anniversaries, employee recognition and awards, holiday campaigns, seasonal programs, and other employee or client occasions.",
+              "Recognition, anniversaries, holidays, and other employee or client milestones.",
           },
           {
             topic: "Flexible Formats",
             description:
-              "Flexible formats include branded tote or bag kits, curated merchandise bundles without a box, event-ready handout kits, and seasonal appreciation shipments for different budgets, scales, and distribution needs.",
+              "Tote kits, no-box bundles, and handout kits for different budgets and scales.",
           },
         ]}
       />

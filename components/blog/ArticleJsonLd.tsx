@@ -16,10 +16,11 @@ export function ArticleJsonLd({ article }: { article: BlogArticleData }) {
     },
     publisher: {
       "@type": "Organization",
+      "@id": "https://blossomrocket.studio/#organization",
       name: "Blossom Rocket",
       logo: {
         "@type": "ImageObject",
-        url: "https://blossomrocket.studio/logo.png",
+        url: "https://blossomrocket.studio/logo.jpg",
       },
     },
     mainEntityOfPage: {

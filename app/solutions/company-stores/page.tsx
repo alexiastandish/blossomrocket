@@ -31,11 +31,14 @@ const faqs = rawFaqs as FAQGroup[];
 
 export const metadata: Metadata = {
   title:
-    "Company Stores — On-Demand Branded Merchandise Stores | Blossom Rocket",
+    "Company Stores — Online Company Stores for Employees & Teams | Blossom Rocket",
   description:
-    "Blossom Rocket Company Stores centralize branded merchandise ordering across teams, departments, and locations. Thousands of pre-approved products, no order minimums, no inventory, typically shipping in 2–5 days — powered by SplashBrands.",
+    "Online company stores for employees, teams, and locations. Centralized branded merchandise ordering with on-demand production and fulfillment through SplashBrands — no order minimums, no inventory, typically shipping in 2–5 days.",
   keywords: [
     "Company Stores",
+    "Online Company Store",
+    "Online Company Store for Employees",
+    "Branded Merchandise Fulfillment",
     "Branded Merchandise Company Stores",
     "Corporate Merchandise Stores",
     "Employee Merchandise Stores",
@@ -51,7 +54,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title:
-      "Company Stores — On-Demand Branded Merchandise Stores | Blossom Rocket",
+      "Company Stores — Online Company Stores for Employees & Teams | Blossom Rocket",
     description:
       "A Company Store transforms branded merchandise from individual purchasing decisions into a scalable brand management system.",
     url: "https://blossomrocket.studio/solutions/company-stores",
@@ -72,12 +75,14 @@ const serviceSchema = {
   url: PAGE_URL,
   provider: {
     "@type": "Organization",
+    "@id": "https://blossomrocket.studio/#organization",
     name: "Blossom Rocket",
     url: "https://blossomrocket.studio",
   },
   description:
     "Blossom Rocket helps businesses implement Company Store solutions through SplashBrands that simplify ordering, improve brand consistency, and support scalable merchandise programs.",
   alternateName: [
+    "Online Company Stores",
     "Branded Merchandise Company Stores",
     "Corporate Merchandise Stores",
     "On-Demand Company Stores",
@@ -182,7 +187,7 @@ export default function CompanyStores() {
               <em className="grad-text not-italic">For Branded Merchandise.</em>
             </>
           }
-          body="A Company Store is a centralized online storefront that provides employees, customers, teams, departments, and event organizers with access to approved branded merchandise, apparel, promotional products, and marketing materials. Blossom Rocket helps businesses implement Company Store solutions through SplashBrands that simplify ordering, improve brand consistency, and support scalable merchandise programs."
+          body="A Company Store is a centralized online storefront where employees, customers, teams, and departments order approved branded merchandise, apparel, and promotional products. Blossom Rocket implements Company Stores through SplashBrands to simplify ordering and keep every order on brand."
           ctaSlot={
             <CTASlots
               theme="dark"
@@ -212,7 +217,7 @@ export default function CompanyStores() {
               <em className="grad-text not-italic"> Company Stores.</em>
             </>
           }
-          subtext="As organizations grow, branded merchandise often becomes fragmented across departments, locations, vendors, and events. Different teams order different products, branding becomes inconsistent, and approval processes become difficult to manage. Blossom Rocket helps businesses implement Company Stores that centralize merchandise management while providing employees, customers, and teams with access to approved branded products."
+          subtext="As organizations grow, merchandise splinters across departments, locations, and vendors, and branding drifts. A Company Store brings it back to one place with approved products for everyone."
           pageUrl={PAGE_URL}
           schemaItems={[
             { topic: "Centralize Branded Merchandise" },
@@ -273,7 +278,7 @@ export default function CompanyStores() {
               <em className="grad-text not-italic">With SplashBrands.</em>
             </>
           }
-          subtext="Blossom Rocket helps businesses create the brand systems, merchandise programs, and creative assets that support successful Company Store initiatives. SplashBrands provides the technology, manufacturing, fulfillment, and operational infrastructure that powers those programs. Together, Blossom Rocket and SplashBrands help businesses create scalable merchandise solutions that support employees, customers, departments, events, and locations through a centralized Company Store platform."
+          subtext="Blossom Rocket creates the brand systems, merchandise programs, and creative assets behind a Company Store. SplashBrands provides the technology, manufacturing, and fulfillment that run it."
           cardHeading="Together, Blossom Rocket and SplashBrands cover:"
           cardVariant="list"
           items={[
@@ -375,7 +380,7 @@ export default function CompanyStores() {
               {
                 topic: "No Inventory Requirements",
                 description:
-                  "SplashBrands uses an on-demand production model that allows products to be manufactured when they are ordered, reducing inventory requirements and inventory liability.",
+                  "Products are made when they are ordered, so there is no inventory to buy or hold.",
               },
               {
                 topic: "No Minimum Orders",
@@ -385,12 +390,12 @@ export default function CompanyStores() {
               {
                 topic: "In-House Manufacturing",
                 description:
-                  "SplashBrands operates in-house production capabilities including embroidery, direct-to-garment printing, engraving, dye sublimation, wide-format printing, screen printing, UV printing, and additional decoration methods. This provides greater control over quality, consistency, and production workflows.",
+                  "Embroidery, direct-to-garment, screen, UV, and wide-format printing, plus engraving and dye sublimation, all done in-house for tighter quality control.",
               },
               {
                 topic: "Company Store Technology",
                 description:
-                  "SplashBrands combines e-commerce functionality with tools designed specifically for branded merchandise programs. Administrators can manage products, approvals, user groups, promotions, reporting, and communications through a centralized platform.",
+                  "Administrators manage products, approvals, user groups, promotions, reporting, and communications in one platform.",
               },
               {
                 topic: "Store Marketing Tools",
@@ -439,9 +444,11 @@ export default function CompanyStores() {
             items={[
               {
                 label: "Employee Apparel Programs",
+                href: "/blog/custom-apparel-for-employees",
               },
               {
                 label: "Promotional Product Programs",
+                href: "/solutions/merchandise-and-promotional-products",
               },
               {
                 label: "Event Merchandise Programs",
@@ -454,9 +461,11 @@ export default function CompanyStores() {
               },
               {
                 label: "Onboarding Kit Programs",
+                href: "/solutions/on-demand-kits",
               },
               {
                 label: "Multi-Location Brand Programs",
+                href: "/solutions/co-branding",
               },
               {
                 label: "Department Merchandise Programs",
@@ -464,11 +473,7 @@ export default function CompanyStores() {
             ]}
           />
         </SectionLayout>
-        <FAQSection
-          groups={faqs}
-          theme="dark"
-          pageUrl="https://blossomrocket.studio/solutions/company-stores"
-        />
+        <FAQSection groups={faqs} theme="dark" pageUrl={PAGE_URL} />
       </div>
     </>
   );

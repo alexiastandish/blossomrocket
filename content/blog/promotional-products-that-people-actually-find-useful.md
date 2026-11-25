@@ -279,3 +279,4 @@ Related resources:
 - [Learn how Brand Systems create consistency across every touchpoint](/services/brand-systems)
 - [Explore Print and Environmental Design](/services/print-and-environmental-design)
 - [Learn how Company Stores simplify branded merchandise programs](/solutions/company-stores)
+- [See how On-Demand Kits combine gifts, personalized print, and shipping for client and employee appreciation](/solutions/on-demand-kits)

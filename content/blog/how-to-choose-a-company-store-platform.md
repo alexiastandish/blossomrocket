@@ -55,7 +55,7 @@ Some platforms are **brokers**: they take your order and pass it to a separate d
 
 Other platforms do **in-house production** — embroidery, direct-to-garment printing, screen printing, UV and dye-sublimation, engraving — under one roof. That generally means tighter control over lead time and quality, because there's no handoff to a third party in the middle of your order.
 
-If a platform's answer to "who makes this" is vague, that's worth pressing on. Blossom Rocket's Company Stores, powered through SplashBrands, use in-house decoration methods specifically so fulfillment doesn't depend on an outside vendor's schedule — orders typically ship in 2 to 5 days.
+If a platform's answer to "who makes this" is vague, that's worth pressing on. Blossom Rocket's [Company Stores](/solutions/company-stores), powered through SplashBrands, use in-house decoration methods specifically so fulfillment doesn't depend on an outside vendor's schedule — orders typically ship in 2 to 5 days.
 
 ## Approval Controls and Budgets, Not Just a Catalog
 
@@ -69,7 +69,7 @@ These aren't exotic asks — they're standard procurement questions — but a su
 
 ## Does It Handle More Than One Logo?
 
-If your organization only ever orders merchandise with its own single logo, skip this section. But if merchandise needs to carry more than one approved mark — a partner's logo, a division's logo, a location's logo, alongside your own — confirm the platform supports **multiple logo variations natively**. That means uploading more than one approved logo, pairing each one with its own approved product colors, and letting the system (not a human, order by order) keep the combinations correct.
+If your organization only ever orders merchandise with its own single logo, skip this section. But if merchandise needs to carry more than one approved mark — a partner's logo, a division's logo, a location's logo, alongside your own — confirm the platform supports **multiple logo variations natively**. That means uploading more than one approved logo, pairing each one with its own approved product colors, and letting the system (not a human, order by order) keep the combinations correct. Blossom Rocket's [Co-Branding](/solutions/co-branding) programs are built around this model: each approved logo is configured once with its own approved product colors.
 
 Platforms that weren't built for this usually make you recreate the setup manually every time a new logo combination comes up, which quietly reintroduces the inconsistency a company store was supposed to eliminate.
 
