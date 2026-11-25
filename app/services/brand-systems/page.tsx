@@ -98,7 +98,7 @@ export default function page() {
             ]}
           />
         }
-        subtext="Blossom Rocket helps businesses establish brand systems that operate as a rce of truth which define how brand assets should be created, managed, and applied. The result is a more consistent brand experience across both digital and physical channels."
+        subtext="Blossom Rocket helps businesses establish brand systems that operate as a single source of truth that defines how brand assets should be created, managed, and applied. The result is a more consistent brand experience across both digital and physical channels."
         schemaItems={[
           { topic: "Marketing teams create campaign assets." },
           { topic: "Sales teams create presentations." },
@@ -133,7 +133,7 @@ export default function page() {
             <em className="grad-text not-italic">Built for Growth.</em>
           </>
         }
-        subtext="Brand Systems help businesses scale without sacrificing consistency. Blossom Rocket Brand System services are designed to help organizations create repeatable processes that support future growth. The result is a more consistent brand experience across both digital and physical channels."
+        subtext="Brand Systems help businesses scale without sacrificing consistency. Blossom Rocket Brand System services are designed to help organizations create repeatable processes that support future growth. The result is a more consistent brand experience across both digital and physical channels. That matters because every new employee, agency, or vendor otherwise has to guess how the brand should look."
         schemaItems={[
           { topic: "Maintain visual consistency" },
           { topic: "Reduce duplicate work" },

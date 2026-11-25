@@ -105,7 +105,7 @@ export default function page() {
             logo.
           </>
         }
-        subtext="A complete Brand Identity includes the visual systems that define how a business appears across digital and physical experience. The logo is just one component of a brand system."
+        subtext="A complete Brand Identity includes the visual systems that define how a business appears across digital and physical experience. The logo is just one component of a brand system. Because a logo alone can't answer how color, type, and imagery should be used, the full identity system is what keeps every application consistent."
         pageUrl="https://blossomrocket.studio/services#brand-identity"
       >
         <div className="self-stretch order-2 lg:order-1 flex items-stretch">

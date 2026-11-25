@@ -173,7 +173,7 @@ export default function page() {
             ]}
           />
         }
-        subtext="On-Demand Kits bring branded products, personalization, packaging, and fulfillment into one program, creating stronger first impressions for employees, customers, and partners."
+        subtext="On-Demand Kits bring branded products, personalization, packaging, and fulfillment into one program, creating stronger first impressions for employees, customers, and partners. Because each kit is produced and shipped on demand, a program can send one kit to a new hire or hundreds to a customer list without pre-buying inventory."
         schemaItems={[
           { topic: "Brand Experience" },
           { topic: "Operational Efficiency" },

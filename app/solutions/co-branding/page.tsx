@@ -221,7 +221,7 @@ export default function CoBranding() {
             </>
           }
           subtext={
-            "Every partnership, division, and location brings its own logo files, and every order reopens the same decisions about which mark, size, and color to use. Co-Branding settles those decisions once and helps businesses:"
+            "Every partnership, division, and location brings its own logo files, and every order reopens the same decisions about which mark, size, and color to use. Co-Branding settles those decisions once and helps businesses: Co-Branding settles those decisions once, because each approved logo is mapped in advance to the products and colors it may appear on."
           }
           pageUrl={PAGE_URL}
           schemaItems={[

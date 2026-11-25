@@ -73,7 +73,7 @@ export default function Solutions() {
             <em className="grad-text not-italic">Branded Merchandise.</em>
           </>
         }
-        body="Blossom Rocket helps organizations centralize, automate, and scale branded merchandise. Company Stores and Co-Branding programs powered by SplashBrands give teams, departments, and locations on-demand access to pre-approved products — supported by promotional products, On-Demand Kits, and print production for everything a storefront does not cover."
+        body="Blossom Rocket helps organizations centralize, automate, and scale branded merchandise. Company Stores and Co-Branding programs powered by SplashBrands give teams, departments, and locations on-demand access to pre-approved products — supported by promotional products, On-Demand Kits, and print production for everything a storefront does not cover. Because products are made after an order is placed, there is no inventory to buy, store, or write off."
         ctaSlot={
           <CTASlots
             theme="dark"

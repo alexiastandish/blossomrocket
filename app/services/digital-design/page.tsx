@@ -89,7 +89,7 @@ export default function page() {
             that scale.
           </>
         }
-        subtext="As businesses grow, websites, landing pages, and digital experiences often become inconsistent and difficult to maintain. Blossom Rocket helps organizations create cohesive digital experiences through website design, user interface design, and scalable design systems that support long-term growth, usability, and brand consistency."
+        subtext="As businesses grow, websites, landing pages, and digital experiences often become inconsistent and difficult to maintain. Blossom Rocket helps organizations create cohesive digital experiences through website design, user interface design, and scalable design systems that support long-term growth, usability, and brand consistency. It happens because pages are built at different times by different people without shared components, so a component library fixes the cause instead of the symptoms."
         ctaSlot={
           <CTASlots
             ctas={[

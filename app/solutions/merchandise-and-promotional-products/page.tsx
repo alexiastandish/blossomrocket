@@ -226,7 +226,7 @@ export default function MerchandiseAndPromotionalProducts() {
               </em>
             </>
           }
-          subtext="Branded apparel, promotional products, corporate gifts, and event merchandise keep generating exposure long after a campaign, event, or employee initiative ends."
+          subtext="Branded apparel, promotional products, corporate gifts, and event merchandise keep generating exposure long after a campaign, event, or employee initiative ends. That longevity matters because a useful product carries the brand into new places every time it is used."
           ctas={[
             {
               label: "Promotional Products That People Actually Find Useful",

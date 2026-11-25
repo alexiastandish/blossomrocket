@@ -257,7 +257,7 @@ export default function page() {
               </em>
             </>
           }
-          subtext="Print & Environmental Design is more than creating printed materials. Blossom Rocket uses Print & Environmental Design to help businesses build recognizable brands across every physical touchpoint where customers, employees, vendors, and partners interact with the organization. Businesses rarely communicate through one printed asset — when these assets are designed independently, Brand Identity becomes inconsistent."
+          subtext="Print & Environmental Design is more than creating printed materials. Blossom Rocket uses Print & Environmental Design to help businesses build recognizable brands across every physical touchpoint where customers, employees, vendors, and partners interact with the organization. Businesses rarely communicate through one printed asset — when these assets are designed independently, Brand Identity becomes inconsistent. Physical materials matter because they stay in customers' hands and spaces long after a digital impression has scrolled away."
           cardHeading="Blossom Rocket develops Print & Environmental Design systems that connect:"
           cardVariant="list"
           items={[

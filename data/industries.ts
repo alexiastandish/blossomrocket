@@ -123,7 +123,7 @@ export const industries: Industry[] = [
       eyebrow: "Powered by SplashBrands",
       headingLead: "Automated Healthcare Merchandise Fulfillment,",
       headingAccent: "Without the Inventory.",
-      body: "Instead of forecasting apparel sizes or buying promotional products in bulk, healthcare teams order approved merchandise as they need it. Blossom Rocket supports the brand and merchandise program, while SplashBrands provides the ordering technology, production, and fulfillment infrastructure.",
+      body: "Instead of forecasting apparel sizes or buying promotional products in bulk, healthcare teams order approved merchandise as they need it. Blossom Rocket supports the brand and merchandise program, while SplashBrands provides the ordering technology, production, and fulfillment infrastructure. This matters in healthcare because staff turnover, new hires, and multiple facilities make apparel sizes and quantities hard to forecast in advance.",
       closing: "Build a more efficient healthcare merchandise program.",
       capabilities: [
         "On-demand production with single-item ordering",
@@ -219,7 +219,7 @@ export const industries: Industry[] = [
       eyebrow: "Powered by SplashBrands",
       headingLead: "On-Demand Swag Fulfillment That",
       headingAccent: "Scales With Your Business.",
-      body: "A centralized company store replaces disconnected swag ordering with approved products, preconfigured artwork, single-item ordering, and direct fulfillment. SplashBrands lets organizations manage merchandise access, ordering permissions, budgets, and approvals with less reliance on inventory, while Blossom Rocket keeps the brand consistent across products, campaigns, and employee experiences.",
+      body: "A centralized company store replaces disconnected swag ordering with approved products, preconfigured artwork, single-item ordering, and direct fulfillment. SplashBrands lets organizations manage merchandise access, ordering permissions, budgets, and approvals with less reliance on inventory, while Blossom Rocket keeps the brand consistent across products, campaigns, and employee experiences. That matters for growing teams because headcount changes faster than a bulk swag order can be planned.",
       closing:
         "Give every team access to your brand, without the operational overhead.",
       capabilities: [
@@ -313,7 +313,7 @@ export const industries: Industry[] = [
       eyebrow: "Powered by SplashBrands",
       headingLead: "Centralized Merchandise Management",
       headingAccent: "Across Every Location.",
-      body: "SplashBrands-powered company stores let industrial organizations standardize branded products, manage access by team or location, configure approval workflows, and order merchandise on demand. Less bulk purchasing and stored inventory means approved apparel and promotional products can reach distributed facilities with consistent branding.",
+      body: "SplashBrands-powered company stores let industrial organizations standardize branded products, manage access by team or location, configure approval workflows, and order merchandise on demand. Less bulk purchasing and stored inventory means approved apparel and promotional products can reach distributed facilities with consistent branding. That matters because crews across plants and shifts need consistent, correctly branded workwear without each site sourcing its own.",
       closing: "One company store. Multiple facilities. Consistent branding.",
       capabilities: [
         "Access controls by facility, team, or distributor",
@@ -409,7 +409,7 @@ export const industries: Industry[] = [
       eyebrow: "Powered by SplashBrands",
       headingLead: "Give Every Crew Access to",
       headingAccent: "Approved Branded Merchandise.",
-      body: "SplashBrands company stores provide on-demand branded apparel and promotional products with centralized ordering, approved artwork, and configurable access and approval controls. Instead of coordinating repeated bulk purchases, field service businesses give every team one consistent catalog and order products as crews grow.",
+      body: "SplashBrands company stores provide on-demand branded apparel and promotional products with centralized ordering, approved artwork, and configurable access and approval controls. Instead of coordinating repeated bulk purchases, field service businesses give every team one consistent catalog and order products as crews grow. That matters because field crews change from project to project, so apparel should be ordered when people join instead of stocked in advance.",
       closing: "Simplify branded apparel for every crew, branch, and project.",
       capabilities: [
         "Order the right sizes as new crew members join",
@@ -508,7 +508,7 @@ export const industries: Industry[] = [
       eyebrow: "Powered by SplashBrands",
       headingLead: "Centralized Brand Control.",
       headingAccent: "Flexible Local Ordering.",
-      body: "SplashBrands-powered company stores let franchise networks and multi-location businesses keep approved catalogs while giving individual locations and user groups their own ordering access. On-demand production and single-item ordering reduce the need for location-level inventory, and Blossom Rocket handles merchandise strategy, brand applications, and co-branding so local teams order products that match corporate standards.",
+      body: "SplashBrands-powered company stores let franchise networks and multi-location businesses keep approved catalogs while giving individual locations and user groups their own ordering access. On-demand production and single-item ordering reduce the need for location-level inventory, and Blossom Rocket handles merchandise strategy, brand applications, and co-branding so local teams order products that match corporate standards. That matters because each location needs local flexibility while the brand still has to look the same in every store.",
       closing:
         "One brand system. Multiple locations. One streamlined ordering experience.",
       capabilities: [
@@ -608,7 +608,7 @@ export const industries: Industry[] = [
       eyebrow: "Powered by SplashBrands",
       headingLead: "More Control Over Merchandise,",
       headingAccent: "Branding & Spending.",
-      body: "SplashBrands company stores provide centralized merchandise ordering with configurable budgets, approvals, user groups, and reporting. Financial institutions give branches, employees, and authorized partners access to approved branded products with less manual ordering and inventory, while Blossom Rocket aligns the program with organizational brand standards.",
+      body: "SplashBrands company stores provide centralized merchandise ordering with configurable budgets, approvals, user groups, and reporting. Financial institutions give branches, employees, and authorized partners access to approved branded products with less manual ordering and inventory, while Blossom Rocket aligns the program with organizational brand standards. That matters in financial services because client trust depends on every branch presenting the same approved logo and materials.",
       closing:
         "Simplify merchandise purchasing while protecting brand consistency.",
       capabilities: [

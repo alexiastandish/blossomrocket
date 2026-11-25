@@ -429,7 +429,7 @@ export default function SwagStorefronts() {
               </em>
             </>
           }
-          subtext="Swag Storefronts are designed for a single organization with recurring merchandise needs that does not yet need the infrastructure of a full Company Store. Organizations whose merchandise needs to carry more than one brand's mark — a partner, a division, a location — are better served by Co-Branding."
+          subtext="Swag Storefronts are designed for a single organization with recurring merchandise needs that does not yet need the infrastructure of a full Company Store. Organizations whose merchandise needs to carry more than one brand's mark — a partner, a division, a location — are better served by Co-Branding. That makes them a practical starting point, because recurring orders don't always need the approvals, budgets, and reporting a larger Company Store is built for."
           listHeading="Swag Storefronts Benefit:"
           items={[
             {

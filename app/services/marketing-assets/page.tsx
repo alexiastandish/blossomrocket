@@ -149,7 +149,7 @@ export default function MarketingAssets() {
             </em>
           </>
         }
-        subtext="Many businesses create marketing assets one project at a time. A social media graphic is designed for one campaign. A presentation is created for a sales meeting. An event banner is developed for a trade show. Over time, marketing materials become inconsistent, design styles evolve independently, and assets no longer feel connected to the same brand."
+        subtext="Many businesses create marketing assets one project at a time. A social media graphic is designed for one campaign. A presentation is created for a sales meeting. An event banner is developed for a trade show. Over time, marketing materials become inconsistent, design styles evolve independently, and assets no longer feel connected to the same brand. Because each piece starts from scratch, production stays slow and the brand gradually drifts."
         cardHeading="Blossom Rocket helps businesses build asset systems that support:"
         cardVariant="pills"
         items={[

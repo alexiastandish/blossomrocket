@@ -136,7 +136,7 @@ export default function Home() {
             <em className="grad-text not-italic">Not a Design Agency.</em>
           </>
         }
-        subtext="Traditional promotional product distributors sell merchandise order by order, with minimums and upfront inventory. Creative agencies stop at logos and guidelines. Blossom Rocket runs the ordering environment itself, so what's “approved” actually ships."
+        subtext="Traditional promotional product distributors sell merchandise order by order, with minimums and upfront inventory. Creative agencies stop at logos and guidelines. Blossom Rocket runs the ordering environment itself, so what's “approved” actually ships. That matters because a brand only stays consistent when the people ordering merchandise can't choose an unapproved version."
         schemaItems={[
           { topic: "Centralized Ordering" },
           { topic: "Nothing to Stock" },
@@ -150,7 +150,7 @@ export default function Home() {
         />
         <CardCallout
           heading="Nothing to Stock."
-          body="Products are made after you order, one at a time or thousands — no minimums, no inventory to buy or store, shipped in 2 to 5 days."
+          body="Products are made after you order, one at a time or thousands — no minimums, no inventory to buy or store, typically shipped in 2 to 5 business days, according to SplashBrands."
         />
         <CardCallout
           heading="Always On-Brand."
@@ -219,7 +219,7 @@ export default function Home() {
             <em className="grad-text not-italic">Deploy It Everywhere.</em>
           </>
         }
-        subtext="Most companies hire one firm to design the brand and another to produce the merchandise — which is exactly where consistency breaks down. Blossom Rocket does both, so the brand you design is the brand that ships. Either half works on its own, too."
+        subtext="Most companies hire one firm to design the brand and another to produce the merchandise — which is exactly where consistency breaks down. Blossom Rocket, founded in 2026 by designer and engineer Alexia Standish, does both, so the brand you design is the brand that ships. Either half works on its own, too."
         ctas={[
           {
             label: "Explore Merchandise Solutions",

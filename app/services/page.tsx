@@ -122,7 +122,7 @@ export default function Services() {
             </em>
           </>
         }
-        subtext="Blossom Rocket helps businesses create, manage, and apply consistent brand experiences across identity, digital design, marketing, print, and physical applications. Any service can be engaged on its own — a Company Store or Co-Branding program is never a prerequisite — and the same standards can later be configured into a merchandise program so approved products follow them automatically."
+        subtext="Blossom Rocket helps businesses create, manage, and apply consistent brand experiences across identity, digital design, marketing, print, and physical applications. Any service can be engaged on its own — a Company Store or Co-Branding program is never a prerequisite — and the same standards can later be configured into a merchandise program so approved products follow them automatically. Because every touchpoint follows the same standards, customers recognize the brand whether they meet it on a website, in a sales deck, or on a branded polo."
         listHeading="Blossom Rocket services include:"
         items={[
           {

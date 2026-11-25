@@ -217,7 +217,7 @@ export default function CompanyStores() {
               <em className="grad-text not-italic"> Company Stores.</em>
             </>
           }
-          subtext="As organizations grow, merchandise splinters across departments, locations, and vendors, and branding drifts. A Company Store brings it back to one place with approved products for everyone."
+          subtext="As organizations grow, merchandise splinters across departments, locations, and vendors, and branding drifts. A Company Store brings it back to one place with approved products for everyone. Because every order goes through the same approved catalog, logos, colors, and products stay consistent no matter who places the order."
           pageUrl={PAGE_URL}
           schemaItems={[
             { topic: "Centralize Branded Merchandise" },
@@ -356,7 +356,7 @@ export default function CompanyStores() {
               <em className="grad-text not-italic">Company Store Platform?</em>
             </>
           }
-          subtext="SplashBrands provides a technology-driven Company Store platform built specifically for branded merchandise programs — combining e-commerce functionality with on-demand production, in-house manufacturing, and tools designed for scalable brand management."
+          subtext="SplashBrands provides a technology-driven Company Store platform built specifically for branded merchandise programs — combining e-commerce functionality with on-demand production, in-house manufacturing, and tools designed for scalable brand management. According to SplashBrands, orders from its online stores ship in 2 to 5 business days."
           ctas={[
             {
               label: "Explore SplashBrands Company Store Technology",
