@@ -16,7 +16,7 @@ export function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
       <nav
         aria-label="Breadcrumb"
         style={{ fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif" }}
-        className="mx-auto py-3.5 flex items-center gap-2 text-[13px] font-medium text-ink-faint"
+        className="mx-auto py-3.5 flex items-center gap-2 text-[13px] font-medium text-ink-mid"
       >
         {items.map((item, index) => {
           const isLast = index === items.length - 1;
@@ -43,7 +43,7 @@ export function Breadcrumbs({ items }: { items: BreadcrumbItem[] }) {
                 </span>
               )}
               {!isLast && (
-                <span aria-hidden="true" className="text-ink-faint">
+                <span aria-hidden="true" className="text-ink-mid">
                   ·
                 </span>
               )}

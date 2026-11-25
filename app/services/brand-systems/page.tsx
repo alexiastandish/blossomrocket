@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { DEFAULT_OG_IMAGE } from "@/lib/constants/entities";
 import { CTASlots } from "@/components/CTASlot";
 import FAQSection from "@/components/faqs/FAQSection";
 import Hero from "@/components/Hero";
@@ -8,7 +9,7 @@ import SectionItemList from "@/components/section/ItemList";
 import faqs from "@/data/faqs/services/brand-systems.json";
 
 const META_DESCRIPTION =
-  "Brand Systems from Blossom Rocket — the guidelines, application standards, templates, and asset libraries that keep a brand consistent as it scales across teams, vendors, digital channels, and physical products.";
+  "Brand guidelines, standards, templates, and asset libraries from Blossom Rocket that keep a brand consistent across teams, vendors, and products.";
 
 export const metadata: Metadata = {
   title: "Brand Systems & Brand Guidelines — Blossom Rocket",
@@ -26,6 +27,7 @@ export const metadata: Metadata = {
     canonical: "https://blossomrocket.studio/services/brand-systems",
   },
   openGraph: {
+    images: [DEFAULT_OG_IMAGE],
     title: "Brand Systems & Brand Guidelines — Blossom Rocket",
     description: META_DESCRIPTION,
     url: "https://blossomrocket.studio/services/brand-systems",

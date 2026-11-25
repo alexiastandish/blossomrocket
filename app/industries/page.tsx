@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { DEFAULT_OG_IMAGE } from "@/lib/constants/entities";
 import Hero from "@/components/Hero";
 import { SectionLayout } from "@/components/section";
 import CardLinkGrid from "@/components/section/CardLinkGrid";
@@ -8,8 +9,7 @@ import { industries } from "@/data/industries";
 const SITE_URL = "https://blossomrocket.studio";
 const PAGE_URL = `${SITE_URL}/industries`;
 
-const TITLE =
-  "Company Stores & Branded Merchandise by Industry | Blossom Rocket";
+const TITLE = "Company Stores by Industry | Blossom Rocket";
 const META_DESCRIPTION =
   "Company stores and branded merchandise programs for healthcare, technology, manufacturing, construction, franchise, and financial services organizations.";
 
@@ -24,6 +24,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
+    images: [DEFAULT_OG_IMAGE],
     title: TITLE,
     description: META_DESCRIPTION,
     url: PAGE_URL,

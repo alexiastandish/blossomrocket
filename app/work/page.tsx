@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { DEFAULT_OG_IMAGE } from "@/lib/constants/entities";
 import { WorkItem } from "@/lib/types/work";
 import { ProjectItem } from "@/lib/types/projects";
 import workItemsData from "@/data/work.json";
@@ -6,13 +8,12 @@ import { PortfolioGrid } from "./components/PortfolioGrid";
 import Marquee from "@/components/section/Marquee";
 import logos from "@/data/marquees/logos.json";
 import SectionLabel from "@/components/SectionLabel";
-import { Suspense } from "react";
 // ─── Metadata ────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
   title: "Work — Blossom Rocket",
   description:
-    "A selection of brand identity, digital design, print, and marketing work from Blossom Rocket across industries. Every project is built on a brand system designed to work across every touchpoint.",
+    "Brand identity, digital design, print, and marketing work from Blossom Rocket, each built on a brand system designed for every touchpoint.",
   keywords: [
     "Brand Identity Portfolio",
     "Digital Design Work",
@@ -24,6 +25,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://blossomrocket.studio/work" },
   openGraph: {
+    images: [DEFAULT_OG_IMAGE],
     title: "Work — Blossom Rocket",
     description:
       "A selection of brand identity, digital design, print, and marketing work from Blossom Rocket.",
@@ -147,6 +149,30 @@ export default function WorkPage() {
               marketing assets, print, and promotional products across
               industries.
             </p>
+            <p className="rv text-[14px] text-fg-secondary leading-[1.7] mt-4">
+              Explore the{" "}
+              <Link
+                href="/services"
+                className="text-violet-dark hover:text-link-hover underline underline-offset-4"
+              >
+                creative services
+              </Link>{" "}
+              and{" "}
+              <Link
+                href="/solutions"
+                className="text-violet-dark hover:text-link-hover underline underline-offset-4"
+              >
+                merchandise solutions
+              </Link>{" "}
+              behind this work, or read{" "}
+              <Link
+                href="/about"
+                className="text-violet-dark hover:text-link-hover underline underline-offset-4"
+              >
+                about Blossom Rocket
+              </Link>
+              .
+            </p>
           </header>
 
           {/* Logo Marquee */}
@@ -157,14 +183,8 @@ export default function WorkPage() {
           </div>
 
           {/* ── Portfolio grid ── */}
-          <div
-            className="grid grid-cols-1 md:grid-cols-1 gap-3"
-            itemScope
-            itemType="https://schema.org/ItemList"
-          >
-            <Suspense>
-              <PortfolioGrid items={workItems} />
-            </Suspense>
+          <div className="grid grid-cols-1 md:grid-cols-1 gap-3">
+            <PortfolioGrid items={workItems} />
           </div>
         </div>
       </div>

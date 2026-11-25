@@ -44,7 +44,7 @@ export default function SelectedWorkCard({
           ))}
 
         {item.tags?.[0] && (
-          <span className="absolute top-3 left-3 text-[10px] font-semibold tracking-[0.10em] uppercase text-violet bg-active-bg rounded-full px-2.5 py-1">
+          <span className="absolute top-3 left-3 text-[10px] font-semibold tracking-[0.10em] uppercase text-violet-dark bg-active-bg rounded-full px-2.5 py-1">
             {item.tags[0]}
           </span>
         )}
@@ -56,7 +56,7 @@ export default function SelectedWorkCard({
       >
         {item.title}
       </h3>
-      <p className="text-[11px] font-medium tracking-[0.02em] uppercase text-ink-faint mb-2.5">
+      <p className="text-[11px] font-medium tracking-[0.02em] uppercase text-ink-mid mb-2.5">
         {item.client}
       </p>
       <p className="text-[13px] leading-[1.65] text-ink-mid mb-3 line-clamp-2">

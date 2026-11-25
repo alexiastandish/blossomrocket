@@ -6,6 +6,8 @@ import { TableOfContents } from "@/components/blog/TableOfContents";
 import { KeyTakeaways } from "@/components/blog/KeyTakeaways";
 import { ArticleFaqSection } from "@/components/blog/ArticleFaqSection";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
+import Link from "next/link";
+import { AuthorBio } from "@/components/blog/AuthorBio";
 
 export function BlogArticle({ article }: { article: BlogArticleData }) {
   return (
@@ -20,7 +22,7 @@ export function BlogArticle({ article }: { article: BlogArticleData }) {
         {/* Single H1 — the exact question/topic the article answers */}
         <header className="mb-10 mt-10">
           {article.category && (
-            <span className="inline-block self-start text-[10px] font-semibold tracking-[0.10em] uppercase text-violet bg-active-bg rounded-full px-2.5 py-1 mb-4">
+            <span className="inline-block self-start text-[10px] font-semibold tracking-[0.10em] uppercase text-violet-dark bg-active-bg rounded-full px-2.5 py-1 mb-4">
               {article.category}
             </span>
           )}
@@ -37,8 +39,23 @@ export function BlogArticle({ article }: { article: BlogArticleData }) {
             {article.description}
           </p>
 
-          <div className="flex items-center gap-3 text-[12px] text-ink-faint">
-            <span>{article.author.name}</span>
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[13px] text-ink-mid">
+            <span>
+              By{" "}
+              {article.author.url ? (
+                <Link
+                  href={article.author.url}
+                  className="font-semibold text-ink hover:text-link-hover transition-colors duration-200"
+                >
+                  {article.author.name}
+                </Link>
+              ) : (
+                <span className="font-semibold text-ink">
+                  {article.author.name}
+                </span>
+              )}
+              {article.author.role && <>, {article.author.role}</>}
+            </span>
             <span aria-hidden="true">·</span>
             <time dateTime={article.publishedAt}>
               {new Date(article.publishedAt).toLocaleDateString()}
@@ -87,13 +104,15 @@ export function BlogArticle({ article }: { article: BlogArticleData }) {
             {article.tags.map((tag) => (
               <span
                 key={tag}
-                className="rounded-full bg-active-bg text-violet text-[11px] font-semibold tracking-[0.06em] uppercase px-3 py-1.5"
+                className="rounded-full bg-active-bg text-violet-dark text-[11px] font-semibold tracking-[0.06em] uppercase px-3 py-1.5"
               >
                 {tag}
               </span>
             ))}
           </div>
         )}
+
+        <AuthorBio author={article.author} />
       </article>
     </div>
   );

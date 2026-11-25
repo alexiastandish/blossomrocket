@@ -19,6 +19,10 @@ export interface BlogArticleData {
   slug: string;
   title: string;
   description: string;
+  /** <title> override for search results; falls back to `title` */
+  seoTitle?: string;
+  /** Meta description override; falls back to `description` */
+  seoDescription?: string;
   publishedAt: string;
   updatedAt?: string;
   author: Author;

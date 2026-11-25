@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import CardLinks from "@/components/section/CardLinks";
+import { DEFAULT_OG_IMAGE } from "@/lib/constants/entities";
 import { CalendlyButton } from "@/components/CalendlyButton";
 import { CTASlots } from "@/components/CTASlot";
 import FAQSection from "@/components/faqs/FAQSection";
@@ -13,7 +15,7 @@ const faqs = rawFaqs as FAQGroup[];
 const PAGE_URL = "https://blossomrocket.studio/solutions/on-demand-kits";
 
 const META_DESCRIPTION =
-  "On-Demand Kits from Blossom Rocket combine branded merchandise, personalized print, packaging, and fulfillment for corporate gifts, employee onboarding, client and partner appreciation, and events — shipped direct to recipients or in bulk.";
+  "Branded kits combining merchandise, personalized print, packaging, and fulfillment for onboarding, corporate gifts, client appreciation, and events.";
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -58,8 +60,7 @@ const breadcrumbSchema = {
 };
 
 export const metadata: Metadata = {
-  title:
-    "On-Demand Kits — Corporate Gift & Onboarding Kit Programs | Blossom Rocket",
+  title: "On-Demand Gift & Onboarding Kits | Blossom Rocket",
   description: META_DESCRIPTION,
   keywords: [
     "On-Demand Kits",
@@ -77,8 +78,8 @@ export const metadata: Metadata = {
     canonical: PAGE_URL,
   },
   openGraph: {
-    title:
-      "On-Demand Kits — Corporate Gift & Onboarding Kit Programs | Blossom Rocket",
+    images: [DEFAULT_OG_IMAGE],
+    title: "On-Demand Gift & Onboarding Kits | Blossom Rocket",
     description: META_DESCRIPTION,
     url: PAGE_URL,
     siteName: "Blossom Rocket",
@@ -191,6 +192,23 @@ export default function page() {
           ]}
         />
         <CardCallout heading="First impressions, onboarding, and partnerships deserve more than a logo on a box." />
+        <CardLinks
+          label="Related programs and guides:"
+          links={[
+            {
+              label: "Company Stores for ongoing employee merchandise",
+              href: "/solutions/company-stores",
+            },
+            {
+              label: "Custom Apparel for Employees",
+              href: "/blog/custom-apparel-for-employees",
+            },
+            {
+              label: "Promotional Products People Actually Find Useful",
+              href: "/blog/promotional-products-that-people-actually-find-useful",
+            },
+          ]}
+        />
       </SectionLayout>
 
       {/* Section 3: centralized-kit-management */}

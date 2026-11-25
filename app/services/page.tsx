@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { DEFAULT_OG_IMAGE } from "@/lib/constants/entities";
 import FAQSection from "@/components/faqs/FAQSection";
 import Hero from "@/components/Hero";
 import {
@@ -40,11 +41,10 @@ import { CalendlyButton } from "@/components/CalendlyButton";
 const PAGE_URL = "https://blossomrocket.studio/services";
 
 const META_DESCRIPTION =
-  "Blossom Rocket creative services: Brand Identity, Brand Systems, Digital Design, Marketing Assets, and Print & Environmental Design. Available on their own, or as the foundation for a branded merchandise or Company Store program.";
+  "Brand identity, brand systems, digital design, marketing assets, and print design, on their own or as the foundation for a merchandise program.";
 
 export const metadata: Metadata = {
-  title:
-    "Creative Services — Brand Identity, Brand Systems & Design | Blossom Rocket",
+  title: "Creative Services: Brand Identity & Design | Blossom Rocket",
   description: META_DESCRIPTION,
   keywords: [
     "Brand Identity",
@@ -58,8 +58,8 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title:
-      "Creative Services — Brand Identity, Brand Systems & Design | Blossom Rocket",
+    images: [DEFAULT_OG_IMAGE],
+    title: "Creative Services: Brand Identity & Design | Blossom Rocket",
     description: META_DESCRIPTION,
     url: PAGE_URL,
     siteName: "Blossom Rocket",

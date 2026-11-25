@@ -14,7 +14,7 @@ const merchandiseSolutions: NavLink[] = [
   },
   { href: "/solutions/on-demand-kits", label: "On-Demand Kits" },
   {
-    href: "/solutions/print-and-environmental",
+    href: "/services/print-and-environmental-design",
     label: "Print & Environmental",
   },
 ];
@@ -1600,6 +1600,7 @@ export const links: NavLink[] = [
   { href: "/industries", label: "Industries", dropdown: true },
   { href: "/services", label: "Creative Services", dropdown: true },
   { href: "/work", label: "Work" },
+  { href: "/about", label: "About" },
   { href: "/blog", label: "Blog" },
   {
     href: "https://www.shopblossomrocket.com/",

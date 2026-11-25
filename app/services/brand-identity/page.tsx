@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { DEFAULT_OG_IMAGE } from "@/lib/constants/entities";
 import { CTASlots } from "@/components/CTASlot";
 import FAQSection from "@/components/faqs/FAQSection";
 import Hero from "@/components/Hero";
@@ -20,7 +21,7 @@ import faqs from "@/data/faqs/services/brand-identity.json";
 import Image from "next/image";
 
 const META_DESCRIPTION =
-  "Brand Identity design from Blossom Rocket — logo systems, typography, color, and graphic elements built to apply consistently across digital experiences, print, and branded merchandise.";
+  "Brand identity design from Blossom Rocket: logo systems, typography, color, and graphic elements built to work across digital, print, and merchandise.";
 
 export const metadata: Metadata = {
   title: "Brand Identity Design — Blossom Rocket",
@@ -38,6 +39,7 @@ export const metadata: Metadata = {
     canonical: "https://blossomrocket.studio/services/brand-identity",
   },
   openGraph: {
+    images: [DEFAULT_OG_IMAGE],
     title: "Brand Identity Design — Blossom Rocket",
     description: META_DESCRIPTION,
     url: "https://blossomrocket.studio/services/brand-identity",

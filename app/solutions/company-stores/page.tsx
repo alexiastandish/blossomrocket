@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { DEFAULT_OG_IMAGE } from "@/lib/constants/entities";
 import Hero from "@/components/Hero";
 
 import CardGrid from "@/components/section/CardGrid";
@@ -30,10 +31,9 @@ const faqs = rawFaqs as FAQGroup[];
 // ─── Page metadata ────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
-  title:
-    "Company Stores — Online Company Stores for Employees & Teams | Blossom Rocket",
+  title: "Online Company Stores for Employees & Teams | Blossom Rocket",
   description:
-    "Online company stores for employees, teams, and locations. Centralized branded merchandise ordering with on-demand production and fulfillment through SplashBrands — no order minimums, no inventory, typically shipping in 2–5 days.",
+    "Online company stores for teams and locations, made on demand through SplashBrands. No minimums or inventory; eligible items typically ship in 2–5 days.",
   keywords: [
     "Company Stores",
     "Online Company Store",
@@ -53,8 +53,8 @@ export const metadata: Metadata = {
     canonical: "https://blossomrocket.studio/solutions/company-stores",
   },
   openGraph: {
-    title:
-      "Company Stores — Online Company Stores for Employees & Teams | Blossom Rocket",
+    images: [DEFAULT_OG_IMAGE],
+    title: "Online Company Stores for Employees & Teams | Blossom Rocket",
     description:
       "A Company Store transforms branded merchandise from individual purchasing decisions into a scalable brand management system.",
     url: "https://blossomrocket.studio/solutions/company-stores",
@@ -469,6 +469,10 @@ export default function CompanyStores() {
               },
               {
                 label: "Department Merchandise Programs",
+              },
+              {
+                label: "Company Store Programs by Industry",
+                href: "/industries",
               },
             ]}
           />

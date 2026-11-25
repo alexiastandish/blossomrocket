@@ -42,6 +42,7 @@ export default function FeatureGridCard({
 
       <div
         className={`w-11 h-11 rounded-2xl mb-5 flex items-center justify-center flex-shrink-0 ${t.gridIconBg}`}
+        aria-hidden="true"
       >
         {item.icon}
       </div>
@@ -103,7 +104,6 @@ export default function FeatureGridCard({
   };
 
   const schemaProps = {
-    role: "listitem" as const,
     itemScope: true,
     itemType: "https://schema.org/Service",
   };

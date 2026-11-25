@@ -1,4 +1,6 @@
 import FAQSection from "@/components/faqs/FAQSection";
+import CardLinks from "@/components/section/CardLinks";
+import { DEFAULT_OG_IMAGE } from "@/lib/constants/entities";
 import faqs from "@/data/faqs/services/print.json";
 
 import Hero from "@/components/Hero";
@@ -15,7 +17,7 @@ const PAGE_URL =
 export const metadata: Metadata = {
   title: "Print & Environmental Design — Blossom Rocket",
   description:
-    "Blossom Rocket provides Print & Environmental Design services that help businesses apply their Brand Identity across printed materials, signage, packaging, vehicle graphics, and branded environments.",
+    "Print & Environmental Design from Blossom Rocket applies your brand to print, signage, packaging, vehicle graphics, and branded environments.",
   keywords: [
     "Print Design",
     "Environmental Graphics",
@@ -34,6 +36,7 @@ export const metadata: Metadata = {
       "https://blossomrocket.studio/services/print-and-environmental-design",
   },
   openGraph: {
+    images: [DEFAULT_OG_IMAGE],
     title: "Print & Environmental Design — Blossom Rocket",
     description:
       "Create consistent customer-facing materials across every location, department, campaign, and vendor with Blossom Rocket's Print & Environmental Design services.",
@@ -57,7 +60,7 @@ const serviceSchema = {
     url: "https://blossomrocket.studio",
   },
   description:
-    "Blossom Rocket provides Print & Environmental Design services that help businesses apply their Brand Identity across printed materials, signage, packaging, vehicle graphics, and branded environments.",
+    "Print & Environmental Design from Blossom Rocket applies your brand to print, signage, packaging, vehicle graphics, and branded environments.",
   serviceType: "Print & Environmental Design",
   hasOfferCatalog: {
     "@type": "OfferCatalog",
@@ -146,7 +149,7 @@ export default function page() {
           body={
             <>
               Print & Environmental Design extends branding beyond digital
-              experiences and into physical environments.While websites, social
+              experiences and into physical environments. While websites, social
               media, and marketing campaigns help businesses communicate online,
               physical brand experiences influence how customers, employees, and
               visitors interact with a brand in the real world.{" "}
@@ -218,6 +221,23 @@ export default function page() {
               { label: "Packaging" },
               {
                 label: "Vehicle Graphics",
+              },
+            ]}
+          />
+          <CardLinks
+            label="Related reading:"
+            links={[
+              {
+                label: "Print vs. Digital Marketing: When Each Works Best",
+                href: "/blog/print-vs-digital-marketing",
+              },
+              {
+                label: "Brand Systems for consistent physical applications",
+                href: "/services/brand-systems",
+              },
+              {
+                label: "Merchandise & Promotional Products",
+                href: "/solutions/merchandise-and-promotional-products",
               },
             ]}
           />

@@ -125,7 +125,7 @@ export default function SelectedWorkModal({
             {(item.tags ?? []).map((tag) => (
               <span
                 key={tag}
-                className="text-[10px] font-semibold tracking-[0.10em] uppercase text-violet bg-active-bg rounded-full px-2.5 py-1"
+                className="text-[10px] font-semibold tracking-[0.10em] uppercase text-violet-dark bg-active-bg rounded-full px-2.5 py-1"
               >
                 {tag}
               </span>

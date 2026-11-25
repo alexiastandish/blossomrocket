@@ -28,7 +28,7 @@ const unscrolledTokens: Record<
   }
 > = {
   light: {
-    linkIdle: "text-neutral-400",
+    linkIdle: "text-ink-mid",
     linkActive: "text-neutral-600",
     linkHover: "hover:text-neutral-900",
     ctaBg: "bg-[#18181b]",
@@ -52,7 +52,7 @@ const unscrolledTokens: Record<
 const scrolledTokens = {
   navBg:
     "bg-[rgba(250,250,248,0.92)] backdrop-blur-[18px] border-[rgba(24,24,27,0.10)]",
-  linkIdle: "text-neutral-400",
+  linkIdle: "text-ink-mid",
   linkActive: "text-neutral-600",
   linkHover: "hover:text-neutral-900",
   ctaBg: "bg-[#18181b]",
@@ -253,7 +253,7 @@ export default function Nav() {
                         {dropdownLinks[label]?.map((group, groupIndex) => (
                           <li key={group.title ?? groupIndex}>
                             {group.title && (
-                              <p className="mb-1 mt-2 text-[11px] font-semibold tracking-[0.14em] uppercase text-[rgba(24,24,27,0.42)]">
+                              <p className="mb-1 mt-2 text-[11px] font-semibold tracking-[0.14em] uppercase text-ink-mid">
                                 {group.title}
                               </p>
                             )}
@@ -415,12 +415,6 @@ export default function Nav() {
                         width: "260px",
                       }}
                     >
-                      {!isFirst && (
-                        <div
-                          className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 rotate-45 bg-white border-l border-t border-[rgba(24,24,27,0.08)]"
-                          aria-hidden="true"
-                        />
-                      )}
                       <ul
                         className="relative bg-white rounded-2xl border border-[rgba(24,24,27,0.08)] overflow-hidden list-none p-1.5"
                         style={{
@@ -432,7 +426,7 @@ export default function Nav() {
                           <li key={group.title ?? groupIndex}>
                             {group.title && (
                               <p
-                                className={`px-3.5 pb-1 text-[10px] font-semibold tracking-[0.14em] uppercase text-[rgba(24,24,27,0.42)] ${groupIndex === 0 ? "pt-2.5" : "pt-3.5"}`}
+                                className={`px-3.5 pb-1 text-[10px] font-semibold tracking-[0.14em] uppercase text-ink-mid ${groupIndex === 0 ? "pt-2.5" : "pt-3.5"}`}
                               >
                                 {group.title}
                               </p>

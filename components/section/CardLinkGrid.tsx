@@ -32,7 +32,7 @@ export default function CardLinkGrid({
         </h3>
       )}
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2" role="list">
+      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 list-none">
         {items.map((item) => {
           const content = (
             <>
@@ -53,28 +53,27 @@ export default function CardLinkGrid({
 
           if (item.href) {
             return (
-              <Link
-                key={item.href}
-                href={item.href}
-                role="listitem"
-                className={`group flex items-center justify-between gap-3 rounded-[10px] px-3.5 py-[11px] text-[14px] font-semibold transition-all duration-200 hover:translate-x-0.5 hover:underline ${activeTokens.linkPill}`}
-              >
-                {content}
-              </Link>
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className={`group flex items-center justify-between gap-3 rounded-[10px] px-3.5 py-[11px] text-[14px] font-semibold transition-all duration-200 hover:translate-x-0.5 hover:underline ${activeTokens.linkPill}`}
+                >
+                  {content}
+                </Link>
+              </li>
             );
           }
 
           return (
-            <div
+            <li
               key={item.label}
-              role="listitem"
               className={`flex items-center justify-between gap-3 rounded-[10px] px-3.5 py-[11px] text-[14px] font-semibold ${activeTokens.linkPill}`}
             >
               {content}
-            </div>
+            </li>
           );
         })}
-      </div>
+      </ul>
 
       {footerText && (
         <p

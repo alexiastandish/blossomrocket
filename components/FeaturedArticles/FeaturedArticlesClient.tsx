@@ -72,7 +72,7 @@ export default function FeaturedArticlesClient({
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover"
                 />
-                <span className="absolute top-3 left-3 text-[10px] font-semibold tracking-[0.10em] uppercase text-violet bg-active-bg rounded-full px-2.5 py-1">
+                <span className="absolute top-3 left-3 text-[10px] font-semibold tracking-[0.10em] uppercase text-violet-dark bg-active-bg rounded-full px-2.5 py-1">
                   {article.category}
                 </span>
               </div>
@@ -86,7 +86,7 @@ export default function FeaturedArticlesClient({
               <p className="text-[13px] leading-[1.65] text-ink-mid mb-3 line-clamp-2">
                 {article.excerpt}
               </p>
-              <div className="mt-auto flex items-center gap-2 text-[11px] text-ink-faint">
+              <div className="mt-auto flex items-center gap-2 text-[11px] text-ink-mid">
                 <span>{formatDate(article.publishedAt)}</span>
                 <span aria-hidden="true">·</span>
                 <span>{article.readTime}</span>
@@ -113,7 +113,7 @@ export default function FeaturedArticlesClient({
 //         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
 //         className="object-cover"
 //       />
-//       <span className="absolute top-3 left-3 text-[10px] font-semibold tracking-[0.10em] uppercase text-violet bg-active-bg rounded-full px-2.5 py-1">
+//       <span className="absolute top-3 left-3 text-[10px] font-semibold tracking-[0.10em] uppercase text-violet-dark bg-active-bg rounded-full px-2.5 py-1">
 //         {post.category}
 //       </span>
 //     </div>
@@ -127,7 +127,7 @@ export default function FeaturedArticlesClient({
 //     <p className="text-[13px] leading-[1.65] text-ink-mid mb-3 line-clamp-2">
 //       {post.excerpt}
 //     </p>
-//     <div className="mt-auto flex items-center gap-2 text-[11px] text-ink-faint">
+//     <div className="mt-auto flex items-center gap-2 text-[11px] text-ink-mid">
 //       <span>{formatDate(post.publishedAt)}</span>
 //       <span aria-hidden="true">·</span>
 //       <span>{post.readTime}</span>

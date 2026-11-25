@@ -11,7 +11,7 @@ const solutions = [
   { label: "On-Demand Kits", href: "/solutions/on-demand-kits" },
   {
     label: "Print & Environmental",
-    href: "/solutions/print-and-environmental",
+    href: "/services/print-and-environmental-design",
   },
 ];
 
@@ -42,6 +42,7 @@ const insights = [
   },
 ];
 const connect = [
+  { label: "About Blossom Rocket", href: "/about" },
   {
     label: "LinkedIn",
     href: "https://www.linkedin.com/company/blossom-rocket",
@@ -60,7 +61,7 @@ const connect = [
 export default function Footer() {
   return (
     <footer
-      className="bg-[#fafaf8] border-t border-[rgba(24,24,27,0.10)]"
+      className="bg-off border-t border-zinc-10"
       style={{ padding: "48px clamp(20px,5vw,60px) 36px" }}
       role="contentinfo"
       itemScope
@@ -84,7 +85,7 @@ export default function Footer() {
               style={{ height: "52px", width: "auto" }}
             />
           </div>
-          <p className="text-[13px] text-[rgba(24,24,27,0.58)] leading-[1.7] max-w-[260px]">
+          <p className="text-[13px] text-ink-mid leading-[1.7] max-w-[260px]">
             Blossom Rocket helps organizations centralize and scale branded
             merchandise through Company Stores, Co-Branding, and on-demand
             merchandise programs — supported by in-house creative services.
@@ -93,15 +94,15 @@ export default function Footer() {
 
         {/* Solutions */}
         <nav aria-label="Solutions">
-          <h4 className="text-[11px] font-semibold tracking-[0.14em] uppercase text-[rgba(24,24,27,0.58)] mb-3.5">
+          <h2 className="text-[11px] font-semibold tracking-[0.14em] uppercase text-ink-mid mb-3.5">
             Solutions
-          </h4>
+          </h2>
           <ul className="list-none space-y-2">
             {solutions.map(({ label, href }) => (
               <li key={label}>
                 <a
                   href={href}
-                  className="text-[13px] font-medium transition-colors duration-200 hover:text-[#9b5cf6]"
+                  className="text-[13px] font-medium transition-colors duration-200 hover:text-violet"
                 >
                   {label}
                 </a>
@@ -112,15 +113,15 @@ export default function Footer() {
 
         {/* Services */}
         <nav aria-label="Creative Services">
-          <h4 className="text-[11px] font-semibold tracking-[0.14em] uppercase text-[rgba(24,24,27,0.58)] mb-3.5">
+          <h2 className="text-[11px] font-semibold tracking-[0.14em] uppercase text-ink-mid mb-3.5">
             Creative Services
-          </h4>
+          </h2>
           <ul className="list-none space-y-2">
             {services.map(({ label, href }) => (
               <li key={label}>
                 <a
                   href={href}
-                  className="text-[13px] font-medium transition-colors duration-200 hover:text-[#9b5cf6]"
+                  className="text-[13px] font-medium transition-colors duration-200 hover:text-violet"
                 >
                   {label}
                 </a>
@@ -131,15 +132,15 @@ export default function Footer() {
 
         {/* Insights */}
         <nav aria-label="Insights">
-          <h4 className="text-[11px] font-semibold tracking-[0.14em] uppercase text-[rgba(24,24,27,0.58)] mb-3.5">
+          <h2 className="text-[11px] font-semibold tracking-[0.14em] uppercase text-ink-mid mb-3.5">
             Insights
-          </h4>
+          </h2>
           <ul className="list-none space-y-2">
             {insights.map(({ label, href }) => (
               <li key={label}>
                 <a
                   href={href}
-                  className="text-[13px] font-medium transition-colors duration-200 hover:text-[#9b5cf6]"
+                  className="text-[13px] font-medium transition-colors duration-200 hover:text-violet"
                 >
                   {label}
                 </a>
@@ -150,15 +151,15 @@ export default function Footer() {
 
         {/* Connect */}
         <nav aria-label="Connect">
-          <h4 className="text-[11px] font-semibold tracking-[0.14em] uppercase text-[rgba(24,24,27,0.58)] mb-3.5">
+          <h2 className="text-[11px] font-semibold tracking-[0.14em] uppercase text-ink-mid mb-3.5">
             Connect
-          </h4>
+          </h2>
           <ul className="list-none space-y-2">
             {connect.map(({ label, href }) => (
               <li key={label}>
                 <a
                   href={href}
-                  className="text-[13px] font-medium transition-colors duration-200 hover:text-[#9b5cf6]"
+                  className="text-[13px] font-medium transition-colors duration-200 hover:text-violet"
                   target={href.startsWith("http") ? "_blank" : undefined}
                   rel={
                     href.startsWith("http") ? "noopener noreferrer" : undefined
@@ -173,24 +174,24 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      {/* <div className="pt-6 border-t border-[rgba(24,24,27,0.10)] flex justify-between items-center flex-wrap gap-3 text-[12px] text-[rgba(24,24,27,0.58)]">
+      {/* <div className="pt-6 border-t border-zinc-10 flex justify-between items-center flex-wrap gap-3 text-[12px] text-ink-mid">
         <span>© 2025 Blossom Rocket. All rights reserved.</span>
         <div className="flex gap-5">
           <a
             href="#"
-            className="transition-colors duration-200 hover:text-[#9b5cf6]"
+            className="transition-colors duration-200 hover:text-violet"
           >
             Privacy
           </a>
           <a
             href="#"
-            className="transition-colors duration-200 hover:text-[#9b5cf6]"
+            className="transition-colors duration-200 hover:text-violet"
           >
             Terms
           </a>
           <a
             href="#"
-            className="transition-colors duration-200 hover:text-[#9b5cf6]"
+            className="transition-colors duration-200 hover:text-violet"
           >
             Sitemap
           </a>

@@ -4,6 +4,15 @@ import { tokens } from "@/lib/utils/sectionTailwindTokens";
 import Image from "next/image";
 import React from "react";
 import CTAs from "../CTAs";
+import CardList from "./CardList";
+import CardPills from "./CardPills";
+import CardGrid from "./CardGrid";
+import { headingText } from "@/lib/utils/nodeToText";
+
+/** Children that render ListItem microdata (itemprop="itemListElement").
+ *  The section only declares itemscope ItemList when one is present, so it
+ *  never publishes an empty ItemList. */
+const LIST_CHILDREN = new Set<unknown>([CardList, CardPills, CardGrid]);
 import SectionLabel from "../SectionLabel";
 import { DEFAULT_ORBS, Orb } from "../ui/Orb";
 
@@ -85,7 +94,10 @@ export default function SectionLayout({
 }: SectionLayoutProps) {
   const activeTheme = tokens[theme];
   const schemaId = id ?? "section";
-  const schemaHeading = typeof heading === "string" ? heading : schemaId;
+  const schemaHeading = headingText(heading) ?? schemaId;
+  const hasListChild = React.Children.toArray(children).some(
+    (child) => React.isValidElement(child) && LIST_CHILDREN.has(child.type),
+  );
   const schema =
     schemaItems && schemaItems.length > 0
       ? buildSchema(schemaItems, schemaHeading, undefined, pageUrl)
@@ -167,8 +179,10 @@ export default function SectionLayout({
         className={["relative", activeTheme.section, className].join(" ")}
         style={{ padding: "clamp(80px,11vw,160px) clamp(32px,7vw,100px)" }}
         aria-labelledby={`${schemaId}-heading`}
-        itemScope
-        itemType="https://schema.org/ItemList"
+        {...(hasListChild && {
+          itemScope: true,
+          itemType: "https://schema.org/ItemList",
+        })}
       >
         {/* ── Orbs — clipped independently so overflow-hidden doesn't break sticky ── */}
         <div

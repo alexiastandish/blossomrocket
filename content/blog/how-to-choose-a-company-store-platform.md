@@ -1,10 +1,12 @@
 ---
 title: "How to Choose a Company Store Platform"
 description: "A practical checklist for evaluating company store platforms — order minimums, inventory risk, production model, approval workflows, and reporting — so the comparison is about fit, not just features."
+seoDescription: "A practical checklist for comparing company store platforms: order minimums, inventory risk, production model, approvals, and reporting."
 publishedAt: "2026-10-16"
 updatedAt: "2026-10-16"
-authorName: "Blossom Rocket"
-authorRole: "Brand Strategy Studio"
+authorName: "Alexia Standish"
+authorRole: "Founder, Blossom Rocket"
+authorUrl: "https://blossomrocket.studio/about"
 heroImageSrc: "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/2922328a-6303-4a36-5d2f-96f847d54200/public"
 heroImageAlt: "Branded apparel and promotional products arranged as part of a company store catalog"
 heroImageWidth: 1200
@@ -59,7 +61,7 @@ If a platform's answer to "who makes this" is vague, that's worth pressing on. B
 
 ## Approval Controls and Budgets, Not Just a Catalog
 
-Anyone can put a logo on a storefront template. What separates a platform built for real organizational use is what happens *around* the ordering — specifically:
+Anyone can put a logo on a storefront template. What separates a platform built for real organizational use is what happens _around_ the ordering — specifically:
 
 - **Order-approval workflows.** Can a manager or budget owner review and approve a purchase before it's produced? This is separate from brand approval (which should already be handled — every product in the catalog should already be pre-approved on logos and colors). This is about spend control.
 - **Multiple price levels or budgets.** Can different departments, locations, or employee tiers see different pricing or spending limits inside the same store, instead of needing a separate store for each?
