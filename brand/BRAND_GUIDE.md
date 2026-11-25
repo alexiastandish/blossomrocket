@@ -179,6 +179,19 @@ Eyebrows sit above headings: a short 18 px gradient dash, then the label in grad
 
 ## 5. Graphic elements and imagery
 
+### The Blossom Rocket pattern
+A radial, flower-like burst built from the brand's own shapes: rocket fins at the tip of each petal, flame/leaf strokes filling the petals, dotted orbit lines, and a small star of marks at the center. It runs the full spectrum around the circle (blue, teal, green, amber/orange, magenta, violet).
+
+- **Use it for** business card fronts, merchandise packaging, stickers, social backgrounds, slide title pages, and other brand moments that deserve decoration.
+- **Don't** use it behind body copy, recolor individual petals, or crop it so tightly that the radial shape is lost. Let it bleed off one edge or corner, or show it whole.
+- On dark backgrounds, use it at full strength; on light backgrounds, it can sit at 10–20% opacity as a watermark.
+- Files: `brand/pattern/blossom-rocket-pattern.svg` (vector), `.png` (2400 px, transparent), `blossom-rocket-pattern-business-card.ai` (Illustrator source, page 1 pattern, page 2 card back).
+
+### Gradient backgrounds
+The business card back sets the look for full-bleed color: a soft, blurred mesh of the spectrum (magenta and coral top, orange right, violet center, cyan bottom left) with the white stacked logo and white type in Parkinsans. Keep these meshes soft and painterly, never hard-edged stripes.
+
+### Site elements
+
 - **Glow orbs.** Large, heavily blurred circles (blur 70–90 px, opacity 12–22%) in violet `#9B5CF6`, cyan `#06B6D4` and green `#10B981`, placed off the corners of hero sections. They add atmosphere, never content.
 - **Spectrum lines.** 1.5–2.5 px gradient rules that grow in from the left on hover (ease `cubic-bezier(0.16, 1, 0.3, 1)`).
 - **Pills.** Fully rounded capsules with uppercase labels for categories and proof points ("No Minimums", "No Inventory").
@@ -218,6 +231,7 @@ brand/
   logos/primary-horizontal/    PRIMARY logo: .ai master, png/jpg/webp, transparent png, web svgs
   logos/secondary-stacked/     SECONDARY logo: .ai masters (color, white), png/jpg/webp, transparent pngs
   logos/mark/                  line mark and filled symbol (icon only)
+  pattern/                     the Blossom Rocket pattern: svg, png, business card .ai
   css/                         the site's style sheets (tokens, typography, gradients, components...)
   tokens/colors.json           all color tokens as JSON
 ```
