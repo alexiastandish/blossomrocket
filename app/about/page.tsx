@@ -18,6 +18,7 @@ import {
   SITE_URL,
   SPLASHBRANDS_ID,
   WEBSITE_ID,
+  DEFAULT_OG_IMAGE,
 } from "@/lib/constants/entities";
 
 const faqs = rawFaqs as FAQGroup[];
@@ -46,6 +47,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
+    images: [DEFAULT_OG_IMAGE],
     title: TITLE,
     description: DESCRIPTION,
     url: PAGE_URL,
@@ -125,10 +127,16 @@ export default function AboutPage() {
             { topic: "Inconsistent logo usage across products", icon: "x" },
             { topic: "Purchasing split across too many vendors", icon: "x" },
             { topic: "Bulk minimums and excess inventory", icon: "x" },
-            { topic: "Repeated design requests and manual approvals", icon: "x" },
+            {
+              topic: "Repeated design requests and manual approvals",
+              icon: "x",
+            },
             { topic: "Slow, manual merchandise distribution", icon: "x" },
             { topic: "Little visibility into merchandise spending", icon: "x" },
-            { topic: "Multiple brands or logos, no single standard", icon: "x" },
+            {
+              topic: "Multiple brands or logos, no single standard",
+              icon: "x",
+            },
             {
               topic: "Digital and physical experiences that don't match",
               icon: "x",

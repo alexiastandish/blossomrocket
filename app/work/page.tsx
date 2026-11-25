@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { DEFAULT_OG_IMAGE } from "@/lib/constants/entities";
 import { WorkItem } from "@/lib/types/work";
 import { ProjectItem } from "@/lib/types/projects";
 import workItemsData from "@/data/work.json";
@@ -12,7 +13,7 @@ import { Suspense } from "react";
 export const metadata: Metadata = {
   title: "Work — Blossom Rocket",
   description:
-    "A selection of brand identity, digital design, print, and marketing work from Blossom Rocket across industries. Every project is built on a brand system designed to work across every touchpoint.",
+    "Brand identity, digital design, print, and marketing work from Blossom Rocket, each built on a brand system designed for every touchpoint.",
   keywords: [
     "Brand Identity Portfolio",
     "Digital Design Work",
@@ -24,6 +25,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://blossomrocket.studio/work" },
   openGraph: {
+    images: [DEFAULT_OG_IMAGE],
     title: "Work — Blossom Rocket",
     description:
       "A selection of brand identity, digital design, print, and marketing work from Blossom Rocket.",

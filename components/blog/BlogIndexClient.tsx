@@ -1,9 +1,9 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter, usePathname, useSearchParams } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import SectionLabel from "../SectionLabel";
 import { formatDate } from "@/lib/utils/formatDate";
 import { slugifyTag } from "@/lib/utils/slugifyTag";
@@ -29,7 +29,6 @@ interface BlogIndexClientProps {
 export function BlogIndexClient({ posts }: BlogIndexClientProps) {
   const router = useRouter();
   const pathname = usePathname();
-  const searchParams = useSearchParams();
 
   const [query, setQuery] = useState("");
 
@@ -54,13 +53,20 @@ export function BlogIndexClient({ posts }: BlogIndexClientProps) {
     };
   }, [posts]);
 
-  // Active tags come straight from the URL — no separate local state to
-  // keep in sync. `tags` param is a comma-separated list of slugs.
-  const activeTagSlugs = useMemo(() => {
-    const raw = searchParams.get("tags");
-    if (!raw) return [];
-    return raw.split(",").filter((slug) => slugToLabel.has(slug));
-  }, [searchParams, slugToLabel]);
+  // Active tags live in the URL (`tags` = comma-separated slugs) but are read
+  // after mount rather than through useSearchParams(). useSearchParams forces
+  // the whole index to bail out of static rendering, which shipped an empty
+  // page (no H1, no article list) to crawlers. The server now renders every
+  // article; a shared ?tags= link applies its filter once the page hydrates.
+  const [activeTagSlugs, setActiveTagSlugsState] = useState<string[]>([]);
+
+  useEffect(() => {
+    const raw = new URLSearchParams(window.location.search).get("tags");
+    if (!raw) return;
+    const slugs = raw.split(",").filter((slug) => slugToLabel.has(slug));
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- one-time sync from the URL on mount
+    setActiveTagSlugsState(slugs);
+  }, [slugToLabel]);
 
   const activeTags = useMemo(
     () => activeTagSlugs.map((slug) => slugToLabel.get(slug)!),
@@ -72,7 +78,8 @@ export function BlogIndexClient({ posts }: BlogIndexClientProps) {
   // would push a new history entry and the back button would just replay
   // the user's own clicks instead of leaving the page.
   function setTagSlugs(slugs: string[]) {
-    const params = new URLSearchParams(searchParams.toString());
+    setActiveTagSlugsState(slugs);
+    const params = new URLSearchParams(window.location.search);
     if (slugs.length === 0) {
       params.delete("tags");
     } else {

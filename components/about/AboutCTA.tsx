@@ -29,12 +29,12 @@ export default function AboutCTA() {
           <em className="grad-text not-italic">easier to manage.</em>
         </h2>
         <p className="subtext text-ink-faint mb-4">
-          Start with a 15-minute conversation about how your organization
-          orders and manages branded merchandise today.
+          Start with a 15-minute conversation about how your organization orders
+          and manages branded merchandise today.
         </p>
         <p className="subtext text-fg-on-dark mb-10">
-          Blossom Rocket can build a free, fully branded demo store so your
-          team can try the platform with your own logos and products before
+          Blossom Rocket can build a free, fully branded demo store so your team
+          can try the platform with your own logos and products before
           committing.
         </p>
         <CTASlots

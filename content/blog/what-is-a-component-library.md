@@ -1,6 +1,8 @@
 ---
 title: "What Is a Component Library? 9 Benefits for Growing Digital Brands"
 description: "Learn what a component library is, what it includes, and how reusable UI components help growing brands create more consistent, accessible, and scalable websites and applications."
+seoTitle: "What Is a Component Library? 9 Benefits for Digital Brands"
+seoDescription: "What a component library is, what it includes, and how reusable UI components make websites and apps more consistent, accessible, and scalable."
 publishedAt: "2026-07-20"
 updatedAt: "2026-07-20"
 authorName: "Blossom Rocket"

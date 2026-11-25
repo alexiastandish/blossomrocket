@@ -1,6 +1,8 @@
 ---
 title: "How Merch Strengthens Brand Identity and Creates Public Brand Awareness"
 description: "Learn how thoughtfully designed branded merchandise reinforces visual identity, builds recognition, and turns customers, employees, and communities into visible brand touchpoints."
+seoTitle: "How Merch Strengthens Brand Identity and Awareness"
+seoDescription: "How well-designed branded merchandise reinforces visual identity, builds recognition, and turns customers and employees into brand touchpoints."
 publishedAt: "2026-07-20"
 updatedAt: "2026-07-20"
 authorName: "Blossom Rocket"

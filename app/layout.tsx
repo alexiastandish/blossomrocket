@@ -15,6 +15,7 @@ import {
   SPLASHBRANDS_ID,
   WEBSITE_ID,
   founderSchema,
+  DEFAULT_OG_IMAGE,
 } from "@/lib/constants/entities";
 
 const SITE_DESCRIPTION =
@@ -46,6 +47,7 @@ export const metadata: Metadata = {
   description: SITE_DESCRIPTION,
   keywords: KNOWS_ABOUT,
   openGraph: {
+    images: [DEFAULT_OG_IMAGE],
     title:
       "Blossom Rocket — Company Stores, Co-Branding & Branded Merchandise Solutions",
     description: SITE_DESCRIPTION,

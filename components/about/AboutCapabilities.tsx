@@ -140,9 +140,9 @@ export default function AboutCapabilities() {
         </h2>
         <p className="subtext text-ink-faint">
           Merchandise programs are Blossom Rocket&apos;s primary focus. Creative
-          services set the standards those programs apply — and are available
-          on their own when a brand needs a new identity, a website, or a
-          system before it needs a store.
+          services set the standards those programs apply — and are available on
+          their own when a brand needs a new identity, a website, or a system
+          before it needs a store.
         </p>
       </div>
 

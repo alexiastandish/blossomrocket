@@ -1,4 +1,5 @@
 import FAQSection from "@/components/faqs/FAQSection";
+import { DEFAULT_OG_IMAGE } from "@/lib/constants/entities";
 import faqs from "@/data/faqs/services/print.json";
 
 import Hero from "@/components/Hero";
@@ -15,7 +16,7 @@ const PAGE_URL =
 export const metadata: Metadata = {
   title: "Print & Environmental Design — Blossom Rocket",
   description:
-    "Blossom Rocket provides Print & Environmental Design services that help businesses apply their Brand Identity across printed materials, signage, packaging, vehicle graphics, and branded environments.",
+    "Print & Environmental Design from Blossom Rocket applies your brand to print, signage, packaging, vehicle graphics, and branded environments.",
   keywords: [
     "Print Design",
     "Environmental Graphics",
@@ -28,6 +29,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
+    images: [DEFAULT_OG_IMAGE],
     title: "Print & Environmental Design — Blossom Rocket",
     description:
       "Create consistent customer-facing materials across every location, department, campaign, and vendor with Blossom Rocket's Print & Environmental Design services.",
@@ -51,7 +53,7 @@ const serviceSchema = {
     url: "https://blossomrocket.studio",
   },
   description:
-    "Blossom Rocket provides Print & Environmental Design services that help businesses apply their Brand Identity across printed materials, signage, packaging, vehicle graphics, and branded environments.",
+    "Print & Environmental Design from Blossom Rocket applies your brand to print, signage, packaging, vehicle graphics, and branded environments.",
   serviceType: "Print & Environmental Design",
   hasOfferCatalog: {
     "@type": "OfferCatalog",
@@ -140,7 +142,7 @@ export default function page() {
           body={
             <>
               Print & Environmental Design extends branding beyond digital
-              experiences and into physical environments.While websites, social
+              experiences and into physical environments. While websites, social
               media, and marketing campaigns help businesses communicate online,
               physical brand experiences influence how customers, employees, and
               visitors interact with a brand in the real world.{" "}
@@ -174,7 +176,7 @@ export default function page() {
               <em className="grad-text not-italic">from Blossom Rocket.</em>
             </>
           }
-          subtext="Blossom Rocket provides Print & Environmental Design services that help businesses apply their Brand Identity across printed materials, signage, packaging, vehicle graphics, and branded environments. Every Print & Environmental Design project is developed using your Brand Identity and Brand System, allowing your business to create consistent customer-facing materials across every location, department, campaign, and vendor."
+          subtext="Print & Environmental Design from Blossom Rocket applies your brand to print, signage, packaging, vehicle graphics, and branded environments. Every Print & Environmental Design project is developed using your Brand Identity and Brand System, allowing your business to create consistent customer-facing materials across every location, department, campaign, and vendor."
           ctaSlot={
             <CTASlots
               ctas={[

@@ -49,3 +49,11 @@ export const founderSchema = {
   knowsAbout: [...FOUNDER.knowsAbout],
   sameAs: [FOUNDER.linkedin],
 };
+
+/** Default social share image for pages without their own artwork. */
+export const DEFAULT_OG_IMAGE = {
+  url: `${SITE_URL}/logo.jpg`,
+  width: 1920,
+  height: 1080,
+  alt: "Blossom Rocket",
+};

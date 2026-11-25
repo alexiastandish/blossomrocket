@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { DEFAULT_OG_IMAGE } from "@/lib/constants/entities";
 import Hero from "@/components/Hero";
 import { SectionLayout, CardList } from "@/components/section";
 import CardLinkGrid from "@/components/section/CardLinkGrid";
@@ -19,6 +20,7 @@ export function industryMetadata(industry: Industry): Metadata {
     keywords: industry.keywords,
     alternates: { canonical: url },
     openGraph: {
+      images: [DEFAULT_OG_IMAGE],
       title: industry.title,
       description: industry.description,
       url,

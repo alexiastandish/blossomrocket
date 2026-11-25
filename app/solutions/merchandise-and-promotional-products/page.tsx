@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { DEFAULT_OG_IMAGE } from "@/lib/constants/entities";
 import Hero from "@/components/Hero";
 import CardGrid from "@/components/section/CardGrid";
 import CardList from "@/components/section/CardList";
@@ -22,11 +23,10 @@ import SalesAndMarketingPrograms from "@/components/svgs/SalesAndMarketingProgra
 // ─── Page metadata ────────────────────────────────────────────────────────────
 
 const META_DESCRIPTION =
-  "Custom promotional products and branded merchandise for businesses — apparel, promotional items, corporate gifts, and event merchandise with your logo. Produced on demand through SplashBrands, with no traditional order minimums.";
+  "Custom promotional products and branded merchandise for businesses: apparel, gifts, and event merchandise, made on demand with no order minimums.";
 
 export const metadata: Metadata = {
-  title:
-    "Promotional Products & Branded Merchandise for Businesses | Blossom Rocket",
+  title: "Promotional Products for Businesses | Blossom Rocket",
   description: META_DESCRIPTION,
   keywords: [
     "Promotional Products",
@@ -47,8 +47,8 @@ export const metadata: Metadata = {
       "https://blossomrocket.studio/solutions/merchandise-and-promotional-products",
   },
   openGraph: {
-    title:
-      "Promotional Products & Branded Merchandise for Businesses | Blossom Rocket",
+    images: [DEFAULT_OG_IMAGE],
+    title: "Promotional Products for Businesses | Blossom Rocket",
     description: META_DESCRIPTION,
     url: "https://blossomrocket.studio/solutions/merchandise-and-promotional-products",
     siteName: "Blossom Rocket",

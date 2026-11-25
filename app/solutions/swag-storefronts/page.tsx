@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { DEFAULT_OG_IMAGE } from "@/lib/constants/entities";
 import Hero from "@/components/Hero";
 
 import CardGrid from "@/components/section/CardGrid";
@@ -23,10 +24,10 @@ const faqs = rawFaqs as FAQGroup[];
 // ─── Page metadata ────────────────────────────────────────────────────────────
 
 const PAGE_DESCRIPTION =
-  "Blossom Rocket Swag Storefronts give a single brand ongoing, self-serve access to its own branded apparel and promotional products through SplashBrands — a lighter-weight alternative to a full Company Store, for $200/month.";
+  "Swag Storefronts give one brand self-serve access to its own branded apparel and promotional products: a lighter alternative to a Company Store.";
 
 export const metadata: Metadata = {
-  title: "Swag Storefronts — Self-Serve Branded Merchandise | Blossom Rocket",
+  title: "Swag Storefronts: Self-Serve Merchandise | Blossom Rocket",
   description: PAGE_DESCRIPTION,
   keywords: [
     "Swag Storefronts",
@@ -40,7 +41,8 @@ export const metadata: Metadata = {
     canonical: "https://blossomrocket.studio/solutions/swag-storefronts",
   },
   openGraph: {
-    title: "Swag Storefronts — Self-Serve Branded Merchandise | Blossom Rocket",
+    images: [DEFAULT_OG_IMAGE],
+    title: "Swag Storefronts: Self-Serve Merchandise | Blossom Rocket",
     description: PAGE_DESCRIPTION,
     url: "https://blossomrocket.studio/solutions/swag-storefronts",
     siteName: "Blossom Rocket",
@@ -172,10 +174,10 @@ export default function SwagStorefronts() {
               brand orders its own branded apparel and promotional products.
               Blossom Rocket sets up Swag Storefronts on SplashBrands
               technology. Businesses can upload their logo and its approved
-              variations, select product colors that align with their brand, and create a
-              storefront where branded products are ready to shop — without
-              the commitment of a full Company Store. Need a storefront that
-              carries more than one organization&apos;s mark instead?{" "}
+              variations, select product colors that align with their brand, and
+              create a storefront where branded products are ready to shop —
+              without the commitment of a full Company Store. Need a storefront
+              that carries more than one organization&apos;s mark instead?{" "}
               <a href="/solutions/co-branding" className="underline">
                 See Co-Branding
               </a>
@@ -322,7 +324,7 @@ export default function SwagStorefronts() {
               {
                 topic: "Step 5 — Add Brand Context",
                 description:
-                  "Share your website, brand guidelines, and application notes (for example, \"use the flat logo on full-chest T-shirts\").",
+                  'Share your website, brand guidelines, and application notes (for example, "use the flat logo on full-chest T-shirts").',
               },
               {
                 topic: "Step 6 — Review and Submit",

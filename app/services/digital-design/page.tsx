@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { DEFAULT_OG_IMAGE } from "@/lib/constants/entities";
 import Hero from "@/components/Hero";
 import faqs from "@/data/faqs/services/digital-design.json";
 
@@ -23,11 +24,10 @@ import { CTASlots } from "@/components/CTASlot";
 const PAGE_URL = "https://blossomrocket.studio/services/digital-design";
 
 const META_DESCRIPTION =
-  "Digital Design from Blossom Rocket — websites, UI/UX, reusable component libraries, and front-end development that carry an established brand system into digital experiences.";
+  "Websites, UI/UX, component libraries, and front-end development from Blossom Rocket that carry your brand system into digital experiences.";
 
 export const metadata: Metadata = {
-  title:
-    "Digital Design — Websites, UI/UX & Component Libraries | Blossom Rocket",
+  title: "Digital Design: Websites & UI/UX | Blossom Rocket",
   description: META_DESCRIPTION,
   keywords: [
     "Digital Design",
@@ -39,8 +39,8 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title:
-      "Digital Design — Websites, UI/UX & Component Libraries | Blossom Rocket",
+    images: [DEFAULT_OG_IMAGE],
+    title: "Digital Design: Websites & UI/UX | Blossom Rocket",
     description: META_DESCRIPTION,
     url: PAGE_URL,
     siteName: "Blossom Rocket",

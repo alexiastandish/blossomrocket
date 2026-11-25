@@ -1,6 +1,8 @@
 ---
 title: "What Marketing Assets Does a Growing Business Need? 10 Essential Types"
 description: "Learn which marketing assets growing businesses need across brand awareness, lead generation, sales, product launches, events, advertising, and customer retention."
+seoTitle: "What Marketing Assets Does a Growing Business Need?"
+seoDescription: "The marketing assets growing businesses need for awareness, lead generation, sales, launches, events, advertising, and customer retention."
 publishedAt: "2026-07-20"
 updatedAt: "2026-07-20"
 authorName: "Blossom Rocket"
@@ -40,7 +42,7 @@ Each asset performs a different role, but all of them should feel like expressio
 
 The challenge is knowing which marketing assets the business genuinely needs. Companies often respond to this question by producing materials one project at a time — a social graphic for one announcement, a presentation assembled before a meeting, an event banner designed shortly before a trade show. Over time, the company accumulates files without building a coherent marketing system.
 
-Blossom Rocket helps businesses create marketing assets that support the complete customer journey while remaining aligned with established Brand Identity and Brand System standards.
+Blossom Rocket helps businesses create [marketing assets](/services/marketing-assets) that support the complete customer journey while remaining aligned with established [Brand Identity](/services/brand-identity) and [Brand System](/services/brand-systems) standards.
 
 This guide explains the ten marketing asset categories growing businesses should consider, what each one accomplishes, and how to decide which assets deserve priority.
 

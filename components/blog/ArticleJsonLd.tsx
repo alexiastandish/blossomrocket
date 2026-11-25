@@ -1,4 +1,36 @@
 import type { BlogArticleData } from "@/lib/types/blog";
+import {
+  FOUNDER,
+  FOUNDER_ID,
+  ORGANIZATION_ID,
+  SITE_URL,
+} from "@/lib/constants/entities";
+
+/** Resolve the byline to the right entity. Posts credited to the studio are
+ *  the Organization, not a Person named "Blossom Rocket"; posts credited to
+ *  the founder point at the site-wide founder Person by @id. */
+function authorEntity(author: BlogArticleData["author"]) {
+  if (author.name === "Blossom Rocket") {
+    return {
+      "@type": "Organization",
+      "@id": ORGANIZATION_ID,
+      name: author.name,
+    };
+  }
+  if (author.name === FOUNDER.name) {
+    return {
+      "@type": "Person",
+      "@id": FOUNDER_ID,
+      name: author.name,
+      url: `${SITE_URL}/about`,
+    };
+  }
+  return {
+    "@type": "Person",
+    name: author.name,
+    ...(author.url && { url: author.url }),
+  };
+}
 
 export function ArticleJsonLd({ article }: { article: BlogArticleData }) {
   const articleSchema = {
@@ -9,14 +41,10 @@ export function ArticleJsonLd({ article }: { article: BlogArticleData }) {
     image: [article.heroImage.src],
     datePublished: article.publishedAt,
     dateModified: article.updatedAt ?? article.publishedAt,
-    author: {
-      "@type": "Person",
-      name: article.author.name,
-      ...(article.author.url && { url: article.author.url }),
-    },
+    author: authorEntity(article.author),
     publisher: {
       "@type": "Organization",
-      "@id": "https://blossomrocket.studio/#organization",
+      "@id": ORGANIZATION_ID,
       name: "Blossom Rocket",
       logo: {
         "@type": "ImageObject",

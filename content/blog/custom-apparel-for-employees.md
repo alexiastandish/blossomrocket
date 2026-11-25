@@ -1,6 +1,8 @@
 ---
 title: "Custom Apparel for Employees: How Company Apparel Programs Work"
 description: "What custom employee apparel is, how it differs from a specialized uniform program, and how on-demand company apparel stores remove minimums, inventory, and reordering busywork."
+seoTitle: "Custom Apparel for Employees: How Apparel Programs Work"
+seoDescription: "How custom employee apparel programs work, how they differ from uniforms, and how on-demand apparel stores remove minimums and inventory."
 publishedAt: "2026-10-19"
 updatedAt: "2026-10-19"
 authorName: "Blossom Rocket"

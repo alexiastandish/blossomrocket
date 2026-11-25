@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { DEFAULT_OG_IMAGE } from "@/lib/constants/entities";
 import Hero from "@/components/Hero";
 
 import CardGrid from "@/components/section/CardGrid";
@@ -25,10 +26,10 @@ const faqs = rawFaqs as FAQGroup[];
 const PAGE_URL = "https://blossomrocket.studio/solutions/co-branding";
 
 const META_DESCRIPTION =
-  "Co-Branded merchandise programs from Blossom Rocket. Manage multiple approved logos, logo variations, and brand colors in one storefront powered by SplashBrands — so partnerships, teams, and locations order consistently branded merchandise on demand.";
+  "Manage multiple approved logos, logo variations, and brand colors in one SplashBrands-powered storefront for partners, teams, and locations.";
 
 export const metadata: Metadata = {
-  title: "Co-Branding — Co-Branded Merchandise Programs | Blossom Rocket",
+  title: "Co-Branding: Co-Branded Merchandise | Blossom Rocket",
   description: META_DESCRIPTION,
   keywords: [
     "Co-Branding",
@@ -42,7 +43,8 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: "Co-Branding — Co-Branded Merchandise Programs | Blossom Rocket",
+    images: [DEFAULT_OG_IMAGE],
+    title: "Co-Branding: Co-Branded Merchandise | Blossom Rocket",
     description: META_DESCRIPTION,
     url: PAGE_URL,
     siteName: "Blossom Rocket",

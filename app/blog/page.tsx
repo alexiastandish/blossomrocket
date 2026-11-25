@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
+import { DEFAULT_OG_IMAGE } from "@/lib/constants/entities";
 import { getAllArticles } from "@/lib/utils/blog";
 import { BlogIndexClient } from "@/components/blog/BlogIndexClient";
-import { Suspense } from "react";
 
 const META_DESCRIPTION =
-  "Practical insights on branded merchandise, promotional products, company stores, branding, and design—from merchandise ROI and product selection to identity systems.";
+  "Insights on branded merchandise, promotional products, company stores, and brand design, from merchandise ROI to identity systems.";
 
 export const metadata: Metadata = {
   title: "The Blossom Blog | Blossom Rocket",
   description: META_DESCRIPTION,
   alternates: { canonical: "https://blossomrocket.studio/blog" },
   openGraph: {
+    images: [DEFAULT_OG_IMAGE],
     title: "The Blossom Blog | Blossom Rocket",
     description: META_DESCRIPTION,
     url: "https://blossomrocket.studio/blog",
@@ -57,9 +58,7 @@ export default async function BlogIndexPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
       />
-      <Suspense>
-        <BlogIndexClient posts={posts} />
-      </Suspense>
+      <BlogIndexClient posts={posts} />
     </>
   );
 }

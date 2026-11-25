@@ -38,10 +38,10 @@ export default function AboutFounder({ portrait }: AboutFounderProps) {
           <div className="flex flex-col gap-5 body-lg text-fg-secondary leading-[1.8] max-w-[640px]">
             <p>
               <span className="font-semibold text-zinc">Alexia Standish</span>{" "}
-              is the founder of Blossom
-              Rocket. She holds a degree in Graphic Design and built her
-              career across brand identity, brand systems, and UI/UX design
-              before moving into full-stack software engineering.
+              is the founder of Blossom Rocket. She holds a degree in Graphic
+              Design and built her career across brand identity, brand systems,
+              and UI/UX design before moving into full-stack software
+              engineering.
             </p>
             <p>
               From 2019 to 2025, Alexia worked at Tapcart, an e-commerce

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { DEFAULT_OG_IMAGE } from "@/lib/constants/entities";
 
 import Hero from "@/components/Hero";
 import Marquee from "@/components/section/Marquee";
@@ -23,10 +24,9 @@ import FeaturedArticles from "@/components/FeaturedArticles/FeaturedArticles";
 const PAGE_URL = "https://blossomrocket.studio";
 
 export const metadata: Metadata = {
-  title:
-    "Blossom Rocket | Company Stores, Co-Branding & Branded Merchandise Programs",
+  title: "Blossom Rocket | Company Stores & Branded Merchandise",
   description:
-    "Blossom Rocket helps organizations centralize and scale branded merchandise through on-demand Company Stores and Co-Branding programs powered by SplashBrands — no order minimums, no inventory, supported by in-house creative services.",
+    "Blossom Rocket centralizes branded merchandise with on-demand Company Stores and Co-Branding powered by SplashBrands. No minimums, no inventory.",
   keywords: [
     "Company Stores",
     "Branded Merchandise Company Stores",
@@ -42,8 +42,8 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title:
-      "Blossom Rocket | Company Stores, Co-Branding & Branded Merchandise Programs",
+    images: [DEFAULT_OG_IMAGE],
+    title: "Blossom Rocket | Company Stores & Branded Merchandise",
     description:
       "Centralized, automated branded merchandise for teams, departments, and locations — Company Stores and Co-Branding programs powered by SplashBrands, supported by in-house creative services.",
     url: PAGE_URL,

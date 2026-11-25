@@ -1,6 +1,8 @@
 ---
 title: "Why Growing Websites Become Inconsistent—and How Scalable Digital Design Fixes It"
 description: "Learn why growing websites develop inconsistent pages, navigation, UI components, and mobile experiences—and how scalable digital design creates a more cohesive, maintainable brand."
+seoTitle: "Why Growing Websites Become Inconsistent, and How to Fix It"
+seoDescription: "Why growing websites develop inconsistent pages, navigation, and UI components, and how scalable digital design creates a cohesive brand."
 publishedAt: "2026-07-20"
 updatedAt: "2026-07-20"
 authorName: "Blossom Rocket"

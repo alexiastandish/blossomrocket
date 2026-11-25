@@ -1,6 +1,8 @@
 ---
 title: "9 Reasons Nature-Inspired Color Palettes Create Better Brand Identities"
 description: "Discover why nature-inspired color palettes consistently create stronger, more timeless brand identities. Learn nine principles designers use to build memorable brands through color."
+seoTitle: "9 Reasons Nature-Inspired Color Palettes Build Better Brands"
+seoDescription: "Why nature-inspired color palettes create stronger, more timeless brand identities, and nine principles designers use to build brands through color."
 publishedAt: "2026-07-20"
 updatedAt: "2026-07-20"
 authorName: "Blossom Rocket"
@@ -183,10 +185,10 @@ Nature has spent millions of years refining these relationships. Designers don't
 
 If you're refining your brand identity, these resources from Blossom Rocket can help:
 
-- **Brand Identity Services** — Learn how strategic visual identities create consistency and recognition.
-- **Brand Systems** — Discover how color, typography, imagery, and design guidelines work together as a unified system.
-- **Print & Environmental Design** — See how cohesive color systems extend into physical brand experiences.
-- **Merchandise & Promotional Products** — Explore how strong brand palettes create more recognizable promotional products and apparel.
-- **Company Stores** — Learn how consistent branding scales across employee merchandise and customer experiences.
+- **[Brand Identity Services](/services/brand-identity)** — Learn how strategic visual identities create consistency and recognition.
+- **[Brand Systems](/services/brand-systems)** — Discover how color, typography, imagery, and design guidelines work together as a unified system.
+- **[Print & Environmental Design](/services/print-and-environmental-design)** — See how cohesive color systems extend into physical brand experiences.
+- **[Merchandise & Promotional Products](/solutions/merchandise-and-promotional-products)** — Explore how strong brand palettes create more recognizable promotional products and apparel.
+- **[Company Stores](/solutions/company-stores)** — Learn how consistent branding scales across employee merchandise and customer experiences.
 
 Whether you're launching a new company or evolving an existing brand, a thoughtful color palette is one of the most enduring investments you can make.

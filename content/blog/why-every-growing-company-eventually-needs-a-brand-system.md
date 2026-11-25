@@ -1,6 +1,7 @@
 ---
 title: "Why Every Growing Company Eventually Needs a Brand System"
 description: "Learn why growing companies eventually outgrow informal brand decisions and need a structured brand system to maintain consistency across teams, channels, and customer touchpoints."
+seoDescription: "Why growing companies outgrow informal brand decisions and need a structured brand system to stay consistent across teams and channels."
 publishedAt: "2026-07-20"
 updatedAt: "2026-07-20"
 authorName: "Blossom Rocket"

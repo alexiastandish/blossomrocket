@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getArticleBySlug } from "@/lib/utils/blog";
+import { getAllSlugs, getArticleBySlug } from "@/lib/utils/blog";
 import { BlogArticle } from "@/components/blog/BlogArticle";
+
+export async function generateStaticParams() {
+  const slugs = await getAllSlugs();
+  return slugs.map((slug) => ({ slug }));
+}
 
 export async function generateMetadata({
   params,
@@ -12,24 +17,27 @@ export async function generateMetadata({
   const article = await getArticleBySlug(slug);
   if (!article) return {};
 
+  const title = article.seoTitle ?? article.title;
+  const description = article.seoDescription ?? article.description;
+
   return {
-    title: article.title,
-    description: article.description,
+    title,
+    description,
     alternates: {
       canonical: `https://blossomrocket.studio/blog/${article.slug}`,
     },
     openGraph: {
       type: "article",
-      title: article.title,
-      description: article.description,
+      title,
+      description,
       publishedTime: article.publishedAt,
       modifiedTime: article.updatedAt ?? article.publishedAt,
       images: [article.heroImage.src],
     },
     twitter: {
       card: "summary_large_image",
-      title: article.title,
-      description: article.description,
+      title,
+      description,
     },
   };
 }

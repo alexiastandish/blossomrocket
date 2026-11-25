@@ -102,10 +102,7 @@ export default function AboutPartnership() {
     >
       <div className="rv max-w-3xl mb-12">
         <SectionLabel text="Technology & Production Partner" />
-        <h2
-          id="splashbrands-partnership-heading"
-          className="h2 text-zinc mb-5"
-        >
+        <h2 id="splashbrands-partnership-heading" className="h2 text-zinc mb-5">
           Powered by an established{" "}
           <em className="grad-text not-italic">technology partner.</em>
         </h2>

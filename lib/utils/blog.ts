@@ -14,6 +14,10 @@ const BLOG_DIR = path.join(process.cwd(), "content/blog");
 interface Frontmatter {
   title: string;
   description: string;
+  /** Optional <title> override (≤60 chars) when the display title is longer */
+  seoTitle?: string;
+  /** Optional meta description override (≤155 chars) when the dek is longer */
+  seoDescription?: string;
   publishedAt: string;
   updatedAt?: string;
   authorName: string;
@@ -62,6 +66,8 @@ export async function getArticleBySlug(
     slug,
     title: frontmatter.title,
     description: frontmatter.description,
+    seoTitle: frontmatter.seoTitle,
+    seoDescription: frontmatter.seoDescription,
     publishedAt: frontmatter.publishedAt,
     updatedAt: frontmatter.updatedAt,
     author: {

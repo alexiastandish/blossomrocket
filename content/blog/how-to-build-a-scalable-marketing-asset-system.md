@@ -1,6 +1,7 @@
 ---
 title: "How to Build a Scalable Marketing Asset System"
 description: "Learn how to organize campaign creative, social templates, presentations, event materials, email graphics, and digital ads into a scalable marketing asset system."
+seoDescription: "How to organize campaign creative, social templates, presentations, event materials, and ads into a scalable marketing asset system."
 publishedAt: "2026-07-20"
 updatedAt: "2026-07-20"
 authorName: "Blossom Rocket"
