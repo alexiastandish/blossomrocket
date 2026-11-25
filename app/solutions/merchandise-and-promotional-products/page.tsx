@@ -21,13 +21,20 @@ import SalesAndMarketingPrograms from "@/components/svgs/SalesAndMarketingProgra
 
 // ─── Page metadata ────────────────────────────────────────────────────────────
 
+const META_DESCRIPTION =
+  "Custom promotional products and branded merchandise for businesses — apparel, promotional items, corporate gifts, and event merchandise with your logo. Produced on demand through SplashBrands, with no traditional order minimums.";
+
 export const metadata: Metadata = {
-  title: "Merchandise & Promotional Products — Blossom Rocket",
-  description:
-    "Blossom Rocket provides Merchandise & Promotional Product services including branded apparel, promotional products, event merchandise, corporate gifting, customer appreciation programs, onboarding kits, and merchandise design.",
+  title:
+    "Promotional Products & Branded Merchandise for Businesses | Blossom Rocket",
+  description: META_DESCRIPTION,
   keywords: [
-    "Branded Merchandise",
     "Promotional Products",
+    "Branded Merchandise",
+    "Promotional Products Supplier",
+    "Custom Promotional Products",
+    "Promotional Items",
+    "Custom Apparel",
     "Event Merchandise",
     "Corporate Gifting",
     "Branded Apparel",
@@ -40,9 +47,9 @@ export const metadata: Metadata = {
       "https://blossomrocket.studio/solutions/merchandise-and-promotional-products",
   },
   openGraph: {
-    title: "Merchandise & Promotional Products — Blossom Rocket",
-    description:
-      "Create branded merchandise programs that increase visibility, strengthen recognition, and create lasting connections with customers, employees, and audiences.",
+    title:
+      "Promotional Products & Branded Merchandise for Businesses | Blossom Rocket",
+    description: META_DESCRIPTION,
     url: "https://blossomrocket.studio/solutions/merchandise-and-promotional-products",
     siteName: "Blossom Rocket",
     type: "website",
@@ -59,14 +66,16 @@ const serviceSchema = {
   "@type": "Service",
   "@id": `${PAGE_URL}/#service`,
   name: "Merchandise & Promotional Products",
+  alternateName: ["Promotional Products", "Branded Merchandise"],
   url: PAGE_URL,
   provider: {
     "@type": "Organization",
+    "@id": "https://blossomrocket.studio/#organization",
     name: "Blossom Rocket",
     url: "https://blossomrocket.studio",
   },
   description:
-    "Blossom Rocket provides Merchandise & Promotional Product services including branded apparel, promotional products, event merchandise, corporate gifting, customer appreciation programs, onboarding kits, and merchandise design.",
+    "Blossom Rocket helps businesses source, customize, and deploy promotional products and branded merchandise — including branded apparel, promotional items, event merchandise, corporate gifts, onboarding kits, and merchandise design — with on-demand production through SplashBrands.",
   serviceType: "Brand Merchandise & Promotional Products",
   hasOfferCatalog: {
     "@type": "OfferCatalog",
@@ -170,7 +179,26 @@ export default function MerchandiseAndPromotionalProducts() {
               </em>
             </>
           }
-          body="Merchandise & Promotional Products include apparel, event merchandise, corporate gifts, promotional products, and branded items used to support marketing campaigns, events, employee programs, customer engagement, and brand awareness. Blossom Rocket provides Merchandise & Promotional Product services that help businesses create branded merchandise programs that increase visibility, strengthen recognition, and create lasting connections with customers, employees, and audiences."
+          body={
+            <>
+              Promotional products are branded items — custom apparel,
+              drinkware, bags, tech accessories, and corporate gifts — that
+              businesses decorate with their logo for marketing campaigns,
+              events, employee programs, and customer engagement. Blossom Rocket
+              sources, designs, and deploys promotional products for businesses,
+              and SplashBrands produces them on demand, so there are no
+              traditional order minimums or inventory to hold. Recurring
+              programs can run through{" "}
+              <a href="/solutions/company-stores" className="underline">
+                Company Stores
+              </a>
+              , and gifting through{" "}
+              <a href="/solutions/on-demand-kits" className="underline">
+                On-Demand Kits
+              </a>
+              .
+            </>
+          }
           ctaSlot={
             <CTASlots
               ctas={[
@@ -198,7 +226,7 @@ export default function MerchandiseAndPromotionalProducts() {
               </em>
             </>
           }
-          subtext="Merchandise & Promotional Products help businesses create brand visibility beyond traditional marketing campaigns. Branded apparel, promotional products, corporate gifts, and event merchandise can continue generating exposure long after a campaign, event, customer interaction, or employee initiative has ended."
+          subtext="Branded apparel, promotional products, corporate gifts, and event merchandise keep generating exposure long after a campaign, event, or employee initiative ends."
           ctas={[
             {
               label: "Promotional Products That People Actually Find Useful",
@@ -266,37 +294,37 @@ export default function MerchandiseAndPromotionalProducts() {
               {
                 topic: "Branded Apparel",
                 description:
-                  "Branded Apparel transforms logos, messaging, and visual identity systems into wearable brand assets. Blossom Rocket helps businesses create apparel programs that support employee apparel, recruiting initiatives, company culture programs, promotional campaigns, and event merchandise.",
+                  "Custom t-shirts, polos, outerwear, and headwear, decorated with embroidery or screen printing, for employees, recruiting, campaigns, and events.",
               },
               {
                 topic: "Promotional Products",
                 description:
-                  "Promotional Products help businesses increase visibility through branded items used by customers, employees, prospects, and event attendees. Blossom Rocket helps businesses create Promotional Product programs that support marketing campaigns, trade shows, customer engagement initiatives, and brand awareness efforts.",
+                  "Drinkware, bags, writing instruments, and tech accessories, sourced and decorated for campaigns, trade shows, and customer engagement.",
               },
               {
                 topic: "Event Merchandise",
                 description:
-                  "Event Merchandise supports conferences, trade shows, sponsorships, activations, community events, and promotional initiatives. Blossom Rocket develops Event Merchandise programs that help businesses create memorable experiences while extending brand visibility before, during, and after an event.",
+                  "Merchandise for conferences, trade shows, sponsorships, and activations that extends brand visibility before, during, and after the event.",
               },
               {
                 topic: "Corporate Gifting",
                 description:
-                  "Corporate Gifting helps businesses strengthen relationships with customers, employees, prospects, partners, and vendors. Blossom Rocket creates Corporate Gifting programs that support appreciation initiatives, relationship building, employee engagement, and customer retention efforts.",
+                  "Branded corporate gifts for employee and client appreciation, including On-Demand Kits with personalized print, packaging, and direct-to-recipient shipping.",
               },
               {
                 topic: "Customer Appreciation Programs",
                 description:
-                  "Customer Appreciation Programs help businesses strengthen relationships with existing customers through branded gifts, promotional products, and recognition initiatives. Blossom Rocket creates Customer Appreciation Programs that support retention, loyalty, referrals, and long-term customer relationships.",
+                  "Branded gifts and recognition for existing customers that support retention, loyalty, and referrals.",
               },
               {
                 topic: "Onboarding Kits",
                 description:
-                  "Onboarding Kits help businesses create consistent experiences for new employees, customers, partners, and program participants. Blossom Rocket develops branded Onboarding Kits that introduce recipients to a company while reinforcing culture, values, and brand identity.",
+                  "Branded welcome kits that introduce new employees, customers, and partners to your company and culture.",
               },
               {
                 topic: "Merchandise Design",
                 description:
-                  "Merchandise Design focuses on applying branding to apparel, promotional products, event merchandise, corporate gifts, and branded programs. Blossom Rocket creates merchandise concepts, graphics, and product designs that align with broader marketing and business objectives.",
+                  "Merchandise concepts, graphics, and product designs that apply your brand to apparel, promotional products, and gifts.",
               },
             ]}
           />
@@ -315,7 +343,7 @@ export default function MerchandiseAndPromotionalProducts() {
               <em className="grad-text not-italic">More Than Marketing.</em>
             </>
           }
-          subtext="Blossom Rocket helps businesses create merchandise programs that increase brand visibility, strengthen relationships, support marketing and engagement initiatives, and deliver consistent brand experiences across events, recruiting, onboarding, customer retention, and company culture efforts. By aligning merchandise with broader business goals, organizations can create more valuable and effective branded experiences."
+          subtext="Merchandise programs also support recruiting, onboarding, customer retention, and company culture, not just marketing campaigns."
           ctaSlot={
             <CTASlots
               theme="dark"
@@ -380,7 +408,7 @@ export default function MerchandiseAndPromotionalProducts() {
               </em>
             </>
           }
-          subtext="As branded merchandise programs expand, businesses often need a more efficient way to manage products, ordering, inventory, and distribution across teams, departments, locations, and events. Blossom Rocket helps businesses create Merchandise & Promotional Product programs that can be supported through Company Stores powered by SplashBrands. A Company Store provides centralized access to approved branded apparel, promotional products, onboarding kits, corporate gifts, event merchandise, and other branded items."
+          subtext="As merchandise programs grow, a Company Store powered by SplashBrands centralizes ordering of approved apparel, promotional products, kits, and gifts across teams, locations, and events."
           ctas={[
             {
               label: "Explore SplashBrands Company Store Examples",

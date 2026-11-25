@@ -10,29 +10,77 @@ import { FAQGroup } from "@/lib/types/faqs";
 
 const faqs = rawFaqs as FAQGroup[];
 
+const PAGE_URL = "https://blossomrocket.studio/solutions/on-demand-kits";
+
 const META_DESCRIPTION =
-  "On-Demand Kits from Blossom Rocket combine branded merchandise, personalized print, coordinated packaging, and fulfillment in one program — for employee onboarding, customer and sales outreach, partner appreciation, and events.";
+  "On-Demand Kits from Blossom Rocket combine branded merchandise, personalized print, packaging, and fulfillment for corporate gifts, employee onboarding, client and partner appreciation, and events — shipped direct to recipients or in bulk.";
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${PAGE_URL}/#service`,
+  name: "On-Demand Kits",
+  alternateName: ["Branded Kit Programs", "Corporate Gift Kits"],
+  url: PAGE_URL,
+  provider: {
+    "@type": "Organization",
+    "@id": "https://blossomrocket.studio/#organization",
+    name: "Blossom Rocket",
+    url: "https://blossomrocket.studio",
+  },
+  description: META_DESCRIPTION,
+  serviceType: "Branded Kit Programs & Corporate Gifting",
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://blossomrocket.studio",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Solutions",
+      item: "https://blossomrocket.studio/solutions",
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "On-Demand Kits",
+      item: PAGE_URL,
+    },
+  ],
+};
 
 export const metadata: Metadata = {
-  title: "On-Demand Kits — Branded Kit Programs & Fulfillment | Blossom Rocket",
+  title:
+    "On-Demand Kits — Corporate Gift & Onboarding Kit Programs | Blossom Rocket",
   description: META_DESCRIPTION,
   keywords: [
     "On-Demand Kits",
     "Onboarding Kits",
     "Branded Kit Programs",
+    "Corporate Gifts",
     "Corporate Gifting",
+    "Employee Appreciation Gifts",
+    "Client Appreciation Gifts",
     "Branded Merchandise Programs",
     "Personalized Print",
     "Kit Fulfillment",
   ],
   alternates: {
-    canonical: "https://blossomrocket.studio/solutions/on-demand-kits",
+    canonical: PAGE_URL,
   },
   openGraph: {
     title:
-      "On-Demand Kits — Branded Kit Programs & Fulfillment | Blossom Rocket",
+      "On-Demand Kits — Corporate Gift & Onboarding Kit Programs | Blossom Rocket",
     description: META_DESCRIPTION,
-    url: "https://blossomrocket.studio/solutions/on-demand-kits",
+    url: PAGE_URL,
     siteName: "Blossom Rocket",
     type: "website",
   },
@@ -41,6 +89,16 @@ export const metadata: Metadata = {
 export default function page() {
   return (
     <div>
+      <script
+        id="schema-service"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        id="schema-breadcrumb"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Hero
         theme="dark"
         heading={
@@ -54,13 +112,18 @@ export default function page() {
         }
         body={
           <>
-            Blossom Rocket On-Demand Kits are scalable branded kit programs
-            powered by SplashBrands that combine branded merchandise,
-            personalized print, coordinated packaging, and fulfillment in one
-            program. Businesses can use On-Demand Kits for new hire onboarding,
-            customer and sales outreach, supplier and partner appreciation,
-            events and milestones, or flexible merchandise programs that do not
-            require a custom box.
+            On-Demand Kits are branded kit programs that combine{" "}
+            <a
+              href="/solutions/merchandise-and-promotional-products"
+              className="underline"
+            >
+              branded merchandise
+            </a>
+            , personalized print, coordinated packaging, and fulfillment in one
+            program. Blossom Rocket builds On-Demand Kits through SplashBrands
+            for new hire onboarding, corporate gifts, customer and sales
+            outreach, supplier and partner appreciation, events and milestones,
+            or flexible merchandise programs that do not require a custom box.
           </>
         }
         ctaSlot={
@@ -109,7 +172,7 @@ export default function page() {
             ]}
           />
         }
-        subtext="On-Demand Kits bring branded products, personalization, packaging, fulfillment, and distribution into one coordinated program. Blossom Rocket helps businesses create branded kit experiences that support stronger first impressions, more efficient program management, and scalable distribution across employees, customers, partners, and events."
+        subtext="On-Demand Kits bring branded products, personalization, packaging, and fulfillment into one program, creating stronger first impressions for employees, customers, and partners."
         schemaItems={[
           { topic: "Brand Experience" },
           { topic: "Operational Efficiency" },
@@ -157,7 +220,7 @@ export default function page() {
             ]}
           />
         }
-        subtext="On-Demand Kit programs centralize the operational work required to deliver branded kits. SplashBrands manages sourcing, decoration, print, inventory, and distribution under one program, which gives businesses a single system for controlling branded assets and moving kits from production to recipients."
+        subtext="SplashBrands manages sourcing, decoration, print, inventory, and distribution under one program, from production to recipients."
         schemaItems={[
           { topic: "Centralized Sourcing" },
           { topic: "Inventory & Asset Control" },
@@ -169,7 +232,7 @@ export default function page() {
         pageUrl="https://blossomrocket.studio/solutions/on-demand-kits#centralized-kit-management"
       >
         <CardList
-          heading="Recipient-Level Personalization Can Include:"
+          heading="Centralized Kit Management Can Include:"
           items={[
             { topic: "Centralized Sourcing" },
             { topic: "Inventory & Asset Control" },
@@ -187,7 +250,7 @@ export default function page() {
             },
           ]}
         />
-        <CardCallout heading="Variable data allows one branded kit program to produce different recipient-specific print and messaging without changing the overall program structure." />
+        <CardCallout heading="One program coordinates sourcing, decoration, print, and shipping, so kits move from production to recipients without a separate vendor for each component." />
       </SectionLayout>
       {/* Section 4: personalized-kit-management */}
       <SectionLayout
@@ -206,7 +269,7 @@ export default function page() {
             Without the Operational Overhead.
           </>
         }
-        subtext="Brand Systems help businesses scale without sacrificing consistency. Blossom Rocket Brand System services are designed to help organizations create repeatable processes that support future growth. The result is a more consistent brand experience across both digital and physical channels."
+        subtext="Variable-data print, custom letters, and recipient-specific messaging make onboarding, appreciation, and corporate gifting kits feel personal at scale."
         schemaItems={[
           { topic: "Add personalized business cards" },
           { topic: "Custom welcome letters" },
@@ -221,7 +284,7 @@ export default function page() {
       >
         <CardList
           layout="stacked"
-          heading="A Brand System helps teams:"
+          heading="Personalized Kits Can Include:"
           items={[
             { topic: "Add personalized business cards" },
             { topic: "Custom welcome letters" },
@@ -234,7 +297,7 @@ export default function page() {
           ]}
         />
         <div className="mb-4" />
-        <CardCallout heading="As more people contribute to a brand, clear systems become increasingly important." />
+        <CardCallout heading="Variable data allows one branded kit program to produce different recipient-specific print and messaging without changing the overall program structure." />
       </SectionLayout>
       {/* -- Section 5: What's Included -- */}
       <SectionItemList
@@ -243,7 +306,7 @@ export default function page() {
         id="what-is-included"
         theme="brandSoft"
         eyebrow="What Is Included?"
-        subtext="Blossom Rocket On-Demand Kits can combine branded merchandise, personalized print, packaging, fulfillment, and flexible distribution into one program. The exact components depend on the audience, occasion, budget, scale, and delivery requirements of the kit program."
+        subtext="Every kit is built from the same five parts. The mix depends on the audience, occasion, budget, and delivery needs."
         heading={
           <>
             <em className="grad-text not-italic"> What&apos;s Included </em> in
@@ -255,27 +318,27 @@ export default function page() {
           {
             topic: "Branded Merchandise",
             description:
-              "Branded apparel, desk essentials, drinkware, promotional products, co-branded merchandise, seasonal gifts, and other products can be selected around the purpose of the kit.",
+              "Apparel, desk essentials, drinkware, promotional products, and seasonal gifts chosen for the kit's purpose.",
           },
           {
             topic: "Personalized Print & Messaging",
             description:
-              "Welcome letters, appreciation letters, business cards, recognition cards, variable-data pieces, QR codes, and other printed materials can carry recipient-specific information.",
+              "Letters, business cards, recognition cards, and QR codes carrying recipient-specific details.",
           },
           {
             topic: "Coordinated Packaging",
             description:
-              "Custom inserts, branded boxes, custom box interiors, and program-specific messaging can connect the products and printed materials into a single branded presentation.",
+              "Branded boxes, inserts, and interiors that present everything as one branded package.",
           },
           {
             topic: "Fulfillment & Distribution",
             description:
-              "Programs can support managed fulfillment, nationwide shipping, direct-to-recipient fulfillment, and bulk distribution to offices, events, branches, or other central destinations.",
+              "Nationwide shipping direct to recipients, or bulk delivery to offices, events, and branches.",
           },
           {
             topic: "Flexible Kit Formats",
             description:
-              "Programs can use a custom box, branded tote or bag, curated merchandise bundle without a box, event-ready handout kit, or seasonal appreciation shipment.",
+              "A custom box, branded tote, no-box bundle, event handout kit, or seasonal shipment.",
           },
         ]}
         ctaSlot={
@@ -300,7 +363,7 @@ export default function page() {
         desktopOrder="maintain"
         heading={
           <>
-            On-Demand Kit Programs Support On-Demand Kits Centralize{" "}
+            On-Demand Kit Programs Support{" "}
             <em className="grad-text not-italic">
               Onboarding, Sales, Partnerships, Events & Recognition.
             </em>
@@ -313,7 +376,7 @@ export default function page() {
             </CalendlyButton>
           </CTASlots>
         }
-        subtext="SplashBrands structures branded kit programs around recurring business relationships and occasions. Blossom Rocket can use these program types to create kits for employees, customers, suppliers, partners, events, milestones, and high-volume merchandise rollouts."
+        subtext="Kit programs are built around recurring business relationships and occasions."
         schemaItems={[
           { topic: "New Hire & Onboarding" },
           { topic: "Customer & Sales Programs" },
@@ -329,38 +392,34 @@ export default function page() {
             {
               topic: "New Hire & Onboarding",
               description:
-                "New hire and onboarding kits can include personalized welcome letters, variable-data business cards, branded apparel and desk essentials, custom inserts and packaging, and personalization across print and products.",
+                "Welcome letters, business cards, branded apparel, and desk essentials for new employees.",
             },
             {
               topic: "Customer & Sales Programs",
               description:
-                "Customer and sales programs use branded kits for outreach and relationship-building initiatives that combine merchandise, print, packaging, and fulfillment.",
+                "Branded kits for customer outreach and relationship building.",
             },
             {
               topic: "Supplier & Partner Kits",
               description:
-                "Supplier and partner kits can include personalized appreciation letters, variable-data recognition cards, co-branded merchandise, seasonal gifts, custom box interiors, and direct-to-recipient shipping.",
+                "Appreciation letters, co-branded merchandise, and seasonal gifts shipped directly to partners.",
             },
             {
               topic: "Events & Occasions",
               description:
-                "Event and milestone programs can support baby and family celebrations, birthdays and anniversaries, employee recognition and awards, holiday campaigns, seasonal programs, and other employee or client occasions.",
+                "Recognition, anniversaries, holidays, and other employee or client milestones.",
             },
             {
               topic: "Flexible Formats",
               description:
-                "Flexible formats include branded tote or bag kits, curated merchandise bundles without a box, event-ready handout kits, and seasonal appreciation shipments for different budgets, scales, and distribution needs.",
+                "Tote kits, no-box bundles, and handout kits for different budgets and scales.",
             },
           ]}
         />
         <CardCallout heading="Not every On-Demand Kit requires a custom box. Flexible formats can reduce packaging requirements while still supporting high-volume rollouts and direct-to-recipient shipping." />
       </SectionLayout>
       {/* ── Section 5: FAQs ── */}
-      <FAQSection
-        groups={faqs}
-        theme="dark"
-        pageUrl="https://blossomrocket.studio/services/brand-identity"
-      />
+      <FAQSection groups={faqs} theme="dark" pageUrl={PAGE_URL} />
     </div>
   );
 }

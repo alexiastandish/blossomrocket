@@ -110,7 +110,7 @@ Employees are often among the most visible users of branded merchandise. When em
 
 Employee merchandise can also strengthen internal brand identity. A coordinated program can help people understand how the brand expresses itself physically, and can make product launches, company milestones, team events, and onboarding experiences feel more cohesive.
 
-The quality of the merchandise matters. Poor-quality employee products may feel like an obligation or cost-saving decision. Well-designed products can feel like appreciation and participation. Inclusive sizing, practical product choices, and some level of employee choice can also improve adoption.
+The quality of the merchandise matters. Poor-quality employee products may feel like an obligation or cost-saving decision. Well-designed products can feel like appreciation and participation. Inclusive sizing, practical product choices, and some level of employee choice can also improve adoption. A [Swag Storefront](/solutions/swag-storefronts) or Company Store provides that choice by letting employees order approved items in their own sizes.
 
 The objective should not be to turn employees into unwilling advertisements. It should be to create products employees are genuinely comfortable using.
 

@@ -1,4 +1,5 @@
 import { NavGroup, NavLink, ShopMegaMenuCategory } from "../types/navigation";
+import { industries } from "@/data/industries";
 
 const primarySolutions: NavLink[] = [
   { href: "/solutions/company-stores", label: "Company Stores" },
@@ -18,6 +19,11 @@ const merchandiseSolutions: NavLink[] = [
   },
 ];
 
+const industryLinks: NavLink[] = industries.map(({ slug, name }) => ({
+  href: `/industries/${slug}`,
+  label: name,
+}));
+
 const creativeServices: NavLink[] = [
   { href: "/services/brand-identity", label: "Brand Identity" },
   { href: "/services/brand-systems", label: "Brand Systems" },
@@ -34,6 +40,7 @@ export const dropdownLinks: Record<string, NavGroup[]> = {
     { title: "Primary", items: primarySolutions },
     { title: "Merchandise Solutions", items: merchandiseSolutions },
   ],
+  Industries: [{ items: industryLinks }],
   "Creative Services": [{ items: creativeServices }],
 };
 
@@ -1590,6 +1597,7 @@ export const shopMegaMenu: ShopMegaMenuCategory[] = [
 ];
 export const links: NavLink[] = [
   { href: "/solutions", label: "Solutions", dropdown: true },
+  { href: "/industries", label: "Industries", dropdown: true },
   { href: "/services", label: "Creative Services", dropdown: true },
   { href: "/work", label: "Work" },
   { href: "/blog", label: "Blog" },

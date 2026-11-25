@@ -168,11 +168,11 @@ export default function SwagStorefronts() {
           }
           body={
             <>
-              Blossom Rocket Swag Storefronts give a single brand a simpler way
-              to access its own branded apparel and promotional products
-              through a dedicated storefront powered by SplashBrands.
-              Businesses can upload their logo and its approved variations,
-              select product colors that align with their brand, and create a
+              A Swag Storefront is a dedicated online storefront where a single
+              brand orders its own branded apparel and promotional products.
+              Blossom Rocket sets up Swag Storefronts on SplashBrands
+              technology. Businesses can upload their logo and its approved
+              variations, select product colors that align with their brand, and create a
               storefront where branded products are ready to shop — without
               the commitment of a full Company Store. Need a storefront that
               carries more than one organization&apos;s mark instead?{" "}
@@ -214,7 +214,7 @@ export default function SwagStorefronts() {
             </>
           }
           subtext={
-            "Blossom Rocket Swag Storefronts give a single brand a repeatable way to order its own branded apparel and promotional products using approved logo variations, brand colors, and product selections. Once the brand setup is complete, users can shop pre-configured branded products without reselecting logo files, product colors, and logo treatments for every\u00A0order.\n\nSwag Storefronts help businesses:"
+            "Once your brand is set up, users shop pre-configured products without reselecting logos, colors, or treatments for every\u00A0order.\n\nSwag Storefronts help businesses:"
           }
           pageUrl={PAGE_URL}
           schemaItems={[
@@ -302,32 +302,32 @@ export default function SwagStorefronts() {
               {
                 topic: "Step 1 — Upload Your Logo",
                 description:
-                  "Upload your primary logo to begin the storefront setup. The system generates black and white logo versions that can be used when a full-color logo does not provide enough contrast against a product color.",
+                  "Upload your primary logo. The system creates black and white versions for products where a full-color logo lacks contrast.",
               },
               {
                 topic: "Step 2 — Add Additional Logo Variations",
                 description:
-                  "Businesses can also upload other approved versions of their identity, including: horizontal or flat logos, stacked logos, logo marks, etc. Each logo variation can be configured independently.",
+                  "Add approved variations such as horizontal, stacked, or logo-mark versions. Each is configured independently.",
               },
               {
                 topic: "Step 3 — Select Brand-Appropriate Product Colors",
                 description:
-                  "Choose the apparel and promotional product colors you want represented in the storefront. This allows the product experience to reflect the business's Brand Identity instead of displaying unrelated color options.",
+                  "Choose the apparel and promotional product colors that fit your brand identity.",
               },
               {
                 topic: "Step 4 — Match Logos to Product Colors",
                 description:
-                  "The storefront setup previews each logo against the selected product colors. SplashBrands recommends the logo version that provides the strongest visual contrast, and the selection can be changed when another approved logo treatment is preferred.",
+                  "Preview each logo on each product color. SplashBrands recommends the highest-contrast version, and you can change it.",
               },
               {
                 topic: "Step 5 — Add Brand Context",
                 description:
-                  "Provide your company website or social profile so the SplashBrands logo team can reference the existing brand if questions arise. Additional application notes can also be provided, such as: Use the flat logo for full-chest T-shirts. Businesses with existing Brand Guidelines can upload those files during setup as another source of brand direction.",
+                  "Share your website, brand guidelines, and application notes (for example, \"use the flat logo on full-chest T-shirts\").",
               },
               {
                 topic: "Step 6 — Review and Submit",
                 description:
-                  "Review the uploaded logos, product-color selections, logo pairings, and brand information before submitting the storefront setup. The SplashBrands logo team can follow up if clarification is needed before the brand configuration is finalized.",
+                  "Review your logos, colors, and pairings, then submit. The SplashBrands logo team follows up if anything needs clarifying.",
               },
             ]}
           />
@@ -362,32 +362,32 @@ export default function SwagStorefronts() {
               {
                 topic: "Logo Version Setup",
                 description:
-                  "Upload your primary logo and additional approved logo variations, including horizontal, stacked, icon, or logo-mark formats.",
+                  "Your primary logo plus horizontal, stacked, icon, or logo-mark variations.",
               },
               {
                 topic: "Black & White Logo Treatments",
                 description:
-                  "The setup workflow creates black and white treatments of uploaded logos to support products where alternate contrast is required.",
+                  "Black and white versions of each logo for high-contrast products.",
               },
               {
                 topic: "Brand-Based Product Colors",
                 description:
-                  "Select the apparel and promotional product colors that align with your visual identity and should be available through the storefront.",
+                  "Only product colors that match your visual identity.",
               },
               {
                 topic: "Logo-to-Color Matching",
                 description:
-                  "Preview how each logo appears against different product colors and control which approved logo treatment should be used for each one.",
+                  "Control which approved logo appears on each product color.",
               },
               {
                 topic: "Brand Guidelines & Application Notes",
                 description:
-                  "Upload Brand Guidelines and provide additional instructions so the SplashBrands logo team has context for how your identity should be applied.",
+                  "Guidelines and instructions that tell the SplashBrands logo team how to apply your identity.",
               },
               {
                 topic: "Direct Product Shopping",
                 description:
-                  "The storefront is available on the fly! Users can shop branded products directly instead of initiating a new merchandise project every time they need something.",
+                  "Users shop approved branded products directly, with no new project for each order.",
               },
             ]}
           />
@@ -463,7 +463,7 @@ export default function SwagStorefronts() {
               </em>
             </>
           }
-          subtext="The difference is whose logo is on the merchandise. A Swag Storefront carries one organization's own approved logo and its variations. Co-Branding carries more than one approved mark — a partner's logo alongside yours, a division's logo, a location's logo — paired with the product colors and treatments each one is approved for."
+          subtext="The difference is whose logo is on the merchandise: a Swag Storefront carries only your own logo, while Co-Branding carries more than one approved mark, such as a partner's, division's, or location's."
           ctas={[
             {
               label: "Explore Co-Branding",

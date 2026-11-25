@@ -174,13 +174,13 @@ export default function CoBranding() {
           }
           body={
             <>
-              Blossom Rocket Co-Branding gives organizations one storefront for
-              merchandise that carries more than one approved mark — partner
-              logos, divisional logos, location logos, program logos, and
-              alternate logo variations. Powered by SplashBrands&apos;
-              multi-logo storefront technology, each approved logo is paired
-              with approved brand colors and product applications before anyone
-              places an order.
+              Co-Branding is a branded merchandise storefront for merchandise
+              that carries more than one approved mark — partner logos,
+              divisional logos, location logos, program logos, and alternate
+              logo variations. Blossom Rocket configures Co-Branding programs on
+              SplashBrands&apos; multi-logo storefront technology, which pairs
+              each approved logo with approved brand colors and product
+              applications before anyone places an order.
             </>
           }
           ctaSlot={
@@ -218,7 +218,7 @@ export default function CoBranding() {
             </>
           }
           subtext={
-            "Co-branded merchandise is where brand consistency usually breaks down. Every partnership, division, and location brings its own logo files, and every order becomes a new round of decisions about which mark to use, at what size, in which color, on which product.\n\nBlossom Rocket Co-Branding settles those decisions once, then makes the approved result available to order. Co-Branding helps businesses:"
+            "Every partnership, division, and location brings its own logo files, and every order reopens the same decisions about which mark, size, and color to use. Co-Branding settles those decisions once and helps businesses:"
           }
           pageUrl={PAGE_URL}
           schemaItems={[
@@ -306,32 +306,32 @@ export default function CoBranding() {
               {
                 topic: "Step 1 — Upload Your Logo",
                 description:
-                  "Upload your primary logo to begin the storefront setup. The system generates black and white logo versions that can be used when a full-color logo does not provide enough contrast against a product color.",
+                  "Upload your primary logo. The system creates black and white versions for products where a full-color logo lacks contrast.",
               },
               {
                 topic: "Step 2 — Add Additional Logos and Logo Variations",
                 description:
-                  "Upload the other approved marks the program needs to carry, including partner, divisional, location, and program logos, along with horizontal or flat logos, stacked logos, and logo marks. Each logo is configured independently.",
+                  "Add partner, divisional, location, and program logos, plus their horizontal, stacked, or logo-mark versions. Each is configured independently.",
               },
               {
                 topic: "Step 3 — Select Brand-Appropriate Product Colors",
                 description:
-                  "Choose the apparel and promotional product colors you want represented in the storefront. This allows the product experience to reflect the business's Brand Identity instead of displaying unrelated color options.",
+                  "Choose the apparel and promotional product colors that fit your brand identity.",
               },
               {
                 topic: "Step 4 — Match Logos to Product Colors",
                 description:
-                  "The storefront setup previews each logo against the selected product colors. SplashBrands recommends the logo version that provides the strongest visual contrast, and the selection can be changed when another approved logo treatment is preferred.",
+                  "Preview each logo on each product color. SplashBrands recommends the highest-contrast version, and you can change it.",
               },
               {
                 topic: "Step 5 — Add Brand Context",
                 description:
-                  "Provide your company website or social profile so the SplashBrands logo team can reference the existing brand if questions arise. Additional application notes can also be provided, such as: Use the flat logo for full-chest T-shirts. Businesses with existing Brand Guidelines can upload those files during setup as another source of brand direction.",
+                  'Share your website, brand guidelines, and application notes (for example, "use the flat logo on full-chest T-shirts").',
               },
               {
                 topic: "Step 6 — Review and Submit",
                 description:
-                  "Review the uploaded logos, product-color selections, logo pairings, and brand information before submitting the storefront setup. The SplashBrands logo team can follow up if clarification is needed before the brand configuration is finalized.",
+                  "Review your logos, colors, and pairings, then submit. The SplashBrands logo team follows up if anything needs clarifying.",
               },
             ]}
           />
@@ -366,32 +366,32 @@ export default function CoBranding() {
               {
                 topic: "Multi-Logo Setup",
                 description:
-                  "Upload your primary logo plus the additional approved logos and logo variations the program needs — partner, divisional, location, and program marks, in horizontal, stacked, icon, or logo-mark formats.",
+                  "Your primary logo plus partner, divisional, location, and program marks in any approved format.",
               },
               {
                 topic: "Black & White Logo Treatments",
                 description:
-                  "The setup workflow creates black and white treatments of uploaded logos to support products where alternate contrast is required.",
+                  "Black and white versions of each logo for high-contrast products.",
               },
               {
                 topic: "Brand-Based Product Colors",
                 description:
-                  "Select the apparel and promotional product colors that align with your visual identity and should be available through the storefront.",
+                  "Only product colors that match your visual identity.",
               },
               {
                 topic: "Logo-to-Color Matching",
                 description:
-                  "Preview how each logo appears against different product colors and control which approved logo treatment should be used for each one.",
+                  "Control which approved logo appears on each product color.",
               },
               {
                 topic: "Brand Guidelines & Application Notes",
                 description:
-                  "Upload Brand Guidelines and provide additional instructions so the SplashBrands logo team has context for how each identity should be applied.",
+                  "Guidelines and instructions that tell the SplashBrands logo team how to apply each identity.",
               },
               {
                 topic: "Direct Product Shopping",
                 description:
-                  "The storefront is available on the fly! Users can shop approved co-branded products directly instead of initiating a new merchandise project every time they need something.",
+                  "Users shop approved co-branded products directly, with no new project for each order.",
               },
             ]}
           />

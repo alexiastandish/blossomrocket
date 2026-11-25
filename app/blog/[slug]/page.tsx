@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { getArticleBySlug } from "@/lib/utils/blog";
 import { BlogArticle } from "@/components/blog/BlogArticle";
 
@@ -40,6 +41,6 @@ export default async function Page({
 }) {
   const { slug } = await params;
   const article = await getArticleBySlug(slug);
-  if (!article) return null;
+  if (!article) notFound();
   return <BlogArticle article={article} />;
 }

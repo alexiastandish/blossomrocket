@@ -1,4 +1,5 @@
 import { getAllArticles } from "@/lib/utils/blog";
+import { industries } from "@/data/industries";
 
 export async function GET() {
   const articles = await getAllArticles();
@@ -29,9 +30,17 @@ export async function GET() {
     "## Merchandise Solutions",
     "",
     "- [Solutions Overview](https://blossomrocket.studio/solutions): All branded merchandise and operational solutions",
-    "- [Merchandise & Promotional Products](https://blossomrocket.studio/solutions/merchandise-and-promotional-products): Branded apparel, promotional products, gifting, and custom merchandise",
+    "- [Merchandise & Promotional Products](https://blossomrocket.studio/solutions/merchandise-and-promotional-products): Promotional products and branded merchandise for businesses — custom apparel, promotional items, corporate gifts, and event merchandise, produced on demand through SplashBrands",
     "- [Swag Storefronts](https://blossomrocket.studio/solutions/swag-storefronts): Self-serve storefront for a single brand's own approved logo and product colors, on the same SplashBrands technology as Co-Branding",
-    "- [On-Demand Kits](https://blossomrocket.studio/solutions/on-demand-kits): Branded kit programs combining merchandise, personalized print, packaging, and fulfillment",
+    "- [On-Demand Kits](https://blossomrocket.studio/solutions/on-demand-kits): Branded kit programs for corporate gifts, employee onboarding, and client and partner appreciation — combining merchandise, personalized print, packaging, and fulfillment",
+    "",
+    "## Industries",
+    "",
+    "- [Industries Overview](https://blossomrocket.studio/industries): Company stores and branded merchandise programs by industry",
+    ...industries.map(
+      (i) =>
+        `- [${i.name}](https://blossomrocket.studio/industries/${i.slug}): ${i.description}`,
+    ),
     "",
     "## Creative Services",
     "",
