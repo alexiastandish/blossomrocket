@@ -4,8 +4,9 @@ description: "Learn how useful, well-designed branded merchandise creates measur
 seoDescription: "How useful branded merchandise creates measurable value through repeated exposure, employee engagement, customer retention, and brand recognition."
 publishedAt: "2026-07-20"
 updatedAt: "2026-07-20"
-authorName: "Blossom Rocket"
-authorRole: "Brand Strategy Studio"
+authorName: "Alexia Standish"
+authorRole: "Founder, Blossom Rocket"
+authorUrl: "https://blossomrocket.studio/about"
 heroImageSrc: "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/6dd1a0a8-eadf-4981-0672-5a2e7b081300/public"
 heroImageAlt: "A coordinated collection of branded apparel, drinkware, bags, packaging, and promotional products designed as part of a cohesive merchandise program"
 heroImageWidth: 1200

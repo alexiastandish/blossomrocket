@@ -10,6 +10,7 @@ import { ContactModalRoot } from "@/components/contact-modal-root";
 import {
   CONTACT_EMAIL,
   FOUNDER_ID,
+  FOUNDING_YEAR,
   ORGANIZATION_ID,
   SITE_URL,
   SPLASHBRANDS_ID,
@@ -80,6 +81,7 @@ const siteSchema = [
     logo: `${SITE_URL}/logo.jpg`,
     email: CONTACT_EMAIL,
     founder: { "@id": FOUNDER_ID },
+    foundingDate: FOUNDING_YEAR,
     sameAs: [
       "https://www.linkedin.com/company/blossom-rocket",
       "https://www.instagram.com/blossomrocketstudio/",

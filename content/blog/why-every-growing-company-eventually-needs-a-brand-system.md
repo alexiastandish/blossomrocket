@@ -4,8 +4,9 @@ description: "Learn why growing companies eventually outgrow informal brand deci
 seoDescription: "Why growing companies outgrow informal brand decisions and need a structured brand system to stay consistent across teams and channels."
 publishedAt: "2026-07-20"
 updatedAt: "2026-07-20"
-authorName: "Blossom Rocket"
-authorRole: "Brand Strategy Studio"
+authorName: "Alexia Standish"
+authorRole: "Founder, Blossom Rocket"
+authorUrl: "https://blossomrocket.studio/about"
 heroImageSrc: "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/bce4eb07-0134-4acf-7bf6-4d4b3e60bb00/public"
 heroImageAlt: "A coordinated brand system showing typography, color, imagery, digital layouts, print materials, and branded merchandise"
 heroImageWidth: 1200

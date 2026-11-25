@@ -4,8 +4,9 @@ description: "Learn why premium brands still invest in print design, packaging, 
 seoDescription: "Why premium brands still invest in print design, packaging, direct mail, and physical collateral to create memorable customer experiences."
 publishedAt: "2026-07-20"
 updatedAt: "2026-07-20"
-authorName: "Blossom Rocket"
-authorRole: "Brand Strategy Studio"
+authorName: "Alexia Standish"
+authorRole: "Founder, Blossom Rocket"
+authorUrl: "https://blossomrocket.studio/about"
 heroImageSrc: "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/ba256e94-fafb-4b28-f3de-4770e34ee700/public"
 heroImageAlt: "A premium collection of printed brand materials featuring textured paper, packaging, stationery, a product catalog, and embossed details"
 heroImageWidth: 1200

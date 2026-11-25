@@ -4,8 +4,9 @@ description: "Compare print and digital marketing across awareness, engagement, 
 seoDescription: "Print vs. digital marketing across awareness, engagement, conversion, and retention: when each channel works best and how to combine them."
 publishedAt: "2026-07-20"
 updatedAt: "2026-07-20"
-authorName: "Blossom Rocket"
-authorRole: "Brand Strategy Studio"
+authorName: "Alexia Standish"
+authorRole: "Founder, Blossom Rocket"
+authorUrl: "https://blossomrocket.studio/about"
 heroImageSrc: "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/94342ad2-6d62-4a22-6bae-920b49bc5600/public"
 heroImageAlt: "A premium marketing campaign combining printed brochures, direct mail, branded packaging, social media, email marketing, and a responsive website"
 heroImageWidth: 1200

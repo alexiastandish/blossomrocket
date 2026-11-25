@@ -18,7 +18,7 @@ export async function GET() {
     "marketing assets, print) establish and maintain the standards those programs",
     "apply, and are also available independently.",
     "",
-    "Blossom Rocket was founded by Alexia Standish, a designer and full-stack",
+    "Blossom Rocket was founded in 2026 by Alexia Standish, a designer and full-stack",
     "software engineer with a degree in Graphic Design.",
     "",
     "Blossom Rocket is the customer-facing brand for these programs. SplashBrands",

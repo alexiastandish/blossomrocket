@@ -4,8 +4,9 @@ description: "A practical checklist for evaluating company store platforms — o
 seoDescription: "A practical checklist for comparing company store platforms: order minimums, inventory risk, production model, approvals, and reporting."
 publishedAt: "2026-10-16"
 updatedAt: "2026-10-16"
-authorName: "Blossom Rocket"
-authorRole: "Brand Strategy Studio"
+authorName: "Alexia Standish"
+authorRole: "Founder, Blossom Rocket"
+authorUrl: "https://blossomrocket.studio/about"
 heroImageSrc: "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/2922328a-6303-4a36-5d2f-96f847d54200/public"
 heroImageAlt: "Branded apparel and promotional products arranged as part of a company store catalog"
 heroImageWidth: 1200

@@ -4,8 +4,9 @@ description: "Discover which promotional products people are most likely to keep
 seoDescription: "Which promotional products people keep, use, and remember, and how to choose branded merchandise that meets real needs instead of adding clutter."
 publishedAt: "2026-07-20"
 updatedAt: "2026-07-20"
-authorName: "Blossom Rocket"
-authorRole: "Brand Strategy Studio"
+authorName: "Alexia Standish"
+authorRole: "Founder, Blossom Rocket"
+authorUrl: "https://blossomrocket.studio/about"
 heroImageSrc: "https://imagedelivery.net/phVukYz6oCUHQR4c37ZNwQ/4bf56dcf-4637-4cd4-9539-fe664e2e7d00/public"
 heroImageAlt: "A curated collection of useful branded promotional products including drinkware, bags, notebooks, apparel, and tech accessories"
 heroImageWidth: 1200

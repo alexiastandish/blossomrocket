@@ -15,11 +15,15 @@ export const SPLASHBRANDS_ID = "https://splashbrands.com/#organization";
 
 export const CONTACT_EMAIL = "alexia@blossomrocket.studio";
 
+/** Confirmed by Alexia, Nov 2026. */
+export const FOUNDING_YEAR = "2026";
+
 export const FOUNDER = {
   name: "Alexia Standish",
   jobTitle: "Founder",
+  role: "Founder, Blossom Rocket",
   shortBio:
-    "Alexia Standish is the founder of Blossom Rocket. She combines a degree in Graphic Design with years of full-stack software engineering, including Tapcart from 2019 to 2025, to help organizations build brands that are easier to manage at scale.",
+    "Alexia Standish founded Blossom Rocket in 2026. She combines a degree in Graphic Design with years of full-stack software engineering, including Tapcart from 2019 to 2025, to help organizations build brands that are easier to manage at scale.",
   linkedin: "https://www.linkedin.com/in/alexiastandish/",
   knowsAbout: [
     "Brand Identity",
