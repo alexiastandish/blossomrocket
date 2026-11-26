@@ -1,0 +1,434 @@
+{
+  "2922328a-6303-4a36-5d2f-96f847d54200": {
+    "newId": "blossom-rocket/site/blossom-rocket-ivory-promo-products",
+    "alt": "Blossom Rocket Ivory Promo Products",
+    "files": [
+      "components/CompanyStoresSection.tsx",
+      "content/blog/custom-apparel-for-employees.md",
+      "content/blog/how-to-choose-a-company-store-platform.md"
+    ]
+  },
+  "1a2b038f-b24e-41e5-b906-a6f62d58c800": {
+    "newId": "blossom-rocket/site/blossom-rocket-ivory-promo-products-2",
+    "alt": "Blossom Rocket Ivory Promo Products",
+    "files": ["app/services/brand-identity/page.tsx"]
+  },
+  "ba256e94-fafb-4b28-f3de-4770e34ee700": {
+    "newId": "blossom-rocket/blog/why-print-still-matters-for-premium-brands-hero",
+    "alt": "A premium collection of printed brand materials featuring textured paper, packaging, stationery, a product catalog, and embossed details",
+    "files": ["content/blog/why-print-still-matters-for-premium-brands.md"]
+  },
+  "bce4eb07-0134-4acf-7bf6-4d4b3e60bb00": {
+    "newId": "blossom-rocket/blog/why-every-growing-company-eventually-needs-a-brand-system-hero",
+    "alt": "A coordinated brand system showing typography, color, imagery, digital layouts, print materials, and branded merchandise",
+    "files": [
+      "content/blog/why-every-growing-company-eventually-needs-a-brand-system.md"
+    ]
+  },
+  "1959408e-1e8c-4bf0-6e51-b3fb17aeb600": {
+    "newId": "blossom-rocket/blog/nature-inspired-color-palettes-brand-identity-hero",
+    "alt": "Nature-inspired color palette drawn from flowers, foliage, stone, and earth",
+    "files": ["content/blog/nature-inspired-color-palettes-brand-identity.md"]
+  },
+  "4bf56dcf-4637-4cd4-9539-fe664e2e7d00": {
+    "newId": "blossom-rocket/blog/promotional-products-that-people-actually-find-useful-hero",
+    "alt": "A curated collection of useful branded promotional products including drinkware, bags, notebooks, apparel, and tech accessories",
+    "files": [
+      "content/blog/promotional-products-that-people-actually-find-useful.md"
+    ]
+  },
+  "6a3f37cf-2585-4d22-b94f-f5e04a742b00": {
+    "newId": "blossom-rocket/blog/why-ai-search-rewards-consistent-brands-hero",
+    "alt": "Consistent brand system elements\u2014logo, color, and typography\u2014repeated across multiple touchpoints",
+    "files": ["content/blog/why-ai-search-rewards-consistent-brands.md"]
+  },
+  "e28ee798-2748-44dd-5abf-b0c60a613200": {
+    "newId": "blossom-rocket/blog/what-marketing-assets-does-a-growing-business-need-hero",
+    "alt": "A coordinated collection of marketing assets including social media graphics, email designs, digital ads, sales presentations, campaign creative, and event materials",
+    "files": [
+      "content/blog/what-marketing-assets-does-a-growing-business-need.md"
+    ]
+  },
+  "ddb77a47-a96c-4b5d-6d6f-7ba240c25800": {
+    "newId": "blossom-rocket/blog/how-merch-strengthens-brand-identity-and-creates-public-brand-awareness-hero",
+    "alt": "A cohesive branded merchandise collection featuring apparel, bags, drinkware, packaging, and promotional products used in public settings",
+    "files": [
+      "content/blog/how-merch-strengthens-brand-identity-and-creates-public-brand-awareness.md"
+    ]
+  },
+  "d11b028f-de74-4177-7187-c4f498dfa000": {
+    "newId": "blossom-rocket/blog/why-growing-websites-become-inconsistent-hero",
+    "alt": "A comparison between an inconsistent website interface and a cohesive scalable digital design system with standardized components",
+    "files": ["content/blog/why-growing-websites-become-inconsistent.md"]
+  },
+  "67f796b9-4cc4-4e85-5c73-b33705a5a700": {
+    "newId": "blossom-rocket/blog/how-to-build-a-scalable-marketing-asset-system-hero",
+    "alt": "A scalable marketing asset system organizing campaign graphics, social templates, email designs, presentations, advertisements, and event materials",
+    "files": ["content/blog/how-to-build-a-scalable-marketing-asset-system.md"]
+  },
+  "b8077b9e-17a4-492f-b88b-8f5886c43a00": {
+    "newId": "blossom-rocket/blog/what-is-a-component-library-hero",
+    "alt": "A digital component library displaying reusable buttons, forms, navigation elements, cards, typography, and responsive interface patterns",
+    "files": ["content/blog/what-is-a-component-library.md"]
+  },
+  "94342ad2-6d62-4a22-6bae-920b49bc5600": {
+    "newId": "blossom-rocket/blog/print-vs-digital-marketing-hero",
+    "alt": "A premium marketing campaign combining printed brochures, direct mail, branded packaging, social media, email marketing, and a responsive website",
+    "files": ["content/blog/print-vs-digital-marketing.md"]
+  },
+  "6dd1a0a8-eadf-4981-0672-5a2e7b081300": {
+    "newId": "blossom-rocket/blog/the-roi-of-branded-merchandise-hero",
+    "alt": "A coordinated collection of branded apparel, drinkware, bags, packaging, and promotional products designed as part of a cohesive merchandise program",
+    "files": ["content/blog/the-roi-of-branded-merchandise.md"]
+  },
+  "b2e99c06-fd06-4b19-2eae-c5b7d8e36a00": {
+    "newId": "blossom-rocket/work/puller-ai-image",
+    "alt": null,
+    "files": ["data/work.json"]
+  },
+  "bb781f77-e894-41ff-fa4e-bcf8be230800": {
+    "newId": "blossom-rocket/work/puller-ai-image-2",
+    "alt": null,
+    "files": ["data/work.json"]
+  },
+  "c2224266-1b55-4ac3-a2e4-1c91ddd50600": {
+    "newId": "blossom-rocket/work/puller-ai-branding",
+    "alt": "Puller Branding",
+    "files": ["data/work.json"]
+  },
+  "f06b545c-6fd5-418b-b9a4-57f37079c400": {
+    "newId": "blossom-rocket/work/modern-meditations-business-card",
+    "alt": "Modern Meditations Business Card",
+    "files": ["data/selectedWork.json", "data/work.json"]
+  },
+  "6a91f29e-b227-4fb6-1789-1cccb8370b00": {
+    "newId": "blossom-rocket/work/modern-meditations-mug-promotional-product",
+    "alt": "Modern Meditations Mug - Promotional Product",
+    "files": ["data/selectedWork.json", "data/work.json"]
+  },
+  "1e2de879-c925-486c-c740-8cf46e0f6e00": {
+    "newId": "blossom-rocket/work/modern-meditations-style-guide",
+    "alt": "Modern Meditations Style Guide",
+    "files": ["data/selectedWork.json", "data/work.json"]
+  },
+  "ed726f44-a33e-492a-ffe7-53106f03a600": {
+    "newId": "blossom-rocket/work/modern-meditations-podcast",
+    "alt": "Modern Meditations Podcast",
+    "files": ["data/selectedWork.json", "data/work.json"]
+  },
+  "0db02cf8-68a9-460c-dac8-732fe8a78600": {
+    "newId": "blossom-rocket/work/beats-by-dre-by-dre-identity-lookbook-cover",
+    "alt": "Beats by Dre Identity Lookbook Cover",
+    "files": ["data/selectedWork.json", "data/work.json"]
+  },
+  "47ea1502-5757-4e2c-84a2-12e5e332d400": {
+    "newId": "blossom-rocket/work/beats-by-dre-2016-lookbook-intro-pages",
+    "alt": "2016 Lookbook Intro pages ",
+    "files": ["data/selectedWork.json", "data/work.json"]
+  },
+  "a0adad7a-798f-496d-9a50-99d59ca14400": {
+    "newId": "blossom-rocket/work/beats-by-dre-table-contents",
+    "alt": "table of contents",
+    "files": ["data/selectedWork.json", "data/work.json"]
+  },
+  "a67292ba-b403-43ec-64a3-04125d406300": {
+    "newId": "blossom-rocket/work/beats-by-dre-active-collection-cover-pages",
+    "alt": "active collection cover pages",
+    "files": ["data/selectedWork.json", "data/work.json"]
+  },
+  "ddab2811-4d95-4a95-da12-a3bb7935da00": {
+    "newId": "blossom-rocket/work/beats-by-dre-headphones-cover-pages",
+    "alt": "headphones cover pages",
+    "files": ["data/selectedWork.json", "data/work.json"]
+  },
+  "89856df0-eb59-4a7c-6a9a-c5dec4933500": {
+    "newId": "blossom-rocket/work/beats-by-dre-solo-2",
+    "alt": "solo 2",
+    "files": ["data/selectedWork.json", "data/work.json"]
+  },
+  "6439e70c-fdb5-4039-b988-df66e4d8da00": {
+    "newId": "blossom-rocket/work/beats-by-dre-solo-2-wireless",
+    "alt": "solo 2 wireless",
+    "files": ["data/selectedWork.json", "data/work.json"]
+  },
+  "a8e92f1f-9a0e-4ea8-293a-ff8dde463900": {
+    "newId": "blossom-rocket/work/beats-by-dre-solo-2-info",
+    "alt": "solo 2 info",
+    "files": ["data/selectedWork.json", "data/work.json"]
+  },
+  "382db63d-2c46-4c57-d250-0cbab2ebae00": {
+    "newId": "blossom-rocket/work/beats-by-dre-mixer-pages",
+    "alt": "mixer pages",
+    "files": ["data/selectedWork.json", "data/work.json"]
+  },
+  "2e7e397c-d71d-4117-4382-8206b320a800": {
+    "newId": "blossom-rocket/work/beats-by-dre-powerbeats",
+    "alt": "powerbeats",
+    "files": ["data/selectedWork.json", "data/work.json"]
+  },
+  "81042585-5a6c-4bd0-defd-737706218500": {
+    "newId": "blossom-rocket/work/beats-by-dre-earphones-cover-pages",
+    "alt": "earphones cover pages",
+    "files": ["data/selectedWork.json", "data/work.json"]
+  },
+  "821038e0-77d1-432d-a93f-2a1dbd45b100": {
+    "newId": "blossom-rocket/work/beats-by-dre-tour-2-info",
+    "alt": "tour 2 info",
+    "files": ["data/selectedWork.json", "data/work.json"]
+  },
+  "d6d73ae5-018c-4eb4-2335-54b225428f00": {
+    "newId": "blossom-rocket/work/beats-by-dre-urbeats-feature-pages",
+    "alt": "urbeats feature pages",
+    "files": ["data/selectedWork.json", "data/work.json"]
+  },
+  "707f9392-bf6d-4157-6e8f-49a93145c800": {
+    "newId": "blossom-rocket/work/beats-by-dre-tour-2-lady-gaga",
+    "alt": "tour 2 - featuring lady gaga",
+    "files": ["data/selectedWork.json", "data/work.json"]
+  },
+  "74074485-611e-440c-4755-06197ff4a400": {
+    "newId": "blossom-rocket/work/beats-by-dre-luxury-cover-pages",
+    "alt": "luxury cover pages",
+    "files": ["data/selectedWork.json", "data/work.json"]
+  },
+  "947423e0-4ec2-419b-bd10-ffa02a434000": {
+    "newId": "blossom-rocket/work/beats-by-dre-fendi-featured-pages",
+    "alt": "fendi featured pages",
+    "files": ["data/selectedWork.json", "data/work.json"]
+  },
+  "46c7e102-d6a5-4ac3-0c5d-fff101195600": {
+    "newId": "blossom-rocket/work/beats-by-dre-fendi-stretch-headphones-feature-pages",
+    "alt": "fendi stretch headphones feature pages",
+    "files": ["data/selectedWork.json", "data/work.json"]
+  },
+  "c097526f-a3f7-4d37-0658-98b2c89a8400": {
+    "newId": "blossom-rocket/work/beats-by-dre-luxury-rose-gold-feature-pages",
+    "alt": "luxury rose gold feature pages",
+    "files": ["data/selectedWork.json", "data/work.json"]
+  },
+  "b72369ae-4282-4956-c8d5-c3f9d1848c00": {
+    "newId": "blossom-rocket/work/le-fronk-dj-fronk-djing-at-elements-festival",
+    "alt": "Le Fronk DJing at Elements Festival",
+    "files": ["data/work.json"]
+  },
+  "020f0d01-0b58-4d1a-9d7e-f2d7bc8f3b00": {
+    "newId": "blossom-rocket/work/le-fronk-dj-fronk-vinyl",
+    "alt": "Le Fronk Vinyl",
+    "files": ["data/work.json"]
+  },
+  "d4976701-58c0-457c-d7db-84801c00d500": {
+    "newId": "blossom-rocket/work/le-fronk-dj-fronk-led-backdrop",
+    "alt": "Le Fronk LED Backdrop",
+    "files": ["data/work.json"]
+  },
+  "74cf3343-d6fe-4fee-c0f0-0c3fcd670b00": {
+    "newId": "blossom-rocket/work/melissa-renfro-reality-renfro-reality-wall-decal",
+    "alt": "Melissa Renfro Reality Wall Decal",
+    "files": ["data/work.json"]
+  },
+  "22bb3e21-4222-4cf7-419d-614f180ebf00": {
+    "newId": "blossom-rocket/work/melissa-renfro-reality-renfro-reality-business-cards",
+    "alt": "Melissa Renfro Reality Business Cards",
+    "files": ["data/work.json"]
+  },
+  "997fc2ba-afe9-495b-ee0b-58b09ca84600": {
+    "newId": "blossom-rocket/work/convergence-capital-presentation-slides",
+    "alt": "Convergence Capital Presentation Slides",
+    "files": ["data/work.json"]
+  },
+  "97e94e2c-5f46-4deb-13c4-117b03b74f00": {
+    "newId": "blossom-rocket/work/convergence-capital-business-cards",
+    "alt": "Convergence Capital Business Cards",
+    "files": ["data/work.json"]
+  },
+  "50be148f-5d88-4e4e-b338-b54239ff4e00": {
+    "newId": "blossom-rocket/work/almeta-magazine-web-design-1",
+    "alt": "Almeta Web Design 1",
+    "files": ["data/work.json"]
+  },
+  "01ba01c7-257f-4d93-c439-3ab9dd4dcb00": {
+    "newId": "blossom-rocket/work/almeta-magazine-web-design-2",
+    "alt": "Almeta Web Design 2",
+    "files": ["data/work.json"]
+  },
+  "f1f4f855-2949-4741-6d44-251eaba25100": {
+    "newId": "blossom-rocket/work/almeta-magazine-publication-design-1",
+    "alt": "Almeta Publication Design 1",
+    "files": ["data/work.json"]
+  },
+  "03f6819e-9195-47ce-8c14-c2cbc485f100": {
+    "newId": "blossom-rocket/work/almeta-magazine-publication-design-2",
+    "alt": "Almeta Publication Design 2",
+    "files": ["data/work.json"]
+  },
+  "d57af26b-1df4-4f66-8eea-261deb5b1c00": {
+    "newId": "blossom-rocket/work/compassion-for-kids-promo-product",
+    "alt": "Compassion For Kids Promo Product",
+    "files": ["data/work.json"]
+  },
+  "898f4d03-dafb-4cfe-85d0-140341352400": {
+    "newId": "blossom-rocket/work/compassion-for-kids-brand-system",
+    "alt": "Compassion For Kids Brand System",
+    "files": ["data/work.json"]
+  },
+  "6ece6b1b-e4fe-4d5d-1b83-0950af334900": {
+    "newId": "blossom-rocket/work/compassion-for-kids-brochure-cover",
+    "alt": "Compassion For Kids - Brochure Cover",
+    "files": ["data/work.json"]
+  },
+  "1ffb257e-e107-4962-8c24-db0acffd8600": {
+    "newId": "blossom-rocket/work/compassion-for-kids-brochure-spread-1",
+    "alt": "Compassion For Kids - Brochure Spread 1",
+    "files": ["data/work.json"]
+  },
+  "a198a216-15d1-41d6-c628-18b3f4977400": {
+    "newId": "blossom-rocket/work/compassion-for-kids-brochure-spread-2",
+    "alt": "Compassion For Kids - Brochure Spread 2",
+    "files": ["data/work.json"]
+  },
+  "ec8e9519-4c46-4a28-5f2e-5b1f81ccdd00": {
+    "newId": "blossom-rocket/work/compassion-for-kids-brochure-spread-3",
+    "alt": "Compassion For Kids - Brochure Spread 3",
+    "files": ["data/work.json"]
+  },
+  "dba76fab-94f9-4aab-c524-6948bad18900": {
+    "newId": "blossom-rocket/work/compassion-for-kids-brochure-spread-4",
+    "alt": "Compassion For Kids - Brochure Spread 4",
+    "files": ["data/work.json"]
+  },
+  "c03c3d08-0862-4f64-8255-8afc371a5000": {
+    "newId": "blossom-rocket/work/compassion-for-kids-brochure-back",
+    "alt": "Compassion For Kids - Brochure Back",
+    "files": ["data/work.json"]
+  },
+  "5367be01-5fd8-4e6c-bdca-67895232ef00": {
+    "newId": "blossom-rocket/work/compassion-for-kids-web-slider-1",
+    "alt": "Compassion For Kids Web Slider 1",
+    "files": ["data/work.json"]
+  },
+  "cbbb88dc-4d25-47de-7d77-8f6d6dc10700": {
+    "newId": "blossom-rocket/work/compassion-for-kids-web-slider-2",
+    "alt": "Compassion For Kids Web Slider 2",
+    "files": ["data/work.json"]
+  },
+  "8369bb66-ecb8-4a34-8365-2dbf88757800": {
+    "newId": "blossom-rocket/work/sirius-media-business-card",
+    "alt": "Sirius Media Business Card",
+    "files": ["data/selectedWork.json", "data/work.json"]
+  },
+  "4718ae78-6908-46f1-677d-c7e0cd316000": {
+    "newId": "blossom-rocket/work/sirius-media-style-guide",
+    "alt": "Sirius Media Style Guide",
+    "files": ["data/selectedWork.json", "data/work.json"]
+  },
+  "93478b56-02cd-4e2c-68aa-e6df7c9ff100": {
+    "newId": "blossom-rocket/work/scholarshot-booklet-1",
+    "alt": "Scholarshot Booklet 1",
+    "files": ["data/work.json"]
+  },
+  "eec1be3d-f8bb-48c7-dbc0-f6e415b6e200": {
+    "newId": "blossom-rocket/work/scholarshot-booklet-2",
+    "alt": "Scholarshot Booklet 2",
+    "files": ["data/work.json"]
+  },
+  "60079e4f-1642-4298-e141-503a53c7fb00": {
+    "newId": "blossom-rocket/work/scholarshot-booklet-3",
+    "alt": "Scholarshot Booklet 3",
+    "files": ["data/work.json"]
+  },
+  "a079388a-4bb9-469e-2809-2079cda83400": {
+    "newId": "blossom-rocket/work/scholarshot-brochure-1",
+    "alt": "Scholarshot Brochure 1",
+    "files": ["data/work.json"]
+  },
+  "58dbb2be-f630-433a-ac35-0fe701b8de00": {
+    "newId": "blossom-rocket/work/scholarshot-brochure-2",
+    "alt": "Scholarshot Brochure 2",
+    "files": ["data/work.json"]
+  },
+  "51e93857-9659-4e8d-f1f1-6081d206e200": {
+    "newId": "blossom-rocket/work/scholarshot-brochure-3",
+    "alt": "Scholarshot Brochure 3",
+    "files": ["data/work.json"]
+  },
+  "657881c2-bde8-4043-0fff-eec06bd17300": {
+    "newId": "blossom-rocket/logos/pairess-logo",
+    "alt": "Atomic Blossom",
+    "files": ["data/marquees/logos.json"]
+  },
+  "34f0e825-1ba3-49e5-039b-1beb24bd7100": {
+    "newId": "blossom-rocket/logos/atomic-blossom-logo",
+    "alt": "Kratos Strategies",
+    "files": ["data/marquees/logos.json"]
+  },
+  "dd42afc5-86d1-4d8b-2b1b-c05d2df47300": {
+    "newId": "blossom-rocket/logos/kratos-strategies-logo",
+    "alt": "Modern Meditations",
+    "files": ["data/marquees/logos.json"]
+  },
+  "02a0797c-4608-4384-14c0-d5810bf22200": {
+    "newId": "blossom-rocket/logos/modern-meditations-logo",
+    "alt": "Cosmic Spot",
+    "files": ["data/marquees/logos.json"]
+  },
+  "5025c5d1-a50e-4a05-219b-804a66e76b00": {
+    "newId": "blossom-rocket/logos/cosmic-spot-logo",
+    "alt": "Le Fronk",
+    "files": ["data/marquees/logos.json"]
+  },
+  "8f4c731a-c5d5-47d5-2461-2afbbdb8d900": {
+    "newId": "blossom-rocket/logos/le-fronk-logo",
+    "alt": "NextUp",
+    "files": ["data/marquees/logos.json"]
+  },
+  "fbddbfee-9f78-45fb-b041-84e6503e1100": {
+    "newId": "blossom-rocket/logos/nextup-logo",
+    "alt": null,
+    "files": ["data/marquees/logos.json"]
+  },
+  "40fd0c9a-009d-48c1-0b2f-0427ebb40600": {
+    "newId": "blossom-rocket/logos/swap-logo",
+    "alt": "Sirius",
+    "files": ["data/marquees/logos.json"]
+  },
+  "777df071-0bd1-4320-1546-cdfd35fae300": {
+    "newId": "blossom-rocket/logos/sirius-logo",
+    "alt": "Pure Salon",
+    "files": ["data/marquees/logos.json"]
+  },
+  "7af3d438-465f-4671-b563-9ae93f0f1900": {
+    "newId": "blossom-rocket/logos/pure-salon-logo",
+    "alt": "Melissa Renfro Realty",
+    "files": ["data/marquees/logos.json"]
+  },
+  "ff743689-c4fd-4713-3cc1-1a043953ff00": {
+    "newId": "blossom-rocket/logos/melissa-renfro-realty-logo",
+    "alt": "Compassion For Kids",
+    "files": ["data/marquees/logos.json"]
+  },
+  "250ca24b-2d0b-40e8-6fd4-8038beec1d00": {
+    "newId": "blossom-rocket/logos/compassion-kids-logo",
+    "alt": "K9to5",
+    "files": ["data/marquees/logos.json"]
+  },
+  "b470e073-4234-4a76-8b3b-9536f78c7600": {
+    "newId": "blossom-rocket/logos/k9to5-logo",
+    "alt": "Lucid Living",
+    "files": ["data/marquees/logos.json"]
+  },
+  "607733d0-47c6-4f27-31fb-8c648ad94c00": {
+    "newId": "blossom-rocket/logos/lucid-living-logo",
+    "alt": "TAS",
+    "files": ["data/marquees/logos.json"]
+  },
+  "b819a26e-c231-438a-f82c-c7f1ac207600": {
+    "newId": "blossom-rocket/logos/tas-logo",
+    "alt": "ZMA - Zircon Medical Alliance",
+    "files": ["data/marquees/logos.json"]
+  },
+  "4373c94d-9953-4f8a-54f0-d14aa91dc700": {
+    "newId": "blossom-rocket/logos/zma-zircon-medical-alliance-logo",
+    "alt": "ZMA - Zircon Medical Alliance",
+    "files": ["data/marquees/logos.json"]
+  }
+}
