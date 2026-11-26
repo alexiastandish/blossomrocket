@@ -1,0 +1,81 @@
+[
+  {
+    "id": "getting-started",
+    "title": "Getting Started",
+    "items": [
+      {
+        "id": "what-is-a-manufacturing-company-store",
+        "question": "What is a manufacturing company store?",
+        "answer": "A manufacturing company store is a centralized online storefront where plants, warehouses, offices, and approved distributors order branded workwear and merchandise on demand. Blossom Rocket implements manufacturing company stores through SplashBrands, so industrial organizations standardize products across sites instead of each facility sourcing its own."
+      },
+      {
+        "id": "who-runs-the-program",
+        "question": "What does Blossom Rocket do, and what does SplashBrands do?",
+        "answer": "Blossom Rocket handles program strategy, brand configuration, approved artwork, store setup, and ongoing support. SplashBrands provides the company store platform, on-demand production, in-house decoration, and fulfillment."
+      },
+      {
+        "id": "how-long-to-launch",
+        "question": "How long does it take to launch a company store?",
+        "answer": "According to SplashBrands, a company store can typically be set up and launched in about two weeks once logos, colors, and product selections are approved. Blossom Rocket can also build a free, fully branded demo store so your team can try the experience first."
+      }
+    ]
+  },
+  {
+    "id": "ordering-and-shipping",
+    "title": "Ordering, Inventory & Shipping",
+    "items": [
+      {
+        "id": "order-minimums",
+        "question": "Are there order minimums or inventory to buy?",
+        "answer": "No. Products are produced on demand after an order is placed, and single-item ordering is supported, so there are no traditional order minimums and no finished inventory to buy, store, or count."
+      },
+      {
+        "id": "shipping-time",
+        "question": "How quickly do orders ship?",
+        "answer": "According to SplashBrands, orders from its online stores ship in 2 to 5 business days. Timing can vary by product and decoration method."
+      },
+      {
+        "id": "shipping-destinations",
+        "question": "Where can orders be shipped?",
+        "answer": "Orders can ship to plants, warehouses, regional offices, or individual employees, so each site receives what it ordered without a central stockroom."
+      }
+    ]
+  },
+  {
+    "id": "brand-control",
+    "title": "Brand Control & Administration",
+    "items": [
+      {
+        "id": "access-control",
+        "question": "Can each plant, team, or distributor have its own ordering access?",
+        "answer": "Yes. Access controls can be set by facility, team, or distributor, so each group sees only its approved products while every item uses the same approved artwork."
+      },
+      {
+        "id": "budgets-and-approvals",
+        "question": "Can we set budgets and approve orders before they're produced?",
+        "answer": "Yes. Approval workflows can review orders before anything is produced, and budget management, cost centers, and reporting give visibility into merchandise spending by site. That matters because workwear spending is otherwise scattered across plant-level purchases that no one sees in one place."
+      },
+      {
+        "id": "multiple-logos",
+        "question": "Can distributors and dealers order co-branded merchandise?",
+        "answer": "Yes. Multiple approved logos support dealer and distributor co-branding, with each logo mapped to the products and colors it may appear on. See Co-Branding for multi-logo programs."
+      }
+    ]
+  },
+  {
+    "id": "programs",
+    "title": "Programs & Use Cases",
+    "items": [
+      {
+        "id": "common-programs",
+        "question": "What merchandise programs do manufacturers run through a company store?",
+        "answer": "Common programs include employee workwear, distributor and dealer programs, service and safety milestone recognition, trade show and sales merchandise, and multi-facility catalogs for plants and regional teams."
+      },
+      {
+        "id": "kits-and-gifting",
+        "question": "Can we run service-award or safety-milestone gifts through the same program?",
+        "answer": "Yes. Recognition merchandise and On-Demand Kits can be produced from the same approved catalog and shipped to individual employees or to a facility for presentation."
+      }
+    ]
+  }
+]

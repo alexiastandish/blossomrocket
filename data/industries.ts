@@ -1,5 +1,6 @@
 // Industry landing pages — one entry per /industries/[slug] route. Each page
-// renders exactly three sections (hero, applications, platform benefits), so
+// renders hero, applications, platform benefits and grouped FAQs
+// (data/faqs/industries), so
 // copy lives here and the layout lives in components/industries/IndustryPage.
 
 export type IndustryLink = { label: string; href: string };

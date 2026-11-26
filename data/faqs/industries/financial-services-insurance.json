@@ -1,0 +1,81 @@
+[
+  {
+    "id": "getting-started",
+    "title": "Getting Started",
+    "items": [
+      {
+        "id": "what-is-a-financial-services-company-store",
+        "question": "What is a financial services company store?",
+        "answer": "A financial services company store is a centralized online storefront where branches, employees, and authorized agents or advisors order approved branded merchandise on demand. Blossom Rocket implements company stores for banks, credit unions, and insurance organizations through SplashBrands, so every branch presents the same approved brand."
+      },
+      {
+        "id": "who-runs-the-program",
+        "question": "What does Blossom Rocket do, and what does SplashBrands do?",
+        "answer": "Blossom Rocket handles program strategy, brand configuration, approved artwork, store setup, and ongoing support. SplashBrands provides the company store platform, on-demand production, in-house decoration, and fulfillment."
+      },
+      {
+        "id": "how-long-to-launch",
+        "question": "How long does it take to launch a company store?",
+        "answer": "According to SplashBrands, a company store can typically be set up and launched in about two weeks once logos, colors, and product selections are approved. Blossom Rocket can also build a free, fully branded demo store so your team can try the experience first."
+      }
+    ]
+  },
+  {
+    "id": "ordering-and-shipping",
+    "title": "Ordering, Inventory & Shipping",
+    "items": [
+      {
+        "id": "order-minimums",
+        "question": "Are there order minimums or inventory to buy?",
+        "answer": "No. Products are produced on demand after an order is placed, and single-item ordering is supported, so there are no traditional order minimums and no finished inventory to buy, store, or count."
+      },
+      {
+        "id": "shipping-time",
+        "question": "How quickly do orders ship?",
+        "answer": "According to SplashBrands, orders from its online stores ship in 2 to 5 business days. Timing can vary by product and decoration method."
+      },
+      {
+        "id": "shipping-destinations",
+        "question": "Where can orders be shipped?",
+        "answer": "Orders can ship to branches, regional offices, or individual employees, agents, and advisors."
+      }
+    ]
+  },
+  {
+    "id": "brand-control",
+    "title": "Brand Control & Administration",
+    "items": [
+      {
+        "id": "access-control",
+        "question": "Can agents, advisors, or partners order from the store?",
+        "answer": "Yes. Access can be extended to authorized agents and partners through user groups and permissions, so each group sees only its approved products. Every order uses approved artwork, which matters because agents and advisors represent the brand in front of clients."
+      },
+      {
+        "id": "budgets-and-approvals",
+        "question": "Can we set budgets and approve orders before they're produced?",
+        "answer": "Yes. Budgets and spending limits can be set by branch or team, orders can be approved before anything is produced, and reporting shows merchandise spend across the organization."
+      },
+      {
+        "id": "multiple-logos",
+        "question": "Can a program include affiliated brands or product lines?",
+        "answer": "Yes. Multi-logo configurations let one program carry a primary brand alongside affiliated, regional, or product-line logos, with each approved logo mapped to the products and colors it may appear on."
+      }
+    ]
+  },
+  {
+    "id": "programs",
+    "title": "Programs & Use Cases",
+    "items": [
+      {
+        "id": "common-programs",
+        "question": "What merchandise programs do financial services organizations run through a company store?",
+        "answer": "Common programs include branch and employee apparel, client and corporate gifting, agent and advisor programs, community and financial literacy events, and employee recognition."
+      },
+      {
+        "id": "kits-and-gifting",
+        "question": "Can we run client gifting through the same program?",
+        "answer": "Yes. Client and corporate gifts can be ordered from the approved catalog, and On-Demand Kits can combine gifts, personalized print, and packaging shipped directly to each recipient."
+      }
+    ]
+  }
+]

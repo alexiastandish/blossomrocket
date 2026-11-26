@@ -1,0 +1,81 @@
+[
+  {
+    "id": "getting-started",
+    "title": "Getting Started",
+    "items": [
+      {
+        "id": "what-is-a-construction-company-store",
+        "question": "What is a construction company store?",
+        "answer": "A construction company store is a centralized online storefront where offices, branches, and field crews order branded apparel and merchandise on demand. Blossom Rocket implements construction company stores through SplashBrands, so contractors and field service businesses keep crew apparel consistent without stocking it at every branch."
+      },
+      {
+        "id": "who-runs-the-program",
+        "question": "What does Blossom Rocket do, and what does SplashBrands do?",
+        "answer": "Blossom Rocket handles program strategy, brand configuration, approved artwork, store setup, and ongoing support. SplashBrands provides the company store platform, on-demand production, in-house decoration, and fulfillment."
+      },
+      {
+        "id": "how-long-to-launch",
+        "question": "How long does it take to launch a company store?",
+        "answer": "According to SplashBrands, a company store can typically be set up and launched in about two weeks once logos, colors, and product selections are approved. Blossom Rocket can also build a free, fully branded demo store so your team can try the experience first."
+      }
+    ]
+  },
+  {
+    "id": "ordering-and-shipping",
+    "title": "Ordering, Inventory & Shipping",
+    "items": [
+      {
+        "id": "order-minimums",
+        "question": "Are there order minimums or inventory to buy?",
+        "answer": "No. Products are produced on demand after an order is placed, and single-item ordering is supported, so there are no traditional order minimums and no finished inventory to buy, store, or count."
+      },
+      {
+        "id": "shipping-time",
+        "question": "How quickly do orders ship?",
+        "answer": "According to SplashBrands, orders from its online stores ship in 2 to 5 business days. Timing can vary by product and decoration method."
+      },
+      {
+        "id": "shipping-destinations",
+        "question": "Where can orders be shipped?",
+        "answer": "Orders can ship to offices, branches, or individual employees, which suits crews spread across service territories."
+      }
+    ]
+  },
+  {
+    "id": "brand-control",
+    "title": "Brand Control & Administration",
+    "items": [
+      {
+        "id": "access-control",
+        "question": "Can each branch or service territory have its own catalog and access?",
+        "answer": "Yes. User groups and access permissions give each branch, territory, or role its own approved products, while everything stays inside one centralized catalog."
+      },
+      {
+        "id": "budgets-and-approvals",
+        "question": "Can we set budgets and approve orders before they're produced?",
+        "answer": "Yes. Purchasing approvals, budget management, and cost centers can be configured by branch or crew, and reporting shows apparel and merchandise spending across locations."
+      },
+      {
+        "id": "multiple-logos",
+        "question": "Can subsidiaries or acquired companies keep their own logos?",
+        "answer": "Yes. Multi-logo configurations let one program carry a parent brand alongside subsidiary or division logos, with each approved logo mapped to the products and colors it may appear on."
+      }
+    ]
+  },
+  {
+    "id": "programs",
+    "title": "Programs & Use Cases",
+    "items": [
+      {
+        "id": "common-programs",
+        "question": "What merchandise programs do construction and field service companies run through a company store?",
+        "answer": "Common programs include crew and technician apparel, new-hire and project onboarding, safety and recognition programs, regional and branch ordering, and customer and trade event merchandise. Specialty safety gear depends on catalog availability."
+      },
+      {
+        "id": "kits-and-gifting",
+        "question": "Can new crew members order apparel when they start?",
+        "answer": "Yes. Because products are made after an order is placed, new crew members order the sizes they need when they join, instead of a branch stocking size runs that may never be used."
+      }
+    ]
+  }
+]

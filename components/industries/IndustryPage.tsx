@@ -5,6 +5,8 @@ import { SectionLayout, CardList } from "@/components/section";
 import CardLinkGrid from "@/components/section/CardLinkGrid";
 import { CTASlots } from "@/components/CTASlot";
 import type { Industry } from "@/data/industries";
+import FAQSection from "@/components/faqs/FAQSection";
+import { industryFaqs } from "@/data/faqs/industries";
 
 const SITE_URL = "https://blossomrocket.studio";
 
@@ -192,6 +194,15 @@ export default function IndustryPage({ industry }: { industry: Industry }) {
             />
           </div>
         </SectionLayout>
+
+        {/* ── Section 4: Grouped FAQs (topic nav + FAQPage schema) ── */}
+        {industryFaqs[industry.slug] && (
+          <FAQSection
+            groups={industryFaqs[industry.slug]}
+            theme="light"
+            pageUrl={url}
+          />
+        )}
       </div>
     </>
   );

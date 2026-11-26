@@ -1,0 +1,81 @@
+[
+  {
+    "id": "getting-started",
+    "title": "Getting Started",
+    "items": [
+      {
+        "id": "what-is-a-franchise-company-store",
+        "question": "What is a franchise company store?",
+        "answer": "A franchise company store is a centralized online storefront where franchisees, locations, and regional operators order approved branded apparel and merchandise on demand. Blossom Rocket implements franchise company stores through SplashBrands, so multi-location brands keep every location on brand without location-level inventory."
+      },
+      {
+        "id": "who-runs-the-program",
+        "question": "What does Blossom Rocket do, and what does SplashBrands do?",
+        "answer": "Blossom Rocket handles program strategy, brand configuration, approved artwork, store setup, and ongoing support. SplashBrands provides the company store platform, on-demand production, in-house decoration, and fulfillment."
+      },
+      {
+        "id": "how-long-to-launch",
+        "question": "How long does it take to launch a company store?",
+        "answer": "According to SplashBrands, a company store can typically be set up and launched in about two weeks once logos, colors, and product selections are approved. Blossom Rocket can also build a free, fully branded demo store so your team can try the experience first."
+      }
+    ]
+  },
+  {
+    "id": "ordering-and-shipping",
+    "title": "Ordering, Inventory & Shipping",
+    "items": [
+      {
+        "id": "order-minimums",
+        "question": "Are there order minimums or inventory to buy?",
+        "answer": "No. Products are produced on demand after an order is placed, and single-item ordering is supported, so there are no traditional order minimums and no finished inventory to buy, store, or count."
+      },
+      {
+        "id": "shipping-time",
+        "question": "How quickly do orders ship?",
+        "answer": "According to SplashBrands, orders from its online stores ship in 2 to 5 business days. Timing can vary by product and decoration method."
+      },
+      {
+        "id": "shipping-destinations",
+        "question": "Where can orders be shipped?",
+        "answer": "Orders can ship directly to individual stores, restaurants, hotels, regional offices, or employees, so each location receives only what it ordered."
+      }
+    ]
+  },
+  {
+    "id": "brand-control",
+    "title": "Brand Control & Administration",
+    "items": [
+      {
+        "id": "access-control",
+        "question": "Can each location, operator, or region have its own ordering access?",
+        "answer": "Yes. Ordering access can be set by location, operator, or region, so each group sees only its approved products and the brand stays consistent across every location."
+      },
+      {
+        "id": "budgets-and-approvals",
+        "question": "Can we set budgets and approve orders before they're produced?",
+        "answer": "Yes. Purchasing approvals, budget management, and cost centers can be configured by location or operator, and reporting shows merchandise spending across the network. That matters because franchise networks need corporate visibility without slowing down local ordering."
+      },
+      {
+        "id": "multiple-logos",
+        "question": "Can corporate and local logos appear in the same catalog?",
+        "answer": "Yes. Corporate and local logos can sit in one approved catalog, with each logo mapped to the products and colors it may appear on. That keeps location-specific merchandise on brand. See Co-Branding for multi-logo programs."
+      }
+    ]
+  },
+  {
+    "id": "programs",
+    "title": "Programs & Use Cases",
+    "items": [
+      {
+        "id": "common-programs",
+        "question": "What merchandise programs do franchise, retail, and hospitality brands run through a company store?",
+        "answer": "Common programs include employee and hospitality staff apparel, franchise merchandise stores, co-branded products for dealers and franchisees, grand openings and promotions, and location-specific programs for stores, restaurants, and hotels."
+      },
+      {
+        "id": "kits-and-gifting",
+        "question": "Can new locations order a grand-opening package?",
+        "answer": "Yes. Grand-opening merchandise and promotional products can be ordered from the approved catalog, and On-Demand Kits can bundle apparel, print, and packaging for each new location."
+      }
+    ]
+  }
+]

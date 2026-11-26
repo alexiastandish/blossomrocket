@@ -1,0 +1,86 @@
+[
+  {
+    "id": "getting-started",
+    "title": "Getting Started",
+    "items": [
+      {
+        "id": "what-is-a-healthcare-company-store",
+        "question": "What is a healthcare company store?",
+        "answer": "A healthcare company store is a centralized online storefront where approved staff, departments, and facilities order branded apparel and merchandise on demand. Blossom Rocket implements healthcare company stores through SplashBrands, so hospitals, clinics, and life sciences organizations keep one approved catalog instead of managing separate vendors for each facility."
+      },
+      {
+        "id": "who-runs-the-program",
+        "question": "What does Blossom Rocket do, and what does SplashBrands do?",
+        "answer": "Blossom Rocket handles program strategy, brand configuration, approved artwork, store setup, and ongoing support. SplashBrands provides the company store platform, on-demand production, in-house decoration, and fulfillment."
+      },
+      {
+        "id": "how-long-to-launch",
+        "question": "How long does it take to launch a company store?",
+        "answer": "According to SplashBrands, a company store can typically be set up and launched in about two weeks once logos, colors, and product selections are approved. Blossom Rocket can also build a free, fully branded demo store so your team can try the experience first."
+      }
+    ]
+  },
+  {
+    "id": "ordering-and-shipping",
+    "title": "Ordering, Inventory & Shipping",
+    "items": [
+      {
+        "id": "order-minimums",
+        "question": "Are there order minimums or inventory to buy?",
+        "answer": "No. Products are produced on demand after an order is placed, and single-item ordering is supported, so there are no traditional order minimums and no finished inventory to buy, store, or count."
+      },
+      {
+        "id": "shipping-time",
+        "question": "How quickly do orders ship?",
+        "answer": "According to SplashBrands, orders from its online stores ship in 2 to 5 business days. Timing can vary by product and decoration method."
+      },
+      {
+        "id": "shipping-destinations",
+        "question": "Where can orders be shipped?",
+        "answer": "Orders can ship directly to individual employees, departments, or facilities, which suits health systems with staff spread across hospitals, clinics, and remote roles."
+      },
+      {
+        "id": "apparel-sizes",
+        "question": "How do we handle apparel sizes for new staff?",
+        "answer": "Because products are made after an order is placed, each employee orders the size they need when they join. There is no need to forecast size runs or hold extra stock, which matters in healthcare because staffing changes continuously."
+      }
+    ]
+  },
+  {
+    "id": "brand-control",
+    "title": "Brand Control & Administration",
+    "items": [
+      {
+        "id": "access-control",
+        "question": "Can different facilities or departments see different products?",
+        "answer": "Yes. User groups and access permissions let each facility, department, or role see only the products approved for it, while every item still uses approved artwork and colors."
+      },
+      {
+        "id": "budgets-and-approvals",
+        "question": "Can we set budgets and approve orders before they're produced?",
+        "answer": "Yes. Purchasing approvals, budget management, and cost centers can be configured by department or facility, and reporting shows merchandise spending across the organization. That matters in healthcare because merchandise spending is often split across many departments."
+      },
+      {
+        "id": "multiple-logos",
+        "question": "Do affiliated hospitals or sub-brands need separate stores?",
+        "answer": "Not necessarily. Multi-logo configurations let one program carry a health system's primary logo alongside affiliated hospital, clinic, or department logos, with each approved logo mapped to the products and colors it may appear on. See Co-Branding for multi-logo programs."
+      }
+    ]
+  },
+  {
+    "id": "programs",
+    "title": "Programs & Use Cases",
+    "items": [
+      {
+        "id": "common-programs",
+        "question": "What merchandise programs do healthcare organizations run through a company store?",
+        "answer": "Common programs include staff apparel for clinical and administrative teams, new-hire onboarding, recognition and retention gifts, health fair and recruiting merchandise, and conference apparel. Scrubs and lab coats depend on catalog availability."
+      },
+      {
+        "id": "kits-and-gifting",
+        "question": "Can we send onboarding or recognition kits to new hires?",
+        "answer": "Yes. On-Demand Kits combine branded products, personalized print, and packaging, and ship directly to recipients or in bulk, which suits onboarding cohorts and recognition milestones."
+      }
+    ]
+  }
+]
