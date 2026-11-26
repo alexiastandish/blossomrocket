@@ -149,14 +149,14 @@ export const industries: Industry[] = [
   {
     slug: "technology-professional-services",
     name: "Technology & Professional Services",
-    title: "Technology Company Swag & Employee Stores | Blossom Rocket",
+    title: "Technology Company Stores & Swag | Blossom Rocket",
     description:
       "Company swag stores, employee onboarding kits, corporate gifting, and on-demand branded merchandise for technology and professional services firms.",
     keywords: [
       "Technology Company Swag",
       "SaaS Company Swag",
       "Corporate Swag Stores",
-      "Employee Merchandise Stores",
+      "Company Merchandise Stores",
       "Tech Employee Onboarding Kits",
       "Corporate Gifting Programs",
       "Print-on-Demand Company Swag",
@@ -179,7 +179,7 @@ export const industries: Industry[] = [
         "Culture",
       ],
       headingLead: "Technology Company Swag,",
-      headingAccent: "Employee Stores & Branded Merchandise.",
+      headingAccent: "Company Stores & Branded Merchandise.",
       body: "Scale employee swag, onboarding kits, corporate gifting, and event merchandise without managing inventory or coordinating multiple promotional product vendors. Blossom Rocket helps SaaS companies, AI businesses, fintech organizations, cybersecurity providers, and professional services firms create centralized branded merchandise programs through SplashBrands-powered company stores and on-demand fulfillment.",
       cta: "Explore Technology Merchandise Solutions",
     },

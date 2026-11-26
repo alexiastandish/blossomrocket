@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   keywords: [
     "Swag Storefronts",
     "Branded Merchandise Programs",
-    "Employee Merchandise Stores",
+    "Company Merchandise Stores",
     "On-Demand Company Stores",
     "Promotional Products",
     "SplashBrands",

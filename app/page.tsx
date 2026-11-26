@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     "Company Stores",
     "Branded Merchandise Company Stores",
     "Corporate Merchandise Stores",
-    "Employee Merchandise Stores",
+    "Company Merchandise Stores",
     "On-Demand Company Stores",
     "Co-Branding",
     "Co-Branded Merchandise",

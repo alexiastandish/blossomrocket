@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   keywords: [
     "Company Stores",
     "Corporate Merchandise Stores",
-    "Employee Merchandise Stores",
+    "Company Merchandise Stores",
     "Co-Branding",
     "Co-Branded Merchandise",
     "Branded Merchandise Programs",

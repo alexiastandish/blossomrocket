@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     "Branded Merchandise Fulfillment",
     "Branded Merchandise Company Stores",
     "Corporate Merchandise Stores",
-    "Employee Merchandise Stores",
+    "Company Merchandise Stores",
     "On-Demand Company Stores",
     "Centralized Merchandise Ordering",
     "Corporate Merchandise Management",

@@ -149,7 +149,7 @@ The strongest merchandise programs can use both models strategically rather than
 
 Some branded merchandise programs are designed to generate sales. This may apply to consumer brands, universities, sports organizations, restaurants, entertainment companies, conferences, membership communities, and companies with highly engaged employees or customers.
 
-In these cases, merchandise ROI can be measured more directly through revenue and margin. SplashBrands' platform supports retail stores as well as employee stores and allows companies to establish multiple pricing levels or adjust markups by product type. Its reporting tools include visibility into sales and related store activity.
+In these cases, merchandise ROI can be measured more directly through revenue and margin. SplashBrands' platform supports retail stores as well as company stores and allows companies to establish multiple pricing levels or adjust markups by product type. Its reporting tools include visibility into sales and related store activity.
 
 See how SplashBrands describes its [employee, retail, and uniform store options](https://splashbrands.com/).
 
